@@ -61,13 +61,13 @@ func (t Type) PackageName() string {
 }
 
 func (t Type) DirectoryPath() string {
-	return "gen/"
+	return "types/"
 }
 
 func (t Type) Alias() string {
 	lowerName := strings.ToLower(string(t))
 	nameParts := strings.Split(lowerName, "_")
-	return "gen_" + strings.Join(nameParts[:len(nameParts)-1], "_")
+	return "types_" + strings.Join(nameParts[:len(nameParts)-1], "_")
 }
 
 func (t Type) StructName() string {
@@ -77,7 +77,7 @@ func (t Type) StructName() string {
 func (t Type) FileName() string {
 	lowerName := strings.ToLower(string(t))
 	nameParts := strings.Split(lowerName, "_")
-	return "gen/" + strings.Join(nameParts[:len(nameParts)], "_") + ".go"
+	return "types/" + strings.Join(nameParts[:len(nameParts)], "_") + ".go"
 }
 
 func (t Type) Lower() string {

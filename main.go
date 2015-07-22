@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	sl "go-softlayer/slapi/gen"
+	types "go-softlayer/slapi/types"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -36,7 +36,7 @@ func main() {
 	}
 	fmt.Println(string(body))
 
-	var account sl.SoftLayer_Account
+	var account types.SoftLayer_Account
 	err = json.Unmarshal(body, &account)
 	if err != nil {
 		log.Fatal("error:", err)

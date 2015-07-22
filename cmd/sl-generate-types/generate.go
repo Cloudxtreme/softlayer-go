@@ -15,7 +15,12 @@ const typeTemplateString = `package sl
 
 import ({{ range $alias, $import := .Imports }}
 	{{ $alias }} "{{ $import }}"
-{{ end }})
+{{ end }}
+{{ if .Methods }}
+	slapi "go-softlayer/slapi"
+{{ end }}
+)
+
 
 {{ godoc .Type.StructName .TypeDoc "" }}type {{ .Type.StructName }} struct {
 {{ range $i, $property := .Properties }}
@@ -24,7 +29,7 @@ import ({{ range $alias, $import := .Imports }}
 }
 
 {{ range $i, $method := .Methods }}
-{{ godoc $method.Name $method.Doc "" }}func ({{ $.Type.Lower }} *{{ $.Type.StructName }}) {{ upper $method.Name }}({{ $method.Arguments }}) ({{ $method.ReturnArguments }}) {
+{{ godoc $method.Name $method.Doc "" }}func ({{ $.Type.Lower }} *{{ $.Type.StructName }}) {{ upper $method.Name }}(commonOptions *slapi.CommonOptions, {{ $method.Arguments }}) ({{ $method.ReturnArguments }}) {
 	{{ $method.Body }}
 }
 {{ end }}
@@ -63,7 +68,7 @@ func main() {
 			"typePath":  typePath,
 		}).Parse(typeTemplateString))
 
-	err = os.RemoveAll("gen")
+	err = os.RemoveAll("types")
 	if err != nil {
 		log.Fatal(err)
 	}
