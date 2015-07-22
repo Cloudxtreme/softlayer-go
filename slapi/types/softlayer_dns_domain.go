@@ -53,7 +53,7 @@ type SoftLayer_Dns_Domain struct {
 // CreateARecord - Create an A record on a SoftLayer domain. This is a shortcut method, meant to take
 // the work out of creating a SoftLayer_Dns_Domain_ResourceRecord if you already have a domain record
 // available. createARecord returns the newly created SoftLayer_Dns_Domain_ResourceRecord_AType.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateARecord(commonOptions *slapi.CommonOptions, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_AType, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateARecord(ctx *slapi.RequestContext, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_AType, error) {
 	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_AType
 	return returnValue, nil
 }
@@ -61,7 +61,7 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateARecord(commonOptions *s
 // CreateAaaaRecord - Create an record on a SoftLayer domain. This is a shortcut method, meant to take
 // the work out of creating a SoftLayer_Dns_Domain_ResourceRecord if you already have a domain record
 // available. createARecord returns the newly created SoftLayer_Dns_Domain_ResourceRecord_AaaaType.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateAaaaRecord(commonOptions *slapi.CommonOptions, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_AaaaType, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateAaaaRecord(ctx *slapi.RequestContext, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_AaaaType, error) {
 	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_AaaaType
 	return returnValue, nil
 }
@@ -70,7 +70,7 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateAaaaRecord(commonOptions
 // the work out of creating a SoftLayer_Dns_Domain_ResourceRecord if you already have a domain record
 // available. createCnameRecord returns the newly created
 // SoftLayer_Dns_Domain_ResourceRecord_CnameType.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateCnameRecord(commonOptions *slapi.CommonOptions, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_CnameType, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateCnameRecord(ctx *slapi.RequestContext, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_CnameType, error) {
 	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_CnameType
 	return returnValue, nil
 }
@@ -79,7 +79,7 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateCnameRecord(commonOption
 // the work out of creating a SoftLayer_Dns_Domain_ResourceRecord if you already have a domain record
 // available. MX records are created with a default priority of 10. createMxRecord returns the newly
 // created SoftLayer_Dns_Domain_ResourceRecord_MxType.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateMxRecord(commonOptions *slapi.CommonOptions, host string, data string, ttl int, mxPriority int) (*SoftLayer_Dns_Domain_ResourceRecord_MxType, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateMxRecord(ctx *slapi.RequestContext, host string, data string, ttl int, mxPriority int) (*SoftLayer_Dns_Domain_ResourceRecord_MxType, error) {
 	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_MxType
 	return returnValue, nil
 }
@@ -87,7 +87,7 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateMxRecord(commonOptions *
 // CreateNsRecord - Create an NS record on a SoftLayer domain. This is a shortcut method, meant to take
 // the work out of creating a SoftLayer_Dns_Domain_ResourceRecord if you already have a domain record
 // available. createNsRecord returns the newly created SoftLayer_Dns_Domain_ResourceRecord_NsType.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateNsRecord(commonOptions *slapi.CommonOptions, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_NsType, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateNsRecord(ctx *slapi.RequestContext, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_NsType, error) {
 	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_NsType
 	return returnValue, nil
 }
@@ -101,14 +101,14 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateNsRecord(commonOptions *
 // seconds. If your domain doesn't contain NS resource records for ns1.softlayer.com or
 // ns2.softlayer.com then ''createObject'' will create them for you. ''createObject'' returns a Boolean
 // ''true'' on successful object creation or ''false'' if your domain was unable to be created..
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Dns_Domain) (*SoftLayer_Dns_Domain, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Dns_Domain) (*SoftLayer_Dns_Domain, error) {
 	var returnValue *SoftLayer_Dns_Domain
 	return returnValue, nil
 }
 
 // CreateObjects - Create multiple domains on the SoftLayer name servers. Each domain record passed to
 // ''createObjects'' follows the logic in the SoftLayer_Dns_Domain ''createObject'' method.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Dns_Domain) ([]*SoftLayer_Dns_Domain, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Dns_Domain) ([]*SoftLayer_Dns_Domain, error) {
 	var returnValue []*SoftLayer_Dns_Domain
 	return returnValue, nil
 }
@@ -117,7 +117,7 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateObjects(commonOptions *s
 // address and returns the newly created or edited [[SoftLayer_Dns_Domain_ResourceRecord]] record.
 // Currently this method only supports IPv4 addresses and performs no operation when given an IPv6
 // address.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreatePtrRecord(commonOptions *slapi.CommonOptions, ipAddress string, ptrRecord string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreatePtrRecord(ctx *slapi.RequestContext, ipAddress string, ptrRecord string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord, error) {
 	var returnValue *SoftLayer_Dns_Domain_ResourceRecord
 	return returnValue, nil
 }
@@ -126,7 +126,7 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreatePtrRecord(commonOptions 
 // take the work out of creating a SoftLayer_Dns_Domain_ResourceRecord if you already have a domain
 // record available. createARecord returns the newly created
 // SoftLayer_Dns_Domain_ResourceRecord_SpfType.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateSpfRecord(commonOptions *slapi.CommonOptions, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_SpfType, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateSpfRecord(ctx *slapi.RequestContext, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_SpfType, error) {
 	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_SpfType
 	return returnValue, nil
 }
@@ -135,7 +135,7 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateSpfRecord(commonOptions 
 // take the work out of creating a SoftLayer_Dns_Domain_ResourceRecord if you already have a domain
 // record available. createARecord returns the newly created
 // SoftLayer_Dns_Domain_ResourceRecord_TxtType.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateTxtRecord(commonOptions *slapi.CommonOptions, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_TxtType, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateTxtRecord(ctx *slapi.RequestContext, host string, data string, ttl int) (*SoftLayer_Dns_Domain_ResourceRecord_TxtType, error) {
 	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_TxtType
 	return returnValue, nil
 }
@@ -144,7 +144,7 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) CreateTxtRecord(commonOptions 
 // from the softlayer name servers. '''This cannot be undone.''' Be wary of running this method. If you
 // remove a domain in error you will need to re-create it by creating a new SoftLayer_Dns_Domain
 // object.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -152,7 +152,7 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) DeleteObject(commonOptions *sl
 // GetByDomainName - Search for [[SoftLayer_Dns_Domain]] records by domain name. getByDomainName()
 // performs an inclusive search for domain records, returning multiple records based on partial name
 // matches. Use this method to locate domain records if you don't have access to their id numbers.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) GetByDomainName(commonOptions *slapi.CommonOptions, name string) ([]*SoftLayer_Dns_Domain, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) GetByDomainName(ctx *slapi.RequestContext, name string) ([]*SoftLayer_Dns_Domain, error) {
 	var returnValue []*SoftLayer_Dns_Domain
 	return returnValue, nil
 }
@@ -160,14 +160,14 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) GetByDomainName(commonOptions 
 // GetObject - getObject retrieves the SoftLayer_Dns_Domain object whose ID number corresponds to the
 // ID number of the init parameter passed to the SoftLayer_Dns_Domain service. You can only retrieve
 // domains that are assigned to your SoftLayer account.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Dns_Domain, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Dns_Domain, error) {
 	var returnValue *SoftLayer_Dns_Domain
 	return returnValue, nil
 }
 
 // GetZoneFileContents - Return a SoftLayer hosted domain and resource records' data formatted as zone
 // file.
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) GetZoneFileContents(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) GetZoneFileContents(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }

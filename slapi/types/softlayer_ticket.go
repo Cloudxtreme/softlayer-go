@@ -255,13 +255,13 @@ type SoftLayer_Ticket struct {
 }
 
 // AddAssignedAgent - <nil>
-func (softlayer_ticket *SoftLayer_Ticket) AddAssignedAgent(commonOptions *slapi.CommonOptions, agentId int) error {
+func (softlayer_ticket *SoftLayer_Ticket) AddAssignedAgent(ctx *slapi.RequestContext, agentId int) error {
 	return nil
 }
 
 // AddAttachedAdditionalEmails - Creates new additional emails for assigned user if new emails are
 // provided. Attaches any newly created additional emails to ticket.
-func (softlayer_ticket *SoftLayer_Ticket) AddAttachedAdditionalEmails(commonOptions *slapi.CommonOptions, emails []string) (bool, error) {
+func (softlayer_ticket *SoftLayer_Ticket) AddAttachedAdditionalEmails(ctx *slapi.RequestContext, emails []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -269,7 +269,7 @@ func (softlayer_ticket *SoftLayer_Ticket) AddAttachedAdditionalEmails(commonOpti
 // AddAttachedFile - Attach the given file to a SoftLayer ticket. A file attachment is a convenient way
 // to submit non-textual error reports to SoftLayer employees in a ticket. File attachments to tickets
 // must have a unique name.
-func (softlayer_ticket *SoftLayer_Ticket) AddAttachedFile(commonOptions *slapi.CommonOptions, fileAttachment SoftLayer_Container_Utility_File_Attachment) (*SoftLayer_Ticket_Attachment_File, error) {
+func (softlayer_ticket *SoftLayer_Ticket) AddAttachedFile(ctx *slapi.RequestContext, fileAttachment SoftLayer_Container_Utility_File_Attachment) (*SoftLayer_Ticket_Attachment_File, error) {
 	var returnValue *SoftLayer_Ticket_Attachment_File
 	return returnValue, nil
 }
@@ -277,7 +277,7 @@ func (softlayer_ticket *SoftLayer_Ticket) AddAttachedFile(commonOptions *slapi.C
 // AddAttachedHardware - Attach the given hardware to a SoftLayer ticket. A hardware attachment
 // provides an easy way for SoftLayer's employees to quickly look up your hardware records in the case
 // of hardware-specific issues.
-func (softlayer_ticket *SoftLayer_Ticket) AddAttachedHardware(commonOptions *slapi.CommonOptions, hardwareId int) (*SoftLayer_Ticket_Attachment_Hardware, error) {
+func (softlayer_ticket *SoftLayer_Ticket) AddAttachedHardware(ctx *slapi.RequestContext, hardwareId int) (*SoftLayer_Ticket_Attachment_Hardware, error) {
 	var returnValue *SoftLayer_Ticket_Attachment_Hardware
 	return returnValue, nil
 }
@@ -285,7 +285,7 @@ func (softlayer_ticket *SoftLayer_Ticket) AddAttachedHardware(commonOptions *sla
 // AddAttachedVirtualGuest - Attach the given CloudLayer Computing Instance to a SoftLayer ticket. An
 // attachment provides an easy way for SoftLayer's employees to quickly look up your records in the
 // case of specific issues.
-func (softlayer_ticket *SoftLayer_Ticket) AddAttachedVirtualGuest(commonOptions *slapi.CommonOptions, guestId int) (*SoftLayer_Ticket_Attachment_Virtual_Guest, error) {
+func (softlayer_ticket *SoftLayer_Ticket) AddAttachedVirtualGuest(ctx *slapi.RequestContext, guestId int) (*SoftLayer_Ticket_Attachment_Virtual_Guest, error) {
 	var returnValue *SoftLayer_Ticket_Attachment_Virtual_Guest
 	return returnValue, nil
 }
@@ -295,18 +295,18 @@ func (softlayer_ticket *SoftLayer_Ticket) AddAttachedVirtualGuest(commonOptions 
 // closed. addFinalComments() sets these comments for a ticket update made by a SoftLayer employee.
 // Final comments may only be set on closed tickets, can only be set once, and may not exceed 4000
 // characters in length. Once the comments are set ''addFinalComments()'' returns a boolean true.
-func (softlayer_ticket *SoftLayer_Ticket) AddFinalComments(commonOptions *slapi.CommonOptions, finalComments string) (bool, error) {
+func (softlayer_ticket *SoftLayer_Ticket) AddFinalComments(ctx *slapi.RequestContext, finalComments string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AddScheduledAlert - <nil>
-func (softlayer_ticket *SoftLayer_Ticket) AddScheduledAlert(commonOptions *slapi.CommonOptions, activationTime string) error {
+func (softlayer_ticket *SoftLayer_Ticket) AddScheduledAlert(ctx *slapi.RequestContext, activationTime string) error {
 	return nil
 }
 
 // AddScheduledAutoClose - <nil>
-func (softlayer_ticket *SoftLayer_Ticket) AddScheduledAutoClose(commonOptions *slapi.CommonOptions, activationTime string) error {
+func (softlayer_ticket *SoftLayer_Ticket) AddScheduledAutoClose(ctx *slapi.RequestContext, activationTime string) error {
 	return nil
 }
 
@@ -317,7 +317,7 @@ func (softlayer_ticket *SoftLayer_Ticket) AddScheduledAutoClose(commonOptions *s
 // the ticket's ''notifyUserOnUpdateFlag'' is set. If the ticket is a Legal or Abuse ticket, then the
 // account's abuse email is also notified when the updates are processed. Finally, ''addUpdate()''
 // returns an array of the newly created ticket updates.
-func (softlayer_ticket *SoftLayer_Ticket) AddUpdate(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Ticket_Update, attachedFiles []SoftLayer_Container_Utility_File_Attachment) ([]*SoftLayer_Ticket_Update, error) {
+func (softlayer_ticket *SoftLayer_Ticket) AddUpdate(ctx *slapi.RequestContext, templateObject SoftLayer_Ticket_Update, attachedFiles []SoftLayer_Container_Utility_File_Attachment) ([]*SoftLayer_Ticket_Update, error) {
 	var returnValue []*SoftLayer_Ticket_Update
 	return returnValue, nil
 }
@@ -332,7 +332,7 @@ func (softlayer_ticket *SoftLayer_Ticket) AddUpdate(commonOptions *slapi.CommonO
 // SoftLayer employees to work. As they update the ticket new [[SoftLayer_Ticket_Update]] entries are
 // added to the ticket object. Administrative support tickets add a one-time $3USD charge to your
 // account.
-func (softlayer_ticket *SoftLayer_Ticket) CreateAdministrativeTicket(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Ticket, contents string, attachmentId int, rootPassword string, controlPanelPassword string, accessPort string, attachedFiles []SoftLayer_Container_Utility_File_Attachment, attachmentType string) (*SoftLayer_Ticket, error) {
+func (softlayer_ticket *SoftLayer_Ticket) CreateAdministrativeTicket(ctx *slapi.RequestContext, templateObject SoftLayer_Ticket, contents string, attachmentId int, rootPassword string, controlPanelPassword string, accessPort string, attachedFiles []SoftLayer_Container_Utility_File_Attachment, attachmentType string) (*SoftLayer_Ticket, error) {
 	var returnValue *SoftLayer_Ticket
 	return returnValue, nil
 }
@@ -345,7 +345,7 @@ func (softlayer_ticket *SoftLayer_Ticket) CreateAdministrativeTicket(commonOptio
 // datacenter" * "Network performance / latency" * "Support response / timing" * "Sales process /
 // upgrades" * "Moving to competitor" The content parameter describes further the reason for cancelling
 // the server.
-func (softlayer_ticket *SoftLayer_Ticket) CreateCancelServerTicket(commonOptions *slapi.CommonOptions, attachmentId int, reason string, content string, cancelAssociatedItems bool, attachmentType string) (*SoftLayer_Ticket, error) {
+func (softlayer_ticket *SoftLayer_Ticket) CreateCancelServerTicket(ctx *slapi.RequestContext, attachmentId int, reason string, content string, cancelAssociatedItems bool, attachmentType string) (*SoftLayer_Ticket, error) {
 	var returnValue *SoftLayer_Ticket
 	return returnValue, nil
 }
@@ -357,7 +357,7 @@ func (softlayer_ticket *SoftLayer_Ticket) CreateCancelServerTicket(commonOptions
 // datacenter" * "Network performance / latency" * "Support response / timing" * "Sales process /
 // upgrades" * "Moving to competitor" The content parameter describes further the reason for cancelling
 // service.
-func (softlayer_ticket *SoftLayer_Ticket) CreateCancelServiceTicket(commonOptions *slapi.CommonOptions, attachmentId int, reason string, content string, attachmentType string) (*SoftLayer_Ticket, error) {
+func (softlayer_ticket *SoftLayer_Ticket) CreateCancelServiceTicket(ctx *slapi.RequestContext, attachmentId int, reason string, content string, attachmentType string) (*SoftLayer_Ticket, error) {
 	var returnValue *SoftLayer_Ticket
 	return returnValue, nil
 }
@@ -371,7 +371,7 @@ func (softlayer_ticket *SoftLayer_Ticket) CreateCancelServiceTicket(commonOption
 // that your API user does not have access to. Once your ticket is created it is placed in a queue for
 // SoftLayer employees to work. As they update the ticket new [[SoftLayer_Ticket_Update]] entries are
 // added to the ticket object.
-func (softlayer_ticket *SoftLayer_Ticket) CreateStandardTicket(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Ticket, contents string, attachmentId int, rootPassword string, controlPanelPassword string, accessPort string, attachedFiles []SoftLayer_Container_Utility_File_Attachment, attachmentType string) (*SoftLayer_Ticket, error) {
+func (softlayer_ticket *SoftLayer_Ticket) CreateStandardTicket(ctx *slapi.RequestContext, templateObject SoftLayer_Ticket, contents string, attachmentId int, rootPassword string, controlPanelPassword string, accessPort string, attachedFiles []SoftLayer_Container_Utility_File_Attachment, attachmentType string) (*SoftLayer_Ticket, error) {
 	var returnValue *SoftLayer_Ticket
 	return returnValue, nil
 }
@@ -383,7 +383,7 @@ func (softlayer_ticket *SoftLayer_Ticket) CreateStandardTicket(commonOptions *sl
 // down must have a two hour maintenance specified for our datacenter engineers to perform your
 // upgrade. Account level upgrades, such as adding VPN users, CDNLayer accounts, and monitoring
 // services are processed much faster and do not require a maintenance window.
-func (softlayer_ticket *SoftLayer_Ticket) CreateUpgradeTicket(commonOptions *slapi.CommonOptions, attachmentId int, genericUpgrade string, upgradeMaintenanceWindow string, details string, attachmentType string) (*SoftLayer_Ticket, error) {
+func (softlayer_ticket *SoftLayer_Ticket) CreateUpgradeTicket(ctx *slapi.RequestContext, attachmentId int, genericUpgrade string, upgradeMaintenanceWindow string, details string, attachmentType string) (*SoftLayer_Ticket, error) {
 	var returnValue *SoftLayer_Ticket
 	return returnValue, nil
 }
@@ -398,7 +398,7 @@ func (softlayer_ticket *SoftLayer_Ticket) CreateUpgradeTicket(commonOptions *sla
 // [[SoftLayer_Ticket::addUpdate|addUpdate]] method in this service. Likewise if you need to only
 // attach a file to a ticket then use the [[SoftLayer_Ticket::addAttachedFile|addAttachedFile]] method.
 // The edit method exists as a convenience if you need to perform all these tasks at once.
-func (softlayer_ticket *SoftLayer_Ticket) Edit(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Ticket, contents string, attachedFiles []SoftLayer_Container_Utility_File_Attachment) (*SoftLayer_Ticket, error) {
+func (softlayer_ticket *SoftLayer_Ticket) Edit(ctx *slapi.RequestContext, templateObject SoftLayer_Ticket, contents string, attachedFiles []SoftLayer_Container_Utility_File_Attachment) (*SoftLayer_Ticket, error) {
 	var returnValue *SoftLayer_Ticket
 	return returnValue, nil
 }
@@ -407,7 +407,7 @@ func (softlayer_ticket *SoftLayer_Ticket) Edit(commonOptions *slapi.CommonOption
 // assigned to. Ticket groups represent the internal department at SoftLayer who a ticket is assigned
 // to. Every SoftLayer ticket has groupId and ticketGroup properties that correspond to one of the
 // groups returned by getAllTicketGroups().
-func (softlayer_ticket *SoftLayer_Ticket) GetAllTicketGroups(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Ticket_Group, error) {
+func (softlayer_ticket *SoftLayer_Ticket) GetAllTicketGroups(ctx *slapi.RequestContext) ([]*SoftLayer_Ticket_Group, error) {
 	var returnValue []*SoftLayer_Ticket_Group
 	return returnValue, nil
 }
@@ -416,7 +416,7 @@ func (softlayer_ticket *SoftLayer_Ticket) GetAllTicketGroups(commonOptions *slap
 // exist in. Ticket status represent the current state of a ticket, usually "open", "assigned", and
 // "closed". Every SoftLayer ticket has statusId and status properties that correspond to one of the
 // statuses returned by getAllTicketStatuses().
-func (softlayer_ticket *SoftLayer_Ticket) GetAllTicketStatuses(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Ticket_Status, error) {
+func (softlayer_ticket *SoftLayer_Ticket) GetAllTicketStatuses(ctx *slapi.RequestContext) ([]*SoftLayer_Ticket_Status, error) {
 	var returnValue []*SoftLayer_Ticket_Status
 	return returnValue, nil
 }
@@ -424,7 +424,7 @@ func (softlayer_ticket *SoftLayer_Ticket) GetAllTicketStatuses(commonOptions *sl
 // GetAttachedFile - Retrieve the file attached to a SoftLayer ticket by it's given identifier. To
 // retrieve a list of files attached to a ticket either call the SoftLayer_Ticket::getAttachedFiles
 // method or call SoftLayer_Ticket::getObject with ''attachedFiles'' defined in an object mask.
-func (softlayer_ticket *SoftLayer_Ticket) GetAttachedFile(commonOptions *slapi.CommonOptions, attachmentId int) (string, error) {
+func (softlayer_ticket *SoftLayer_Ticket) GetAttachedFile(ctx *slapi.RequestContext, attachmentId int) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -432,25 +432,25 @@ func (softlayer_ticket *SoftLayer_Ticket) GetAttachedFile(commonOptions *slapi.C
 // GetObject - getObject retrieves the SoftLayer_Ticket object whose ID number corresponds to the ID
 // number of the init parameter passed to the SoftLayer_Ticket service. You can only retrieve tickets
 // that are associated with your SoftLayer customer account.
-func (softlayer_ticket *SoftLayer_Ticket) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Ticket, error) {
+func (softlayer_ticket *SoftLayer_Ticket) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Ticket, error) {
 	var returnValue *SoftLayer_Ticket
 	return returnValue, nil
 }
 
 // GetTicketsClosedSinceDate - no documentation
-func (softlayer_ticket *SoftLayer_Ticket) GetTicketsClosedSinceDate(commonOptions *slapi.CommonOptions, closeDate time.Time) ([]*SoftLayer_Ticket, error) {
+func (softlayer_ticket *SoftLayer_Ticket) GetTicketsClosedSinceDate(ctx *slapi.RequestContext, closeDate time.Time) ([]*SoftLayer_Ticket, error) {
 	var returnValue []*SoftLayer_Ticket
 	return returnValue, nil
 }
 
 // MarkAsViewed - Mark a ticket as viewed. All currently posted updates will be marked as viewed. The
 // lastViewedDate property will be updated to the current time.
-func (softlayer_ticket *SoftLayer_Ticket) MarkAsViewed(commonOptions *slapi.CommonOptions) error {
+func (softlayer_ticket *SoftLayer_Ticket) MarkAsViewed(ctx *slapi.RequestContext) error {
 	return nil
 }
 
 // RemoveAssignedAgent - <nil>
-func (softlayer_ticket *SoftLayer_Ticket) RemoveAssignedAgent(commonOptions *slapi.CommonOptions, agentId int) error {
+func (softlayer_ticket *SoftLayer_Ticket) RemoveAssignedAgent(ctx *slapi.RequestContext, agentId int) error {
 	return nil
 }
 
@@ -458,7 +458,7 @@ func (softlayer_ticket *SoftLayer_Ticket) RemoveAssignedAgent(commonOptions *sla
 // addresses from a ticket's notification list. If one of the provided email addresses is not attached
 // to the ticket then ''removeAttachedAdditiaonalEmails()'' ignores it and continues to the next one.
 // Once the email addresses are removed ''removeAttachedAdditiaonalEmails()'' returns a boolean true.
-func (softlayer_ticket *SoftLayer_Ticket) RemoveAttachedAdditionalEmails(commonOptions *slapi.CommonOptions, emails []string) (bool, error) {
+func (softlayer_ticket *SoftLayer_Ticket) RemoveAttachedAdditionalEmails(ctx *slapi.RequestContext, emails []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -466,7 +466,7 @@ func (softlayer_ticket *SoftLayer_Ticket) RemoveAttachedAdditionalEmails(commonO
 // RemoveAttachedHardware - detach the given hardware from a SoftLayer ticket. Removing a hardware
 // attachment may delay ticket processing time if the hardware removed is relevant to the ticket's
 // issue. Return a boolean true upon successful hardware detachment.
-func (softlayer_ticket *SoftLayer_Ticket) RemoveAttachedHardware(commonOptions *slapi.CommonOptions, hardwareId int) (bool, error) {
+func (softlayer_ticket *SoftLayer_Ticket) RemoveAttachedHardware(ctx *slapi.RequestContext, hardwareId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -474,29 +474,29 @@ func (softlayer_ticket *SoftLayer_Ticket) RemoveAttachedHardware(commonOptions *
 // RemoveAttachedVirtualGuest - Detach the given CloudLayer Computing Instance from a SoftLayer ticket.
 // Removing an attachment may delay ticket processing time if the instance removed is relevant to the
 // ticket's issue. Return a boolean true upon successful detachment.
-func (softlayer_ticket *SoftLayer_Ticket) RemoveAttachedVirtualGuest(commonOptions *slapi.CommonOptions, guestId int) (bool, error) {
+func (softlayer_ticket *SoftLayer_Ticket) RemoveAttachedVirtualGuest(ctx *slapi.RequestContext, guestId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveScheduledAlert - <nil>
-func (softlayer_ticket *SoftLayer_Ticket) RemoveScheduledAlert(commonOptions *slapi.CommonOptions) error {
+func (softlayer_ticket *SoftLayer_Ticket) RemoveScheduledAlert(ctx *slapi.RequestContext) error {
 	return nil
 }
 
 // RemoveScheduledAutoClose - <nil>
-func (softlayer_ticket *SoftLayer_Ticket) RemoveScheduledAutoClose(commonOptions *slapi.CommonOptions) error {
+func (softlayer_ticket *SoftLayer_Ticket) RemoveScheduledAutoClose(ctx *slapi.RequestContext) error {
 	return nil
 }
 
 // SetTags - <nil>
-func (softlayer_ticket *SoftLayer_Ticket) SetTags(commonOptions *slapi.CommonOptions, tags string) (bool, error) {
+func (softlayer_ticket *SoftLayer_Ticket) SetTags(ctx *slapi.RequestContext, tags string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SurveyEligible - Use [[SoftLayer_Ticket_Survey::getPreference]] method.
-func (softlayer_ticket *SoftLayer_Ticket) SurveyEligible(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_ticket *SoftLayer_Ticket) SurveyEligible(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -504,7 +504,7 @@ func (softlayer_ticket *SoftLayer_Ticket) SurveyEligible(commonOptions *slapi.Co
 // UpdateAttachedAdditionalEmails - Creates new additional emails for assigned user if new emails are
 // provided. Attaches any newly created additional emails to ticket. Remove any additional emails from
 // a ticket that are not provided as part of $emails
-func (softlayer_ticket *SoftLayer_Ticket) UpdateAttachedAdditionalEmails(commonOptions *slapi.CommonOptions, emails []string) (bool, error) {
+func (softlayer_ticket *SoftLayer_Ticket) UpdateAttachedAdditionalEmails(ctx *slapi.RequestContext, emails []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

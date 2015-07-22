@@ -31,7 +31,7 @@ type SoftLayer_Network_Monitor_Version1_Query_Host_Stratum struct {
 // GetAllQueryTypes - Calling this function returns all possible query type objects. These objects are
 // to be used to set the values on the SoftLayer_Network_Monitor_Version1_Query_Host when creating new
 // monitoring instances.
-func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum) GetAllQueryTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Monitor_Version1_Query_Type, error) {
+func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum) GetAllQueryTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Monitor_Version1_Query_Type, error) {
 	var returnValue []*SoftLayer_Network_Monitor_Version1_Query_Type
 	return returnValue, nil
 }
@@ -39,7 +39,7 @@ func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_M
 // GetAllResponseTypes - Calling this function returns all possible response type objects. These
 // objects are to be used to set the values on the SoftLayer_Network_Monitor_Version1_Query_Host when
 // creating new monitoring instances.
-func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum) GetAllResponseTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Monitor_Version1_Query_ResponseType, error) {
+func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum) GetAllResponseTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Monitor_Version1_Query_ResponseType, error) {
 	var returnValue []*SoftLayer_Network_Monitor_Version1_Query_ResponseType
 	return returnValue, nil
 }
@@ -48,7 +48,7 @@ func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_M
 // whose ID number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Network_Monitor_Version1_Query_Host_Stratum service. You can only retrieve strata attached
 // to hardware that belong to your account.
-func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Monitor_Version1_Query_Host_Stratum, error) {
+func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Monitor_Version1_Query_Host_Stratum, error) {
 	var returnValue *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum
 	return returnValue, nil
 }

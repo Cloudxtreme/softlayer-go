@@ -17,13 +17,13 @@ type SoftLayer_Scale_Policy_Trigger_ResourceUse struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_scale_policy_trigger_resourceuse *SoftLayer_Scale_Policy_Trigger_ResourceUse) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Scale_Policy_Trigger_ResourceUse) (*SoftLayer_Scale_Policy_Trigger_ResourceUse, error) {
+func (softlayer_scale_policy_trigger_resourceuse *SoftLayer_Scale_Policy_Trigger_ResourceUse) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Policy_Trigger_ResourceUse) (*SoftLayer_Scale_Policy_Trigger_ResourceUse, error) {
 	var returnValue *SoftLayer_Scale_Policy_Trigger_ResourceUse
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_policy_trigger_resourceuse *SoftLayer_Scale_Policy_Trigger_ResourceUse) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Policy_Trigger_ResourceUse, error) {
+func (softlayer_scale_policy_trigger_resourceuse *SoftLayer_Scale_Policy_Trigger_ResourceUse) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Policy_Trigger_ResourceUse, error) {
 	var returnValue *SoftLayer_Scale_Policy_Trigger_ResourceUse
 	return returnValue, nil
 }

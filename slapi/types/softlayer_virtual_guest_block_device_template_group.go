@@ -142,27 +142,27 @@ type SoftLayer_Virtual_Guest_Block_Device_Template_Group struct {
 
 // AddLocations - This method will create transaction(s) to add available locations to an archive image
 // template.
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) AddLocations(commonOptions *slapi.CommonOptions, locations []SoftLayer_Location) (bool, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) AddLocations(ctx *slapi.RequestContext, locations []SoftLayer_Location) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CopyToExternalSource - Create a transaction to export/copy a template to an external source.
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) CopyToExternalSource(commonOptions *slapi.CommonOptions, configuration SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration) (bool, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) CopyToExternalSource(ctx *slapi.RequestContext, configuration SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CreateFromExternalSource - Create a transaction to import a disk image from an external source and
 // create a standard image template.
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) CreateFromExternalSource(commonOptions *slapi.CommonOptions, configuration SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration) (*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) CreateFromExternalSource(ctx *slapi.RequestContext, configuration SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration) (*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
 	var returnValue *SoftLayer_Virtual_Guest_Block_Device_Template_Group
 	return returnValue, nil
 }
 
 // CreatePublicArchiveTransaction - Create a transaction to copy archived block devices into public
 // repository
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) CreatePublicArchiveTransaction(commonOptions *slapi.CommonOptions, groupName string, summary string, note string, locations []SoftLayer_Location) (int, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) CreatePublicArchiveTransaction(ctx *slapi.RequestContext, groupName string, summary string, note string, locations []SoftLayer_Location) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
@@ -171,7 +171,7 @@ func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Gue
 // objects. A block device template group can contain several gigabytes of data in its disk images.
 // This may take some time to delete and requires a transaction to be created. This method creates a
 // transaction that will delete all resources associated with the block device template group.
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) DeleteObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) DeleteObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
@@ -179,39 +179,39 @@ func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Gue
 // DenySharingAccess - This method will deny another SoftLayer customer account's previously given
 // access to provision CloudLayer Computing Instances from an image template group. Template access
 // should only be removed from the parent template group object, not the child.
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) DenySharingAccess(commonOptions *slapi.CommonOptions, accountId int) (bool, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) DenySharingAccess(ctx *slapi.RequestContext, accountId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - Edit an image template group's associated name and note. All other properties in the
 // SoftLayer_Virtual_Guest_Block_Device_Template_Group data type are read-only.
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Virtual_Guest_Block_Device_Template_Group) (bool, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Virtual_Guest_Block_Device_Template_Group) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
 	var returnValue *SoftLayer_Virtual_Guest_Block_Device_Template_Group
 	return returnValue, nil
 }
 
 // GetPublicImages - <nil>
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) GetPublicImages(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) GetPublicImages(ctx *slapi.RequestContext) ([]*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
 	var returnValue []*SoftLayer_Virtual_Guest_Block_Device_Template_Group
 	return returnValue, nil
 }
 
 // GetStorageLocations - no documentation
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) GetStorageLocations(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) GetStorageLocations(ctx *slapi.RequestContext) ([]*SoftLayer_Location, error) {
 	var returnValue []*SoftLayer_Location
 	return returnValue, nil
 }
 
 // GetVhdImportSoftwareDescriptions - Returns an array of SoftLayer_Software_Description that are
 // supported for VHD imports.
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) GetVhdImportSoftwareDescriptions(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Software_Description, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) GetVhdImportSoftwareDescriptions(ctx *slapi.RequestContext) ([]*SoftLayer_Software_Description, error) {
 	var returnValue []*SoftLayer_Software_Description
 	return returnValue, nil
 }
@@ -219,26 +219,26 @@ func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Gue
 // PermitSharingAccess - This method will permit another SoftLayer customer account access to provision
 // CloudLayer Computing Instances from an image template group. Template access should only be given to
 // the parent template group object, not the child.
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) PermitSharingAccess(commonOptions *slapi.CommonOptions, accountId int) (bool, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) PermitSharingAccess(ctx *slapi.RequestContext, accountId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveLocations - This method will create transaction(s) to remove available locations from an
 // archive image template.
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) RemoveLocations(commonOptions *slapi.CommonOptions, locations []SoftLayer_Location) (bool, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) RemoveLocations(ctx *slapi.RequestContext, locations []SoftLayer_Location) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SetAvailableLocations - Create transaction(s) to set the archived block device available locations
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) SetAvailableLocations(commonOptions *slapi.CommonOptions, locations []SoftLayer_Location) (bool, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) SetAvailableLocations(ctx *slapi.RequestContext, locations []SoftLayer_Location) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SetTags - no documentation
-func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) SetTags(commonOptions *slapi.CommonOptions, tags string) (bool, error) {
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) SetTags(ctx *slapi.RequestContext, tags string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

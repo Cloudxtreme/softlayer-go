@@ -49,25 +49,25 @@ type SoftLayer_Account_Note struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_account_note *SoftLayer_Account_Note) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Note) (*SoftLayer_Account_Note, error) {
+func (softlayer_account_note *SoftLayer_Account_Note) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Note) (*SoftLayer_Account_Note, error) {
 	var returnValue *SoftLayer_Account_Note
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_account_note *SoftLayer_Account_Note) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_account_note *SoftLayer_Account_Note) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_account_note *SoftLayer_Account_Note) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Note) (bool, error) {
+func (softlayer_account_note *SoftLayer_Account_Note) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Note) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_note *SoftLayer_Account_Note) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Note, error) {
+func (softlayer_account_note *SoftLayer_Account_Note) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Note, error) {
 	var returnValue *SoftLayer_Account_Note
 	return returnValue, nil
 }

@@ -17,13 +17,13 @@ type SoftLayer_Location_Group_Pricing struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_location_group_pricing *SoftLayer_Location_Group_Pricing) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location_Group, error) {
+func (softlayer_location_group_pricing *SoftLayer_Location_Group_Pricing) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Location_Group, error) {
 	var returnValue []*SoftLayer_Location_Group
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_location_group_pricing *SoftLayer_Location_Group_Pricing) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Location_Group_Pricing, error) {
+func (softlayer_location_group_pricing *SoftLayer_Location_Group_Pricing) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Location_Group_Pricing, error) {
 	var returnValue *SoftLayer_Location_Group_Pricing
 	return returnValue, nil
 }

@@ -35,13 +35,13 @@ type SoftLayer_Resource_Group_Template struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Resource_Group_Template, error) {
+func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Resource_Group_Template, error) {
 	var returnValue []*SoftLayer_Resource_Group_Template
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Resource_Group_Template, error) {
+func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Resource_Group_Template, error) {
 	var returnValue *SoftLayer_Resource_Group_Template
 	return returnValue, nil
 }

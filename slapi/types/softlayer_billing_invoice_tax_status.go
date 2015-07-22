@@ -30,13 +30,13 @@ type SoftLayer_Billing_Invoice_Tax_Status struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_billing_invoice_tax_status *SoftLayer_Billing_Invoice_Tax_Status) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Billing_Invoice_Tax_Status, error) {
+func (softlayer_billing_invoice_tax_status *SoftLayer_Billing_Invoice_Tax_Status) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Invoice_Tax_Status, error) {
 	var returnValue []*SoftLayer_Billing_Invoice_Tax_Status
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_billing_invoice_tax_status *SoftLayer_Billing_Invoice_Tax_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Billing_Invoice_Tax_Status, error) {
+func (softlayer_billing_invoice_tax_status *SoftLayer_Billing_Invoice_Tax_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Invoice_Tax_Status, error) {
 	var returnValue *SoftLayer_Billing_Invoice_Tax_Status
 	return returnValue, nil
 }

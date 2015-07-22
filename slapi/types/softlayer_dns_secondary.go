@@ -66,7 +66,7 @@ type SoftLayer_Dns_Secondary struct {
 // * You may not edit the SOA or NS records. * You may only edit the following resource records: A, MX,
 // TX, This change can not be undone, and the record can not be converted back into a secondary DNS
 // record once the conversion is complete.
-func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) ConvertToPrimary(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) ConvertToPrimary(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -74,7 +74,7 @@ func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) ConvertToPrimary(commonO
 // CreateObject - Create a secondary DNS record. The ''zoneName'', ''masterIpAddress'', and
 // ''transferFrequency'' properties in the templateObject parameter are required parameters to create a
 // secondary DNS record.
-func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Dns_Secondary) (*SoftLayer_Dns_Secondary, error) {
+func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Dns_Secondary) (*SoftLayer_Dns_Secondary, error) {
 	var returnValue *SoftLayer_Dns_Secondary
 	return returnValue, nil
 }
@@ -82,7 +82,7 @@ func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) CreateObject(commonOptio
 // CreateObjects - Create multiple secondary DNS records. Each record passed to ''createObjects''
 // follows the logic in the SoftLayer_Dns_Secondary
 // [[SoftLayer_Dns_Secondary::createObject|createObject]] method.
-func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) CreateObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Dns_Secondary) ([]*SoftLayer_Dns_Secondary, error) {
+func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Dns_Secondary) ([]*SoftLayer_Dns_Secondary, error) {
 	var returnValue []*SoftLayer_Dns_Secondary
 	return returnValue, nil
 }
@@ -90,7 +90,7 @@ func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) CreateObjects(commonOpti
 // DeleteObject - Delete a secondary DNS Record. This will also remove any associated domain records
 // and resource records on the SoftLayer nameservers that were created as a result of the zone
 // transfers. This action cannot be undone.
-func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -100,7 +100,7 @@ func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) DeleteObject(commonOptio
 // properties of your secondary DNS record. ''ZoneName'' may not be altered after a secondary DNS
 // record has been created. Please remove and re-create the record if you need to make changes to your
 // zone name.
-func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Dns_Secondary) (bool, error) {
+func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Dns_Secondary) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -109,7 +109,7 @@ func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) EditObject(commonOptions
 // getByDomainName() performs an inclusive search for secondary domain records, returning multiple
 // records based on partial name matches. Use this method to locate secondary domain records if you
 // don't have access to their id numbers.
-func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) GetByDomainName(commonOptions *slapi.CommonOptions, name string) ([]*SoftLayer_Dns_Secondary, error) {
+func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) GetByDomainName(ctx *slapi.RequestContext, name string) ([]*SoftLayer_Dns_Secondary, error) {
 	var returnValue []*SoftLayer_Dns_Secondary
 	return returnValue, nil
 }
@@ -117,14 +117,14 @@ func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) GetByDomainName(commonOp
 // GetObject - getObject retrieves the SoftLayer_Dns_Secondary object whose ID number corresponds to
 // the ID number of the init paramater passed to the SoftLayer_Dns_Secondary service. You can only
 // retrieve a secondary DNS record that is assigned to your SoftLayer customer account.
-func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Dns_Secondary, error) {
+func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Dns_Secondary, error) {
 	var returnValue *SoftLayer_Dns_Secondary
 	return returnValue, nil
 }
 
 // TransferNow - Force a secondary DNS zone transfer by setting it's status "Transfer Now". A zone
 // transfer will be initiated within a minute of receiving this API call.
-func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) TransferNow(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) TransferNow(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

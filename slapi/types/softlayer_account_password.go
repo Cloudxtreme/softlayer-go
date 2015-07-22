@@ -40,14 +40,14 @@ type SoftLayer_Account_Password struct {
 
 // EditObject - The password and/or notes may be modified. Modifying the EVault passwords here will
 // also update the password the Webcc interface will use.
-func (softlayer_account_password *SoftLayer_Account_Password) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Password) (bool, error) {
+func (softlayer_account_password *SoftLayer_Account_Password) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Password) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - getObject retrieves the SoftLayer_Account_Password object whose ID corresponds to the ID
 // number of the init parameter passed to the SoftLayer_Account_Password service.
-func (softlayer_account_password *SoftLayer_Account_Password) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Password, error) {
+func (softlayer_account_password *SoftLayer_Account_Password) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Password, error) {
 	var returnValue *SoftLayer_Account_Password
 	return returnValue, nil
 }

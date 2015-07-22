@@ -15,19 +15,19 @@ type SoftLayer_Notification_User_Subscriber_Mobile struct {
 }
 
 // ClearSnoozeTimer - <nil>
-func (softlayer_notification_user_subscriber_mobile *SoftLayer_Notification_User_Subscriber_Mobile) ClearSnoozeTimer(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_notification_user_subscriber_mobile *SoftLayer_Notification_User_Subscriber_Mobile) ClearSnoozeTimer(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_notification_user_subscriber_mobile *SoftLayer_Notification_User_Subscriber_Mobile) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Notification_User_Subscriber_Mobile, error) {
+func (softlayer_notification_user_subscriber_mobile *SoftLayer_Notification_User_Subscriber_Mobile) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_User_Subscriber_Mobile, error) {
 	var returnValue *SoftLayer_Notification_User_Subscriber_Mobile
 	return returnValue, nil
 }
 
 // SetSnoozeTimer - <nil>
-func (softlayer_notification_user_subscriber_mobile *SoftLayer_Notification_User_Subscriber_Mobile) SetSnoozeTimer(commonOptions *slapi.CommonOptions, start int, end int) (bool, error) {
+func (softlayer_notification_user_subscriber_mobile *SoftLayer_Notification_User_Subscriber_Mobile) SetSnoozeTimer(ctx *slapi.RequestContext, start int, end int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

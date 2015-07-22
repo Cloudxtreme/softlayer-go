@@ -64,7 +64,7 @@ type SoftLayer_Network_Storage_Group struct {
 // AddAllowedHost - Use this method to attach a SoftLayer_Network_Storage_Allowed_Host object to this
 // group. This will automatically enable access from this host to any SoftLayer_Network_Storage volumes
 // currently attached to this group.
-func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) AddAllowedHost(commonOptions *slapi.CommonOptions, allowedHost SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) AddAllowedHost(ctx *slapi.RequestContext, allowedHost SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -72,44 +72,44 @@ func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) AddAllow
 // AttachToVolume - Use this method to attach a SoftLayer_Network_Storage volume to this group. This
 // will automatically enable access to this volume for any SoftLayer_Network_Storage_Allowed_Host
 // objects currently attached to this group.
-func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) AttachToVolume(commonOptions *slapi.CommonOptions, volume SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) AttachToVolume(ctx *slapi.RequestContext, volume SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CreateObject - <nil>
-func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Storage_Group) (bool, error) {
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Storage_Group) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Storage_Group) (bool, error) {
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Storage_Group) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllObjects - Use this method to retrieve all network storage groups.
-func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Storage_Group, error) {
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Storage_Group, error) {
 	var returnValue []*SoftLayer_Network_Storage_Group
 	return returnValue, nil
 }
 
 // GetNetworkConnectionDetails - Use this method to retrieve network connection information for
 // SoftLayer_Network_Storage_Allowed_Host objects within this group.
-func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) GetNetworkConnectionDetails(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Network_Storage_NetworkConnectionInformation, error) {
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) GetNetworkConnectionDetails(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Storage_NetworkConnectionInformation, error) {
 	var returnValue *SoftLayer_Container_Network_Storage_NetworkConnectionInformation
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Storage_Group, error) {
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Group, error) {
 	var returnValue *SoftLayer_Network_Storage_Group
 	return returnValue, nil
 }
@@ -117,7 +117,7 @@ func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) GetObjec
 // RemoveAllowedHost - Use this method to remove a SoftLayer_Network_Storage_Allowed_Host object from
 // this group. This will automatically disable access from this host to any SoftLayer_Network_Storage
 // volumes currently attached to this group.
-func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) RemoveAllowedHost(commonOptions *slapi.CommonOptions, allowedHost SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) RemoveAllowedHost(ctx *slapi.RequestContext, allowedHost SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -125,7 +125,7 @@ func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) RemoveAl
 // RemoveFromVolume - Use this method to remove a SoftLayer_Network_Storage volume from this group.
 // This will automatically disable access to this volume for any SoftLayer_Network_Storage_Allowed_Host
 // objects currently attached to this group.
-func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) RemoveFromVolume(commonOptions *slapi.CommonOptions, volume SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) RemoveFromVolume(ctx *slapi.RequestContext, volume SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

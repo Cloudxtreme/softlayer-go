@@ -96,7 +96,7 @@ type SoftLayer_Network_LoadBalancer_Service struct {
 // This is the only way to remove a service from your load balancer. If you wish to remove a server,
 // first call this function, then reload the virtualIpAddress object and edit the remaining services to
 // reflect the other changes that you wish to make.
-func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -104,7 +104,7 @@ func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Ser
 // GetGraphImage - Get the graph image for a load balancer service based on the supplied graph type and
 // metric. The available graph types are: 'connections' and 'status', and the available metrics are:
 // 'day', 'week' and 'month'. This method returns the raw binary image data.
-func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) GetGraphImage(commonOptions *slapi.CommonOptions, graphType string, metric string) (string, error) {
+func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) GetGraphImage(ctx *slapi.RequestContext, graphType string, metric string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -114,7 +114,7 @@ func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Ser
 // SoftLayer_Network_LoadBalancer_Service service. You can only retrieve services on load balancers
 // assigned to your account, and it is recommended that you simply retrieve the entire load balancer,
 // as an individual service has no explicit purpose without its "siblings".
-func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_LoadBalancer_Service, error) {
+func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_LoadBalancer_Service, error) {
 	var returnValue *SoftLayer_Network_LoadBalancer_Service
 	return returnValue, nil
 }
@@ -125,7 +125,7 @@ func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Ser
 // be called infrequently. For a general idea of the load balancer service, use the "peakConnections"
 // variable on the Type Possible values for "Label" are: * IP Address * Port * Server Status * Load
 // Status * Current Connections * Total Hits Not all labels are guaranteed to be returned.
-func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) GetStatus(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_LoadBalancer_StatusEntry, error) {
+func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) GetStatus(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_LoadBalancer_StatusEntry, error) {
 	var returnValue []*SoftLayer_Container_Network_LoadBalancer_StatusEntry
 	return returnValue, nil
 }
@@ -133,7 +133,7 @@ func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Ser
 // ResetPeakConnections - Calling resetPeakConnections will set the peakConnections variable to zero on
 // this particular object. Peak connections will continue to increase normally after this method call,
 // it will only temporarily reset the statistic to zero, until the next time it is polled.
-func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) ResetPeakConnections(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) ResetPeakConnections(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

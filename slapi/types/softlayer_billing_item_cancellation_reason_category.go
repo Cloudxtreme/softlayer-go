@@ -28,13 +28,13 @@ type SoftLayer_Billing_Item_Cancellation_Reason_Category struct {
 
 // GetAllCancellationReasonCategories - getAllCancellationReasonCategories() retrieves a list of all
 // cancellation reason categories
-func (softlayer_billing_item_cancellation_reason_category *SoftLayer_Billing_Item_Cancellation_Reason_Category) GetAllCancellationReasonCategories(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Billing_Item_Cancellation_Reason_Category, error) {
+func (softlayer_billing_item_cancellation_reason_category *SoftLayer_Billing_Item_Cancellation_Reason_Category) GetAllCancellationReasonCategories(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Item_Cancellation_Reason_Category, error) {
 	var returnValue []*SoftLayer_Billing_Item_Cancellation_Reason_Category
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_billing_item_cancellation_reason_category *SoftLayer_Billing_Item_Cancellation_Reason_Category) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Billing_Item_Cancellation_Reason_Category, error) {
+func (softlayer_billing_item_cancellation_reason_category *SoftLayer_Billing_Item_Cancellation_Reason_Category) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Item_Cancellation_Reason_Category, error) {
 	var returnValue *SoftLayer_Billing_Item_Cancellation_Reason_Category
 	return returnValue, nil
 }

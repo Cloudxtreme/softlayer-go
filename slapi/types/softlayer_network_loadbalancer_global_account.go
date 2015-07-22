@@ -68,7 +68,7 @@ type SoftLayer_Network_LoadBalancer_Global_Account struct {
 // the hostname listed on your SoftLayer global load balancer account is setup prior to using this
 // method. If your globally load balanced domain is hosted on any other nameservers this method will
 // not be able to add the required NS record.
-func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalancer_Global_Account) AddNsRecord(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalancer_Global_Account) AddNsRecord(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -91,7 +91,7 @@ func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalan
 // your SoftLayer Account, or a local load balancer virtual IP address that belongs to your account.
 // The destination IP address and destination port are required and must be provided when creating a
 // host.
-func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalancer_Global_Account) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_LoadBalancer_Global_Account) (bool, error) {
+func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalancer_Global_Account) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_LoadBalancer_Global_Account) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -100,7 +100,7 @@ func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalan
 // number corresponds to the ID number of the init paramater passed to the
 // SoftLayer_Network_LoadBalancer_Global_Account service. You can only retrieve a global load balancer
 // account that is assigned to your SoftLayer customer account.
-func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalancer_Global_Account) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_LoadBalancer_Global_Account, error) {
+func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalancer_Global_Account) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_LoadBalancer_Global_Account, error) {
 	var returnValue *SoftLayer_Network_LoadBalancer_Global_Account
 	return returnValue, nil
 }
@@ -111,7 +111,7 @@ func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalan
 // the global load balancers. Any A records that were removed when the NS resource record was added
 // will not be created for you. If your globally load balanced domain is hosted on any other
 // nameservers this method will not be able to remove the required NS record.
-func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalancer_Global_Account) RemoveNsRecord(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalancer_Global_Account) RemoveNsRecord(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

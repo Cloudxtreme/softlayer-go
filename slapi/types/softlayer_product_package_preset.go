@@ -96,7 +96,7 @@ type SoftLayer_Product_Package_Preset struct {
 }
 
 // GetObject - <nil>
-func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Product_Package_Preset, error) {
+func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Package_Preset, error) {
 	var returnValue *SoftLayer_Product_Package_Preset
 	return returnValue, nil
 }

@@ -15,7 +15,7 @@ type SoftLayer_Network_Storage_Allowed_Host_IpAddress struct {
 }
 
 // GetObject - <nil>
-func (softlayer_network_storage_allowed_host_ipaddress *SoftLayer_Network_Storage_Allowed_Host_IpAddress) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Storage_Allowed_Host_IpAddress, error) {
+func (softlayer_network_storage_allowed_host_ipaddress *SoftLayer_Network_Storage_Allowed_Host_IpAddress) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Allowed_Host_IpAddress, error) {
 	var returnValue *SoftLayer_Network_Storage_Allowed_Host_IpAddress
 	return returnValue, nil
 }

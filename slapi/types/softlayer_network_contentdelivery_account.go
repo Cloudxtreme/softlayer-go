@@ -77,7 +77,7 @@ type SoftLayer_Network_ContentDelivery_Account struct {
 // protected content. SoftLayer customer does not need to invoke this method. Please refer to
 // [[SoftLayer_Network_ContentDelivery_Authentication_Token|Authentication Token]] object for more
 // details on Content Authentication Service.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) AuthenticateResourceRequest(commonOptions *slapi.CommonOptions, parameter SoftLayer_Container_Network_ContentDelivery_Authentication_Parameter) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) AuthenticateResourceRequest(ctx *slapi.RequestContext, parameter SoftLayer_Container_Network_ContentDelivery_Authentication_Parameter) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -86,7 +86,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // directories. This method creates a directory on the CDN FTP server. A user must have privilege to
 // use this method. A directory name must be an absolute path and you can only create sub directories
 // in /media folder.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) CreateDirectory(commonOptions *slapi.CommonOptions, directoryName string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) CreateDirectory(ctx *slapi.RequestContext, directoryName string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -100,7 +100,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // future. Optionally, you can provide a new password when invoking this method and a new password must
 // follow the rules below: * ...must be between 8 and 20 characters long * ...must be an alphanumeric
 // value * ...can contain these characters: - _ ! % # $ ^ &
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) CreateFtpUser(commonOptions *slapi.CommonOptions, newPassword string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) CreateFtpUser(ctx *slapi.RequestContext, newPassword string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -129,7 +129,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // mappings. The one with a record or the one without a record and they work very differently. gzip is
 // supported if your web server sends a proper gzip header. For more details, visit our
 // [http://knowledgelayer.softlayer.com/topic/cdn KnowledgeLayer]
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) CreateOriginPullMapping(commonOptions *slapi.CommonOptions, mappingObject SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) CreateOriginPullMapping(ctx *slapi.RequestContext, mappingObject SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -137,7 +137,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // CreateOriginPullRule - This method is deprecated, please use
 // [[[[SoftLayer_Network_ContentDelivery_Account::createOriginPullMapping|createOriginPullMapping]]
 // method instead.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) CreateOriginPullRule(commonOptions *slapi.CommonOptions, originDomain string, cnameRecord string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) CreateOriginPullRule(ctx *slapi.RequestContext, originDomain string, cnameRecord string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -145,7 +145,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // CreateTokenAuthenticationDirectory - You need to specify a directory on your CDN FTP or on your
 // origin host in which your secure content resides to enable the token authentication . It will take
 // about about 30 minutes for a newly configured token authentication directory to take effect.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) CreateTokenAuthenticationDirectory(commonOptions *slapi.CommonOptions, directory string, mediaType string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) CreateTokenAuthenticationDirectory(ctx *slapi.RequestContext, directory string, mediaType string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -154,7 +154,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // server. Refer to the service overview of
 // [[SoftLayer_Network_ContentDelivery_Account::createFtpUser|createFtpUser]] method for more
 // information on the CDN FTP server.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) DeleteFtpUser(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) DeleteFtpUser(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -163,19 +163,19 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // removed, you will be able to access the /media/http directory. It will take 10 to 15 minutes for
 // this to take effect after you remove your Origin Pull rule. Cached contents on CDN POPs may live
 // longer than 15 minutes.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) DeleteOriginPullRule(commonOptions *slapi.CommonOptions, originMappingId string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) DeleteOriginPullRule(ctx *slapi.RequestContext, originMappingId string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DisableLogging - no documentation
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) DisableLogging(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) DisableLogging(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EnableLogging - no documentation
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) EnableLogging(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) EnableLogging(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -188,7 +188,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // once a day. Since the POP bandwidth data is delayed for a day, there is no correction process for
 // POP data. The POP bandwidth is not associated with any billing process and is mainly used to
 // generate a POP bandwidth graph.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetAllPopsBandwidthData(commonOptions *slapi.CommonOptions, beginDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summary, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetAllPopsBandwidthData(ctx *slapi.RequestContext, beginDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summary, error) {
 	var returnValue []*SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summary
 	return returnValue, nil
 }
@@ -198,7 +198,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // shows bandwidth consumption per each POP in a bar graph.
 // [[SoftLayer_Container_Bandwidth_GraphOutputsExtended|Bandwidth Graph]] object contains a begin time,
 // end time, title of the graph, binary date, in and outbound total bandwidth in bytes
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetAllPopsBandwidthImage(commonOptions *slapi.CommonOptions, title string, beginDateTime time.Time, endDateTime time.Time, unit string) (*SoftLayer_Container_Bandwidth_GraphOutputsExtended, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetAllPopsBandwidthImage(ctx *slapi.RequestContext, title string, beginDateTime time.Time, endDateTime time.Time, unit string) (*SoftLayer_Container_Bandwidth_GraphOutputsExtended, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputsExtended
 	return returnValue, nil
 }
@@ -208,7 +208,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // a CDN account. You can override the default web service by calling
 // [[SoftLayer_Network_ContentDelivery_Authentication_Token|setContentAuthenticationWsdl
 // setContentAuthenticationWsdl]] method.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetAuthenticationServiceEndpoints(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_ContentDelivery_Authentication_ServiceEndpoint, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetAuthenticationServiceEndpoints(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_ContentDelivery_Authentication_ServiceEndpoint, error) {
 	var returnValue []*SoftLayer_Container_Network_ContentDelivery_Authentication_ServiceEndpoint
 	return returnValue, nil
 }
@@ -230,7 +230,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // create a feasible graph. It usually takes about 8 hours to reconcile all the data from every CDN
 // This hourly data is corrected after 24 hours if necessary. If you consume a large amount of
 // bandwidth, your bandwidth data will be updated the next day.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetBandwidthData(commonOptions *slapi.CommonOptions, beginDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetBandwidthData(ctx *slapi.RequestContext, beginDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary, error) {
 	var returnValue []*SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary
 	return returnValue, nil
 }
@@ -257,7 +257,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // feasible graph. It usually takes about 8 hours to reconcile all the data from every CDN This hourly
 // data is corrected after 24 hours if necessary. If you consume a large amount of bandwidth, your
 // bandwidth data will be updated the next day.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetBandwidthDataWithTypes(commonOptions *slapi.CommonOptions, beginDateTime time.Time, endDateTime time.Time, period string) ([]*SoftLayer_Container_Network_ContentDelivery_Report_Usage, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetBandwidthDataWithTypes(ctx *slapi.RequestContext, beginDateTime time.Time, endDateTime time.Time, period string) ([]*SoftLayer_Container_Network_ContentDelivery_Report_Usage, error) {
 	var returnValue []*SoftLayer_Container_Network_ContentDelivery_Report_Usage
 	return returnValue, nil
 }
@@ -266,7 +266,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // [[SoftLayer_Container_Bandwidth_GraphOutputsExtended|Bandwidth Graph]] object.
 // [[SoftLayer_Container_Bandwidth_GraphOutputsExtended|Bandwidth Graph]] object contains a starting
 // time, ending time, graph title, graph binary data, and in and outbound total bytes.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetBandwidthImage(commonOptions *slapi.CommonOptions, title string, beginDateTime time.Time, endDateTime time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputsExtended, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetBandwidthImage(ctx *slapi.RequestContext, title string, beginDateTime time.Time, endDateTime time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputsExtended, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputsExtended
 	return returnValue, nil
 }
@@ -274,7 +274,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // GetCustomerOrigins - An origin pull mapping is a combination of your customer origin record and a
 // (optional) record. You can now keep track of your customer origin records separate from your
 // records. This service returns your customer origin records.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetCustomerOrigins(commonOptions *slapi.CommonOptions, mediaType string) ([]*SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetCustomerOrigins(ctx *slapi.RequestContext, mediaType string) ([]*SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping, error) {
 	var returnValue []*SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping
 	return returnValue, nil
 }
@@ -284,13 +284,13 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // and you can only retrieve directory information within /media directory. A
 // [[SoftLayer_Container_Network_Directory_Listing|Directory Listing]] object contains type (indicating
 // whether it is a file or a directory), name and file count if it is a directory.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetDirectoryInformation(commonOptions *slapi.CommonOptions, directoryName string) ([]*SoftLayer_Container_Network_Directory_Listing, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetDirectoryInformation(ctx *slapi.RequestContext, directoryName string) ([]*SoftLayer_Container_Network_Directory_Listing, error) {
 	var returnValue []*SoftLayer_Container_Network_Directory_Listing
 	return returnValue, nil
 }
 
 // GetDiskSpaceUsageDataByDate - This method returns disk space usage data for your CDN
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetDiskSpaceUsageDataByDate(commonOptions *slapi.CommonOptions, beginDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetDiskSpaceUsageDataByDate(ctx *slapi.RequestContext, beginDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -299,7 +299,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // [[SoftLayer_Container_Bandwidth_GraphOutputsExtended|Bandwidth Graph]] object.
 // [[SoftLayer_Container_Bandwidth_GraphOutputsExtended|Bandwidth Graph]] object contains a starting
 // time, ending time, graph title, graph binary data, and in and outbound total bytes.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetDiskSpaceUsageImageByDate(commonOptions *slapi.CommonOptions, beginDateTime time.Time, endDateTime time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetDiskSpaceUsageImageByDate(ctx *slapi.RequestContext, beginDateTime time.Time, endDateTime time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
@@ -311,7 +311,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // (without quotes) when logging in. SoftLayer designed CDN accounts so they can have multiple CDN FTP
 // users. However, this method returns the default CDN FTP user information: multi user support may be
 // implemented in the future.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetFtpAttributes(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Network_Authentication_Data, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetFtpAttributes(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Authentication_Data, error) {
 	var returnValue *SoftLayer_Container_Network_Authentication_Data
 	return returnValue, nil
 }
@@ -319,7 +319,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // GetMediaUrls - This method returns CDN URLs for static file (http), Flash streaming (rtmp) and
 // Window Media (mms) streaming services. You can generate your CDN URLs based on the information
 // retrieved by this method.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetMediaUrls(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_ContentDelivery_SupportedProtocol, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetMediaUrls(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_ContentDelivery_SupportedProtocol, error) {
 	var returnValue []*SoftLayer_Container_Network_ContentDelivery_SupportedProtocol
 	return returnValue, nil
 }
@@ -328,19 +328,19 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // corresponds to the ID number of the initial parameter passed to the
 // SoftLayer_Network_ContentDelivery_Account service. You can only retrieve CDN accounts assigned to
 // your SoftLayer customer account.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_ContentDelivery_Account, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_ContentDelivery_Account, error) {
 	var returnValue *SoftLayer_Network_ContentDelivery_Account
 	return returnValue, nil
 }
 
 // GetOriginPullMappingInformation - This method returns a list of origin pull configuration data.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetOriginPullMappingInformation(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetOriginPullMappingInformation(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping, error) {
 	var returnValue []*SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping
 	return returnValue, nil
 }
 
 // GetOriginPullSupportedMediaUrls - This method returns CDN URLs that supports Origin Pull mappings.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetOriginPullSupportedMediaUrls(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_ContentDelivery_SupportedProtocol, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetOriginPullSupportedMediaUrls(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_ContentDelivery_SupportedProtocol, error) {
 	var returnValue []*SoftLayer_Container_Network_ContentDelivery_SupportedProtocol
 	return returnValue, nil
 }
@@ -350,7 +350,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // value of the first parameter (origin pull domain) you provided to
 // [[SoftLayer_Network_ContentDelivery_Account::createOriginPullRule|createOriginPullRule]] method. See
 // Error Handling section below for possible errors.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetOriginPullUrl(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetOriginPullUrl(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -358,26 +358,26 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // GetPopNames - This method returns an array of CDN POPs (Points of Presence) object.
 // [[SoftLayer_Container_Network_ContentDelivery_PointsOfPresence|POP object]] object contains the POP
 // id and name.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetPopNames(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_ContentDelivery_PointsOfPresence, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetPopNames(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_ContentDelivery_PointsOfPresence, error) {
 	var returnValue []*SoftLayer_Container_Network_ContentDelivery_PointsOfPresence
 	return returnValue, nil
 }
 
 // GetProviderPortalCredentials - This method returns your login credentials to the CDN provider
 // portal.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetProviderPortalCredentials(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Network_Authentication_Data, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetProviderPortalCredentials(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Authentication_Data, error) {
 	var returnValue *SoftLayer_Container_Network_Authentication_Data
 	return returnValue, nil
 }
 
 // GetTokenAuthenticationDirectories - This method returns all token authentication directories.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetTokenAuthenticationDirectories(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_Directory_Listing, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetTokenAuthenticationDirectories(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_Directory_Listing, error) {
 	var returnValue []*SoftLayer_Container_Network_Directory_Listing
 	return returnValue, nil
 }
 
 // GetVendorFtpAttributes - This method returns your login credentials to the public CDN
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetVendorFtpAttributes(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Network_Authentication_Data, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) GetVendorFtpAttributes(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Authentication_Data, error) {
 	var returnValue *SoftLayer_Container_Network_Authentication_Data
 	return returnValue, nil
 }
@@ -387,7 +387,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // you may use this service to accomplish that. Please keep in mind, it will take about 10 to 15
 // minutes to load content to all CDN POPs depending on the load. You can only specify 5 URLs at a
 // time.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) LoadContent(commonOptions *slapi.CommonOptions, objectUrls []string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) LoadContent(ctx *slapi.RequestContext, objectUrls []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -397,7 +397,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // parameter, these values will be used by default: * text/plain * text/html * text/css *
 // application/x-javascript * text/javascript Note that files larger than 1MB will never be served with
 // compression regardless of whether their content-type is enabled for compression.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) ManageHttpCompression(commonOptions *slapi.CommonOptions, enableFlag bool, mimeTypes []string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) ManageHttpCompression(ctx *slapi.RequestContext, enableFlag bool, mimeTypes []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -412,14 +412,14 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // http:// .http.cdn.softlayer.net/mycdnname/some_file.txt If you created a that points to CDN host,
 // use your URL instead. * http://image.mydomain.com/some_file.txt It takes approximately 3-5 minutes
 // for the system to delete the requested object on every CDN server from submission .
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) PurgeCache(commonOptions *slapi.CommonOptions, objectUrls []string) ([]*SoftLayer_Container_Network_ContentDelivery_PurgeService_Response, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) PurgeCache(ctx *slapi.RequestContext, objectUrls []string) ([]*SoftLayer_Container_Network_ContentDelivery_PurgeService_Response, error) {
 	var returnValue []*SoftLayer_Container_Network_ContentDelivery_PurgeService_Response
 	return returnValue, nil
 }
 
 // RemoveAuthenticationDirectory - If you want to turn off the token authentication, use this method to
 // remove a directory from the token authentication directory.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) RemoveAuthenticationDirectory(commonOptions *slapi.CommonOptions, directory string, mediaType string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) RemoveAuthenticationDirectory(ctx *slapi.RequestContext, directory string, mediaType string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -429,7 +429,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // absolute path. It does not check to see if a file or directory exists before deletion. You can only
 // remove files and directories that are in /media folder. Be sure to catch an exception for the detail
 // on an error.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) RemoveFile(commonOptions *slapi.CommonOptions, source string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) RemoveFile(ctx *slapi.RequestContext, source string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -438,7 +438,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // content authentication token. CDN uses the default Web Service provided by SoftLayer to validate a
 // token. A customer can use their own implementation of the token authentication Web Service. A valid
 // will look similar [https://manage.softlayer.com/CdnService/authenticationWsdlExample/wsdl this].
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) SetAuthenticationServiceEndpoint(commonOptions *slapi.CommonOptions, webserviceEndpoint string, protocol string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) SetAuthenticationServiceEndpoint(ctx *slapi.RequestContext, webserviceEndpoint string, protocol string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -458,14 +458,14 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // updates the password for your CDN FTP account on the ftp.cdnlayer.service.softlayer.com server. You
 // must provide an alphanumeric value for a new password. - _ ! % # $ ^ & * characters are allowed
 // beside an alphanumeric string.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) SetFtpPassword(commonOptions *slapi.CommonOptions, newPassword string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) SetFtpPassword(ctx *slapi.RequestContext, newPassword string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // UpdateNote - This method allows you to edit CDN account note. The maximum length for CDN account
 // note is 30 characters.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) UpdateNote(commonOptions *slapi.CommonOptions, note string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) UpdateNote(ctx *slapi.RequestContext, note string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -475,7 +475,7 @@ func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelive
 // to upload files larger than 20 MB. This method takes [[SoftLayer_Container_Utility_File_Attachment]]
 // a first parameter. A target name must be an absolute path and you can only upload a file to a
 // directory that is in /media folder.
-func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) UploadStream(commonOptions *slapi.CommonOptions, source SoftLayer_Container_Utility_File_Attachment, target string) (bool, error) {
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) UploadStream(ctx *slapi.RequestContext, source SoftLayer_Container_Utility_File_Attachment, target string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

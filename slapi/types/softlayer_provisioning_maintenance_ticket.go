@@ -34,7 +34,7 @@ type SoftLayer_Provisioning_Maintenance_Ticket struct {
 }
 
 // GetObject - <nil>
-func (softlayer_provisioning_maintenance_ticket *SoftLayer_Provisioning_Maintenance_Ticket) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Provisioning_Maintenance_Ticket, error) {
+func (softlayer_provisioning_maintenance_ticket *SoftLayer_Provisioning_Maintenance_Ticket) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Maintenance_Ticket, error) {
 	var returnValue *SoftLayer_Provisioning_Maintenance_Ticket
 	return returnValue, nil
 }

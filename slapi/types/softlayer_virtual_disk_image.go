@@ -100,19 +100,19 @@ type SoftLayer_Virtual_Disk_Image struct {
 }
 
 // EditObject - <nil>
-func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Virtual_Disk_Image) (bool, error) {
+func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Virtual_Disk_Image) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Virtual_Disk_Image, error) {
+func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Disk_Image, error) {
 	var returnValue *SoftLayer_Virtual_Disk_Image
 	return returnValue, nil
 }
 
 // GetPublicIsoImages - <nil>
-func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) GetPublicIsoImages(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Virtual_Disk_Image, error) {
+func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) GetPublicIsoImages(ctx *slapi.RequestContext) ([]*SoftLayer_Virtual_Disk_Image, error) {
 	var returnValue []*SoftLayer_Virtual_Disk_Image
 	return returnValue, nil
 }

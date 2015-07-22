@@ -22,7 +22,7 @@ type SoftLayer_User_Customer_External_Binding_Phone struct {
 }
 
 // CheckPhoneValidationResult - no documentation
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) CheckPhoneValidationResult(commonOptions *slapi.CommonOptions, token string) (bool, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) CheckPhoneValidationResult(ctx *slapi.RequestContext, token string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -31,7 +31,7 @@ func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_Ex
 // SoftLayer account, but will not require you to authentication with our trusted 2 form factor vendor
 // when logging into the SoftLayer customer portal. You may supply one of the following reason when you
 // disable an external binding: *Unspecified *TemporarilyUnavailable *Lost *Stolen
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) Disable(commonOptions *slapi.CommonOptions, reason string) (bool, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) Disable(ctx *slapi.RequestContext, reason string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -40,7 +40,7 @@ func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_Ex
 // authenticate with our trusted 3rd party 2 form factor vendor when logging into the SoftLayer
 // customer portal. Please note that API access will be disabled for users that have an active external
 // binding.
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) Enable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) Enable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -48,7 +48,7 @@ func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_Ex
 // GetAllAuthenticationModes - This service returns key names of all available authentication modes.
 // See [[SoftLayer_Container_User_Customer_External_Binding_Phone_Mode|authentication mode]] container
 // for details.
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetAllAuthenticationModes(commonOptions *slapi.CommonOptions) ([]string, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetAllAuthenticationModes(ctx *slapi.RequestContext) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }
@@ -57,32 +57,32 @@ func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_Ex
 // Refer to
 // [[SoftLayer_User_Customer_External_Binding_Phone::getAllAuthenticationModes|getAllAuthenticationModes]]
 // to retrieve authentication mode key names.
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetAllAuthenticationPinModes(commonOptions *slapi.CommonOptions, authenticationModeKeyName string) ([]string, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetAllAuthenticationPinModes(ctx *slapi.RequestContext, authenticationModeKeyName string) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }
 
 // GetAuthenticationMode - <nil>
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetAuthenticationMode(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_User_Customer_External_Binding_Phone_Mode, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetAuthenticationMode(ctx *slapi.RequestContext) (*SoftLayer_Container_User_Customer_External_Binding_Phone_Mode, error) {
 	var returnValue *SoftLayer_Container_User_Customer_External_Binding_Phone_Mode
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_External_Binding_Phone, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_External_Binding_Phone, error) {
 	var returnValue *SoftLayer_User_Customer_External_Binding_Phone
 	return returnValue, nil
 }
 
 // GetPhoneAppActivationCode - Some vendor's mobile app requires an activation code. Use this method to
 // get an activation data.
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetPhoneAppActivationCode(commonOptions *slapi.CommonOptions) ([]*SoftLayer_User_External_Binding_Attribute, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetPhoneAppActivationCode(ctx *slapi.RequestContext) ([]*SoftLayer_User_External_Binding_Attribute, error) {
 	var returnValue []*SoftLayer_User_External_Binding_Attribute
 	return returnValue, nil
 }
 
 // GetPhoneData - <nil>
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetPhoneData(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_User_Data_Phone, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) GetPhoneData(ctx *slapi.RequestContext) ([]*SoftLayer_Container_User_Data_Phone, error) {
 	var returnValue []*SoftLayer_Container_User_Data_Phone
 	return returnValue, nil
 }
@@ -90,7 +90,7 @@ func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_Ex
 // RequestPhoneValidation - Initiates a phone validation requests and returns a unique token. Use
 // [[SoftLayer_User_Customer_External_Binding_Phone::checkPhoneValidationResult|checkPhoneValidationResult]]
 // to find the phone validation result.
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) RequestPhoneValidation(commonOptions *slapi.CommonOptions, phoneData SoftLayer_Container_User_Data_Phone) (string, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) RequestPhoneValidation(ctx *slapi.RequestContext, phoneData SoftLayer_Container_User_Data_Phone) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -98,7 +98,7 @@ func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_Ex
 // UpdateAuthenticationMode - This service allow you to change your phone authentication mode. See
 // [[SoftLayer_Container_User_Customer_External_Binding_Phone_Mode|authentication mode]] container for
 // available modes.
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) UpdateAuthenticationMode(commonOptions *slapi.CommonOptions, mode SoftLayer_Container_User_Customer_External_Binding_Phone_Mode) (bool, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) UpdateAuthenticationMode(ctx *slapi.RequestContext, mode SoftLayer_Container_User_Customer_External_Binding_Phone_Mode) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -114,7 +114,7 @@ func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_Ex
 // menus. *phoneType: Specify the primary and backup phone number by setting this value to or If
 // omitted, it will be considered to be the primary phone number. If you are passing two Phone objects,
 // you must specify the phone type of each phone number.
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) UpdatePhone(commonOptions *slapi.CommonOptions, phoneData []SoftLayer_Container_User_Data_Phone) (bool, error) {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) UpdatePhone(ctx *slapi.RequestContext, phoneData []SoftLayer_Container_User_Data_Phone) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

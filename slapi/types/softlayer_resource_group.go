@@ -76,13 +76,13 @@ type SoftLayer_Resource_Group struct {
 }
 
 // EditObject - <nil>
-func (softlayer_resource_group *SoftLayer_Resource_Group) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Resource_Group) (bool, error) {
+func (softlayer_resource_group *SoftLayer_Resource_Group) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Resource_Group) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_resource_group *SoftLayer_Resource_Group) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Resource_Group, error) {
+func (softlayer_resource_group *SoftLayer_Resource_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Resource_Group, error) {
 	var returnValue *SoftLayer_Resource_Group
 	return returnValue, nil
 }

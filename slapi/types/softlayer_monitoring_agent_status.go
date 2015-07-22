@@ -20,7 +20,7 @@ type SoftLayer_Monitoring_Agent_Status struct {
 }
 
 // GetObject - <nil>
-func (softlayer_monitoring_agent_status *SoftLayer_Monitoring_Agent_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Monitoring_Agent_Status, error) {
+func (softlayer_monitoring_agent_status *SoftLayer_Monitoring_Agent_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Monitoring_Agent_Status, error) {
 	var returnValue *SoftLayer_Monitoring_Agent_Status
 	return returnValue, nil
 }

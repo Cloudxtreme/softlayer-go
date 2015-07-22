@@ -26,7 +26,7 @@ type SoftLayer_Configuration_Template_Type struct {
 }
 
 // GetObject - <nil>
-func (softlayer_configuration_template_type *SoftLayer_Configuration_Template_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Configuration_Template_Type, error) {
+func (softlayer_configuration_template_type *SoftLayer_Configuration_Template_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Type, error) {
 	var returnValue *SoftLayer_Configuration_Template_Type
 	return returnValue, nil
 }

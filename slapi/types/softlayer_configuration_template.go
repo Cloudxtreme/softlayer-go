@@ -80,38 +80,38 @@ type SoftLayer_Configuration_Template struct {
 }
 
 // CopyTemplate - Copy a configuration template and returns a newly created template copy
-func (softlayer_configuration_template *SoftLayer_Configuration_Template) CopyTemplate(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Configuration_Template) (*SoftLayer_Configuration_Template, error) {
+func (softlayer_configuration_template *SoftLayer_Configuration_Template) CopyTemplate(ctx *slapi.RequestContext, templateObject SoftLayer_Configuration_Template) (*SoftLayer_Configuration_Template, error) {
 	var returnValue *SoftLayer_Configuration_Template
 	return returnValue, nil
 }
 
 // DeleteObject - no documentation
-func (softlayer_configuration_template *SoftLayer_Configuration_Template) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_configuration_template *SoftLayer_Configuration_Template) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - Edit the object by passing in a modified instance of the object. Use this method to
 // modify configuration template name or description.
-func (softlayer_configuration_template *SoftLayer_Configuration_Template) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Configuration_Template) (bool, error) {
+func (softlayer_configuration_template *SoftLayer_Configuration_Template) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Configuration_Template) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllObjects - no documentation
-func (softlayer_configuration_template *SoftLayer_Configuration_Template) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Configuration_Template, error) {
+func (softlayer_configuration_template *SoftLayer_Configuration_Template) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Configuration_Template, error) {
 	var returnValue []*SoftLayer_Configuration_Template
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_configuration_template *SoftLayer_Configuration_Template) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Configuration_Template, error) {
+func (softlayer_configuration_template *SoftLayer_Configuration_Template) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template, error) {
 	var returnValue *SoftLayer_Configuration_Template
 	return returnValue, nil
 }
 
 // UpdateDefaultValues - no documentation
-func (softlayer_configuration_template *SoftLayer_Configuration_Template) UpdateDefaultValues(commonOptions *slapi.CommonOptions, configurationValues []SoftLayer_Configuration_Template_Section_Definition_Value) (bool, error) {
+func (softlayer_configuration_template *SoftLayer_Configuration_Template) UpdateDefaultValues(ctx *slapi.RequestContext, configurationValues []SoftLayer_Configuration_Template_Section_Definition_Value) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

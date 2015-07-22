@@ -1451,19 +1451,19 @@ type SoftLayer_Account struct {
 }
 
 // ActivatePartner - <nil>
-func (softlayer_account *SoftLayer_Account) ActivatePartner(commonOptions *slapi.CommonOptions, accountId string, hashCode string) (*SoftLayer_Account, error) {
+func (softlayer_account *SoftLayer_Account) ActivatePartner(ctx *slapi.RequestContext, accountId string, hashCode string) (*SoftLayer_Account, error) {
 	var returnValue *SoftLayer_Account
 	return returnValue, nil
 }
 
 // AddAchInformation - <nil>
-func (softlayer_account *SoftLayer_Account) AddAchInformation(commonOptions *slapi.CommonOptions, achInformation SoftLayer_Container_Billing_Info_Ach) (bool, error) {
+func (softlayer_account *SoftLayer_Account) AddAchInformation(ctx *slapi.RequestContext, achInformation SoftLayer_Container_Billing_Info_Ach) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AddReferralPartnerPaymentOption - <nil>
-func (softlayer_account *SoftLayer_Account) AddReferralPartnerPaymentOption(commonOptions *slapi.CommonOptions, paymentOption SoftLayer_Container_Referral_Partner_Payment_Option) (bool, error) {
+func (softlayer_account *SoftLayer_Account) AddReferralPartnerPaymentOption(ctx *slapi.RequestContext, paymentOption SoftLayer_Container_Referral_Partner_Payment_Option) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1472,7 +1472,7 @@ func (softlayer_account *SoftLayer_Account) AddReferralPartnerPaymentOption(comm
 // blocked for the account so the billing cycle can run. Generally, accounts are restricted from moving
 // servers in or out of Bandwidth Pools from 12:00 CST on the day prior to billing, until the billing
 // batch completes, sometime after midnight the day of actual billing for the account.
-func (softlayer_account *SoftLayer_Account) AreVdrUpdatesBlockedForBilling(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_account *SoftLayer_Account) AreVdrUpdatesBlockedForBilling(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1481,7 +1481,7 @@ func (softlayer_account *SoftLayer_Account) AreVdrUpdatesBlockedForBilling(commo
 // submitting a PayPal payment request, the customer is redirected to PayPal to confirm the request. If
 // the customer elects to cancel the payment from PayPal, they are returned to SoftLayer where the
 // manual payment record is updated to a status of canceled.
-func (softlayer_account *SoftLayer_Account) CancelPayPalTransaction(commonOptions *slapi.CommonOptions, token string, payerId string) (bool, error) {
+func (softlayer_account *SoftLayer_Account) CancelPayPalTransaction(ctx *slapi.RequestContext, token string, payerId string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1491,14 +1491,14 @@ func (softlayer_account *SoftLayer_Account) CancelPayPalTransaction(commonOption
 // PayPal to confirm the request. Once confirmed, PayPal returns the customer to SoftLayer where an
 // attempt is made to finalize the transaction. A status message regarding the attempt is returned to
 // the calling function.
-func (softlayer_account *SoftLayer_Account) CompletePayPalTransaction(commonOptions *slapi.CommonOptions, token string, payerId string) (string, error) {
+func (softlayer_account *SoftLayer_Account) CompletePayPalTransaction(ctx *slapi.RequestContext, token string, payerId string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // CountHourlyInstances - Retrieve the number of hourly services on an account that are active, plus
 // any pending orders with hourly services attached.
-func (softlayer_account *SoftLayer_Account) CountHourlyInstances(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_account *SoftLayer_Account) CountHourlyInstances(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
@@ -1509,20 +1509,20 @@ func (softlayer_account *SoftLayer_Account) CountHourlyInstances(commonOptions *
 // 'success', 'failed', or 'conflict'. The 'success' backupStatus returns jobs with a status of the
 // 'failed' backupStatus returns jobs with a status of while the 'conflict' backupStatus will return
 // jobs that are not or
-func (softlayer_account *SoftLayer_Account) GetAccountBackupHistory(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time, backupStatus string) ([]*SoftLayer_Container_Network_Storage_Evault_WebCc_JobDetails, error) {
+func (softlayer_account *SoftLayer_Account) GetAccountBackupHistory(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time, backupStatus string) ([]*SoftLayer_Container_Network_Storage_Evault_WebCc_JobDetails, error) {
 	var returnValue []*SoftLayer_Container_Network_Storage_Evault_WebCc_JobDetails
 	return returnValue, nil
 }
 
 // GetAccountTraitValue - no documentation
-func (softlayer_account *SoftLayer_Account) GetAccountTraitValue(commonOptions *slapi.CommonOptions, keyName string) (string, error) {
+func (softlayer_account *SoftLayer_Account) GetAccountTraitValue(ctx *slapi.RequestContext, keyName string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetActiveAlarms - Return all currently active alarms on this account. Only alarms on hardware and
 // virtual servers accessible to the current user will be returned.
-func (softlayer_account *SoftLayer_Account) GetActiveAlarms(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
+func (softlayer_account *SoftLayer_Account) GetActiveAlarms(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
 	var returnValue []*SoftLayer_Container_Monitoring_Alarm_History
 	return returnValue, nil
 }
@@ -1530,7 +1530,7 @@ func (softlayer_account *SoftLayer_Account) GetActiveAlarms(commonOptions *slapi
 // GetActiveOutletPackages - This method pulls all the active packages. This will give you a basic
 // description of the packages within the SoftLayer Outlet store that are currently active and from
 // which you can order a server or additional services.
-func (softlayer_account *SoftLayer_Account) GetActiveOutletPackages(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Package, error) {
+func (softlayer_account *SoftLayer_Account) GetActiveOutletPackages(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package, error) {
 	var returnValue []*SoftLayer_Product_Package
 	return returnValue, nil
 }
@@ -1542,7 +1542,7 @@ func (softlayer_account *SoftLayer_Account) GetActiveOutletPackages(commonOption
 // [[SoftLayer_Product_Package/getCategories|getCategories]] or
 // [[SoftLayer_Product_Package/getItems|getItems]] for more information. Packages that have been
 // retired will not appear in this result set.
-func (softlayer_account *SoftLayer_Account) GetActivePackages(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Package, error) {
+func (softlayer_account *SoftLayer_Account) GetActivePackages(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package, error) {
 	var returnValue []*SoftLayer_Product_Package
 	return returnValue, nil
 }
@@ -1554,7 +1554,7 @@ func (softlayer_account *SoftLayer_Account) GetActivePackages(commonOptions *sla
 // may query one of various endpoints from that package to get specific information about its products
 // and pricing. See [[SoftLayer_Product_Package/getCategories|getCategories]] or
 // [[SoftLayer_Product_Package/getItems|getItems]] for more information.
-func (softlayer_account *SoftLayer_Account) GetActivePackagesByAttribute(commonOptions *slapi.CommonOptions, attributeKeyName string) ([]*SoftLayer_Product_Package, error) {
+func (softlayer_account *SoftLayer_Account) GetActivePackagesByAttribute(ctx *slapi.RequestContext, attributeKeyName string) ([]*SoftLayer_Product_Package, error) {
 	var returnValue []*SoftLayer_Product_Package
 	return returnValue, nil
 }
@@ -1562,45 +1562,45 @@ func (softlayer_account *SoftLayer_Account) GetActivePackagesByAttribute(commonO
 // GetActivePrivateHostedCloudPackages - This method pulls all the active private hosted cloud
 // packages. This will give you a basic description of the packages that are currently active and from
 // which you can order private hosted cloud configurations.
-func (softlayer_account *SoftLayer_Account) GetActivePrivateHostedCloudPackages(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Package, error) {
+func (softlayer_account *SoftLayer_Account) GetActivePrivateHostedCloudPackages(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package, error) {
 	var returnValue []*SoftLayer_Product_Package
 	return returnValue, nil
 }
 
 // GetAggregatedUptimeGraph - no documentation
-func (softlayer_account *SoftLayer_Account) GetAggregatedUptimeGraph(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) (*SoftLayer_Container_Graph, error) {
+func (softlayer_account *SoftLayer_Account) GetAggregatedUptimeGraph(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) (*SoftLayer_Container_Graph, error) {
 	var returnValue *SoftLayer_Container_Graph
 	return returnValue, nil
 }
 
 // GetAlternateCreditCardData - <nil>
-func (softlayer_account *SoftLayer_Account) GetAlternateCreditCardData(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Account_Payment_Method_CreditCard, error) {
+func (softlayer_account *SoftLayer_Account) GetAlternateCreditCardData(ctx *slapi.RequestContext) (*SoftLayer_Container_Account_Payment_Method_CreditCard, error) {
 	var returnValue *SoftLayer_Container_Account_Payment_Method_CreditCard
 	return returnValue, nil
 }
 
 // GetAttributeByType - Retrieve a single [[SoftLayer_Account_Attribute]] record by it's type's name.
-func (softlayer_account *SoftLayer_Account) GetAttributeByType(commonOptions *slapi.CommonOptions, attributeType string) (*SoftLayer_Account_Attribute, error) {
+func (softlayer_account *SoftLayer_Account) GetAttributeByType(ctx *slapi.RequestContext, attributeType string) (*SoftLayer_Account_Attribute, error) {
 	var returnValue *SoftLayer_Account_Attribute
 	return returnValue, nil
 }
 
 // GetAuxiliaryNotifications - <nil>
-func (softlayer_account *SoftLayer_Account) GetAuxiliaryNotifications(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Utility_Message, error) {
+func (softlayer_account *SoftLayer_Account) GetAuxiliaryNotifications(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Utility_Message, error) {
 	var returnValue []*SoftLayer_Container_Utility_Message
 	return returnValue, nil
 }
 
 // GetAverageArchiveUsageMetricDataByDate - Returns the average disk space usage for all archive
 // repositories.
-func (softlayer_account *SoftLayer_Account) GetAverageArchiveUsageMetricDataByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time) (float32, error) {
+func (softlayer_account *SoftLayer_Account) GetAverageArchiveUsageMetricDataByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) (float32, error) {
 	var returnValue float32
 	return returnValue, nil
 }
 
 // GetAveragePublicUsageMetricDataByDate - Returns the average disk space usage for all public
 // repositories.
-func (softlayer_account *SoftLayer_Account) GetAveragePublicUsageMetricDataByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time) (float32, error) {
+func (softlayer_account *SoftLayer_Account) GetAveragePublicUsageMetricDataByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) (float32, error) {
 	var returnValue float32
 	return returnValue, nil
 }
@@ -1608,19 +1608,19 @@ func (softlayer_account *SoftLayer_Account) GetAveragePublicUsageMetricDataByDat
 // GetCurrentBackupStatisticsGraph - This method returns a SoftLayer_Container_Account_Graph_Outputs
 // containing a base64 string PNG image. The optional parameter, detailedGraph, can be passed to get a
 // more detailed graph.
-func (softlayer_account *SoftLayer_Account) GetCurrentBackupStatisticsGraph(commonOptions *slapi.CommonOptions, detailedGraph bool) (*SoftLayer_Container_Account_Graph_Outputs, error) {
+func (softlayer_account *SoftLayer_Account) GetCurrentBackupStatisticsGraph(ctx *slapi.RequestContext, detailedGraph bool) (*SoftLayer_Container_Account_Graph_Outputs, error) {
 	var returnValue *SoftLayer_Container_Account_Graph_Outputs
 	return returnValue, nil
 }
 
 // GetCurrentTicketStatisticsGraph - <nil>
-func (softlayer_account *SoftLayer_Account) GetCurrentTicketStatisticsGraph(commonOptions *slapi.CommonOptions, detailedGraph bool) (*SoftLayer_Container_Account_Graph_Outputs, error) {
+func (softlayer_account *SoftLayer_Account) GetCurrentTicketStatisticsGraph(ctx *slapi.RequestContext, detailedGraph bool) (*SoftLayer_Container_Account_Graph_Outputs, error) {
 	var returnValue *SoftLayer_Container_Account_Graph_Outputs
 	return returnValue, nil
 }
 
 // GetCurrentUser - Retrieve the user record of the user calling the SoftLayer
-func (softlayer_account *SoftLayer_Account) GetCurrentUser(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer, error) {
+func (softlayer_account *SoftLayer_Account) GetCurrentUser(ctx *slapi.RequestContext) (*SoftLayer_User_Customer, error) {
 	var returnValue *SoftLayer_User_Customer
 	return returnValue, nil
 }
@@ -1630,7 +1630,7 @@ func (softlayer_account *SoftLayer_Account) GetCurrentUser(commonOptions *slapi.
 // Legacy Data Warehouse. Each data entry objects contain ''dateTime'' and ''counter'' properties.
 // ''dateTime'' property indicates the time that the disk usage data was measured and ''counter''
 // property holds the disk usage in bytes.
-func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricDataByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricDataByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -1640,7 +1640,7 @@ func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricDataByDate(commonO
 // Legacy Data Warehouse. Each data entry objects contain ''dateTime'' and ''counter'' properties.
 // ''dateTime'' property indicates the time that the disk usage data was measured and ''counter''
 // property holds the disk usage in bytes.
-func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricDataFromLegacyByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricDataFromLegacyByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -1650,14 +1650,14 @@ func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricDataFromLegacyByDa
 // Metric Tracking Object System. Each data entry object contains ''dateTime'' and ''counter''
 // properties. ''dateTime'' property indicates the time that the disk usage data was measured and
 // ''counter'' property holds the disk usage in bytes.
-func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricDataFromMetricTrackingObjectSystemByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricDataFromMetricTrackingObjectSystemByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
 
 // GetDiskUsageMetricImageByDate - Returns a disk usage image based on disk usage specified by the
 // input parameters.
-func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricImageByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time) (*SoftLayer_Container_Account_Graph_Outputs, error) {
+func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricImageByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) (*SoftLayer_Container_Account_Graph_Outputs, error) {
 	var returnValue *SoftLayer_Container_Account_Graph_Outputs
 	return returnValue, nil
 }
@@ -1666,7 +1666,7 @@ func (softlayer_account *SoftLayer_Account) GetDiskUsageMetricImageByDate(common
 // period within the start and end dates. The pdfType must be one of 'snapshot', or 'historical'.
 // Possible historicalType parameters are 'monthly', 'yearly', and 'quarterly'. Start and end dates
 // should be in ISO 8601 date format.
-func (softlayer_account *SoftLayer_Account) GetExecutiveSummaryPdf(commonOptions *slapi.CommonOptions, pdfType string, historicalType string, startDate string, endDate string) (string, error) {
+func (softlayer_account *SoftLayer_Account) GetExecutiveSummaryPdf(ctx *slapi.RequestContext, pdfType string, historicalType string, startDate string, endDate string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -1680,13 +1680,13 @@ func (softlayer_account *SoftLayer_Account) GetExecutiveSummaryPdf(commonOptions
 // next bill cycle. The forNextBillCycle parameter defaults to false. Please note that all discount
 // amount entries are reported as pre-tax amounts and the legacy tax fields in the
 // [[SoftLayer_Container_Account_Discount_Program]] are deprecated.
-func (softlayer_account *SoftLayer_Account) GetFlexibleCreditProgramInfo(commonOptions *slapi.CommonOptions, forNextBillCycle bool) (*SoftLayer_Container_Account_Discount_Program, error) {
+func (softlayer_account *SoftLayer_Account) GetFlexibleCreditProgramInfo(ctx *slapi.RequestContext, forNextBillCycle bool) (*SoftLayer_Container_Account_Discount_Program, error) {
 	var returnValue *SoftLayer_Container_Account_Discount_Program
 	return returnValue, nil
 }
 
 // GetHistoricalBackupGraph - <nil>
-func (softlayer_account *SoftLayer_Account) GetHistoricalBackupGraph(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) (*SoftLayer_Container_Account_Graph_Outputs, error) {
+func (softlayer_account *SoftLayer_Account) GetHistoricalBackupGraph(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) (*SoftLayer_Container_Account_Graph_Outputs, error) {
 	var returnValue *SoftLayer_Container_Account_Graph_Outputs
 	return returnValue, nil
 }
@@ -1694,7 +1694,7 @@ func (softlayer_account *SoftLayer_Account) GetHistoricalBackupGraph(commonOptio
 // GetHistoricalBandwidthGraph - This method will return a SoftLayer_Container_Account_Graph_Outputs
 // object containing a base64 string PNG image of a line graph of bandwidth statistics given the start
 // and end dates. The start and end dates should be valid ISO 8601 date formatted strings.
-func (softlayer_account *SoftLayer_Account) GetHistoricalBandwidthGraph(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) (*SoftLayer_Container_Account_Graph_Outputs, error) {
+func (softlayer_account *SoftLayer_Account) GetHistoricalBandwidthGraph(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) (*SoftLayer_Container_Account_Graph_Outputs, error) {
 	var returnValue *SoftLayer_Container_Account_Graph_Outputs
 	return returnValue, nil
 }
@@ -1706,7 +1706,7 @@ func (softlayer_account *SoftLayer_Account) GetHistoricalBandwidthGraph(commonOp
 // Thrown if there is an error connecting to HBase. SoftLayer_Exception Thrown if there is no data
 // available for the specified date range. SoftLayer_Exception Thrown if there is an error retrieving
 // data or generating the graph.
-func (softlayer_account *SoftLayer_Account) GetHistoricalTicketGraph(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) (*SoftLayer_Container_Account_Graph_Outputs, error) {
+func (softlayer_account *SoftLayer_Account) GetHistoricalTicketGraph(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) (*SoftLayer_Container_Account_Graph_Outputs, error) {
 	var returnValue *SoftLayer_Container_Account_Graph_Outputs
 	return returnValue, nil
 }
@@ -1718,13 +1718,13 @@ func (softlayer_account *SoftLayer_Account) GetHistoricalTicketGraph(commonOptio
 // or end date is provided. SoftLayer_Exception Thrown if there is an error connecting to HBase.
 // SoftLayer_Exception Thrown if there is no data available for the specified date range.
 // SoftLayer_Exception Thrown if there is an error retrieving data or generating the graph.
-func (softlayer_account *SoftLayer_Account) GetHistoricalUptimeGraph(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) (*SoftLayer_Container_Account_Graph_Outputs, error) {
+func (softlayer_account *SoftLayer_Account) GetHistoricalUptimeGraph(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) (*SoftLayer_Container_Account_Graph_Outputs, error) {
 	var returnValue *SoftLayer_Container_Account_Graph_Outputs
 	return returnValue, nil
 }
 
 // GetLargestAllowedSubnetCidr - <nil>
-func (softlayer_account *SoftLayer_Account) GetLargestAllowedSubnetCidr(commonOptions *slapi.CommonOptions, numberOfHosts int, locationId int) (int, error) {
+func (softlayer_account *SoftLayer_Account) GetLargestAllowedSubnetCidr(ctx *slapi.RequestContext, numberOfHosts int, locationId int) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
@@ -1732,7 +1732,7 @@ func (softlayer_account *SoftLayer_Account) GetLargestAllowedSubnetCidr(commonOp
 // GetNextInvoiceExcel - Return an account's next invoice in a Microsoft excel format. The "next
 // invoice" is what a customer will be billed on their next invoice, assuming no changes are made.
 // Currently this does not include Bandwidth Pooling charges.
-func (softlayer_account *SoftLayer_Account) GetNextInvoiceExcel(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_account *SoftLayer_Account) GetNextInvoiceExcel(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -1740,7 +1740,7 @@ func (softlayer_account *SoftLayer_Account) GetNextInvoiceExcel(commonOptions *s
 // GetNextInvoicePdf - Return an account's next invoice in PDF format. The "next invoice" is what a
 // customer will be billed on their next invoice, assuming no changes are made. Currently this does not
 // include Bandwidth Pooling charges.
-func (softlayer_account *SoftLayer_Account) GetNextInvoicePdf(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_account *SoftLayer_Account) GetNextInvoicePdf(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -1748,13 +1748,13 @@ func (softlayer_account *SoftLayer_Account) GetNextInvoicePdf(commonOptions *sla
 // GetNextInvoicePdfDetailed - Return an account's next invoice detailed portion in PDF format. The
 // "next invoice" is what a customer will be billed on their next invoice, assuming no changes are
 // made. Currently this does not include Bandwidth Pooling charges.
-func (softlayer_account *SoftLayer_Account) GetNextInvoicePdfDetailed(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_account *SoftLayer_Account) GetNextInvoicePdfDetailed(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetNextInvoiceZeroFeeItemCounts - <nil>
-func (softlayer_account *SoftLayer_Account) GetNextInvoiceZeroFeeItemCounts(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Product_Item_Category_ZeroFee_Count, error) {
+func (softlayer_account *SoftLayer_Account) GetNextInvoiceZeroFeeItemCounts(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Product_Item_Category_ZeroFee_Count, error) {
 	var returnValue []*SoftLayer_Container_Product_Item_Category_ZeroFee_Count
 	return returnValue, nil
 }
@@ -1762,7 +1762,7 @@ func (softlayer_account *SoftLayer_Account) GetNextInvoiceZeroFeeItemCounts(comm
 // GetObject - getObject retrieves the SoftLayer_Account object whose ID number corresponds to the ID
 // number of the init parameter passed to the SoftLayer_Account service. You can only retrieve the
 // account that your portal user is assigned to.
-func (softlayer_account *SoftLayer_Account) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account, error) {
+func (softlayer_account *SoftLayer_Account) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account, error) {
 	var returnValue *SoftLayer_Account
 	return returnValue, nil
 }
@@ -1772,25 +1772,25 @@ func (softlayer_account *SoftLayer_Account) GetObject(commonOptions *slapi.Commo
 // the change request will no longer appear in the list of pending change requests. This method will
 // return a list of all pending change requests as well as a portion of the data from the original
 // request.
-func (softlayer_account *SoftLayer_Account) GetPendingCreditCardChangeRequestData(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Account_Payment_Method_CreditCard, error) {
+func (softlayer_account *SoftLayer_Account) GetPendingCreditCardChangeRequestData(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Account_Payment_Method_CreditCard, error) {
 	var returnValue []*SoftLayer_Container_Account_Payment_Method_CreditCard
 	return returnValue, nil
 }
 
 // GetReferralPartnerCommissionForecast - <nil>
-func (softlayer_account *SoftLayer_Account) GetReferralPartnerCommissionForecast(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Referral_Partner_Commission, error) {
+func (softlayer_account *SoftLayer_Account) GetReferralPartnerCommissionForecast(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Referral_Partner_Commission, error) {
 	var returnValue []*SoftLayer_Container_Referral_Partner_Commission
 	return returnValue, nil
 }
 
 // GetReferralPartnerCommissionHistory - <nil>
-func (softlayer_account *SoftLayer_Account) GetReferralPartnerCommissionHistory(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Referral_Partner_Commission, error) {
+func (softlayer_account *SoftLayer_Account) GetReferralPartnerCommissionHistory(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Referral_Partner_Commission, error) {
 	var returnValue []*SoftLayer_Container_Referral_Partner_Commission
 	return returnValue, nil
 }
 
 // GetReferralPartnerCommissionPending - <nil>
-func (softlayer_account *SoftLayer_Account) GetReferralPartnerCommissionPending(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Referral_Partner_Commission, error) {
+func (softlayer_account *SoftLayer_Account) GetReferralPartnerCommissionPending(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Referral_Partner_Commission, error) {
 	var returnValue []*SoftLayer_Container_Referral_Partner_Commission
 	return returnValue, nil
 }
@@ -1798,7 +1798,7 @@ func (softlayer_account *SoftLayer_Account) GetReferralPartnerCommissionPending(
 // GetSharedBlockDeviceTemplateGroups - This method returns the
 // [[SoftLayer_Virtual_Guest_Block_Device_Template_Group]] objects that have been shared with this
 // account
-func (softlayer_account *SoftLayer_Account) GetSharedBlockDeviceTemplateGroups(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
+func (softlayer_account *SoftLayer_Account) GetSharedBlockDeviceTemplateGroups(ctx *slapi.RequestContext) ([]*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
 	var returnValue []*SoftLayer_Virtual_Guest_Block_Device_Template_Group
 	return returnValue, nil
 }
@@ -1810,7 +1810,7 @@ func (softlayer_account *SoftLayer_Account) GetSharedBlockDeviceTemplateGroups(c
 // forNextBillCycle parameter can be set to true to return a
 // SoftLayer_Container_Account_Discount_Program object with information with relation to the next bill
 // cycle. The forNextBillCycle parameter defaults to false.
-func (softlayer_account *SoftLayer_Account) GetTechIncubatorProgramInfo(commonOptions *slapi.CommonOptions, forNextBillCycle bool) (*SoftLayer_Container_Account_Discount_Program, error) {
+func (softlayer_account *SoftLayer_Account) GetTechIncubatorProgramInfo(ctx *slapi.RequestContext, forNextBillCycle bool) (*SoftLayer_Container_Account_Discount_Program, error) {
 	var returnValue *SoftLayer_Container_Account_Discount_Program
 	return returnValue, nil
 }
@@ -1818,7 +1818,7 @@ func (softlayer_account *SoftLayer_Account) GetTechIncubatorProgramInfo(commonOp
 // GetValidSecurityCertificateEntries - Retrieve a list of valid (non-expired) security certificates
 // without the sensitive certificate information. This allows non-privileged users to view and select
 // security certificates when configuring associated services.
-func (softlayer_account *SoftLayer_Account) GetValidSecurityCertificateEntries(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Security_Certificate_Entry, error) {
+func (softlayer_account *SoftLayer_Account) GetValidSecurityCertificateEntries(ctx *slapi.RequestContext) ([]*SoftLayer_Security_Certificate_Entry, error) {
 	var returnValue []*SoftLayer_Security_Certificate_Entry
 	return returnValue, nil
 }
@@ -1827,7 +1827,7 @@ func (softlayer_account *SoftLayer_Account) GetValidSecurityCertificateEntries(c
 // includes which servers have available updates, which servers require rebooting due to updates, which
 // servers have failed retrieving updates, and which servers have failed to communicate with the
 // SoftLayer private Windows Software Update Services server.
-func (softlayer_account *SoftLayer_Account) GetWindowsUpdateStatus(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status, error) {
+func (softlayer_account *SoftLayer_Account) GetWindowsUpdateStatus(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status, error) {
 	var returnValue []*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status
 	return returnValue, nil
 }
@@ -1835,27 +1835,27 @@ func (softlayer_account *SoftLayer_Account) GetWindowsUpdateStatus(commonOptions
 // HasAttribute - Determine if an account has an [[SoftLayer_Account_Attribute|attribute]] associated
 // with it. hasAttribute() returns false if the attribute does not exist or if it does not have a
 // value.
-func (softlayer_account *SoftLayer_Account) HasAttribute(commonOptions *slapi.CommonOptions, attributeType string) (bool, error) {
+func (softlayer_account *SoftLayer_Account) HasAttribute(ctx *slapi.RequestContext, attributeType string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // HourlyInstanceLimit - This method will return the limit (number) of hourly services the account is
 // allowed to have.
-func (softlayer_account *SoftLayer_Account) HourlyInstanceLimit(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_account *SoftLayer_Account) HourlyInstanceLimit(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
 
 // HourlyServerLimit - This method will return the limit (number) of hourly bare metal servers the
 // account is allowed to have.
-func (softlayer_account *SoftLayer_Account) HourlyServerLimit(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_account *SoftLayer_Account) HourlyServerLimit(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
 
 // RemoveAlternateCreditCard - <nil>
-func (softlayer_account *SoftLayer_Account) RemoveAlternateCreditCard(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_account *SoftLayer_Account) RemoveAlternateCreditCard(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1870,7 +1870,7 @@ func (softlayer_account *SoftLayer_Account) RemoveAlternateCreditCard(commonOpti
 // active payment method, pass the empty string for paymentRoleName. To change the nickname for the
 // alternate credit card, pass as the paymentRoleName. vatId must be set, but the value will not be
 // used and the empty string is acceptable.
-func (softlayer_account *SoftLayer_Account) RequestCreditCardChange(commonOptions *slapi.CommonOptions, request SoftLayer_Billing_Payment_Card_ChangeRequest, vatId string, paymentRoleName string, onlyChangeNicknameFlag string) (*SoftLayer_Billing_Payment_Card_ChangeRequest, error) {
+func (softlayer_account *SoftLayer_Account) RequestCreditCardChange(ctx *slapi.RequestContext, request SoftLayer_Billing_Payment_Card_ChangeRequest, vatId string, paymentRoleName string, onlyChangeNicknameFlag string) (*SoftLayer_Billing_Payment_Card_ChangeRequest, error) {
 	var returnValue *SoftLayer_Billing_Payment_Card_ChangeRequest
 	return returnValue, nil
 }
@@ -1883,7 +1883,7 @@ func (softlayer_account *SoftLayer_Account) RequestCreditCardChange(commonOption
 // transaction are returned to the calling function. In the case of PayPal Payments, SoftLayer engages
 // the PayPal system to initiate the PayPal payment sequence. The applicable data generated during the
 // request is returned to the calling function.
-func (softlayer_account *SoftLayer_Account) RequestManualPayment(commonOptions *slapi.CommonOptions, request SoftLayer_Billing_Payment_Card_ManualPayment) (*SoftLayer_Billing_Payment_Card_ManualPayment, error) {
+func (softlayer_account *SoftLayer_Account) RequestManualPayment(ctx *slapi.RequestContext, request SoftLayer_Billing_Payment_Card_ManualPayment) (*SoftLayer_Billing_Payment_Card_ManualPayment, error) {
 	var returnValue *SoftLayer_Billing_Payment_Card_ManualPayment
 	return returnValue, nil
 }
@@ -1896,7 +1896,7 @@ func (softlayer_account *SoftLayer_Account) RequestManualPayment(commonOptions *
 // request. The financial institution's response and other data associated with the transaction are
 // returned to the calling function. The applicable data generated during the request is returned to
 // the calling function.
-func (softlayer_account *SoftLayer_Account) RequestManualPaymentUsingCreditCardOnFile(commonOptions *slapi.CommonOptions, amount string, payWithAlternateCardFlag bool, note string) (*SoftLayer_Billing_Payment_Card_ManualPayment, error) {
+func (softlayer_account *SoftLayer_Account) RequestManualPaymentUsingCreditCardOnFile(ctx *slapi.RequestContext, amount string, payWithAlternateCardFlag bool, note string) (*SoftLayer_Billing_Payment_Card_ManualPayment, error) {
 	var returnValue *SoftLayer_Billing_Payment_Card_ManualPayment
 	return returnValue, nil
 }
@@ -1904,13 +1904,13 @@ func (softlayer_account *SoftLayer_Account) RequestManualPaymentUsingCreditCardO
 // SetVlanSpan - Set the flag that enables or disables automatic private network spanning for a
 // SoftLayer customer account. Enabling spanning allows an account's servers to talk on the same
 // broadcast domain even if they reside within different private vlans.
-func (softlayer_account *SoftLayer_Account) SetVlanSpan(commonOptions *slapi.CommonOptions, enabled bool) (bool, error) {
+func (softlayer_account *SoftLayer_Account) SetVlanSpan(ctx *slapi.RequestContext, enabled bool) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SwapCreditCards - <nil>
-func (softlayer_account *SoftLayer_Account) SwapCreditCards(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_account *SoftLayer_Account) SwapCreditCards(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1920,7 +1920,7 @@ func (softlayer_account *SoftLayer_Account) SwapCreditCards(commonOptions *slapi
 // cases routes for individual servers and virtual servers may be assigned individually to an account's
 // servers via this method. Always call this method to enable changes when manually configuring VPN
 // subnet access.
-func (softlayer_account *SoftLayer_Account) UpdateVpnUsersForResource(commonOptions *slapi.CommonOptions, objectId int, objectType string) (bool, error) {
+func (softlayer_account *SoftLayer_Account) UpdateVpnUsersForResource(ctx *slapi.RequestContext, objectId int, objectType string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1928,7 +1928,7 @@ func (softlayer_account *SoftLayer_Account) UpdateVpnUsersForResource(commonOpti
 // ValidateManualPaymentAmount - This method checks global and account specific requirements and
 // returns true if the dollar amount entered is acceptable for this account and false otherwise. Please
 // note the dollar amount is in
-func (softlayer_account *SoftLayer_Account) ValidateManualPaymentAmount(commonOptions *slapi.CommonOptions, amount string) (bool, error) {
+func (softlayer_account *SoftLayer_Account) ValidateManualPaymentAmount(ctx *slapi.RequestContext, amount string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

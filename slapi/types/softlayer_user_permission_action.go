@@ -31,13 +31,13 @@ type SoftLayer_User_Permission_Action struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_user_permission_action *SoftLayer_User_Permission_Action) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_User_Permission_Action, error) {
+func (softlayer_user_permission_action *SoftLayer_User_Permission_Action) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_User_Permission_Action, error) {
 	var returnValue []*SoftLayer_User_Permission_Action
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_user_permission_action *SoftLayer_User_Permission_Action) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Permission_Action, error) {
+func (softlayer_user_permission_action *SoftLayer_User_Permission_Action) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Permission_Action, error) {
 	var returnValue *SoftLayer_User_Permission_Action
 	return returnValue, nil
 }

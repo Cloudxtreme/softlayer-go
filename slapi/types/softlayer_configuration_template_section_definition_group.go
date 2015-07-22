@@ -33,13 +33,13 @@ type SoftLayer_Configuration_Template_Section_Definition_Group struct {
 
 // GetAllGroups - Get all configuration definition group objects. ''getAllGroups'' returns an array of
 // SoftLayer_Configuration_Template_Section_Definition_Group objects upon success.
-func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) GetAllGroups(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Configuration_Template_Section_Definition_Group, error) {
+func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) GetAllGroups(ctx *slapi.RequestContext) ([]*SoftLayer_Configuration_Template_Section_Definition_Group, error) {
 	var returnValue []*SoftLayer_Configuration_Template_Section_Definition_Group
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Configuration_Template_Section_Definition_Group, error) {
+func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Section_Definition_Group, error) {
 	var returnValue *SoftLayer_Configuration_Template_Section_Definition_Group
 	return returnValue, nil
 }

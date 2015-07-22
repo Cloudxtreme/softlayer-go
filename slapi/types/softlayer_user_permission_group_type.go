@@ -34,7 +34,7 @@ type SoftLayer_User_Permission_Group_Type struct {
 }
 
 // GetObject - <nil>
-func (softlayer_user_permission_group_type *SoftLayer_User_Permission_Group_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Permission_Group_Type, error) {
+func (softlayer_user_permission_group_type *SoftLayer_User_Permission_Group_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Permission_Group_Type, error) {
 	var returnValue *SoftLayer_User_Permission_Group_Type
 	return returnValue, nil
 }

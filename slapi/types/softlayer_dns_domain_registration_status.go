@@ -27,13 +27,13 @@ type SoftLayer_Dns_Domain_Registration_Status struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_dns_domain_registration_status *SoftLayer_Dns_Domain_Registration_Status) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Dns_Domain_Registration_Status, error) {
+func (softlayer_dns_domain_registration_status *SoftLayer_Dns_Domain_Registration_Status) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Dns_Domain_Registration_Status, error) {
 	var returnValue []*SoftLayer_Dns_Domain_Registration_Status
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_dns_domain_registration_status *SoftLayer_Dns_Domain_Registration_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Dns_Domain_Registration_Status, error) {
+func (softlayer_dns_domain_registration_status *SoftLayer_Dns_Domain_Registration_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Dns_Domain_Registration_Status, error) {
 	var returnValue *SoftLayer_Dns_Domain_Registration_Status
 	return returnValue, nil
 }

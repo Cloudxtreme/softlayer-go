@@ -55,79 +55,79 @@ type SoftLayer_User_Permission_Group struct {
 }
 
 // AddAction - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) AddAction(commonOptions *slapi.CommonOptions, action SoftLayer_User_Permission_Action) error {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) AddAction(ctx *slapi.RequestContext, action SoftLayer_User_Permission_Action) error {
 	return nil
 }
 
 // AddBulkActions - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) AddBulkActions(commonOptions *slapi.CommonOptions, actions []SoftLayer_User_Permission_Action) error {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) AddBulkActions(ctx *slapi.RequestContext, actions []SoftLayer_User_Permission_Action) error {
 	return nil
 }
 
 // AddBulkResourceObjects - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) AddBulkResourceObjects(commonOptions *slapi.CommonOptions, resourceObjects []SoftLayer_Entity, resourceTypeKeyName string) (bool, error) {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) AddBulkResourceObjects(ctx *slapi.RequestContext, resourceObjects []SoftLayer_Entity, resourceTypeKeyName string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AddResourceObject - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) AddResourceObject(commonOptions *slapi.CommonOptions, resourceObject SoftLayer_Entity, resourceTypeKeyName string) (bool, error) {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) AddResourceObject(ctx *slapi.RequestContext, resourceObject SoftLayer_Entity, resourceTypeKeyName string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CreateObject - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_User_Permission_Group) (*SoftLayer_User_Permission_Group, error) {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Permission_Group) (*SoftLayer_User_Permission_Group, error) {
 	var returnValue *SoftLayer_User_Permission_Group
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_User_Permission_Group) (*SoftLayer_User_Permission_Group, error) {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Permission_Group) (*SoftLayer_User_Permission_Group, error) {
 	var returnValue *SoftLayer_User_Permission_Group
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Permission_Group, error) {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Permission_Group, error) {
 	var returnValue *SoftLayer_User_Permission_Group
 	return returnValue, nil
 }
 
 // LinkRole - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) LinkRole(commonOptions *slapi.CommonOptions, role SoftLayer_User_Permission_Role) error {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) LinkRole(ctx *slapi.RequestContext, role SoftLayer_User_Permission_Role) error {
 	return nil
 }
 
 // RemoveAction - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) RemoveAction(commonOptions *slapi.CommonOptions, action SoftLayer_User_Permission_Action) error {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) RemoveAction(ctx *slapi.RequestContext, action SoftLayer_User_Permission_Action) error {
 	return nil
 }
 
 // RemoveBulkActions - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) RemoveBulkActions(commonOptions *slapi.CommonOptions, actions []SoftLayer_User_Permission_Action) error {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) RemoveBulkActions(ctx *slapi.RequestContext, actions []SoftLayer_User_Permission_Action) error {
 	return nil
 }
 
 // RemoveBulkResourceObjects - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) RemoveBulkResourceObjects(commonOptions *slapi.CommonOptions, resourceObjects []SoftLayer_Entity, resourceTypeKeyName string) (bool, error) {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) RemoveBulkResourceObjects(ctx *slapi.RequestContext, resourceObjects []SoftLayer_Entity, resourceTypeKeyName string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveResourceObject - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) RemoveResourceObject(commonOptions *slapi.CommonOptions, resourceObject SoftLayer_Entity, resourceTypeKeyName string) (bool, error) {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) RemoveResourceObject(ctx *slapi.RequestContext, resourceObject SoftLayer_Entity, resourceTypeKeyName string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // UnlinkRole - <nil>
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) UnlinkRole(commonOptions *slapi.CommonOptions, role SoftLayer_User_Permission_Role) error {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) UnlinkRole(ctx *slapi.RequestContext, role SoftLayer_User_Permission_Role) error {
 	return nil
 }

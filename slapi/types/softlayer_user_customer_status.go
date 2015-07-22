@@ -25,7 +25,7 @@ type SoftLayer_User_Customer_Status struct {
 }
 
 // GetAllObjects - no documentation
-func (softlayer_user_customer_status *SoftLayer_User_Customer_Status) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_User_Customer_Status, error) {
+func (softlayer_user_customer_status *SoftLayer_User_Customer_Status) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_User_Customer_Status, error) {
 	var returnValue []*SoftLayer_User_Customer_Status
 	return returnValue, nil
 }
@@ -33,7 +33,7 @@ func (softlayer_user_customer_status *SoftLayer_User_Customer_Status) GetAllObje
 // GetObject - getObject retrieves the SoftLayer_User_Customer_Status object whose ID number
 // corresponds to the ID number of the init parameter passed to the SoftLayer_User_Customer_Status
 // service.
-func (softlayer_user_customer_status *SoftLayer_User_Customer_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_Status, error) {
+func (softlayer_user_customer_status *SoftLayer_User_Customer_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_Status, error) {
 	var returnValue *SoftLayer_User_Customer_Status
 	return returnValue, nil
 }

@@ -14,13 +14,13 @@ type SoftLayer_Network_Storage_Iscsi struct {
 // AllowAccessFromHardware - This method is used to modify the access control list for this Storage
 // volume. The SoftLayer_Hardware objects which have been allowed access to this storage will be listed
 // in the allowedHardware property of this storage volume.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessFromHardware(commonOptions *slapi.CommonOptions, hardwareObjectTemplate SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessFromHardware(ctx *slapi.RequestContext, hardwareObjectTemplate SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AllowAccessFromIpAddress - <nil>
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessFromIpAddress(commonOptions *slapi.CommonOptions, ipAddressObjectTemplate SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessFromIpAddress(ctx *slapi.RequestContext, ipAddressObjectTemplate SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -28,7 +28,7 @@ func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAcc
 // AllowAccessFromVirtualGuest - This method is used to modify the access control list for this Storage
 // volume. The SoftLayer_Virtual_Guest objects which have been allowed access to this storage will be
 // listed in the allowedVirtualGuests property of this storage volume.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessFromVirtualGuest(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplate SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessFromVirtualGuest(ctx *slapi.RequestContext, virtualGuestObjectTemplate SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -36,7 +36,7 @@ func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAcc
 // AllowAccessToReplicantFromHardwareList - This method is used to modify the access control list for
 // this Storage replica volume. The SoftLayer_Hardware objects which have been allowed access to this
 // storage will be listed in the allowedHardware property of this storage replica volume.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessToReplicantFromHardwareList(commonOptions *slapi.CommonOptions, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessToReplicantFromHardwareList(ctx *slapi.RequestContext, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -44,7 +44,7 @@ func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAcc
 // AllowAccessToReplicantFromIpAddressList - This method is used to modify the access control list for
 // this Storage volume. The SoftLayer_Network_Subnet_IpAddress objects which have been allowed access
 // to this storage will be listed in the allowedVirtualGuests property of this storage volume.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessToReplicantFromIpAddressList(commonOptions *slapi.CommonOptions, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessToReplicantFromIpAddressList(ctx *slapi.RequestContext, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -52,20 +52,20 @@ func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAcc
 // AllowAccessToReplicantFromVirtualGuestList - This method is used to modify the access control list
 // for this Storage volume. The SoftLayer_Virtual_Guest objects which have been allowed access to this
 // storage will be listed in the allowedVirtualGuests property of this storage volume.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessToReplicantFromVirtualGuestList(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) AllowAccessToReplicantFromVirtualGuestList(ctx *slapi.RequestContext, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Storage_Iscsi, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Iscsi, error) {
 	var returnValue *SoftLayer_Network_Storage_Iscsi
 	return returnValue, nil
 }
 
 // GetSnapshotsForVolume - Retrieves a list of snapshots for this SoftLayer_Network_Storage volume.
 // This method works with the result limits and offset to support pagination.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) GetSnapshotsForVolume(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Storage, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) GetSnapshotsForVolume(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Storage, error) {
 	var returnValue []*SoftLayer_Network_Storage
 	return returnValue, nil
 }
@@ -73,13 +73,13 @@ func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) GetSnaps
 // RemoveAccessFromHardware - This method is used to modify the access control list for this Storage
 // volume. The SoftLayer_Hardware objects which have been allowed access to this storage will be listed
 // in the allowedHardware property of this storage volume.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessFromHardware(commonOptions *slapi.CommonOptions, hardwareObjectTemplate SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessFromHardware(ctx *slapi.RequestContext, hardwareObjectTemplate SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveAccessFromIpAddress - <nil>
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessFromIpAddress(commonOptions *slapi.CommonOptions, ipAddressObjectTemplate SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessFromIpAddress(ctx *slapi.RequestContext, ipAddressObjectTemplate SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -87,7 +87,7 @@ func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAc
 // RemoveAccessFromVirtualGuest - This method is used to modify the access control list for this
 // Storage volume. The SoftLayer_Virtual_Guest objects which have been allowed access to this storage
 // will be listed in the allowedVirtualGuests property of this storage volume.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessFromVirtualGuest(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplate SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessFromVirtualGuest(ctx *slapi.RequestContext, virtualGuestObjectTemplate SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -95,7 +95,7 @@ func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAc
 // RemoveAccessToReplicantFromHardwareList - This method is used to modify the access control list for
 // this Storage replica volume. The SoftLayer_Hardware objects which have been allowed access to this
 // storage will be listed in the allowedHardware property of this storage replica volume.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessToReplicantFromHardwareList(commonOptions *slapi.CommonOptions, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessToReplicantFromHardwareList(ctx *slapi.RequestContext, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -104,7 +104,7 @@ func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAc
 // this Storage replica volume. The SoftLayer_Network_Subnet_IpAddress objects which have been allowed
 // access to this storage will be listed in the allowedIpAddresses property of this storage replica
 // volume.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessToReplicantFromIpAddressList(commonOptions *slapi.CommonOptions, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessToReplicantFromIpAddressList(ctx *slapi.RequestContext, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -112,7 +112,7 @@ func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAc
 // RemoveAccessToReplicantFromVirtualGuestList - This method is used to modify the access control list
 // for this Storage replica volume. The SoftLayer_Virtual_Guest objects which have been allowed access
 // to this storage will be listed in the allowedVirtualGuests property of this storage replica volume.
-func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessToReplicantFromVirtualGuestList(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage_iscsi *SoftLayer_Network_Storage_Iscsi) RemoveAccessToReplicantFromVirtualGuestList(ctx *slapi.RequestContext, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

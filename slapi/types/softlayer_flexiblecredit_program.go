@@ -20,25 +20,25 @@ type SoftLayer_FlexibleCredit_Program struct {
 }
 
 // GetAffiliatesAvailableForSelfEnrollmentByVerificationType - <nil>
-func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) GetAffiliatesAvailableForSelfEnrollmentByVerificationType(commonOptions *slapi.CommonOptions, verificationTypeKeyName string) ([]*SoftLayer_FlexibleCredit_Affiliate, error) {
+func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) GetAffiliatesAvailableForSelfEnrollmentByVerificationType(ctx *slapi.RequestContext, verificationTypeKeyName string) ([]*SoftLayer_FlexibleCredit_Affiliate, error) {
 	var returnValue []*SoftLayer_FlexibleCredit_Affiliate
 	return returnValue, nil
 }
 
 // GetCompanyTypes - <nil>
-func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) GetCompanyTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_FlexibleCredit_Company_Type, error) {
+func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) GetCompanyTypes(ctx *slapi.RequestContext) ([]*SoftLayer_FlexibleCredit_Company_Type, error) {
 	var returnValue []*SoftLayer_FlexibleCredit_Company_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_FlexibleCredit_Program, error) {
+func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) GetObject(ctx *slapi.RequestContext) (*SoftLayer_FlexibleCredit_Program, error) {
 	var returnValue *SoftLayer_FlexibleCredit_Program
 	return returnValue, nil
 }
 
 // SelfEnrollNewAccount - <nil>
-func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) SelfEnrollNewAccount(commonOptions *slapi.CommonOptions, accountTemplate SoftLayer_Account) (*SoftLayer_Account, error) {
+func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) SelfEnrollNewAccount(ctx *slapi.RequestContext, accountTemplate SoftLayer_Account) (*SoftLayer_Account, error) {
 	var returnValue *SoftLayer_Account
 	return returnValue, nil
 }

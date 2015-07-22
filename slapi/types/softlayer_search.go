@@ -22,7 +22,7 @@ type SoftLayer_Search struct {
 // properties, separated with spaces. Example: _objectType:Type_1 propertyA: value propertyB: value A
 // collection of available object types and their properties can be retrieved by calling the
 // [[SoftLayer_Search/getObjectTypes|getObjectTypes()]] method.
-func (softlayer_search *SoftLayer_Search) AdvancedSearch(commonOptions *slapi.CommonOptions, searchString string) ([]*SoftLayer_Container_Search_Result, error) {
+func (softlayer_search *SoftLayer_Search) AdvancedSearch(ctx *slapi.RequestContext, searchString string) ([]*SoftLayer_Container_Search_Result, error) {
 	var returnValue []*SoftLayer_Container_Search_Result
 	return returnValue, nil
 }
@@ -33,7 +33,7 @@ func (softlayer_search *SoftLayer_Search) AdvancedSearch(commonOptions *slapi.Co
 // searchable data and to create or validate object index search strings. Refer to the
 // [[SoftLayer_Search/search|search()]] and [[SoftLayer_Search/advancedSearch|advancedSearch()]]
 // methods for information on using object types and properties in search strings.
-func (softlayer_search *SoftLayer_Search) GetObjectTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Search_ObjectType, error) {
+func (softlayer_search *SoftLayer_Search) GetObjectTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Search_ObjectType, error) {
 	var returnValue []*SoftLayer_Container_Search_ObjectType
 	return returnValue, nil
 }
@@ -49,7 +49,7 @@ func (softlayer_search *SoftLayer_Search) GetObjectTypes(commonOptions *slapi.Co
 // with a hyphen or minus sign then the specified types are excluded from the search. Example:
 // _objectType:-Type_4,Type_5 (other search terms...) A collection of available object types can be
 // retrieved by calling the [[SoftLayer_Search/getObjectTypes|getObjectTypes()]] method.
-func (softlayer_search *SoftLayer_Search) Search(commonOptions *slapi.CommonOptions, searchString string) ([]*SoftLayer_Container_Search_Result, error) {
+func (softlayer_search *SoftLayer_Search) Search(ctx *slapi.RequestContext, searchString string) ([]*SoftLayer_Container_Search_Result, error) {
 	var returnValue []*SoftLayer_Container_Search_Result
 	return returnValue, nil
 }

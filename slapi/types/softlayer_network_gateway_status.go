@@ -23,7 +23,7 @@ type SoftLayer_Network_Gateway_Status struct {
 }
 
 // GetObject - <nil>
-func (softlayer_network_gateway_status *SoftLayer_Network_Gateway_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Gateway_Status, error) {
+func (softlayer_network_gateway_status *SoftLayer_Network_Gateway_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Gateway_Status, error) {
 	var returnValue *SoftLayer_Network_Gateway_Status
 	return returnValue, nil
 }

@@ -27,13 +27,13 @@ type SoftLayer_Network_Storage_Schedule_Property_Type struct {
 }
 
 // GetAllObjects - Use this method to retrieve all network storage schedule property types.
-func (softlayer_network_storage_schedule_property_type *SoftLayer_Network_Storage_Schedule_Property_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Storage_Schedule_Property_Type, error) {
+func (softlayer_network_storage_schedule_property_type *SoftLayer_Network_Storage_Schedule_Property_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Storage_Schedule_Property_Type, error) {
 	var returnValue []*SoftLayer_Network_Storage_Schedule_Property_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_storage_schedule_property_type *SoftLayer_Network_Storage_Schedule_Property_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Storage_Schedule_Property_Type, error) {
+func (softlayer_network_storage_schedule_property_type *SoftLayer_Network_Storage_Schedule_Property_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Schedule_Property_Type, error) {
 	var returnValue *SoftLayer_Network_Storage_Schedule_Property_Type
 	return returnValue, nil
 }

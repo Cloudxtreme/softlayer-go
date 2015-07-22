@@ -15,7 +15,7 @@ type SoftLayer_Network_Storage_Allowed_Host_Hardware struct {
 }
 
 // GetObject - <nil>
-func (softlayer_network_storage_allowed_host_hardware *SoftLayer_Network_Storage_Allowed_Host_Hardware) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Storage_Allowed_Host_Hardware, error) {
+func (softlayer_network_storage_allowed_host_hardware *SoftLayer_Network_Storage_Allowed_Host_Hardware) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Allowed_Host_Hardware, error) {
 	var returnValue *SoftLayer_Network_Storage_Allowed_Host_Hardware
 	return returnValue, nil
 }

@@ -21,13 +21,13 @@ type SoftLayer_Network_Media_Transcode_Job_Status struct {
 }
 
 // GetAllStatuses - no documentation
-func (softlayer_network_media_transcode_job_status *SoftLayer_Network_Media_Transcode_Job_Status) GetAllStatuses(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Media_Transcode_Job_Status, error) {
+func (softlayer_network_media_transcode_job_status *SoftLayer_Network_Media_Transcode_Job_Status) GetAllStatuses(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Media_Transcode_Job_Status, error) {
 	var returnValue []*SoftLayer_Network_Media_Transcode_Job_Status
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_media_transcode_job_status *SoftLayer_Network_Media_Transcode_Job_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Media_Transcode_Job_Status, error) {
+func (softlayer_network_media_transcode_job_status *SoftLayer_Network_Media_Transcode_Job_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Media_Transcode_Job_Status, error) {
 	var returnValue *SoftLayer_Network_Media_Transcode_Job_Status
 	return returnValue, nil
 }

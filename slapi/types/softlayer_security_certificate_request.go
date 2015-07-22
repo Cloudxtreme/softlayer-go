@@ -64,47 +64,47 @@ type SoftLayer_Security_Certificate_Request struct {
 }
 
 // CancelSslOrder - Cancels a pending SSL certificate order at Certificate Authority
-func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) CancelSslOrder(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) CancelSslOrder(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAdministratorEmailDomains - Gets the email domains that can be used to validate a certificate to
 // a domain.
-func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) GetAdministratorEmailDomains(commonOptions *slapi.CommonOptions, commonName string) ([]string, error) {
+func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) GetAdministratorEmailDomains(ctx *slapi.RequestContext, commonName string) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }
 
 // GetAdministratorEmailPrefixes - Gets the email accounts that can be used to validate a certificate
 // to a domain.
-func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) GetAdministratorEmailPrefixes(commonOptions *slapi.CommonOptions) ([]string, error) {
+func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) GetAdministratorEmailPrefixes(ctx *slapi.RequestContext) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Security_Certificate_Request, error) {
+func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Security_Certificate_Request, error) {
 	var returnValue *SoftLayer_Security_Certificate_Request
 	return returnValue, nil
 }
 
 // GetPreviousOrderData - Returns previous SSL certificate order data. You can use this data for to
 // place a renewal order for a completed SSL certificate.
-func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) GetPreviousOrderData(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Product_Order_Security_Certificate, error) {
+func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) GetPreviousOrderData(ctx *slapi.RequestContext) (*SoftLayer_Container_Product_Order_Security_Certificate, error) {
 	var returnValue *SoftLayer_Container_Product_Order_Security_Certificate
 	return returnValue, nil
 }
 
 // GetSslCertificateRequests - no documentation
-func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) GetSslCertificateRequests(commonOptions *slapi.CommonOptions, accountId int) ([]*SoftLayer_Security_Certificate_Request, error) {
+func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) GetSslCertificateRequests(ctx *slapi.RequestContext, accountId int) ([]*SoftLayer_Security_Certificate_Request, error) {
 	var returnValue []*SoftLayer_Security_Certificate_Request
 	return returnValue, nil
 }
 
 // ResendEmail - A Certificate Authority sends out various emails to your domain administrator or your
 // technical contact. Use this service to re-send these emails if you did not receive them initially.
-func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) ResendEmail(commonOptions *slapi.CommonOptions, emailType string) (bool, error) {
+func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) ResendEmail(ctx *slapi.RequestContext, emailType string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -116,7 +116,7 @@ func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Req
 // [http://en.wikipedia.org/wiki/Certificate_signing_request Wikipedia]
 // [https://knowledge.verisign.com/support/ssl-certificates-support/index?page=content&id=AR235&actp=LIST&viewlocale=en_US
 // VeriSign]
-func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) ValidateCsr(commonOptions *slapi.CommonOptions, csr string, validityMonths int, itemId int, serverType string) (bool, error) {
+func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) ValidateCsr(ctx *slapi.RequestContext, csr string, validityMonths int, itemId int, serverType string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

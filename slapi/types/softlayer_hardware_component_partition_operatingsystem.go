@@ -31,7 +31,7 @@ type SoftLayer_Hardware_Component_Partition_OperatingSystem struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware_Component_Partition_OperatingSystem) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Hardware_Component_Partition_OperatingSystem, error) {
+func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware_Component_Partition_OperatingSystem) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Hardware_Component_Partition_OperatingSystem, error) {
 	var returnValue []*SoftLayer_Hardware_Component_Partition_OperatingSystem
 	return returnValue, nil
 }
@@ -40,7 +40,7 @@ func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware
 // based on the description (required parameter) entered when calling the method. The description is
 // typically the operating system's name. Current recognized values include 'linux', 'windows',
 // 'freebsd', and 'Debian'.
-func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware_Component_Partition_OperatingSystem) GetByDescription(commonOptions *slapi.CommonOptions, description string) (*SoftLayer_Hardware_Component_Partition_OperatingSystem, error) {
+func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware_Component_Partition_OperatingSystem) GetByDescription(ctx *slapi.RequestContext, description string) (*SoftLayer_Hardware_Component_Partition_OperatingSystem, error) {
 	var returnValue *SoftLayer_Hardware_Component_Partition_OperatingSystem
 	return returnValue, nil
 }
@@ -48,7 +48,7 @@ func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware
 // GetObject - getObject retrieves the SoftLayer_Hardware_Component_Partition_OperatingSystem object
 // whose ID number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Hardware_Component_Partition_OperatingSystem service.s
-func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware_Component_Partition_OperatingSystem) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Hardware_Component_Partition_OperatingSystem, error) {
+func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware_Component_Partition_OperatingSystem) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Hardware_Component_Partition_OperatingSystem, error) {
 	var returnValue *SoftLayer_Hardware_Component_Partition_OperatingSystem
 	return returnValue, nil
 }

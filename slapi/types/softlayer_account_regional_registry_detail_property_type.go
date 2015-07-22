@@ -35,13 +35,13 @@ type SoftLayer_Account_Regional_Registry_Detail_Property_Type struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_account_regional_registry_detail_property_type *SoftLayer_Account_Regional_Registry_Detail_Property_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Account_Regional_Registry_Detail_Property_Type, error) {
+func (softlayer_account_regional_registry_detail_property_type *SoftLayer_Account_Regional_Registry_Detail_Property_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Regional_Registry_Detail_Property_Type, error) {
 	var returnValue []*SoftLayer_Account_Regional_Registry_Detail_Property_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_regional_registry_detail_property_type *SoftLayer_Account_Regional_Registry_Detail_Property_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Regional_Registry_Detail_Property_Type, error) {
+func (softlayer_account_regional_registry_detail_property_type *SoftLayer_Account_Regional_Registry_Detail_Property_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Regional_Registry_Detail_Property_Type, error) {
 	var returnValue *SoftLayer_Account_Regional_Registry_Detail_Property_Type
 	return returnValue, nil
 }

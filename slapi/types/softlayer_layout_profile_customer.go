@@ -14,7 +14,7 @@ type SoftLayer_Layout_Profile_Customer struct {
 }
 
 // GetObject - <nil>
-func (softlayer_layout_profile_customer *SoftLayer_Layout_Profile_Customer) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Layout_Profile_Customer, error) {
+func (softlayer_layout_profile_customer *SoftLayer_Layout_Profile_Customer) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Layout_Profile_Customer, error) {
 	var returnValue *SoftLayer_Layout_Profile_Customer
 	return returnValue, nil
 }

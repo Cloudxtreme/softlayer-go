@@ -70,7 +70,7 @@ type SoftLayer_Network_Firewall_Update_Request_Rule struct {
 // object passed to this function must have at least one rule. ''createObject'' returns a Boolean
 // ''true'' on successful object creation or ''false'' if your firewall update request was unable to be
 // created..
-func (softlayer_network_firewall_update_request_rule *SoftLayer_Network_Firewall_Update_Request_Rule) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Firewall_Update_Request_Rule) (*SoftLayer_Network_Firewall_Update_Request_Rule, error) {
+func (softlayer_network_firewall_update_request_rule *SoftLayer_Network_Firewall_Update_Request_Rule) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Firewall_Update_Request_Rule) (*SoftLayer_Network_Firewall_Update_Request_Rule, error) {
 	var returnValue *SoftLayer_Network_Firewall_Update_Request_Rule
 	return returnValue, nil
 }
@@ -79,7 +79,7 @@ func (softlayer_network_firewall_update_request_rule *SoftLayer_Network_Firewall
 // get historical objects for servers attached to your account that have a network firewall enabled.
 // createObject inserts a new SoftLayer_Network_Firewall_Update_Request_Rule object. Use the
 // SoftLayer_Network_Firewall_Update_Request to create groups of rules for an update request.
-func (softlayer_network_firewall_update_request_rule *SoftLayer_Network_Firewall_Update_Request_Rule) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Firewall_Update_Request_Rule, error) {
+func (softlayer_network_firewall_update_request_rule *SoftLayer_Network_Firewall_Update_Request_Rule) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Firewall_Update_Request_Rule, error) {
 	var returnValue *SoftLayer_Network_Firewall_Update_Request_Rule
 	return returnValue, nil
 }
@@ -92,6 +92,6 @@ func (softlayer_network_firewall_update_request_rule *SoftLayer_Network_Firewall
 // One, and only one, of applyToComponentId and applyToAclId can be specified. If validation is
 // successful, nothing is returned. If validation is unsuccessful, an exception is thrown explaining
 // the nature of the validation error.
-func (softlayer_network_firewall_update_request_rule *SoftLayer_Network_Firewall_Update_Request_Rule) ValidateRule(commonOptions *slapi.CommonOptions, rule SoftLayer_Network_Firewall_Update_Request_Rule, applyToComponentId int, applyToAclId int) error {
+func (softlayer_network_firewall_update_request_rule *SoftLayer_Network_Firewall_Update_Request_Rule) ValidateRule(ctx *slapi.RequestContext, rule SoftLayer_Network_Firewall_Update_Request_Rule, applyToComponentId int, applyToAclId int) error {
 	return nil
 }

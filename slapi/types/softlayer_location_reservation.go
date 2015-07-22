@@ -41,13 +41,13 @@ type SoftLayer_Location_Reservation struct {
 }
 
 // GetAccountReservations - <nil>
-func (softlayer_location_reservation *SoftLayer_Location_Reservation) GetAccountReservations(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location_Reservation, error) {
+func (softlayer_location_reservation *SoftLayer_Location_Reservation) GetAccountReservations(ctx *slapi.RequestContext) ([]*SoftLayer_Location_Reservation, error) {
 	var returnValue []*SoftLayer_Location_Reservation
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_location_reservation *SoftLayer_Location_Reservation) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Location_Reservation, error) {
+func (softlayer_location_reservation *SoftLayer_Location_Reservation) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Location_Reservation, error) {
 	var returnValue *SoftLayer_Location_Reservation
 	return returnValue, nil
 }

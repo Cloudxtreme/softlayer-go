@@ -69,32 +69,32 @@ type SoftLayer_Account_Address struct {
 // ''address1'', ''city'', ''state'', ''country'', and ''postalCode'' properties in the templateObject
 // parameter are required properties and may not be null or empty. Users will be restricted to creating
 // addresses for their account.
-func (softlayer_account_address *SoftLayer_Account_Address) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Address) (*SoftLayer_Account_Address, error) {
+func (softlayer_account_address *SoftLayer_Account_Address) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Address) (*SoftLayer_Account_Address, error) {
 	var returnValue *SoftLayer_Account_Address
 	return returnValue, nil
 }
 
 // EditObject - Edit the properties of an address record by passing in a modified instance of a
 // SoftLayer_Account_Address object. Users will be restricted to modifying addresses for their account.
-func (softlayer_account_address *SoftLayer_Account_Address) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Address) (bool, error) {
+func (softlayer_account_address *SoftLayer_Account_Address) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Address) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllDataCenters - no documentation
-func (softlayer_account_address *SoftLayer_Account_Address) GetAllDataCenters(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Account_Address, error) {
+func (softlayer_account_address *SoftLayer_Account_Address) GetAllDataCenters(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Address, error) {
 	var returnValue []*SoftLayer_Account_Address
 	return returnValue, nil
 }
 
 // GetNetworkAddress - no documentation
-func (softlayer_account_address *SoftLayer_Account_Address) GetNetworkAddress(commonOptions *slapi.CommonOptions, name string) ([]*SoftLayer_Account_Address, error) {
+func (softlayer_account_address *SoftLayer_Account_Address) GetNetworkAddress(ctx *slapi.RequestContext, name string) ([]*SoftLayer_Account_Address, error) {
 	var returnValue []*SoftLayer_Account_Address
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_address *SoftLayer_Account_Address) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Address, error) {
+func (softlayer_account_address *SoftLayer_Account_Address) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Address, error) {
 	var returnValue *SoftLayer_Account_Address
 	return returnValue, nil
 }

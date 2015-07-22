@@ -178,25 +178,25 @@ type SoftLayer_Network_Subnet_IpAddress struct {
 }
 
 // EditObject - no documentation
-func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObjects - This function is used to edit multiple objects at the same time.
-func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) EditObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // FindByIpv4Address - no documentation
-func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) FindByIpv4Address(commonOptions *slapi.CommonOptions, ipAddress string) (*SoftLayer_Network_Subnet_IpAddress, error) {
+func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) FindByIpv4Address(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Network_Subnet_IpAddress, error) {
 	var returnValue *SoftLayer_Network_Subnet_IpAddress
 	return returnValue, nil
 }
 
 // GetByIpAddress - no documentation
-func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) GetByIpAddress(commonOptions *slapi.CommonOptions, ipAddress string) (*SoftLayer_Network_Subnet_IpAddress, error) {
+func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) GetByIpAddress(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Network_Subnet_IpAddress, error) {
 	var returnValue *SoftLayer_Network_Subnet_IpAddress
 	return returnValue, nil
 }
@@ -205,7 +205,7 @@ func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) Ge
 // corresponds to the ID number of the init parameter passed to the SoftLayer_Network_Subnet_IpAddress
 // service. You can only retrieve the IP address whose subnet is associated with a that is associated
 // with the account that your portal user is assigned to.
-func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Subnet_IpAddress, error) {
+func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Subnet_IpAddress, error) {
 	var returnValue *SoftLayer_Network_Subnet_IpAddress
 	return returnValue, nil
 }

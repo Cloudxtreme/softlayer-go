@@ -96,7 +96,7 @@ type SoftLayer_Billing_Info struct {
 
 // GetObject - getObject retrieves the SoftLayer_Billing_Info object whose data corresponds to the
 // account to which your portal user is tied.
-func (softlayer_billing_info *SoftLayer_Billing_Info) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Billing_Info, error) {
+func (softlayer_billing_info *SoftLayer_Billing_Info) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Info, error) {
 	var returnValue *SoftLayer_Billing_Info
 	return returnValue, nil
 }

@@ -56,25 +56,25 @@ type SoftLayer_Event_Log struct {
 }
 
 // GetAllEventNames - no documentation
-func (softlayer_event_log *SoftLayer_Event_Log) GetAllEventNames(commonOptions *slapi.CommonOptions, objectName string) ([]string, error) {
+func (softlayer_event_log *SoftLayer_Event_Log) GetAllEventNames(ctx *slapi.RequestContext, objectName string) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }
 
 // GetAllEventObjectNames - no documentation
-func (softlayer_event_log *SoftLayer_Event_Log) GetAllEventObjectNames(commonOptions *slapi.CommonOptions) ([]string, error) {
+func (softlayer_event_log *SoftLayer_Event_Log) GetAllEventObjectNames(ctx *slapi.RequestContext) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }
 
 // GetAllObjects - <nil>
-func (softlayer_event_log *SoftLayer_Event_Log) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Event_Log, error) {
+func (softlayer_event_log *SoftLayer_Event_Log) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Event_Log, error) {
 	var returnValue []*SoftLayer_Event_Log
 	return returnValue, nil
 }
 
 // GetAllUserTypes - <nil>
-func (softlayer_event_log *SoftLayer_Event_Log) GetAllUserTypes(commonOptions *slapi.CommonOptions) ([]string, error) {
+func (softlayer_event_log *SoftLayer_Event_Log) GetAllUserTypes(ctx *slapi.RequestContext) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }

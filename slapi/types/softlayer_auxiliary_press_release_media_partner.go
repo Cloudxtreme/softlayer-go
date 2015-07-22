@@ -19,7 +19,7 @@ type SoftLayer_Auxiliary_Press_Release_Media_Partner struct {
 // GetObject - getObject retrieves the SoftLayer_Auxiliary_Press_Release_Contact object whose contact
 // id number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Auxiliary_Press_Release service.
-func (softlayer_auxiliary_press_release_media_partner *SoftLayer_Auxiliary_Press_Release_Media_Partner) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Auxiliary_Press_Release_Media_Partner, error) {
+func (softlayer_auxiliary_press_release_media_partner *SoftLayer_Auxiliary_Press_Release_Media_Partner) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Auxiliary_Press_Release_Media_Partner, error) {
 	var returnValue *SoftLayer_Auxiliary_Press_Release_Media_Partner
 	return returnValue, nil
 }

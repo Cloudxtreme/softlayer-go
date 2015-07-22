@@ -56,19 +56,19 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Grou
 // GetGraphImage - Get the graph image for a load balancer service group based on the supplied graph
 // type and metric. The only available graph type currently is: 'connections', and the available
 // metrics are: 'day', 'week' and 'month'. This method returns the raw binary image data.
-func (softlayer_network_application_delivery_controller_loadbalancer_service_group *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group) GetGraphImage(commonOptions *slapi.CommonOptions, graphType string, metric string) (string, error) {
+func (softlayer_network_application_delivery_controller_loadbalancer_service_group *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group) GetGraphImage(ctx *slapi.RequestContext, graphType string, metric string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_service_group *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group, error) {
+func (softlayer_network_application_delivery_controller_loadbalancer_service_group *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group, error) {
 	var returnValue *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group
 	return returnValue, nil
 }
 
 // KickAllConnections - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_service_group *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group) KickAllConnections(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_application_delivery_controller_loadbalancer_service_group *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group) KickAllConnections(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

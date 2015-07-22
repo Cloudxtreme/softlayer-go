@@ -128,13 +128,13 @@ type SoftLayer_Product_Package_Server struct {
 }
 
 // GetAllObjects - no documentation
-func (softlayer_product_package_server *SoftLayer_Product_Package_Server) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Package_Server, error) {
+func (softlayer_product_package_server *SoftLayer_Product_Package_Server) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package_Server, error) {
 	var returnValue []*SoftLayer_Product_Package_Server
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_product_package_server *SoftLayer_Product_Package_Server) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Product_Package_Server, error) {
+func (softlayer_product_package_server *SoftLayer_Product_Package_Server) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Package_Server, error) {
 	var returnValue *SoftLayer_Product_Package_Server
 	return returnValue, nil
 }

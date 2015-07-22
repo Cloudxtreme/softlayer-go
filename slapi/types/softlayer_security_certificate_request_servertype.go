@@ -24,13 +24,13 @@ type SoftLayer_Security_Certificate_Request_ServerType struct {
 }
 
 // GetAllObjects - Returns all SSL certificate server types, which passed in on a certificate order.
-func (softlayer_security_certificate_request_servertype *SoftLayer_Security_Certificate_Request_ServerType) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Security_Certificate_Request, error) {
+func (softlayer_security_certificate_request_servertype *SoftLayer_Security_Certificate_Request_ServerType) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Security_Certificate_Request, error) {
 	var returnValue []*SoftLayer_Security_Certificate_Request
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_security_certificate_request_servertype *SoftLayer_Security_Certificate_Request_ServerType) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Security_Certificate_Request_ServerType, error) {
+func (softlayer_security_certificate_request_servertype *SoftLayer_Security_Certificate_Request_ServerType) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Security_Certificate_Request_ServerType, error) {
 	var returnValue *SoftLayer_Security_Certificate_Request_ServerType
 	return returnValue, nil
 }

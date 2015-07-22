@@ -23,7 +23,7 @@ type SoftLayer_Dns_Domain_ResourceRecord_MxType struct {
 // property of the templateObject parameter is scrubbed to remove all non-alphanumeric characters for
 // "." and Creating an MX record updates the serial number of the domain the resource record is
 // associated with.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Dns_Domain_ResourceRecord_MxType) (*SoftLayer_Dns_Domain_ResourceRecord_MxType, error) {
+func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Dns_Domain_ResourceRecord_MxType) (*SoftLayer_Dns_Domain_ResourceRecord_MxType, error) {
 	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_MxType
 	return returnValue, nil
 }
@@ -32,7 +32,7 @@ func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceR
 // ''createObject'. The serial number of the domain associated with this MX record is updated upon
 // creation. ''createObjects'' returns Boolean ''true'' on successful creation or ''false'' if it was
 // unable to create a resource record.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) CreateObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Dns_Domain_ResourceRecord) ([]*SoftLayer_Dns_Domain_ResourceRecord, error) {
+func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Dns_Domain_ResourceRecord) ([]*SoftLayer_Dns_Domain_ResourceRecord, error) {
 	var returnValue []*SoftLayer_Dns_Domain_ResourceRecord
 	return returnValue, nil
 }
@@ -42,7 +42,7 @@ func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceR
 // SoftLayer_Dns_Domain_ResourceRecord_MxType object. The serial number of the domain associated with
 // this MX record is updated upon deletion. ''deleteObject'' returns Boolean ''true'' on successful
 // deletion or ''false'' if it was unable to remove a resource record.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -51,7 +51,7 @@ func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceR
 // ''deleteObject'' and '''cannot be undone'''. The serial number of the domain associated with this MX
 // record is updated upon deletion. ''deleteObjects'' returns Boolean ''true'' on successful deletion
 // or ''false'' if it was unable to remove a resource record.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) DeleteObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Dns_Domain_ResourceRecord_MxType) (bool, error) {
+func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) DeleteObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Dns_Domain_ResourceRecord_MxType) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -62,7 +62,7 @@ func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceR
 // characters for "." and Editing an MX record updates the serial number of the domain the record is
 // associated with. ''editObject'' returns Boolean ''true'' on a successful edit or ''false'' if it was
 // unable to edit the resource record.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Dns_Domain_ResourceRecord_MxType) (bool, error) {
+func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Dns_Domain_ResourceRecord_MxType) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -71,7 +71,7 @@ func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceR
 // The serial number of the domain associated with this MX record is updated upon creation.
 // ''createObjects'' returns Boolean ''true'' on successful creation or ''false'' if it was unable to
 // create a resource record.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) EditObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Dns_Domain_ResourceRecord_MxType) (bool, error) {
+func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Dns_Domain_ResourceRecord_MxType) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -80,7 +80,7 @@ func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceR
 // number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Dns_Domain_ResourceRecord_MxType service. You can only retrieve resource records belonging
 // to domains that are assigned to your SoftLayer account.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Dns_Domain_ResourceRecord_MxType, error) {
+func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Dns_Domain_ResourceRecord_MxType, error) {
 	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_MxType
 	return returnValue, nil
 }

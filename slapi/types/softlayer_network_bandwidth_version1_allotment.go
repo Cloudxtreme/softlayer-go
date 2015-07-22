@@ -169,7 +169,7 @@ type SoftLayer_Network_Bandwidth_Version1_Allotment struct {
 
 // CreateObject - Create a allotment for servers to pool bandwidth and avoid overages in billing if
 // they use more than there allocated bandwidth.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Bandwidth_Version1_Allotment) (bool, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Bandwidth_Version1_Allotment) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -179,7 +179,7 @@ func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidt
 // [[SoftLayer_Network_Bandwidth_Version1_Allotment::reassignServers|reassignServers()]] and
 // [[SoftLayer_Network_Bandwidth_Version1_Allotment::unassignServers|unassignServers()]] methods to
 // move servers in and out of your allotments.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Bandwidth_Version1_Allotment) (bool, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Bandwidth_Version1_Allotment) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -190,14 +190,14 @@ func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidt
 // 0:00'. The ending date / time is calculated for you to prevent requesting data from the server for
 // periods larger than 24 hours as this method requires processing a lot of data records and can get
 // slow at times.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetBackendBandwidthByHour(commonOptions *slapi.CommonOptions, date time.Time) ([]*SoftLayer_Container_Network_Bandwidth_Version1_Usage, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetBackendBandwidthByHour(ctx *slapi.RequestContext, date time.Time) ([]*SoftLayer_Container_Network_Bandwidth_Version1_Usage, error) {
 	var returnValue []*SoftLayer_Container_Network_Bandwidth_Version1_Usage
 	return returnValue, nil
 }
 
 // GetBackendBandwidthUse - This method recurses through all servers on a Bandwidth Pool between the
 // given start and end dates to retrieve public bandwidth data.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetBackendBandwidthUse(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Network_Bandwidth_Version1_Usage_Detail, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetBackendBandwidthUse(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Network_Bandwidth_Version1_Usage_Detail, error) {
 	var returnValue []*SoftLayer_Network_Bandwidth_Version1_Usage_Detail
 	return returnValue, nil
 }
@@ -205,7 +205,7 @@ func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidt
 // GetBandwidthForDateRange - Retrieve a collection of bandwidth data from an individual public or
 // private network tracking object. Data is ideal if you with to employ your own traffic storage and
 // graphing systems.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetBandwidthForDateRange(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetBandwidthForDateRange(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -218,13 +218,13 @@ func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidt
 // result without providing the user some sort of visual feedback. To facilitate this, an option to
 // gather the parameters but not actually draw the image is included. This allows you to call the
 // method twice, once for setting up your page, and then again to actually do the time consuming draw.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetBandwidthImage(commonOptions *slapi.CommonOptions, networkType string, snapshotRange string, draw bool, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetBandwidthImage(ctx *slapi.RequestContext, networkType string, snapshotRange string, draw bool, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
 
 // GetCustomBandwidthDataByDate - no documentation
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetCustomBandwidthDataByDate(commonOptions *slapi.CommonOptions, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetCustomBandwidthDataByDate(ctx *slapi.RequestContext, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
 	var returnValue *SoftLayer_Container_Graph
 	return returnValue, nil
 }
@@ -235,14 +235,14 @@ func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidt
 // '02/01/2008 0:00'. The ending date / time is calculated for you to prevent requesting data from the
 // server for periods larger than 24 hours as this method requires processing a lot of data records and
 // can get slow at times.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetFrontendBandwidthByHour(commonOptions *slapi.CommonOptions, date time.Time) ([]*SoftLayer_Container_Network_Bandwidth_Version1_Usage, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetFrontendBandwidthByHour(ctx *slapi.RequestContext, date time.Time) ([]*SoftLayer_Container_Network_Bandwidth_Version1_Usage, error) {
 	var returnValue []*SoftLayer_Container_Network_Bandwidth_Version1_Usage
 	return returnValue, nil
 }
 
 // GetFrontendBandwidthUse - This method recurses through all servers on a Bandwidth Pool between the
 // given start and end dates to retrieve private bandwidth data.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetFrontendBandwidthUse(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Network_Bandwidth_Version1_Usage_Detail, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetFrontendBandwidthUse(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Network_Bandwidth_Version1_Usage_Detail, error) {
 	var returnValue []*SoftLayer_Network_Bandwidth_Version1_Usage_Detail
 	return returnValue, nil
 }
@@ -250,7 +250,7 @@ func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidt
 // GetObject - getObject retrieves the SoftLayer_Network_Bandwidth_Version1_Allotment object whose ID
 // number corresponds to the ID number of the init parameter passed to the SoftLayer_Hardware service.
 // You can only retrieve an allotment associated with the account that your portal user is assigned to.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Bandwidth_Version1_Allotment, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Bandwidth_Version1_Allotment, error) {
 	var returnValue *SoftLayer_Network_Bandwidth_Version1_Allotment
 	return returnValue, nil
 }
@@ -260,28 +260,28 @@ func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidt
 // return result is a container that includes the min and max dates for all servers to be used in the
 // query, as well as an image in PNG format. This method uses the new and improved drawing routines
 // which should return in a reasonable time frame now that the new backend data warehouse is used.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) New_getBandwidthImage(commonOptions *slapi.CommonOptions, networkType string, snapshotRange string, draw bool, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) New_getBandwidthImage(ctx *slapi.RequestContext, networkType string, snapshotRange string, draw bool, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
 
 // ReassignServers - This method will reassign a collection of SoftLayer hardware to a bandwidth
 // allotment Bandwidth Pool.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) ReassignServers(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Hardware, newAllotmentId int) (bool, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) ReassignServers(ctx *slapi.RequestContext, templateObjects []SoftLayer_Hardware, newAllotmentId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RequestVdrCancellation - This will remove a bandwidth pooling from a customer's allotments by
 // cancelling the billing item. All servers in that allotment will get moved to the account's vpr.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) RequestVdrCancellation(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) RequestVdrCancellation(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RequestVdrContentUpdates - This will move servers into a bandwidth pool, removing them from their
 // previous bandwidth pool and optionally remove the bandwidth pool on completion.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) RequestVdrContentUpdates(commonOptions *slapi.CommonOptions, hardwareToAdd []SoftLayer_Hardware, hardwareToRemove []SoftLayer_Hardware, cloudsToAdd []SoftLayer_Virtual_Guest, cloudsToRemove []SoftLayer_Virtual_Guest, optionalAllotmentId int, adcToAdd []SoftLayer_Network_Application_Delivery_Controller, adcToRemove []SoftLayer_Network_Application_Delivery_Controller) (bool, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) RequestVdrContentUpdates(ctx *slapi.RequestContext, hardwareToAdd []SoftLayer_Hardware, hardwareToRemove []SoftLayer_Hardware, cloudsToAdd []SoftLayer_Virtual_Guest, cloudsToRemove []SoftLayer_Virtual_Guest, optionalAllotmentId int, adcToAdd []SoftLayer_Network_Application_Delivery_Controller, adcToRemove []SoftLayer_Network_Application_Delivery_Controller) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -290,14 +290,14 @@ func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidt
 // bandwith pool not provided on update will be removed. Servers provided on update not currently in
 // the bandwith pool will be added. If all servers are removed, this removes the bandwidth pool on
 // completion.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) SetVdrContent(commonOptions *slapi.CommonOptions, hardware []SoftLayer_Hardware, bareMetalServers []SoftLayer_Hardware, virtualServerInstance []SoftLayer_Virtual_Guest, adc []SoftLayer_Network_Application_Delivery_Controller, optionalAllotmentId int) (bool, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) SetVdrContent(ctx *slapi.RequestContext, hardware []SoftLayer_Hardware, bareMetalServers []SoftLayer_Hardware, virtualServerInstance []SoftLayer_Virtual_Guest, adc []SoftLayer_Network_Application_Delivery_Controller, optionalAllotmentId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // UnassignServers - This method will reassign a collection of SoftLayer hardware to the virtual
 // private rack
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) UnassignServers(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) UnassignServers(ctx *slapi.RequestContext, templateObjects []SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -306,7 +306,7 @@ func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidt
 // Pass in the id of the hardware object or virtual guest you wish to update. Assuming that object is
 // currently pending removal from the bandwidth pool at the start of the next billing cycle, the
 // bandwidth pool member status will be restored and the pending cancellation removed.
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) VoidPendingServerMove(commonOptions *slapi.CommonOptions, id int, type_ string) (bool, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) VoidPendingServerMove(ctx *slapi.RequestContext, id int, type_ string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -314,7 +314,7 @@ func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidt
 // VoidPendingVdrCancellation - This method will void a pending cancellation on a bandwidth pool. Note
 // however any servers that belonged to the rack will have to be restored individually using the method
 // voidPendingServerMove($id, $type).
-func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) VoidPendingVdrCancellation(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) VoidPendingVdrCancellation(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

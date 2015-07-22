@@ -23,13 +23,13 @@ type SoftLayer_Provisioning_Hook_Type struct {
 }
 
 // GetAllHookTypes - <nil>
-func (softlayer_provisioning_hook_type *SoftLayer_Provisioning_Hook_Type) GetAllHookTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Provisioning_Hook_Type, error) {
+func (softlayer_provisioning_hook_type *SoftLayer_Provisioning_Hook_Type) GetAllHookTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Provisioning_Hook_Type, error) {
 	var returnValue []*SoftLayer_Provisioning_Hook_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_provisioning_hook_type *SoftLayer_Provisioning_Hook_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Provisioning_Hook_Type, error) {
+func (softlayer_provisioning_hook_type *SoftLayer_Provisioning_Hook_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Hook_Type, error) {
 	var returnValue *SoftLayer_Provisioning_Hook_Type
 	return returnValue, nil
 }

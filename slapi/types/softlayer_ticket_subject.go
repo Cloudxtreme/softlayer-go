@@ -23,14 +23,14 @@ type SoftLayer_Ticket_Subject struct {
 
 // GetAllObjects - Retrieve all possible ticket subjects. The SoftLayer customer portal uses this
 // method in the add standard support ticket form.
-func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Ticket_Subject, error) {
+func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Ticket_Subject, error) {
 	var returnValue []*SoftLayer_Ticket_Subject
 	return returnValue, nil
 }
 
 // GetObject - getObject retrieves the SoftLayer_Ticket_Subject object whose ID number corresponds to
 // the ID number of the init parameter passed to the SoftLayer_Ticket_Subject service.
-func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Ticket_Subject, error) {
+func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Ticket_Subject, error) {
 	var returnValue *SoftLayer_Ticket_Subject
 	return returnValue, nil
 }
@@ -39,7 +39,7 @@ func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) GetObject(commonOption
 // for standard administration and the top five commonly asked questions about these subjects.
 // getTopFileKnowledgeLayerQuestions() retrieves the top five questions and answers from the SoftLayer
 // KnowledgeLayer related to the given ticket subject.
-func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) GetTopFiveKnowledgeLayerQuestions(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_KnowledgeLayer_QuestionAnswer, error) {
+func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) GetTopFiveKnowledgeLayerQuestions(ctx *slapi.RequestContext) ([]*SoftLayer_Container_KnowledgeLayer_QuestionAnswer, error) {
 	var returnValue []*SoftLayer_Container_KnowledgeLayer_QuestionAnswer
 	return returnValue, nil
 }

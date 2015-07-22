@@ -36,7 +36,7 @@ type SoftLayer_Metric_Tracking_Object struct {
 
 // GetBackboneBandwidthGraph - Retrieve a PNG image of the last 24 hours of bandwidth usage of one of
 // SoftLayer's network backbones.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBackboneBandwidthGraph(commonOptions *slapi.CommonOptions, graphTitle string) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBackboneBandwidthGraph(ctx *slapi.RequestContext, graphTitle string) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
@@ -44,14 +44,14 @@ func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBac
 // GetBandwidthData - Retrieve a collection of raw bandwidth data from an individual public or private
 // network tracking object. Raw data is ideal if you with to employ your own traffic storage and
 // graphing systems.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBandwidthData(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time, type_ string, rollupSeconds int) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBandwidthData(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time, type_ string, rollupSeconds int) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
 
 // GetBandwidthGraph - Retrieve a PNG image of a bandwidth graph representing the bandwidth usage over
 // time recorded by SofTLayer's bandwidth pollers.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBandwidthGraph(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time, graphType string, fontSize int, graphWidth int, graphHeight int, doNotShowTimeZone bool) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBandwidthGraph(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time, graphType string, fontSize int, graphWidth int, graphHeight int, doNotShowTimeZone bool) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
@@ -59,7 +59,7 @@ func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBan
 // GetBandwidthMinMax - Retrieve the total maximum and minimum amounts of bandwidth recorded by a
 // tracking object. The first data object returned is minimum bandwidth, and the second object returned
 // is the maximum data polled.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBandwidthMinMax(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBandwidthMinMax(ctx *slapi.RequestContext) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -67,14 +67,14 @@ func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBan
 // GetBandwidthTotal - Retrieve the total amount of bandwidth recorded by a tracking object within the
 // given date range. This method will only work on SoftLayer_Metric_Tracking_Object for
 // SoftLayer_Hardware objects, and SoftLayer_Virtual_Guest objects.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBandwidthTotal(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time, direction string, type_ string) (uint64, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetBandwidthTotal(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time, direction string, type_ string) (uint64, error) {
 	var returnValue uint64
 	return returnValue, nil
 }
 
 // GetCustomGraphData - Returns a graph container instance that is populated with metric data for the
 // tracking object.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetCustomGraphData(commonOptions *slapi.CommonOptions, graphContainer SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetCustomGraphData(ctx *slapi.RequestContext, graphContainer SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
 	var returnValue *SoftLayer_Container_Graph
 	return returnValue, nil
 }
@@ -82,20 +82,20 @@ func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetCus
 // GetDetailsForDateRange - Retrieve a collection of detailed metric data over a date range. Ideal if
 // you want to employ your own graphing systems. Note not all metrics support this method. Those that
 // do not return null.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetDetailsForDateRange(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time, graphType []string) ([]*SoftLayer_Container_Metric_Tracking_Object_Details, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetDetailsForDateRange(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time, graphType []string) ([]*SoftLayer_Container_Metric_Tracking_Object_Details, error) {
 	var returnValue []*SoftLayer_Container_Metric_Tracking_Object_Details
 	return returnValue, nil
 }
 
 // GetGraph - no documentation
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetGraph(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time, graphType []string) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetGraph(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time, graphType []string) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
 
 // GetMetricDataTypes - Returns a collection of metric data types that can be retrieved for a metric
 // tracking object.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetMetricDataTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Metric_Data_Type, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetMetricDataTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Metric_Data_Type, error) {
 	var returnValue []*SoftLayer_Container_Metric_Data_Type
 	return returnValue, nil
 }
@@ -103,21 +103,21 @@ func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetMet
 // GetObject - getObject retrieves the SoftLayer_Metric_Tracking_Object object whose ID number
 // corresponds to the ID number of the init parameter passed to the SoftLayer_Metric_Tracking_Object
 // service. You can only tracking objects that are associated with your SoftLayer account or services.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Metric_Tracking_Object, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Metric_Tracking_Object, error) {
 	var returnValue *SoftLayer_Metric_Tracking_Object
 	return returnValue, nil
 }
 
 // GetSummary - Retrieve a metric summary. Ideal if you want to employ your own graphing systems. Note
 // not all metric types contain a summary. These return null.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetSummary(commonOptions *slapi.CommonOptions, graphType string) (*SoftLayer_Container_Metric_Tracking_Object_Summary, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetSummary(ctx *slapi.RequestContext, graphType string) (*SoftLayer_Container_Metric_Tracking_Object_Summary, error) {
 	var returnValue *SoftLayer_Container_Metric_Tracking_Object_Summary
 	return returnValue, nil
 }
 
 // GetSummaryData - Returns summarized metric data for the date range, metric type and summary period
 // provided.
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetSummaryData(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time, validTypes []SoftLayer_Container_Metric_Data_Type, summaryPeriod int) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) GetSummaryData(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time, validTypes []SoftLayer_Container_Metric_Data_Type, summaryPeriod int) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }

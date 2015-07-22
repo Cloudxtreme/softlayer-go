@@ -20,13 +20,13 @@ type SoftLayer_Network_Storage_Group_Type struct {
 }
 
 // GetAllObjects - Use this method to retrieve all storage group types available.
-func (softlayer_network_storage_group_type *SoftLayer_Network_Storage_Group_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Storage_Group_Type, error) {
+func (softlayer_network_storage_group_type *SoftLayer_Network_Storage_Group_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Storage_Group_Type, error) {
 	var returnValue []*SoftLayer_Network_Storage_Group_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_storage_group_type *SoftLayer_Network_Storage_Group_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Storage_Group_Type, error) {
+func (softlayer_network_storage_group_type *SoftLayer_Network_Storage_Group_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Group_Type, error) {
 	var returnValue *SoftLayer_Network_Storage_Group_Type
 	return returnValue, nil
 }

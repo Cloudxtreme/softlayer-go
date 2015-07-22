@@ -55,25 +55,25 @@ type SoftLayer_Catalyst_Enrollment struct {
 }
 
 // GetAffiliates - <nil>
-func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) GetAffiliates(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Catalyst_Affiliate, error) {
+func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) GetAffiliates(ctx *slapi.RequestContext) ([]*SoftLayer_Catalyst_Affiliate, error) {
 	var returnValue []*SoftLayer_Catalyst_Affiliate
 	return returnValue, nil
 }
 
 // GetCompanyTypes - <nil>
-func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) GetCompanyTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Catalyst_Company_Type, error) {
+func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) GetCompanyTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Catalyst_Company_Type, error) {
 	var returnValue []*SoftLayer_Catalyst_Company_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Catalyst_Enrollment, error) {
+func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Catalyst_Enrollment, error) {
 	var returnValue *SoftLayer_Catalyst_Enrollment
 	return returnValue, nil
 }
 
 // SelfEnrollNewAccount - <nil>
-func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) SelfEnrollNewAccount(commonOptions *slapi.CommonOptions, accountTemplate SoftLayer_Account) (*SoftLayer_Account, error) {
+func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) SelfEnrollNewAccount(ctx *slapi.RequestContext, accountTemplate SoftLayer_Account) (*SoftLayer_Account, error) {
 	var returnValue *SoftLayer_Account
 	return returnValue, nil
 }

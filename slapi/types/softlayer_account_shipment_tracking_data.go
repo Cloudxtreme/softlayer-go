@@ -52,7 +52,7 @@ type SoftLayer_Account_Shipment_Tracking_Data struct {
 // CreateObject - Create a new shipment tracking data. The ''shipmentId'', ''sequence'', and
 // ''trackingData'' properties in the templateObject parameter are required parameters to create a
 // tracking data record.
-func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Shipment_Tracking_Data) (*SoftLayer_Account_Shipment_Tracking_Data, error) {
+func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Shipment_Tracking_Data) (*SoftLayer_Account_Shipment_Tracking_Data, error) {
 	var returnValue *SoftLayer_Account_Shipment_Tracking_Data
 	return returnValue, nil
 }
@@ -60,26 +60,26 @@ func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Track
 // CreateObjects - Create a new shipment tracking data. The ''shipmentId'', ''sequence'', and
 // ''trackingData'' properties of each templateObject in the templateObjects array are required
 // parameters to create a tracking data record.
-func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) CreateObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Account_Shipment_Tracking_Data) ([]*SoftLayer_Account_Shipment_Tracking_Data, error) {
+func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Account_Shipment_Tracking_Data) ([]*SoftLayer_Account_Shipment_Tracking_Data, error) {
 	var returnValue []*SoftLayer_Account_Shipment_Tracking_Data
 	return returnValue, nil
 }
 
 // DeleteObject - deleteObject permanently removes a shipment tracking datum (number)
-func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - Edit the properties of a tracking data record by passing in a modified instance of a
 // SoftLayer_Account_Shipment_Tracking_Data object.
-func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Shipment_Tracking_Data) (bool, error) {
+func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Shipment_Tracking_Data) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Shipment_Tracking_Data, error) {
+func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Shipment_Tracking_Data, error) {
 	var returnValue *SoftLayer_Account_Shipment_Tracking_Data
 	return returnValue, nil
 }

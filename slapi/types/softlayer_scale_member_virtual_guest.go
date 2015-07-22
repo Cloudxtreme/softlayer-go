@@ -17,13 +17,13 @@ type SoftLayer_Scale_Member_Virtual_Guest struct {
 }
 
 // DeleteObject - <nil>
-func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Member_Virtual_Guest, error) {
+func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Member_Virtual_Guest, error) {
 	var returnValue *SoftLayer_Scale_Member_Virtual_Guest
 	return returnValue, nil
 }

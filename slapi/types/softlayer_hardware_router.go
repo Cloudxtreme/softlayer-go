@@ -26,7 +26,7 @@ type SoftLayer_Hardware_Router struct {
 }
 
 // GetObject - <nil>
-func (softlayer_hardware_router *SoftLayer_Hardware_Router) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Hardware_Router, error) {
+func (softlayer_hardware_router *SoftLayer_Hardware_Router) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Hardware_Router, error) {
 	var returnValue *SoftLayer_Hardware_Router
 	return returnValue, nil
 }

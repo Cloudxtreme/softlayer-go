@@ -97,37 +97,37 @@ type SoftLayer_Account_Shipment struct {
 
 // EditObject - Edit the properties of a shipment record by passing in a modified instance of a
 // SoftLayer_Account_Shipment object.
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Shipment) (bool, error) {
+func (softlayer_account_shipment *SoftLayer_Account_Shipment) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Shipment) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllCouriers - no documentation
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllCouriers(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Auxiliary_Shipping_Courier, error) {
+func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllCouriers(ctx *slapi.RequestContext) ([]*SoftLayer_Auxiliary_Shipping_Courier, error) {
 	var returnValue []*SoftLayer_Auxiliary_Shipping_Courier
 	return returnValue, nil
 }
 
 // GetAllCouriersByType - no documentation
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllCouriersByType(commonOptions *slapi.CommonOptions, courierTypeKeyName string) ([]*SoftLayer_Auxiliary_Shipping_Courier, error) {
+func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllCouriersByType(ctx *slapi.RequestContext, courierTypeKeyName string) ([]*SoftLayer_Auxiliary_Shipping_Courier, error) {
 	var returnValue []*SoftLayer_Auxiliary_Shipping_Courier
 	return returnValue, nil
 }
 
 // GetAllShipmentStatuses - no documentation
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllShipmentStatuses(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Account_Shipment_Status, error) {
+func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllShipmentStatuses(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Shipment_Status, error) {
 	var returnValue []*SoftLayer_Account_Shipment_Status
 	return returnValue, nil
 }
 
 // GetAllShipmentTypes - no documentation
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllShipmentTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Account_Shipment_Type, error) {
+func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllShipmentTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Shipment_Type, error) {
 	var returnValue []*SoftLayer_Account_Shipment_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Shipment, error) {
+func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Shipment, error) {
 	var returnValue *SoftLayer_Account_Shipment
 	return returnValue, nil
 }

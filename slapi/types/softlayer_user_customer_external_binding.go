@@ -20,7 +20,7 @@ type SoftLayer_User_Customer_External_Binding struct {
 // SoftLayer account, but will not require you to authentication with our trusted 2 form factor vendor
 // when logging into the SoftLayer customer portal. You may supply one of the following reason when you
 // disable an external binding: *Unspecified *TemporarilyUnavailable *Lost *Stolen
-func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External_Binding) Disable(commonOptions *slapi.CommonOptions, reason string) (bool, error) {
+func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External_Binding) Disable(ctx *slapi.RequestContext, reason string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -29,13 +29,13 @@ func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External
 // authenticate with our trusted 3rd party 2 form factor vendor when logging into the SoftLayer
 // customer portal. Please note that API access will be disabled for users that have an active external
 // binding.
-func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External_Binding) Enable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External_Binding) Enable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External_Binding) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_External_Binding, error) {
+func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External_Binding) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_External_Binding, error) {
 	var returnValue *SoftLayer_User_Customer_External_Binding
 	return returnValue, nil
 }

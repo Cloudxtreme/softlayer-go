@@ -48,28 +48,28 @@ type SoftLayer_Network_Backbone struct {
 
 // GetAllBackbones - Retrieve a list of all SoftLayer backbone connections. Use this method if you need
 // all backbones or don't know the id number of a specific backbone.
-func (softlayer_network_backbone *SoftLayer_Network_Backbone) GetAllBackbones(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Backbone, error) {
+func (softlayer_network_backbone *SoftLayer_Network_Backbone) GetAllBackbones(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Backbone, error) {
 	var returnValue []*SoftLayer_Network_Backbone
 	return returnValue, nil
 }
 
 // GetBackbonesForLocationName - Retrieve a list of all SoftLayer backbone connections for a location
 // name.
-func (softlayer_network_backbone *SoftLayer_Network_Backbone) GetBackbonesForLocationName(commonOptions *slapi.CommonOptions, locationName string) ([]*SoftLayer_Network_Backbone, error) {
+func (softlayer_network_backbone *SoftLayer_Network_Backbone) GetBackbonesForLocationName(ctx *slapi.RequestContext, locationName string) ([]*SoftLayer_Network_Backbone, error) {
 	var returnValue []*SoftLayer_Network_Backbone
 	return returnValue, nil
 }
 
 // GetGraphImage - Retrieve a graph of a SoftLayer backbone's last 24 hours of activity. getGraphImage
 // returns a PNG image measuring 827 pixels by 293 pixels.
-func (softlayer_network_backbone *SoftLayer_Network_Backbone) GetGraphImage(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_network_backbone *SoftLayer_Network_Backbone) GetGraphImage(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetObject - Retrieve an individual SoftLayer_Network_Backbone record. Use the getAllBackbones()
 // method to retrieve a list of all SoftLayer network backbones.
-func (softlayer_network_backbone *SoftLayer_Network_Backbone) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Backbone, error) {
+func (softlayer_network_backbone *SoftLayer_Network_Backbone) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Backbone, error) {
 	var returnValue *SoftLayer_Network_Backbone
 	return returnValue, nil
 }

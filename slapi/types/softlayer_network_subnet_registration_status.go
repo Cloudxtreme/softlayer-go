@@ -33,13 +33,13 @@ type SoftLayer_Network_Subnet_Registration_Status struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_network_subnet_registration_status *SoftLayer_Network_Subnet_Registration_Status) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Subnet_Registration_Status, error) {
+func (softlayer_network_subnet_registration_status *SoftLayer_Network_Subnet_Registration_Status) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Subnet_Registration_Status, error) {
 	var returnValue []*SoftLayer_Network_Subnet_Registration_Status
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_subnet_registration_status *SoftLayer_Network_Subnet_Registration_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Subnet_Registration_Status, error) {
+func (softlayer_network_subnet_registration_status *SoftLayer_Network_Subnet_Registration_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Subnet_Registration_Status, error) {
 	var returnValue *SoftLayer_Network_Subnet_Registration_Status
 	return returnValue, nil
 }

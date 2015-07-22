@@ -44,26 +44,26 @@ type SoftLayer_Monitoring_Robot struct {
 // CheckConnection - Checks if a monitoring robot can communicate with SoftLayer monitoring management
 // system via the private network. TCP port 48000 - 48002 must be open on your server or your virtual
 // server in order for this test to succeed.
-func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) CheckConnection(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) CheckConnection(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DeployMonitoringAgents - <nil>
-func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) DeployMonitoringAgents(commonOptions *slapi.CommonOptions, configurationTemplateGroup SoftLayer_Monitoring_Agent_Configuration_Template_Group) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) DeployMonitoringAgents(ctx *slapi.RequestContext, configurationTemplateGroup SoftLayer_Monitoring_Agent_Configuration_Template_Group) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
 
 // GetAvailableConfigurationGroups - Returns available configuration template groups for this
 // monitoring agent.
-func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) GetAvailableConfigurationGroups(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Monitoring_Agent_Configuration_Template_Group, error) {
+func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) GetAvailableConfigurationGroups(ctx *slapi.RequestContext) ([]*SoftLayer_Monitoring_Agent_Configuration_Template_Group, error) {
 	var returnValue []*SoftLayer_Monitoring_Agent_Configuration_Template_Group
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Monitoring_Robot, error) {
+func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Monitoring_Robot, error) {
 	var returnValue *SoftLayer_Monitoring_Robot
 	return returnValue, nil
 }
@@ -72,7 +72,7 @@ func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) GetObject(commonOp
 // it sets the robot status to "Limited Connectivity". Robots in this status will not be process by our
 // monitoring management system. You cannot manage monitoring agents either. Use this method to resets
 // monitoring robot status to "Active" to indicate the connection issue is resolved.
-func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) ResetStatus(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) ResetStatus(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

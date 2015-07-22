@@ -76,26 +76,26 @@ type SoftLayer_Product_Item_Category struct {
 
 // GetAdditionalProductsForCategory - Returns a list of of active Items in the "Additional Services"
 // package with their active prices for a given product item category and sorts them by price.
-func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetAdditionalProductsForCategory(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item, error) {
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetAdditionalProductsForCategory(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item, error) {
 	var returnValue []*SoftLayer_Product_Item
 	return returnValue, nil
 }
 
 // GetBandwidthCategories - <nil>
-func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetBandwidthCategories(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item_Category, error) {
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetBandwidthCategories(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item_Category, error) {
 	var returnValue []*SoftLayer_Product_Item_Category
 	return returnValue, nil
 }
 
 // GetComputingCategories - This method returns a collection of computing categories. These categories
 // are also top level items in a service offering.
-func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetComputingCategories(commonOptions *slapi.CommonOptions, resetCache bool) ([]*SoftLayer_Product_Item_Category, error) {
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetComputingCategories(ctx *slapi.RequestContext, resetCache bool) ([]*SoftLayer_Product_Item_Category, error) {
 	var returnValue []*SoftLayer_Product_Item_Category
 	return returnValue, nil
 }
 
 // GetCustomUsageRatesCategories - <nil>
-func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetCustomUsageRatesCategories(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item_Category, error) {
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetCustomUsageRatesCategories(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item_Category, error) {
 	var returnValue []*SoftLayer_Product_Item_Category
 	return returnValue, nil
 }
@@ -104,39 +104,39 @@ func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetCusto
 // describe how a particular product item is sold. For example, the 250GB hard drive can be sold as
 // disk0, disk1, ... disk11. There are different prices for this product item depending on which
 // category it is. This keeps down the number of products in total.
-func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Product_Item_Category, error) {
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Item_Category, error) {
 	var returnValue *SoftLayer_Product_Item_Category
 	return returnValue, nil
 }
 
 // GetSoftwareCategories - <nil>
-func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetSoftwareCategories(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item_Category, error) {
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetSoftwareCategories(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item_Category, error) {
 	var returnValue []*SoftLayer_Product_Item_Category
 	return returnValue, nil
 }
 
 // GetSubnetCategories - <nil>
-func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetSubnetCategories(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item_Category, error) {
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetSubnetCategories(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item_Category, error) {
 	var returnValue []*SoftLayer_Product_Item_Category
 	return returnValue, nil
 }
 
 // GetTopLevelCategories - This method returns a collection of computing categories. These categories
 // are also top level items in a service offering.
-func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetTopLevelCategories(commonOptions *slapi.CommonOptions, resetCache bool) ([]*SoftLayer_Product_Item_Category, error) {
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetTopLevelCategories(ctx *slapi.RequestContext, resetCache bool) ([]*SoftLayer_Product_Item_Category, error) {
 	var returnValue []*SoftLayer_Product_Item_Category
 	return returnValue, nil
 }
 
 // GetValidCancelableServiceItemCategories - This method returns service product categories that can be
 // canceled via You can use these categories to find the billing items you wish to cancel.
-func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetValidCancelableServiceItemCategories(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item_Category, error) {
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetValidCancelableServiceItemCategories(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item_Category, error) {
 	var returnValue []*SoftLayer_Product_Item_Category
 	return returnValue, nil
 }
 
 // GetVlanCategories - <nil>
-func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetVlanCategories(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item_Category, error) {
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) GetVlanCategories(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item_Category, error) {
 	var returnValue []*SoftLayer_Product_Item_Category
 	return returnValue, nil
 }

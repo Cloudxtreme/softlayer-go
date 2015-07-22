@@ -33,21 +33,21 @@ type SoftLayer_User_Customer_Notification_Hardware struct {
 
 // CreateObject - Passing in an unsaved instances of a Customer_Notification_Hardware object into this
 // function will create the object and return the results to the user.
-func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_User_Customer_Notification_Hardware) (*SoftLayer_User_Customer_Notification_Hardware, error) {
+func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Customer_Notification_Hardware) (*SoftLayer_User_Customer_Notification_Hardware, error) {
 	var returnValue *SoftLayer_User_Customer_Notification_Hardware
 	return returnValue, nil
 }
 
 // CreateObjects - Passing in a collection of unsaved instances of Customer_Notification_Hardware
 // objects into this function will create all objects and return the results to the user.
-func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) CreateObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_User_Customer_Notification_Hardware) ([]*SoftLayer_Dns_Domain, error) {
+func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_User_Customer_Notification_Hardware) ([]*SoftLayer_Dns_Domain, error) {
 	var returnValue []*SoftLayer_Dns_Domain
 	return returnValue, nil
 }
 
 // DeleteObjects - Like any other API object, the customer notification objects can be deleted by
 // passing an instance of them into this function. The ID on the object must be set.
-func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) DeleteObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_User_Customer_Notification_Hardware) (bool, error) {
+func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) DeleteObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_User_Customer_Notification_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -56,7 +56,7 @@ func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Not
 // the passed in hardware ID as long as that hardware ID is owned by the current user's account. This
 // behavior can also be accomplished by simply tapping monitoringUserNotification on the
 // Hardware_Server object.
-func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) FindByHardwareId(commonOptions *slapi.CommonOptions, hardwareId int) ([]*SoftLayer_User_Customer_Notification_Hardware, error) {
+func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) FindByHardwareId(ctx *slapi.RequestContext, hardwareId int) ([]*SoftLayer_User_Customer_Notification_Hardware, error) {
 	var returnValue []*SoftLayer_User_Customer_Notification_Hardware
 	return returnValue, nil
 }
@@ -65,7 +65,7 @@ func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Not
 // number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_User_Customer_Notification_Hardware service. You can only retrieve hardware notifications
 // attached to hardware and users that belong to your account
-func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_Notification_Hardware, error) {
+func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_Notification_Hardware, error) {
 	var returnValue *SoftLayer_User_Customer_Notification_Hardware
 	return returnValue, nil
 }

@@ -53,7 +53,7 @@ type SoftLayer_Auxiliary_Press_Release struct {
 
 // GetAllObjects - Retrieve an array of SoftLayer_Auxiliary_Press_Release data types, which contain all
 // press releases.
-func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Auxiliary_Press_Release, error) {
+func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Auxiliary_Press_Release, error) {
 	var returnValue []*SoftLayer_Auxiliary_Press_Release
 	return returnValue, nil
 }
@@ -61,28 +61,28 @@ func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetA
 // GetObject - getObject retrieves the SoftLayer_Auxiliary_Press_Release object whose ID number
 // corresponds to the ID number of the init parameter passed to the SoftLayer_Auxiliary_Press_Release
 // service.
-func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Auxiliary_Press_Release, error) {
+func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Auxiliary_Press_Release, error) {
 	var returnValue *SoftLayer_Auxiliary_Press_Release
 	return returnValue, nil
 }
 
 // GetRenderedPressRelease - Retrieve an array of SoftLayer_Auxiliary_Press_Release data types, which
 // contain all press releases.
-func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetRenderedPressRelease(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Auxiliary_Press_Release, error) {
+func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetRenderedPressRelease(ctx *slapi.RequestContext) ([]*SoftLayer_Auxiliary_Press_Release, error) {
 	var returnValue []*SoftLayer_Auxiliary_Press_Release
 	return returnValue, nil
 }
 
 // GetRenderedPressReleases - Retrieve an array of SoftLayer_Auxiliary_Press_Release data types, which
 // contain all press releases for a given year and or result limit.
-func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetRenderedPressReleases(commonOptions *slapi.CommonOptions, resultLimit string, year string) ([]*SoftLayer_Auxiliary_Press_Release, error) {
+func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetRenderedPressReleases(ctx *slapi.RequestContext, resultLimit string, year string) ([]*SoftLayer_Auxiliary_Press_Release, error) {
 	var returnValue []*SoftLayer_Auxiliary_Press_Release
 	return returnValue, nil
 }
 
 // GetWebsiteHighlightPressReleases - Retrieve an array of SoftLayer_Auxiliary_Press_Release data
 // types, which have the website highlight flag set.
-func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetWebsiteHighlightPressReleases(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Auxiliary_Press_Release, error) {
+func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) GetWebsiteHighlightPressReleases(ctx *slapi.RequestContext) ([]*SoftLayer_Auxiliary_Press_Release, error) {
 	var returnValue []*SoftLayer_Auxiliary_Press_Release
 	return returnValue, nil
 }

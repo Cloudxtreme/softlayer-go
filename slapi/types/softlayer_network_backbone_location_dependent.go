@@ -26,19 +26,19 @@ type SoftLayer_Network_Backbone_Location_Dependent struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Backbone_Location_Dependent, error) {
+func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Backbone_Location_Dependent, error) {
 	var returnValue []*SoftLayer_Network_Backbone_Location_Dependent
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Backbone_Location_Dependent, error) {
+func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Backbone_Location_Dependent, error) {
 	var returnValue *SoftLayer_Network_Backbone_Location_Dependent
 	return returnValue, nil
 }
 
 // GetSourceDependentsByName - <nil>
-func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) GetSourceDependentsByName(commonOptions *slapi.CommonOptions, locationName string) (*SoftLayer_Location, error) {
+func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) GetSourceDependentsByName(ctx *slapi.RequestContext, locationName string) (*SoftLayer_Location, error) {
 	var returnValue *SoftLayer_Location
 	return returnValue, nil
 }

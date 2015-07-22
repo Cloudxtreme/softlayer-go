@@ -38,19 +38,19 @@ type SoftLayer_Scale_Policy_Action struct {
 }
 
 // DeleteObject - <nil>
-func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Scale_Policy_Action) (bool, error) {
+func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Policy_Action) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Policy_Action, error) {
+func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Policy_Action, error) {
 	var returnValue *SoftLayer_Scale_Policy_Action
 	return returnValue, nil
 }

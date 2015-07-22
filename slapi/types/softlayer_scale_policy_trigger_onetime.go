@@ -16,13 +16,13 @@ type SoftLayer_Scale_Policy_Trigger_OneTime struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_scale_policy_trigger_onetime *SoftLayer_Scale_Policy_Trigger_OneTime) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Scale_Policy_Trigger_OneTime) (*SoftLayer_Scale_Policy_Trigger_OneTime, error) {
+func (softlayer_scale_policy_trigger_onetime *SoftLayer_Scale_Policy_Trigger_OneTime) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Policy_Trigger_OneTime) (*SoftLayer_Scale_Policy_Trigger_OneTime, error) {
 	var returnValue *SoftLayer_Scale_Policy_Trigger_OneTime
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_policy_trigger_onetime *SoftLayer_Scale_Policy_Trigger_OneTime) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Policy_Trigger_OneTime, error) {
+func (softlayer_scale_policy_trigger_onetime *SoftLayer_Scale_Policy_Trigger_OneTime) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Policy_Trigger_OneTime, error) {
 	var returnValue *SoftLayer_Scale_Policy_Trigger_OneTime
 	return returnValue, nil
 }

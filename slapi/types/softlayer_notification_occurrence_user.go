@@ -36,25 +36,25 @@ type SoftLayer_Notification_Occurrence_User struct {
 }
 
 // Acknowledge - <nil>
-func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) Acknowledge(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) Acknowledge(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllObjects - <nil>
-func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Notification_Occurrence_User, error) {
+func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Notification_Occurrence_User, error) {
 	var returnValue []*SoftLayer_Notification_Occurrence_User
 	return returnValue, nil
 }
 
 // GetImpactedDeviceCount - <nil>
-func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) GetImpactedDeviceCount(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) GetImpactedDeviceCount(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Notification_Occurrence_User, error) {
+func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_Occurrence_User, error) {
 	var returnValue *SoftLayer_Notification_Occurrence_User
 	return returnValue, nil
 }

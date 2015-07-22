@@ -39,37 +39,37 @@ type SoftLayer_Network_Message_Queue_Node struct {
 }
 
 // AddUser - <nil>
-func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) AddUser(commonOptions *slapi.CommonOptions, username string) (bool, error) {
+func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) AddUser(ctx *slapi.RequestContext, username string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DeleteUser - <nil>
-func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) DeleteUser(commonOptions *slapi.CommonOptions, username string) (bool, error) {
+func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) DeleteUser(ctx *slapi.RequestContext, username string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllUsers - <nil>
-func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) GetAllUsers(commonOptions *slapi.CommonOptions) ([]string, error) {
+func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) GetAllUsers(ctx *slapi.RequestContext) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Message_Queue_Node, error) {
+func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Message_Queue_Node, error) {
 	var returnValue *SoftLayer_Network_Message_Queue_Node
 	return returnValue, nil
 }
 
 // GetUsage - no documentation
-func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) GetUsage(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) GetUsage(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
 
 // GetUsageGraph - no documentation
-func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) GetUsageGraph(commonOptions *slapi.CommonOptions, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
+func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) GetUsageGraph(ctx *slapi.RequestContext, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
 	var returnValue *SoftLayer_Container_Graph
 	return returnValue, nil
 }

@@ -50,7 +50,7 @@ type SoftLayer_Layout_Profile_Preference struct {
 }
 
 // GetObject - <nil>
-func (softlayer_layout_profile_preference *SoftLayer_Layout_Profile_Preference) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Layout_Profile_Preference, error) {
+func (softlayer_layout_profile_preference *SoftLayer_Layout_Profile_Preference) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Layout_Profile_Preference, error) {
 	var returnValue *SoftLayer_Layout_Profile_Preference
 	return returnValue, nil
 }

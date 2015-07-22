@@ -27,14 +27,14 @@ type SoftLayer_Locale_Timezone struct {
 }
 
 // GetAllObjects - no documentation
-func (softlayer_locale_timezone *SoftLayer_Locale_Timezone) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Locale_Timezone, error) {
+func (softlayer_locale_timezone *SoftLayer_Locale_Timezone) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Locale_Timezone, error) {
 	var returnValue []*SoftLayer_Locale_Timezone
 	return returnValue, nil
 }
 
 // GetObject - getObject retrieves the SoftLayer_Locale_Timezone object whose ID number corresponds to
 // the ID number of the init parameter passed to the SoftLayer_Locale_Timezone service.
-func (softlayer_locale_timezone *SoftLayer_Locale_Timezone) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Locale_Timezone, error) {
+func (softlayer_locale_timezone *SoftLayer_Locale_Timezone) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Locale_Timezone, error) {
 	var returnValue *SoftLayer_Locale_Timezone
 	return returnValue, nil
 }

@@ -42,20 +42,20 @@ type SoftLayer_Network_Subnet_Registration_Details struct {
 // (type)|SoftLayer_Network_Subnet_Registration_Details]] The numeric ID of the
 // [[SoftLayer_Account_Regional_Registry_Detail|detail]] object to relate. The numeric ID of the
 // [[SoftLayer_Network_Subnet_Registration|registration]] object to relate.
-func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Subnet_Registration_Details) (*SoftLayer_Network_Subnet_Registration_Details, error) {
+func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Subnet_Registration_Details) (*SoftLayer_Network_Subnet_Registration_Details, error) {
 	var returnValue *SoftLayer_Network_Subnet_Registration_Details
 	return returnValue, nil
 }
 
 // DeleteObject - This method will delete an existing SoftLayer_Account_Regional_Registry_Detail
 // object.
-func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Subnet_Registration_Details, error) {
+func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Subnet_Registration_Details, error) {
 	var returnValue *SoftLayer_Network_Subnet_Registration_Details
 	return returnValue, nil
 }

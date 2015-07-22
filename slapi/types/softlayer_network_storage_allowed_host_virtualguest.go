@@ -15,7 +15,7 @@ type SoftLayer_Network_Storage_Allowed_Host_VirtualGuest struct {
 }
 
 // GetObject - <nil>
-func (softlayer_network_storage_allowed_host_virtualguest *SoftLayer_Network_Storage_Allowed_Host_VirtualGuest) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Storage_Allowed_Host_VirtualGuest, error) {
+func (softlayer_network_storage_allowed_host_virtualguest *SoftLayer_Network_Storage_Allowed_Host_VirtualGuest) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Allowed_Host_VirtualGuest, error) {
 	var returnValue *SoftLayer_Network_Storage_Allowed_Host_VirtualGuest
 	return returnValue, nil
 }

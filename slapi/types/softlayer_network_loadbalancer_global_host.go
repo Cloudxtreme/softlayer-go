@@ -58,7 +58,7 @@ type SoftLayer_Network_LoadBalancer_Global_Host struct {
 }
 
 // DeleteObject - Remove a host from the load balancing pool of a global load balancer account.
-func (softlayer_network_loadbalancer_global_host *SoftLayer_Network_LoadBalancer_Global_Host) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_loadbalancer_global_host *SoftLayer_Network_LoadBalancer_Global_Host) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -67,7 +67,7 @@ func (softlayer_network_loadbalancer_global_host *SoftLayer_Network_LoadBalancer
 // number corresponds to the ID number of the init paramater passed to the
 // SoftLayer_Network_LoadBalancer_Global_Host service. You can only retrieve a global load balancer
 // host that is assigned to your SoftLayer global load balancer account.
-func (softlayer_network_loadbalancer_global_host *SoftLayer_Network_LoadBalancer_Global_Host) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_LoadBalancer_Global_Host, error) {
+func (softlayer_network_loadbalancer_global_host *SoftLayer_Network_LoadBalancer_Global_Host) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_LoadBalancer_Global_Host, error) {
 	var returnValue *SoftLayer_Network_LoadBalancer_Global_Host
 	return returnValue, nil
 }

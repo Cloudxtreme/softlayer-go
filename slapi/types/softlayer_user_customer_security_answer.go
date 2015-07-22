@@ -32,7 +32,7 @@ type SoftLayer_User_Customer_Security_Answer struct {
 // GetObject - getObject retrieves the SoftLayer_User_Customer_Security_Answer object whose ID number
 // corresponds to the ID number of the init parameter passed to the
 // SoftLayer_User_Customer_Security_Answer service.
-func (softlayer_user_customer_security_answer *SoftLayer_User_Customer_Security_Answer) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_Security_Answer, error) {
+func (softlayer_user_customer_security_answer *SoftLayer_User_Customer_Security_Answer) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_Security_Answer, error) {
 	var returnValue *SoftLayer_User_Customer_Security_Answer
 	return returnValue, nil
 }

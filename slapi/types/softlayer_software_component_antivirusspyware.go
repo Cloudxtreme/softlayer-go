@@ -14,14 +14,14 @@ type SoftLayer_Software_Component_AntivirusSpyware struct {
 }
 
 // GetObject - <nil>
-func (softlayer_software_component_antivirusspyware *SoftLayer_Software_Component_AntivirusSpyware) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Software_Component_AntivirusSpyware, error) {
+func (softlayer_software_component_antivirusspyware *SoftLayer_Software_Component_AntivirusSpyware) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Software_Component_AntivirusSpyware, error) {
 	var returnValue *SoftLayer_Software_Component_AntivirusSpyware
 	return returnValue, nil
 }
 
 // UpdateAntivirusSpywarePolicy - Update an anti-virus/spyware policy. The policy options that it
 // accepts are the following: *1 - Minimal *2 - Relaxed *3 - Default *4 - High *5 - Ultimate
-func (softlayer_software_component_antivirusspyware *SoftLayer_Software_Component_AntivirusSpyware) UpdateAntivirusSpywarePolicy(commonOptions *slapi.CommonOptions, newPolicy string) (bool, error) {
+func (softlayer_software_component_antivirusspyware *SoftLayer_Software_Component_AntivirusSpyware) UpdateAntivirusSpywarePolicy(ctx *slapi.RequestContext, newPolicy string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

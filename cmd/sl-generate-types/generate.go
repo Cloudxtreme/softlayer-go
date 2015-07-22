@@ -29,7 +29,7 @@ import ({{ range $alias, $import := .Imports }}
 }
 
 {{ range $i, $method := .Methods }}
-{{ godoc $method.Name $method.Doc "" }}func ({{ $.Type.Lower }} *{{ $.Type.StructName }}) {{ upper $method.Name }}(commonOptions *slapi.CommonOptions, {{ $method.Arguments }}) ({{ $method.ReturnArguments }}) {
+{{ godoc $method.Name $method.Doc "" }}func ({{ $.Type.Lower }} *{{ $.Type.StructName }}) {{ upper $method.Name }}(ctx *slapi.RequestContext, {{ $method.Arguments }}) ({{ $method.ReturnArguments }}) {
 	{{ $method.Body }}
 }
 {{ end }}

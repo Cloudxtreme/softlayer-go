@@ -228,7 +228,7 @@ type SoftLayer_Network_Subnet struct {
 }
 
 // CreateReverseDomainRecords - no documentation
-func (softlayer_network_subnet *SoftLayer_Network_Subnet) CreateReverseDomainRecords(commonOptions *slapi.CommonOptions) (*SoftLayer_Dns_Domain_Reverse, error) {
+func (softlayer_network_subnet *SoftLayer_Network_Subnet) CreateReverseDomainRecords(ctx *slapi.RequestContext) (*SoftLayer_Dns_Domain_Reverse, error) {
 	var returnValue *SoftLayer_Dns_Domain_Reverse
 	return returnValue, nil
 }
@@ -238,20 +238,20 @@ func (softlayer_network_subnet *SoftLayer_Network_Subnet) CreateReverseDomainRec
 // are pending for a router. Usage of this function is restricted and may only be called from
 // authorized accounts. It is not available for general API users without justification and consent
 // from a SoftLayer representative.
-func (softlayer_network_subnet *SoftLayer_Network_Subnet) CreateSubnetRouteUpdateTransaction(commonOptions *slapi.CommonOptions, newEndPointIpAddress string) (bool, error) {
+func (softlayer_network_subnet *SoftLayer_Network_Subnet) CreateSubnetRouteUpdateTransaction(ctx *slapi.RequestContext, newEndPointIpAddress string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CreateSwipTransaction - This function is used to create a new SoftLayer transaction to register your
 // data with transactions can only be initiated on subnets that contain more than 8 IP addresses.
-func (softlayer_network_subnet *SoftLayer_Network_Subnet) CreateSwipTransaction(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_subnet *SoftLayer_Network_Subnet) CreateSwipTransaction(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditNote - no documentation
-func (softlayer_network_subnet *SoftLayer_Network_Subnet) EditNote(commonOptions *slapi.CommonOptions, note string) (bool, error) {
+func (softlayer_network_subnet *SoftLayer_Network_Subnet) EditNote(ctx *slapi.RequestContext, note string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -261,7 +261,7 @@ func (softlayer_network_subnet *SoftLayer_Network_Subnet) EditNote(commonOptions
 // SoftLayer_Network_Subnet retrieval methods along with [[object masks]] to retrieve their subnets'
 // associated transactions as well. This is a special function built for SoftLayer's use on the section
 // of the customer portal, but may also be useful for API users looking for the same data.
-func (softlayer_network_subnet *SoftLayer_Network_Subnet) FindAllSubnetsAndActiveSwipTransactionStatus(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Subnet, error) {
+func (softlayer_network_subnet *SoftLayer_Network_Subnet) FindAllSubnetsAndActiveSwipTransactionStatus(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Subnet, error) {
 	var returnValue []*SoftLayer_Network_Subnet
 	return returnValue, nil
 }
@@ -269,13 +269,13 @@ func (softlayer_network_subnet *SoftLayer_Network_Subnet) FindAllSubnetsAndActiv
 // GetObject - getObject retrieves the SoftLayer_Network_Subnet object whose ID number corresponds to
 // the ID number of the init parameter passed to the SoftLayer_Network_Subnet service. You can only
 // retrieve the subnet whose vlan is associated with the account that you portal user is assigned to.
-func (softlayer_network_subnet *SoftLayer_Network_Subnet) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Subnet, error) {
+func (softlayer_network_subnet *SoftLayer_Network_Subnet) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Subnet, error) {
 	var returnValue *SoftLayer_Network_Subnet
 	return returnValue, nil
 }
 
 // GetReverseDomainRecords - Retrieve all reverse DNS records associated with a subnet.
-func (softlayer_network_subnet *SoftLayer_Network_Subnet) GetReverseDomainRecords(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Dns_Domain, error) {
+func (softlayer_network_subnet *SoftLayer_Network_Subnet) GetReverseDomainRecords(ctx *slapi.RequestContext) ([]*SoftLayer_Dns_Domain, error) {
 	var returnValue []*SoftLayer_Dns_Domain
 	return returnValue, nil
 }
@@ -283,14 +283,14 @@ func (softlayer_network_subnet *SoftLayer_Network_Subnet) GetReverseDomainRecord
 // GetRoutableEndpointIpAddresses - getRoutableEndpointAddresses retrieves valid routable endpoint
 // addresses for a subnet. You may use any IP address in a portable subnet, but may not use the network
 // identifier, gateway, or broadcast address for primary and secondary on subnets.
-func (softlayer_network_subnet *SoftLayer_Network_Subnet) GetRoutableEndpointIpAddresses(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Subnet_IpAddress, error) {
+func (softlayer_network_subnet *SoftLayer_Network_Subnet) GetRoutableEndpointIpAddresses(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Subnet_IpAddress, error) {
 	var returnValue []*SoftLayer_Network_Subnet_IpAddress
 	return returnValue, nil
 }
 
 // GetSubnetForIpAddress - Retrieve the subnet associated with an IP address. You may only retrieve
 // subnets assigned to your SoftLayer customer account.
-func (softlayer_network_subnet *SoftLayer_Network_Subnet) GetSubnetForIpAddress(commonOptions *slapi.CommonOptions, ipAddress string) (*SoftLayer_Network_Subnet, error) {
+func (softlayer_network_subnet *SoftLayer_Network_Subnet) GetSubnetForIpAddress(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Network_Subnet, error) {
 	var returnValue *SoftLayer_Network_Subnet
 	return returnValue, nil
 }

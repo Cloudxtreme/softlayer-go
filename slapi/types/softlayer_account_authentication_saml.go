@@ -62,31 +62,31 @@ type SoftLayer_Account_Authentication_Saml struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Authentication_Saml) (*SoftLayer_Account_Authentication_Saml, error) {
+func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Authentication_Saml) (*SoftLayer_Account_Authentication_Saml, error) {
 	var returnValue *SoftLayer_Account_Authentication_Saml
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - Edit the object by passing in a modified instance of the object
-func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Authentication_Saml) (bool, error) {
+func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Authentication_Saml) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetMetadata - <nil>
-func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) GetMetadata(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) GetMetadata(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Authentication_Saml, error) {
+func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Authentication_Saml, error) {
 	var returnValue *SoftLayer_Account_Authentication_Saml
 	return returnValue, nil
 }

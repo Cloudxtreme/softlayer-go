@@ -29,13 +29,13 @@ type SoftLayer_Scale_Asset struct {
 }
 
 // DeleteObject - <nil>
-func (softlayer_scale_asset *SoftLayer_Scale_Asset) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_scale_asset *SoftLayer_Scale_Asset) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_asset *SoftLayer_Scale_Asset) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Asset, error) {
+func (softlayer_scale_asset *SoftLayer_Scale_Asset) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Asset, error) {
 	var returnValue *SoftLayer_Scale_Asset
 	return returnValue, nil
 }

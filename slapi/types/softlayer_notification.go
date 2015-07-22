@@ -39,13 +39,13 @@ type SoftLayer_Notification struct {
 }
 
 // GetAllObjects - Use this method to retrieve all active notifications that can be subscribed to.
-func (softlayer_notification *SoftLayer_Notification) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Notification, error) {
+func (softlayer_notification *SoftLayer_Notification) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Notification, error) {
 	var returnValue []*SoftLayer_Notification
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_notification *SoftLayer_Notification) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Notification, error) {
+func (softlayer_notification *SoftLayer_Notification) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification, error) {
 	var returnValue *SoftLayer_Notification
 	return returnValue, nil
 }

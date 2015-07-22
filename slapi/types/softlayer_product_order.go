@@ -11,19 +11,19 @@ type SoftLayer_Product_Order struct {
 }
 
 // CheckItemAvailability - <nil>
-func (softlayer_product_order *SoftLayer_Product_Order) CheckItemAvailability(commonOptions *slapi.CommonOptions, itemPrices []SoftLayer_Product_Item_Price, accountId int, availabilityTypeKeyNames []string) (bool, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) CheckItemAvailability(ctx *slapi.RequestContext, itemPrices []SoftLayer_Product_Item_Price, accountId int, availabilityTypeKeyNames []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CheckItemAvailabilityForImageTemplate - <nil>
-func (softlayer_product_order *SoftLayer_Product_Order) CheckItemAvailabilityForImageTemplate(commonOptions *slapi.CommonOptions, imageTemplateId int, accountId int, packageId int, availabilityTypeKeyNames []string) (bool, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) CheckItemAvailabilityForImageTemplate(ctx *slapi.RequestContext, imageTemplateId int, accountId int, packageId int, availabilityTypeKeyNames []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CheckItemConflicts - no documentation
-func (softlayer_product_order *SoftLayer_Product_Order) CheckItemConflicts(commonOptions *slapi.CommonOptions, itemPrices []SoftLayer_Product_Item_Price) (bool, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) CheckItemConflicts(ctx *slapi.RequestContext, itemPrices []SoftLayer_Product_Item_Price) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -31,14 +31,14 @@ func (softlayer_product_order *SoftLayer_Product_Order) CheckItemConflicts(commo
 // GetExternalPaymentAuthorizationReceipt - This method simply returns a receipt for a previously
 // finalized payment authorization from PayPal. The response matches the response returned from
 // placeOrder when the order was originally placed with PayPal as the payment type.
-func (softlayer_product_order *SoftLayer_Product_Order) GetExternalPaymentAuthorizationReceipt(commonOptions *slapi.CommonOptions, token string, payerId string) (*SoftLayer_Container_Product_Order_Receipt, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) GetExternalPaymentAuthorizationReceipt(ctx *slapi.RequestContext, token string, payerId string) (*SoftLayer_Container_Product_Order_Receipt, error) {
 	var returnValue *SoftLayer_Container_Product_Order_Receipt
 	return returnValue, nil
 }
 
 // GetResellerOrder - When the account is on an external reseller brand, this service will provide a
 // SoftLayer_Product_Order with the the pricing adjusted by the external reseller.
-func (softlayer_product_order *SoftLayer_Product_Order) GetResellerOrder(commonOptions *slapi.CommonOptions, orderContainer SoftLayer_Container_Product_Order) (*SoftLayer_Container_Product_Order, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) GetResellerOrder(ctx *slapi.RequestContext, orderContainer SoftLayer_Container_Product_Order) (*SoftLayer_Container_Product_Order, error) {
 	var returnValue *SoftLayer_Container_Product_Order
 	return returnValue, nil
 }
@@ -47,7 +47,7 @@ func (softlayer_product_order *SoftLayer_Product_Order) GetResellerOrder(commonO
 // calculations and let them run in the background. This method will return the current progress and
 // information related to a specific tax calculation, which allows real-time progress updates on tax
 // calculations.
-func (softlayer_product_order *SoftLayer_Product_Order) GetTaxCalculationResult(commonOptions *slapi.CommonOptions, orderHash string) (*SoftLayer_Container_Tax_Cache, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) GetTaxCalculationResult(ctx *slapi.RequestContext, orderHash string) (*SoftLayer_Container_Tax_Cache, error) {
 	var returnValue *SoftLayer_Container_Tax_Cache
 	return returnValue, nil
 }
@@ -61,7 +61,7 @@ func (softlayer_product_order *SoftLayer_Product_Order) GetTaxCalculationResult(
 // to place an order. The only acceptable category codes are: A disk category, such as guest_disk0 or
 // disk0 , with values of either or For most customers, it's sufficient to only provide the first 2
 // parameters.
-func (softlayer_product_order *SoftLayer_Product_Order) GetVlans(commonOptions *slapi.CommonOptions, locationId int, packageId int, selectedItems string, vlanIds []int, subnetIds []int, accountId int) (*SoftLayer_Container_Product_Order_Network_Vlans, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) GetVlans(ctx *slapi.RequestContext, locationId int, packageId int, selectedItems string, vlanIds []int, subnetIds []int, accountId int) (*SoftLayer_Container_Product_Order_Network_Vlans, error) {
 	var returnValue *SoftLayer_Container_Product_Order_Network_Vlans
 	return returnValue, nil
 }
@@ -138,7 +138,7 @@ func (softlayer_product_order *SoftLayer_Product_Order) GetVlans(commonOptions *
 // require validation from a 3rd party, the approval process may take days or even weeks, and this
 // would not be acceptable when you need your hourly virtual server right now. To better accommodate
 // customers, we restrict several products to be ordered individually.
-func (softlayer_product_order *SoftLayer_Product_Order) PlaceOrder(commonOptions *slapi.CommonOptions, orderData SoftLayer_Container_Product_Order, saveAsQuote bool) (*SoftLayer_Container_Product_Order_Receipt, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) PlaceOrder(ctx *slapi.RequestContext, orderData SoftLayer_Container_Product_Order, saveAsQuote bool) (*SoftLayer_Container_Product_Order_Receipt, error) {
 	var returnValue *SoftLayer_Container_Product_Order_Receipt
 	return returnValue, nil
 }
@@ -148,7 +148,7 @@ func (softlayer_product_order *SoftLayer_Product_Order) PlaceOrder(commonOptions
 // for server quotes. After placing the quote, you must go to this URL to finish the order process.
 // After going to this it will direct you back to a SoftLayer webpage that tells us you have finished
 // the process. After this, it will go to sales for final approval.
-func (softlayer_product_order *SoftLayer_Product_Order) PlaceQuote(commonOptions *slapi.CommonOptions, orderData SoftLayer_Container_Product_Order) (*SoftLayer_Container_Product_Order_Receipt, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) PlaceQuote(ctx *slapi.RequestContext, orderData SoftLayer_Container_Product_Order) (*SoftLayer_Container_Product_Order_Receipt, error) {
 	var returnValue *SoftLayer_Container_Product_Order_Receipt
 	return returnValue, nil
 }
@@ -159,13 +159,13 @@ func (softlayer_product_order *SoftLayer_Product_Order) PlaceQuote(commonOptions
 // system. For most, this method will not be needed. Once an order is placed using placeOrder() for
 // PayPal customers, a URL is given back to the customer. In it is the token and PayerID. If you want
 // to systematically pay with PayPal, do so then call this method with the token and PayerID.
-func (softlayer_product_order *SoftLayer_Product_Order) ProcessExternalPaymentAuthorization(commonOptions *slapi.CommonOptions, token string, payerId string) (*SoftLayer_Container_Product_Order, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) ProcessExternalPaymentAuthorization(ctx *slapi.RequestContext, token string, payerId string) (*SoftLayer_Container_Product_Order, error) {
 	var returnValue *SoftLayer_Container_Product_Order
 	return returnValue, nil
 }
 
 // RequiredItems - Get list of items that are required with the item prices provided
-func (softlayer_product_order *SoftLayer_Product_Order) RequiredItems(commonOptions *slapi.CommonOptions, itemPrices []SoftLayer_Product_Item_Price) ([]*SoftLayer_Product_Item, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) RequiredItems(ctx *slapi.RequestContext, itemPrices []SoftLayer_Product_Item_Price) ([]*SoftLayer_Product_Item, error) {
 	var returnValue []*SoftLayer_Product_Item
 	return returnValue, nil
 }
@@ -183,7 +183,7 @@ func (softlayer_product_order *SoftLayer_Product_Order) RequiredItems(commonOpti
 // specified in the result. verifyOrder accepts the same [[SoftLayer_Container_Product_Order
 // (type)|container types]] as placeOrder , so see [[SoftLayer_Product_Order/placeOrder|placeOrder]]
 // for more details.
-func (softlayer_product_order *SoftLayer_Product_Order) VerifyOrder(commonOptions *slapi.CommonOptions, orderData SoftLayer_Container_Product_Order) (*SoftLayer_Container_Product_Order, error) {
+func (softlayer_product_order *SoftLayer_Product_Order) VerifyOrder(ctx *slapi.RequestContext, orderData SoftLayer_Container_Product_Order) (*SoftLayer_Container_Product_Order, error) {
 	var returnValue *SoftLayer_Container_Product_Order
 	return returnValue, nil
 }

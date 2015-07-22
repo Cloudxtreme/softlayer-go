@@ -382,20 +382,20 @@ type SoftLayer_Billing_Item struct {
 // "Server / Upgrade Costs" * "Migrating to larger server" * "Migrating to smaller server" * "Migrating
 // to a different SoftLayer datacenter" * "Network performance / latency" * "Support response / timing"
 // * "Sales process / upgrades" * "Moving to competitor"
-func (softlayer_billing_item *SoftLayer_Billing_Item) CancelItem(commonOptions *slapi.CommonOptions, cancelImmediately bool, cancelAssociatedBillingItems bool, reason string, customerNote string) (bool, error) {
+func (softlayer_billing_item *SoftLayer_Billing_Item) CancelItem(ctx *slapi.RequestContext, cancelImmediately bool, cancelAssociatedBillingItems bool, reason string, customerNote string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CancelService - Cancel the resource or service (excluding bare metal servers) for a billing Item.
 // The billing item will be cancelled immediately and reclaim of the resource will begin shortly.
-func (softlayer_billing_item *SoftLayer_Billing_Item) CancelService(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_billing_item *SoftLayer_Billing_Item) CancelService(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CancelServiceOnAnniversaryDate - no documentation
-func (softlayer_billing_item *SoftLayer_Billing_Item) CancelServiceOnAnniversaryDate(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_billing_item *SoftLayer_Billing_Item) CancelServiceOnAnniversaryDate(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -406,7 +406,7 @@ func (softlayer_billing_item *SoftLayer_Billing_Item) CancelServiceOnAnniversary
 // account's items of billable items. There are "parent" billing items and "child" billing items. The
 // server billing item is generally referred to as a parent billing item. The items tied to a server,
 // such as ram, harddrives, and operating systems are considered "child" billing items.
-func (softlayer_billing_item *SoftLayer_Billing_Item) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Billing_Item, error) {
+func (softlayer_billing_item *SoftLayer_Billing_Item) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Item, error) {
 	var returnValue *SoftLayer_Billing_Item
 	return returnValue, nil
 }
@@ -417,13 +417,13 @@ func (softlayer_billing_item *SoftLayer_Billing_Item) GetObject(commonOptions *s
 // order to find billing items for cancellation, use
 // [[SoftLayer_Product_Item_Category::getValidCancelableServiceItemCategories|product categories]]
 // service to retrieve category codes that are eligible for cancellation.
-func (softlayer_billing_item *SoftLayer_Billing_Item) GetServiceBillingItemsByCategory(commonOptions *slapi.CommonOptions, categoryCode string, includeZeroRecurringFee bool) ([]*SoftLayer_Billing_Item, error) {
+func (softlayer_billing_item *SoftLayer_Billing_Item) GetServiceBillingItemsByCategory(ctx *slapi.RequestContext, categoryCode string, includeZeroRecurringFee bool) ([]*SoftLayer_Billing_Item, error) {
 	var returnValue []*SoftLayer_Billing_Item
 	return returnValue, nil
 }
 
 // RemoveAssociationId - no documentation
-func (softlayer_billing_item *SoftLayer_Billing_Item) RemoveAssociationId(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_billing_item *SoftLayer_Billing_Item) RemoveAssociationId(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -433,13 +433,13 @@ func (softlayer_billing_item *SoftLayer_Billing_Item) RemoveAssociationId(common
 // as secondary IP subnets or StorageLayer accounts, to a server billing item. You may only set an
 // association for an orphan to a server. You cannot associate a server to an orphan if the either the
 // server or orphan billing items have a cancellation date set.
-func (softlayer_billing_item *SoftLayer_Billing_Item) SetAssociationId(commonOptions *slapi.CommonOptions, associatedId int) (bool, error) {
+func (softlayer_billing_item *SoftLayer_Billing_Item) SetAssociationId(ctx *slapi.RequestContext, associatedId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // VoidCancelService - no documentation
-func (softlayer_billing_item *SoftLayer_Billing_Item) VoidCancelService(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_billing_item *SoftLayer_Billing_Item) VoidCancelService(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

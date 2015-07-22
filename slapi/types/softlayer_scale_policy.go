@@ -78,31 +78,31 @@ type SoftLayer_Scale_Policy struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_scale_policy *SoftLayer_Scale_Policy) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Scale_Policy) (*SoftLayer_Scale_Policy, error) {
+func (softlayer_scale_policy *SoftLayer_Scale_Policy) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Policy) (*SoftLayer_Scale_Policy, error) {
 	var returnValue *SoftLayer_Scale_Policy
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_scale_policy *SoftLayer_Scale_Policy) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_scale_policy *SoftLayer_Scale_Policy) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_scale_policy *SoftLayer_Scale_Policy) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Scale_Policy) (bool, error) {
+func (softlayer_scale_policy *SoftLayer_Scale_Policy) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Policy) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_policy *SoftLayer_Scale_Policy) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Policy, error) {
+func (softlayer_scale_policy *SoftLayer_Scale_Policy) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Policy, error) {
 	var returnValue *SoftLayer_Scale_Policy
 	return returnValue, nil
 }
 
 // Trigger - <nil>
-func (softlayer_scale_policy *SoftLayer_Scale_Policy) Trigger(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Scale_Member, error) {
+func (softlayer_scale_policy *SoftLayer_Scale_Policy) Trigger(ctx *slapi.RequestContext) ([]*SoftLayer_Scale_Member, error) {
 	var returnValue []*SoftLayer_Scale_Member
 	return returnValue, nil
 }

@@ -163,13 +163,13 @@ type SoftLayer_Hardware_Server struct {
 }
 
 // ActivatePrivatePort - no documentation
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) ActivatePrivatePort(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) ActivatePrivatePort(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ActivatePublicPort - no documentation
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) ActivatePublicPort(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) ActivatePublicPort(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -181,7 +181,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) ActivatePublicPort(c
 // public network with the same IP's assigned to the server to allow for remote connections. It will
 // bring your server offline for approximately 10 minutes while the rescue is in progress. The
 // root/administrator password will be the same as what is listed in the portal for the server.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) BootToRescueLayer(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) BootToRescueLayer(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -191,7 +191,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) BootToRescueLayer(co
 // progress. In the event of a hardware failure during this test our datacenter engineers will be
 // notified of the problem automatically. They will then replace any failed components to bring your
 // server back online, and will be contacting you to ensure that impact on your server is minimal.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) CreateFirmwareUpdateTransaction(commonOptions *slapi.CommonOptions, ipmi int, raidController int, bios int, harddrive int) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) CreateFirmwareUpdateTransaction(ctx *slapi.RequestContext, ipmi int, raidController int, bios int, harddrive int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -266,19 +266,19 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) CreateFirmwareUpdate
 // null, "hostname": "host1", "id": null, "serviceProviderId": null, "serviceProviderResourceId": null,
 // "globalIdentifier": "f5a3fcff-db1d-4b7c-9fa0-0349e41c29c5", "hourlyBillingFlag": true,
 // "memoryCapacity": 2, "operatingSystemReferenceCode": "processorCoreAmount": 2 }
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Hardware_Server) (*SoftLayer_Hardware_Server, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Hardware_Server) (*SoftLayer_Hardware_Server, error) {
 	var returnValue *SoftLayer_Hardware_Server
 	return returnValue, nil
 }
 
 // CreatePostSoftwareInstallTransaction - <nil>
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) CreatePostSoftwareInstallTransaction(commonOptions *slapi.CommonOptions, installCodes []string, returnBoolean bool) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) CreatePostSoftwareInstallTransaction(ctx *slapi.RequestContext, installCodes []string, returnBoolean bool) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - no documentation
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Hardware_Server) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Hardware_Server) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -286,14 +286,14 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) EditObject(commonOpt
 // GetBackendBandwidthUsage - Use this method to return an array of private bandwidth utilization
 // records between a given date range. This method represents the NEW version of
 // getFrontendBandwidthUse
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBackendBandwidthUsage(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBackendBandwidthUsage(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
 
 // GetBackendBandwidthUse - Use this method to return an array of private bandwidth utilization records
 // between a given date range.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBackendBandwidthUse(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Network_Bandwidth_Version1_Usage_Detail, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBackendBandwidthUse(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Network_Bandwidth_Version1_Usage_Detail, error) {
 	var returnValue []*SoftLayer_Network_Bandwidth_Version1_Usage_Detail
 	return returnValue, nil
 }
@@ -301,7 +301,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBackendBandwidthU
 // GetBandwidthForDateRange - Retrieve a collection of bandwidth data from an individual public or
 // private network tracking object. Data is ideal if you with to employ your own traffic storage and
 // graphing systems.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBandwidthForDateRange(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBandwidthForDateRange(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -309,7 +309,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBandwidthForDateR
 // GetBandwidthImage - Use this method when needing a bandwidth image for a single server. It will
 // gather the correct input parameters for the generic graphing utility automatically based on the
 // snapshot specified. Use the $draw flag to suppress the generation of the actual binary PNG image.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBandwidthImage(commonOptions *slapi.CommonOptions, networkType string, snapshotRange string, draw bool, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBandwidthImage(ctx *slapi.RequestContext, networkType string, snapshotRange string, draw bool, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
@@ -317,20 +317,20 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetBandwidthImage(co
 // GetCurrentBenchmarkCertificationResultFile - Attempt to retrieve the file associated with the
 // current benchmark certification result, if such a file exists. If there is no file for this
 // benchmark certification result, calling this method throws an exception.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetCurrentBenchmarkCertificationResultFile(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetCurrentBenchmarkCertificationResultFile(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetCustomBandwidthDataByDate - no documentation
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetCustomBandwidthDataByDate(commonOptions *slapi.CommonOptions, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetCustomBandwidthDataByDate(ctx *slapi.RequestContext, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
 	var returnValue *SoftLayer_Container_Graph
 	return returnValue, nil
 }
 
 // GetFirewallProtectableSubnets - Get the subnets associated with this server that are protectable by
 // a network component firewall.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetFirewallProtectableSubnets(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Subnet, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetFirewallProtectableSubnets(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Subnet, error) {
 	var returnValue []*SoftLayer_Network_Subnet
 	return returnValue, nil
 }
@@ -338,34 +338,34 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetFirewallProtectab
 // GetFrontendBandwidthUsage - Use this method to return an array of public bandwidth utilization
 // records between a given date range. This method represents the NEW version of
 // getFrontendBandwidthUse
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetFrontendBandwidthUsage(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetFrontendBandwidthUsage(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
 
 // GetFrontendBandwidthUse - Use this method to return an array of public bandwidth utilization records
 // between a given date range.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetFrontendBandwidthUse(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Network_Bandwidth_Version1_Usage_Detail, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetFrontendBandwidthUse(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Network_Bandwidth_Version1_Usage_Detail, error) {
 	var returnValue []*SoftLayer_Network_Bandwidth_Version1_Usage_Detail
 	return returnValue, nil
 }
 
 // GetHardwareByIpAddress - Retrieve a server by searching for the primary IP address.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetHardwareByIpAddress(commonOptions *slapi.CommonOptions, ipAddress string) (*SoftLayer_Hardware_Server, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetHardwareByIpAddress(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Hardware_Server, error) {
 	var returnValue *SoftLayer_Hardware_Server
 	return returnValue, nil
 }
 
 // GetItemPricesFromSoftwareDescriptions - Return a collection of SoftLayer_Item_Price objects from a
 // collection of SoftLayer_Software_Description
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetItemPricesFromSoftwareDescriptions(commonOptions *slapi.CommonOptions, softwareDescriptions []SoftLayer_Software_Description, includeTranslationsFlag bool, returnAllPricesFlag bool) ([]*SoftLayer_Product_Item, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetItemPricesFromSoftwareDescriptions(ctx *slapi.RequestContext, softwareDescriptions []SoftLayer_Software_Description, includeTranslationsFlag bool, returnAllPricesFlag bool) ([]*SoftLayer_Product_Item, error) {
 	var returnValue []*SoftLayer_Product_Item
 	return returnValue, nil
 }
 
 // GetManagementNetworkComponent - Retrieve the remote management network component attached with this
 // server.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetManagementNetworkComponent(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Component, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetManagementNetworkComponent(ctx *slapi.RequestContext) (*SoftLayer_Network_Component, error) {
 	var returnValue *SoftLayer_Network_Component
 	return returnValue, nil
 }
@@ -373,7 +373,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetManagementNetwork
 // GetNetworkComponentFirewallProtectableIpAddresses - Get the IP addresses associated with this server
 // that are protectable by a network component firewall. Note, this may not return all values for IPv6
 // subnets for this server. Please use getFirewallProtectableSubnets to get all protectable subnets.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetNetworkComponentFirewallProtectableIpAddresses(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Subnet_IpAddress, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetNetworkComponentFirewallProtectableIpAddresses(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Subnet_IpAddress, error) {
 	var returnValue []*SoftLayer_Network_Subnet_IpAddress
 	return returnValue, nil
 }
@@ -381,7 +381,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetNetworkComponentF
 // GetObject - getObject retrieves the SoftLayer_Hardware_Server object whose ID number corresponds to
 // the ID number of the init parameter passed to the SoftLayer_Hardware service. You can only retrieve
 // servers from the account that your portal user is assigned to.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Hardware_Server, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Hardware_Server, error) {
 	var returnValue *SoftLayer_Hardware_Server
 	return returnValue, nil
 }
@@ -391,13 +391,13 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetObject(commonOpti
 // system temperatures, voltages, and other local server settings. Sensor data is cached for 30
 // seconds. Calls made to getSensorData for the same server within 30 seconds of each other will return
 // the same data. Subsequent calls will return new data once the cache expires.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPMInfo(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_RemoteManagement_PmInfo, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPMInfo(ctx *slapi.RequestContext) ([]*SoftLayer_Container_RemoteManagement_PmInfo, error) {
 	var returnValue []*SoftLayer_Container_RemoteManagement_PmInfo
 	return returnValue, nil
 }
 
 // GetPrimaryDriveSize - <nil>
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrimaryDriveSize(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrimaryDriveSize(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
@@ -407,7 +407,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrimaryDriveSize(
 // period, its estimated usage during its billing period, and an estimation of how much bandwidth it
 // will use during its billing period based on its current usage. A server's projected bandwidth usage
 // increases in accuracy as it progresses through its billing period.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateBandwidthDataSummary(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Network_Bandwidth_Data_Summary, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateBandwidthDataSummary(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Bandwidth_Data_Summary, error) {
 	var returnValue *SoftLayer_Container_Network_Bandwidth_Data_Summary
 	return returnValue, nil
 }
@@ -415,31 +415,31 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateBandwidthD
 // GetPrivateBandwidthGraphImage - Retrieve a graph of a server's private network bandwidth usage over
 // the specified time frame. If no time frame is specified then getPublicBandwidthGraphImage retrieves
 // the last 24 hours of public bandwidth usage. getPublicBandwidthGraphImage returns a PNG image
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateBandwidthGraphImage(commonOptions *slapi.CommonOptions, startTime string, endTime string) (string, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateBandwidthGraphImage(ctx *slapi.RequestContext, startTime string, endTime string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetPrivateNetworkComponent - Retrieve the private network component attached with this server.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateNetworkComponent(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Component, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateNetworkComponent(ctx *slapi.RequestContext) (*SoftLayer_Network_Component, error) {
 	var returnValue *SoftLayer_Network_Component
 	return returnValue, nil
 }
 
 // GetPrivateVlan - Retrieve the backend for the primary IP address of the server
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateVlan(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Vlan, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateVlan(ctx *slapi.RequestContext) (*SoftLayer_Network_Vlan, error) {
 	var returnValue *SoftLayer_Network_Vlan
 	return returnValue, nil
 }
 
 // GetPrivateVlanByIpAddress - Retrieve a backend network by searching for an IP address
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateVlanByIpAddress(commonOptions *slapi.CommonOptions, ipAddress string) (*SoftLayer_Network_Vlan, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPrivateVlanByIpAddress(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Network_Vlan, error) {
 	var returnValue *SoftLayer_Network_Vlan
 	return returnValue, nil
 }
 
 // GetProvisionDate - <nil>
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetProvisionDate(commonOptions *slapi.CommonOptions) (*time.Time, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetProvisionDate(ctx *slapi.RequestContext) (*time.Time, error) {
 	var returnValue *time.Time
 	return returnValue, nil
 }
@@ -449,7 +449,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetProvisionDate(com
 // period, its estimated usage during its billing period, and an estimation of how much bandwidth it
 // will use during its billing period based on its current usage. A server's projected bandwidth usage
 // increases in accuracy as it progresses through its billing period.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicBandwidthDataSummary(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Network_Bandwidth_Data_Summary, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicBandwidthDataSummary(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Bandwidth_Data_Summary, error) {
 	var returnValue *SoftLayer_Container_Network_Bandwidth_Data_Summary
 	return returnValue, nil
 }
@@ -458,14 +458,14 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicBandwidthDa
 // the specified time frame. If no time frame is specified then getPublicBandwidthGraphImage retrieves
 // the last 24 hours of public bandwidth usage. getPublicBandwidthGraphImage returns a PNG image
 // measuring 827 pixels by 293 pixels. ON THE NEW
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicBandwidthGraphImage(commonOptions *slapi.CommonOptions, startTime time.Time, endTime time.Time) (string, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicBandwidthGraphImage(ctx *slapi.RequestContext, startTime time.Time, endTime time.Time) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetPublicBandwidthTotal - Retrieve the total number of bytes used by a server over a specified time
 // period via the data warehouse tracking objects for this hardware.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicBandwidthTotal(commonOptions *slapi.CommonOptions, startTime int, endTime int) (uint64, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicBandwidthTotal(ctx *slapi.RequestContext, startTime int, endTime int) (uint64, error) {
 	var returnValue uint64
 	return returnValue, nil
 }
@@ -473,25 +473,25 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicBandwidthTo
 // GetPublicNetworkComponent - Retrieve a SoftLayer server's public network component. Some servers are
 // only connected to the private network and may not have a public network component. In that case
 // getPublicNetworkComponent returns a null object.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicNetworkComponent(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Component, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicNetworkComponent(ctx *slapi.RequestContext) (*SoftLayer_Network_Component, error) {
 	var returnValue *SoftLayer_Network_Component
 	return returnValue, nil
 }
 
 // GetPublicVlan - Retrieve the frontend for the primary IP address of the server
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicVlan(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Vlan, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicVlan(ctx *slapi.RequestContext) (*SoftLayer_Network_Vlan, error) {
 	var returnValue *SoftLayer_Network_Vlan
 	return returnValue, nil
 }
 
 // GetPublicVlanByHostname - Retrieve the frontend network Vlan by searching the hostname of a server
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicVlanByHostname(commonOptions *slapi.CommonOptions, hostname string) (*SoftLayer_Network_Vlan, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetPublicVlanByHostname(ctx *slapi.RequestContext, hostname string) (*SoftLayer_Network_Vlan, error) {
 	var returnValue *SoftLayer_Network_Vlan
 	return returnValue, nil
 }
 
 // GetReverseDomainRecords - Retrieve the reverse domain records associated with this server.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetReverseDomainRecords(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Dns_Domain, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetReverseDomainRecords(ctx *slapi.RequestContext) ([]*SoftLayer_Dns_Domain, error) {
 	var returnValue []*SoftLayer_Dns_Domain
 	return returnValue, nil
 }
@@ -501,7 +501,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetReverseDomainReco
 // system temperatures, voltages, and other local server settings. Sensor data is cached for 30
 // seconds. Calls made to getSensorData for the same server within 30 seconds of each other will return
 // the same data. Subsequent calls will return new data once the cache expires.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetSensorData(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_RemoteManagement_SensorReading, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetSensorData(ctx *slapi.RequestContext) ([]*SoftLayer_Container_RemoteManagement_SensorReading, error) {
 	var returnValue []*SoftLayer_Container_RemoteManagement_SensorReading
 	return returnValue, nil
 }
@@ -509,7 +509,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetSensorData(common
 // GetSensorDataWithGraphs - Retrieves the raw data returned from the server's remote management card.
 // For more details of what is returned please refer to the getSensorData method. Along with the raw
 // data, graphs for the cpu and system temperatures and fan speeds are also returned.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetSensorDataWithGraphs(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetSensorDataWithGraphs(ctx *slapi.RequestContext) (*SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs, error) {
 	var returnValue *SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs
 	return returnValue, nil
 }
@@ -518,7 +518,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetSensorDataWithGra
 // getServerDetails is an aggregation function that combines the results of
 // [[SoftLayer_Hardware_Server::getComponents]], [[SoftLayer_Hardware_Server::getSoftware]], and
 // [[SoftLayer_Hardware_Server::getNetworkComponents]] in a single container.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetServerDetails(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Hardware_Server_Details, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetServerDetails(ctx *slapi.RequestContext) (*SoftLayer_Container_Hardware_Server_Details, error) {
 	var returnValue *SoftLayer_Container_Hardware_Server_Details
 	return returnValue, nil
 }
@@ -526,14 +526,14 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetServerDetails(com
 // GetServerFanSpeedGraphs - Retrieve the server's fan speeds and displays them using tachometer
 // graphs. Data used to construct graphs is retrieved from the server's remote management card. All
 // graphs returned will have a title associated with it.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetServerFanSpeedGraphs(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetServerFanSpeedGraphs(ctx *slapi.RequestContext) ([]*SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed, error) {
 	var returnValue []*SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed
 	return returnValue, nil
 }
 
 // GetServerPowerState - Retrieves the power state for the server. The server's power status is
 // retrieved from its remote management card. This will return 'on' or 'off'.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetServerPowerState(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetServerPowerState(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -542,14 +542,14 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetServerPowerState(
 // graphs. Temperatures retrieved are CPU(s) and system temperatures. Data used to construct graphs is
 // retrieved from the server's remote management card. All graphs returned will have a title associated
 // with it.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetServerTemperatureGraphs(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetServerTemperatureGraphs(ctx *slapi.RequestContext) ([]*SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature, error) {
 	var returnValue []*SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature
 	return returnValue, nil
 }
 
 // GetValidBlockDeviceTemplateGroups - This method will return the list of block device template groups
 // that are valid to the host. For instance, it will only retrieve images.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetValidBlockDeviceTemplateGroups(commonOptions *slapi.CommonOptions, visibility string) ([]*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetValidBlockDeviceTemplateGroups(ctx *slapi.RequestContext, visibility string) ([]*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
 	var returnValue []*SoftLayer_Virtual_Guest_Block_Device_Template_Group
 	return returnValue, nil
 }
@@ -557,7 +557,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetValidBlockDeviceT
 // GetWindowsUpdateAvailableUpdates - Retrieve a list of Windows updates available for a server from
 // the local SoftLayer Windows Server Update Services server. Windows servers provisioned by SoftLayer
 // are configured to use the local server via the private network by default.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetWindowsUpdateAvailableUpdates(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetWindowsUpdateAvailableUpdates(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem, error) {
 	var returnValue []*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem
 	return returnValue, nil
 }
@@ -565,7 +565,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetWindowsUpdateAvai
 // GetWindowsUpdateInstalledUpdates - Retrieve a list of Windows updates installed on a server as
 // reported by the local SoftLayer Windows Server Update Services server. Windows servers provisioned
 // by SoftLayer are configured to use the local server via the private network by default.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetWindowsUpdateInstalledUpdates(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetWindowsUpdateInstalledUpdates(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem, error) {
 	var returnValue []*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem
 	return returnValue, nil
 }
@@ -573,48 +573,48 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetWindowsUpdateInst
 // GetWindowsUpdateStatus - This method returns an update status record for this server. That record
 // will specify if the server is missing updates, or has updates that must be reinstalled or require a
 // reboot to go into affect.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetWindowsUpdateStatus(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) GetWindowsUpdateStatus(ctx *slapi.RequestContext) (*SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status, error) {
 	var returnValue *SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status
 	return returnValue, nil
 }
 
 // InitiateIderaBareMetalRestore - Idera Bare Metal Server Restore is a backup agent designed
 // specifically for making full system restores made with Idera Server Backup.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) InitiateIderaBareMetalRestore(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) InitiateIderaBareMetalRestore(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // InitiateR1SoftBareMetalRestore - R1Soft Bare Metal Server Restore is an R1Soft disk agent designed
 // specifically for making full system restores made with R1Soft CDP Server backup.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) InitiateR1SoftBareMetalRestore(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) InitiateR1SoftBareMetalRestore(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // IsBackendPingable - Issues a ping command and returns the success (true) or failure (false) of the
 // ping command.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) IsBackendPingable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) IsBackendPingable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // IsPingable - Issues a ping command and returns the success (true) or failure (false) of the ping
 // command.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) IsPingable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) IsPingable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // IsWindowsServer - Determine if the server runs any version of the Microsoft Windows operating
 // systems. Return ''true'' if it does and ''false if otherwise.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) IsWindowsServer(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) IsWindowsServer(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // Ping - Issues a ping command to the server and returns the ping response.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) Ping(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) Ping(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -624,13 +624,13 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) Ping(commonOptions *
 // powerstrip. This should only be used as a last resort. If a reboot command has been issued
 // successfully in the past 20 minutes, another remote management command (rebootSoft, rebootHard,
 // powerOn, powerOff and powerCycle) will not be allowed. This is to avoid any type of server failures.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) PowerCycle(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) PowerCycle(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // PowerOff - This method will power off the server via the server's remote management card.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) PowerOff(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) PowerOff(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -638,7 +638,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) PowerOff(commonOptio
 // PowerOn - Power on server via its remote management card. If a reboot command has been issued
 // successfully in the past 20 minutes, another remote management command (rebootSoft, rebootHard,
 // powerOn, powerOff and powerCycle) will not be allowed. This is to avoid any type of server failures.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) PowerOn(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) PowerOn(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -650,7 +650,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) PowerOn(commonOption
 // command has been issued successfully in the past 20 minutes, another remote management command
 // (rebootSoft, rebootHard, powerOn, powerOff and powerCycle) will not be allowed. This is to avoid any
 // type of server failures.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) RebootDefault(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) RebootDefault(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -661,7 +661,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) RebootDefault(common
 // moments to boot up as server may run system disks checks. If a reboot command has been issued
 // successfully in the past 20 minutes, another remote management command (rebootSoft, rebootHard,
 // powerOn, powerOff and powerCycle) will not be allowed. This is to avoid any type of server failures.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) RebootHard(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) RebootHard(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -671,7 +671,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) RebootHard(commonOpt
 // rebooting. If a reboot command has been issued successfully in the past 20 minutes, another remote
 // management command (rebootSoft, rebootHard, powerOn, powerOff and powerCycle) will not be allowed.
 // This is to avoid any type of server failures.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) RebootSoft(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) RebootSoft(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -684,7 +684,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) RebootSoft(commonOpt
 // that a reload is to be performed for the server. As a precaution, we strongly recommend backing up
 // all data before reloading the operating system. The reload will format the primary disk and will
 // reconfigure the server to the current specifications on record. The reload will take AT 66 minutes.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) ReloadCurrentOperatingSystemConfiguration(commonOptions *slapi.CommonOptions, token string) (string, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) ReloadCurrentOperatingSystemConfiguration(ctx *slapi.RequestContext, token string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -697,7 +697,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) ReloadCurrentOperati
 // to be performed for the server. As a precaution, we strongly recommend backing up all data before
 // reloading the operating system. The reload will format the primary disk and will reconfigure the
 // server to the current specifications on record. The reload will take AT 66 minutes.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) ReloadOperatingSystem(commonOptions *slapi.CommonOptions, token string, config SoftLayer_Container_Hardware_Server_Configuration) (string, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) ReloadOperatingSystem(ctx *slapi.RequestContext, token string, config SoftLayer_Container_Hardware_Server_Configuration) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -715,14 +715,14 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) ReloadOperatingSyste
 // our datacenter engineers will be notified of the problem automatically. They will then replace any
 // failed components to bring your server back online, and will be contacting you to ensure that impact
 // on your server is minimal.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) RunPassmarkCertificationBenchmark(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) RunPassmarkCertificationBenchmark(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SetOperatingSystemPassword - Changes the password that we have stored in our database for a servers'
 // Operating System
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) SetOperatingSystemPassword(commonOptions *slapi.CommonOptions, newPassword string) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) SetOperatingSystemPassword(ctx *slapi.RequestContext, newPassword string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -731,7 +731,7 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) SetOperatingSystemPa
 // values can only be 0 (Disconnect), 10, 100, 1000, and 10000. The new speed must be equal to or less
 // than the max speed of the interface. It will take less than a minute to update the switch port
 // speed. The server uplink will not be operational again until the server interface speed is updated.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) SetPrivateNetworkInterfaceSpeed(commonOptions *slapi.CommonOptions, newSpeed int) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) SetPrivateNetworkInterfaceSpeed(ctx *slapi.RequestContext, newSpeed int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -740,38 +740,38 @@ func (softlayer_hardware_server *SoftLayer_Hardware_Server) SetPrivateNetworkInt
 // values can only be 0 (Disconnect), 10, 100, 1000, and 10000. The new speed must be equal to or less
 // than the max speed of the interface. It will take less than a minute to update the switch port
 // speed. The server uplink will not be operational again until the server interface speed is updated.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) SetPublicNetworkInterfaceSpeed(commonOptions *slapi.CommonOptions, newSpeed int) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) SetPublicNetworkInterfaceSpeed(ctx *slapi.RequestContext, newSpeed int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SetUserMetadata - Sets the data that will be written to the configuration drive.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) SetUserMetadata(commonOptions *slapi.CommonOptions, metadata []string) ([]*SoftLayer_Hardware_Attribute, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) SetUserMetadata(ctx *slapi.RequestContext, metadata []string) ([]*SoftLayer_Hardware_Attribute, error) {
 	var returnValue []*SoftLayer_Hardware_Attribute
 	return returnValue, nil
 }
 
 // ShutdownPrivatePort - no documentation
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) ShutdownPrivatePort(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) ShutdownPrivatePort(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ShutdownPublicPort - no documentation
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) ShutdownPublicPort(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) ShutdownPublicPort(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SparePool - The ability to place bare metal servers in a state where they are powered down, and
 // ports closed yet still allocated to the customer as a part of the Spare Pool program.
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) SparePool(commonOptions *slapi.CommonOptions, action string, newOrder bool) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) SparePool(ctx *slapi.RequestContext, action string, newOrder bool) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ValidatePartitionsForOperatingSystem - Validates a collection of partitions for an operating system
-func (softlayer_hardware_server *SoftLayer_Hardware_Server) ValidatePartitionsForOperatingSystem(commonOptions *slapi.CommonOptions, operatingSystem SoftLayer_Software_Description, partitions []SoftLayer_Hardware_Component_Partition) (bool, error) {
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) ValidatePartitionsForOperatingSystem(ctx *slapi.RequestContext, operatingSystem SoftLayer_Software_Description, partitions []SoftLayer_Hardware_Component_Partition) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

@@ -284,7 +284,7 @@ type SoftLayer_Product_Package struct {
 }
 
 // GetActiveItems - Return a list of Items in the package with their active prices.
-func (softlayer_product_package *SoftLayer_Product_Package) GetActiveItems(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetActiveItems(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item, error) {
 	var returnValue []*SoftLayer_Product_Item
 	return returnValue, nil
 }
@@ -296,7 +296,7 @@ func (softlayer_product_package *SoftLayer_Product_Package) GetActiveItems(commo
 // may query one of various endpoints from that package to get specific information about its products
 // and pricing. See [[SoftLayer_Product_Package/getCategories|getCategories]] or
 // [[SoftLayer_Product_Package/getItems|getItems]] for more information.
-func (softlayer_product_package *SoftLayer_Product_Package) GetActivePackagesByAttribute(commonOptions *slapi.CommonOptions, attributeKeyName string) ([]*SoftLayer_Product_Package, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetActivePackagesByAttribute(ctx *slapi.RequestContext, attributeKeyName string) ([]*SoftLayer_Product_Package, error) {
 	var returnValue []*SoftLayer_Product_Package
 	return returnValue, nil
 }
@@ -304,7 +304,7 @@ func (softlayer_product_package *SoftLayer_Product_Package) GetActivePackagesByA
 // GetActivePrivateHostedCloudPackages - This method pulls all the active private hosted cloud
 // packages. This will give you a basic description of the packages that are currently active and from
 // which you can order private hosted cloud configurations.
-func (softlayer_product_package *SoftLayer_Product_Package) GetActivePrivateHostedCloudPackages(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Package, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetActivePrivateHostedCloudPackages(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package, error) {
 	var returnValue []*SoftLayer_Product_Package
 	return returnValue, nil
 }
@@ -315,32 +315,32 @@ func (softlayer_product_package *SoftLayer_Product_Package) GetActivePrivateHost
 // [[SoftLayer_Product_Item_Category]] by specifying a category code as the first parameter. This
 // information is useful so that you can see "pay as you go" rates (if any) for the current package,
 // location and optionally category.
-func (softlayer_product_package *SoftLayer_Product_Package) GetActiveUsageRatePrices(commonOptions *slapi.CommonOptions, locationId int, categoryCode string) ([]*SoftLayer_Product_Item_Price, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetActiveUsageRatePrices(ctx *slapi.RequestContext, locationId int, categoryCode string) ([]*SoftLayer_Product_Item_Price, error) {
 	var returnValue []*SoftLayer_Product_Item_Price
 	return returnValue, nil
 }
 
 // GetAllObjects - This method pulls all the active packages. This will give you a basic description of
 // the packages that are currently active
-func (softlayer_product_package *SoftLayer_Product_Package) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Package, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package, error) {
 	var returnValue []*SoftLayer_Product_Package
 	return returnValue, nil
 }
 
 // GetAvailablePackagesForImageTemplate - <nil>
-func (softlayer_product_package *SoftLayer_Product_Package) GetAvailablePackagesForImageTemplate(commonOptions *slapi.CommonOptions, imageTemplate SoftLayer_Virtual_Guest_Block_Device_Template_Group) ([]*SoftLayer_Product_Package, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetAvailablePackagesForImageTemplate(ctx *slapi.RequestContext, imageTemplate SoftLayer_Virtual_Guest_Block_Device_Template_Group) ([]*SoftLayer_Product_Package, error) {
 	var returnValue []*SoftLayer_Product_Package
 	return returnValue, nil
 }
 
 // GetCdnItems - <nil>
-func (softlayer_product_package *SoftLayer_Product_Package) GetCdnItems(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetCdnItems(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item, error) {
 	var returnValue []*SoftLayer_Product_Item
 	return returnValue, nil
 }
 
 // GetCloudStorageItems - <nil>
-func (softlayer_product_package *SoftLayer_Product_Package) GetCloudStorageItems(commonOptions *slapi.CommonOptions, provider int) ([]*SoftLayer_Product_Item, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetCloudStorageItems(ctx *slapi.RequestContext, provider int) ([]*SoftLayer_Product_Item, error) {
 	var returnValue []*SoftLayer_Product_Item
 	return returnValue, nil
 }
@@ -352,33 +352,33 @@ func (softlayer_product_package *SoftLayer_Product_Package) GetCloudStorageItems
 // orders. There is a catch all attribute type, If an item has one of these availability attributes
 // set, the value should be a valid date in indicating the date after which the item will no longer be
 // available.
-func (softlayer_product_package *SoftLayer_Product_Package) GetItemAvailabilityTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item_Attribute_Type, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetItemAvailabilityTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item_Attribute_Type, error) {
 	var returnValue []*SoftLayer_Product_Item_Attribute_Type
 	return returnValue, nil
 }
 
 // GetItemPricesFromSoftwareDescriptions - Return a collection of SoftLayer_Item_Price objects from a
 // collection of SoftLayer_Software_Description
-func (softlayer_product_package *SoftLayer_Product_Package) GetItemPricesFromSoftwareDescriptions(commonOptions *slapi.CommonOptions, softwareDescriptions []SoftLayer_Software_Description, includeTranslationsFlag bool, returnAllPricesFlag bool) ([]*SoftLayer_Product_Item_Price, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetItemPricesFromSoftwareDescriptions(ctx *slapi.RequestContext, softwareDescriptions []SoftLayer_Software_Description, includeTranslationsFlag bool, returnAllPricesFlag bool) ([]*SoftLayer_Product_Item_Price, error) {
 	var returnValue []*SoftLayer_Product_Item_Price
 	return returnValue, nil
 }
 
 // GetItemsFromImageTemplate - Return a collection of [[SoftLayer_Product_Item]] objects from a
 // [[SoftLayer_Virtual_Guest_Block_Device_Template_Group]] object
-func (softlayer_product_package *SoftLayer_Product_Package) GetItemsFromImageTemplate(commonOptions *slapi.CommonOptions, imageTemplate SoftLayer_Virtual_Guest_Block_Device_Template_Group) ([]*SoftLayer_Product_Item, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetItemsFromImageTemplate(ctx *slapi.RequestContext, imageTemplate SoftLayer_Virtual_Guest_Block_Device_Template_Group) ([]*SoftLayer_Product_Item, error) {
 	var returnValue []*SoftLayer_Product_Item
 	return returnValue, nil
 }
 
 // GetMessageQueueItems - <nil>
-func (softlayer_product_package *SoftLayer_Product_Package) GetMessageQueueItems(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetMessageQueueItems(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item, error) {
 	var returnValue []*SoftLayer_Product_Item
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_product_package *SoftLayer_Product_Package) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Product_Package, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Package, error) {
 	var returnValue *SoftLayer_Product_Package
 	return returnValue, nil
 }
@@ -389,7 +389,7 @@ func (softlayer_product_package *SoftLayer_Product_Package) GetObject(commonOpti
 // available. This method is really only applicable to the object storage additional service package
 // which has a [[SoftLayer_Product_Package_Type]] of This information is useful so that you can see the
 // "pay as you go" rates per datacenter.
-func (softlayer_product_package *SoftLayer_Product_Package) GetObjectStorageDatacenters(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Product_Order_Network_Storage_Hub_Datacenter, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetObjectStorageDatacenters(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Product_Order_Network_Storage_Hub_Datacenter, error) {
 	var returnValue []*SoftLayer_Container_Product_Order_Network_Storage_Hub_Datacenter
 	return returnValue, nil
 }
@@ -397,7 +397,7 @@ func (softlayer_product_package *SoftLayer_Product_Package) GetObjectStorageData
 // GetStandardCategories - This call is similar to
 // [[SoftLayer_Product_Package/getCategories|getCategories]], except that it does not include
 // account-restricted pricing. Not all accounts have restricted pricing.
-func (softlayer_product_package *SoftLayer_Product_Package) GetStandardCategories(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item_Category, error) {
+func (softlayer_product_package *SoftLayer_Product_Package) GetStandardCategories(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item_Category, error) {
 	var returnValue []*SoftLayer_Product_Item_Category
 	return returnValue, nil
 }

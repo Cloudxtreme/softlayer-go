@@ -21,13 +21,13 @@ type SoftLayer_Billing_Invoice_Tax_Type struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_billing_invoice_tax_type *SoftLayer_Billing_Invoice_Tax_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Billing_Invoice_Tax_Type, error) {
+func (softlayer_billing_invoice_tax_type *SoftLayer_Billing_Invoice_Tax_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Invoice_Tax_Type, error) {
 	var returnValue []*SoftLayer_Billing_Invoice_Tax_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_billing_invoice_tax_type *SoftLayer_Billing_Invoice_Tax_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Billing_Invoice_Tax_Type, error) {
+func (softlayer_billing_invoice_tax_type *SoftLayer_Billing_Invoice_Tax_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Invoice_Tax_Type, error) {
 	var returnValue *SoftLayer_Billing_Invoice_Tax_Type
 	return returnValue, nil
 }

@@ -35,13 +35,13 @@ type SoftLayer_Location_Group struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_location_group *SoftLayer_Location_Group) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location_Group, error) {
+func (softlayer_location_group *SoftLayer_Location_Group) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Location_Group, error) {
 	var returnValue []*SoftLayer_Location_Group
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_location_group *SoftLayer_Location_Group) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Location_Group, error) {
+func (softlayer_location_group *SoftLayer_Location_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Location_Group, error) {
 	var returnValue *SoftLayer_Location_Group
 	return returnValue, nil
 }

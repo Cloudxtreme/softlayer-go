@@ -38,13 +38,13 @@ type SoftLayer_Auxiliary_Marketing_Event struct {
 
 // GetMarketingEvents - This method will return a collection of SoftLayer_Auxiliary_Marketing_Event
 // objects ordered in ascending order by start date.
-func (softlayer_auxiliary_marketing_event *SoftLayer_Auxiliary_Marketing_Event) GetMarketingEvents(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Auxiliary_Marketing_Event, error) {
+func (softlayer_auxiliary_marketing_event *SoftLayer_Auxiliary_Marketing_Event) GetMarketingEvents(ctx *slapi.RequestContext) ([]*SoftLayer_Auxiliary_Marketing_Event, error) {
 	var returnValue []*SoftLayer_Auxiliary_Marketing_Event
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_auxiliary_marketing_event *SoftLayer_Auxiliary_Marketing_Event) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Auxiliary_Marketing_Event, error) {
+func (softlayer_auxiliary_marketing_event *SoftLayer_Auxiliary_Marketing_Event) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Auxiliary_Marketing_Event, error) {
 	var returnValue *SoftLayer_Auxiliary_Marketing_Event
 	return returnValue, nil
 }

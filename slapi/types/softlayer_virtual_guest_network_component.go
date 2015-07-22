@@ -105,26 +105,26 @@ type SoftLayer_Virtual_Guest_Network_Component struct {
 }
 
 // Disable - Completely restrict all incoming and outgoing bandwidth traffic to a network component
-func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) Disable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) Disable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // Enable - Allow incoming and outgoing bandwidth traffic to a network component
-func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) Enable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) Enable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Virtual_Guest_Network_Component, error) {
+func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Guest_Network_Component, error) {
 	var returnValue *SoftLayer_Virtual_Guest_Network_Component
 	return returnValue, nil
 }
 
 // IsPingable - Issues a ping command and returns the success (true) or failure (false) of the ping
 // command.
-func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) IsPingable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) IsPingable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

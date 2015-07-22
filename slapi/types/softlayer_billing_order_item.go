@@ -207,7 +207,7 @@ type SoftLayer_Billing_Order_Item struct {
 // account's items of billable items. There are "parent" billing items and "child" billing items. The
 // server billing item is generally referred to as a parent billing item. The items tied to a server,
 // such as ram, harddrives, and operating systems are considered "child" billing items.
-func (softlayer_billing_order_item *SoftLayer_Billing_Order_Item) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Billing_Order_Item, error) {
+func (softlayer_billing_order_item *SoftLayer_Billing_Order_Item) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Order_Item, error) {
 	var returnValue *SoftLayer_Billing_Order_Item
 	return returnValue, nil
 }

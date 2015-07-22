@@ -64,27 +64,27 @@ type SoftLayer_Account_Regional_Registry_Detail struct {
 // registrations, where a subnet is registered to an organization. The associated handle will be
 // required to be a valid organization object id at the relevant registry. In this case, the detail
 // object will only be valid for the registry the organization belongs to.
-func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Regional_Registry_Detail) (*SoftLayer_Account_Regional_Registry_Detail, error) {
+func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Regional_Registry_Detail) (*SoftLayer_Account_Regional_Registry_Detail, error) {
 	var returnValue *SoftLayer_Account_Regional_Registry_Detail
 	return returnValue, nil
 }
 
 // DeleteObject - This method will delete an existing SoftLayer_Account_Regional_Registry_Detail
 // object.
-func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - This method will edit an existing SoftLayer_Account_Regional_Registry_Detail object.
 // For more detail, see [[SoftLayer_Account_Regional_Registry_Detail::createObject|createObject]].
-func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Regional_Registry_Detail) (bool, error) {
+func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Regional_Registry_Detail) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Regional_Registry_Detail, error) {
+func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Regional_Registry_Detail, error) {
 	var returnValue *SoftLayer_Account_Regional_Registry_Detail
 	return returnValue, nil
 }
@@ -94,7 +94,7 @@ func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Reg
 // [[SoftLayer_Account_Regional_Registry_Detail_Person]] or
 // [[SoftLayer_Account_Regional_Registry_Detail_Network]]. The registrations should be in the Open or
 // Registration_Complete status.
-func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) UpdateReferencedRegistrations(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Network_Subnet_Registration_TransactionDetails, error) {
+func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) UpdateReferencedRegistrations(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Subnet_Registration_TransactionDetails, error) {
 	var returnValue *SoftLayer_Container_Network_Subnet_Registration_TransactionDetails
 	return returnValue, nil
 }

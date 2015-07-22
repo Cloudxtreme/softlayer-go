@@ -35,7 +35,7 @@ type SoftLayer_Product_Item_Price_Premium struct {
 }
 
 // GetObject - <nil>
-func (softlayer_product_item_price_premium *SoftLayer_Product_Item_Price_Premium) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Product_Item_Price_Premium, error) {
+func (softlayer_product_item_price_premium *SoftLayer_Product_Item_Price_Premium) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Item_Price_Premium, error) {
 	var returnValue *SoftLayer_Product_Item_Price_Premium
 	return returnValue, nil
 }

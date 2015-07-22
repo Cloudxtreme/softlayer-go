@@ -93,51 +93,51 @@ type SoftLayer_Location struct {
 
 // GetAvailableObjectStorageDatacenters - Object Storage is only available in select datacenters. This
 // method will return all the datacenters where object storage is available.
-func (softlayer_location *SoftLayer_Location) GetAvailableObjectStorageDatacenters(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location, error) {
+func (softlayer_location *SoftLayer_Location) GetAvailableObjectStorageDatacenters(ctx *slapi.RequestContext) ([]*SoftLayer_Location, error) {
 	var returnValue []*SoftLayer_Location
 	return returnValue, nil
 }
 
 // GetDatacenters - Retrieve all datacenter locations. SoftLayer's datacenters exist in various cities
 // and each contain one or more server rooms which house network and server infrastructure.
-func (softlayer_location *SoftLayer_Location) GetDatacenters(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location, error) {
+func (softlayer_location *SoftLayer_Location) GetDatacenters(ctx *slapi.RequestContext) ([]*SoftLayer_Location, error) {
 	var returnValue []*SoftLayer_Location
 	return returnValue, nil
 }
 
 // GetDatacentersWithVirtualImageStoreServiceResourceRecord - <nil>
-func (softlayer_location *SoftLayer_Location) GetDatacentersWithVirtualImageStoreServiceResourceRecord(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location, error) {
+func (softlayer_location *SoftLayer_Location) GetDatacentersWithVirtualImageStoreServiceResourceRecord(ctx *slapi.RequestContext) ([]*SoftLayer_Location, error) {
 	var returnValue []*SoftLayer_Location
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_location *SoftLayer_Location) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Location, error) {
+func (softlayer_location *SoftLayer_Location) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Location, error) {
 	var returnValue *SoftLayer_Location
 	return returnValue, nil
 }
 
 // GetViewableDatacenters - Retrieve all datacenter locations. SoftLayer's datacenters exist in various
 // cities and each contain one or more server rooms which house network and server infrastructure.
-func (softlayer_location *SoftLayer_Location) GetViewableDatacenters(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location, error) {
+func (softlayer_location *SoftLayer_Location) GetViewableDatacenters(ctx *slapi.RequestContext) ([]*SoftLayer_Location, error) {
 	var returnValue []*SoftLayer_Location
 	return returnValue, nil
 }
 
 // GetViewablePopsAndDataCenters - Retrieve all viewable pop and datacenter locations.
-func (softlayer_location *SoftLayer_Location) GetViewablePopsAndDataCenters(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location, error) {
+func (softlayer_location *SoftLayer_Location) GetViewablePopsAndDataCenters(ctx *slapi.RequestContext) ([]*SoftLayer_Location, error) {
 	var returnValue []*SoftLayer_Location
 	return returnValue, nil
 }
 
 // GetViewablepointOfPresence - no documentation
-func (softlayer_location *SoftLayer_Location) GetViewablepointOfPresence(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location, error) {
+func (softlayer_location *SoftLayer_Location) GetViewablepointOfPresence(ctx *slapi.RequestContext) ([]*SoftLayer_Location, error) {
 	var returnValue []*SoftLayer_Location
 	return returnValue, nil
 }
 
 // GetpointOfPresence - no documentation
-func (softlayer_location *SoftLayer_Location) GetpointOfPresence(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location, error) {
+func (softlayer_location *SoftLayer_Location) GetpointOfPresence(ctx *slapi.RequestContext) ([]*SoftLayer_Location, error) {
 	var returnValue []*SoftLayer_Location
 	return returnValue, nil
 }

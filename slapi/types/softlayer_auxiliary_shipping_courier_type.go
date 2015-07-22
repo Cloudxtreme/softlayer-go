@@ -29,13 +29,13 @@ type SoftLayer_Auxiliary_Shipping_Courier_Type struct {
 }
 
 // GetObject - <nil>
-func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Auxiliary_Shipping_Courier_Type, error) {
+func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Auxiliary_Shipping_Courier_Type, error) {
 	var returnValue *SoftLayer_Auxiliary_Shipping_Courier_Type
 	return returnValue, nil
 }
 
 // GetTypeByKeyName - <nil>
-func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type) GetTypeByKeyName(commonOptions *slapi.CommonOptions, keyName string) (*SoftLayer_Auxiliary_Shipping_Courier_Type, error) {
+func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type) GetTypeByKeyName(ctx *slapi.RequestContext, keyName string) (*SoftLayer_Auxiliary_Shipping_Courier_Type, error) {
 	var returnValue *SoftLayer_Auxiliary_Shipping_Courier_Type
 	return returnValue, nil
 }

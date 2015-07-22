@@ -20,13 +20,13 @@ type SoftLayer_Scale_Policy_Action_Type struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_scale_policy_action_type *SoftLayer_Scale_Policy_Action_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Scale_Policy_Action_Type, error) {
+func (softlayer_scale_policy_action_type *SoftLayer_Scale_Policy_Action_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Scale_Policy_Action_Type, error) {
 	var returnValue []*SoftLayer_Scale_Policy_Action_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_policy_action_type *SoftLayer_Scale_Policy_Action_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Policy_Action_Type, error) {
+func (softlayer_scale_policy_action_type *SoftLayer_Scale_Policy_Action_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Policy_Action_Type, error) {
 	var returnValue *SoftLayer_Scale_Policy_Action_Type
 	return returnValue, nil
 }

@@ -37,31 +37,31 @@ type SoftLayer_Account_Note_Type struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_account_note_type *SoftLayer_Account_Note_Type) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Note_Type) (*SoftLayer_Account_Note_Type, error) {
+func (softlayer_account_note_type *SoftLayer_Account_Note_Type) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Note_Type) (*SoftLayer_Account_Note_Type, error) {
 	var returnValue *SoftLayer_Account_Note_Type
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_account_note_type *SoftLayer_Account_Note_Type) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_account_note_type *SoftLayer_Account_Note_Type) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_account_note_type *SoftLayer_Account_Note_Type) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Note_Type) (bool, error) {
+func (softlayer_account_note_type *SoftLayer_Account_Note_Type) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Note_Type) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllObjects - <nil>
-func (softlayer_account_note_type *SoftLayer_Account_Note_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Account_Note_Type, error) {
+func (softlayer_account_note_type *SoftLayer_Account_Note_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Note_Type, error) {
 	var returnValue []*SoftLayer_Account_Note_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_note_type *SoftLayer_Account_Note_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Note_Type, error) {
+func (softlayer_account_note_type *SoftLayer_Account_Note_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Note_Type, error) {
 	var returnValue *SoftLayer_Account_Note_Type
 	return returnValue, nil
 }

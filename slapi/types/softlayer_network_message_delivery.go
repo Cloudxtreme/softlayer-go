@@ -49,13 +49,13 @@ type SoftLayer_Network_Message_Delivery struct {
 }
 
 // EditObject - <nil>
-func (softlayer_network_message_delivery *SoftLayer_Network_Message_Delivery) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Message_Delivery) (bool, error) {
+func (softlayer_network_message_delivery *SoftLayer_Network_Message_Delivery) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Message_Delivery) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_message_delivery *SoftLayer_Network_Message_Delivery) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Message_Delivery, error) {
+func (softlayer_network_message_delivery *SoftLayer_Network_Message_Delivery) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Message_Delivery, error) {
 	var returnValue *SoftLayer_Network_Message_Delivery
 	return returnValue, nil
 }

@@ -72,25 +72,25 @@ type SoftLayer_User_Customer_MobileDevice struct {
 }
 
 // CreateObject - Create a new mobile device association for a user.
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_User_Customer_MobileDevice) (*SoftLayer_User_Customer_MobileDevice, error) {
+func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Customer_MobileDevice) (*SoftLayer_User_Customer_MobileDevice, error) {
 	var returnValue *SoftLayer_User_Customer_MobileDevice
 	return returnValue, nil
 }
 
 // DeleteObject - no documentation
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - Edit the object by passing in a modified instance of the object
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_User_Customer_MobileDevice) (bool, error) {
+func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Customer_MobileDevice) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_MobileDevice, error) {
+func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_MobileDevice, error) {
 	var returnValue *SoftLayer_User_Customer_MobileDevice
 	return returnValue, nil
 }

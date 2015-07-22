@@ -67,37 +67,37 @@ type SoftLayer_Account_Reports_Request struct {
 }
 
 // CreateRequest - <nil>
-func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) CreateRequest(commonOptions *slapi.CommonOptions, contact SoftLayer_Account_Contact, reason string, reportType string) (*SoftLayer_Account_Reports_Request, error) {
+func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) CreateRequest(ctx *slapi.RequestContext, contact SoftLayer_Account_Contact, reason string, reportType string) (*SoftLayer_Account_Reports_Request, error) {
 	var returnValue *SoftLayer_Account_Reports_Request
 	return returnValue, nil
 }
 
 // GetAllObjects - <nil>
-func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) GetAllObjects(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Reports_Request, error) {
+func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) GetAllObjects(ctx *slapi.RequestContext) (*SoftLayer_Account_Reports_Request, error) {
 	var returnValue *SoftLayer_Account_Reports_Request
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Reports_Request, error) {
+func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Reports_Request, error) {
 	var returnValue *SoftLayer_Account_Reports_Request
 	return returnValue, nil
 }
 
 // GetRequestByRequestKey - <nil>
-func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) GetRequestByRequestKey(commonOptions *slapi.CommonOptions, requestKey string) (*SoftLayer_Account_Reports_Request, error) {
+func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) GetRequestByRequestKey(ctx *slapi.RequestContext, requestKey string) (*SoftLayer_Account_Reports_Request, error) {
 	var returnValue *SoftLayer_Account_Reports_Request
 	return returnValue, nil
 }
 
 // SendReportEmail - <nil>
-func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) SendReportEmail(commonOptions *slapi.CommonOptions, request SoftLayer_Account_Reports_Request) (bool, error) {
+func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) SendReportEmail(ctx *slapi.RequestContext, request SoftLayer_Account_Reports_Request) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // UpdateTicketOnDecline - <nil>
-func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) UpdateTicketOnDecline(commonOptions *slapi.CommonOptions, request SoftLayer_Account_Reports_Request) (bool, error) {
+func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) UpdateTicketOnDecline(ctx *slapi.RequestContext, request SoftLayer_Account_Reports_Request) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

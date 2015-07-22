@@ -51,26 +51,26 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServe
 }
 
 // DeleteObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer, error) {
+func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer, error) {
 	var returnValue *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer
 	return returnValue, nil
 }
 
 // StartSsl - Start SSL acceleration on all SSL virtual services (those with a type of This action
 // should be taken only after configuring an SSL certificate for the virtual IP.
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) StartSsl(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) StartSsl(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // StopSsl - Stop SSL acceleration on all SSL virtual services (those with a type of
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) StopSsl(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) StopSsl(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

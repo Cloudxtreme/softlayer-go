@@ -76,19 +76,19 @@ type SoftLayer_Account_Media_Data_Transfer_Request struct {
 
 // EditObject - Edit the properties of a data transfer request record by passing in a modified instance
 // of a SoftLayer_Account_Media_Data_Transfer_Request object.
-func (softlayer_account_media_data_transfer_request *SoftLayer_Account_Media_Data_Transfer_Request) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Media_Data_Transfer_Request) (bool, error) {
+func (softlayer_account_media_data_transfer_request *SoftLayer_Account_Media_Data_Transfer_Request) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Media_Data_Transfer_Request) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllRequestStatuses - Retrieves a list of all the possible statuses to which a request may be set.
-func (softlayer_account_media_data_transfer_request *SoftLayer_Account_Media_Data_Transfer_Request) GetAllRequestStatuses(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Account_Media_Data_Transfer_Request_Status, error) {
+func (softlayer_account_media_data_transfer_request *SoftLayer_Account_Media_Data_Transfer_Request) GetAllRequestStatuses(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Media_Data_Transfer_Request_Status, error) {
 	var returnValue []*SoftLayer_Account_Media_Data_Transfer_Request_Status
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_media_data_transfer_request *SoftLayer_Account_Media_Data_Transfer_Request) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Media_Data_Transfer_Request, error) {
+func (softlayer_account_media_data_transfer_request *SoftLayer_Account_Media_Data_Transfer_Request) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Media_Data_Transfer_Request, error) {
 	var returnValue *SoftLayer_Account_Media_Data_Transfer_Request
 	return returnValue, nil
 }

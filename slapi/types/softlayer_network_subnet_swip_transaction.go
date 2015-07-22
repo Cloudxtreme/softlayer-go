@@ -38,7 +38,7 @@ type SoftLayer_Network_Subnet_Swip_Transaction struct {
 // FindMyTransactions - This function will return an array of SoftLayer_Network_Subnet_Swip_Transaction
 // objects, one for each that is currently in transaction with This includes all swip registrations,
 // swip removal requests, and objects that are currently OK.
-func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) FindMyTransactions(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Subnet_Swip_Transaction, error) {
+func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) FindMyTransactions(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Subnet_Swip_Transaction, error) {
 	var returnValue []*SoftLayer_Network_Subnet_Swip_Transaction
 	return returnValue, nil
 }
@@ -47,35 +47,35 @@ func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_T
 // corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Network_Subnet_Swip_transaction service. You can only retrieve Swip transactions tied to
 // the account.
-func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Subnet_Swip_Transaction, error) {
+func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Subnet_Swip_Transaction, error) {
 	var returnValue *SoftLayer_Network_Subnet_Swip_Transaction
 	return returnValue, nil
 }
 
 // RemoveAllSubnetSwips - This method finds all subnets attached to your account that are in OK status
 // and starts transactions with allowing you to remove your registration information.
-func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) RemoveAllSubnetSwips(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) RemoveAllSubnetSwips(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
 
 // RemoveSwipData - This function, when called on an instantiated transaction, will allow you to start
 // a transaction with allowing you to remove your registration information.
-func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) RemoveSwipData(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) RemoveSwipData(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ResendSwipData - This function will allow you to update ARIN's registration data for a subnet to
 // your current data.
-func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) ResendSwipData(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) ResendSwipData(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SwipAllSubnets - swipAllSubnets finds all subnets attached to your account and attempts to create a
 // transaction for all subnets that do not already have a transaction in progress.
-func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) SwipAllSubnets(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) SwipAllSubnets(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
@@ -83,7 +83,7 @@ func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_T
 // UpdateAllSubnetSwips - This method finds all subnets attached to your account that are in status and
 // updates their data with Use this function after you have updated your data if you want to keep up to
 // date.
-func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) UpdateAllSubnetSwips(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) UpdateAllSubnetSwips(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }

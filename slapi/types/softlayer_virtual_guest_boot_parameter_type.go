@@ -36,13 +36,13 @@ type SoftLayer_Virtual_Guest_Boot_Parameter_Type struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_virtual_guest_boot_parameter_type *SoftLayer_Virtual_Guest_Boot_Parameter_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Virtual_Guest_Boot_Parameter_Type, error) {
+func (softlayer_virtual_guest_boot_parameter_type *SoftLayer_Virtual_Guest_Boot_Parameter_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Virtual_Guest_Boot_Parameter_Type, error) {
 	var returnValue []*SoftLayer_Virtual_Guest_Boot_Parameter_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_virtual_guest_boot_parameter_type *SoftLayer_Virtual_Guest_Boot_Parameter_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Virtual_Guest_Boot_Parameter_Type, error) {
+func (softlayer_virtual_guest_boot_parameter_type *SoftLayer_Virtual_Guest_Boot_Parameter_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Guest_Boot_Parameter_Type, error) {
 	var returnValue *SoftLayer_Virtual_Guest_Boot_Parameter_Type
 	return returnValue, nil
 }

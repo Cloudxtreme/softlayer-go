@@ -20,13 +20,13 @@ type SoftLayer_Scale_Group_Status struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_scale_group_status *SoftLayer_Scale_Group_Status) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Scale_Group_Status, error) {
+func (softlayer_scale_group_status *SoftLayer_Scale_Group_Status) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Scale_Group_Status, error) {
 	var returnValue []*SoftLayer_Scale_Group_Status
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_group_status *SoftLayer_Scale_Group_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Group_Status, error) {
+func (softlayer_scale_group_status *SoftLayer_Scale_Group_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Group_Status, error) {
 	var returnValue *SoftLayer_Scale_Group_Status
 	return returnValue, nil
 }

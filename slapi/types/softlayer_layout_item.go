@@ -32,7 +32,7 @@ type SoftLayer_Layout_Item struct {
 }
 
 // GetObject - <nil>
-func (softlayer_layout_item *SoftLayer_Layout_Item) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Layout_Item, error) {
+func (softlayer_layout_item *SoftLayer_Layout_Item) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Layout_Item, error) {
 	var returnValue *SoftLayer_Layout_Item
 	return returnValue, nil
 }

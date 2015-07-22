@@ -96,34 +96,34 @@ type SoftLayer_Notification_Occurrence_Event struct {
 }
 
 // AcknowledgeNotification - no documentation
-func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) AcknowledgeNotification(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) AcknowledgeNotification(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllObjects - <nil>
-func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Notification_Occurrence_Event, error) {
+func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Notification_Occurrence_Event, error) {
 	var returnValue []*SoftLayer_Notification_Occurrence_Event
 	return returnValue, nil
 }
 
 // GetAttachedFile - Retrieve the contents of the file attached to a SoftLayer event by it's given
 // identifier.
-func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetAttachedFile(commonOptions *slapi.CommonOptions, attachmentId int) (string, error) {
+func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetAttachedFile(ctx *slapi.RequestContext, attachmentId int) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetImpactedAccountCount - This method will return the number of impacted owned accounts associated
 // with this event for the current user.
-func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetImpactedAccountCount(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetImpactedAccountCount(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
 
 // GetImpactedDeviceCount - This method will return the number of impacted devices associated with this
 // event for the current user.
-func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetImpactedDeviceCount(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetImpactedDeviceCount(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
@@ -131,13 +131,13 @@ func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence
 // GetImpactedDevices - This method will return a collection of
 // SoftLayer_Notification_Occurrence_Resource objects which is a listing of the current users' impacted
 // devices that are associated with this event.
-func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetImpactedDevices(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Notification_Occurrence_Resource, error) {
+func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetImpactedDevices(ctx *slapi.RequestContext) ([]*SoftLayer_Notification_Occurrence_Resource, error) {
 	var returnValue []*SoftLayer_Notification_Occurrence_Resource
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Notification_Occurrence_Event, error) {
+func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_Occurrence_Event, error) {
 	var returnValue *SoftLayer_Notification_Occurrence_Event
 	return returnValue, nil
 }

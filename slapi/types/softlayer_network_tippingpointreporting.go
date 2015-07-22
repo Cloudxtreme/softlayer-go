@@ -16,7 +16,7 @@ type SoftLayer_Network_TippingPointReporting struct {
 // results have been filtered, additional data is available, including starting and ending times for
 // the attack, originating IP address and port, and destination IP address and port. CVE and Bugtraq
 // information is not available at this level.
-func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointReporting) DrillDownAttack(commonOptions *slapi.CommonOptions, signatureId string, IpAddress string, subnetMask int, timeFrame int, direction string) (*SoftLayer_Container_Network_IntrusionProtection_SubnetReport, error) {
+func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointReporting) DrillDownAttack(ctx *slapi.RequestContext, signatureId string, IpAddress string, subnetMask int, timeFrame int, direction string) (*SoftLayer_Container_Network_IntrusionProtection_SubnetReport, error) {
 	var returnValue *SoftLayer_Container_Network_IntrusionProtection_SubnetReport
 	return returnValue, nil
 }
@@ -30,7 +30,7 @@ func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointRep
 // limit is less than 10, but setting the limit to an abnormally high value will effectively return all
 // records. The data is returned as a collection of
 // SoftLayer_Container_Network_IntrusionProtection_Statistics objects.
-func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointReporting) GetMainStatistics(commonOptions *slapi.CommonOptions, numberOfAttacks int) ([]*SoftLayer_Container_Network_IntrusionProtection_Statistics, error) {
+func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointReporting) GetMainStatistics(ctx *slapi.RequestContext, numberOfAttacks int) ([]*SoftLayer_Container_Network_IntrusionProtection_Statistics, error) {
 	var returnValue []*SoftLayer_Container_Network_IntrusionProtection_Statistics
 	return returnValue, nil
 }
@@ -41,7 +41,7 @@ func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointRep
 // getSubnetReportForEntireAccount method, CVE and BugTraq IDs are provided, if available. This method
 // should be called once an attack has been identified using getSubnetReportForEntireAccount (in which
 // case "All Subnets" is the subnet) or getReportForIpAddressOrSubnet.
-func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointReporting) GetReportForIpAddressOrSubnet(commonOptions *slapi.CommonOptions, IpAddress string, subnetMask int, timeFrame int, orderBy string, orderDirection string) ([]*SoftLayer_Container_Network_IntrusionProtection_SubnetReport, error) {
+func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointReporting) GetReportForIpAddressOrSubnet(ctx *slapi.RequestContext, IpAddress string, subnetMask int, timeFrame int, orderBy string, orderDirection string) ([]*SoftLayer_Container_Network_IntrusionProtection_SubnetReport, error) {
 	var returnValue []*SoftLayer_Container_Network_IntrusionProtection_SubnetReport
 	return returnValue, nil
 }
@@ -55,7 +55,7 @@ func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointRep
 // BugTraq or CVE databases. BugTraq can be accessed at [http://www.securityfocus.com/vulnerabilities]
 // The CVE database is located at [http://cve.mitre.org/find/index.html] For more detailed information,
 // use the getReportForIpAddressOrSubnet method
-func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointReporting) GetSubnetReportForEntireAccount(commonOptions *slapi.CommonOptions, timeFrame int, orderBy string, orderDirection string, returnSubnetGroups bool) ([]*SoftLayer_Container_Network_IntrusionProtection_SubnetReport, error) {
+func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointReporting) GetSubnetReportForEntireAccount(ctx *slapi.RequestContext, timeFrame int, orderBy string, orderDirection string, returnSubnetGroups bool) ([]*SoftLayer_Container_Network_IntrusionProtection_SubnetReport, error) {
 	var returnValue []*SoftLayer_Container_Network_IntrusionProtection_SubnetReport
 	return returnValue, nil
 }

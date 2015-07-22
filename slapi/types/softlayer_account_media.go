@@ -52,26 +52,26 @@ type SoftLayer_Account_Media struct {
 
 // EditObject - Edit the properties of a media record by passing in a modified instance of a
 // SoftLayer_Account_Media object.
-func (softlayer_account_media *SoftLayer_Account_Media) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Account_Media) (bool, error) {
+func (softlayer_account_media *SoftLayer_Account_Media) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Media) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllMediaTypes - Retrieve a list supported media types for SoftLayer's Data Transfer Service.
-func (softlayer_account_media *SoftLayer_Account_Media) GetAllMediaTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Account_Media_Type, error) {
+func (softlayer_account_media *SoftLayer_Account_Media) GetAllMediaTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Media_Type, error) {
 	var returnValue []*SoftLayer_Account_Media_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_media *SoftLayer_Account_Media) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Media, error) {
+func (softlayer_account_media *SoftLayer_Account_Media) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Media, error) {
 	var returnValue *SoftLayer_Account_Media
 	return returnValue, nil
 }
 
 // RemoveMediaFromList - Remove a media from a SoftLayer account's list of media. The media record is
 // not deleted.
-func (softlayer_account_media *SoftLayer_Account_Media) RemoveMediaFromList(commonOptions *slapi.CommonOptions, mediaTemplate SoftLayer_Account_Media) (int, error) {
+func (softlayer_account_media *SoftLayer_Account_Media) RemoveMediaFromList(ctx *slapi.RequestContext, mediaTemplate SoftLayer_Account_Media) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }

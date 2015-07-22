@@ -30,13 +30,13 @@ type SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_dns_domain_registration_registrant_verification_status *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status, error) {
+func (softlayer_dns_domain_registration_registrant_verification_status *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status, error) {
 	var returnValue []*SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_dns_domain_registration_registrant_verification_status *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status, error) {
+func (softlayer_dns_domain_registration_registrant_verification_status *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status, error) {
 	var returnValue *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status
 	return returnValue, nil
 }

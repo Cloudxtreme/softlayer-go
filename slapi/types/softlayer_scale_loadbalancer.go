@@ -62,25 +62,25 @@ type SoftLayer_Scale_LoadBalancer struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Scale_LoadBalancer) (*SoftLayer_Scale_LoadBalancer, error) {
+func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_LoadBalancer) (*SoftLayer_Scale_LoadBalancer, error) {
 	var returnValue *SoftLayer_Scale_LoadBalancer
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Scale_LoadBalancer) (bool, error) {
+func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_LoadBalancer) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_LoadBalancer, error) {
+func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_LoadBalancer, error) {
 	var returnValue *SoftLayer_Scale_LoadBalancer
 	return returnValue, nil
 }

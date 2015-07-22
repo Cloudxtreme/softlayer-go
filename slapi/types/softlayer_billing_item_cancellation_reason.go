@@ -38,13 +38,13 @@ type SoftLayer_Billing_Item_Cancellation_Reason struct {
 
 // GetAllCancellationReasons - getAllCancellationReasons() retrieves a list of all cancellation reasons
 // that a server/service may be assigned to.
-func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) GetAllCancellationReasons(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Billing_Item_Cancellation_Reason, error) {
+func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) GetAllCancellationReasons(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Item_Cancellation_Reason, error) {
 	var returnValue []*SoftLayer_Billing_Item_Cancellation_Reason
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Billing_Item_Cancellation_Reason, error) {
+func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Item_Cancellation_Reason, error) {
 	var returnValue *SoftLayer_Billing_Item_Cancellation_Reason
 	return returnValue, nil
 }

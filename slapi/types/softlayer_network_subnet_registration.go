@@ -85,7 +85,7 @@ type SoftLayer_Network_Subnet_Registration struct {
 }
 
 // ClearRegistration - This method will initiate the removal of a subnet registration.
-func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) ClearRegistration(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) ClearRegistration(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -96,14 +96,14 @@ func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registrati
 // from the SoftLayer_Network_Subnet object's networkIdentifier property. The prefix of the
 // [[SoftLayer_Network_Subnet|subnet]] being registered. This can be derived directly from the
 // SoftLayer_Network_Subnet object's cidr property.
-func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Subnet_Registration) (*SoftLayer_Network_Subnet_Registration, error) {
+func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Subnet_Registration) (*SoftLayer_Network_Subnet_Registration, error) {
 	var returnValue *SoftLayer_Network_Subnet_Registration
 	return returnValue, nil
 }
 
 // EditObject - This method will edit an existing SoftLayer_Network_Subnet_Registration object. For
 // more detail, see [[SoftLayer_Network_Subnet_Registration::createObject|createObject]].
-func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Subnet_Registration) (bool, error) {
+func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Subnet_Registration) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -111,13 +111,13 @@ func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registrati
 // EditRegistrationAttachedDetails - This method modifies a single registration by modifying the
 // current [[SoftLayer_Network_Subnet_Registration_Details]] objects that are linked to that
 // registration.
-func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) EditRegistrationAttachedDetails(commonOptions *slapi.CommonOptions, personObjectSkeleton SoftLayer_Network_Subnet_Registration_Details, networkObjectSkeleton SoftLayer_Network_Subnet_Registration_Details) (bool, error) {
+func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) EditRegistrationAttachedDetails(ctx *slapi.RequestContext, personObjectSkeleton SoftLayer_Network_Subnet_Registration_Details, networkObjectSkeleton SoftLayer_Network_Subnet_Registration_Details) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Subnet_Registration, error) {
+func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Subnet_Registration, error) {
 	var returnValue *SoftLayer_Network_Subnet_Registration
 	return returnValue, nil
 }

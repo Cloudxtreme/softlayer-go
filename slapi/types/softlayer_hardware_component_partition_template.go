@@ -62,7 +62,7 @@ type SoftLayer_Hardware_Component_Partition_Template struct {
 // number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Hardware_Component_Partition_Template service. You can only retrieve the partition
 // templates that your account created or the templates predefined by SoftLayer.
-func (softlayer_hardware_component_partition_template *SoftLayer_Hardware_Component_Partition_Template) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Hardware_Component_Partition_Template, error) {
+func (softlayer_hardware_component_partition_template *SoftLayer_Hardware_Component_Partition_Template) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Hardware_Component_Partition_Template, error) {
 	var returnValue *SoftLayer_Hardware_Component_Partition_Template
 	return returnValue, nil
 }

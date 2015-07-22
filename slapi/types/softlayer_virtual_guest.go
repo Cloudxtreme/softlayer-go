@@ -501,27 +501,27 @@ type SoftLayer_Virtual_Guest struct {
 }
 
 // ActivatePrivatePort - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ActivatePrivatePort(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ActivatePrivatePort(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ActivatePublicPort - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ActivatePublicPort(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ActivatePublicPort(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AllowAccessToNetworkStorage - This method is used to allow access to a SoftLayer_Network_Storage
 // volume that supports host- or network-level access control.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) AllowAccessToNetworkStorage(commonOptions *slapi.CommonOptions, networkStorageTemplateObject SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) AllowAccessToNetworkStorage(ctx *slapi.RequestContext, networkStorageTemplateObject SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AllowAccessToNetworkStorageList - This method is used to allow access to multiple
 // SoftLayer_Network_Storage volumes that support host- or network-level access control.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) AllowAccessToNetworkStorageList(commonOptions *slapi.CommonOptions, networkStorageTemplateObjects []SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) AllowAccessToNetworkStorageList(ctx *slapi.RequestContext, networkStorageTemplateObjects []SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -530,20 +530,20 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) AllowAccessToNetworkStor
 // attached it will be ignored. SoftLayer_Virtual_Guest::checkHostDiskAvailability should be called
 // before this method. If the SoftLayer_Virtual_Guest::checkHostDiskAvailability method is not called
 // before this method, the guest migration will happen automatically.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) AttachDiskImage(commonOptions *slapi.CommonOptions, imageId int) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) AttachDiskImage(ctx *slapi.RequestContext, imageId int) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
 
 // CancelIsolationForDestructiveAction - Reopens the public and/or private ports to reverse the changes
 // made when the server was isolated for a destructive action.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CancelIsolationForDestructiveAction(commonOptions *slapi.CommonOptions) error {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CancelIsolationForDestructiveAction(ctx *slapi.RequestContext) error {
 	return nil
 }
 
 // CaptureImage - Captures a Flex Image of the hard disk on the virtual machine, based on the capture
 // template parameter. Returns the image template group containing the disk image.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CaptureImage(commonOptions *slapi.CommonOptions, captureTemplate SoftLayer_Container_Disk_Image_Capture_Template) (*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CaptureImage(ctx *slapi.RequestContext, captureTemplate SoftLayer_Container_Disk_Image_Capture_Template) (*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
 	var returnValue *SoftLayer_Virtual_Guest_Block_Device_Template_Group
 	return returnValue, nil
 }
@@ -552,13 +552,13 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CaptureImage(commonOptio
 // guest migration is necessary. This method is only used with local disks. If this method returns
 // false, calling attachDiskImage($imageId) will automatically migrate the destination guest to a new
 // host before attaching the portable volume.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CheckHostDiskAvailability(commonOptions *slapi.CommonOptions, diskCapacity int) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CheckHostDiskAvailability(ctx *slapi.RequestContext, diskCapacity int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CloseAlarm - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CloseAlarm(commonOptions *slapi.CommonOptions, alarmId string) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CloseAlarm(ctx *slapi.RequestContext, alarmId string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -569,13 +569,13 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CloseAlarm(commonOptions
 // guest has no user data associated with it, the transaction will remove the virtual drive if it
 // exists. The transaction created by this service will shut down the guest while the metadata disk is
 // configured. The guest will be turned back on once this process is complete.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ConfigureMetadataDisk(commonOptions *slapi.CommonOptions) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ConfigureMetadataDisk(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
 
 // CreateArchiveTransaction - Create a transaction to archive a computing instance's block devices
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CreateArchiveTransaction(commonOptions *slapi.CommonOptions, groupName string, blockDevices []SoftLayer_Virtual_Guest_Block_Device, note string) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CreateArchiveTransaction(ctx *slapi.RequestContext, groupName string, blockDevices []SoftLayer_Virtual_Guest_Block_Device, note string) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
@@ -670,7 +670,7 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CreateArchiveTransaction
 // null, "maxCpu": 1, "maxCpuUnits": "maxMemory": 1024, "metricPollDate": null, "modifyDate": null,
 // "privateNetworkOnlyFlag": false, "startCpus": 1, "statusId": 1001, "globalIdentifier":
 // "2d203774-0ee1-49f5-9599-6ef67358dd31" }
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Virtual_Guest) (*SoftLayer_Virtual_Guest, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Virtual_Guest) (*SoftLayer_Virtual_Guest, error) {
 	var returnValue *SoftLayer_Virtual_Guest
 	return returnValue, nil
 }
@@ -695,20 +695,20 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CreateObject(commonOptio
 // "lastVerifiedDate": null, "maxCpu": 1, "maxCpuUnits": "maxMemory": 1024, "metricPollDate": null,
 // "modifyDate": null, "privateNetworkOnlyFlag": false, "startCpus": 1, "statusId": 1001,
 // "globalIdentifier": "bed4c686-9562-4ade-9049-dc4d5b6b200c" } ]
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CreateObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Virtual_Guest) ([]*SoftLayer_Virtual_Guest, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Virtual_Guest) ([]*SoftLayer_Virtual_Guest, error) {
 	var returnValue []*SoftLayer_Virtual_Guest
 	return returnValue, nil
 }
 
 // CreatePostSoftwareInstallTransaction - <nil>
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CreatePostSoftwareInstallTransaction(commonOptions *slapi.CommonOptions, data string, returnBoolean bool) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) CreatePostSoftwareInstallTransaction(ctx *slapi.RequestContext, data string, returnBoolean bool) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DeleteObject - This method will cancel a computing instance effective immediately. For instances
 // billed hourly, the charges will stop immediately after the method returns.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -716,31 +716,31 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) DeleteObject(commonOptio
 // DetachDiskImage - Creates a transaction to detach a guest's disk image. If the disk image is already
 // detached it will be ignored. The transaction created by this service will shut down the guest while
 // the disk image is attached. The guest will be turned back on once this process is complete.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) DetachDiskImage(commonOptions *slapi.CommonOptions, imageId int) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) DetachDiskImage(ctx *slapi.RequestContext, imageId int) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
 
 // EditObject - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ExecuteIderaBareMetalRestore - Reboot a guest into the Idera Bare Metal Restore image.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ExecuteIderaBareMetalRestore(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ExecuteIderaBareMetalRestore(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ExecuteR1SoftBareMetalRestore - Reboot a guest into the R1Soft Bare Metal Restore image.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ExecuteR1SoftBareMetalRestore(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ExecuteR1SoftBareMetalRestore(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ExecuteRescueLayer - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ExecuteRescueLayer(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ExecuteRescueLayer(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -748,7 +748,7 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ExecuteRescueLayer(commo
 // FindByIpAddress - Find CCI by only its primary public or private IP address. IP addresses within
 // secondary subnets tied to the CCI will not return the If no CCI is found, no errors are generated
 // and no data is returned.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) FindByIpAddress(commonOptions *slapi.CommonOptions, ipAddress string) (*SoftLayer_Virtual_Guest, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) FindByIpAddress(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Virtual_Guest, error) {
 	var returnValue *SoftLayer_Virtual_Guest
 	return returnValue, nil
 }
@@ -759,47 +759,47 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) FindByIpAddress(commonOp
 // necessity to confirm the price which will be charged for an order. See
 // [[SoftLayer_Virtual_Guest/createObject|createObject]] for specifics on the requirements of the
 // template object parameter.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GenerateOrderTemplate(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Virtual_Guest) (*SoftLayer_Container_Product_Order, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GenerateOrderTemplate(ctx *slapi.RequestContext, templateObject SoftLayer_Virtual_Guest) (*SoftLayer_Container_Product_Order, error) {
 	var returnValue *SoftLayer_Container_Product_Order
 	return returnValue, nil
 }
 
 // GetAdditionalRequiredPricesForOsReload - Return a collection of SoftLayer_Item_Price objects for an
 // OS reload
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetAdditionalRequiredPricesForOsReload(commonOptions *slapi.CommonOptions, config SoftLayer_Container_Hardware_Server_Configuration) ([]*SoftLayer_Product_Item_Price, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetAdditionalRequiredPricesForOsReload(ctx *slapi.RequestContext, config SoftLayer_Container_Hardware_Server_Configuration) ([]*SoftLayer_Product_Item_Price, error) {
 	var returnValue []*SoftLayer_Product_Item_Price
 	return returnValue, nil
 }
 
 // GetAlarmHistory - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetAlarmHistory(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time, alarmId string) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetAlarmHistory(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time, alarmId string) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
 	var returnValue []*SoftLayer_Container_Monitoring_Alarm_History
 	return returnValue, nil
 }
 
 // GetAttachedNetworkStorages - This method is retrieve a list of SoftLayer_Network_Storage volumes
 // that are authorized access to this SoftLayer_Virtual_Guest.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetAttachedNetworkStorages(commonOptions *slapi.CommonOptions, nasType string) ([]*SoftLayer_Network_Storage, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetAttachedNetworkStorages(ctx *slapi.RequestContext, nasType string) ([]*SoftLayer_Network_Storage, error) {
 	var returnValue []*SoftLayer_Network_Storage
 	return returnValue, nil
 }
 
 // GetAvailableBlockDevicePositions - <nil>
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetAvailableBlockDevicePositions(commonOptions *slapi.CommonOptions) ([]string, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetAvailableBlockDevicePositions(ctx *slapi.RequestContext) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }
 
 // GetAvailableNetworkStorages - This method retrieves a list of SoftLayer_Network_Storage volumes that
 // can be authorized to this SoftLayer_Virtual_Guest.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetAvailableNetworkStorages(commonOptions *slapi.CommonOptions, nasType string) ([]*SoftLayer_Network_Storage, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetAvailableNetworkStorages(ctx *slapi.RequestContext, nasType string) ([]*SoftLayer_Network_Storage, error) {
 	var returnValue []*SoftLayer_Network_Storage
 	return returnValue, nil
 }
 
 // GetBandwidthDataByDate - Use this method when needing the metric data for bandwidth for a single
 // guest. It will gather the correct input parameters based on the date ranges
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthDataByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time, networkType string) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthDataByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time, networkType string) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -807,7 +807,7 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthDataByDate(c
 // GetBandwidthForDateRange - Retrieve a collection of bandwidth data from an individual public or
 // private network tracking object. Data is ideal if you with to employ your own traffic storage and
 // graphing systems.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthForDateRange(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthForDateRange(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -815,33 +815,33 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthForDateRange
 // GetBandwidthImage - Use this method when needing a bandwidth image for a single guest. It will
 // gather the correct input parameters for the generic graphing utility automatically based on the
 // snapshot specified.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthImage(commonOptions *slapi.CommonOptions, networkType string, snapshotRange string, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthImage(ctx *slapi.RequestContext, networkType string, snapshotRange string, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
 
 // GetBandwidthImageByDate - Use this method when needing a bandwidth image for a single guest. It will
 // gather the correct input parameters for the generic graphing utility based on the date ranges
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthImageByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time, networkType string) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthImageByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time, networkType string) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
 
 // GetBandwidthTotal - Returns the total amount of bandwidth used during the time specified for a
 // computing instance.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthTotal(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time, direction string, side string) (uint64, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBandwidthTotal(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time, direction string, side string) (uint64, error) {
 	var returnValue uint64
 	return returnValue, nil
 }
 
 // GetBootOrder - <nil>
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBootOrder(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetBootOrder(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetConsoleAccessLog - Gets the console access logs for a computing instance
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetConsoleAccessLog(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Logging_Syslog, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetConsoleAccessLog(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Logging_Syslog, error) {
 	var returnValue []*SoftLayer_Network_Logging_Syslog
 	return returnValue, nil
 }
@@ -850,14 +850,14 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetConsoleAccessLog(comm
 // has a core capacity restriction, return the associated core-restricted operating system item price.
 // Some operating systems (e.g., Red Hat Enterprise Linux) may be billed by the number of processor
 // cores, so therefore require that a certain number of cores be present on the server.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCoreRestrictedOperatingSystemPrice(commonOptions *slapi.CommonOptions) (*SoftLayer_Product_Item_Price, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCoreRestrictedOperatingSystemPrice(ctx *slapi.RequestContext) (*SoftLayer_Product_Item_Price, error) {
 	var returnValue *SoftLayer_Product_Item_Price
 	return returnValue, nil
 }
 
 // GetCpuMetricDataByDate - Use this method when needing the metric data for a single guest's CPUs. It
 // will gather the correct input parameters based on the date ranges
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCpuMetricDataByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time, cpuIndexes []int) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCpuMetricDataByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time, cpuIndexes []int) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -865,14 +865,14 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCpuMetricDataByDate(c
 // GetCpuMetricImage - Use this method when needing a cpu usage image for a single guest. It will
 // gather the correct input parameters for the generic graphing utility automatically based on the
 // snapshot specified.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCpuMetricImage(commonOptions *slapi.CommonOptions, snapshotRange string, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCpuMetricImage(ctx *slapi.RequestContext, snapshotRange string, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
 
 // GetCpuMetricImageByDate - Use this method when needing a CPU usage image for a single guest. It will
 // gather the correct input parameters for the generic graphing utility based on the date ranges
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCpuMetricImageByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time, cpuIndexes []int) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCpuMetricImageByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time, cpuIndexes []int) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
@@ -881,7 +881,7 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCpuMetricImageByDate(
 // instance, this method can be used to determine what these options are. Detailed information on the
 // return value can be found on the data type page for
 // [[SoftLayer_Container_Virtual_Guest_Configuration (type)]].
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCreateObjectOptions(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Virtual_Guest_Configuration, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCreateObjectOptions(ctx *slapi.RequestContext) (*SoftLayer_Container_Virtual_Guest_Configuration, error) {
 	var returnValue *SoftLayer_Container_Virtual_Guest_Configuration
 	return returnValue, nil
 }
@@ -889,72 +889,72 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCreateObjectOptions(c
 // GetCurrentBillingDetail - getUpgradeItemPrices() retrieves a list of all upgrades available to a
 // CloudLayer Computing Instance. Upgradeable items include, but are not limited to, number of cores,
 // amount of storage configuration, and network port speed.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCurrentBillingDetail(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Billing_Item, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCurrentBillingDetail(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Item, error) {
 	var returnValue []*SoftLayer_Billing_Item
 	return returnValue, nil
 }
 
 // GetCurrentBillingTotal - Get the total billing price in US Dollars ($) for this instance. This
 // includes all bandwidth used up to this point for this instance.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCurrentBillingTotal(commonOptions *slapi.CommonOptions) (float64, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCurrentBillingTotal(ctx *slapi.RequestContext) (float64, error) {
 	var returnValue float64
 	return returnValue, nil
 }
 
 // GetCustomBandwidthDataByDate - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCustomBandwidthDataByDate(commonOptions *slapi.CommonOptions, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCustomBandwidthDataByDate(ctx *slapi.RequestContext, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
 	var returnValue *SoftLayer_Container_Graph
 	return returnValue, nil
 }
 
 // GetCustomMetricDataByDate - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCustomMetricDataByDate(commonOptions *slapi.CommonOptions, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetCustomMetricDataByDate(ctx *slapi.RequestContext, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
 	var returnValue *SoftLayer_Container_Graph
 	return returnValue, nil
 }
 
 // GetDataMinMax - Returns 2 tracking object data records. The maximum and minimum dates that are
 // available to received metric tracking data for a computing instance.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetDataMinMax(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetDataMinMax(ctx *slapi.RequestContext) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
 
 // GetDriveRetentionItemPrice - Return a drive retention SoftLayer_Item_Price object for a guest.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetDriveRetentionItemPrice(commonOptions *slapi.CommonOptions) (*SoftLayer_Product_Item_Price, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetDriveRetentionItemPrice(ctx *slapi.RequestContext) (*SoftLayer_Product_Item_Price, error) {
 	var returnValue *SoftLayer_Product_Item_Price
 	return returnValue, nil
 }
 
 // GetFirewallProtectableSubnets - Get the subnets associated with this CloudLayer computing instance
 // that are protectable by a network component firewall.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetFirewallProtectableSubnets(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Subnet, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetFirewallProtectableSubnets(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Subnet, error) {
 	var returnValue []*SoftLayer_Network_Subnet
 	return returnValue, nil
 }
 
 // GetFirstAvailableBlockDevicePosition - <nil>
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetFirstAvailableBlockDevicePosition(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetFirstAvailableBlockDevicePosition(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetIsoBootImage - <nil>
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetIsoBootImage(commonOptions *slapi.CommonOptions) (*SoftLayer_Virtual_Disk_Image, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetIsoBootImage(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Disk_Image, error) {
 	var returnValue *SoftLayer_Virtual_Disk_Image
 	return returnValue, nil
 }
 
 // GetItemPricesFromSoftwareDescriptions - Return a collection of SoftLayer_Item_Price objects from a
 // collection of SoftLayer_Software_Description
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetItemPricesFromSoftwareDescriptions(commonOptions *slapi.CommonOptions, softwareDescriptions []SoftLayer_Software_Description, includeTranslationsFlag bool, returnAllPricesFlag bool) ([]*SoftLayer_Product_Item, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetItemPricesFromSoftwareDescriptions(ctx *slapi.RequestContext, softwareDescriptions []SoftLayer_Software_Description, includeTranslationsFlag bool, returnAllPricesFlag bool) ([]*SoftLayer_Product_Item, error) {
 	var returnValue []*SoftLayer_Product_Item
 	return returnValue, nil
 }
 
 // GetMemoryMetricDataByDate - Use this method when needing the metric data for memory for a single
 // computing instance.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMemoryMetricDataByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMemoryMetricDataByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -962,7 +962,7 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMemoryMetricDataByDat
 // GetMemoryMetricImage - Use this method when needing a memory usage image for a single guest. It will
 // gather the correct input parameters for the generic graphing utility automatically based on the
 // snapshot specified.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMemoryMetricImage(commonOptions *slapi.CommonOptions, snapshotRange string, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMemoryMetricImage(ctx *slapi.RequestContext, snapshotRange string, dateSpecified time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
@@ -970,19 +970,19 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMemoryMetricImage(com
 // GetMemoryMetricImageByDate - Use this method when needing a image displaying the amount of memory
 // used over time for a single computing instance. It will gather the correct input parameters for the
 // generic graphing utility based on the date ranges
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMemoryMetricImageByDate(commonOptions *slapi.CommonOptions, startDateTime time.Time, endDateTime time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMemoryMetricImageByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
 
 // GetMonitoringActiveAlarms - Returns open monitoring alarms for a given time period
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMonitoringActiveAlarms(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMonitoringActiveAlarms(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
 	var returnValue []*SoftLayer_Container_Monitoring_Alarm_History
 	return returnValue, nil
 }
 
 // GetMonitoringClosedAlarms - Returns closed monitoring alarms for a given time period
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMonitoringClosedAlarms(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMonitoringClosedAlarms(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
 	var returnValue []*SoftLayer_Container_Monitoring_Alarm_History
 	return returnValue, nil
 }
@@ -991,13 +991,13 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetMonitoringClosedAlarm
 // CloudLayer computing instance that are protectable by a network component firewall. Note, this may
 // not return all values for IPv6 subnets for this CloudLayer computing instance. Please use
 // getFirewallProtectableSubnets to get all protectable subnets.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetNetworkComponentFirewallProtectableIpAddresses(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Subnet_IpAddress, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetNetworkComponentFirewallProtectableIpAddresses(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Subnet_IpAddress, error) {
 	var returnValue []*SoftLayer_Network_Subnet_IpAddress
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Virtual_Guest, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Guest, error) {
 	var returnValue *SoftLayer_Virtual_Guest
 	return returnValue, nil
 }
@@ -1006,19 +1006,19 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetObject(commonOptions 
 // [[SoftLayer_Product_Order#placeOrder|SoftLayer_Product_Order::placeOrder]] method. This container
 // will include all services that the selected computing instance has. If desired you may remove prices
 // which were returned.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetOrderTemplate(commonOptions *slapi.CommonOptions, billingType string, orderPrices []SoftLayer_Product_Item_Price) (*SoftLayer_Container_Product_Order, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetOrderTemplate(ctx *slapi.RequestContext, billingType string, orderPrices []SoftLayer_Product_Item_Price) (*SoftLayer_Container_Product_Order, error) {
 	var returnValue *SoftLayer_Container_Product_Order
 	return returnValue, nil
 }
 
 // GetProvisionDate - <nil>
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetProvisionDate(commonOptions *slapi.CommonOptions) (*time.Time, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetProvisionDate(ctx *slapi.RequestContext) (*time.Time, error) {
 	var returnValue *time.Time
 	return returnValue, nil
 }
 
 // GetRecentMetricData - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetRecentMetricData(commonOptions *slapi.CommonOptions, time uint) ([]*SoftLayer_Metric_Tracking_Object, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetRecentMetricData(ctx *slapi.RequestContext, time uint) ([]*SoftLayer_Metric_Tracking_Object, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object
 	return returnValue, nil
 }
@@ -1027,7 +1027,7 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetRecentMetricData(comm
 // reside in the SoftLayer monitoring cluster. A monitoring agent with "remoteMonitoringAgentFlag"
 // indicates that it work from SoftLayer monitoring cluster. If a monitoring agent does not have the
 // flag, it resides in your cloud instance.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetRemoteMonitoringActiveAlarms(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetRemoteMonitoringActiveAlarms(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
 	var returnValue []*SoftLayer_Container_Monitoring_Alarm_History
 	return returnValue, nil
 }
@@ -1036,13 +1036,13 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetRemoteMonitoringActiv
 // that reside in the SoftLayer monitoring cluster. A monitoring agent with "remoteMonitoringAgentFlag"
 // indicates that it work from SoftLayer monitoring cluster. If a monitoring agent does not have the
 // flag, it resides in your cloud instance.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetRemoteMonitoringClosedAlarms(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetRemoteMonitoringClosedAlarms(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
 	var returnValue []*SoftLayer_Container_Monitoring_Alarm_History
 	return returnValue, nil
 }
 
 // GetReverseDomainRecords - Retrieve the reverse domain records associated with this server.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetReverseDomainRecords(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Dns_Domain, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetReverseDomainRecords(ctx *slapi.RequestContext) ([]*SoftLayer_Dns_Domain, error) {
 	var returnValue []*SoftLayer_Dns_Domain
 	return returnValue, nil
 }
@@ -1052,7 +1052,7 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetReverseDomainRecords(
 // amount of storage configuration, and network port speed. This method exclude downgrade item prices
 // by default. You can set the "includeDowngradeItemPrices" parameter to true so that it can include
 // downgrade item prices.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetUpgradeItemPrices(commonOptions *slapi.CommonOptions, includeDowngradeItemPrices bool) ([]*SoftLayer_Product_Item_Price, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetUpgradeItemPrices(ctx *slapi.RequestContext, includeDowngradeItemPrices bool) ([]*SoftLayer_Product_Item_Price, error) {
 	var returnValue []*SoftLayer_Product_Item_Price
 	return returnValue, nil
 }
@@ -1060,87 +1060,87 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetUpgradeItemPrices(com
 // GetValidBlockDeviceTemplateGroups - This method will return the list of block device template groups
 // that are valid to the host. For instance, it will validate that the template groups returned are
 // compatible with the size and number of disks on the host.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetValidBlockDeviceTemplateGroups(commonOptions *slapi.CommonOptions, visibility string) ([]*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) GetValidBlockDeviceTemplateGroups(ctx *slapi.RequestContext, visibility string) ([]*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
 	var returnValue []*SoftLayer_Virtual_Guest_Block_Device_Template_Group
 	return returnValue, nil
 }
 
 // IsBackendPingable - Issues a ping command and returns the success (true) or failure (false) of the
 // ping command.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) IsBackendPingable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) IsBackendPingable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // IsPingable - Issues a ping command and returns the success (true) or failure (false) of the ping
 // command.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) IsPingable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) IsPingable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // IsolateInstanceForDestructiveAction - Closes the public or private ports to isolate the instance
 // before a destructive action.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) IsolateInstanceForDestructiveAction(commonOptions *slapi.CommonOptions) error {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) IsolateInstanceForDestructiveAction(ctx *slapi.RequestContext) error {
 	return nil
 }
 
 // MountIsoImage - <nil>
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) MountIsoImage(commonOptions *slapi.CommonOptions, diskImageId int) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) MountIsoImage(ctx *slapi.RequestContext, diskImageId int) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
 
 // Pause - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) Pause(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) Pause(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // PowerCycle - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) PowerCycle(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) PowerCycle(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // PowerOff - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) PowerOff(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) PowerOff(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // PowerOffSoft - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) PowerOffSoft(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) PowerOffSoft(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // PowerOn - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) PowerOn(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) PowerOn(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RebootDefault - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) RebootDefault(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) RebootDefault(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RebootHard - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) RebootHard(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) RebootHard(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RebootSoft - Attempt to complete a soft reboot of a guest by shutting down the operating system.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) RebootSoft(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) RebootSoft(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ReloadCurrentOperatingSystemConfiguration - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ReloadCurrentOperatingSystemConfiguration(commonOptions *slapi.CommonOptions) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ReloadCurrentOperatingSystemConfiguration(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
@@ -1155,27 +1155,27 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ReloadCurrentOperatingSy
 // computing instance to the current specifications on record. If reloading from an image template, we
 // recommend first getting the list of valid private block device template groups, by calling the
 // getOperatingSystemReloadImages method.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ReloadOperatingSystem(commonOptions *slapi.CommonOptions, token string, config SoftLayer_Container_Hardware_Server_Configuration) (string, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ReloadOperatingSystem(ctx *slapi.RequestContext, token string, config SoftLayer_Container_Hardware_Server_Configuration) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // RemoveAccessToNetworkStorage - This method is used to remove access to a SoftLayer_Network_Storage
 // volume that supports host- or network-level access control.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) RemoveAccessToNetworkStorage(commonOptions *slapi.CommonOptions, networkStorageTemplateObject SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) RemoveAccessToNetworkStorage(ctx *slapi.RequestContext, networkStorageTemplateObject SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveAccessToNetworkStorageList - This method is used to allow access to multiple
 // SoftLayer_Network_Storage volumes that support host- or network-level access control.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) RemoveAccessToNetworkStorageList(commonOptions *slapi.CommonOptions, networkStorageTemplateObjects []SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) RemoveAccessToNetworkStorageList(ctx *slapi.RequestContext, networkStorageTemplateObjects []SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // Resume - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) Resume(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) Resume(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1183,7 +1183,7 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) Resume(commonOptions *sl
 // SetPrivateNetworkInterfaceSpeed - Sets the private network interface speed to the new speed. Speed
 // values can only be 0 (Disconnect), 10, 100, or 1000. The new speed must be equal to or less than the
 // max speed of the interface. It will take less than a minute to update the port speed.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) SetPrivateNetworkInterfaceSpeed(commonOptions *slapi.CommonOptions, newSpeed int) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) SetPrivateNetworkInterfaceSpeed(ctx *slapi.RequestContext, newSpeed int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1191,43 +1191,43 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) SetPrivateNetworkInterfa
 // SetPublicNetworkInterfaceSpeed - Sets the public network interface speed to the new speed. Speed
 // values can only be 0 (Disconnect), 10, 100, or 1000. The new speed must be equal to or less than the
 // max speed of the interface. It will take less than a minute to update the port speed.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) SetPublicNetworkInterfaceSpeed(commonOptions *slapi.CommonOptions, newSpeed int) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) SetPublicNetworkInterfaceSpeed(ctx *slapi.RequestContext, newSpeed int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SetTags - <nil>
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) SetTags(commonOptions *slapi.CommonOptions, tags string) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) SetTags(ctx *slapi.RequestContext, tags string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SetUserMetadata - Sets the data that will be written to the configuration drive.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) SetUserMetadata(commonOptions *slapi.CommonOptions, metadata []string) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) SetUserMetadata(ctx *slapi.RequestContext, metadata []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ShutdownPrivatePort - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ShutdownPrivatePort(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ShutdownPrivatePort(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ShutdownPublicPort - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ShutdownPublicPort(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ShutdownPublicPort(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // UnmountIsoImage - <nil>
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) UnmountIsoImage(commonOptions *slapi.CommonOptions) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) UnmountIsoImage(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
 
 // ValidateImageTemplate - no documentation
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ValidateImageTemplate(commonOptions *slapi.CommonOptions, imageTemplateId int) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ValidateImageTemplate(ctx *slapi.RequestContext, imageTemplateId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1237,7 +1237,7 @@ func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) ValidateImageTemplate(co
 // operating system just to verify that the reload will go smoothly. If the server configuration is not
 // setup correctly or there is some other issue, an exception will be thrown indicating the error. If
 // there were no issues, this will just return true.
-func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) VerifyReloadOperatingSystem(commonOptions *slapi.CommonOptions, config SoftLayer_Container_Hardware_Server_Configuration) (bool, error) {
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) VerifyReloadOperatingSystem(ctx *slapi.RequestContext, config SoftLayer_Container_Hardware_Server_Configuration) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

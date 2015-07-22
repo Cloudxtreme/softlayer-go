@@ -23,7 +23,7 @@ type SoftLayer_Network_Vlan_Type struct {
 }
 
 // GetObject - <nil>
-func (softlayer_network_vlan_type *SoftLayer_Network_Vlan_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Vlan_Type, error) {
+func (softlayer_network_vlan_type *SoftLayer_Network_Vlan_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Vlan_Type, error) {
 	var returnValue *SoftLayer_Network_Vlan_Type
 	return returnValue, nil
 }

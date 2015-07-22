@@ -21,14 +21,14 @@ type SoftLayer_Locale_Country struct {
 
 // GetAvailableCountries - Use this method to retrieve a list of countries and locale information
 // available to the current user.
-func (softlayer_locale_country *SoftLayer_Locale_Country) GetAvailableCountries(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Locale_Country, error) {
+func (softlayer_locale_country *SoftLayer_Locale_Country) GetAvailableCountries(ctx *slapi.RequestContext) ([]*SoftLayer_Locale_Country, error) {
 	var returnValue []*SoftLayer_Locale_Country
 	return returnValue, nil
 }
 
 // GetCountries - Use this method to retrieve a list of countries and locale information such as
 // country code and state/provinces.
-func (softlayer_locale_country *SoftLayer_Locale_Country) GetCountries(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Locale_Country, error) {
+func (softlayer_locale_country *SoftLayer_Locale_Country) GetCountries(ctx *slapi.RequestContext) ([]*SoftLayer_Locale_Country, error) {
 	var returnValue []*SoftLayer_Locale_Country
 	return returnValue, nil
 }

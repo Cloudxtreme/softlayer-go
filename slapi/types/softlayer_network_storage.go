@@ -339,25 +339,25 @@ type SoftLayer_Network_Storage struct {
 // AllowAccessFromHardware - This method is used to modify the access control list for this Storage
 // volume. The SoftLayer_Hardware objects which have been allowed access to this storage will be listed
 // in the allowedHardware property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromHardware(commonOptions *slapi.CommonOptions, hardwareObjectTemplate SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromHardware(ctx *slapi.RequestContext, hardwareObjectTemplate SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AllowAccessFromHardwareList - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromHardwareList(commonOptions *slapi.CommonOptions, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromHardwareList(ctx *slapi.RequestContext, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AllowAccessFromIpAddress - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromIpAddress(commonOptions *slapi.CommonOptions, ipAddressObjectTemplate SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromIpAddress(ctx *slapi.RequestContext, ipAddressObjectTemplate SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AllowAccessFromIpAddressList - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromIpAddressList(commonOptions *slapi.CommonOptions, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromIpAddressList(ctx *slapi.RequestContext, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -365,13 +365,13 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromIpAdd
 // AllowAccessFromSubnet - This method is used to modify the access control list for this Storage
 // volume. The SoftLayer_Hardware objects which have been allowed access to this storage will be listed
 // in the allowedHardware property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromSubnet(commonOptions *slapi.CommonOptions, subnetObjectTemplate SoftLayer_Network_Subnet) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromSubnet(ctx *slapi.RequestContext, subnetObjectTemplate SoftLayer_Network_Subnet) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AllowAccessFromSubnetList - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromSubnetList(commonOptions *slapi.CommonOptions, subnetObjectTemplates []SoftLayer_Network_Subnet) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromSubnetList(ctx *slapi.RequestContext, subnetObjectTemplates []SoftLayer_Network_Subnet) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -379,7 +379,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromSubne
 // AllowAccessFromVirtualGuest - This method is used to modify the access control list for this Storage
 // volume. The SoftLayer_Virtual_Guest objects which have been allowed access to this storage will be
 // listed in the allowedVirtualGuests property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromVirtualGuest(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplate SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromVirtualGuest(ctx *slapi.RequestContext, virtualGuestObjectTemplate SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -387,7 +387,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromVirtu
 // AllowAccessFromVirtualGuestList - This method is used to modify the access control list for this
 // Storage volume. The SoftLayer_Virtual_Guest objects which have been allowed access to this storage
 // will be listed in the allowedVirtualGuests property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromVirtualGuestList(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromVirtualGuestList(ctx *slapi.RequestContext, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -395,7 +395,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessFromVirtu
 // AllowAccessToReplicantFromHardware - This method is used to modify the access control list for this
 // Storage replicant volume. The SoftLayer_Hardware objects which have been allowed access to this
 // storage will be listed in the allowedHardware property of this storage replicant volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromHardware(commonOptions *slapi.CommonOptions, hardwareObjectTemplate SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromHardware(ctx *slapi.RequestContext, hardwareObjectTemplate SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -404,13 +404,13 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplica
 // this Storage volume's replica. The SoftLayer_Hardware objects which have been allowed access to this
 // storage volume's replica will be listed in the allowedReplicationHardware property of this storage
 // volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromHardwareList(commonOptions *slapi.CommonOptions, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromHardwareList(ctx *slapi.RequestContext, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AllowAccessToReplicantFromIpAddress - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromIpAddress(commonOptions *slapi.CommonOptions, ipAddressObjectTemplate SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromIpAddress(ctx *slapi.RequestContext, ipAddressObjectTemplate SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -419,7 +419,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplica
 // this Storage volume's replica. The SoftLayer_Network_Subnet_IpAddress objects which have been
 // allowed access to this storage volume's replica will be listed in the allowedReplicationIpAddresses
 // property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromIpAddressList(commonOptions *slapi.CommonOptions, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromIpAddressList(ctx *slapi.RequestContext, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -427,7 +427,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplica
 // AllowAccessToReplicantFromSubnet - This method is used to modify the access control list for this
 // Storage replicant volume. The SoftLayer_Hardware objects which have been allowed access to this
 // storage will be listed in the allowedHardware property of this storage replicant volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromSubnet(commonOptions *slapi.CommonOptions, subnetObjectTemplate SoftLayer_Network_Subnet) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromSubnet(ctx *slapi.RequestContext, subnetObjectTemplate SoftLayer_Network_Subnet) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -436,7 +436,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplica
 // this Storage volume's replica. The SoftLayer_Network_Subnet objects which have been allowed access
 // to this storage volume's replica will be listed in the allowedReplicationSubnets property of this
 // storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromSubnetList(commonOptions *slapi.CommonOptions, subnetObjectTemplates []SoftLayer_Network_Subnet) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromSubnetList(ctx *slapi.RequestContext, subnetObjectTemplates []SoftLayer_Network_Subnet) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -444,7 +444,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplica
 // AllowAccessToReplicantFromVirtualGuest - This method is used to modify the access control list for
 // this Storage replicant volume. The SoftLayer_Virtual_Guest objects which have been allowed access to
 // this storage will be listed in the allowedVirtualGuests property of this storage replicant volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromVirtualGuest(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplate SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromVirtualGuest(ctx *slapi.RequestContext, virtualGuestObjectTemplate SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -453,7 +453,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplica
 // for this Storage volume's replica. The SoftLayer_Virtual_Guest objects which have been allowed
 // access to this storage volume's replica will be listed in the allowedReplicationVirtualGuests
 // property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromVirtualGuestList(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplicantFromVirtualGuestList(ctx *slapi.RequestContext, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -461,7 +461,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AllowAccessToReplica
 // AssignCredential - This method will assign an existing credential to the current volume. The
 // credential must have been created using the 'addNewCredential' method. The volume type must support
 // an additional credential.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AssignCredential(commonOptions *slapi.CommonOptions, username string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AssignCredential(ctx *slapi.RequestContext, username string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -470,40 +470,40 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) AssignCredential(com
 // storage volume must support an additional credential. Once created, the credential will be
 // automatically assigned to the current volume. If there are no volumes assigned to the credential it
 // will be automatically deleted.
-func (softlayer_network_storage *SoftLayer_Network_Storage) AssignNewCredential(commonOptions *slapi.CommonOptions, type_ string) (*SoftLayer_Network_Storage_Credential, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) AssignNewCredential(ctx *slapi.RequestContext, type_ string) (*SoftLayer_Network_Storage_Credential, error) {
 	var returnValue *SoftLayer_Network_Storage_Credential
 	return returnValue, nil
 }
 
 // ChangePassword - The method will change the password for the given Storage/Virtual Server Storage
 // account.
-func (softlayer_network_storage *SoftLayer_Network_Storage) ChangePassword(commonOptions *slapi.CommonOptions, username string, currentPassword string, newPassword string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) ChangePassword(ctx *slapi.RequestContext, username string, currentPassword string, newPassword string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CollectBandwidth - {{CloudLayerOnlyMethod}} collectBandwidth() Retrieve the bandwidth usage for the
 // current billing cycle.
-func (softlayer_network_storage *SoftLayer_Network_Storage) CollectBandwidth(commonOptions *slapi.CommonOptions, type_ string, startDate time.Time, endDate time.Time) (uint64, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) CollectBandwidth(ctx *slapi.RequestContext, type_ string, startDate time.Time, endDate time.Time) (uint64, error) {
 	var returnValue uint64
 	return returnValue, nil
 }
 
 // CollectBytesUsed - {{CloudLayerOnlyMethod}} collectBytesUsed() retrieves the number of bytes
 // capacity currently in use on a Storage account.
-func (softlayer_network_storage *SoftLayer_Network_Storage) CollectBytesUsed(commonOptions *slapi.CommonOptions) (uint64, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) CollectBytesUsed(ctx *slapi.RequestContext) (uint64, error) {
 	var returnValue uint64
 	return returnValue, nil
 }
 
 // CreateFolder - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) CreateFolder(commonOptions *slapi.CommonOptions, folder string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) CreateFolder(ctx *slapi.RequestContext, folder string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CreateSnapshot - Create a new snapshot of the data on the network storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) CreateSnapshot(commonOptions *slapi.CommonOptions, notes string) (*SoftLayer_Network_Storage, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) CreateSnapshot(ctx *slapi.RequestContext, notes string) (*SoftLayer_Network_Storage, error) {
 	var returnValue *SoftLayer_Network_Storage
 	return returnValue, nil
 }
@@ -515,7 +515,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) CreateSnapshot(commo
 // this method also determines if the files are in the account's recycle bin. If the files exist in the
 // recycle bin, then they are permanently deleted. Please note, files can not be restored once they are
 // permanently deleted.
-func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteAllFiles(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteAllFiles(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -527,7 +527,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteAllFiles(commo
 // account , this method also determines if the file is in the account's recycle bin. If the file exist
 // in the recycle bin, then it is permanently deleted. Please note, a file can not be restored once it
 // is permanently deleted.
-func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteFile(commonOptions *slapi.CommonOptions, fileId string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteFile(ctx *slapi.RequestContext, fileId string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -539,13 +539,13 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteFile(commonOpt
 // this method also determines if the files are in the account's recycle bin. If the files exist in the
 // recycle bin, then they are permanently deleted. Please note, files can not be restored once they are
 // permanently deleted.
-func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteFiles(commonOptions *slapi.CommonOptions, fileIds []string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteFiles(ctx *slapi.RequestContext, fileIds []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DeleteFolder - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteFolder(commonOptions *slapi.CommonOptions, folder string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteFolder(ctx *slapi.RequestContext, folder string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -553,21 +553,21 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteFolder(commonO
 // DeleteObject - Delete a network storage volume. '''This cannot be undone.''' At this time only
 // network storage snapshots may be deleted with this method. ''deleteObject'' returns Boolean ''true''
 // on successful deletion or ''false'' if it was unable to remove a volume;
-func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DisableSnapshots - This method is not valid for Legacy iSCSI Storage Volumes. Disable scheduled
 // snapshots of this storage volume. Scheduling options include and schedules.
-func (softlayer_network_storage *SoftLayer_Network_Storage) DisableSnapshots(commonOptions *slapi.CommonOptions, scheduleType string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) DisableSnapshots(ctx *slapi.RequestContext, scheduleType string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DownloadFile - {{CloudLayerOnlyMethod}} Download a file from a Storage account. This method returns
 // a file's details including the file's raw content.
-func (softlayer_network_storage *SoftLayer_Network_Storage) DownloadFile(commonOptions *slapi.CommonOptions, fileId string) (*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) DownloadFile(ctx *slapi.RequestContext, fileId string) (*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue *SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }
@@ -575,14 +575,14 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) DownloadFile(commonO
 // EditCredential - This method will change the password of a credential created using the
 // 'addNewCredential' method. If the credential exists on multiple storage volumes it will change for
 // those volumes as well.
-func (softlayer_network_storage *SoftLayer_Network_Storage) EditCredential(commonOptions *slapi.CommonOptions, username string, newPassword string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) EditCredential(ctx *slapi.RequestContext, username string, newPassword string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - The password and/or notes may be modified for the Storage service except evault
 // passwords and notes.
-func (softlayer_network_storage *SoftLayer_Network_Storage) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -592,28 +592,28 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) EditObject(commonOpt
 // relevant data for $scheduleType, $retentionCount and $minute. For schedules, provide relevant data
 // for $scheduleType, $retentionCount, $minute, and $hour. For schedules, provide relevant data for all
 // parameters of this method.
-func (softlayer_network_storage *SoftLayer_Network_Storage) EnableSnapshots(commonOptions *slapi.CommonOptions, scheduleType string, retentionCount int, minute int, hour int, dayOfWeek string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) EnableSnapshots(ctx *slapi.RequestContext, scheduleType string, retentionCount int, minute int, hour int, dayOfWeek string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // FailbackFromReplicant - Failback from a volume replicant. In order to failback the volume must have
 // already been failed over to a replicant.
-func (softlayer_network_storage *SoftLayer_Network_Storage) FailbackFromReplicant(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) FailbackFromReplicant(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // FailoverToReplicant - Failover to a volume replicant. During the time which the replicant is in use
 // the local nas volume will not be available.
-func (softlayer_network_storage *SoftLayer_Network_Storage) FailoverToReplicant(commonOptions *slapi.CommonOptions, replicantId int) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) FailoverToReplicant(ctx *slapi.RequestContext, replicantId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllFiles - {{CloudLayerOnlyMethod}} Retrieve details such as id, name, size, create date for all
 // files in a Storage account's root directory. This does not download file content.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetAllFiles(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetAllFiles(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue []*SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }
@@ -621,13 +621,13 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) GetAllFiles(commonOp
 // GetAllFilesByFilter - {{CloudLayerOnlyMethod}} Retrieve details such as id, name, size, create date
 // for all files matching the filter's criteria in a Storage account's root directory. This does not
 // download file content.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetAllFilesByFilter(commonOptions *slapi.CommonOptions, filter SoftLayer_Container_Utility_File_Entity) ([]*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetAllFilesByFilter(ctx *slapi.RequestContext, filter SoftLayer_Container_Utility_File_Entity) ([]*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue []*SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }
 
 // GetAllowedHostsLimit - Retrieves the total number of allowed hosts limit per volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetAllowedHostsLimit(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetAllowedHostsLimit(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
@@ -636,39 +636,39 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) GetAllowedHostsLimit
 // method if you wish to retrieve a storage record by username rather than by id. The ''type''
 // parameter must correspond to one of the available ''nasType'' values in the
 // SoftLayer_Network_Storage data type.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetByUsername(commonOptions *slapi.CommonOptions, username string, type_ string) ([]*SoftLayer_Network_Storage, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetByUsername(ctx *slapi.RequestContext, username string, type_ string) ([]*SoftLayer_Network_Storage, error) {
 	var returnValue []*SoftLayer_Network_Storage
 	return returnValue, nil
 }
 
 // GetCdnUrls - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetCdnUrls(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_Storage_Hub_ObjectStorage_ContentDeliveryUrl, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetCdnUrls(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_Storage_Hub_ObjectStorage_ContentDeliveryUrl, error) {
 	var returnValue []*SoftLayer_Container_Network_Storage_Hub_ObjectStorage_ContentDeliveryUrl
 	return returnValue, nil
 }
 
 // GetClusterResource - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetClusterResource(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Service_Resource, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetClusterResource(ctx *slapi.RequestContext) (*SoftLayer_Network_Service_Resource, error) {
 	var returnValue *SoftLayer_Network_Service_Resource
 	return returnValue, nil
 }
 
 // GetFileByIdentifier - {{CloudLayerOnlyMethod}} Retrieve details such as id, name, size, create date
 // of a file within a Storage account. This does not download file content.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetFileByIdentifier(commonOptions *slapi.CommonOptions, identifier string) (*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetFileByIdentifier(ctx *slapi.RequestContext, identifier string) (*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue *SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }
 
 // GetFileCount - {{CloudLayerOnlyMethod}} Retrieve the file number of files in a Virtual Server
 // Storage account's root directory. This does not include the files stored in the recycle bin.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetFileCount(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetFileCount(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
 
 // GetFileList - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetFileList(commonOptions *slapi.CommonOptions, folder string, path string) ([]*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetFileList(ctx *slapi.RequestContext, folder string, path string) ([]*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue []*SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }
@@ -676,7 +676,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) GetFileList(commonOp
 // GetFilePendingDeleteCount - {{CloudLayerOnlyMethod}} Retrieve the number of files pending deletion
 // in a Storage account's recycle bin. Files in an account's recycle bin may either be restored to the
 // account's root directory or permanently deleted.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetFilePendingDeleteCount(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetFilePendingDeleteCount(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
@@ -684,13 +684,13 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) GetFilePendingDelete
 // GetFilesPendingDelete - {{CloudLayerOnlyMethod}} Retrieve a list of files that are pending deletion
 // in a Storage account's recycle bin. Files in an account's recycle bin may either be restored to the
 // account's root directory or permanently deleted. This method does not download file content.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetFilesPendingDelete(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetFilesPendingDelete(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue []*SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }
 
 // GetFolderList - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetFolderList(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Folder, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetFolderList(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Folder, error) {
 	var returnValue []*SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Folder
 	return returnValue, nil
 }
@@ -698,13 +698,13 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) GetFolderList(common
 // GetGraph - {{CloudLayerOnlyMethod}} getGraph() retrieves a Storage account's usage and returns a PNG
 // graph image, title, and the minimum and maximum dates included in the graphed date range. Virtual
 // Server storage accounts can also graph upload and download bandwidth usage.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetGraph(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time, type_ string) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetGraph(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time, type_ string) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
 	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
 	return returnValue, nil
 }
 
 // GetNetworkConnectionDetails - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetNetworkConnectionDetails(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Network_Storage_NetworkConnectionInformation, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetNetworkConnectionDetails(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Storage_NetworkConnectionInformation, error) {
 	var returnValue *SoftLayer_Container_Network_Storage_NetworkConnectionInformation
 	return returnValue, nil
 }
@@ -712,59 +712,59 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) GetNetworkConnection
 // GetObject - getObject retrieves the SoftLayer_Network_Storage object whose ID corresponds to the ID
 // number of the init parameter passed to the SoftLayer_Network_Storage service. Please use the
 // associated methods in the [[SoftLayer_Network_Storage]] service to retrieve a Storage account's id.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Storage, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage, error) {
 	var returnValue *SoftLayer_Network_Storage
 	return returnValue, nil
 }
 
 // GetObjectsByCredential - Retrieve network storage accounts by SoftLayer_Network_Storage_Credential
 // object. Use this method if you wish to retrieve a storage record by a credential rather than by id.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetObjectsByCredential(commonOptions *slapi.CommonOptions, credentialObject SoftLayer_Network_Storage_Credential) ([]*SoftLayer_Network_Storage, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetObjectsByCredential(ctx *slapi.RequestContext, credentialObject SoftLayer_Network_Storage_Credential) ([]*SoftLayer_Network_Storage, error) {
 	var returnValue []*SoftLayer_Network_Storage
 	return returnValue, nil
 }
 
 // GetRecycleBinFileByIdentifier - {{CloudLayerOnlyMethod}} Retrieve the details of a file that is
 // pending deletion in a Storage account's a recycle bin.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetRecycleBinFileByIdentifier(commonOptions *slapi.CommonOptions, fileId string) (*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetRecycleBinFileByIdentifier(ctx *slapi.RequestContext, fileId string) (*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue *SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }
 
 // GetRemainingAllowedHosts - Retrieves the remaining number of allowed hosts per volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetRemainingAllowedHosts(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetRemainingAllowedHosts(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
 
 // GetSnapshotsForVolume - Retrieves a list of snapshots for this SoftLayer_Network_Storage volume.
 // This method works with the result limits and offset to support pagination.
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetSnapshotsForVolume(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Storage, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetSnapshotsForVolume(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Storage, error) {
 	var returnValue []*SoftLayer_Network_Storage
 	return returnValue, nil
 }
 
 // GetStorageGroupsNetworkConnectionDetails - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetStorageGroupsNetworkConnectionDetails(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_Storage_NetworkConnectionInformation, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetStorageGroupsNetworkConnectionDetails(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_Storage_NetworkConnectionInformation, error) {
 	var returnValue []*SoftLayer_Container_Network_Storage_NetworkConnectionInformation
 	return returnValue, nil
 }
 
 // GetValidReplicationTargetDatacenterLocations - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) GetValidReplicationTargetDatacenterLocations(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Location, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) GetValidReplicationTargetDatacenterLocations(ctx *slapi.RequestContext) ([]*SoftLayer_Location, error) {
 	var returnValue []*SoftLayer_Location
 	return returnValue, nil
 }
 
 // ImmediateFailoverToReplicant - Immediate Failover to a volume replicant. During the time which the
 // replicant is in use the local nas volume will not be available.
-func (softlayer_network_storage *SoftLayer_Network_Storage) ImmediateFailoverToReplicant(commonOptions *slapi.CommonOptions, replicantId int) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) ImmediateFailoverToReplicant(ctx *slapi.RequestContext, replicantId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // IsBlockingOperationInProgress - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) IsBlockingOperationInProgress(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) IsBlockingOperationInProgress(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -772,7 +772,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) IsBlockingOperationI
 // RemoveAccessFromHardware - This method is used to modify the access control list for this Storage
 // volume. The SoftLayer_Hardware objects which have been allowed access to this storage will be listed
 // in the allowedHardware property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromHardware(commonOptions *slapi.CommonOptions, hardwareObjectTemplate SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromHardware(ctx *slapi.RequestContext, hardwareObjectTemplate SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -780,31 +780,31 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromHard
 // RemoveAccessFromHardwareList - This method is used to modify the access control list for this
 // Storage volume. The SoftLayer_Hardware objects which have been allowed access to this storage will
 // be listed in the allowedHardware property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromHardwareList(commonOptions *slapi.CommonOptions, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromHardwareList(ctx *slapi.RequestContext, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveAccessFromIpAddress - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromIpAddress(commonOptions *slapi.CommonOptions, ipAddressObjectTemplate SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromIpAddress(ctx *slapi.RequestContext, ipAddressObjectTemplate SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveAccessFromIpAddressList - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromIpAddressList(commonOptions *slapi.CommonOptions, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromIpAddressList(ctx *slapi.RequestContext, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveAccessFromSubnet - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromSubnet(commonOptions *slapi.CommonOptions, subnetObjectTemplate SoftLayer_Network_Subnet) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromSubnet(ctx *slapi.RequestContext, subnetObjectTemplate SoftLayer_Network_Subnet) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveAccessFromSubnetList - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromSubnetList(commonOptions *slapi.CommonOptions, subnetObjectTemplates []SoftLayer_Network_Subnet) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromSubnetList(ctx *slapi.RequestContext, subnetObjectTemplates []SoftLayer_Network_Subnet) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -812,7 +812,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromSubn
 // RemoveAccessFromVirtualGuest - This method is used to modify the access control list for this
 // Storage volume. The SoftLayer_Virtual_Guest objects which have been allowed access to this storage
 // will be listed in the allowedVirtualGuests property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromVirtualGuest(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplate SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromVirtualGuest(ctx *slapi.RequestContext, virtualGuestObjectTemplate SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -820,7 +820,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromVirt
 // RemoveAccessFromVirtualGuestList - This method is used to modify the access control list for this
 // Storage volume. The SoftLayer_Virtual_Guest objects which have been allowed access to this storage
 // will be listed in the allowedVirtualGuests property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromVirtualGuestList(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromVirtualGuestList(ctx *slapi.RequestContext, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -829,7 +829,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessFromVirt
 // this Storage volume's replica. The SoftLayer_Hardware objects which have been allowed access to this
 // storage volume's replica will be listed in the allowedReplicationHardware property of this storage
 // volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplicantFromHardwareList(commonOptions *slapi.CommonOptions, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplicantFromHardwareList(ctx *slapi.RequestContext, hardwareObjectTemplates []SoftLayer_Hardware) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -838,13 +838,13 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplic
 // this Storage volume's replica. The SoftLayer_Network_Subnet_IpAddress objects which have been
 // allowed access to this storage volume's replica will be listed in the allowedReplicationIpAddresses
 // property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplicantFromIpAddressList(commonOptions *slapi.CommonOptions, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplicantFromIpAddressList(ctx *slapi.RequestContext, ipAddressObjectTemplates []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveAccessToReplicantFromSubnet - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplicantFromSubnet(commonOptions *slapi.CommonOptions, subnetObjectTemplate SoftLayer_Network_Subnet) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplicantFromSubnet(ctx *slapi.RequestContext, subnetObjectTemplate SoftLayer_Network_Subnet) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -853,7 +853,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplic
 // this Storage volume's replica. The SoftLayer_Network_Subnet objects which have been allowed access
 // to this storage volume's replica will be listed in the allowedReplicationSubnets property of this
 // storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplicantFromSubnetList(commonOptions *slapi.CommonOptions, subnetObjectTemplates []SoftLayer_Network_Subnet) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplicantFromSubnetList(ctx *slapi.RequestContext, subnetObjectTemplates []SoftLayer_Network_Subnet) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -862,14 +862,14 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplic
 // for this Storage volume's replica. The SoftLayer_Virtual_Guest objects which have been allowed
 // access to this storage volume's replica will be listed in the allowedReplicationVirtualGuests
 // property of this storage volume.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplicantFromVirtualGuestList(commonOptions *slapi.CommonOptions, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveAccessToReplicantFromVirtualGuestList(ctx *slapi.RequestContext, virtualGuestObjectTemplates []SoftLayer_Virtual_Guest) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveCredential - This method will remove a credential from the current volume. The credential must
 // have been created using the 'addNewCredential' method.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveCredential(commonOptions *slapi.CommonOptions, username string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveCredential(ctx *slapi.RequestContext, username string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -878,13 +878,13 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) RemoveCredential(com
 // before it was deleted. If a file is deleted from a Virtual Server Storage account, the file is
 // placed into the account's recycle bin and not permanently deleted. Therefore, restoreFile can be
 // used to place the file back into your Virtual Server account's root directory.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RestoreFile(commonOptions *slapi.CommonOptions, fileId string) (*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RestoreFile(ctx *slapi.RequestContext, fileId string) (*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue *SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }
 
 // RestoreFromSnapshot - Restore the volume from a snapshot that was previously taken.
-func (softlayer_network_storage *SoftLayer_Network_Storage) RestoreFromSnapshot(commonOptions *slapi.CommonOptions, snapshotId int) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) RestoreFromSnapshot(ctx *slapi.RequestContext, snapshotId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -893,7 +893,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) RestoreFromSnapshot(
 // Server Storage Account and email the password. The Storage Account passwords will be emailed to the
 // master user. For Virtual Server Storage, the password will be sent to the email address used as the
 // username.
-func (softlayer_network_storage *SoftLayer_Network_Storage) SendPasswordReminderEmail(commonOptions *slapi.CommonOptions, username string) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) SendPasswordReminderEmail(ctx *slapi.RequestContext, username string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -903,19 +903,19 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) SendPasswordReminder
 // mounting will deny access to the Virtual Server Account, remove published material and deny all file
 // interaction including uploads and downloads. Enabling or disabling mounting for Storage volumes is
 // not possible if mounting has been disabled by SoftLayer or a parent account.
-func (softlayer_network_storage *SoftLayer_Network_Storage) SetMountable(commonOptions *slapi.CommonOptions, mountable bool) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) SetMountable(ctx *slapi.RequestContext, mountable bool) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SetSnapshotAllocation - <nil>
-func (softlayer_network_storage *SoftLayer_Network_Storage) SetSnapshotAllocation(commonOptions *slapi.CommonOptions, capacityGb int) error {
+func (softlayer_network_storage *SoftLayer_Network_Storage) SetSnapshotAllocation(ctx *slapi.RequestContext, capacityGb int) error {
 	return nil
 }
 
 // UpgradeVolumeCapacity - Upgrade the Storage volume to one of the upgradable packages (for example
 // from 10 Gigs of EVault storage to 100 Gigs of EVault storage).
-func (softlayer_network_storage *SoftLayer_Network_Storage) UpgradeVolumeCapacity(commonOptions *slapi.CommonOptions, itemId int) (bool, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) UpgradeVolumeCapacity(ctx *slapi.RequestContext, itemId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -925,7 +925,7 @@ func (softlayer_network_storage *SoftLayer_Network_Storage) UpgradeVolumeCapacit
 // properties are required in the ''file'' parameter. *'''name''': The name of the file you wish to
 // upload *'''content''': The raw contents of the file you wish to upload. *'''contentType''': The
 // MIME-type of content that you wish to upload.
-func (softlayer_network_storage *SoftLayer_Network_Storage) UploadFile(commonOptions *slapi.CommonOptions, file SoftLayer_Container_Utility_File_Entity) (*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_storage *SoftLayer_Network_Storage) UploadFile(ctx *slapi.RequestContext, file SoftLayer_Container_Utility_File_Entity) (*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue *SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }

@@ -43,25 +43,25 @@ type SoftLayer_Provisioning_Hook struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Provisioning_Hook) (*SoftLayer_Provisioning_Hook, error) {
+func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Provisioning_Hook) (*SoftLayer_Provisioning_Hook, error) {
 	var returnValue *SoftLayer_Provisioning_Hook
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Provisioning_Hook) (bool, error) {
+func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Provisioning_Hook) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Provisioning_Hook, error) {
+func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Hook, error) {
 	var returnValue *SoftLayer_Provisioning_Hook
 	return returnValue, nil
 }

@@ -63,7 +63,7 @@ type SoftLayer_Network_Security_Scanner_Request struct {
 // CreateObject - Create a new vulnerability scan request. New scan requests are picked up every five
 // minutes, and the time to complete an actual scan may vary. Once the scan is finished, it can take up
 // to another five minutes for the report to be generated and accessible.
-func (softlayer_network_security_scanner_request *SoftLayer_Network_Security_Scanner_Request) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Security_Scanner_Request) (*SoftLayer_Network_Security_Scanner_Request, error) {
+func (softlayer_network_security_scanner_request *SoftLayer_Network_Security_Scanner_Request) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Security_Scanner_Request) (*SoftLayer_Network_Security_Scanner_Request, error) {
 	var returnValue *SoftLayer_Network_Security_Scanner_Request
 	return returnValue, nil
 }
@@ -72,14 +72,14 @@ func (softlayer_network_security_scanner_request *SoftLayer_Network_Security_Sca
 // number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Network_Security_Scanner_Request service. You can only retrieve requests and reports that
 // are assigned to your SoftLayer account.
-func (softlayer_network_security_scanner_request *SoftLayer_Network_Security_Scanner_Request) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Security_Scanner_Request, error) {
+func (softlayer_network_security_scanner_request *SoftLayer_Network_Security_Scanner_Request) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Security_Scanner_Request, error) {
 	var returnValue *SoftLayer_Network_Security_Scanner_Request
 	return returnValue, nil
 }
 
 // GetReport - Get the vulnerability report for a scan request, formatted as string. Previous scan
 // reports are held indefinitely.
-func (softlayer_network_security_scanner_request *SoftLayer_Network_Security_Scanner_Request) GetReport(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_network_security_scanner_request *SoftLayer_Network_Security_Scanner_Request) GetReport(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }

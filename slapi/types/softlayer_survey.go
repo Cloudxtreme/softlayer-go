@@ -44,7 +44,7 @@ type SoftLayer_Survey struct {
 }
 
 // GetActiveSurveyByType - <nil>
-func (softlayer_survey *SoftLayer_Survey) GetActiveSurveyByType(commonOptions *slapi.CommonOptions, type_ string) (*SoftLayer_Survey, error) {
+func (softlayer_survey *SoftLayer_Survey) GetActiveSurveyByType(ctx *slapi.RequestContext, type_ string) (*SoftLayer_Survey, error) {
 	var returnValue *SoftLayer_Survey
 	return returnValue, nil
 }
@@ -52,13 +52,13 @@ func (softlayer_survey *SoftLayer_Survey) GetActiveSurveyByType(commonOptions *s
 // GetObject - getObject retrieves the SoftLayer_Survey object whose ID number corresponds to the ID
 // number of the init parameter passed to the SoftLayer_Survey service. You can only retrieve the
 // survey that your portal user has taken.
-func (softlayer_survey *SoftLayer_Survey) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Survey, error) {
+func (softlayer_survey *SoftLayer_Survey) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Survey, error) {
 	var returnValue *SoftLayer_Survey
 	return returnValue, nil
 }
 
 // TakeSurvey - no documentation
-func (softlayer_survey *SoftLayer_Survey) TakeSurvey(commonOptions *slapi.CommonOptions, responses []SoftLayer_Survey_Response) (bool, error) {
+func (softlayer_survey *SoftLayer_Survey) TakeSurvey(ctx *slapi.RequestContext, responses []SoftLayer_Survey_Response) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

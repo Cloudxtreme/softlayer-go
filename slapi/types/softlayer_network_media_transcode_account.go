@@ -37,7 +37,7 @@ type SoftLayer_Network_Media_Transcode_Account struct {
 // CreateTranscodeAccount - With this method, you can create a transcode account. Individual SoftLayer
 // account can have a single Transcode account. You have to pass your SoftLayer account id as a
 // parameter.
-func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) CreateTranscodeAccount(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) CreateTranscodeAccount(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -78,7 +78,7 @@ func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transco
 // file into the /out directory along with a notification email. The files in the /out directory will
 // be removed 3 days after they were created. You will need to use an FTP client to download transcoded
 // files.
-func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) CreateTranscodeJob(commonOptions *slapi.CommonOptions, newJob SoftLayer_Network_Media_Transcode_Job) (bool, error) {
+func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) CreateTranscodeJob(ctx *slapi.RequestContext, newJob SoftLayer_Network_Media_Transcode_Job) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -88,7 +88,7 @@ func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transco
 // and /out directories. A [[SoftLayer_Container_Network_Directory_Listing|Directory Listing]] object
 // contains a type (indicating whether it is a file or a directory), name and file count if it is a
 // directory.
-func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetDirectoryInformation(commonOptions *slapi.CommonOptions, directoryName string, extensionFilter string) ([]*SoftLayer_Container_Network_Directory_Listing, error) {
+func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetDirectoryInformation(ctx *slapi.RequestContext, directoryName string, extensionFilter string) ([]*SoftLayer_Container_Network_Directory_Listing, error) {
 	var returnValue []*SoftLayer_Container_Network_Directory_Listing
 	return returnValue, nil
 }
@@ -99,7 +99,7 @@ func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transco
 // information is merely for reference purposes. You should not rely on this data. Our library grabs
 // small pieces of data from a media file to gather media details. This information may not be
 // available for some files.
-func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetFileDetail(commonOptions *slapi.CommonOptions, source string) (*SoftLayer_Container_Network_Media_Information, error) {
+func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetFileDetail(ctx *slapi.RequestContext, source string) (*SoftLayer_Container_Network_Media_Information, error) {
 	var returnValue *SoftLayer_Container_Network_Media_Information
 	return returnValue, nil
 }
@@ -110,7 +110,7 @@ func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transco
 // to use an FTP client. You will have /in and /out directories on the Transcode FTP server. You will
 // have read-write privileges for /in directory and read-only privilege for /out directory. All the
 // files in both /in and /out directories will be deleted after 72 hours from the creation date.
-func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetFtpAttributes(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Network_Authentication_Data, error) {
+func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetFtpAttributes(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Authentication_Data, error) {
 	var returnValue *SoftLayer_Container_Network_Authentication_Data
 	return returnValue, nil
 }
@@ -119,7 +119,7 @@ func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transco
 // number corresponds to the ID number of the initial parameter passed to the
 // SoftLayer_Network_Media_Transcode_Account service. You can only retrieve a Transcode account
 // assigned to your SoftLayer customer account.
-func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Media_Transcode_Account, error) {
+func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Media_Transcode_Account, error) {
 	var returnValue *SoftLayer_Network_Media_Transcode_Account
 	return returnValue, nil
 }
@@ -132,7 +132,7 @@ func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transco
 // example, "Frame Rate" element for "Windows Media 9 - Download - 1 Mbps - - Constrained preset has 19
 // element options. 15.0 frame rate is selected by default. Currently, you are not able to change the
 // default value. Customizing these values may be possible in the future.
-func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetPresetDetail(commonOptions *slapi.CommonOptions, guid string) ([]*SoftLayer_Container_Network_Media_Transcode_Preset_Element, error) {
+func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetPresetDetail(ctx *slapi.RequestContext, guid string) ([]*SoftLayer_Container_Network_Media_Transcode_Preset_Element, error) {
 	var returnValue []*SoftLayer_Container_Network_Media_Transcode_Preset_Element
 	return returnValue, nil
 }
@@ -141,7 +141,7 @@ func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transco
 // returns an array of transcoding preset objects supported by SoftLayer's Transcode server. Each
 // [[SoftLayer_Container_Network_Media_Transcode_Preset|preset object]] contains a property. You will
 // need a string when you create a new transcode job.
-func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetPresets(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Network_Media_Transcode_Preset, error) {
+func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) GetPresets(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Network_Media_Transcode_Preset, error) {
 	var returnValue []*SoftLayer_Container_Network_Media_Transcode_Preset
 	return returnValue, nil
 }

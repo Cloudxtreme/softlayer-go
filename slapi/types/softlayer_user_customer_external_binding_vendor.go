@@ -14,7 +14,7 @@ type SoftLayer_User_Customer_External_Binding_Vendor struct {
 }
 
 // GetObject - <nil>
-func (softlayer_user_customer_external_binding_vendor *SoftLayer_User_Customer_External_Binding_Vendor) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_External_Binding_Vendor, error) {
+func (softlayer_user_customer_external_binding_vendor *SoftLayer_User_Customer_External_Binding_Vendor) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_External_Binding_Vendor, error) {
 	var returnValue *SoftLayer_User_Customer_External_Binding_Vendor
 	return returnValue, nil
 }

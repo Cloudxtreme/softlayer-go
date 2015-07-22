@@ -74,7 +74,7 @@ type SoftLayer_Notification_User_Subscriber struct {
 // *notificationId = 3 *resourceRecord **resourceTableId = 1234 *preferences[1]
 // **notificationPreferenceId = 2 **value = 85 *preference[2] **notificationPreferenceId = 3 **value =
 // 15
-func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Notification_User_Subscriber) (bool, error) {
+func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Notification_User_Subscriber) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -85,13 +85,13 @@ func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscr
 // this example, the structure will set the subscriber status to active and the threshold preference to
 // 90 and the limit preference to 20 *id = 1111 *active = 1 *preferences[1] **id = 11 **value = 90
 // *preference[2] **id = 12 **value = 20
-func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Notification_User_Subscriber) (bool, error) {
+func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Notification_User_Subscriber) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Notification_User_Subscriber, error) {
+func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_User_Subscriber, error) {
 	var returnValue *SoftLayer_Notification_User_Subscriber
 	return returnValue, nil
 }

@@ -70,7 +70,7 @@ type SoftLayer_Location_Datacenter struct {
 }
 
 // GetObject - <nil>
-func (softlayer_location_datacenter *SoftLayer_Location_Datacenter) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Location_Datacenter, error) {
+func (softlayer_location_datacenter *SoftLayer_Location_Datacenter) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Location_Datacenter, error) {
 	var returnValue *SoftLayer_Location_Datacenter
 	return returnValue, nil
 }
@@ -80,7 +80,7 @@ func (softlayer_location_datacenter *SoftLayer_Location_Datacenter) GetObject(co
 // the bottom followed by a legend of the network services tracked in the graph.
 // getStatisticsGraphImage returns a PNG image of variable width and height depending on the number of
 // services reported in the image.
-func (softlayer_location_datacenter *SoftLayer_Location_Datacenter) GetStatisticsGraphImage(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_location_datacenter *SoftLayer_Location_Datacenter) GetStatisticsGraphImage(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }

@@ -24,7 +24,7 @@ type SoftLayer_User_Customer_CustomerPermission_Permission struct {
 }
 
 // GetAllObjects - no documentation
-func (softlayer_user_customer_customerpermission_permission *SoftLayer_User_Customer_CustomerPermission_Permission) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_User_Customer_CustomerPermission_Permission, error) {
+func (softlayer_user_customer_customerpermission_permission *SoftLayer_User_Customer_CustomerPermission_Permission) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_User_Customer_CustomerPermission_Permission, error) {
 	var returnValue []*SoftLayer_User_Customer_CustomerPermission_Permission
 	return returnValue, nil
 }
@@ -32,7 +32,7 @@ func (softlayer_user_customer_customerpermission_permission *SoftLayer_User_Cust
 // GetObject - getObject retrieves the SoftLayer_User_Customer_CustomerPermission_Permission object
 // whose ID number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_User_Customer_CustomerPermission_Permission service.
-func (softlayer_user_customer_customerpermission_permission *SoftLayer_User_Customer_CustomerPermission_Permission) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_CustomerPermission_Permission, error) {
+func (softlayer_user_customer_customerpermission_permission *SoftLayer_User_Customer_CustomerPermission_Permission) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_CustomerPermission_Permission, error) {
 	var returnValue *SoftLayer_User_Customer_CustomerPermission_Permission
 	return returnValue, nil
 }

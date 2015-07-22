@@ -15,7 +15,7 @@ type SoftLayer_Provisioning_Maintenance_Slots struct {
 }
 
 // GetObject - <nil>
-func (softlayer_provisioning_maintenance_slots *SoftLayer_Provisioning_Maintenance_Slots) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Provisioning_Maintenance_Slots, error) {
+func (softlayer_provisioning_maintenance_slots *SoftLayer_Provisioning_Maintenance_Slots) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Maintenance_Slots, error) {
 	var returnValue *SoftLayer_Provisioning_Maintenance_Slots
 	return returnValue, nil
 }

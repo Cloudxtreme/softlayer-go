@@ -31,7 +31,7 @@ type SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference struct {
 // CreateObject - This method creates a monitoring agent configuration template group reference by
 // passing in an object with the SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference
 // structure as the $templateObject parameter.
-func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) (*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference, error) {
+func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) (*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference, error) {
 	var returnValue *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference
 	return returnValue, nil
 }
@@ -41,14 +41,14 @@ func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLay
 // SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference structure as the $templateObjects
 // parameter. Setting the $bulkCommit parameter to true will commit the changes in one transaction,
 // false will commit after each object is created.
-func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) CreateObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) (bool, error) {
+func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - This method updates a SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference
 // record by passing in a modified instance of the object.
-func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) (bool, error) {
+func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -57,7 +57,7 @@ func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLay
 // SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference records by passing in an array of
 // modified instances of the objects. Setting the $bulkCommit parameter to true will commit the changes
 // in one transaction, false will commit after each object is updated.
-func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) EditObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) (bool, error) {
+func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -65,7 +65,7 @@ func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLay
 // GetAllObjects - This method retrieves all
 // SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference objects accessible to the active
 // user.
-func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference, error) {
+func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference, error) {
 	var returnValue []*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference
 	return returnValue, nil
 }
@@ -73,7 +73,7 @@ func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLay
 // GetObject - This method retrieves a monitoring agent configuration template group reference whose
 // identifier corresponds to the value provided in the initialization parameter passed to the
 // SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference service.
-func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference, error) {
+func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference, error) {
 	var returnValue *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference
 	return returnValue, nil
 }

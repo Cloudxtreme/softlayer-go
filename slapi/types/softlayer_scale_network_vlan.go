@@ -35,19 +35,19 @@ type SoftLayer_Scale_Network_Vlan struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Scale_Network_Vlan) (*SoftLayer_Scale_Network_Vlan, error) {
+func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Network_Vlan) (*SoftLayer_Scale_Network_Vlan, error) {
 	var returnValue *SoftLayer_Scale_Network_Vlan
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Network_Vlan, error) {
+func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Network_Vlan, error) {
 	var returnValue *SoftLayer_Scale_Network_Vlan
 	return returnValue, nil
 }

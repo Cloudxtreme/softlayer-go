@@ -47,7 +47,7 @@ type SoftLayer_Network_Message_Queue struct {
 }
 
 // GetObject - <nil>
-func (softlayer_network_message_queue *SoftLayer_Network_Message_Queue) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Message_Queue, error) {
+func (softlayer_network_message_queue *SoftLayer_Network_Message_Queue) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Message_Queue, error) {
 	var returnValue *SoftLayer_Network_Message_Queue
 	return returnValue, nil
 }

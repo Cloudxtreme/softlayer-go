@@ -66,7 +66,7 @@ type SoftLayer_Network_Firewall_Update_Request struct {
 // object passed to this function must have at least one rule. ''createObject'' returns a Boolean
 // ''true'' on successful object creation or ''false'' if your firewall update request was unable to be
 // created.
-func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Update_Request) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Firewall_Update_Request) (*SoftLayer_Network_Firewall_Update_Request, error) {
+func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Update_Request) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Firewall_Update_Request) (*SoftLayer_Network_Firewall_Update_Request, error) {
 	var returnValue *SoftLayer_Network_Firewall_Update_Request
 	return returnValue, nil
 }
@@ -75,7 +75,7 @@ func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Upda
 // request rule. These are the valid values which may be submitted as rule parameters for a firewall
 // update request. ''getFirewallUpdateRequestRuleAttributes'' returns a
 // SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute object upon success.
-func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Update_Request) GetFirewallUpdateRequestRuleAttributes(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute, error) {
+func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Update_Request) GetFirewallUpdateRequestRuleAttributes(ctx *slapi.RequestContext) (*SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute, error) {
 	var returnValue *SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute
 	return returnValue, nil
 }
@@ -86,13 +86,13 @@ func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Upda
 // requests for servers attached to your account that have a network firewall enabled.
 // ''getFirewallUpdateRequestRuleAttributes'' Get the possible attribute values for a firewall update
 // request rule.
-func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Update_Request) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Firewall_Update_Request, error) {
+func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Update_Request) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Firewall_Update_Request, error) {
 	var returnValue *SoftLayer_Network_Firewall_Update_Request
 	return returnValue, nil
 }
 
 // UpdateRuleNote - <nil>
-func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Update_Request) UpdateRuleNote(commonOptions *slapi.CommonOptions, fwRule SoftLayer_Network_Component_Firewall_Rule, note string) (bool, error) {
+func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Update_Request) UpdateRuleNote(ctx *slapi.RequestContext, fwRule SoftLayer_Network_Component_Firewall_Rule, note string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

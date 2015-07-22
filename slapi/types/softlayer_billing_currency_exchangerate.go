@@ -31,31 +31,31 @@ type SoftLayer_Billing_Currency_ExchangeRate struct {
 }
 
 // GetAllCurrencyExchangeRates - <nil>
-func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) GetAllCurrencyExchangeRates(commonOptions *slapi.CommonOptions, stringDate string) ([]*SoftLayer_Billing_Currency_ExchangeRate, error) {
+func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) GetAllCurrencyExchangeRates(ctx *slapi.RequestContext, stringDate string) ([]*SoftLayer_Billing_Currency_ExchangeRate, error) {
 	var returnValue []*SoftLayer_Billing_Currency_ExchangeRate
 	return returnValue, nil
 }
 
 // GetCurrencies - <nil>
-func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) GetCurrencies(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Billing_Currency, error) {
+func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) GetCurrencies(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Currency, error) {
 	var returnValue []*SoftLayer_Billing_Currency
 	return returnValue, nil
 }
 
 // GetExchangeRate - <nil>
-func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) GetExchangeRate(commonOptions *slapi.CommonOptions, to string, from string, effectiveDate time.Time) (*SoftLayer_Billing_Currency_ExchangeRate, error) {
+func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) GetExchangeRate(ctx *slapi.RequestContext, to string, from string, effectiveDate time.Time) (*SoftLayer_Billing_Currency_ExchangeRate, error) {
 	var returnValue *SoftLayer_Billing_Currency_ExchangeRate
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Billing_Currency_ExchangeRate, error) {
+func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Currency_ExchangeRate, error) {
 	var returnValue *SoftLayer_Billing_Currency_ExchangeRate
 	return returnValue, nil
 }
 
 // GetPrice - <nil>
-func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) GetPrice(commonOptions *slapi.CommonOptions, price float32, formatOptions SoftLayer_Container_Billing_Currency_Format) (string, error) {
+func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) GetPrice(ctx *slapi.RequestContext, price float32, formatOptions SoftLayer_Container_Billing_Currency_Format) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }

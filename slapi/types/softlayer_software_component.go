@@ -63,7 +63,7 @@ type SoftLayer_Software_Component struct {
 
 // GetLicenseFile - Attempt to retrieve the file associated with a software component. If the software
 // component does not support downloading license files an exception will be thrown.
-func (softlayer_software_component *SoftLayer_Software_Component) GetLicenseFile(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_software_component *SoftLayer_Software_Component) GetLicenseFile(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -71,13 +71,13 @@ func (softlayer_software_component *SoftLayer_Software_Component) GetLicenseFile
 // GetObject - getObject retrieves the SoftLayer_Software_Component object whose ID corresponds to the
 // ID number of the init parameter passed to the SoftLayer_Software_Component service. The best way to
 // get software components is through getSoftwareComponents from the Hardware service.
-func (softlayer_software_component *SoftLayer_Software_Component) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Software_Component, error) {
+func (softlayer_software_component *SoftLayer_Software_Component) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Software_Component, error) {
 	var returnValue *SoftLayer_Software_Component
 	return returnValue, nil
 }
 
 // GetVendorSetUpConfiguration - <nil>
-func (softlayer_software_component *SoftLayer_Software_Component) GetVendorSetUpConfiguration(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_software_component *SoftLayer_Software_Component) GetVendorSetUpConfiguration(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }

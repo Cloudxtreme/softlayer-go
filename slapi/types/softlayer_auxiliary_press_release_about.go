@@ -22,7 +22,7 @@ type SoftLayer_Auxiliary_Press_Release_About struct {
 // GetObject - getObject retrieves the SoftLayer_Auxiliary_Press_Release_About object whose about id
 // number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Auxiliary_Press_Release service.
-func (softlayer_auxiliary_press_release_about *SoftLayer_Auxiliary_Press_Release_About) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Auxiliary_Press_Release_About, error) {
+func (softlayer_auxiliary_press_release_about *SoftLayer_Auxiliary_Press_Release_About) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Auxiliary_Press_Release_About, error) {
 	var returnValue *SoftLayer_Auxiliary_Press_Release_About
 	return returnValue, nil
 }

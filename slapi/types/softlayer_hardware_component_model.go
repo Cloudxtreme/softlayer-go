@@ -101,7 +101,7 @@ type SoftLayer_Hardware_Component_Model struct {
 }
 
 // GetObject - getObject retrieves the SoftLayer_Hardware_Component_Model object.
-func (softlayer_hardware_component_model *SoftLayer_Hardware_Component_Model) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Hardware_Component_Model, error) {
+func (softlayer_hardware_component_model *SoftLayer_Hardware_Component_Model) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Hardware_Component_Model, error) {
 	var returnValue *SoftLayer_Hardware_Component_Model
 	return returnValue, nil
 }

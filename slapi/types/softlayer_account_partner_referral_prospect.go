@@ -26,19 +26,19 @@ type SoftLayer_Account_Partner_Referral_Prospect struct {
 }
 
 // CreateProspect - no documentation
-func (softlayer_account_partner_referral_prospect *SoftLayer_Account_Partner_Referral_Prospect) CreateProspect(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Container_Referral_Partner_Prospect, commit bool) (*SoftLayer_Account_Partner_Referral_Prospect, error) {
+func (softlayer_account_partner_referral_prospect *SoftLayer_Account_Partner_Referral_Prospect) CreateProspect(ctx *slapi.RequestContext, templateObject SoftLayer_Container_Referral_Partner_Prospect, commit bool) (*SoftLayer_Account_Partner_Referral_Prospect, error) {
 	var returnValue *SoftLayer_Account_Partner_Referral_Prospect
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_account_partner_referral_prospect *SoftLayer_Account_Partner_Referral_Prospect) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Partner_Referral_Prospect, error) {
+func (softlayer_account_partner_referral_prospect *SoftLayer_Account_Partner_Referral_Prospect) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Partner_Referral_Prospect, error) {
 	var returnValue *SoftLayer_Account_Partner_Referral_Prospect
 	return returnValue, nil
 }
 
 // GetSurveyQuestions - no documentation
-func (softlayer_account_partner_referral_prospect *SoftLayer_Account_Partner_Referral_Prospect) GetSurveyQuestions(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Survey_Question, error) {
+func (softlayer_account_partner_referral_prospect *SoftLayer_Account_Partner_Referral_Prospect) GetSurveyQuestions(ctx *slapi.RequestContext) ([]*SoftLayer_Survey_Question, error) {
 	var returnValue []*SoftLayer_Survey_Question
 	return returnValue, nil
 }

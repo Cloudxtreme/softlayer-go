@@ -21,7 +21,7 @@ type SoftLayer_Provisioning_Version1_Transaction_Group struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_provisioning_version1_transaction_group *SoftLayer_Provisioning_Version1_Transaction_Group) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Provisioning_Version1_Transaction_Group, error) {
+func (softlayer_provisioning_version1_transaction_group *SoftLayer_Provisioning_Version1_Transaction_Group) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Provisioning_Version1_Transaction_Group, error) {
 	var returnValue []*SoftLayer_Provisioning_Version1_Transaction_Group
 	return returnValue, nil
 }
@@ -29,7 +29,7 @@ func (softlayer_provisioning_version1_transaction_group *SoftLayer_Provisioning_
 // GetObject - getObject retrieves the SoftLayer_Provisioning_Version1_Transaction_Group object whose
 // ID number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Provisioning_Version1_Transaction_Group service.
-func (softlayer_provisioning_version1_transaction_group *SoftLayer_Provisioning_Version1_Transaction_Group) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Provisioning_Version1_Transaction_Group, error) {
+func (softlayer_provisioning_version1_transaction_group *SoftLayer_Provisioning_Version1_Transaction_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Version1_Transaction_Group, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction_Group
 	return returnValue, nil
 }

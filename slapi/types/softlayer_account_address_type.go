@@ -25,7 +25,7 @@ type SoftLayer_Account_Address_Type struct {
 }
 
 // GetObject - <nil>
-func (softlayer_account_address_type *SoftLayer_Account_Address_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Address_Type, error) {
+func (softlayer_account_address_type *SoftLayer_Account_Address_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Address_Type, error) {
 	var returnValue *SoftLayer_Account_Address_Type
 	return returnValue, nil
 }

@@ -68,7 +68,7 @@ type SoftLayer_Network_Component_Firewall struct {
 // GetObject - getObject returns a
 // SoftLayer_Network_Firewall_Module_Context_Interface_AccessControlList_Network_Component object. You
 // can only get objects for servers attached to your account that have a network firewall enabled.
-func (softlayer_network_component_firewall *SoftLayer_Network_Component_Firewall) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Component_Firewall, error) {
+func (softlayer_network_component_firewall *SoftLayer_Network_Component_Firewall) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Component_Firewall, error) {
 	var returnValue *SoftLayer_Network_Component_Firewall
 	return returnValue, nil
 }

@@ -36,26 +36,26 @@ type SoftLayer_Tag struct {
 // AutoComplete - This function is responsible for setting the Tags values. The internal flag is set to
 // 0 if the user is a customer, and 1 otherwise. AccountId is set to the account bound to the user, and
 // the tags name is set to the clean version of the tag inputted by the user.
-func (softlayer_tag *SoftLayer_Tag) AutoComplete(commonOptions *slapi.CommonOptions, tag string) ([]*SoftLayer_Tag, error) {
+func (softlayer_tag *SoftLayer_Tag) AutoComplete(ctx *slapi.RequestContext, tag string) ([]*SoftLayer_Tag, error) {
 	var returnValue []*SoftLayer_Tag
 	return returnValue, nil
 }
 
 // GetAllTagTypes - no documentation
-func (softlayer_tag *SoftLayer_Tag) GetAllTagTypes(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Tag_Type, error) {
+func (softlayer_tag *SoftLayer_Tag) GetAllTagTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Tag_Type, error) {
 	var returnValue []*SoftLayer_Tag_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_tag *SoftLayer_Tag) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Tag, error) {
+func (softlayer_tag *SoftLayer_Tag) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Tag, error) {
 	var returnValue *SoftLayer_Tag
 	return returnValue, nil
 }
 
 // GetTagByTagName - Returns the Tag object with a given name. The user types in the tag name and this
 // method returns the tag with that name.
-func (softlayer_tag *SoftLayer_Tag) GetTagByTagName(commonOptions *slapi.CommonOptions, tagList string) ([]*SoftLayer_Tag, error) {
+func (softlayer_tag *SoftLayer_Tag) GetTagByTagName(ctx *slapi.RequestContext, tagList string) ([]*SoftLayer_Tag, error) {
 	var returnValue []*SoftLayer_Tag
 	return returnValue, nil
 }
@@ -65,7 +65,7 @@ func (softlayer_tag *SoftLayer_Tag) GetTagByTagName(commonOptions *slapi.CommonO
 // the current tags along with any new ones. To remove all tag references pass an empty string. To
 // remove one or more tags omit them from the tag list. The characters permitted are 0-9, whitespace, _
 // (underscore), - (hypen), . (period), and : (colon). All other characters will be stripped away.
-func (softlayer_tag *SoftLayer_Tag) SetTags(commonOptions *slapi.CommonOptions, tags string, keyName string, resourceTableId int) (bool, error) {
+func (softlayer_tag *SoftLayer_Tag) SetTags(ctx *slapi.RequestContext, tags string, keyName string, resourceTableId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

@@ -35,19 +35,19 @@ type SoftLayer_Notification_User_Subscriber_Preference struct {
 }
 
 // CreateObject - Use the method to create a new notification preference for a subscriber
-func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Notification_User_Subscriber_Preference) (bool, error) {
+func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Notification_User_Subscriber_Preference) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObjects - <nil>
-func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) EditObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Notification_User_Subscriber_Preference) (bool, error) {
+func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Notification_User_Subscriber_Preference) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Notification_User_Subscriber_Preference, error) {
+func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_User_Subscriber_Preference, error) {
 	var returnValue *SoftLayer_Notification_User_Subscriber_Preference
 	return returnValue, nil
 }

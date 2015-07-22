@@ -27,19 +27,19 @@ type SoftLayer_Product_Package_Server_Option struct {
 }
 
 // GetAllOptions - This method will grab all the package server options.
-func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) GetAllOptions(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Package_Server_Option, error) {
+func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) GetAllOptions(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package_Server_Option, error) {
 	var returnValue []*SoftLayer_Product_Package_Server_Option
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Product_Package_Server_Option, error) {
+func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Package_Server_Option, error) {
 	var returnValue *SoftLayer_Product_Package_Server_Option
 	return returnValue, nil
 }
 
 // GetOptions - This method will grab all the package server options for the specified type.
-func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) GetOptions(commonOptions *slapi.CommonOptions, type_ string) ([]*SoftLayer_Product_Package_Server_Option, error) {
+func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) GetOptions(ctx *slapi.RequestContext, type_ string) ([]*SoftLayer_Product_Package_Server_Option, error) {
 	var returnValue []*SoftLayer_Product_Package_Server_Option
 	return returnValue, nil
 }

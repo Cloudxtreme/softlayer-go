@@ -17,13 +17,13 @@ type SoftLayer_Utility_Network struct {
 // address may fail if DNS lookup for that hostname also fails. isPingable() differs from
 // [[SoftLayer_Utility_Network::ping|ping()]] in that it returns whether an address was pingable while
 // ping() retrieves the full results of the ping command.
-func (softlayer_utility_network *SoftLayer_Utility_Network) IsPingable(commonOptions *slapi.CommonOptions, address string) (bool, error) {
+func (softlayer_utility_network *SoftLayer_Utility_Network) IsPingable(ctx *slapi.RequestContext, address string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // NsLookup - A method used to return the nameserver information for a given address
-func (softlayer_utility_network *SoftLayer_Utility_Network) NsLookup(commonOptions *slapi.CommonOptions, address string, type_ string) (string, error) {
+func (softlayer_utility_network *SoftLayer_Utility_Network) NsLookup(ctx *slapi.RequestContext, address string, type_ string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -34,7 +34,7 @@ func (softlayer_utility_network *SoftLayer_Utility_Network) NsLookup(commonOptio
 // particular host is alive on the Internet. A host that's unreachable to ping may not necessarily be
 // down, as many providers employ filtering to deny traffic. Running ping on a hostname instead of an
 // IP address may fail if DNS lookup for that hostname also fails.
-func (softlayer_utility_network *SoftLayer_Utility_Network) Ping(commonOptions *slapi.CommonOptions, address string) (string, error) {
+func (softlayer_utility_network *SoftLayer_Utility_Network) Ping(ctx *slapi.RequestContext, address string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -49,7 +49,7 @@ func (softlayer_utility_network *SoftLayer_Utility_Network) Ping(commonOptions *
 // providers assign a low priority to traceroutes in their infrastructure which may lead to inaccurate
 // hop response times. Running traceroute on a hostname instead of an IP address may fail if DNS lookup
 // for that hostname also fails.
-func (softlayer_utility_network *SoftLayer_Utility_Network) Traceroute(commonOptions *slapi.CommonOptions, address string) (string, error) {
+func (softlayer_utility_network *SoftLayer_Utility_Network) Traceroute(ctx *slapi.RequestContext, address string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -62,7 +62,7 @@ func (softlayer_utility_network *SoftLayer_Utility_Network) Traceroute(commonOpt
 // for determining a physical contact responsible for a particular domain. lookups are also useful for
 // determining domain availability. Running a lookup on an IP address queries for that IP block's
 // ownership, and is helpful for determining a physical entity responsible for a certain IP address.
-func (softlayer_utility_network *SoftLayer_Utility_Network) Whois(commonOptions *slapi.CommonOptions, address string) (string, error) {
+func (softlayer_utility_network *SoftLayer_Utility_Network) Whois(ctx *slapi.RequestContext, address string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }

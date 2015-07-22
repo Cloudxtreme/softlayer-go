@@ -26,7 +26,7 @@ type SoftLayer_Network_Firewall_Module_Context_Interface struct {
 }
 
 // GetObject - <nil>
-func (softlayer_network_firewall_module_context_interface *SoftLayer_Network_Firewall_Module_Context_Interface) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Firewall_Module_Context_Interface, error) {
+func (softlayer_network_firewall_module_context_interface *SoftLayer_Network_Firewall_Module_Context_Interface) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Firewall_Module_Context_Interface, error) {
 	var returnValue *SoftLayer_Network_Firewall_Module_Context_Interface
 	return returnValue, nil
 }

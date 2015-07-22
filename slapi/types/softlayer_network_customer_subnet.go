@@ -43,7 +43,7 @@ type SoftLayer_Network_Customer_Subnet struct {
 // CreateObject - For IPSec network tunnels, customers can create their local subnets using this
 // method. After the customer is created successfully, the customer subnet can then be added to the
 // IPSec network tunnel.
-func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Customer_Subnet) (*SoftLayer_Network_Customer_Subnet, error) {
+func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Customer_Subnet) (*SoftLayer_Network_Customer_Subnet, error) {
 	var returnValue *SoftLayer_Network_Customer_Subnet
 	return returnValue, nil
 }
@@ -52,7 +52,7 @@ func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) Crea
 // corresponds to the ID number of the init parameter passed to the SoftLayer_Network_Customer_Subnet
 // service. You can only retrieve the subnet whose account matches the account that your portal user is
 // assigned to.
-func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Customer_Subnet, error) {
+func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Customer_Subnet, error) {
 	var returnValue *SoftLayer_Network_Customer_Subnet
 	return returnValue, nil
 }

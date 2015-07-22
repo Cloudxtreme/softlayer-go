@@ -41,13 +41,13 @@ type SoftLayer_Configuration_Storage_Group_Array_Type struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Configuration_Storage_Group_Array_Type, error) {
+func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Configuration_Storage_Group_Array_Type, error) {
 	var returnValue []*SoftLayer_Configuration_Storage_Group_Array_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Configuration_Storage_Group_Array_Type, error) {
+func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Storage_Group_Array_Type, error) {
 	var returnValue *SoftLayer_Configuration_Storage_Group_Array_Type
 	return returnValue, nil
 }

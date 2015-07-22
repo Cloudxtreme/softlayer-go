@@ -13,13 +13,13 @@ type SoftLayer_Notification_Mobile struct {
 }
 
 // CreateSubscriberForMobileDevice - no documentation
-func (softlayer_notification_mobile *SoftLayer_Notification_Mobile) CreateSubscriberForMobileDevice(commonOptions *slapi.CommonOptions, keyName string, resourceTableId int, userRecordId int) (bool, error) {
+func (softlayer_notification_mobile *SoftLayer_Notification_Mobile) CreateSubscriberForMobileDevice(ctx *slapi.RequestContext, keyName string, resourceTableId int, userRecordId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_notification_mobile *SoftLayer_Notification_Mobile) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Notification_Mobile, error) {
+func (softlayer_notification_mobile *SoftLayer_Notification_Mobile) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_Mobile, error) {
 	var returnValue *SoftLayer_Notification_Mobile
 	return returnValue, nil
 }

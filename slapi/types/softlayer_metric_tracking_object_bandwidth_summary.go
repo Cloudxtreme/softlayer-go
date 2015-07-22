@@ -45,7 +45,7 @@ type SoftLayer_Metric_Tracking_Object_Bandwidth_Summary struct {
 }
 
 // GetObject - <nil>
-func (softlayer_metric_tracking_object_bandwidth_summary *SoftLayer_Metric_Tracking_Object_Bandwidth_Summary) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Metric_Tracking_Object_Bandwidth_Summary, error) {
+func (softlayer_metric_tracking_object_bandwidth_summary *SoftLayer_Metric_Tracking_Object_Bandwidth_Summary) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Metric_Tracking_Object_Bandwidth_Summary, error) {
 	var returnValue *SoftLayer_Metric_Tracking_Object_Bandwidth_Summary
 	return returnValue, nil
 }

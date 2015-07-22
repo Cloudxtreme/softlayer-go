@@ -20,13 +20,13 @@ type SoftLayer_Scale_Termination_Policy struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_scale_termination_policy *SoftLayer_Scale_Termination_Policy) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Scale_Termination_Policy, error) {
+func (softlayer_scale_termination_policy *SoftLayer_Scale_Termination_Policy) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Scale_Termination_Policy, error) {
 	var returnValue []*SoftLayer_Scale_Termination_Policy
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_termination_policy *SoftLayer_Scale_Termination_Policy) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Termination_Policy, error) {
+func (softlayer_scale_termination_policy *SoftLayer_Scale_Termination_Policy) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Termination_Policy, error) {
 	var returnValue *SoftLayer_Scale_Termination_Policy
 	return returnValue, nil
 }

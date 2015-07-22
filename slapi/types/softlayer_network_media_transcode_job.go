@@ -109,13 +109,13 @@ type SoftLayer_Network_Media_Transcode_Job struct {
 // file into the /out directory along with a notification email. The files in the /out directory will
 // be removed 3 days after they were created. You will need to use an FTP client to download transcoded
 // files.
-func (softlayer_network_media_transcode_job *SoftLayer_Network_Media_Transcode_Job) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Media_Transcode_Job) (*SoftLayer_Network_Media_Transcode_Job, error) {
+func (softlayer_network_media_transcode_job *SoftLayer_Network_Media_Transcode_Job) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Media_Transcode_Job) (*SoftLayer_Network_Media_Transcode_Job, error) {
 	var returnValue *SoftLayer_Network_Media_Transcode_Job
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_media_transcode_job *SoftLayer_Network_Media_Transcode_Job) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Media_Transcode_Job, error) {
+func (softlayer_network_media_transcode_job *SoftLayer_Network_Media_Transcode_Job) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Media_Transcode_Job, error) {
 	var returnValue *SoftLayer_Network_Media_Transcode_Job
 	return returnValue, nil
 }

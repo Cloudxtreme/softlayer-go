@@ -20,13 +20,13 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type
 }
 
 // GetAllObjects - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_routing_type *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type, error) {
+func (softlayer_network_application_delivery_controller_loadbalancer_routing_type *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type, error) {
 	var returnValue []*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_routing_type *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type, error) {
+func (softlayer_network_application_delivery_controller_loadbalancer_routing_type *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type, error) {
 	var returnValue *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type
 	return returnValue, nil
 }

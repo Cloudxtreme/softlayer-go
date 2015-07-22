@@ -53,32 +53,32 @@ type SoftLayer_Network_Storage_Allowed_Host struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
+func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
+func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Storage_Allowed_Host, error) {
+func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Allowed_Host, error) {
 	var returnValue *SoftLayer_Network_Storage_Allowed_Host
 	return returnValue, nil
 }
 
 // SetCredentialPassword - Use this method to modify the credential password for a
 // SoftLayer_Network_Storage_Allowed_Host object.
-func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) SetCredentialPassword(commonOptions *slapi.CommonOptions, password string) (bool, error) {
+func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) SetCredentialPassword(ctx *slapi.RequestContext, password string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

@@ -16,25 +16,25 @@ type SoftLayer_User_Customer_External_Binding_Totp struct {
 }
 
 // Activate - <nil>
-func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) Activate(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) Activate(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // Deactivate - <nil>
-func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) Deactivate(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) Deactivate(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GenerateSecretKey - <nil>
-func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) GenerateSecretKey(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) GenerateSecretKey(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_External_Binding_Totp, error) {
+func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_External_Binding_Totp, error) {
 	var returnValue *SoftLayer_User_Customer_External_Binding_Totp
 	return returnValue, nil
 }

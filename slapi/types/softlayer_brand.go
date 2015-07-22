@@ -103,19 +103,19 @@ type SoftLayer_Brand struct {
 }
 
 // CreateCustomerAccount - no documentation
-func (softlayer_brand *SoftLayer_Brand) CreateCustomerAccount(commonOptions *slapi.CommonOptions, account SoftLayer_Account, bypassDuplicateAccountCheck bool) (*SoftLayer_Account, error) {
+func (softlayer_brand *SoftLayer_Brand) CreateCustomerAccount(ctx *slapi.RequestContext, account SoftLayer_Account, bypassDuplicateAccountCheck bool) (*SoftLayer_Account, error) {
 	var returnValue *SoftLayer_Account
 	return returnValue, nil
 }
 
 // CreateObject - no documentation
-func (softlayer_brand *SoftLayer_Brand) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Brand) (*SoftLayer_Brand, error) {
+func (softlayer_brand *SoftLayer_Brand) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Brand) (*SoftLayer_Brand, error) {
 	var returnValue *SoftLayer_Brand
 	return returnValue, nil
 }
 
 // GetAllTicketSubjects - <nil>
-func (softlayer_brand *SoftLayer_Brand) GetAllTicketSubjects(commonOptions *slapi.CommonOptions, account SoftLayer_Account) ([]*SoftLayer_Ticket_Subject, error) {
+func (softlayer_brand *SoftLayer_Brand) GetAllTicketSubjects(ctx *slapi.RequestContext, account SoftLayer_Account) ([]*SoftLayer_Ticket_Subject, error) {
 	var returnValue []*SoftLayer_Ticket_Subject
 	return returnValue, nil
 }
@@ -123,25 +123,25 @@ func (softlayer_brand *SoftLayer_Brand) GetAllTicketSubjects(commonOptions *slap
 // GetContactInformation - Retrieve the contact information for the brand such as the corporate or
 // support contact. This will include the contact name, telephone number, fax number, email address,
 // and mailing address of the contact.
-func (softlayer_brand *SoftLayer_Brand) GetContactInformation(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Brand_Contact, error) {
+func (softlayer_brand *SoftLayer_Brand) GetContactInformation(ctx *slapi.RequestContext) ([]*SoftLayer_Brand_Contact, error) {
 	var returnValue []*SoftLayer_Brand_Contact
 	return returnValue, nil
 }
 
 // GetMerchantName - no documentation
-func (softlayer_brand *SoftLayer_Brand) GetMerchantName(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_brand *SoftLayer_Brand) GetMerchantName(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_brand *SoftLayer_Brand) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Brand, error) {
+func (softlayer_brand *SoftLayer_Brand) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Brand, error) {
 	var returnValue *SoftLayer_Brand
 	return returnValue, nil
 }
 
 // GetToken - <nil>
-func (softlayer_brand *SoftLayer_Brand) GetToken(commonOptions *slapi.CommonOptions, userId int) (string, error) {
+func (softlayer_brand *SoftLayer_Brand) GetToken(ctx *slapi.RequestContext, userId int) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }

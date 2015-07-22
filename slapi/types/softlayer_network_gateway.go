@@ -83,14 +83,14 @@ type SoftLayer_Network_Gateway struct {
 
 // BypassAllVlans - Start the asynchronous process to bypass all VLANs. Any VLANs that are already
 // bypassed will be ignored. The status field can be checked for progress.
-func (softlayer_network_gateway *SoftLayer_Network_Gateway) BypassAllVlans(commonOptions *slapi.CommonOptions) error {
+func (softlayer_network_gateway *SoftLayer_Network_Gateway) BypassAllVlans(ctx *slapi.RequestContext) error {
 	return nil
 }
 
 // BypassVlans - Start the asynchronous process to bypass the provided VLANs. The VLANs must already be
 // attached. Any VLANs that are already bypassed will be ignored. The status field can be checked for
 // progress.
-func (softlayer_network_gateway *SoftLayer_Network_Gateway) BypassVlans(commonOptions *slapi.CommonOptions, vlans []SoftLayer_Network_Gateway_Vlan) error {
+func (softlayer_network_gateway *SoftLayer_Network_Gateway) BypassVlans(ctx *slapi.RequestContext, vlans []SoftLayer_Network_Gateway_Vlan) error {
 	return nil
 }
 
@@ -99,19 +99,19 @@ func (softlayer_network_gateway *SoftLayer_Network_Gateway) BypassVlans(commonOp
 // VLANs attached, it is the equivalent of individually calling their createObject methods except this
 // will start a single asynchronous process to setup the gateway. The status of this process can be
 // checked using the status field.
-func (softlayer_network_gateway *SoftLayer_Network_Gateway) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Gateway) (*SoftLayer_Network_Gateway, error) {
+func (softlayer_network_gateway *SoftLayer_Network_Gateway) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Gateway) (*SoftLayer_Network_Gateway, error) {
 	var returnValue *SoftLayer_Network_Gateway
 	return returnValue, nil
 }
 
 // EditObject - Edit this gateway. Currently, the only value that can be edited is the name.
-func (softlayer_network_gateway *SoftLayer_Network_Gateway) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Gateway) (bool, error) {
+func (softlayer_network_gateway *SoftLayer_Network_Gateway) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Gateway) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_network_gateway *SoftLayer_Network_Gateway) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Gateway, error) {
+func (softlayer_network_gateway *SoftLayer_Network_Gateway) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Gateway, error) {
 	var returnValue *SoftLayer_Network_Gateway
 	return returnValue, nil
 }
@@ -119,20 +119,20 @@ func (softlayer_network_gateway *SoftLayer_Network_Gateway) GetObject(commonOpti
 // GetPossibleInsideVlans - Get all VLANs that can become inside VLANs on this gateway. This means the
 // must not already be an inside on the same router as this gateway, not a gateway transit and not
 // firewalled.
-func (softlayer_network_gateway *SoftLayer_Network_Gateway) GetPossibleInsideVlans(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Network_Vlan, error) {
+func (softlayer_network_gateway *SoftLayer_Network_Gateway) GetPossibleInsideVlans(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Vlan, error) {
 	var returnValue []*SoftLayer_Network_Vlan
 	return returnValue, nil
 }
 
 // UnbypassAllVlans - Start the asynchronous process to unbypass all VLANs. Any VLANs that are already
 // unbypassed will be ignored. The status field can be checked for progress.
-func (softlayer_network_gateway *SoftLayer_Network_Gateway) UnbypassAllVlans(commonOptions *slapi.CommonOptions) error {
+func (softlayer_network_gateway *SoftLayer_Network_Gateway) UnbypassAllVlans(ctx *slapi.RequestContext) error {
 	return nil
 }
 
 // UnbypassVlans - Start the asynchronous process to unbypass the provided VLANs. The VLANs must
 // already be attached. Any VLANs that are already unbypassed will be ignored. The status field can be
 // checked for progress.
-func (softlayer_network_gateway *SoftLayer_Network_Gateway) UnbypassVlans(commonOptions *slapi.CommonOptions, vlans []SoftLayer_Network_Gateway_Vlan) error {
+func (softlayer_network_gateway *SoftLayer_Network_Gateway) UnbypassVlans(ctx *slapi.RequestContext, vlans []SoftLayer_Network_Gateway_Vlan) error {
 	return nil
 }

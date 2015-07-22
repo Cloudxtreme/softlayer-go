@@ -53,25 +53,25 @@ type SoftLayer_Security_Ssh_Key struct {
 }
 
 // CreateObject - Add a ssh key to your account for use during server provisioning and os reloads.
-func (softlayer_security_ssh_key *SoftLayer_Security_Ssh_Key) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Security_Ssh_Key) (*SoftLayer_Security_Ssh_Key, error) {
+func (softlayer_security_ssh_key *SoftLayer_Security_Ssh_Key) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Security_Ssh_Key) (*SoftLayer_Security_Ssh_Key, error) {
 	var returnValue *SoftLayer_Security_Ssh_Key
 	return returnValue, nil
 }
 
 // DeleteObject - no documentation
-func (softlayer_security_ssh_key *SoftLayer_Security_Ssh_Key) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_security_ssh_key *SoftLayer_Security_Ssh_Key) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - no documentation
-func (softlayer_security_ssh_key *SoftLayer_Security_Ssh_Key) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Security_Ssh_Key) (bool, error) {
+func (softlayer_security_ssh_key *SoftLayer_Security_Ssh_Key) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Security_Ssh_Key) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_security_ssh_key *SoftLayer_Security_Ssh_Key) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Security_Ssh_Key, error) {
+func (softlayer_security_ssh_key *SoftLayer_Security_Ssh_Key) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Security_Ssh_Key, error) {
 	var returnValue *SoftLayer_Security_Ssh_Key
 	return returnValue, nil
 }

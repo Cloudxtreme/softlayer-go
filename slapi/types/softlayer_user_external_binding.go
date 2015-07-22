@@ -63,20 +63,20 @@ type SoftLayer_User_External_Binding struct {
 // DeleteObject - Delete an external authentication binding. If the external binding currently has an
 // active billing item associated you will be prevented from deleting the binding. The alternative
 // method to remove an external authentication binding is to use the service cancellation form.
-func (softlayer_user_external_binding *SoftLayer_User_External_Binding) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_external_binding *SoftLayer_User_External_Binding) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_user_external_binding *SoftLayer_User_External_Binding) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_External_Binding, error) {
+func (softlayer_user_external_binding *SoftLayer_User_External_Binding) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_External_Binding, error) {
 	var returnValue *SoftLayer_User_External_Binding
 	return returnValue, nil
 }
 
 // UpdateNote - Update the note of an external binding. The note is an optional property that is used
 // to store information about a binding.
-func (softlayer_user_external_binding *SoftLayer_User_External_Binding) UpdateNote(commonOptions *slapi.CommonOptions, text string) (bool, error) {
+func (softlayer_user_external_binding *SoftLayer_User_External_Binding) UpdateNote(ctx *slapi.RequestContext, text string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

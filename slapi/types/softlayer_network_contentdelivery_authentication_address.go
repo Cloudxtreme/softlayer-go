@@ -45,19 +45,19 @@ type SoftLayer_Network_ContentDelivery_Authentication_Address struct {
 // CreateObject - This method creates an authentication IP record. Required parameters are *
 // cdnAccountId - A CDN account id that belongs to your SoftLayer Account * ipAddress - An IP address
 // or a IP range * accessType- It can be or
-func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_ContentDelivery_Authentication_Address) (*SoftLayer_Network_ContentDelivery_Authentication_Address, error) {
+func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_ContentDelivery_Authentication_Address) (*SoftLayer_Network_ContentDelivery_Authentication_Address, error) {
 	var returnValue *SoftLayer_Network_ContentDelivery_Authentication_Address
 	return returnValue, nil
 }
 
 // DeleteObject - no documentation
-func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - This method let you edit an authentication IP object by passing a modified object.
-func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_ContentDelivery_Authentication_Address) (bool, error) {
+func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_ContentDelivery_Authentication_Address) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -66,7 +66,7 @@ func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Networ
 // whose ID number corresponds to the ID number of the initial parameter passed to the
 // SoftLayer_Network_ContentDelivery_Authentication_Address service. You can only retrieve
 // authentication IP addresses assigned to one of your CDN account.
-func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_ContentDelivery_Authentication_Address, error) {
+func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_ContentDelivery_Authentication_Address, error) {
 	var returnValue *SoftLayer_Network_ContentDelivery_Authentication_Address
 	return returnValue, nil
 }
@@ -80,7 +80,7 @@ func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Networ
 // template objects as parameter, make sure to include the id of each authentication IP addresses. You
 // must provide every authentication IP address. New priorities will be assigned to each authentication
 // IP addresses in the order of they are passed.
-func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) RearrangeAuthenticationIp(commonOptions *slapi.CommonOptions, cdnAccountId int, templateObjects []SoftLayer_Network_ContentDelivery_Authentication_Address) (bool, error) {
+func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) RearrangeAuthenticationIp(ctx *slapi.RequestContext, cdnAccountId int, templateObjects []SoftLayer_Network_ContentDelivery_Authentication_Address) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

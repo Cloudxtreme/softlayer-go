@@ -89,14 +89,14 @@ type SoftLayer_Security_Certificate struct {
 // Validation will be performed between the certificate and the private key as well as the certificate
 // and the intermediate certificate, if provided. The certificate signing request is not required, but
 // can be provided for your records.
-func (softlayer_security_certificate *SoftLayer_Security_Certificate) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Security_Certificate) (*SoftLayer_Security_Certificate, error) {
+func (softlayer_security_certificate *SoftLayer_Security_Certificate) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Security_Certificate) (*SoftLayer_Security_Certificate, error) {
 	var returnValue *SoftLayer_Security_Certificate
 	return returnValue, nil
 }
 
 // DeleteObject - Remove a certificate from your account. You may not remove a certificate with
 // associated services.
-func (softlayer_security_certificate *SoftLayer_Security_Certificate) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_security_certificate *SoftLayer_Security_Certificate) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -104,26 +104,26 @@ func (softlayer_security_certificate *SoftLayer_Security_Certificate) DeleteObje
 // EditObject - Update a certificate. Modifications are restricted to the note and CSR if the are any
 // services associated with the certificate. There are no modification restrictions for a certificate
 // with no associated services.
-func (softlayer_security_certificate *SoftLayer_Security_Certificate) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Security_Certificate) (bool, error) {
+func (softlayer_security_certificate *SoftLayer_Security_Certificate) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Security_Certificate) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // FindByCommonName - Locate certificates by their common name, traditionally a domain name.
-func (softlayer_security_certificate *SoftLayer_Security_Certificate) FindByCommonName(commonOptions *slapi.CommonOptions, commonName string) ([]*SoftLayer_Security_Certificate, error) {
+func (softlayer_security_certificate *SoftLayer_Security_Certificate) FindByCommonName(ctx *slapi.RequestContext, commonName string) ([]*SoftLayer_Security_Certificate, error) {
 	var returnValue []*SoftLayer_Security_Certificate
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_security_certificate *SoftLayer_Security_Certificate) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Security_Certificate, error) {
+func (softlayer_security_certificate *SoftLayer_Security_Certificate) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Security_Certificate, error) {
 	var returnValue *SoftLayer_Security_Certificate
 	return returnValue, nil
 }
 
 // GetPemFormat - Retrieve the certificate in PEM (Privacy Enhanced Mail) format, which is a string
 // containing all base64 encoded certificates delimited by clauses.
-func (softlayer_security_certificate *SoftLayer_Security_Certificate) GetPemFormat(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_security_certificate *SoftLayer_Security_Certificate) GetPemFormat(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }

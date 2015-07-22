@@ -165,13 +165,13 @@ type SoftLayer_Billing_Order struct {
 
 // ApproveModifiedOrder - When an order has been modified, the customer will need to approve the
 // changes. This method will allow the customer to approve the changes.
-func (softlayer_billing_order *SoftLayer_Billing_Order) ApproveModifiedOrder(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_billing_order *SoftLayer_Billing_Order) ApproveModifiedOrder(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetAllObjects - This will get all billing orders for your account.
-func (softlayer_billing_order *SoftLayer_Billing_Order) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Billing_Order, error) {
+func (softlayer_billing_order *SoftLayer_Billing_Order) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Order, error) {
 	var returnValue []*SoftLayer_Billing_Order
 	return returnValue, nil
 }
@@ -179,33 +179,33 @@ func (softlayer_billing_order *SoftLayer_Billing_Order) GetAllObjects(commonOpti
 // GetObject - getObject retrieves the SoftLayer_Billing_Order object whose ID number corresponds to
 // the ID number of the init parameter passed to the SoftLayer_Billing_Order service. You can only
 // retrieve orders that are assigned to your portal user's account.
-func (softlayer_billing_order *SoftLayer_Billing_Order) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Billing_Order, error) {
+func (softlayer_billing_order *SoftLayer_Billing_Order) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Order, error) {
 	var returnValue *SoftLayer_Billing_Order
 	return returnValue, nil
 }
 
 // GetOrderStatuses - Get a list of [[SoftLayer_Container_Billing_Order_Status]] objects.
-func (softlayer_billing_order *SoftLayer_Billing_Order) GetOrderStatuses(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_Billing_Order_Status, error) {
+func (softlayer_billing_order *SoftLayer_Billing_Order) GetOrderStatuses(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Billing_Order_Status, error) {
 	var returnValue []*SoftLayer_Container_Billing_Order_Status
 	return returnValue, nil
 }
 
 // GetPdf - Retrieve a PDF record of a SoftLayer quote. If the order is not a quote, an error will be
 // thrown.
-func (softlayer_billing_order *SoftLayer_Billing_Order) GetPdf(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_billing_order *SoftLayer_Billing_Order) GetPdf(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetPdfFilename - no documentation
-func (softlayer_billing_order *SoftLayer_Billing_Order) GetPdfFilename(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_billing_order *SoftLayer_Billing_Order) GetPdfFilename(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetRecalculatedOrderContainer - Get a SoftLayer_Container_Product_Order with all the recalculated
 // total with considerations for promotions, reseller status and taxes.
-func (softlayer_billing_order *SoftLayer_Billing_Order) GetRecalculatedOrderContainer(commonOptions *slapi.CommonOptions, message string, ignoreDiscountsFlag bool) (*SoftLayer_Container_Product_Order, error) {
+func (softlayer_billing_order *SoftLayer_Billing_Order) GetRecalculatedOrderContainer(ctx *slapi.RequestContext, message string, ignoreDiscountsFlag bool) (*SoftLayer_Container_Product_Order, error) {
 	var returnValue *SoftLayer_Container_Product_Order
 	return returnValue, nil
 }
@@ -213,7 +213,7 @@ func (softlayer_billing_order *SoftLayer_Billing_Order) GetRecalculatedOrderCont
 // IsPendingEditApproval - When an order has been modified, it will contain a status indicating so.
 // This method checks that status and also verifies that the active user's account is the same as the
 // account on the order.
-func (softlayer_billing_order *SoftLayer_Billing_Order) IsPendingEditApproval(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_billing_order *SoftLayer_Billing_Order) IsPendingEditApproval(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

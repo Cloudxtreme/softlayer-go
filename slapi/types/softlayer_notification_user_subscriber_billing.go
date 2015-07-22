@@ -15,7 +15,7 @@ type SoftLayer_Notification_User_Subscriber_Billing struct {
 }
 
 // GetObject - <nil>
-func (softlayer_notification_user_subscriber_billing *SoftLayer_Notification_User_Subscriber_Billing) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Notification_User_Subscriber_Billing, error) {
+func (softlayer_notification_user_subscriber_billing *SoftLayer_Notification_User_Subscriber_Billing) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_User_Subscriber_Billing, error) {
 	var returnValue *SoftLayer_Notification_User_Subscriber_Billing
 	return returnValue, nil
 }

@@ -375,14 +375,14 @@ type SoftLayer_User_Customer struct {
 }
 
 // AcknowledgeSupportPolicy - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) AcknowledgeSupportPolicy(commonOptions *slapi.CommonOptions) error {
+func (softlayer_user_customer *SoftLayer_User_Customer) AcknowledgeSupportPolicy(ctx *slapi.RequestContext) error {
 	return nil
 }
 
 // AddApiAuthenticationKey - Create a user's API authentication key, allowing that user access to query
 // the SoftLayer addApiAuthenticationKey() returns the users new API key. Each portal user is allowed a
 // maximum of two API keys.
-func (softlayer_user_customer *SoftLayer_User_Customer) AddApiAuthenticationKey(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddApiAuthenticationKey(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -395,7 +395,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) AddApiAuthenticationKey(
 // can assign hardware access to their child users, but not to themselves. An account's master has
 // access to all hardware on their customer account and can set hardware access for any of the other
 // users on their account.
-func (softlayer_user_customer *SoftLayer_User_Customer) AddBulkHardwareAccess(commonOptions *slapi.CommonOptions, hardwareIds []int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddBulkHardwareAccess(ctx *slapi.RequestContext, hardwareIds []int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -408,13 +408,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) AddBulkHardwareAccess(co
 // [[SoftLayer_User_Customer_CustomerPermission_Permission::getAllObjects]] method to retrieve a list
 // of all permissions available in the SoftLayer customer portal and Permissions are removed based on
 // the keyName property of the permission objects within the permissions parameter.
-func (softlayer_user_customer *SoftLayer_User_Customer) AddBulkPortalPermission(commonOptions *slapi.CommonOptions, permissions []SoftLayer_User_Customer_CustomerPermission_Permission) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddBulkPortalPermission(ctx *slapi.RequestContext, permissions []SoftLayer_User_Customer_CustomerPermission_Permission) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AddBulkRoles - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) AddBulkRoles(commonOptions *slapi.CommonOptions, roles []SoftLayer_User_Permission_Role) error {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddBulkRoles(ctx *slapi.RequestContext, roles []SoftLayer_User_Permission_Role) error {
 	return nil
 }
 
@@ -428,13 +428,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) AddBulkRoles(commonOptio
 // users, but not to themselves. An account's master has access to all CloudLayer Computing Instances
 // on their customer account and can set CloudLayer Computing Instance access for any of the other
 // users on their account.
-func (softlayer_user_customer *SoftLayer_User_Customer) AddBulkVirtualGuestAccess(commonOptions *slapi.CommonOptions, virtualGuestIds []int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddBulkVirtualGuestAccess(ctx *slapi.RequestContext, virtualGuestIds []int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AddExternalBinding - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) AddExternalBinding(commonOptions *slapi.CommonOptions, externalBinding SoftLayer_User_External_Binding) (*SoftLayer_User_Customer_External_Binding, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddExternalBinding(ctx *slapi.RequestContext, externalBinding SoftLayer_User_External_Binding) (*SoftLayer_User_Customer_External_Binding, error) {
 	var returnValue *SoftLayer_User_Customer_External_Binding
 	return returnValue, nil
 }
@@ -446,7 +446,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) AddExternalBinding(commo
 // attempting to add then addHardwareAccess() returns true. Users can assign hardware access to their
 // child users, but not to themselves. An account's master has access to all hardware on their customer
 // account and can set hardware access for any of the other users on their account.
-func (softlayer_user_customer *SoftLayer_User_Customer) AddHardwareAccess(commonOptions *slapi.CommonOptions, hardwareId int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddHardwareAccess(ctx *slapi.RequestContext, hardwareId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -454,7 +454,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) AddHardwareAccess(common
 // AddNotificationSubscriber - Create a notification subscription record for the user. If a
 // subscription record exists for the notification, the record will be set to active, if currently
 // inactive.
-func (softlayer_user_customer *SoftLayer_User_Customer) AddNotificationSubscriber(commonOptions *slapi.CommonOptions, notificationKeyName string) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddNotificationSubscriber(ctx *slapi.RequestContext, notificationKeyName string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -467,13 +467,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) AddNotificationSubscribe
 // [[SoftLayer_User_Customer_CustomerPermission_Permission::getAllObjects]] method to retrieve a list
 // of all permissions available in the SoftLayer customer portal and Permissions are added based on the
 // keyName property of the permission parameter.
-func (softlayer_user_customer *SoftLayer_User_Customer) AddPortalPermission(commonOptions *slapi.CommonOptions, permission SoftLayer_User_Customer_CustomerPermission_Permission) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddPortalPermission(ctx *slapi.RequestContext, permission SoftLayer_User_Customer_CustomerPermission_Permission) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AddRole - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) AddRole(commonOptions *slapi.CommonOptions, role SoftLayer_User_Permission_Role) error {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddRole(ctx *slapi.RequestContext, role SoftLayer_User_Permission_Role) error {
 	return nil
 }
 
@@ -486,7 +486,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) AddRole(commonOptions *s
 // Computing Instance access to their child users, but not to themselves. An account's master has
 // access to all CloudLayer Computing Instances on their customer account and can set CloudLayer
 // Computing Instance access for any of the other users on their account.
-func (softlayer_user_customer *SoftLayer_User_Customer) AddVirtualGuestAccess(commonOptions *slapi.CommonOptions, virtualGuestId int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) AddVirtualGuestAccess(ctx *slapi.RequestContext, virtualGuestId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -496,13 +496,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) AddVirtualGuestAccess(co
 // binding]] container can be used for this service. Make sure to set the
 // [[SoftLayer_Container_User_Customer_External_Binding_Phone::authenticationToken|authenticationToken]]
 // that is generated by [[SoftLayer_User_Customer|initiateExternalAuthentication]] service.
-func (softlayer_user_customer *SoftLayer_User_Customer) CheckExternalAuthenticationStatus(commonOptions *slapi.CommonOptions, authenticationContainer SoftLayer_Container_User_Customer_External_Binding) (*SoftLayer_Container_User_Customer_Portal_Token, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) CheckExternalAuthenticationStatus(ctx *slapi.RequestContext, authenticationContainer SoftLayer_Container_User_Customer_External_Binding) (*SoftLayer_Container_User_Customer_Portal_Token, error) {
 	var returnValue *SoftLayer_Container_User_Customer_Portal_Token
 	return returnValue, nil
 }
 
 // CreateNotificationSubscriber - no documentation
-func (softlayer_user_customer *SoftLayer_User_Customer) CreateNotificationSubscriber(commonOptions *slapi.CommonOptions, keyName string, resourceTableId int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) CreateNotificationSubscriber(ctx *slapi.RequestContext, keyName string, resourceTableId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -514,7 +514,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) CreateNotificationSubscr
 // user and sub-users who have the User Manage permission can add new users. createObject() creates
 // users with a default permission set. After adding a user it may be helpful to set their permissions
 // and hardware access.
-func (softlayer_user_customer *SoftLayer_User_Customer) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_User_Customer, password string, vpnPassword string) (*SoftLayer_User_Customer, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Customer, password string, vpnPassword string) (*SoftLayer_User_Customer, error) {
 	var returnValue *SoftLayer_User_Customer
 	return returnValue, nil
 }
@@ -522,13 +522,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) CreateObject(commonOptio
 // CreateSubscriberDeliveryMethods - Create delivery methods for a notification that the user is
 // subscribed to. Multiple delivery method keyNames can be supplied to create multiple delivery methods
 // for the specified notification. Available delivery methods - Available notifications -
-func (softlayer_user_customer *SoftLayer_User_Customer) CreateSubscriberDeliveryMethods(commonOptions *slapi.CommonOptions, notificationKeyName string, deliveryMethodKeyNames []string) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) CreateSubscriberDeliveryMethods(ctx *slapi.RequestContext, notificationKeyName string, deliveryMethodKeyNames []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DeactivateNotificationSubscriber - no documentation
-func (softlayer_user_customer *SoftLayer_User_Customer) DeactivateNotificationSubscriber(commonOptions *slapi.CommonOptions, keyName string, resourceTableId int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) DeactivateNotificationSubscriber(ctx *slapi.RequestContext, keyName string, resourceTableId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -537,7 +537,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) DeactivateNotificationSu
 // customer portal can update other user's information. Use editObject() if you wish to edit a single
 // user account. Users who do not have the User Manage permission can only update their own
 // information.
-func (softlayer_user_customer *SoftLayer_User_Customer) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_User_Customer) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Customer) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -546,13 +546,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) EditObject(commonOptions
 // SoftLayer customer portal can update other user's information. Use editObjects() if you wish to edit
 // multiple users at once. Users who do not have the User Manage permission can only update their own
 // information.
-func (softlayer_user_customer *SoftLayer_User_Customer) EditObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_User_Customer) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_User_Customer) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // FindUserPreference - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) FindUserPreference(commonOptions *slapi.CommonOptions, profileName string, containerKeyname string, preferenceKeyname string) ([]*SoftLayer_Layout_Profile, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) FindUserPreference(ctx *slapi.RequestContext, profileName string, containerKeyname string, preferenceKeyname string) ([]*SoftLayer_Layout_Profile, error) {
 	var returnValue []*SoftLayer_Layout_Profile
 	return returnValue, nil
 }
@@ -560,13 +560,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) FindUserPreference(commo
 // GetActiveExternalAuthenticationVendors - The getActiveExternalAuthenticationVendors method will
 // return a list of available external vendors that a SoftLayer user can authenticate against. The list
 // will only contain vendors for which the user has at least one active external binding.
-func (softlayer_user_customer *SoftLayer_User_Customer) GetActiveExternalAuthenticationVendors(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_User_Customer_External_Binding_Vendor, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetActiveExternalAuthenticationVendors(ctx *slapi.RequestContext) ([]*SoftLayer_Container_User_Customer_External_Binding_Vendor, error) {
 	var returnValue []*SoftLayer_Container_User_Customer_External_Binding_Vendor
 	return returnValue, nil
 }
 
 // GetAuthenticationToken - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) GetAuthenticationToken(commonOptions *slapi.CommonOptions, token SoftLayer_Container_User_Authentication_Token) (*SoftLayer_Container_User_Authentication_Token, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetAuthenticationToken(ctx *slapi.RequestContext, token SoftLayer_Container_User_Authentication_Token) (*SoftLayer_Container_User_Authentication_Token, error) {
 	var returnValue *SoftLayer_Container_User_Authentication_Token
 	return returnValue, nil
 }
@@ -574,7 +574,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) GetAuthenticationToken(c
 // GetDefaultSecurityQuestions - Retrieve default security questions. The default security questions
 // will be used during the password reset process if a user has not set up their own security questions
 // and answers.
-func (softlayer_user_customer *SoftLayer_User_Customer) GetDefaultSecurityQuestions(commonOptions *slapi.CommonOptions, key string) ([]*SoftLayer_User_Security_Question, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetDefaultSecurityQuestions(ctx *slapi.RequestContext, key string) ([]*SoftLayer_User_Security_Question, error) {
 	var returnValue []*SoftLayer_User_Security_Question
 	return returnValue, nil
 }
@@ -582,13 +582,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) GetDefaultSecurityQuesti
 // GetHardwareCount - Retrieve the number of servers that a portal user has access to. Portal users can
 // have restrictions set to limit services for and to perform actions on hardware. You can set these
 // permissions in the portal by clicking the "administrative" then "user admin" links.
-func (softlayer_user_customer *SoftLayer_User_Customer) GetHardwareCount(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetHardwareCount(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
 
 // GetImpersonationToken - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) GetImpersonationToken(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetImpersonationToken(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -596,7 +596,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) GetImpersonationToken(co
 // GetObject - getObject retrieves the SoftLayer_User_Customer object whose ID number corresponds to
 // the ID number of the init parameter passed to the SoftLayer_User_Customer service. You can only
 // retrieve users that are assigned to the customer account belonging to the user making the API call.
-func (softlayer_user_customer *SoftLayer_User_Customer) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer, error) {
 	var returnValue *SoftLayer_User_Customer
 	return returnValue, nil
 }
@@ -606,25 +606,25 @@ func (softlayer_user_customer *SoftLayer_User_Customer) GetObject(commonOptions 
 // In this case getPortalLoginToken() also verifies the given security question ID and answer. If
 // authentication is successful then the API returns a token containing the ID of the authenticated
 // user and a hash key used by the SoftLayer customer portal to maintain authentication.
-func (softlayer_user_customer *SoftLayer_User_Customer) GetPortalLoginToken(commonOptions *slapi.CommonOptions, username string, password string, securityQuestionId int, securityQuestionAnswer string) (*SoftLayer_Container_User_Customer_Portal_Token, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetPortalLoginToken(ctx *slapi.RequestContext, username string, password string, securityQuestionId int, securityQuestionAnswer string) (*SoftLayer_Container_User_Customer_Portal_Token, error) {
 	var returnValue *SoftLayer_Container_User_Customer_Portal_Token
 	return returnValue, nil
 }
 
 // GetSupportPolicyDocument - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) GetSupportPolicyDocument(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetSupportPolicyDocument(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetSupportPolicyName - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) GetSupportPolicyName(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetSupportPolicyName(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetSupportedLocales - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) GetSupportedLocales(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Locale, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetSupportedLocales(ctx *slapi.RequestContext) ([]*SoftLayer_Locale, error) {
 	var returnValue []*SoftLayer_Locale
 	return returnValue, nil
 }
@@ -633,13 +633,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) GetSupportedLocales(comm
 // email generated by the [[SoftLayer_User_Customer::lostPassword|lostPassword]] method. The SoftLayer
 // customer portal uses getUserFromLostPasswordRequest() to retrieve user security questions. Password
 // recovery keys are valid for 24 hours after they're generated.
-func (softlayer_user_customer *SoftLayer_User_Customer) GetUserFromLostPasswordRequest(commonOptions *slapi.CommonOptions, key string) ([]*SoftLayer_User_Security_Question, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetUserFromLostPasswordRequest(ctx *slapi.RequestContext, key string) ([]*SoftLayer_User_Security_Question, error) {
 	var returnValue []*SoftLayer_User_Security_Question
 	return returnValue, nil
 }
 
 // GetUserPreferences - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) GetUserPreferences(commonOptions *slapi.CommonOptions, profileName string, containerKeyname string) ([]*SoftLayer_Layout_Profile, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetUserPreferences(ctx *slapi.RequestContext, profileName string, containerKeyname string) ([]*SoftLayer_Layout_Profile, error) {
 	var returnValue []*SoftLayer_Layout_Profile
 	return returnValue, nil
 }
@@ -648,13 +648,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) GetUserPreferences(commo
 // access to. Portal users can have restrictions set to limit services for and to perform actions on
 // CloudLayer Computing Instances. You can set these permissions in the portal by clicking the
 // "administrative" then "user admin" links.
-func (softlayer_user_customer *SoftLayer_User_Customer) GetVirtualGuestCount(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) GetVirtualGuestCount(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
 
 // InTerminalStatus - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) InTerminalStatus(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) InTerminalStatus(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -666,7 +666,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) InTerminalStatus(commonO
 // used for this service. This service returns a unique authentication request token. You can use
 // [[SoftLayer_User_Customer::checkExternalAuthenticationStatus|checkExternalAuthenticationStatus]]
 // service to check if the authentication request is complete or not.
-func (softlayer_user_customer *SoftLayer_User_Customer) InitiateExternalAuthentication(commonOptions *slapi.CommonOptions, authenticationContainer SoftLayer_Container_User_Customer_External_Binding) (string, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) InitiateExternalAuthentication(ctx *slapi.RequestContext, authenticationContainer SoftLayer_Container_User_Customer_External_Binding) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -674,21 +674,21 @@ func (softlayer_user_customer *SoftLayer_User_Customer) InitiateExternalAuthenti
 // IsMasterUser - Portal users are considered master users if they don't have an associated parent
 // user. The only users who don't have parent users are users whose username matches their SoftLayer
 // account name. Master users have special permissions throughout the SoftLayer customer portal.
-func (softlayer_user_customer *SoftLayer_User_Customer) IsMasterUser(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) IsMasterUser(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // IsValidForumPassword - Determine if a string is the given user's login password to the SoftLayer
 // community forums.
-func (softlayer_user_customer *SoftLayer_User_Customer) IsValidForumPassword(commonOptions *slapi.CommonOptions, password string) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) IsValidForumPassword(ctx *slapi.RequestContext, password string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // IsValidPortalPassword - Determine if a string is the given user's login password to the SoftLayer
 // customer portal.
-func (softlayer_user_customer *SoftLayer_User_Customer) IsValidPortalPassword(commonOptions *slapi.CommonOptions, password string) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) IsValidPortalPassword(ctx *slapi.RequestContext, password string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -701,7 +701,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) IsValidPortalPassword(co
 // [[SoftLayer_User_Customer::setPasswordFromLostPasswordRequest|setPasswordFromLostPasswordRequest]]
 // method to reset a user's password. Password recovery hash keys are valid for 24 hours after they're
 // generated.
-func (softlayer_user_customer *SoftLayer_User_Customer) LostPassword(commonOptions *slapi.CommonOptions, username string, email string) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) LostPassword(ctx *slapi.RequestContext, username string, email string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -710,7 +710,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) LostPassword(commonOptio
 // given external authentication container with an external vendor. The authentication container and
 // its contents will be verified before an attempt is made to authenticate the contents of the
 // container with an external vendor.
-func (softlayer_user_customer *SoftLayer_User_Customer) PerformExternalAuthentication(commonOptions *slapi.CommonOptions, authenticationContainer SoftLayer_Container_User_Customer_External_Binding) (*SoftLayer_Container_User_Customer_Portal_Token, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) PerformExternalAuthentication(ctx *slapi.RequestContext, authenticationContainer SoftLayer_Container_User_Customer_External_Binding) (*SoftLayer_Container_User_Customer_Portal_Token, error) {
 	var returnValue *SoftLayer_Container_User_Customer_Portal_Token
 	return returnValue, nil
 }
@@ -721,7 +721,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) PerformExternalAuthentic
 // over this user, an inadequate permissions exception will get thrown. Users can call this function on
 // child users, but not to themselves. An account's master has access to all users permissions on their
 // account.
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveAllHardwareAccessForThisUser(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveAllHardwareAccessForThisUser(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -732,14 +732,14 @@ func (softlayer_user_customer *SoftLayer_User_Customer) RemoveAllHardwareAccessF
 // not have administrative privileges over this user, an inadequate permissions exception will get
 // thrown. Users can call this function on child users, but not to themselves. An account's master has
 // access to all users permissions on their account.
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveAllVirtualAccessForThisUser(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveAllVirtualAccessForThisUser(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveApiAuthenticationKey - Remove a user's API authentication key, removing that user's access to
 // query the SoftLayer
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveApiAuthenticationKey(commonOptions *slapi.CommonOptions, keyId int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveApiAuthenticationKey(ctx *slapi.RequestContext, keyId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -753,7 +753,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) RemoveApiAuthenticationK
 // to all hardware on their customer account and can set hardware access for any of the other users on
 // their account. If the user has full hardware access, then it will provide access to but passed in"
 // hardware ids.
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveBulkHardwareAccess(commonOptions *slapi.CommonOptions, hardwareIds []int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveBulkHardwareAccess(ctx *slapi.RequestContext, hardwareIds []int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -767,13 +767,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) RemoveBulkHardwareAccess
 // [[SoftLayer_User_Customer_CustomerPermission_Permission::getAllObjects]] method to retrieve a list
 // of all permissions available in the SoftLayer customer portal and Permissions are removed based on
 // the keyName property of the permission objects within the permissions parameter.
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveBulkPortalPermission(commonOptions *slapi.CommonOptions, permissions []SoftLayer_User_Customer_CustomerPermission_Permission) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveBulkPortalPermission(ctx *slapi.RequestContext, permissions []SoftLayer_User_Customer_CustomerPermission_Permission) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveBulkRoles - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveBulkRoles(commonOptions *slapi.CommonOptions, roles []SoftLayer_User_Permission_Role) error {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveBulkRoles(ctx *slapi.RequestContext, roles []SoftLayer_User_Permission_Role) error {
 	return nil
 }
 
@@ -786,13 +786,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) RemoveBulkRoles(commonOp
 // returns true. Users can assign CloudLayer Computing Instance access to their child users, but not to
 // themselves. An account's master has access to all CloudLayer Computing Instances on their customer
 // account and can set hardware access for any of the other users on their account.
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveBulkVirtualGuestAccess(commonOptions *slapi.CommonOptions, virtualGuestIds []int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveBulkVirtualGuestAccess(ctx *slapi.RequestContext, virtualGuestIds []int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveExternalBinding - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveExternalBinding(commonOptions *slapi.CommonOptions, externalBinding SoftLayer_User_External_Binding) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveExternalBinding(ctx *slapi.RequestContext, externalBinding SoftLayer_User_External_Binding) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -805,7 +805,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) RemoveExternalBinding(co
 // hardware access to their child users, but not to themselves. An account's master has access to all
 // hardware on their customer account and can set hardware access for any of the other users on their
 // account.
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveHardwareAccess(commonOptions *slapi.CommonOptions, hardwareId int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveHardwareAccess(ctx *slapi.RequestContext, hardwareId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -819,13 +819,13 @@ func (softlayer_user_customer *SoftLayer_User_Customer) RemoveHardwareAccess(com
 // [[SoftLayer_User_Customer_CustomerPermission_Permission::getAllObjects]] method to retrieve a list
 // of all permissions available in the SoftLayer customer portal and Permissions are removed based on
 // the keyName property of the permission parameter.
-func (softlayer_user_customer *SoftLayer_User_Customer) RemovePortalPermission(commonOptions *slapi.CommonOptions, permission SoftLayer_User_Customer_CustomerPermission_Permission) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemovePortalPermission(ctx *slapi.RequestContext, permission SoftLayer_User_Customer_CustomerPermission_Permission) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveRole - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveRole(commonOptions *slapi.CommonOptions, role SoftLayer_User_Permission_Role) error {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveRole(ctx *slapi.RequestContext, role SoftLayer_User_Permission_Role) error {
 	return nil
 }
 
@@ -838,7 +838,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) RemoveRole(commonOptions
 // Computing Instance access to their child users, but not to themselves. An account's master has
 // access to all CloudLayer Computing Instances on their customer account and can set instance access
 // for any of the other users on their account.
-func (softlayer_user_customer *SoftLayer_User_Customer) RemoveVirtualGuestAccess(commonOptions *slapi.CommonOptions, virtualGuestId int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) RemoveVirtualGuestAccess(ctx *slapi.RequestContext, virtualGuestId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -846,31 +846,31 @@ func (softlayer_user_customer *SoftLayer_User_Customer) RemoveVirtualGuestAccess
 // ResetExpiredPassword - Attempt to authenticate a username and password to the SoftLayer customer
 // portal and reset there password. If authentication and password reset is successful then the API
 // returns true.
-func (softlayer_user_customer *SoftLayer_User_Customer) ResetExpiredPassword(commonOptions *slapi.CommonOptions, username string, password string, newPassword string, securityQuestionId int, securityQuestionAnswer string) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) ResetExpiredPassword(ctx *slapi.RequestContext, username string, password string, newPassword string, securityQuestionId int, securityQuestionAnswer string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SamlAuthenticate - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) SamlAuthenticate(commonOptions *slapi.CommonOptions, accountId string, samlResponse string) (*SoftLayer_Container_User_Customer_Portal_Token, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) SamlAuthenticate(ctx *slapi.RequestContext, accountId string, samlResponse string) (*SoftLayer_Container_User_Customer_Portal_Token, error) {
 	var returnValue *SoftLayer_Container_User_Customer_Portal_Token
 	return returnValue, nil
 }
 
 // SamlBeginAuthentication - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) SamlBeginAuthentication(commonOptions *slapi.CommonOptions, accountId int) (string, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) SamlBeginAuthentication(ctx *slapi.RequestContext, accountId int) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // SamlBeginLogout - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) SamlBeginLogout(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) SamlBeginLogout(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // SamlLogout - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) SamlLogout(commonOptions *slapi.CommonOptions, samlResponse string) error {
+func (softlayer_user_customer *SoftLayer_User_Customer) SamlLogout(ctx *slapi.RequestContext, samlResponse string) error {
 	return nil
 }
 
@@ -882,7 +882,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) SamlLogout(commonOptions
 // ...contain at least one uppercase letter * ...contain at least one lowercase letter * ...contain at
 // least one number * ...contain one of the special characters _ - | @ . , ? / ! ~ # $ % ^ & * ( ) { }
 // [ ] \ + = * ...not match your username * ...not match your forum password
-func (softlayer_user_customer *SoftLayer_User_Customer) SetPasswordFromLostPasswordRequest(commonOptions *slapi.CommonOptions, key string, password string, securityAnswers []SoftLayer_User_Customer_Security_Answer) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) SetPasswordFromLostPasswordRequest(ctx *slapi.RequestContext, key string, password string, securityAnswers []SoftLayer_User_Customer_Security_Answer) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -894,7 +894,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) SetPasswordFromLostPassw
 // ...contain one of the special characters _ - | @ . , ? / ! ~ # $ % ^ & * ( ) { } [ ] \ + = * ...not
 // match your username * ...not match your portal password Finally, users can only update their own
 // password.
-func (softlayer_user_customer *SoftLayer_User_Customer) UpdateForumPassword(commonOptions *slapi.CommonOptions, password string) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) UpdateForumPassword(ctx *slapi.RequestContext, password string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -902,7 +902,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) UpdateForumPassword(comm
 // UpdateNotificationSubscriber - Update the active status for a notification that the user is
 // subscribed to. A notification along with an active flag can be supplied to update the active status
 // for a particular notification subscription.
-func (softlayer_user_customer *SoftLayer_User_Customer) UpdateNotificationSubscriber(commonOptions *slapi.CommonOptions, notificationKeyName string, active int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) UpdateNotificationSubscriber(ctx *slapi.RequestContext, notificationKeyName string, active int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -914,7 +914,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) UpdateNotificationSubscr
 // of the special characters _ - | @ . , ? / ! ~ # $ % ^ & * ( ) { } [ ] \ + = * ...not match your
 // username * ...not match your forum password Finally, users can only update their own password. An
 // account's master user can update any of their account users' passwords.
-func (softlayer_user_customer *SoftLayer_User_Customer) UpdatePassword(commonOptions *slapi.CommonOptions, password string) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) UpdatePassword(ctx *slapi.RequestContext, password string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -925,7 +925,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) UpdatePassword(commonOpt
 // unique answer for each question, and each answer may only contain alphanumeric or the . , - _ ( ) [
 // ] : ; > < characters. Existing user security questions and answers are deleted before new ones are
 // set, and users may only update their own security questions and answers.
-func (softlayer_user_customer *SoftLayer_User_Customer) UpdateSecurityAnswers(commonOptions *slapi.CommonOptions, questions []SoftLayer_User_Security_Question, answers []string) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) UpdateSecurityAnswers(ctx *slapi.RequestContext, questions []SoftLayer_User_Security_Question, answers []string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -934,7 +934,7 @@ func (softlayer_user_customer *SoftLayer_User_Customer) UpdateSecurityAnswers(co
 // subscribed to. A delivery method keyName along with an active flag can be supplied to update the
 // active status of the delivery methods for the specified notification. Available delivery methods -
 // Available notifications -
-func (softlayer_user_customer *SoftLayer_User_Customer) UpdateSubscriberDeliveryMethod(commonOptions *slapi.CommonOptions, notificationKeyName string, deliveryMethodKeyNames []string, active int) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) UpdateSubscriberDeliveryMethod(ctx *slapi.RequestContext, notificationKeyName string, deliveryMethodKeyNames []string, active int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -946,20 +946,20 @@ func (softlayer_user_customer *SoftLayer_User_Customer) UpdateSubscriberDelivery
 // of the special characters _ - | @ . , ? / ! ~ # $ % ^ & * ( ) { } [ ] \ = * ...not match your
 // username * ...not match your forum password Finally, users can only update their own VPN password.
 // An account's master user can update any of their account users' VPN passwords.
-func (softlayer_user_customer *SoftLayer_User_Customer) UpdateVpnPassword(commonOptions *slapi.CommonOptions, password string) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) UpdateVpnPassword(ctx *slapi.RequestContext, password string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // UpdateVpnUser - Always call this function to enable changes when manually configuring VPN subnet
 // access.
-func (softlayer_user_customer *SoftLayer_User_Customer) UpdateVpnUser(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) UpdateVpnUser(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // ValidateAuthenticationToken - <nil>
-func (softlayer_user_customer *SoftLayer_User_Customer) ValidateAuthenticationToken(commonOptions *slapi.CommonOptions, authenticationToken SoftLayer_Container_User_Authentication_Token) (*SoftLayer_Container_User_Customer_Portal_Token, error) {
+func (softlayer_user_customer *SoftLayer_User_Customer) ValidateAuthenticationToken(ctx *slapi.RequestContext, authenticationToken SoftLayer_Container_User_Authentication_Token) (*SoftLayer_Container_User_Customer_Portal_Token, error) {
 	var returnValue *SoftLayer_Container_User_Customer_Portal_Token
 	return returnValue, nil
 }

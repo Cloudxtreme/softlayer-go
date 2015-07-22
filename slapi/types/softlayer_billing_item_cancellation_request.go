@@ -68,7 +68,7 @@ type SoftLayer_Billing_Item_Cancellation_Request struct {
 // category code belongs to the cancelable product codes. You can retrieve the cancelable product
 // category by the [[SoftLayer_Product_Item_Category::getValidCancelableServiceItemCategories|product
 // category]] service.
-func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Billing_Item_Cancellation_Request) (*SoftLayer_Billing_Item_Cancellation_Request, error) {
+func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Billing_Item_Cancellation_Request) (*SoftLayer_Billing_Item_Cancellation_Request, error) {
 	var returnValue *SoftLayer_Billing_Item_Cancellation_Request
 	return returnValue, nil
 }
@@ -76,7 +76,7 @@ func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancel
 // GetAllCancellationRequests - This method returns all service cancellation requests. Make sure to
 // include the "resultLimit" in the request header for quicker response. If there is no result limit
 // header is passed, it will return the latest 25 results by default.
-func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) GetAllCancellationRequests(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Billing_Item_Cancellation_Request, error) {
+func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) GetAllCancellationRequests(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Item_Cancellation_Request, error) {
 	var returnValue []*SoftLayer_Billing_Item_Cancellation_Request
 	return returnValue, nil
 }
@@ -85,7 +85,7 @@ func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancel
 // service returns the time by which a cancellation request submission is permitted in the current
 // billing cycle. If the current time falls into the cut off date, this will return next earliest
 // cancellation cut off date. Available category codes are: service, server
-func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) GetCancellationCutoffDate(commonOptions *slapi.CommonOptions, accountId int, categoryCode string) (*time.Time, error) {
+func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) GetCancellationCutoffDate(ctx *slapi.RequestContext, accountId int, categoryCode string) (*time.Time, error) {
 	var returnValue *time.Time
 	return returnValue, nil
 }
@@ -94,14 +94,14 @@ func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancel
 // number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Billing_Item_Cancellation_Request service. You can only retrieve cancellation request
 // records that are assigned to your SoftLayer account.
-func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Billing_Item_Cancellation_Request, error) {
+func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Item_Cancellation_Request, error) {
 	var returnValue *SoftLayer_Billing_Item_Cancellation_Request
 	return returnValue, nil
 }
 
 // RemoveCancellationItem - This method removes a cancellation item from a cancellation request that is
 // in "Pending" or "Approved" status.
-func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) RemoveCancellationItem(commonOptions *slapi.CommonOptions, itemId int) (bool, error) {
+func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) RemoveCancellationItem(ctx *slapi.RequestContext, itemId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -109,13 +109,13 @@ func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancel
 // ValidateBillingItemForCancellation - This method examined if a billing item is eligible for
 // cancellation. It checks if the billing item you provided is already in your existing cancellation
 // request.
-func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) ValidateBillingItemForCancellation(commonOptions *slapi.CommonOptions, billingItemId int) (bool, error) {
+func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) ValidateBillingItemForCancellation(ctx *slapi.RequestContext, billingItemId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // Void - This method voids a service cancellation request in "Pending" or "Approved" status.
-func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) Void(commonOptions *slapi.CommonOptions, closeRelatedTicketFlag bool) (bool, error) {
+func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) Void(ctx *slapi.RequestContext, closeRelatedTicketFlag bool) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

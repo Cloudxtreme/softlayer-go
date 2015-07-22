@@ -140,13 +140,13 @@ type SoftLayer_Software_Description struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_software_description *SoftLayer_Software_Description) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Software_Description, error) {
+func (softlayer_software_description *SoftLayer_Software_Description) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Software_Description, error) {
 	var returnValue []*SoftLayer_Software_Description
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_software_description *SoftLayer_Software_Description) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Software_Description, error) {
+func (softlayer_software_description *SoftLayer_Software_Description) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Software_Description, error) {
 	var returnValue *SoftLayer_Software_Description
 	return returnValue, nil
 }

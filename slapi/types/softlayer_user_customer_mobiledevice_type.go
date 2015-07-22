@@ -30,13 +30,13 @@ type SoftLayer_User_Customer_MobileDevice_Type struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_user_customer_mobiledevice_type *SoftLayer_User_Customer_MobileDevice_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_User_Customer_MobileDevice_Type, error) {
+func (softlayer_user_customer_mobiledevice_type *SoftLayer_User_Customer_MobileDevice_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_User_Customer_MobileDevice_Type, error) {
 	var returnValue []*SoftLayer_User_Customer_MobileDevice_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_user_customer_mobiledevice_type *SoftLayer_User_Customer_MobileDevice_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_MobileDevice_Type, error) {
+func (softlayer_user_customer_mobiledevice_type *SoftLayer_User_Customer_MobileDevice_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_MobileDevice_Type, error) {
 	var returnValue *SoftLayer_User_Customer_MobileDevice_Type
 	return returnValue, nil
 }

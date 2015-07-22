@@ -58,7 +58,7 @@ type SoftLayer_Sales_Presale_Event struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Sales_Presale_Event, error) {
+func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Sales_Presale_Event, error) {
 	var returnValue []*SoftLayer_Sales_Presale_Event
 	return returnValue, nil
 }
@@ -66,7 +66,7 @@ func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) GetAllObject
 // GetObject - '''getObject''' retrieves the [[SoftLayer_Sales_Presale_Event]] object whose id number
 // corresponds to the id number of the init parameter passed to the SoftLayer_Sales_Presale_Event
 // service. Customers may only retrieve presale events that are currently active.
-func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Sales_Presale_Event, error) {
+func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Sales_Presale_Event, error) {
 	var returnValue *SoftLayer_Sales_Presale_Event
 	return returnValue, nil
 }

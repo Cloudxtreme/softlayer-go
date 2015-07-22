@@ -91,7 +91,7 @@ type SoftLayer_Network_LoadBalancer_VirtualIpAddress struct {
 
 // Disable - Disable a Virtual IP Address, removing it from load balancer rotation and denying all
 // connections to that IP address.
-func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) Disable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) Disable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -102,13 +102,13 @@ func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBal
 // objects in the services array and pass the modified object to this function. Services cannot be
 // deleted in this manner, you must call deleteObject() on the service to physically remove them from
 // the load balancer.
-func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_LoadBalancer_VirtualIpAddress) (bool, error) {
+func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_LoadBalancer_VirtualIpAddress) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // Enable - Enable a disabled Virtual IP Address, allowing connections back to the IP address.
-func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) Enable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) Enable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -117,13 +117,13 @@ func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBal
 // number corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Network_LoadBalancer_VirtualIpAddress service. You can only retrieve Load Balancers
 // assigned to your account.
-func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_LoadBalancer_VirtualIpAddress, error) {
+func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_LoadBalancer_VirtualIpAddress, error) {
 	var returnValue *SoftLayer_Network_LoadBalancer_VirtualIpAddress
 	return returnValue, nil
 }
 
 // KickAllConnections - Quickly remove all active external connections to a Virtual IP Address.
-func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) KickAllConnections(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) KickAllConnections(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -132,7 +132,7 @@ func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBal
 // on your account to reflect the change. This function will only upgrade you to the next "level" of
 // service. The next level follows this pattern Current Level => Next Level 50 100 100 200 200 500 500
 // 1000 1000 1200 1200 1500 1500 2000 2000 2500 2500 3000
-func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) UpgradeConnectionLimit(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) UpgradeConnectionLimit(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

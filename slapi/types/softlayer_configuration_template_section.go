@@ -82,13 +82,13 @@ type SoftLayer_Configuration_Template_Section struct {
 }
 
 // GetObject - <nil>
-func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Configuration_Template_Section, error) {
+func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Section, error) {
 	var returnValue *SoftLayer_Configuration_Template_Section
 	return returnValue, nil
 }
 
 // HasSubSections - no documentation
-func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section) HasSubSections(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section) HasSubSections(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

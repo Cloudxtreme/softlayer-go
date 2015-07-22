@@ -30,7 +30,7 @@ type SoftLayer_Provisioning_Maintenance_Classification struct {
 // GetMaintenanceClassification - Retrieve an array of
 // SoftLayer_Provisioning_Maintenance_Classification data types, which contain all maintenance
 // classifications.
-func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) GetMaintenanceClassification(commonOptions *slapi.CommonOptions, maintenanceClassificationId int) ([]*SoftLayer_Provisioning_Maintenance_Classification, error) {
+func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) GetMaintenanceClassification(ctx *slapi.RequestContext, maintenanceClassificationId int) ([]*SoftLayer_Provisioning_Maintenance_Classification, error) {
 	var returnValue []*SoftLayer_Provisioning_Maintenance_Classification
 	return returnValue, nil
 }
@@ -38,13 +38,13 @@ func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_
 // GetMaintenanceClassificationsByItemCategory - Retrieve an array of
 // SoftLayer_Provisioning_Maintenance_Classification data types, which contain all maintenance
 // classifications.
-func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) GetMaintenanceClassificationsByItemCategory(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Provisioning_Maintenance_Classification_Item_Category, error) {
+func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) GetMaintenanceClassificationsByItemCategory(ctx *slapi.RequestContext) ([]*SoftLayer_Provisioning_Maintenance_Classification_Item_Category, error) {
 	var returnValue []*SoftLayer_Provisioning_Maintenance_Classification_Item_Category
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Provisioning_Maintenance_Classification, error) {
+func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Maintenance_Classification, error) {
 	var returnValue *SoftLayer_Provisioning_Maintenance_Classification
 	return returnValue, nil
 }

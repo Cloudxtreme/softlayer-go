@@ -25,7 +25,7 @@ type SoftLayer_Account_Shipment_Status struct {
 }
 
 // GetObject - <nil>
-func (softlayer_account_shipment_status *SoftLayer_Account_Shipment_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Shipment_Status, error) {
+func (softlayer_account_shipment_status *SoftLayer_Account_Shipment_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Shipment_Status, error) {
 	var returnValue *SoftLayer_Account_Shipment_Status
 	return returnValue, nil
 }

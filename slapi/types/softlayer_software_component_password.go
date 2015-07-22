@@ -47,44 +47,44 @@ type SoftLayer_Software_Component_Password struct {
 }
 
 // CreateObject - no documentation
-func (softlayer_software_component_password *SoftLayer_Software_Component_Password) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Software_Component_Password) (*SoftLayer_Software_Component_Password, error) {
+func (softlayer_software_component_password *SoftLayer_Software_Component_Password) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Software_Component_Password) (*SoftLayer_Software_Component_Password, error) {
 	var returnValue *SoftLayer_Software_Component_Password
 	return returnValue, nil
 }
 
 // CreateObjects - Create more than one password for a software component.
-func (softlayer_software_component_password *SoftLayer_Software_Component_Password) CreateObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Software_Component_Password) (bool, error) {
+func (softlayer_software_component_password *SoftLayer_Software_Component_Password) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Software_Component_Password) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DeleteObject - no documentation
-func (softlayer_software_component_password *SoftLayer_Software_Component_Password) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_software_component_password *SoftLayer_Software_Component_Password) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DeleteObjects - Delete more than one passwords from a software component.
-func (softlayer_software_component_password *SoftLayer_Software_Component_Password) DeleteObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Software_Component_Password) (bool, error) {
+func (softlayer_software_component_password *SoftLayer_Software_Component_Password) DeleteObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Software_Component_Password) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - Edit the properties of a software component password such as the username, password,
 // port, and notes.
-func (softlayer_software_component_password *SoftLayer_Software_Component_Password) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Software_Component_Password) (bool, error) {
+func (softlayer_software_component_password *SoftLayer_Software_Component_Password) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Software_Component_Password) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObjects - Edit more than one password from a software component.
-func (softlayer_software_component_password *SoftLayer_Software_Component_Password) EditObjects(commonOptions *slapi.CommonOptions, templateObjects []SoftLayer_Software_Component_Password) (bool, error) {
+func (softlayer_software_component_password *SoftLayer_Software_Component_Password) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Software_Component_Password) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_software_component_password *SoftLayer_Software_Component_Password) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Software_Component_Password, error) {
+func (softlayer_software_component_password *SoftLayer_Software_Component_Password) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Software_Component_Password, error) {
 	var returnValue *SoftLayer_Software_Component_Password
 	return returnValue, nil
 }

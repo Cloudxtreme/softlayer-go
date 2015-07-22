@@ -157,7 +157,7 @@ type SoftLayer_Network_Tunnel_Module_Context struct {
 // the private and service subnets on the SoftLayer network which are on the other end of this network
 // tunnel. A network tunnel's configurations must be applied to the network device in order for the
 // association described above to take effect.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) AddCustomerSubnetToNetworkTunnel(commonOptions *slapi.CommonOptions, subnetId int) (bool, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) AddCustomerSubnetToNetworkTunnel(ctx *slapi.RequestContext, subnetId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -166,7 +166,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // subnet is associated, the network tunnel will allow the customer (remote) network to access the
 // private subnet. A network tunnel's configurations must be applied to the network device in order for
 // the association described above to take effect.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) AddPrivateSubnetToNetworkTunnel(commonOptions *slapi.CommonOptions, subnetId int) (bool, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) AddPrivateSubnetToNetworkTunnel(ctx *slapi.RequestContext, subnetId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -177,7 +177,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // tunnel. Service subnets provide access to SoftLayer services such as the customer management portal
 // and the SoftLayer A network tunnel's configurations must be applied to the network device in order
 // for the association described above to take effect.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) AddServiceSubnetToNetworkTunnel(commonOptions *slapi.CommonOptions, subnetId int) (bool, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) AddServiceSubnetToNetworkTunnel(ctx *slapi.RequestContext, subnetId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -187,7 +187,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // modified in anyway. Only one network tunnel configuration transaction can be created. If a
 // transaction has been created or is running, a new transaction cannot be created until the previous
 // transaction completes.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) ApplyConfigurationsToDevice(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) ApplyConfigurationsToDevice(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -197,7 +197,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // deliver packets to a destination ip address that is on a customer (remote) subnet. A network
 // tunnel's configurations must be applied to the network device in order for an address translation to
 // be created.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) CreateAddressTranslation(commonOptions *slapi.CommonOptions, translation SoftLayer_Network_Tunnel_Module_Context_Address_Translation) (*SoftLayer_Network_Tunnel_Module_Context_Address_Translation, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) CreateAddressTranslation(ctx *slapi.RequestContext, translation SoftLayer_Network_Tunnel_Module_Context_Address_Translation) (*SoftLayer_Network_Tunnel_Module_Context_Address_Translation, error) {
 	var returnValue *SoftLayer_Network_Tunnel_Module_Context_Address_Translation
 	return returnValue, nil
 }
@@ -206,7 +206,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // SoftLayer_Network_Tunnel_Module_Context::createAddressTranslation. However, it allows multiple
 // translations to be passed in for creation. A network tunnel's configurations must be applied to the
 // network device in order for the address translations to be created.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) CreateAddressTranslations(commonOptions *slapi.CommonOptions, translations []SoftLayer_Network_Tunnel_Module_Context_Address_Translation) ([]*SoftLayer_Network_Tunnel_Module_Context_Address_Translation, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) CreateAddressTranslations(ctx *slapi.RequestContext, translations []SoftLayer_Network_Tunnel_Module_Context_Address_Translation) ([]*SoftLayer_Network_Tunnel_Module_Context_Address_Translation, error) {
 	var returnValue []*SoftLayer_Network_Tunnel_Module_Context_Address_Translation
 	return returnValue, nil
 }
@@ -215,21 +215,21 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // translations deliver packets to a destination ip address that is on a customer subnet (remote). A
 // network tunnel's configurations must be applied to the network device in order for an address
 // translation to be deleted.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) DeleteAddressTranslation(commonOptions *slapi.CommonOptions, translationId int) (bool, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) DeleteAddressTranslation(ctx *slapi.RequestContext, translationId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DownloadAddressTranslationConfigurations - Provides all of the address translation configurations
 // for an IPSec VPN tunnel in a text file
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) DownloadAddressTranslationConfigurations(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) DownloadAddressTranslationConfigurations(ctx *slapi.RequestContext) (*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue *SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }
 
 // DownloadParameterConfigurations - Provides all of the configurations for an IPSec VPN network tunnel
 // in a text file
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) DownloadParameterConfigurations(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Utility_File_Entity, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) DownloadParameterConfigurations(ctx *slapi.RequestContext) (*SoftLayer_Container_Utility_File_Entity, error) {
 	var returnValue *SoftLayer_Container_Utility_File_Entity
 	return returnValue, nil
 }
@@ -239,7 +239,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // deliver packets to a destination ip address that is on a customer (remote) subnet. A network
 // tunnel's configurations must be applied to the network device in order for an address translation to
 // be created.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) EditAddressTranslation(commonOptions *slapi.CommonOptions, translation SoftLayer_Network_Tunnel_Module_Context_Address_Translation) (*SoftLayer_Network_Tunnel_Module_Context_Address_Translation, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) EditAddressTranslation(ctx *slapi.RequestContext, translation SoftLayer_Network_Tunnel_Module_Context_Address_Translation) (*SoftLayer_Network_Tunnel_Module_Context_Address_Translation, error) {
 	var returnValue *SoftLayer_Network_Tunnel_Module_Context_Address_Translation
 	return returnValue, nil
 }
@@ -249,7 +249,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // packets to a destination ip address that is on a customer (remote) subnet. A network tunnel's
 // configurations must be applied to the network device in order for an address translation to be
 // modified.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) EditAddressTranslations(commonOptions *slapi.CommonOptions, translations []SoftLayer_Network_Tunnel_Module_Context_Address_Translation) ([]*SoftLayer_Network_Tunnel_Module_Context_Address_Translation, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) EditAddressTranslations(ctx *slapi.RequestContext, translations []SoftLayer_Network_Tunnel_Module_Context_Address_Translation) ([]*SoftLayer_Network_Tunnel_Module_Context_Address_Translation, error) {
 	var returnValue []*SoftLayer_Network_Tunnel_Module_Context_Address_Translation
 	return returnValue, nil
 }
@@ -277,7 +277,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // is currently running, the network tunnel's setting cannot be modified until the running transaction
 // completes. A network tunnel's configurations must be applied to the network device in order for the
 // modifications made to take effect.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Network_Tunnel_Module_Context) (bool, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Tunnel_Module_Context) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -285,56 +285,56 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // GetAddressTranslationConfigurations - The address translations will be returned. All the
 // translations will be formatted so that the configurations can be copied into a host file. Format:
 // {address translation SoftLayer IP Address} {address translation name}
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetAddressTranslationConfigurations(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetAddressTranslationConfigurations(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetAuthenticationDefault - The default authentication type used for both phases of the negotiation
 // process. The default value is set to MD5.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetAuthenticationDefault(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetAuthenticationDefault(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetAuthenticationOptions - Authentication options available for both phases of the negotiation
 // process. The authentication options are as follows: * MD5 * SHA1 * SHA256
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetAuthenticationOptions(commonOptions *slapi.CommonOptions) ([]string, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetAuthenticationOptions(ctx *slapi.RequestContext) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }
 
 // GetDiffieHellmanGroupDefault - The default Diffie-Hellman group used for both phases of the
 // negotiation process. The default value is set to 2.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetDiffieHellmanGroupDefault(commonOptions *slapi.CommonOptions) (int, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetDiffieHellmanGroupDefault(ctx *slapi.RequestContext) (int, error) {
 	var returnValue int
 	return returnValue, nil
 }
 
 // GetDiffieHellmanGroupOptions - The Diffie-Hellman group options used for both phases of the
 // negotiation process. The diffie-hellman group options are as follows: * 0 (None) * 1 * 2 * 5
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetDiffieHellmanGroupOptions(commonOptions *slapi.CommonOptions) ([]int, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetDiffieHellmanGroupOptions(ctx *slapi.RequestContext) ([]int, error) {
 	var returnValue []int
 	return returnValue, nil
 }
 
 // GetEncryptionDefault - The default encryption type used for both phases of the negotiation process.
 // The default value is set to 3DES.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetEncryptionDefault(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetEncryptionDefault(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetEncryptionOptions - Encryption options available for both phases of the negotiation process. The
 // valid encryption options are as follows: * DES * 3DES * AES128 * AES192 * AES256
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetEncryptionOptions(commonOptions *slapi.CommonOptions) ([]string, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetEncryptionOptions(ctx *slapi.RequestContext) ([]string, error) {
 	var returnValue []string
 	return returnValue, nil
 }
 
 // GetKeylifeLimits - The keylife limits. Keylife max limit is set to 120. Keylife min limit is set to
 // 172800.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetKeylifeLimits(commonOptions *slapi.CommonOptions) ([]int, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetKeylifeLimits(ctx *slapi.RequestContext) ([]int, error) {
 	var returnValue []int
 	return returnValue, nil
 }
@@ -343,7 +343,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // corresponds to the ID number of the init parameter passed to the
 // SoftLayer_Network_Tunnel_Module_Context service. The IPSec network tunnel will be returned if it is
 // associated with the account and the user has proper permission to manage network tunnels.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Tunnel_Module_Context, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Tunnel_Module_Context, error) {
 	var returnValue *SoftLayer_Network_Tunnel_Module_Context
 	return returnValue, nil
 }
@@ -352,21 +352,21 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // returned. It will list all of phase one and two negotiation parameters. Both remote and local
 // subnets will be provided as well. This is useful when the configurations need to be passed on to
 // another team and/or company for internal network configuration.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetParameterConfigurationsForCustomerView(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetParameterConfigurationsForCustomerView(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetPhaseOneKeylifeDefault - The default phase 1 keylife used if a value is not provided. The default
 // value is set to 3600.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetPhaseOneKeylifeDefault(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetPhaseOneKeylifeDefault(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
 
 // GetPhaseTwoKeylifeDefault - The default phase 2 keylife used if a value is not provided. The default
 // value is set to 28800.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetPhaseTwoKeylifeDefault(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) GetPhaseTwoKeylifeDefault(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -375,7 +375,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // tunnel. When a remote subnet is disassociated, that subnet will not able to communicate with private
 // and service subnets on the SoftLayer network. A network tunnel's configurations must be applied to
 // the network device in order for the disassociation described above to take effect.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) RemoveCustomerSubnetFromNetworkTunnel(commonOptions *slapi.CommonOptions, subnetId int) (bool, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) RemoveCustomerSubnetFromNetworkTunnel(ctx *slapi.RequestContext, subnetId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -385,7 +385,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // not able to communicate with the private subnet that was just disassociated. A network tunnel's
 // configurations must be applied to the network device in order for the disassociation described above
 // to take effect.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) RemovePrivateSubnetFromNetworkTunnel(commonOptions *slapi.CommonOptions, subnetId int) (bool, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) RemovePrivateSubnetFromNetworkTunnel(ctx *slapi.RequestContext, subnetId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -395,7 +395,7 @@ func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_C
 // tunnel will not able to communicate with that service subnet on the SoftLayer network. A network
 // tunnel's configurations must be applied to the network device in order for the disassociation
 // described above to take effect.
-func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) RemoveServiceSubnetFromNetworkTunnel(commonOptions *slapi.CommonOptions, subnetId int) (bool, error) {
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) RemoveServiceSubnetFromNetworkTunnel(ctx *slapi.RequestContext, subnetId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

@@ -26,13 +26,13 @@ type SoftLayer_Account_MasterServiceAgreement struct {
 }
 
 // GetObject - <nil>
-func (softlayer_account_masterserviceagreement *SoftLayer_Account_MasterServiceAgreement) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_MasterServiceAgreement, error) {
+func (softlayer_account_masterserviceagreement *SoftLayer_Account_MasterServiceAgreement) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_MasterServiceAgreement, error) {
 	var returnValue *SoftLayer_Account_MasterServiceAgreement
 	return returnValue, nil
 }
 
 // GetPdf - <nil>
-func (softlayer_account_masterserviceagreement *SoftLayer_Account_MasterServiceAgreement) GetPdf(commonOptions *slapi.CommonOptions, accountId int, guid string) (string, error) {
+func (softlayer_account_masterserviceagreement *SoftLayer_Account_MasterServiceAgreement) GetPdf(ctx *slapi.RequestContext, accountId int, guid string) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }

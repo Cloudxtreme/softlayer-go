@@ -25,13 +25,13 @@ type SoftLayer_Scale_Member struct {
 }
 
 // DeleteObject - <nil>
-func (softlayer_scale_member *SoftLayer_Scale_Member) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_scale_member *SoftLayer_Scale_Member) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_scale_member *SoftLayer_Scale_Member) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Scale_Member, error) {
+func (softlayer_scale_member *SoftLayer_Scale_Member) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Member, error) {
 	var returnValue *SoftLayer_Scale_Member
 	return returnValue, nil
 }

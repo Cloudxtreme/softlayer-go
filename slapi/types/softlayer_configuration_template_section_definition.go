@@ -84,7 +84,7 @@ type SoftLayer_Configuration_Template_Section_Definition struct {
 }
 
 // GetObject - <nil>
-func (softlayer_configuration_template_section_definition *SoftLayer_Configuration_Template_Section_Definition) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Configuration_Template_Section_Definition, error) {
+func (softlayer_configuration_template_section_definition *SoftLayer_Configuration_Template_Section_Definition) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Section_Definition, error) {
 	var returnValue *SoftLayer_Configuration_Template_Section_Definition
 	return returnValue, nil
 }

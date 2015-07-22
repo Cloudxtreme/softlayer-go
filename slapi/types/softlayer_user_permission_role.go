@@ -60,45 +60,45 @@ type SoftLayer_User_Permission_Role struct {
 }
 
 // AddUser - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) AddUser(commonOptions *slapi.CommonOptions, user SoftLayer_User_Customer) error {
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) AddUser(ctx *slapi.RequestContext, user SoftLayer_User_Customer) error {
 	return nil
 }
 
 // CreateObject - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_User_Permission_Role) (*SoftLayer_User_Permission_Role, error) {
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Permission_Role) (*SoftLayer_User_Permission_Role, error) {
 	var returnValue *SoftLayer_User_Permission_Role
 	return returnValue, nil
 }
 
 // DeleteObject - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_User_Permission_Role) (*SoftLayer_User_Permission_Role, error) {
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Permission_Role) (*SoftLayer_User_Permission_Role, error) {
 	var returnValue *SoftLayer_User_Permission_Role
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Permission_Role, error) {
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Permission_Role, error) {
 	var returnValue *SoftLayer_User_Permission_Role
 	return returnValue, nil
 }
 
 // LinkGroup - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) LinkGroup(commonOptions *slapi.CommonOptions, group SoftLayer_User_Permission_Group) error {
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) LinkGroup(ctx *slapi.RequestContext, group SoftLayer_User_Permission_Group) error {
 	return nil
 }
 
 // RemoveUser - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) RemoveUser(commonOptions *slapi.CommonOptions, user SoftLayer_User_Customer) error {
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) RemoveUser(ctx *slapi.RequestContext, user SoftLayer_User_Customer) error {
 	return nil
 }
 
 // UnlinkGroup - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) UnlinkGroup(commonOptions *slapi.CommonOptions, group SoftLayer_User_Permission_Group) error {
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) UnlinkGroup(ctx *slapi.RequestContext, group SoftLayer_User_Permission_Group) error {
 	return nil
 }

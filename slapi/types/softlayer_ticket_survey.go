@@ -14,7 +14,7 @@ type SoftLayer_Ticket_Survey struct {
 // [[SoftLayer_Container_Ticket_Survey_Preference|survey preference]] which indicates if your account
 // is applicable to receive a survey and if you're opted in. You can control the survey opt via the
 // [[SoftLayer_Ticket_Survey::optIn|opt-in]] or [[SoftLayer_Ticket_Survey::optOut|opt-out]] method.
-func (softlayer_ticket_survey *SoftLayer_Ticket_Survey) GetPreference(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Ticket_Survey_Preference, error) {
+func (softlayer_ticket_survey *SoftLayer_Ticket_Survey) GetPreference(ctx *slapi.RequestContext) (*SoftLayer_Container_Ticket_Survey_Preference, error) {
 	var returnValue *SoftLayer_Container_Ticket_Survey_Preference
 	return returnValue, nil
 }
@@ -22,7 +22,7 @@ func (softlayer_ticket_survey *SoftLayer_Ticket_Survey) GetPreference(commonOpti
 // OptIn - You will not receive a ticket survey if you are opted out. Use this method to opt back in if
 // you wish to provide feedback to our support team. You may use the
 // [[SoftLayer_Ticket_Survey::getPreference|getPreference]] method to check your current opt status.
-func (softlayer_ticket_survey *SoftLayer_Ticket_Survey) OptIn(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Ticket_Survey_Preference, error) {
+func (softlayer_ticket_survey *SoftLayer_Ticket_Survey) OptIn(ctx *slapi.RequestContext) (*SoftLayer_Container_Ticket_Survey_Preference, error) {
 	var returnValue *SoftLayer_Container_Ticket_Survey_Preference
 	return returnValue, nil
 }
@@ -33,7 +33,7 @@ func (softlayer_ticket_survey *SoftLayer_Ticket_Survey) OptIn(commonOptions *sla
 // survey preference. The "applicable" property of the
 // [[SoftLayer_Container_Ticket_Survey_Preference|survey preference]] indicates if the survey is
 // relevant to your account or not.
-func (softlayer_ticket_survey *SoftLayer_Ticket_Survey) OptOut(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Ticket_Survey_Preference, error) {
+func (softlayer_ticket_survey *SoftLayer_Ticket_Survey) OptOut(ctx *slapi.RequestContext) (*SoftLayer_Container_Ticket_Survey_Preference, error) {
 	var returnValue *SoftLayer_Container_Ticket_Survey_Preference
 	return returnValue, nil
 }

@@ -70,7 +70,7 @@ type SoftLayer_Account_Agreement struct {
 }
 
 // GetObject - <nil>
-func (softlayer_account_agreement *SoftLayer_Account_Agreement) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Account_Agreement, error) {
+func (softlayer_account_agreement *SoftLayer_Account_Agreement) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Agreement, error) {
 	var returnValue *SoftLayer_Account_Agreement
 	return returnValue, nil
 }

@@ -29,13 +29,13 @@ type SoftLayer_Product_Package_Type struct {
 }
 
 // GetAllObjects - This method will return all of the available package types.
-func (softlayer_product_package_type *SoftLayer_Product_Package_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Package_Type, error) {
+func (softlayer_product_package_type *SoftLayer_Product_Package_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package_Type, error) {
 	var returnValue []*SoftLayer_Product_Package_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_product_package_type *SoftLayer_Product_Package_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Product_Package_Type, error) {
+func (softlayer_product_package_type *SoftLayer_Product_Package_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Package_Type, error) {
 	var returnValue *SoftLayer_Product_Package_Type
 	return returnValue, nil
 }

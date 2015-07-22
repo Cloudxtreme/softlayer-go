@@ -23,7 +23,7 @@ type SoftLayer_Location_Reservation_Rack_Member struct {
 }
 
 // GetObject - <nil>
-func (softlayer_location_reservation_rack_member *SoftLayer_Location_Reservation_Rack_Member) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Location_Reservation_Rack_Member, error) {
+func (softlayer_location_reservation_rack_member *SoftLayer_Location_Reservation_Rack_Member) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Location_Reservation_Rack_Member, error) {
 	var returnValue *SoftLayer_Location_Reservation_Rack_Member
 	return returnValue, nil
 }

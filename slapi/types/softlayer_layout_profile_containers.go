@@ -34,19 +34,19 @@ type SoftLayer_Layout_Profile_Containers struct {
 }
 
 // CreateObject - <nil>
-func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Layout_Profile_Containers) (bool, error) {
+func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Layout_Profile_Containers) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditObject - <nil>
-func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Layout_Profile_Containers) (bool, error) {
+func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Layout_Profile_Containers) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Layout_Profile_Containers, error) {
+func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Layout_Profile_Containers, error) {
 	var returnValue *SoftLayer_Layout_Profile_Containers
 	return returnValue, nil
 }

@@ -662,27 +662,27 @@ type SoftLayer_Hardware struct {
 
 // AllowAccessToNetworkStorage - This method is used to allow access to a SoftLayer_Network_Storage
 // volume that supports host- or network-level access control.
-func (softlayer_hardware *SoftLayer_Hardware) AllowAccessToNetworkStorage(commonOptions *slapi.CommonOptions, networkStorageTemplateObject SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) AllowAccessToNetworkStorage(ctx *slapi.RequestContext, networkStorageTemplateObject SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // AllowAccessToNetworkStorageList - This method is used to allow access to multiple
 // SoftLayer_Network_Storage volumes that support host- or network-level access control.
-func (softlayer_hardware *SoftLayer_Hardware) AllowAccessToNetworkStorageList(commonOptions *slapi.CommonOptions, networkStorageTemplateObjects []SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) AllowAccessToNetworkStorageList(ctx *slapi.RequestContext, networkStorageTemplateObjects []SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // CaptureImage - Captures a Flex Image of the hard disk on the physical machine, based on the capture
 // template parameter. Returns the image template group containing the disk image.
-func (softlayer_hardware *SoftLayer_Hardware) CaptureImage(commonOptions *slapi.CommonOptions, captureTemplate SoftLayer_Container_Disk_Image_Capture_Template) (*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
+func (softlayer_hardware *SoftLayer_Hardware) CaptureImage(ctx *slapi.RequestContext, captureTemplate SoftLayer_Container_Disk_Image_Capture_Template) (*SoftLayer_Virtual_Guest_Block_Device_Template_Group, error) {
 	var returnValue *SoftLayer_Virtual_Guest_Block_Device_Template_Group
 	return returnValue, nil
 }
 
 // CloseAlarm - no documentation
-func (softlayer_hardware *SoftLayer_Hardware) CloseAlarm(commonOptions *slapi.CommonOptions, alarmId string) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) CloseAlarm(ctx *slapi.RequestContext, alarmId string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -757,27 +757,27 @@ func (softlayer_hardware *SoftLayer_Hardware) CloseAlarm(commonOptions *slapi.Co
 // null, "hostname": "host1", "id": null, "serviceProviderId": null, "serviceProviderResourceId": null,
 // "globalIdentifier": "f5a3fcff-db1d-4b7c-9fa0-0349e41c29c5", "hourlyBillingFlag": true,
 // "memoryCapacity": 2, "operatingSystemReferenceCode": "processorCoreAmount": 2 }
-func (softlayer_hardware *SoftLayer_Hardware) CreateObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Hardware) (*SoftLayer_Hardware, error) {
+func (softlayer_hardware *SoftLayer_Hardware) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Hardware) (*SoftLayer_Hardware, error) {
 	var returnValue *SoftLayer_Hardware
 	return returnValue, nil
 }
 
 // DeleteObject - This method will cancel a server effective immediately. For servers billed hourly,
 // the charges will stop immediately after the method returns.
-func (softlayer_hardware *SoftLayer_Hardware) DeleteObject(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // DeleteSoftwareComponentPasswords - no documentation
-func (softlayer_hardware *SoftLayer_Hardware) DeleteSoftwareComponentPasswords(commonOptions *slapi.CommonOptions, softwareComponentPasswords []SoftLayer_Software_Component_Password) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) DeleteSoftwareComponentPasswords(ctx *slapi.RequestContext, softwareComponentPasswords []SoftLayer_Software_Component_Password) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // EditSoftwareComponentPasswords - Edit the properties of a software component password such as the
 // username, password, and notes.
-func (softlayer_hardware *SoftLayer_Hardware) EditSoftwareComponentPasswords(commonOptions *slapi.CommonOptions, softwareComponentPasswords []SoftLayer_Software_Component_Password) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) EditSoftwareComponentPasswords(ctx *slapi.RequestContext, softwareComponentPasswords []SoftLayer_Software_Component_Password) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -786,7 +786,7 @@ func (softlayer_hardware *SoftLayer_Hardware) EditSoftwareComponentPasswords(com
 // private IP address. IP addresses that have a secondary subnet tied to the hardware will not return
 // the hardware - alternate means of locating the hardware must be used (see '''Associated Methods''').
 // If no hardware is found, no errors are generated and no data is returned.
-func (softlayer_hardware *SoftLayer_Hardware) FindByIpAddress(commonOptions *slapi.CommonOptions, ipAddress string) (*SoftLayer_Hardware, error) {
+func (softlayer_hardware *SoftLayer_Hardware) FindByIpAddress(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Hardware, error) {
 	var returnValue *SoftLayer_Hardware
 	return returnValue, nil
 }
@@ -797,7 +797,7 @@ func (softlayer_hardware *SoftLayer_Hardware) FindByIpAddress(commonOptions *sla
 // necessity to confirm the price which will be charged for an order. See
 // [[SoftLayer_Hardware/createObject|createObject]] for specifics on the requirements of the template
 // object parameter.
-func (softlayer_hardware *SoftLayer_Hardware) GenerateOrderTemplate(commonOptions *slapi.CommonOptions, templateObject SoftLayer_Hardware) (*SoftLayer_Container_Product_Order, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GenerateOrderTemplate(ctx *slapi.RequestContext, templateObject SoftLayer_Hardware) (*SoftLayer_Container_Product_Order, error) {
 	var returnValue *SoftLayer_Container_Product_Order
 	return returnValue, nil
 }
@@ -805,21 +805,21 @@ func (softlayer_hardware *SoftLayer_Hardware) GenerateOrderTemplate(commonOption
 // GetAlarmHistory - The '''getAlarmHistory''' method retrieves a detailed history for the monitoring
 // alarm. When calling this method, a start and end date for the history to be retrieved must be
 // entered.
-func (softlayer_hardware *SoftLayer_Hardware) GetAlarmHistory(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time, alarmId string) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetAlarmHistory(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time, alarmId string) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
 	var returnValue []*SoftLayer_Container_Monitoring_Alarm_History
 	return returnValue, nil
 }
 
 // GetAttachedNetworkStorages - This method is retrieve a list of SoftLayer_Network_Storage volumes
 // that are authorized access to this SoftLayer_Hardware.
-func (softlayer_hardware *SoftLayer_Hardware) GetAttachedNetworkStorages(commonOptions *slapi.CommonOptions, nasType string) ([]*SoftLayer_Network_Storage, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetAttachedNetworkStorages(ctx *slapi.RequestContext, nasType string) ([]*SoftLayer_Network_Storage, error) {
 	var returnValue []*SoftLayer_Network_Storage
 	return returnValue, nil
 }
 
 // GetAvailableNetworkStorages - This method retrieves a list of SoftLayer_Network_Storage volumes that
 // can be authorized to this SoftLayer_Hardware.
-func (softlayer_hardware *SoftLayer_Hardware) GetAvailableNetworkStorages(commonOptions *slapi.CommonOptions, nasType string) ([]*SoftLayer_Network_Storage, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetAvailableNetworkStorages(ctx *slapi.RequestContext, nasType string) ([]*SoftLayer_Network_Storage, error) {
 	var returnValue []*SoftLayer_Network_Storage
 	return returnValue, nil
 }
@@ -829,7 +829,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetAvailableNetworkStorages(common
 // entering start and end dates, only the month, day and year are used to calculate bandwidth totals -
 // the time is ignored and defaults to midnight. The amount of bandwidth retrieved is measured in
 // gigabytes.
-func (softlayer_hardware *SoftLayer_Hardware) GetBackendIncomingBandwidth(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) (float32, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetBackendIncomingBandwidth(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) (float32, error) {
 	var returnValue float32
 	return returnValue, nil
 }
@@ -839,7 +839,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetBackendIncomingBandwidth(common
 // entering start and end dates, only the month, day and year are used to calculate bandwidth totals -
 // the time is ignored and defaults to midnight. The amount of bandwidth retrieved is measured in
 // gigabytes.
-func (softlayer_hardware *SoftLayer_Hardware) GetBackendOutgoingBandwidth(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) (float32, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetBackendOutgoingBandwidth(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) (float32, error) {
 	var returnValue float32
 	return returnValue, nil
 }
@@ -847,14 +847,14 @@ func (softlayer_hardware *SoftLayer_Hardware) GetBackendOutgoingBandwidth(common
 // GetCreateObjectOptions - There are many options that may be provided while ordering a server, this
 // method can be used to determine what these options are. Detailed information on the return value can
 // be found on the data type page for [[SoftLayer_Container_Hardware_Configuration (type)]].
-func (softlayer_hardware *SoftLayer_Hardware) GetCreateObjectOptions(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_Hardware_Configuration, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetCreateObjectOptions(ctx *slapi.RequestContext) (*SoftLayer_Container_Hardware_Configuration, error) {
 	var returnValue *SoftLayer_Container_Hardware_Configuration
 	return returnValue, nil
 }
 
 // GetCurrentBillingDetail - Get the billing detail for this instance for the current billing period.
 // This does not include bandwidth usage.
-func (softlayer_hardware *SoftLayer_Hardware) GetCurrentBillingDetail(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Billing_Item, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetCurrentBillingDetail(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Item, error) {
 	var returnValue []*SoftLayer_Billing_Item
 	return returnValue, nil
 }
@@ -863,7 +863,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetCurrentBillingDetail(commonOpti
 // US Dollars ($) for the current billing period. In addition to the total bill amount, the billing
 // detail also includes all bandwidth used up to the point the method is called on the piece of
 // hardware.
-func (softlayer_hardware *SoftLayer_Hardware) GetCurrentBillingTotal(commonOptions *slapi.CommonOptions) (float64, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetCurrentBillingTotal(ctx *slapi.RequestContext) (float64, error) {
 	var returnValue float64
 	return returnValue, nil
 }
@@ -873,7 +873,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetCurrentBillingTotal(commonOptio
 // user retrieves this average, measure in gigabytes for the specified date range. When entering
 // parameters, only the month, day and year are required - time entries are omitted as this method
 // defaults the time to midnight in order to account for the entire day.
-func (softlayer_hardware *SoftLayer_Hardware) GetDailyAverage(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) (float32, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetDailyAverage(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) (float32, error) {
 	var returnValue float32
 	return returnValue, nil
 }
@@ -883,7 +883,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetDailyAverage(commonOptions *sla
 // When entering the ''dateTime'' parameter, only the month, day and year of the start and end dates
 // are required - the time (hour, minute and second) are set to midnight by default and cannot be
 // changed. The amount of bandwidth retrieved is measured in gigabytes
-func (softlayer_hardware *SoftLayer_Hardware) GetFrontendIncomingBandwidth(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) (float32, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetFrontendIncomingBandwidth(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) (float32, error) {
 	var returnValue float32
 	return returnValue, nil
 }
@@ -893,7 +893,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetFrontendIncomingBandwidth(commo
 // The ''dateTime'' parameter requires only the day, month and year to be entered - the time (hour,
 // minute and second) are set to midnight be default in order to gather the data for the entire start
 // and end date indicated in the parameter. The amount of bandwidth retrieved is measured in gigabytes
-func (softlayer_hardware *SoftLayer_Hardware) GetFrontendOutgoingBandwidth(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) (float32, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetFrontendOutgoingBandwidth(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) (float32, error) {
 	var returnValue float32
 	return returnValue, nil
 }
@@ -907,19 +907,19 @@ func (softlayer_hardware *SoftLayer_Hardware) GetFrontendOutgoingBandwidth(commo
 // date. Please note that the time entered should be completed using a 24-hour clock (military time,
 // astronomical time). For data spanning more than a single 24-hour period, refer to the
 // getBandwidthData function on the metricTrackingObject for the piece of hardware.
-func (softlayer_hardware *SoftLayer_Hardware) GetHourlyBandwidth(commonOptions *slapi.CommonOptions, mode string, day time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetHourlyBandwidth(ctx *slapi.RequestContext, mode string, day time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
 
 // GetMonitoringActiveAlarms - Returns open monitoring alarms for a given time period
-func (softlayer_hardware *SoftLayer_Hardware) GetMonitoringActiveAlarms(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetMonitoringActiveAlarms(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
 	var returnValue []*SoftLayer_Container_Monitoring_Alarm_History
 	return returnValue, nil
 }
 
 // GetMonitoringClosedAlarms - Returns closed monitoring alarms for a given time period
-func (softlayer_hardware *SoftLayer_Hardware) GetMonitoringClosedAlarms(commonOptions *slapi.CommonOptions, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetMonitoringClosedAlarms(ctx *slapi.RequestContext, startDate time.Time, endDate time.Time) ([]*SoftLayer_Container_Monitoring_Alarm_History, error) {
 	var returnValue []*SoftLayer_Container_Monitoring_Alarm_History
 	return returnValue, nil
 }
@@ -927,7 +927,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetMonitoringClosedAlarms(commonOp
 // GetObject - getObject retrieves the SoftLayer_Hardware object whose ID number corresponds to the ID
 // number of the init parameter passed to the SoftLayer_Hardware service. You can only retrieve the
 // account that your portal user is assigned to.
-func (softlayer_hardware *SoftLayer_Hardware) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Hardware, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Hardware, error) {
 	var returnValue *SoftLayer_Hardware
 	return returnValue, nil
 }
@@ -936,7 +936,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetObject(commonOptions *slapi.Com
 // specified timeframe. If no timeframe is specified then getPublicBandwidthGraphImage retrieves the
 // last 24 hours of public bandwidth usage. getPrivateBandwidthGraphImage returns a PNG image measuring
 // 827 pixels by 293 pixels.
-func (softlayer_hardware *SoftLayer_Hardware) GetPrivateBandwidthData(commonOptions *slapi.CommonOptions, startTime int, endTime int) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetPrivateBandwidthData(ctx *slapi.RequestContext, startTime int, endTime int) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -945,7 +945,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetPrivateBandwidthData(commonOpti
 // specified timeframe. If no timeframe is specified then getPublicBandwidthGraphImage retrieves the
 // last 24 hours of public bandwidth usage. getPublicBandwidthGraphImage returns a PNG image measuring
 // 827 pixels by 293 pixels.
-func (softlayer_hardware *SoftLayer_Hardware) GetPublicBandwidthData(commonOptions *slapi.CommonOptions, startTime int, endTime int) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetPublicBandwidthData(ctx *slapi.RequestContext, startTime int, endTime int) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
@@ -957,7 +957,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetPublicBandwidthData(commonOptio
 // the same server within 30 seconds of each other will result in the same data being returned. To
 // ensure that the data retrieved retrieves snapshot of varied data, make calls greater than 30 seconds
 // apart.
-func (softlayer_hardware *SoftLayer_Hardware) GetSensorData(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_RemoteManagement_SensorReading, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetSensorData(ctx *slapi.RequestContext) ([]*SoftLayer_Container_RemoteManagement_SensorReading, error) {
 	var returnValue []*SoftLayer_Container_RemoteManagement_SensorReading
 	return returnValue, nil
 }
@@ -966,7 +966,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetSensorData(commonOptions *slapi
 // from the server's remote management card. Along with raw data, graphs for the CPU and system
 // temperatures and fan speeds are also returned. For more details on what information is returned,
 // refer to the ''getSensorData'' method.
-func (softlayer_hardware *SoftLayer_Hardware) GetSensorDataWithGraphs(commonOptions *slapi.CommonOptions) (*SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetSensorDataWithGraphs(ctx *slapi.RequestContext) (*SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs, error) {
 	var returnValue *SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs
 	return returnValue, nil
 }
@@ -974,7 +974,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetSensorDataWithGraphs(commonOpti
 // GetServerFanSpeedGraphs - The '''getServerFanSpeedGraphs''' method retrieves the server's fan speeds
 // and displays the speeds using tachometer graphs. data used to construct these graphs is retrieved
 // from the server's remote management card. Each graph returned will have an associated title.
-func (softlayer_hardware *SoftLayer_Hardware) GetServerFanSpeedGraphs(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetServerFanSpeedGraphs(ctx *slapi.RequestContext) ([]*SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed, error) {
 	var returnValue []*SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed
 	return returnValue, nil
 }
@@ -982,7 +982,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetServerFanSpeedGraphs(commonOpti
 // GetServerPowerState - The '''getPowerState''' method retrieves the power state for the selected
 // server. The server's power status is retrieved from its remote management card. This method returns
 // "on", for a server that has been powered on, or "off" for servers powered off.
-func (softlayer_hardware *SoftLayer_Hardware) GetServerPowerState(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetServerPowerState(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -991,7 +991,7 @@ func (softlayer_hardware *SoftLayer_Hardware) GetServerPowerState(commonOptions 
 // temperatures and displays the various temperatures using thermometer graphs. Temperatures retrieved
 // are CPU temperature(s) and system temperatures. Data used to construct the graphs is retrieved from
 // the server's remote management card. All graphs returned will have an associated title.
-func (softlayer_hardware *SoftLayer_Hardware) GetServerTemperatureGraphs(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetServerTemperatureGraphs(ctx *slapi.RequestContext) ([]*SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature, error) {
 	var returnValue []*SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature
 	return returnValue, nil
 }
@@ -999,14 +999,14 @@ func (softlayer_hardware *SoftLayer_Hardware) GetServerTemperatureGraphs(commonO
 // GetUpgradeItemPrices - Retrieve a list of upgradeable items available to this piece of hardware.
 // Currently, getUpgradeItemPrices retrieves upgrades available for a server's memory, hard drives,
 // network port speed, bandwidth allocation and GPUs.
-func (softlayer_hardware *SoftLayer_Hardware) GetUpgradeItemPrices(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Product_Item_Price, error) {
+func (softlayer_hardware *SoftLayer_Hardware) GetUpgradeItemPrices(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Item_Price, error) {
 	var returnValue []*SoftLayer_Product_Item_Price
 	return returnValue, nil
 }
 
 // ImportVirtualHost - The '''importVirtualHost''' method attempts to import the host record for the
 // virtualization platform running on a server.
-func (softlayer_hardware *SoftLayer_Hardware) ImportVirtualHost(commonOptions *slapi.CommonOptions) (*SoftLayer_Virtual_Host, error) {
+func (softlayer_hardware *SoftLayer_Hardware) ImportVirtualHost(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Host, error) {
 	var returnValue *SoftLayer_Virtual_Host
 	return returnValue, nil
 }
@@ -1014,13 +1014,13 @@ func (softlayer_hardware *SoftLayer_Hardware) ImportVirtualHost(commonOptions *s
 // IsPingable - The '''isPingable''' method issues a ping command to the selected server and returns
 // the result of the ping command. This boolean return value displays ''true'' upon successful ping or
 // ''false'' for a failed ping.
-func (softlayer_hardware *SoftLayer_Hardware) IsPingable(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) IsPingable(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // Ping - Issues a ping command to the server and returns the ping response.
-func (softlayer_hardware *SoftLayer_Hardware) Ping(commonOptions *slapi.CommonOptions) (string, error) {
+func (softlayer_hardware *SoftLayer_Hardware) Ping(ctx *slapi.RequestContext) (string, error) {
 	var returnValue string
 	return returnValue, nil
 }
@@ -1031,13 +1031,13 @@ func (softlayer_hardware *SoftLayer_Hardware) Ping(commonOptions *slapi.CommonOp
 // options have been exhausted'''. Additional remote management commands may not be executed if this
 // command was successfully issued within the last 20 minutes to avoid server failure. Remote
 // management commands include: rebootSoft rebootHard powerOn powerOff powerCycle
-func (softlayer_hardware *SoftLayer_Hardware) PowerCycle(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) PowerCycle(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // PowerOff - This method will power off the server via the server's remote management card.
-func (softlayer_hardware *SoftLayer_Hardware) PowerOff(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) PowerOff(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1047,7 +1047,7 @@ func (softlayer_hardware *SoftLayer_Hardware) PowerOff(commonOptions *slapi.Comm
 // management commands may not be issued in this command was successfully completed within the last 20
 // minutes to avoid server failure. Remote management commands include: rebootSoft rebootHard powerOn
 // powerOff powerCycle
-func (softlayer_hardware *SoftLayer_Hardware) PowerOn(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) PowerOn(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1059,7 +1059,7 @@ func (softlayer_hardware *SoftLayer_Hardware) PowerOn(commonOptions *slapi.Commo
 // the reset was successful within the last 20 minutes, another remote management command cannot be
 // completed to avoid server failure. Remote management commands include: rebootSoft rebootHard powerOn
 // powerOff powerCycle
-func (softlayer_hardware *SoftLayer_Hardware) RebootDefault(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) RebootDefault(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1071,7 +1071,7 @@ func (softlayer_hardware *SoftLayer_Hardware) RebootDefault(commonOptions *slapi
 // take longer than normally expected. Remote management commands are unable to be executed if a reboot
 // has been issued successfully within the last 20 minutes to avoid server failure. Remote management
 // commands include: rebootSoft rebootHard powerOn powerOff powerCycle
-func (softlayer_hardware *SoftLayer_Hardware) RebootHard(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) RebootHard(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -1081,27 +1081,27 @@ func (softlayer_hardware *SoftLayer_Hardware) RebootHard(commonOptions *slapi.Co
 // processes to shut down completely before rebooting. Remote management commands are unable to be
 // issued within 20 minutes of issuing a successful soft reboot in order to avoid server failure.
 // Remote management commands include: rebootSoft rebootHard powerOn powerOff powerCycle
-func (softlayer_hardware *SoftLayer_Hardware) RebootSoft(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) RebootSoft(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveAccessToNetworkStorage - This method is used to remove access to s SoftLayer_Network_Storage
 // volumes that supports host- or network-level access control.
-func (softlayer_hardware *SoftLayer_Hardware) RemoveAccessToNetworkStorage(commonOptions *slapi.CommonOptions, networkStorageTemplateObject SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) RemoveAccessToNetworkStorage(ctx *slapi.RequestContext, networkStorageTemplateObject SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RemoveAccessToNetworkStorageList - This method is used to allow access to multiple
 // SoftLayer_Network_Storage volumes that support host- or network-level access control.
-func (softlayer_hardware *SoftLayer_Hardware) RemoveAccessToNetworkStorageList(commonOptions *slapi.CommonOptions, networkStorageTemplateObjects []SoftLayer_Network_Storage) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) RemoveAccessToNetworkStorageList(ctx *slapi.RequestContext, networkStorageTemplateObjects []SoftLayer_Network_Storage) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SetTags - <nil>
-func (softlayer_hardware *SoftLayer_Hardware) SetTags(commonOptions *slapi.CommonOptions, tags string) (bool, error) {
+func (softlayer_hardware *SoftLayer_Hardware) SetTags(ctx *slapi.RequestContext, tags string) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

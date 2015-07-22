@@ -32,7 +32,7 @@ type SoftLayer_User_Customer_ApiAuthentication struct {
 }
 
 // EditObject - <nil>
-func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) EditObject(commonOptions *slapi.CommonOptions, templateObject SoftLayer_User_Customer_ApiAuthentication) (*SoftLayer_User_Customer_ApiAuthentication, error) {
+func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Customer_ApiAuthentication) (*SoftLayer_User_Customer_ApiAuthentication, error) {
 	var returnValue *SoftLayer_User_Customer_ApiAuthentication
 	return returnValue, nil
 }
@@ -40,7 +40,7 @@ func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuth
 // GetObject - getObject retrieves the SoftLayer_User_Customer_ApiAuthentication object whose ID number
 // corresponds to the ID number of the init parameter passed to the
 // SoftLayer_User_Customer_ApiAuthentication service.
-func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_User_Customer_ApiAuthentication, error) {
+func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_ApiAuthentication, error) {
 	var returnValue *SoftLayer_User_Customer_ApiAuthentication
 	return returnValue, nil
 }

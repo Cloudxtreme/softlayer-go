@@ -20,13 +20,13 @@ type SoftLayer_Compliance_Report_Type struct {
 }
 
 // GetAllObjects - <nil>
-func (softlayer_compliance_report_type *SoftLayer_Compliance_Report_Type) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Compliance_Report_Type, error) {
+func (softlayer_compliance_report_type *SoftLayer_Compliance_Report_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Compliance_Report_Type, error) {
 	var returnValue []*SoftLayer_Compliance_Report_Type
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_compliance_report_type *SoftLayer_Compliance_Report_Type) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Compliance_Report_Type, error) {
+func (softlayer_compliance_report_type *SoftLayer_Compliance_Report_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Compliance_Report_Type, error) {
 	var returnValue *SoftLayer_Compliance_Report_Type
 	return returnValue, nil
 }

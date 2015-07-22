@@ -76,7 +76,7 @@ type SoftLayer_Monitoring_Agent struct {
 }
 
 // Activate - This method activates a SoftLayer_Monitoring_Agent.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) Activate(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) Activate(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -92,7 +92,7 @@ func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) Activate(commonOpt
 // applied. Some configuration sections act as a template which helps to create additional monitoring
 // configurations. For instance, Core Resource monitoring agent lets you create monitoring
 // configurations for different disk volumes or disk path.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) AddConfigurationProfile(commonOptions *slapi.CommonOptions, configurationValues []SoftLayer_Monitoring_Agent_Configuration_Value) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) AddConfigurationProfile(ctx *slapi.RequestContext, configurationValues []SoftLayer_Monitoring_Agent_Configuration_Value) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
@@ -107,14 +107,14 @@ func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) AddConfigurationPr
 // SoftLayer_Monitoring_Agent_Configuration_Value. This method returns a
 // SoftLayer_Provisioning_Version1_Transaction object to track the progress of the update being
 // applied.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) ApplyConfigurationValues(commonOptions *slapi.CommonOptions, configurationValues []SoftLayer_Monitoring_Agent_Configuration_Value) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) ApplyConfigurationValues(ctx *slapi.RequestContext, configurationValues []SoftLayer_Monitoring_Agent_Configuration_Value) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
 
 // Deactivate - This method will deactivate the monitoring agent, preventing it from generating any
 // further alarms.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) Deactivate(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) Deactivate(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -124,7 +124,7 @@ func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) Deactivate(commonO
 // passing in the sectionId of the profile object and identifier of the profile. This will execute the
 // action immediately on the server and the SoftLayer_Configuration_Template_Section returning a
 // boolean true if successful.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) DeleteConfigurationProfile(commonOptions *slapi.CommonOptions, sectionId int, profileId int) (bool, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) DeleteConfigurationProfile(ctx *slapi.RequestContext, sectionId int, profileId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -135,21 +135,21 @@ func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) DeleteConfiguratio
 // When executing this method, the existing configuration values will be lost. If no configuration
 // template identifier is provided, the current configuration template will be used. '''Warning'''
 // Reporting data may be lost as a result of executing this method.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) DeployMonitoringAgent(commonOptions *slapi.CommonOptions, configurationTemplateId int) (*SoftLayer_Provisioning_Version1_Transaction, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) DeployMonitoringAgent(ctx *slapi.RequestContext, configurationTemplateId int) (*SoftLayer_Provisioning_Version1_Transaction, error) {
 	var returnValue *SoftLayer_Provisioning_Version1_Transaction
 	return returnValue, nil
 }
 
 // GetActiveAlarmSubscribers - This method retrieves an array of SoftLayer_Notification_User_Subscriber
 // objects belonging to the SoftLayer_Monitoring_Agent which are able to receive alarm notifications.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetActiveAlarmSubscribers(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Notification_User_Subscriber, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetActiveAlarmSubscribers(ctx *slapi.RequestContext) ([]*SoftLayer_Notification_User_Subscriber, error) {
 	var returnValue []*SoftLayer_Notification_User_Subscriber
 	return returnValue, nil
 }
 
 // GetAvailableConfigurationTemplates - This method returns an array of available
 // SoftLayer_Configuration_Template objects for this monitoring agent.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetAvailableConfigurationTemplates(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Configuration_Template, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetAvailableConfigurationTemplates(ctx *slapi.RequestContext) ([]*SoftLayer_Configuration_Template, error) {
 	var returnValue []*SoftLayer_Configuration_Template
 	return returnValue, nil
 }
@@ -158,35 +158,35 @@ func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetAvailableConfig
 // specific to a server or a Virtual that this monitoring agent is running on. For example, invoking
 // this method against "Network Traffic Monitoring Agent" will return all available network adapters on
 // your system.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetAvailableConfigurationValues(commonOptions *slapi.CommonOptions, configurationDefinitionId int, configValues []SoftLayer_Monitoring_Agent_Configuration_Value) ([]*SoftLayer_Monitoring_Agent_Configuration_Value, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetAvailableConfigurationValues(ctx *slapi.RequestContext, configurationDefinitionId int, configValues []SoftLayer_Monitoring_Agent_Configuration_Value) ([]*SoftLayer_Monitoring_Agent_Configuration_Value, error) {
 	var returnValue []*SoftLayer_Monitoring_Agent_Configuration_Value
 	return returnValue, nil
 }
 
 // GetEligibleAlarmSubscibers - This method returns an array of SoftLayer_User_Customer objects,
 // representing those who are allowed to be used as alarm subscribers.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetEligibleAlarmSubscibers(commonOptions *slapi.CommonOptions) ([]*SoftLayer_User_Customer, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetEligibleAlarmSubscibers(ctx *slapi.RequestContext) ([]*SoftLayer_User_Customer, error) {
 	var returnValue []*SoftLayer_User_Customer
 	return returnValue, nil
 }
 
 // GetGraph - This method returns a SoftLayer_Container_Bandwidth_GraphOutputs object containing a
 // base64 PNG string graph of the provided configuration values for the given begin and end dates.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetGraph(commonOptions *slapi.CommonOptions, configurationValues []SoftLayer_Monitoring_Agent_Configuration_Value, beginDate time.Time, endDate time.Time) (*SoftLayer_Container_Monitoring_Graph_Outputs, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetGraph(ctx *slapi.RequestContext, configurationValues []SoftLayer_Monitoring_Agent_Configuration_Value, beginDate time.Time, endDate time.Time) (*SoftLayer_Container_Monitoring_Graph_Outputs, error) {
 	var returnValue *SoftLayer_Container_Monitoring_Graph_Outputs
 	return returnValue, nil
 }
 
 // GetGraphData - This method returns the metric data for each of the configuration values provided
 // during the given time range.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetGraphData(commonOptions *slapi.CommonOptions, metricDataTypes []SoftLayer_Container_Metric_Data_Type, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetGraphData(ctx *slapi.RequestContext, metricDataTypes []SoftLayer_Container_Metric_Data_Type, startDate time.Time, endDate time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
 	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
 	return returnValue, nil
 }
 
 // GetObject - This method retrieves a monitoring agent whose identifier corresponds to the value
 // provided in the initialization parameter passed to the SoftLayer_Monitoring_Agent service.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Monitoring_Agent, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Monitoring_Agent, error) {
 	var returnValue *SoftLayer_Monitoring_Agent
 	return returnValue, nil
 }
@@ -194,7 +194,7 @@ func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) GetObject(commonOp
 // RemoveActiveAlarmSubscriber - Use of this method will allow removing active subscribers from the
 // monitoring agent. The agent subscribers can be managed within the portal from the "Alarm
 // Subscribers" tab of the monitoring agent configuration.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) RemoveActiveAlarmSubscriber(commonOptions *slapi.CommonOptions, userRecordId int) (bool, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) RemoveActiveAlarmSubscriber(ctx *slapi.RequestContext, userRecordId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
@@ -202,20 +202,20 @@ func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) RemoveActiveAlarmS
 // RemoveAllAlarmSubscribers - Use of this method will allow removing all subscribers from the
 // monitoring agent. The agent subscribers can be managed within the portal from the "Alarm
 // Subscribers" tab of the monitoring agent configuration.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) RemoveAllAlarmSubscribers(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) RemoveAllAlarmSubscribers(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // RestartMonitoringAgent - This method restarts a monitoring agent and sets the agent's status to
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) RestartMonitoringAgent(commonOptions *slapi.CommonOptions) (bool, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) RestartMonitoringAgent(ctx *slapi.RequestContext) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }
 
 // SetActiveAlarmSubscriber - This method assigns a user to receive the alerts generated by this
 // SoftLayer_Monitoring_Agent.
-func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) SetActiveAlarmSubscriber(commonOptions *slapi.CommonOptions, userRecordId int) (bool, error) {
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) SetActiveAlarmSubscriber(ctx *slapi.RequestContext, userRecordId int) (bool, error) {
 	var returnValue bool
 	return returnValue, nil
 }

@@ -21,13 +21,13 @@ type SoftLayer_Security_Certificate_Request_Status struct {
 }
 
 // GetObject - <nil>
-func (softlayer_security_certificate_request_status *SoftLayer_Security_Certificate_Request_Status) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Security_Certificate_Request_Status, error) {
+func (softlayer_security_certificate_request_status *SoftLayer_Security_Certificate_Request_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Security_Certificate_Request_Status, error) {
 	var returnValue *SoftLayer_Security_Certificate_Request_Status
 	return returnValue, nil
 }
 
 // GetSslRequestStatuses - Returns all SSL certificate request status objects
-func (softlayer_security_certificate_request_status *SoftLayer_Security_Certificate_Request_Status) GetSslRequestStatuses(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Security_Certificate_Request_Status, error) {
+func (softlayer_security_certificate_request_status *SoftLayer_Security_Certificate_Request_Status) GetSslRequestStatuses(ctx *slapi.RequestContext) ([]*SoftLayer_Security_Certificate_Request_Status, error) {
 	var returnValue []*SoftLayer_Security_Certificate_Request_Status
 	return returnValue, nil
 }

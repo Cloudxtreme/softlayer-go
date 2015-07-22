@@ -15,7 +15,7 @@ type SoftLayer_Network_Storage_Allowed_Host_Subnet struct {
 }
 
 // GetObject - <nil>
-func (softlayer_network_storage_allowed_host_subnet *SoftLayer_Network_Storage_Allowed_Host_Subnet) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Network_Storage_Allowed_Host_Subnet, error) {
+func (softlayer_network_storage_allowed_host_subnet *SoftLayer_Network_Storage_Allowed_Host_Subnet) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Allowed_Host_Subnet, error) {
 	var returnValue *SoftLayer_Network_Storage_Allowed_Host_Subnet
 	return returnValue, nil
 }

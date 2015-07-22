@@ -33,13 +33,13 @@ type SoftLayer_Layout_Container struct {
 }
 
 // GetAllObjects - Use this method to retrieve all active layout containers that can be customized.
-func (softlayer_layout_container *SoftLayer_Layout_Container) GetAllObjects(commonOptions *slapi.CommonOptions) ([]*SoftLayer_Layout_Container, error) {
+func (softlayer_layout_container *SoftLayer_Layout_Container) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Layout_Container, error) {
 	var returnValue []*SoftLayer_Layout_Container
 	return returnValue, nil
 }
 
 // GetObject - <nil>
-func (softlayer_layout_container *SoftLayer_Layout_Container) GetObject(commonOptions *slapi.CommonOptions) (*SoftLayer_Layout_Container, error) {
+func (softlayer_layout_container *SoftLayer_Layout_Container) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Layout_Container, error) {
 	var returnValue *SoftLayer_Layout_Container
 	return returnValue, nil
 }
