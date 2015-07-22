@@ -1,0 +1,19 @@
+package sl
+
+// DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
+
+// SoftLayer_Network_Storage_Property_Type - The storage property types provide standard definitions
+// for properties which can be used with any type for Storage offering. The properties provide
+// additional information about a volume which they are assigned to.
+type SoftLayer_Network_Storage_Property_Type struct {
+
+	// Description - A type's description, for example 'Determines whether the volume is currently
+	// mountable'.
+	Description string `json:"description"`
+
+	// Keyname - no documentation
+	Keyname string `json:"keyname"`
+
+	// Name - no documentation
+	Name string `json:"name"`
+}

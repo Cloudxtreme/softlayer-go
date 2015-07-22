@@ -1,3 +1,4 @@
 package slapi
 
-//go:generate go run ../bin/sl-generate-types/generate.go ../bin/sl-generate-types/types.go
+//go:generate go run ../cmd/sl-generate-types/generate.go ../cmd/sl-generate-types/types.go
+//go:generate gofmt -s -w gen

@@ -1,0 +1,21 @@
+package sl
+
+// DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
+
+// SoftLayer_Billing_Item_Cancellation_Request_Status -
+// SoftLayer_Billing_Item_Cancellation_Request_Status data type represents the status of a service
+// cancellation request.
+type SoftLayer_Billing_Item_Cancellation_Request_Status struct {
+
+	// Description - The short description of a cancellation request status
+	Description string `json:"description"`
+
+	// Id - The internal identifier of a cancellation request status.
+	Id int `json:"id"`
+
+	// KeyName - no documentation
+	KeyName string `json:"keyName"`
+
+	// Name - no documentation
+	Name string `json:"name"`
+}
