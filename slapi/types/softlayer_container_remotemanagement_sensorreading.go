@@ -37,3 +37,7 @@ type SoftLayer_Container_RemoteManagement_SensorReading struct {
 	// UpperNonRecoverable - no documentation
 	UpperNonRecoverable string `json:"upperNonRecoverable"`
 }
+
+func (softlayer_container_remotemanagement_sensorreading *SoftLayer_Container_RemoteManagement_SensorReading) String() string {
+	return "SoftLayer_Container_RemoteManagement_SensorReading"
+}

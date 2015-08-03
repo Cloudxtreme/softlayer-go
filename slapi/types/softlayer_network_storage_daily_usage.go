@@ -27,3 +27,7 @@ type SoftLayer_Network_Storage_Daily_Usage struct {
 	// PublicBandwidthOut - <nil>
 	PublicBandwidthOut uint64 `json:"publicBandwidthOut"`
 }
+
+func (softlayer_network_storage_daily_usage *SoftLayer_Network_Storage_Daily_Usage) String() string {
+	return "SoftLayer_Network_Storage_Daily_Usage"
+}

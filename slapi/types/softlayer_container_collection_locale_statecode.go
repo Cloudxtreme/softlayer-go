@@ -12,3 +12,7 @@ type SoftLayer_Container_Collection_Locale_StateCode struct {
 	// ShortName - <nil>
 	ShortName string `json:"shortName"`
 }
+
+func (softlayer_container_collection_locale_statecode *SoftLayer_Container_Collection_Locale_StateCode) String() string {
+	return "SoftLayer_Container_Collection_Locale_StateCode"
+}

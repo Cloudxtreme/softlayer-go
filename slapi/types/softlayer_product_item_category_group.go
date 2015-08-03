@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Item_Category_Group - The SoftLayer_Product_Item_Category_Group data type contains
@@ -16,6 +16,10 @@ type SoftLayer_Product_Item_Category_Group struct {
 	// Name - The friendly, descriptive name of the category group as seen on the order forms and on
 	// invoices.
 	Name string `json:"name"`
+}
+
+func (softlayer_product_item_category_group *SoftLayer_Product_Item_Category_Group) String() string {
+	return "SoftLayer_Product_Item_Category_Group"
 }
 
 // GetObject - Each product item category must be tied to a category group. These category groups

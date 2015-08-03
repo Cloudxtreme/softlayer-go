@@ -22,3 +22,7 @@ type SoftLayer_Software_License struct {
 	// for.
 	SoftwareDescriptionId int `json:"softwareDescriptionId"`
 }
+
+func (softlayer_software_license *SoftLayer_Software_License) String() string {
+	return "SoftLayer_Software_License"
+}

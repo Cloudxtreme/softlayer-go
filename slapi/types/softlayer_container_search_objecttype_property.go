@@ -20,3 +20,7 @@ type SoftLayer_Container_Search_ObjectType_Property struct {
 	// Type - Property data type. Valid values include 'boolean', 'integer', 'date', 'string' or 'text'.
 	Type string `json:"type"`
 }
+
+func (softlayer_container_search_objecttype_property *SoftLayer_Container_Search_ObjectType_Property) String() string {
+	return "SoftLayer_Container_Search_ObjectType_Property"
+}

@@ -15,3 +15,7 @@ type SoftLayer_Container_User_Authentication_Token struct {
 	// UserId - no documentation
 	UserId int `json:"userId"`
 }
+
+func (softlayer_container_user_authentication_token *SoftLayer_Container_User_Authentication_Token) String() string {
+	return "SoftLayer_Container_User_Authentication_Token"
+}

@@ -15,3 +15,7 @@ type SoftLayer_Container_Dns_Domain_Registration_List struct {
 	// RegistrationPeriod - The length of the registration period in years. Valid values are 1 – 10.
 	RegistrationPeriod int `json:"registrationPeriod"`
 }
+
+func (softlayer_container_dns_domain_registration_list *SoftLayer_Container_Dns_Domain_Registration_List) String() string {
+	return "SoftLayer_Container_Dns_Domain_Registration_List"
+}

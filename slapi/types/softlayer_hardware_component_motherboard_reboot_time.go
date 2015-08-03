@@ -18,3 +18,7 @@ type SoftLayer_Hardware_Component_Motherboard_Reboot_Time struct {
 	// WithoutRaid - Average reboot time in seconds for the motherboard when NO raid is installed.
 	WithoutRaid int `json:"withoutRaid"`
 }
+
+func (softlayer_hardware_component_motherboard_reboot_time *SoftLayer_Hardware_Component_Motherboard_Reboot_Time) String() string {
+	return "SoftLayer_Hardware_Component_Motherboard_Reboot_Time"
+}

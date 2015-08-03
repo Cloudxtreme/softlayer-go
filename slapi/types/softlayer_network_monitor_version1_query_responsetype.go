@@ -19,3 +19,7 @@ type SoftLayer_Network_Monitor_Version1_Query_ResponseType struct {
 	// SoftLayer_Network_Monitor_Version1_Query_Host_Stratum
 	Level int `json:"level"`
 }
+
+func (softlayer_network_monitor_version1_query_responsetype *SoftLayer_Network_Monitor_Version1_Query_ResponseType) String() string {
+	return "SoftLayer_Network_Monitor_Version1_Query_ResponseType"
+}

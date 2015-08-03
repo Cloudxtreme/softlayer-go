@@ -7,3 +7,7 @@ package sl
 // place an order with SoftLayer.
 type SoftLayer_Container_Product_Order_Hardware_Server_Upgrade struct {
 }
+
+func (softlayer_container_product_order_hardware_server_upgrade *SoftLayer_Container_Product_Order_Hardware_Server_Upgrade) String() string {
+	return "SoftLayer_Container_Product_Order_Hardware_Server_Upgrade"
+}

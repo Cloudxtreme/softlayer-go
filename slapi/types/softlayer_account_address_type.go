@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Address_Type - <nil>
@@ -22,6 +22,10 @@ type SoftLayer_Account_Address_Type struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+func (softlayer_account_address_type *SoftLayer_Account_Address_Type) String() string {
+	return "SoftLayer_Account_Address_Type"
 }
 
 // GetObject - <nil>

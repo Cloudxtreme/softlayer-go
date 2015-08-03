@@ -60,3 +60,7 @@ type SoftLayer_Billing_Item_Virtual_Dedicated_Rack struct {
 	// Resource - The virtual rack that a virtual rack billing item is associated with.
 	Resource *SoftLayer_Network_Bandwidth_Version1_Allotment `json:"resource"`
 }
+
+func (softlayer_billing_item_virtual_dedicated_rack *SoftLayer_Billing_Item_Virtual_Dedicated_Rack) String() string {
+	return "SoftLayer_Billing_Item_Virtual_Dedicated_Rack"
+}

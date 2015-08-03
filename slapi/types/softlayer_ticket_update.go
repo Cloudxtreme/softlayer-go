@@ -49,3 +49,7 @@ type SoftLayer_Ticket_Update struct {
 	// Type - no documentation
 	Type *SoftLayer_Ticket_Update_Type `json:"type"`
 }
+
+func (softlayer_ticket_update *SoftLayer_Ticket_Update) String() string {
+	return "SoftLayer_Ticket_Update"
+}

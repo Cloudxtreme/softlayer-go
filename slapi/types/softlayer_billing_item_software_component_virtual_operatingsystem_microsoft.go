@@ -14,3 +14,7 @@ type SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Microsoft
 	// ResourceTableId - The resource (unique identifier) for a software virtual license billing item.
 	ResourceTableId int `json:"resourceTableId"`
 }
+
+func (softlayer_billing_item_software_component_virtual_operatingsystem_microsoft *SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Microsoft) String() string {
+	return "SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Microsoft"
+}

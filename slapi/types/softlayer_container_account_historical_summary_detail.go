@@ -16,3 +16,7 @@ type SoftLayer_Container_Account_Historical_Summary_Detail struct {
 	// StartDate - no documentation
 	StartDate *time.Time `json:"startDate"`
 }
+
+func (softlayer_container_account_historical_summary_detail *SoftLayer_Container_Account_Historical_Summary_Detail) String() string {
+	return "SoftLayer_Container_Account_Historical_Summary_Detail"
+}

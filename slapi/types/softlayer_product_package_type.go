@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Package_Type - The [[SoftLayer_Product_Package_Type]] object indicates the type
@@ -26,6 +26,10 @@ type SoftLayer_Product_Package_Type struct {
 
 	// Packages - All the packages associated with the given package type.
 	Packages []*SoftLayer_Product_Package `json:"packages"`
+}
+
+func (softlayer_product_package_type *SoftLayer_Product_Package_Type) String() string {
+	return "SoftLayer_Product_Package_Type"
 }
 
 // GetAllObjects - This method will return all of the available package types.

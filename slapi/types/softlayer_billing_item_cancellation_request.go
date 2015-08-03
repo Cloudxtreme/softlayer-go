@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Item_Cancellation_Request - SoftLayer_Billing_Item_Cancellation_Request data type
@@ -60,6 +60,10 @@ type SoftLayer_Billing_Item_Cancellation_Request struct {
 
 	// User - The user that initiated a service cancellation request.
 	User *SoftLayer_User_Customer `json:"user"`
+}
+
+func (softlayer_billing_item_cancellation_request *SoftLayer_Billing_Item_Cancellation_Request) String() string {
+	return "SoftLayer_Billing_Item_Cancellation_Request"
 }
 
 // CreateObject - This method creates a service cancellation request. You need to have "Cancel

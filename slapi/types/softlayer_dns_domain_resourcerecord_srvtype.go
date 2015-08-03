@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Dns_Domain_ResourceRecord_SrvType - SoftLayer_Dns_Domain_ResourceRecord_SrvType is a
@@ -25,6 +25,10 @@ type SoftLayer_Dns_Domain_ResourceRecord_SrvType struct {
 
 	// Weight - A relative weight for records with the same priority.
 	Weight int `json:"weight"`
+}
+
+func (softlayer_dns_domain_resourcerecord_srvtype *SoftLayer_Dns_Domain_ResourceRecord_SrvType) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord_SrvType"
 }
 
 // CreateObject - createObject creates a new SRV record. The ''host'' property of the templateObject

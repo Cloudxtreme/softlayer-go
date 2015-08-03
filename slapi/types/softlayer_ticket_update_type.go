@@ -14,3 +14,7 @@ type SoftLayer_Ticket_Update_Type struct {
 	// Ticket - <nil>
 	Ticket *SoftLayer_Ticket_Update `json:"ticket"`
 }
+
+func (softlayer_ticket_update_type *SoftLayer_Ticket_Update_Type) String() string {
+	return "SoftLayer_Ticket_Update_Type"
+}

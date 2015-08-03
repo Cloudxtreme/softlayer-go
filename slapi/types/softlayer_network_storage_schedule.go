@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Storage_Schedule - Schedules can be created for select Storage services, such as
@@ -82,6 +82,10 @@ type SoftLayer_Network_Storage_Schedule struct {
 
 	// VolumeId - no documentation
 	VolumeId int `json:"volumeId"`
+}
+
+func (softlayer_network_storage_schedule *SoftLayer_Network_Storage_Schedule) String() string {
+	return "SoftLayer_Network_Storage_Schedule"
 }
 
 // CreateObject - no documentation

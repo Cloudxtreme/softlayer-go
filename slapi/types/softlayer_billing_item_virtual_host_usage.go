@@ -13,3 +13,7 @@ type SoftLayer_Billing_Item_Virtual_Host_Usage struct {
 	// ResourceTableId - The resource (unique identifier) for a server billing item.
 	ResourceTableId int `json:"resourceTableId"`
 }
+
+func (softlayer_billing_item_virtual_host_usage *SoftLayer_Billing_Item_Virtual_Host_Usage) String() string {
+	return "SoftLayer_Billing_Item_Virtual_Host_Usage"
+}

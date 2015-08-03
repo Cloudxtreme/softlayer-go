@@ -18,3 +18,7 @@ type SoftLayer_Layout_Preference_Type struct {
 	// ValueExpression - A regular expression used to validate the related [[SoftLayer_Layout_Preference]]
 	ValueExpression string `json:"valueExpression"`
 }
+
+func (softlayer_layout_preference_type *SoftLayer_Layout_Preference_Type) String() string {
+	return "SoftLayer_Layout_Preference_Type"
+}

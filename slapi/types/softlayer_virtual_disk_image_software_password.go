@@ -15,3 +15,7 @@ type SoftLayer_Virtual_Disk_Image_Software_Password struct {
 	// Username - no documentation
 	Username string `json:"username"`
 }
+
+func (softlayer_virtual_disk_image_software_password *SoftLayer_Virtual_Disk_Image_Software_Password) String() string {
+	return "SoftLayer_Virtual_Disk_Image_Software_Password"
+}

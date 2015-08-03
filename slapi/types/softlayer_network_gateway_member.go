@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Gateway_Member - <nil>
@@ -27,6 +27,10 @@ type SoftLayer_Network_Gateway_Member struct {
 	// Priority - The priority for this gateway member. This is set internally and cannot be provided on
 	// create.
 	Priority int `json:"priority"`
+}
+
+func (softlayer_network_gateway_member *SoftLayer_Network_Gateway_Member) String() string {
+	return "SoftLayer_Network_Gateway_Member"
 }
 
 // CreateObject - Create a new hardware member on the gateway. This also asynchronously sets up the

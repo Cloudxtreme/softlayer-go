@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Notification_User_Subscriber - A notification subscriber will have details pertaining to
@@ -54,6 +54,10 @@ type SoftLayer_Notification_User_Subscriber struct {
 
 	// UserRecordId - Unique identifier of the user the subscription is for.
 	UserRecordId int `json:"userRecordId"`
+}
+
+func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) String() string {
+	return "SoftLayer_Notification_User_Subscriber"
 }
 
 // CreateObject - Use the method to create a new subscription for a notification. This method is the

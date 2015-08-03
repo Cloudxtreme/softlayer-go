@@ -19,3 +19,7 @@ type SoftLayer_Network_Component_Network_Vlan_Trunk struct {
 	// NetworkVlanId - The identifier of the network that is a trunk on the network component.
 	NetworkVlanId int `json:"networkVlanId"`
 }
+
+func (softlayer_network_component_network_vlan_trunk *SoftLayer_Network_Component_Network_Vlan_Trunk) String() string {
+	return "SoftLayer_Network_Component_Network_Vlan_Trunk"
+}

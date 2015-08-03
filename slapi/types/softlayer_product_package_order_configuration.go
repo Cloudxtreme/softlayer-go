@@ -44,3 +44,7 @@ type SoftLayer_Product_Package_Order_Configuration struct {
 	// Step - no documentation
 	Step *SoftLayer_Product_Package_Order_Step `json:"step"`
 }
+
+func (softlayer_product_package_order_configuration *SoftLayer_Product_Package_Order_Configuration) String() string {
+	return "SoftLayer_Product_Package_Order_Configuration"
+}

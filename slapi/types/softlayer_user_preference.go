@@ -15,3 +15,7 @@ type SoftLayer_User_Preference struct {
 	// Value - no documentation
 	Value string `json:"value"`
 }
+
+func (softlayer_user_preference *SoftLayer_User_Preference) String() string {
+	return "SoftLayer_User_Preference"
+}

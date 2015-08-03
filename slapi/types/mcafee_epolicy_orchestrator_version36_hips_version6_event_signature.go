@@ -10,3 +10,7 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_Event_Signature struct 
 	// SignatureName - no documentation
 	SignatureName string `json:"signatureName"`
 }
+
+func (mcafee_epolicy_orchestrator_version36_hips_version6_event_signature *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_Event_Signature) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_Event_Signature"
+}

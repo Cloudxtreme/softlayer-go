@@ -25,3 +25,7 @@ type SoftLayer_Network_Monitor_Version1_Query_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_network_monitor_version1_query_type *SoftLayer_Network_Monitor_Version1_Query_Type) String() string {
+	return "SoftLayer_Network_Monitor_Version1_Query_Type"
+}

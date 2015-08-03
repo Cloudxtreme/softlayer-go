@@ -13,3 +13,7 @@ type SoftLayer_Container_Product_Order_Network_LoadBalancer_Global struct {
 	// Hostname - no documentation
 	Hostname string `json:"hostname"`
 }
+
+func (softlayer_container_product_order_network_loadbalancer_global *SoftLayer_Container_Product_Order_Network_LoadBalancer_Global) String() string {
+	return "SoftLayer_Container_Product_Order_Network_LoadBalancer_Global"
+}

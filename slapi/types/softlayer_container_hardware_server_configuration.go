@@ -48,3 +48,7 @@ type SoftLayer_Container_Hardware_Server_Configuration struct {
 	// when installing the operating system.
 	UpgradeHardDriveFirmware int `json:"upgradeHardDriveFirmware"`
 }
+
+func (softlayer_container_hardware_server_configuration *SoftLayer_Container_Hardware_Server_Configuration) String() string {
+	return "SoftLayer_Container_Hardware_Server_Configuration"
+}

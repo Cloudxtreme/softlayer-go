@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Hardware_Benchmark_Certification - The SoftLayer_Hardware_Benchmark_Certification data
@@ -31,6 +31,10 @@ type SoftLayer_Hardware_Benchmark_Certification struct {
 	// HardwareId - A benchmark certification results's associated hardware's internal identification
 	// number.
 	HardwareId int `json:"hardwareId"`
+}
+
+func (softlayer_hardware_benchmark_certification *SoftLayer_Hardware_Benchmark_Certification) String() string {
+	return "SoftLayer_Hardware_Benchmark_Certification"
 }
 
 // GetObject - getObject retrieves the SoftLayer_Hardware_Benchmark_Certification object whose ID

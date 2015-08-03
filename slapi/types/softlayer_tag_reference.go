@@ -35,3 +35,7 @@ type SoftLayer_Tag_Reference struct {
 	// UsrRecordId - <nil>
 	UsrRecordId int `json:"usrRecordId"`
 }
+
+func (softlayer_tag_reference *SoftLayer_Tag_Reference) String() string {
+	return "SoftLayer_Tag_Reference"
+}

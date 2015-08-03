@@ -13,3 +13,7 @@ type SoftLayer_Billing_Item_Network_Application_Delivery_Controller struct {
 	// Resource - The network application controller that a billing item is associated with.
 	Resource *SoftLayer_Network_Application_Delivery_Controller `json:"resource"`
 }
+
+func (softlayer_billing_item_network_application_delivery_controller *SoftLayer_Billing_Item_Network_Application_Delivery_Controller) String() string {
+	return "SoftLayer_Billing_Item_Network_Application_Delivery_Controller"
+}

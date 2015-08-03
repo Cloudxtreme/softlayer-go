@@ -41,3 +41,7 @@ type SoftLayer_Network_Bandwidth_Version1_Allotment_Detail struct {
 	// ServiceProviderId - no documentation
 	ServiceProviderId int `json:"serviceProviderId"`
 }
+
+func (softlayer_network_bandwidth_version1_allotment_detail *SoftLayer_Network_Bandwidth_Version1_Allotment_Detail) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Allotment_Detail"
+}

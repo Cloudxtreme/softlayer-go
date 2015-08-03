@@ -11,3 +11,7 @@ type SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon_Citrix_Esse
 	// Resource - The Citrix Essentials software component that a billing item is associated with.
 	Resource *SoftLayer_Software_Component `json:"resource"`
 }
+
+func (softlayer_billing_item_software_component_operatingsystem_addon_citrix_essentials *SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon_Citrix_Essentials) String() string {
+	return "SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon_Citrix_Essentials"
+}

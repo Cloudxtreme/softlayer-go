@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Storage_Allowed_Host - <nil>
@@ -50,6 +50,10 @@ type SoftLayer_Network_Storage_Allowed_Host struct {
 
 	// ResourceTableName - <nil>
 	ResourceTableName string `json:"resourceTableName"`
+}
+
+func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) String() string {
+	return "SoftLayer_Network_Storage_Allowed_Host"
 }
 
 // CreateObject - <nil>

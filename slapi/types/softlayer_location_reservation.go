@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Location_Reservation - <nil>
@@ -38,6 +38,10 @@ type SoftLayer_Location_Reservation struct {
 
 	// Notes - <nil>
 	Notes string `json:"notes"`
+}
+
+func (softlayer_location_reservation *SoftLayer_Location_Reservation) String() string {
+	return "SoftLayer_Location_Reservation"
 }
 
 // GetAccountReservations - <nil>

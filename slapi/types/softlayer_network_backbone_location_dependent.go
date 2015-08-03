@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Backbone_Location_Dependent - <nil>
@@ -23,6 +23,10 @@ type SoftLayer_Network_Backbone_Location_Dependent struct {
 
 	// SourceLocationId - <nil>
 	SourceLocationId int `json:"sourceLocationId"`
+}
+
+func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) String() string {
+	return "SoftLayer_Network_Backbone_Location_Dependent"
 }
 
 // GetAllObjects - <nil>

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Survey - The SoftLayer_Survey data type contains general information relating to a single
@@ -41,6 +41,10 @@ type SoftLayer_Survey struct {
 
 	// TypeId - no documentation
 	TypeId int `json:"typeId"`
+}
+
+func (softlayer_survey *SoftLayer_Survey) String() string {
+	return "SoftLayer_Survey"
 }
 
 // GetActiveSurveyByType - <nil>

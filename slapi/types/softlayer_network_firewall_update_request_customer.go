@@ -6,3 +6,7 @@ package sl
 // update made by a customer to a ticket.
 type SoftLayer_Network_Firewall_Update_Request_Customer struct {
 }
+
+func (softlayer_network_firewall_update_request_customer *SoftLayer_Network_Firewall_Update_Request_Customer) String() string {
+	return "SoftLayer_Network_Firewall_Update_Request_Customer"
+}

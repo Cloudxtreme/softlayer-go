@@ -7,3 +7,7 @@ package sl
 // account.
 type SoftLayer_Billing_Item_Hardware_Server struct {
 }
+
+func (softlayer_billing_item_hardware_server *SoftLayer_Billing_Item_Hardware_Server) String() string {
+	return "SoftLayer_Billing_Item_Hardware_Server"
+}

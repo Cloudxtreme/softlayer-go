@@ -34,3 +34,7 @@ type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status struct 
 	// UpdateStatus - A server's update status, as retrieved form SoftLayer's local server.
 	UpdateStatus string `json:"updateStatus"`
 }
+
+func (softlayer_container_utility_microsoft_windows_updateservices_status *SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status) String() string {
+	return "SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status"
+}

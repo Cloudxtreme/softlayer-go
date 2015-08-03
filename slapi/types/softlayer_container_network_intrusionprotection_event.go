@@ -65,3 +65,7 @@ type SoftLayer_Container_Network_IntrusionProtection_Event struct {
 	// SourcePort - no documentation
 	SourcePort int `json:"sourcePort"`
 }
+
+func (softlayer_container_network_intrusionprotection_event *SoftLayer_Container_Network_IntrusionProtection_Event) String() string {
+	return "SoftLayer_Container_Network_IntrusionProtection_Event"
+}

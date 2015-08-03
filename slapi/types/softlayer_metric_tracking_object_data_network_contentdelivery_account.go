@@ -13,3 +13,7 @@ type SoftLayer_Metric_Tracking_Object_Data_Network_ContentDelivery_Account struc
 	// PopId - The internal identifier of a CDN POP (Points of Presence).
 	PopId int `json:"popId"`
 }
+
+func (softlayer_metric_tracking_object_data_network_contentdelivery_account *SoftLayer_Metric_Tracking_Object_Data_Network_ContentDelivery_Account) String() string {
+	return "SoftLayer_Metric_Tracking_Object_Data_Network_ContentDelivery_Account"
+}

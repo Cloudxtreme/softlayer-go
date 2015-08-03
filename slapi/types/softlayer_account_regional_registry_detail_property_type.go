@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Regional_Registry_Detail_Property_Type - Subnet Registration Detail Property Type
@@ -32,6 +32,10 @@ type SoftLayer_Account_Regional_Registry_Detail_Property_Type struct {
 	// ValueExpression - A Perl-compatible regular expression used to describe the valid format of the
 	// property
 	ValueExpression string `json:"valueExpression"`
+}
+
+func (softlayer_account_regional_registry_detail_property_type *SoftLayer_Account_Regional_Registry_Detail_Property_Type) String() string {
+	return "SoftLayer_Account_Regional_Registry_Detail_Property_Type"
 }
 
 // GetAllObjects - <nil>

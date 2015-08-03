@@ -7,3 +7,7 @@ package sl
 // component.
 type SoftLayer_Software_Component_AntivirusSpyware_Mcafee struct {
 }
+
+func (softlayer_software_component_antivirusspyware_mcafee *SoftLayer_Software_Component_AntivirusSpyware_Mcafee) String() string {
+	return "SoftLayer_Software_Component_AntivirusSpyware_Mcafee"
+}

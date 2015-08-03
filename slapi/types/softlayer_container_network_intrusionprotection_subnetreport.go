@@ -22,3 +22,7 @@ type SoftLayer_Container_Network_IntrusionProtection_SubnetReport struct {
 	// identifier, or "All Subnets"
 	SubnetIpAddress string `json:"subnetIpAddress"`
 }
+
+func (softlayer_container_network_intrusionprotection_subnetreport *SoftLayer_Container_Network_IntrusionProtection_SubnetReport) String() string {
+	return "SoftLayer_Container_Network_IntrusionProtection_SubnetReport"
+}

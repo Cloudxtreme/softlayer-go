@@ -16,3 +16,7 @@ type SoftLayer_Product_Item_Category_Question_Field_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_product_item_category_question_field_type *SoftLayer_Product_Item_Category_Question_Field_Type) String() string {
+	return "SoftLayer_Product_Item_Category_Question_Field_Type"
+}

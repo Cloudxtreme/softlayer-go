@@ -28,3 +28,7 @@ type SoftLayer_Product_Catalog_Item_Price struct {
 	// PriceId - The id of the Item Price that is part of the Catalog.
 	PriceId int `json:"priceId"`
 }
+
+func (softlayer_product_catalog_item_price *SoftLayer_Product_Catalog_Item_Price) String() string {
+	return "SoftLayer_Product_Catalog_Item_Price"
+}

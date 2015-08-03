@@ -16,3 +16,7 @@ type SoftLayer_Metric_Tracking_Object_Type struct {
 	// group is polling.
 	Name string `json:"name"`
 }
+
+func (softlayer_metric_tracking_object_type *SoftLayer_Metric_Tracking_Object_Type) String() string {
+	return "SoftLayer_Metric_Tracking_Object_Type"
+}

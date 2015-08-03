@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Firewall_Update_Request - The SoftLayer_Network_Firewall_Update_Request data type
@@ -60,6 +60,10 @@ type SoftLayer_Network_Firewall_Update_Request struct {
 
 	// Rules - The group of rules contained within the update request.
 	Rules []*SoftLayer_Network_Firewall_Update_Request_Rule `json:"rules"`
+}
+
+func (softlayer_network_firewall_update_request *SoftLayer_Network_Firewall_Update_Request) String() string {
+	return "SoftLayer_Network_Firewall_Update_Request"
 }
 
 // CreateObject - Create a new firewall update request. The SoftLayer_Network_Firewall_Update_Request

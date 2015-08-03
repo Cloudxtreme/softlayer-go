@@ -30,3 +30,7 @@ type SoftLayer_Account_Rwhois_Handle struct {
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate"`
 }
+
+func (softlayer_account_rwhois_handle *SoftLayer_Account_Rwhois_Handle) String() string {
+	return "SoftLayer_Account_Rwhois_Handle"
+}

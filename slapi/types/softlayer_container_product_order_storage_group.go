@@ -31,3 +31,7 @@ type SoftLayer_Container_Product_Order_Storage_Group struct {
 	// storage group, then this will not be used.
 	Partitions []*SoftLayer_Container_Product_Order_Storage_Group_Partition `json:"partitions"`
 }
+
+func (softlayer_container_product_order_storage_group *SoftLayer_Container_Product_Order_Storage_Group) String() string {
+	return "SoftLayer_Container_Product_Order_Storage_Group"
+}

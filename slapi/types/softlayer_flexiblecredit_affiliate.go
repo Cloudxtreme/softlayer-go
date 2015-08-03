@@ -14,3 +14,7 @@ type SoftLayer_FlexibleCredit_Affiliate struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_flexiblecredit_affiliate *SoftLayer_FlexibleCredit_Affiliate) String() string {
+	return "SoftLayer_FlexibleCredit_Affiliate"
+}

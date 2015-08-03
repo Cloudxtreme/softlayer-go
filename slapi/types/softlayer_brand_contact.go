@@ -51,3 +51,7 @@ type SoftLayer_Brand_Contact struct {
 	// State - no documentation
 	State string `json:"state"`
 }
+
+func (softlayer_brand_contact *SoftLayer_Brand_Contact) String() string {
+	return "SoftLayer_Brand_Contact"
+}

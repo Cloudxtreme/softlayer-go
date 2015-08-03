@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_LoadBalancer_VirtualIpAddress - The
@@ -87,6 +87,10 @@ type SoftLayer_Network_LoadBalancer_VirtualIpAddress struct {
 	// VirtualIpAddress - The virtual, public-facing IP address for your load balancer. This is the address
 	// of all incoming traffic
 	VirtualIpAddress string `json:"virtualIpAddress"`
+}
+
+func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) String() string {
+	return "SoftLayer_Network_LoadBalancer_VirtualIpAddress"
 }
 
 // Disable - Disable a Virtual IP Address, removing it from load balancer rotation and denying all

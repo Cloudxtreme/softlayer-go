@@ -14,3 +14,7 @@ type SoftLayer_Marketplace_Partner_Attachment_Type struct {
 	// Type - <nil>
 	Type string `json:"type"`
 }
+
+func (softlayer_marketplace_partner_attachment_type *SoftLayer_Marketplace_Partner_Attachment_Type) String() string {
+	return "SoftLayer_Marketplace_Partner_Attachment_Type"
+}

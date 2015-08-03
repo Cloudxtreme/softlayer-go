@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Location_Group - <nil>
@@ -32,6 +32,10 @@ type SoftLayer_Location_Group struct {
 
 	// SecurityLevelId - <nil>
 	SecurityLevelId int `json:"securityLevelId"`
+}
+
+func (softlayer_location_group *SoftLayer_Location_Group) String() string {
+	return "SoftLayer_Location_Group"
 }
 
 // GetAllObjects - <nil>

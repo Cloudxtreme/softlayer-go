@@ -17,3 +17,7 @@ type SoftLayer_Container_Product_Order_User_Customer_External_Binding struct {
 	// external binding being purchased.
 	VendorId int `json:"vendorId"`
 }
+
+func (softlayer_container_product_order_user_customer_external_binding *SoftLayer_Container_Product_Order_User_Customer_External_Binding) String() string {
+	return "SoftLayer_Container_Product_Order_User_Customer_External_Binding"
+}

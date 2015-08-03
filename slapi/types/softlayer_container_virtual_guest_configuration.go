@@ -56,3 +56,7 @@ type SoftLayer_Container_Virtual_Guest_Configuration struct {
 	// represents whether the instance will run on hosts with instances belonging to other accounts.
 	Processors []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"processors"`
 }
+
+func (softlayer_container_virtual_guest_configuration *SoftLayer_Container_Virtual_Guest_Configuration) String() string {
+	return "SoftLayer_Container_Virtual_Guest_Configuration"
+}

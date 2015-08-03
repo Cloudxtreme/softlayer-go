@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Provisioning_Maintenance_Ticket - <nil>
@@ -31,6 +31,10 @@ type SoftLayer_Provisioning_Maintenance_Ticket struct {
 
 	// TicketId - <nil>
 	TicketId int `json:"ticketId"`
+}
+
+func (softlayer_provisioning_maintenance_ticket *SoftLayer_Provisioning_Maintenance_Ticket) String() string {
+	return "SoftLayer_Provisioning_Maintenance_Ticket"
 }
 
 // GetObject - <nil>

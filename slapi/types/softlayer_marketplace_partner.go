@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Marketplace_Partner - <nil>
@@ -83,6 +83,10 @@ type SoftLayer_Marketplace_Partner struct {
 
 	// UrlIdentifier - <nil>
 	UrlIdentifier string `json:"urlIdentifier"`
+}
+
+func (softlayer_marketplace_partner *SoftLayer_Marketplace_Partner) String() string {
+	return "SoftLayer_Marketplace_Partner"
 }
 
 // GetAllObjects - <nil>

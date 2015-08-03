@@ -10,3 +10,7 @@ type SoftLayer_Container_Product_Order_Network_Storage_Iscsi_SnapshotSpace struc
 	// VolumeId - the [[SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3]] Id.
 	VolumeId int `json:"volumeId"`
 }
+
+func (softlayer_container_product_order_network_storage_iscsi_snapshotspace *SoftLayer_Container_Product_Order_Network_Storage_Iscsi_SnapshotSpace) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Storage_Iscsi_SnapshotSpace"
+}

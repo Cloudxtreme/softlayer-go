@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Media - The SoftLayer_Account_Media data type contains information on a single
@@ -48,6 +48,10 @@ type SoftLayer_Account_Media struct {
 
 	// Volume - A guest's associated EVault network storage service account.
 	Volume *SoftLayer_Network_Storage `json:"volume"`
+}
+
+func (softlayer_account_media *SoftLayer_Account_Media) String() string {
+	return "SoftLayer_Account_Media"
 }
 
 // EditObject - Edit the properties of a media record by passing in a modified instance of a

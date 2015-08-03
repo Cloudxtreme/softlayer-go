@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Item_Price_Premium - <nil>
@@ -32,6 +32,10 @@ type SoftLayer_Product_Item_Price_Premium struct {
 
 	// PackageId - <nil>
 	PackageId int `json:"packageId"`
+}
+
+func (softlayer_product_item_price_premium *SoftLayer_Product_Item_Price_Premium) String() string {
+	return "SoftLayer_Product_Item_Price_Premium"
 }
 
 // GetObject - <nil>

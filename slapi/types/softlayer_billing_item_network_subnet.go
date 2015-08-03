@@ -20,3 +20,7 @@ type SoftLayer_Billing_Item_Network_Subnet struct {
 	// ResourceTableId - The resource (unique identifier) for a server billing item.
 	ResourceTableId int `json:"resourceTableId"`
 }
+
+func (softlayer_billing_item_network_subnet *SoftLayer_Billing_Item_Network_Subnet) String() string {
+	return "SoftLayer_Billing_Item_Network_Subnet"
+}

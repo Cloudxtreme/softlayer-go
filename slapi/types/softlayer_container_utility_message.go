@@ -24,3 +24,7 @@ type SoftLayer_Container_Utility_Message struct {
 	// Summary - <nil>
 	Summary string `json:"summary"`
 }
+
+func (softlayer_container_utility_message *SoftLayer_Container_Utility_Message) String() string {
+	return "SoftLayer_Container_Utility_Message"
+}

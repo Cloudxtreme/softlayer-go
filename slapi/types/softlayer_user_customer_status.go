@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_Status - Each SoftLayer portal account is assigned a status code that
@@ -22,6 +22,10 @@ type SoftLayer_User_Customer_Status struct {
 	// for users disabled by another portal user, "Disabled" for accounts turned off by SoftLayer, or Only"
 	// for user accounts with no access to the customer portal but VPN access to the private network.
 	Name string `json:"name"`
+}
+
+func (softlayer_user_customer_status *SoftLayer_User_Customer_Status) String() string {
+	return "SoftLayer_User_Customer_Status"
 }
 
 // GetAllObjects - no documentation

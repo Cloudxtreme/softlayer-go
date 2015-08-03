@@ -7,3 +7,7 @@ package sl
 // to place a hardware firewall order with SoftLayer.
 type SoftLayer_Container_Product_Order_Network_Protection_Firewall struct {
 }
+
+func (softlayer_container_product_order_network_protection_firewall *SoftLayer_Container_Product_Order_Network_Protection_Firewall) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Protection_Firewall"
+}

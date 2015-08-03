@@ -45,3 +45,7 @@ type SoftLayer_Container_Product_Order_Security_Certificate struct {
 	// ValidityMonths - The period that a SSL certificate is valid for. For example, 12, 24, 36
 	ValidityMonths int `json:"validityMonths"`
 }
+
+func (softlayer_container_product_order_security_certificate *SoftLayer_Container_Product_Order_Security_Certificate) String() string {
+	return "SoftLayer_Container_Product_Order_Security_Certificate"
+}

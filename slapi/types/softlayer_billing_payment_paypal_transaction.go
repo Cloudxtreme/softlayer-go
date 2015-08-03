@@ -135,3 +135,7 @@ type SoftLayer_Billing_Payment_PayPal_Transaction struct {
 	// response.
 	TransactionType string `json:"transactionType"`
 }
+
+func (softlayer_billing_payment_paypal_transaction *SoftLayer_Billing_Payment_PayPal_Transaction) String() string {
+	return "SoftLayer_Billing_Payment_PayPal_Transaction"
+}

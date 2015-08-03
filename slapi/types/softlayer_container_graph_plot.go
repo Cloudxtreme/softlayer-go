@@ -14,3 +14,7 @@ type SoftLayer_Container_Graph_Plot struct {
 	// Unit - <nil>
 	Unit string `json:"unit"`
 }
+
+func (softlayer_container_graph_plot *SoftLayer_Container_Graph_Plot) String() string {
+	return "SoftLayer_Container_Graph_Plot"
+}

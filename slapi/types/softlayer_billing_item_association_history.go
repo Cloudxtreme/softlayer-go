@@ -36,3 +36,7 @@ type SoftLayer_Billing_Item_Association_History struct {
 	// Id - A billing item association history's internal identifier.
 	Id int `json:"id"`
 }
+
+func (softlayer_billing_item_association_history *SoftLayer_Billing_Item_Association_History) String() string {
+	return "SoftLayer_Billing_Item_Association_History"
+}

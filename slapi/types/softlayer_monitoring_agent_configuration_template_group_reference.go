@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference -
@@ -26,6 +26,10 @@ type SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference struct {
 
 	// TemplateGroupId - Internal identifier of a monitoring agent configuration group
 	TemplateGroupId int `json:"templateGroupId"`
+}
+
+func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) String() string {
+	return "SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference"
 }
 
 // CreateObject - This method creates a monitoring agent configuration template group reference by

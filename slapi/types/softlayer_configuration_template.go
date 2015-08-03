@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template - The SoftLayer_Configuration_Template data type contains general
@@ -77,6 +77,10 @@ type SoftLayer_Configuration_Template struct {
 
 	// UserRecordId - Internal identifier of a user that last modified this configuration template
 	UserRecordId int `json:"userRecordId"`
+}
+
+func (softlayer_configuration_template *SoftLayer_Configuration_Template) String() string {
+	return "SoftLayer_Configuration_Template"
 }
 
 // CopyTemplate - Copy a configuration template and returns a newly created template copy

@@ -16,3 +16,7 @@ type SoftLayer_Notification_Occurrence_Resource_Network_Storage_Iscsi_NetApp str
 	// ResourceType - <nil>
 	ResourceType string `json:"resourceType"`
 }
+
+func (softlayer_notification_occurrence_resource_network_storage_iscsi_netapp *SoftLayer_Notification_Occurrence_Resource_Network_Storage_Iscsi_NetApp) String() string {
+	return "SoftLayer_Notification_Occurrence_Resource_Network_Storage_Iscsi_NetApp"
+}

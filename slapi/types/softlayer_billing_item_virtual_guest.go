@@ -66,3 +66,7 @@ type SoftLayer_Billing_Item_Virtual_Guest struct {
 	// ResourceTableId - The resource (unique identifier) for a server billing item.
 	ResourceTableId int `json:"resourceTableId"`
 }
+
+func (softlayer_billing_item_virtual_guest *SoftLayer_Billing_Item_Virtual_Guest) String() string {
+	return "SoftLayer_Billing_Item_Virtual_Guest"
+}

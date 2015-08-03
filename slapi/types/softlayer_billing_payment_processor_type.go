@@ -20,3 +20,7 @@ type SoftLayer_Billing_Payment_Processor_Type struct {
 	// PaymentProcessors - <nil>
 	PaymentProcessors []*SoftLayer_Billing_Payment_Processor `json:"paymentProcessors"`
 }
+
+func (softlayer_billing_payment_processor_type *SoftLayer_Billing_Payment_Processor_Type) String() string {
+	return "SoftLayer_Billing_Payment_Processor_Type"
+}

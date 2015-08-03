@@ -15,3 +15,7 @@ type SoftLayer_Brand_Contact_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_brand_contact_type *SoftLayer_Brand_Contact_Type) String() string {
+	return "SoftLayer_Brand_Contact_Type"
+}

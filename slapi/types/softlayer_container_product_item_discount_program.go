@@ -53,3 +53,7 @@ type SoftLayer_Container_Product_Item_Discount_Program struct {
 	// the applicable quantity of this container.
 	RecurringTax float64 `json:"recurringTax"`
 }
+
+func (softlayer_container_product_item_discount_program *SoftLayer_Container_Product_Item_Discount_Program) String() string {
+	return "SoftLayer_Container_Product_Item_Discount_Program"
+}

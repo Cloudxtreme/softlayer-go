@@ -25,3 +25,7 @@ type SoftLayer_Product_Package_Item_Prices struct {
 	// PackageId - The Package ID to which this price reference belongs
 	PackageId int `json:"packageId"`
 }
+
+func (softlayer_product_package_item_prices *SoftLayer_Product_Package_Item_Prices) String() string {
+	return "SoftLayer_Product_Package_Item_Prices"
+}

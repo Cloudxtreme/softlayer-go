@@ -3,17 +3,23 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Location_Group_Pricing - <nil>
 type SoftLayer_Location_Group_Pricing struct {
 
-	// PriceCount - no documentation
+	// PriceCount - A count of the prices that this pricing location group limits. All of these prices will
+	// only be available in the locations defined by this pricing location group.
 	PriceCount uint64 `json:"priceCount"`
 
-	// Prices - <nil>
+	// Prices - The prices that this pricing location group limits. All of these prices will only be
+	// available in the locations defined by this pricing location group.
 	Prices []*SoftLayer_Product_Item_Price `json:"prices"`
+}
+
+func (softlayer_location_group_pricing *SoftLayer_Location_Group_Pricing) String() string {
+	return "SoftLayer_Location_Group_Pricing"
 }
 
 // GetAllObjects - <nil>

@@ -12,3 +12,7 @@ type SoftLayer_Container_Product_Order_Property struct {
 	// Value - no documentation
 	Value string `json:"value"`
 }
+
+func (softlayer_container_product_order_property *SoftLayer_Container_Product_Order_Property) String() string {
+	return "SoftLayer_Container_Product_Order_Property"
+}

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Storage - The SoftLayer_Network_Storage data type contains general information
@@ -24,10 +24,10 @@ type SoftLayer_Network_Storage struct {
 	// AccountPassword - Other usernames and passwords associated with a Storage volume.
 	AccountPassword *SoftLayer_Account_Password `json:"accountPassword"`
 
-	// ActiveTransactionCount - no documentation
+	// ActiveTransactionCount - A count of the currently active transactions on a network storage volume.
 	ActiveTransactionCount uint64 `json:"activeTransactionCount"`
 
-	// ActiveTransactions - no documentation
+	// ActiveTransactions - The currently active transactions on a network storage volume.
 	ActiveTransactions []*SoftLayer_Provisioning_Version1_Transaction `json:"activeTransactions"`
 
 	// AllowableHardware - The list of Hardware that can be attached to this storage.
@@ -166,6 +166,9 @@ type SoftLayer_Network_Storage struct {
 	// IscsiLuns - Relationship between a container volume and iSCSI LUNs.
 	IscsiLuns []*SoftLayer_Network_Storage `json:"iscsiLuns"`
 
+	// LunId - no documentation
+	LunId string `json:"lunId"`
+
 	// MetricTrackingObject - A network storage volume's metric tracking object. This object records all
 	// periodic polled data available to this volume.
 	MetricTrackingObject *SoftLayer_Metric_Tracking_Object `json:"metricTrackingObject"`
@@ -227,10 +230,11 @@ type SoftLayer_Network_Storage struct {
 	// volume.
 	PropertyCount uint64 `json:"propertyCount"`
 
-	// ReplicatingLunCount - A count of the iSCSI LUN volumes being replicated by a volume.
+	// ReplicatingLunCount - A count of the iSCSI LUN volumes being replicated by this network storage
+	// volume.
 	ReplicatingLunCount uint64 `json:"replicatingLunCount"`
 
-	// ReplicatingLuns - The iSCSI LUN volumes being replicated by a volume.
+	// ReplicatingLuns - The iSCSI LUN volumes being replicated by this network storage volume.
 	ReplicatingLuns []*SoftLayer_Network_Storage `json:"replicatingLuns"`
 
 	// ReplicatingVolume - The network storage volume being replicated by a volume.
@@ -249,7 +253,8 @@ type SoftLayer_Network_Storage struct {
 	// ReplicationPartners - The network storage volumes configured to be replicants of a volume.
 	ReplicationPartners []*SoftLayer_Network_Storage `json:"replicationPartners"`
 
-	// ReplicationStatus - no documentation
+	// ReplicationStatus - The current replication status of a network storage volume. Indicates Failover
+	// or Failback status.
 	ReplicationStatus string `json:"replicationStatus"`
 
 	// ScheduleCount - A count of the schedules which are associated with a network storage volume.
@@ -301,7 +306,8 @@ type SoftLayer_Network_Storage struct {
 	// TotalBytesUsed - no documentation
 	TotalBytesUsed string `json:"totalBytesUsed"`
 
-	// TotalScheduleSnapshotRetentionCount - <nil>
+	// TotalScheduleSnapshotRetentionCount - The total snapshot retention count of all schedules on this
+	// network storage volume.
 	TotalScheduleSnapshotRetentionCount uint `json:"totalScheduleSnapshotRetentionCount"`
 
 	// UpgradableFlag - This flag indicates whether this storage type is upgradable or not.
@@ -334,6 +340,10 @@ type SoftLayer_Network_Storage struct {
 
 	// WeeklySchedule - The Weekly Schedule which is associated with this network storage volume.
 	WeeklySchedule *SoftLayer_Network_Storage_Schedule `json:"weeklySchedule"`
+}
+
+func (softlayer_network_storage *SoftLayer_Network_Storage) String() string {
+	return "SoftLayer_Network_Storage"
 }
 
 // AllowAccessFromHardware - This method is used to modify the access control list for this Storage

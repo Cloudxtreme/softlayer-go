@@ -27,3 +27,7 @@ type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_AccessProtection stru
 	// Source - The IP address that caused an access protection event.
 	Source string `json:"source"`
 }
+
+func (mcafee_epolicy_orchestrator_version36_antivirus_event_accessprotection *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_AccessProtection) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_AccessProtection"
+}

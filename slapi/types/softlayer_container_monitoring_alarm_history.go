@@ -34,3 +34,7 @@ type SoftLayer_Container_Monitoring_Alarm_History struct {
 	// Severity - no documentation
 	Severity string `json:"severity"`
 }
+
+func (softlayer_container_monitoring_alarm_history *SoftLayer_Container_Monitoring_Alarm_History) String() string {
+	return "SoftLayer_Container_Monitoring_Alarm_History"
+}

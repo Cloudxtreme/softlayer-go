@@ -19,3 +19,7 @@ type SoftLayer_Network_Bandwidth_Version1_Allocation struct {
 	// Id - no documentation
 	Id int `json:"id"`
 }
+
+func (softlayer_network_bandwidth_version1_allocation *SoftLayer_Network_Bandwidth_Version1_Allocation) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Allocation"
+}

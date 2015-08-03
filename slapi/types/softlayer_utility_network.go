@@ -3,11 +3,15 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Utility_Network - <nil>
 type SoftLayer_Utility_Network struct {
+}
+
+func (softlayer_utility_network *SoftLayer_Utility_Network) String() string {
+	return "SoftLayer_Utility_Network"
 }
 
 // IsPingable - Send a single ping from SoftLayer's application servers to the given IP address or

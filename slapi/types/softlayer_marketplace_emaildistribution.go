@@ -11,3 +11,7 @@ type SoftLayer_Marketplace_EmailDistribution struct {
 	// Id - <nil>
 	Id int `json:"id"`
 }
+
+func (softlayer_marketplace_emaildistribution *SoftLayer_Marketplace_EmailDistribution) String() string {
+	return "SoftLayer_Marketplace_EmailDistribution"
+}

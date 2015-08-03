@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_External_Binding_Verisign - The
@@ -28,6 +28,10 @@ type SoftLayer_User_Customer_External_Binding_Verisign struct {
 
 	// CredentialType - The type of VeriSign credential. This can be either 'Hardware' or 'Software'.
 	CredentialType string `json:"credentialType"`
+}
+
+func (softlayer_user_customer_external_binding_verisign *SoftLayer_User_Customer_External_Binding_Verisign) String() string {
+	return "SoftLayer_User_Customer_External_Binding_Verisign"
 }
 
 // DeleteObject - Delete a VeriSign external binding. The only VeriSign external binding that can be

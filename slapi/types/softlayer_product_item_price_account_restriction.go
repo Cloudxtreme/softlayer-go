@@ -23,3 +23,7 @@ type SoftLayer_Product_Item_Price_Account_Restriction struct {
 	// ItemPriceId - The item price id for the item price account restriction.
 	ItemPriceId int `json:"itemPriceId"`
 }
+
+func (softlayer_product_item_price_account_restriction *SoftLayer_Product_Item_Price_Account_Restriction) String() string {
+	return "SoftLayer_Product_Item_Price_Account_Restriction"
+}

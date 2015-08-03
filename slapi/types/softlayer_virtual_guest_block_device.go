@@ -60,3 +60,7 @@ type SoftLayer_Virtual_Guest_Block_Device struct {
 	// Uuid - A block device's unique ID on a virtualization platform.
 	Uuid string `json:"uuid"`
 }
+
+func (softlayer_virtual_guest_block_device *SoftLayer_Virtual_Guest_Block_Device) String() string {
+	return "SoftLayer_Virtual_Guest_Block_Device"
+}

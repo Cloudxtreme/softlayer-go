@@ -13,3 +13,7 @@ type SoftLayer_Network_Component_IpAddress struct {
 	// NetworkComponent - The network component associated with this object's IP address.
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
 }
+
+func (softlayer_network_component_ipaddress *SoftLayer_Network_Component_IpAddress) String() string {
+	return "SoftLayer_Network_Component_IpAddress"
+}

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Component - Every piece of hardware running in SoftLayer's datacenters connected
@@ -182,6 +182,10 @@ type SoftLayer_Network_Component struct {
 
 	// UplinkDuplexMode - The duplex mode of the uplink network component linking to this object
 	UplinkDuplexMode *SoftLayer_Network_Component_Duplex_Mode `json:"uplinkDuplexMode"`
+}
+
+func (softlayer_network_component *SoftLayer_Network_Component) String() string {
+	return "SoftLayer_Network_Component"
 }
 
 // AddNetworkVlanTrunks - Add VLANs as trunks to a network component. The VLANs given must be assigned

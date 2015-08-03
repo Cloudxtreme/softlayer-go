@@ -19,3 +19,7 @@ type SoftLayer_Account_Attribute_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_account_attribute_type *SoftLayer_Account_Attribute_Type) String() string {
+	return "SoftLayer_Account_Attribute_Type"
+}

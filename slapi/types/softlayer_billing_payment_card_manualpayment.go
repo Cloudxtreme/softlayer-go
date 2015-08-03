@@ -130,3 +130,7 @@ type SoftLayer_Billing_Payment_Card_ManualPayment struct {
 	// Type - no documentation
 	Type string `json:"type"`
 }
+
+func (softlayer_billing_payment_card_manualpayment *SoftLayer_Billing_Payment_Card_ManualPayment) String() string {
+	return "SoftLayer_Billing_Payment_Card_ManualPayment"
+}

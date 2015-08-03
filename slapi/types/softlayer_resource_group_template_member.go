@@ -23,3 +23,7 @@ type SoftLayer_Resource_Group_Template_Member struct {
 	// TemplateId - <nil>
 	TemplateId int `json:"templateId"`
 }
+
+func (softlayer_resource_group_template_member *SoftLayer_Resource_Group_Template_Member) String() string {
+	return "SoftLayer_Resource_Group_Template_Member"
+}

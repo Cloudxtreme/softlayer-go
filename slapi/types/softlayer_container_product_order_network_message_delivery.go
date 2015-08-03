@@ -16,3 +16,7 @@ type SoftLayer_Container_Product_Order_Network_Message_Delivery struct {
 	// EmailAddress - no documentation
 	EmailAddress string `json:"emailAddress"`
 }
+
+func (softlayer_container_product_order_network_message_delivery *SoftLayer_Container_Product_Order_Network_Message_Delivery) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Message_Delivery"
+}

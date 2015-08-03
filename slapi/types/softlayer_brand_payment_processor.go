@@ -11,3 +11,7 @@ type SoftLayer_Brand_Payment_Processor struct {
 	// PaymentProcessor - <nil>
 	PaymentProcessor *SoftLayer_Billing_Payment_Processor `json:"paymentProcessor"`
 }
+
+func (softlayer_brand_payment_processor *SoftLayer_Brand_Payment_Processor) String() string {
+	return "SoftLayer_Brand_Payment_Processor"
+}

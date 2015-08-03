@@ -9,3 +9,7 @@ package sl
 // the account.
 type SoftLayer_Account_Regional_Registry_Detail_Version4_Person_Default struct {
 }
+
+func (softlayer_account_regional_registry_detail_version4_person_default *SoftLayer_Account_Regional_Registry_Detail_Version4_Person_Default) String() string {
+	return "SoftLayer_Account_Regional_Registry_Detail_Version4_Person_Default"
+}

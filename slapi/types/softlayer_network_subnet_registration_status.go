@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Subnet_Registration_Status - Subnet Registration Status objects describe the
@@ -30,6 +30,10 @@ type SoftLayer_Network_Subnet_Registration_Status struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_network_subnet_registration_status *SoftLayer_Network_Subnet_Registration_Status) String() string {
+	return "SoftLayer_Network_Subnet_Registration_Status"
 }
 
 // GetAllObjects - <nil>

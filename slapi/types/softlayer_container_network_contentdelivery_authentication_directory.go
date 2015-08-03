@@ -21,3 +21,7 @@ type SoftLayer_Container_Network_ContentDelivery_Authentication_Directory struct
 	// Large, Small, Flash and Windows Media
 	Type string `json:"type"`
 }
+
+func (softlayer_container_network_contentdelivery_authentication_directory *SoftLayer_Container_Network_ContentDelivery_Authentication_Directory) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_Authentication_Directory"
+}

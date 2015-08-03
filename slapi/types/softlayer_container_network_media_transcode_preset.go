@@ -20,3 +20,7 @@ type SoftLayer_Container_Network_Media_Transcode_Preset struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_container_network_media_transcode_preset *SoftLayer_Container_Network_Media_Transcode_Preset) String() string {
+	return "SoftLayer_Container_Network_Media_Transcode_Preset"
+}

@@ -10,3 +10,7 @@ type SoftLayer_Network_Subnet_IpAddress_Version6 struct {
 	// address.
 	PublicVersion6NetworkGateway *SoftLayer_Network_Gateway `json:"publicVersion6NetworkGateway"`
 }
+
+func (softlayer_network_subnet_ipaddress_version6 *SoftLayer_Network_Subnet_IpAddress_Version6) String() string {
+	return "SoftLayer_Network_Subnet_IpAddress_Version6"
+}

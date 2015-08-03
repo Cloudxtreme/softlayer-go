@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Invoice_Tax_Status - The invoice tax status data type models a single status or
@@ -27,6 +27,10 @@ type SoftLayer_Billing_Invoice_Tax_Status struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+func (softlayer_billing_invoice_tax_status *SoftLayer_Billing_Invoice_Tax_Status) String() string {
+	return "SoftLayer_Billing_Invoice_Tax_Status"
 }
 
 // GetAllObjects - <nil>

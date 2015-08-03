@@ -18,3 +18,7 @@ type SoftLayer_Hardware_Component_RemoteManagement_User struct {
 	// Username - The username used for this remote management command.
 	Username string `json:"username"`
 }
+
+func (softlayer_hardware_component_remotemanagement_user *SoftLayer_Hardware_Component_RemoteManagement_User) String() string {
+	return "SoftLayer_Hardware_Component_RemoteManagement_User"
+}

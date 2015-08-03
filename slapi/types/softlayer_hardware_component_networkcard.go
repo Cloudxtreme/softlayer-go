@@ -6,3 +6,7 @@ package sl
 // abstracts information related to a network card.
 type SoftLayer_Hardware_Component_NetworkCard struct {
 }
+
+func (softlayer_hardware_component_networkcard *SoftLayer_Hardware_Component_NetworkCard) String() string {
+	return "SoftLayer_Hardware_Component_NetworkCard"
+}

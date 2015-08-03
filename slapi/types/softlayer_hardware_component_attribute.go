@@ -28,3 +28,7 @@ type SoftLayer_Hardware_Component_Attribute struct {
 	// the attributes [[SoftLayer_Hardware_Component_Attribute_Type|type]].
 	Value string `json:"value"`
 }
+
+func (softlayer_hardware_component_attribute *SoftLayer_Hardware_Component_Attribute) String() string {
+	return "SoftLayer_Hardware_Component_Attribute"
+}

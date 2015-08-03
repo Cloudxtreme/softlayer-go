@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Media_Transcode_Job - The SoftLayer_Network_Media_Transcode_Job contains
@@ -75,6 +75,10 @@ type SoftLayer_Network_Media_Transcode_Job struct {
 
 	// Watermark - no documentation
 	Watermark *SoftLayer_Container_Network_Media_Transcode_Job_Watermark `json:"watermark"`
+}
+
+func (softlayer_network_media_transcode_job *SoftLayer_Network_Media_Transcode_Job) String() string {
+	return "SoftLayer_Network_Media_Transcode_Job"
 }
 
 // CreateObject - With this method, you can create a transcode job. The very first step of creating a

@@ -9,3 +9,7 @@ type SoftLayer_Software_Description_Attribute_Type struct {
 	// Keyname - no documentation
 	Keyname string `json:"keyname"`
 }
+
+func (softlayer_software_description_attribute_type *SoftLayer_Software_Description_Attribute_Type) String() string {
+	return "SoftLayer_Software_Description_Attribute_Type"
+}

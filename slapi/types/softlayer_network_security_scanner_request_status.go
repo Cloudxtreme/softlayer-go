@@ -15,3 +15,7 @@ type SoftLayer_Network_Security_Scanner_Request_Status struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_network_security_scanner_request_status *SoftLayer_Network_Security_Scanner_Request_Status) String() string {
+	return "SoftLayer_Network_Security_Scanner_Request_Status"
+}

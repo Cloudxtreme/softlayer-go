@@ -12,3 +12,7 @@ package sl
 // be removed from a SoftLayer hosted domain.
 type SoftLayer_Dns_Domain_ResourceRecord_NsType struct {
 }
+
+func (softlayer_dns_domain_resourcerecord_nstype *SoftLayer_Dns_Domain_ResourceRecord_NsType) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord_NsType"
+}

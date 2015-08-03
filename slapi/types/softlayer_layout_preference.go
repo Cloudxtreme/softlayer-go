@@ -18,3 +18,7 @@ type SoftLayer_Layout_Preference struct {
 	// Value - no documentation
 	Value string `json:"value"`
 }
+
+func (softlayer_layout_preference *SoftLayer_Layout_Preference) String() string {
+	return "SoftLayer_Layout_Preference"
+}

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Auxiliary_Shipping_Courier_Type - <nil>
@@ -26,6 +26,10 @@ type SoftLayer_Auxiliary_Shipping_Courier_Type struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type) String() string {
+	return "SoftLayer_Auxiliary_Shipping_Courier_Type"
 }
 
 // GetObject - <nil>

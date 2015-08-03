@@ -64,3 +64,7 @@ type SoftLayer_Container_Account_Discount_Program struct {
 	// with the related pre-tax values.
 	RemainingCreditTax float64 `json:"remainingCreditTax"`
 }
+
+func (softlayer_container_account_discount_program *SoftLayer_Container_Account_Discount_Program) String() string {
+	return "SoftLayer_Container_Account_Discount_Program"
+}

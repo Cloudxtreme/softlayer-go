@@ -10,3 +10,7 @@ type SoftLayer_Auxiliary_Notification_Emergency_Status struct {
 	// Name - A name describing the status of the current Emergency Notification.
 	Name string `json:"name"`
 }
+
+func (softlayer_auxiliary_notification_emergency_status *SoftLayer_Auxiliary_Notification_Emergency_Status) String() string {
+	return "SoftLayer_Auxiliary_Notification_Emergency_Status"
+}

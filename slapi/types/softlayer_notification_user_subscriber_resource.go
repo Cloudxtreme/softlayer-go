@@ -21,3 +21,7 @@ type SoftLayer_Notification_User_Subscriber_Resource struct {
 	// Global Load Balancer
 	ResourceTableId int `json:"resourceTableId"`
 }
+
+func (softlayer_notification_user_subscriber_resource *SoftLayer_Notification_User_Subscriber_Resource) String() string {
+	return "SoftLayer_Notification_User_Subscriber_Resource"
+}

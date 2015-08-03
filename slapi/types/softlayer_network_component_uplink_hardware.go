@@ -16,3 +16,7 @@ type SoftLayer_Network_Component_Uplink_Hardware struct {
 	// belongs to..
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
 }
+
+func (softlayer_network_component_uplink_hardware *SoftLayer_Network_Component_Uplink_Hardware) String() string {
+	return "SoftLayer_Network_Component_Uplink_Hardware"
+}

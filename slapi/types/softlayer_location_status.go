@@ -16,3 +16,7 @@ type SoftLayer_Location_Status struct {
 	// possible values.
 	Status string `json:"status"`
 }
+
+func (softlayer_location_status *SoftLayer_Location_Status) String() string {
+	return "SoftLayer_Location_Status"
+}

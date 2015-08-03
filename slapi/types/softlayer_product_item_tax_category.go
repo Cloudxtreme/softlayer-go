@@ -21,3 +21,7 @@ type SoftLayer_Product_Item_Tax_Category struct {
 	// StatusFlag - no documentation
 	StatusFlag int `json:"statusFlag"`
 }
+
+func (softlayer_product_item_tax_category *SoftLayer_Product_Item_Tax_Category) String() string {
+	return "SoftLayer_Product_Item_Tax_Category"
+}

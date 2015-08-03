@@ -20,3 +20,7 @@ type SoftLayer_Container_Network_Bandwidth_Data_Summary struct {
 	// UsageUnits - The unit of measurement used in a bandwidth data summary.
 	UsageUnits string `json:"usageUnits"`
 }
+
+func (softlayer_container_network_bandwidth_data_summary *SoftLayer_Container_Network_Bandwidth_Data_Summary) String() string {
+	return "SoftLayer_Container_Network_Bandwidth_Data_Summary"
+}

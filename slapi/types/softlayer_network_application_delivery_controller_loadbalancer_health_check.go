@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check - <nil>
@@ -41,6 +41,10 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check
 
 	// Type - <nil>
 	Type *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type `json:"type"`
+}
+
+func (softlayer_network_application_delivery_controller_loadbalancer_health_check *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check) String() string {
+	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check"
 }
 
 // GetObject - <nil>

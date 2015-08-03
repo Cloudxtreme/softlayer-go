@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Package_Server_Option - The [[SoftLayer_Product_Package_Server_Option]] data type
@@ -24,6 +24,10 @@ type SoftLayer_Product_Package_Server_Option struct {
 
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) String() string {
+	return "SoftLayer_Product_Package_Server_Option"
 }
 
 // GetAllOptions - This method will grab all the package server options.

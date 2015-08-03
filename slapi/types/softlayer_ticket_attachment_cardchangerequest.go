@@ -9,3 +9,7 @@ type SoftLayer_Ticket_Attachment_CardChangeRequest struct {
 	// Resource - The card change request that is attached to a ticket.
 	Resource *SoftLayer_Billing_Payment_Card_ChangeRequest `json:"resource"`
 }
+
+func (softlayer_ticket_attachment_cardchangerequest *SoftLayer_Ticket_Attachment_CardChangeRequest) String() string {
+	return "SoftLayer_Ticket_Attachment_CardChangeRequest"
+}

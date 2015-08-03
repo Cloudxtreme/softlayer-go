@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Layout_Profile - The SoftLayer_Layout_Profile contains the definition of the layout
@@ -41,6 +41,10 @@ type SoftLayer_Layout_Profile struct {
 
 	// UserRecordId - The [[SoftLayer_User_Customer]] owning this layout profile
 	UserRecordId int `json:"userRecordId"`
+}
+
+func (softlayer_layout_profile *SoftLayer_Layout_Profile) String() string {
+	return "SoftLayer_Layout_Profile"
 }
 
 // CreateObject - no documentation

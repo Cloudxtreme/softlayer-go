@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Notification_Occurrence_User - This type contains general information relating to a user
@@ -33,6 +33,10 @@ type SoftLayer_Notification_Occurrence_User struct {
 
 	// UsrRecordId - <nil>
 	UsrRecordId int `json:"usrRecordId"`
+}
+
+func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) String() string {
+	return "SoftLayer_Notification_Occurrence_User"
 }
 
 // Acknowledge - <nil>

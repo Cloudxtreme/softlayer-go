@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Auxiliary_Press_Release - <nil>
@@ -49,6 +49,10 @@ type SoftLayer_Auxiliary_Press_Release struct {
 
 	// WebsiteHighlightFlag - Whether or not a press release is highlighted on the SoftLayer Website.
 	WebsiteHighlightFlag bool `json:"websiteHighlightFlag"`
+}
+
+func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) String() string {
+	return "SoftLayer_Auxiliary_Press_Release"
 }
 
 // GetAllObjects - Retrieve an array of SoftLayer_Auxiliary_Press_Release data types, which contain all

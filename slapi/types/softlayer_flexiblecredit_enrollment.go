@@ -54,3 +54,7 @@ type SoftLayer_FlexibleCredit_Enrollment struct {
 	// RepresentativeEmployeeId - no documentation
 	RepresentativeEmployeeId int `json:"representativeEmployeeId"`
 }
+
+func (softlayer_flexiblecredit_enrollment *SoftLayer_FlexibleCredit_Enrollment) String() string {
+	return "SoftLayer_FlexibleCredit_Enrollment"
+}

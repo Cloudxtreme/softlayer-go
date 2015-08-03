@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Security_Ssh_Key - <nil>
@@ -50,6 +50,10 @@ type SoftLayer_Security_Ssh_Key struct {
 
 	// SoftwarePasswords - no documentation
 	SoftwarePasswords []*SoftLayer_Software_Component_Password `json:"softwarePasswords"`
+}
+
+func (softlayer_security_ssh_key *SoftLayer_Security_Ssh_Key) String() string {
+	return "SoftLayer_Security_Ssh_Key"
 }
 
 // CreateObject - Add a ssh key to your account for use during server provisioning and os reloads.

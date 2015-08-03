@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Guest_Boot_Parameter_Type - Describes a virtual guest boot parameter. In this the
@@ -33,6 +33,10 @@ type SoftLayer_Virtual_Guest_Boot_Parameter_Type struct {
 
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+func (softlayer_virtual_guest_boot_parameter_type *SoftLayer_Virtual_Guest_Boot_Parameter_Type) String() string {
+	return "SoftLayer_Virtual_Guest_Boot_Parameter_Type"
 }
 
 // GetAllObjects - <nil>

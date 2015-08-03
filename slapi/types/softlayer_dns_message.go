@@ -32,3 +32,7 @@ type SoftLayer_Dns_Message struct {
 	// Secondary - The secondary DNS record that a message belongs to.
 	Secondary *SoftLayer_Dns_Secondary `json:"secondary"`
 }
+
+func (softlayer_dns_message *SoftLayer_Dns_Message) String() string {
+	return "SoftLayer_Dns_Message"
+}

@@ -20,3 +20,7 @@ type SoftLayer_Container_Product_Order_Attribute_Organization struct {
 	// PhoneNumber - no documentation
 	PhoneNumber string `json:"phoneNumber"`
 }
+
+func (softlayer_container_product_order_attribute_organization *SoftLayer_Container_Product_Order_Attribute_Organization) String() string {
+	return "SoftLayer_Container_Product_Order_Attribute_Organization"
+}

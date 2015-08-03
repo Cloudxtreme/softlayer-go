@@ -14,3 +14,7 @@ type SoftLayer_Virtual_Guest_Attribute struct {
 	// Value - no documentation
 	Value string `json:"value"`
 }
+
+func (softlayer_virtual_guest_attribute *SoftLayer_Virtual_Guest_Attribute) String() string {
+	return "SoftLayer_Virtual_Guest_Attribute"
+}

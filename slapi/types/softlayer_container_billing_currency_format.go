@@ -41,3 +41,7 @@ type SoftLayer_Container_Billing_Currency_Format struct {
 	// Value - <nil>
 	Value float32 `json:"value"`
 }
+
+func (softlayer_container_billing_currency_format *SoftLayer_Container_Billing_Currency_Format) String() string {
+	return "SoftLayer_Container_Billing_Currency_Format"
+}

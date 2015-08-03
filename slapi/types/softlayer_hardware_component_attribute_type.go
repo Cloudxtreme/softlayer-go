@@ -19,3 +19,7 @@ type SoftLayer_Hardware_Component_Attribute_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_hardware_component_attribute_type *SoftLayer_Hardware_Component_Attribute_Type) String() string {
+	return "SoftLayer_Hardware_Component_Attribute_Type"
+}

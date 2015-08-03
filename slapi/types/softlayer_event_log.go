@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Event_Log - The SoftLayer_Event_Log data type contains an event detail occurred upon
@@ -53,6 +53,10 @@ type SoftLayer_Event_Log struct {
 
 	// Username - no documentation
 	Username string `json:"username"`
+}
+
+func (softlayer_event_log *SoftLayer_Event_Log) String() string {
+	return "SoftLayer_Event_Log"
 }
 
 // GetAllEventNames - no documentation

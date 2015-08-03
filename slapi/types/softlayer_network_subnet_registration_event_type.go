@@ -31,3 +31,7 @@ type SoftLayer_Network_Subnet_Registration_Event_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_network_subnet_registration_event_type *SoftLayer_Network_Subnet_Registration_Event_Type) String() string {
+	return "SoftLayer_Network_Subnet_Registration_Event_Type"
+}

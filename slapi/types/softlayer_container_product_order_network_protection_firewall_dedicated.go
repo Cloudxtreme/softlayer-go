@@ -13,3 +13,7 @@ type SoftLayer_Container_Product_Order_Network_Protection_Firewall_Dedicated str
 	// VlanId - no documentation
 	VlanId int `json:"vlanId"`
 }
+
+func (softlayer_container_product_order_network_protection_firewall_dedicated *SoftLayer_Container_Product_Order_Network_Protection_Firewall_Dedicated) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Protection_Firewall_Dedicated"
+}

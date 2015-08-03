@@ -30,3 +30,7 @@ type SoftLayer_Container_Referral_Partner_Commission struct {
 	// ReferralRevenue - <nil>
 	ReferralRevenue float64 `json:"referralRevenue"`
 }
+
+func (softlayer_container_referral_partner_commission *SoftLayer_Container_Referral_Partner_Commission) String() string {
+	return "SoftLayer_Container_Referral_Partner_Commission"
+}

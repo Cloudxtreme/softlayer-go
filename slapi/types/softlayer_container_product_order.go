@@ -289,3 +289,7 @@ type SoftLayer_Container_Product_Order struct {
 	// orders.
 	VirtualGuests []*SoftLayer_Virtual_Guest `json:"virtualGuests"`
 }
+
+func (softlayer_container_product_order *SoftLayer_Container_Product_Order) String() string {
+	return "SoftLayer_Container_Product_Order"
+}

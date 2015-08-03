@@ -12,3 +12,7 @@ type SoftLayer_Container_Product_Order_Network_Storage_Hub_Datacenter struct {
 	// UsageRatePrices - no documentation
 	UsageRatePrices []*SoftLayer_Product_Item_Price `json:"usageRatePrices"`
 }
+
+func (softlayer_container_product_order_network_storage_hub_datacenter *SoftLayer_Container_Product_Order_Network_Storage_Hub_Datacenter) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Storage_Hub_Datacenter"
+}

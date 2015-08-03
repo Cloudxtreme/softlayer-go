@@ -11,3 +11,7 @@ type SoftLayer_Configuration_Storage_Filesystem_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_configuration_storage_filesystem_type *SoftLayer_Configuration_Storage_Filesystem_Type) String() string {
+	return "SoftLayer_Configuration_Storage_Filesystem_Type"
+}

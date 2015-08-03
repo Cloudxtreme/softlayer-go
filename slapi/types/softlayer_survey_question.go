@@ -33,3 +33,7 @@ type SoftLayer_Survey_Question struct {
 	// SurveyId - A survey question's associated [[SoftLayer_Survey|Survey]] Id.
 	SurveyId int `json:"surveyId"`
 }
+
+func (softlayer_survey_question *SoftLayer_Survey_Question) String() string {
+	return "SoftLayer_Survey_Question"
+}

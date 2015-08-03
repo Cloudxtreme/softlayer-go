@@ -19,3 +19,7 @@ type SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs struct {
 	// TemperatureGraphs - The graph(s) to display the server's cpu(s) and system temperatures.
 	TemperatureGraphs []*SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature `json:"temperatureGraphs"`
 }
+
+func (softlayer_container_remotemanagement_sensorreadingswithgraphs *SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs) String() string {
+	return "SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs"
+}

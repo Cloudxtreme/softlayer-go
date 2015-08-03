@@ -17,3 +17,7 @@ type SoftLayer_Virtual_Guest_SupplementalCreateObjectOptions struct {
 	// [[SoftLayer_Virtual_Guest/createObjects|createObjects]].
 	PostInstallScriptUri string `json:"postInstallScriptUri"`
 }
+
+func (softlayer_virtual_guest_supplementalcreateobjectoptions *SoftLayer_Virtual_Guest_SupplementalCreateObjectOptions) String() string {
+	return "SoftLayer_Virtual_Guest_SupplementalCreateObjectOptions"
+}

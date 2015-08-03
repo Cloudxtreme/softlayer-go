@@ -33,3 +33,7 @@ type SoftLayer_Network_Storage_Event struct {
 	// VolumeId - no documentation
 	VolumeId int `json:"volumeId"`
 }
+
+func (softlayer_network_storage_event *SoftLayer_Network_Storage_Event) String() string {
+	return "SoftLayer_Network_Storage_Event"
+}

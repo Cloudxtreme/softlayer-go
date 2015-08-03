@@ -14,3 +14,7 @@ type SoftLayer_Product_Package_Preset_Configuration struct {
 	// Price - <nil>
 	Price *SoftLayer_Product_Item_Price `json:"price"`
 }
+
+func (softlayer_product_package_preset_configuration *SoftLayer_Product_Package_Preset_Configuration) String() string {
+	return "SoftLayer_Product_Package_Preset_Configuration"
+}

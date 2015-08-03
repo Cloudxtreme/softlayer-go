@@ -21,3 +21,7 @@ type SoftLayer_Network_Media_Transcode_Job_History struct {
 	// TranscodeStatusName - no documentation
 	TranscodeStatusName string `json:"transcodeStatusName"`
 }
+
+func (softlayer_network_media_transcode_job_history *SoftLayer_Network_Media_Transcode_Job_History) String() string {
+	return "SoftLayer_Network_Media_Transcode_Job_History"
+}

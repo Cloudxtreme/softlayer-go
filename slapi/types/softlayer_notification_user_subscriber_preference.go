@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Notification_User_Subscriber_Preference - Preferences are settings that can be modified to
@@ -32,6 +32,10 @@ type SoftLayer_Notification_User_Subscriber_Preference struct {
 
 	// Value - The user supplied value to "override" the "default" preference's value.
 	Value string `json:"value"`
+}
+
+func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) String() string {
+	return "SoftLayer_Notification_User_Subscriber_Preference"
 }
 
 // CreateObject - Use the method to create a new notification preference for a subscriber

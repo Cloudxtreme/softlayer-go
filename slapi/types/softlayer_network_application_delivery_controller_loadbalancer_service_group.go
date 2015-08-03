@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group - <nil>
@@ -51,6 +51,10 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Grou
 
 	// VirtualServers - <nil>
 	VirtualServers []*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer `json:"virtualServers"`
+}
+
+func (softlayer_network_application_delivery_controller_loadbalancer_service_group *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group) String() string {
+	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group"
 }
 
 // GetGraphImage - Get the graph image for a load balancer service group based on the supplied graph

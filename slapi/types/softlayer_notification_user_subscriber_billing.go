@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Notification_User_Subscriber_Billing - A notification subscriber will have details
@@ -12,6 +12,10 @@ import (
 // subscriber. There are preferences and delivery methods that cannot be modified. Also, there are some
 // subscriptions that are required.
 type SoftLayer_Notification_User_Subscriber_Billing struct {
+}
+
+func (softlayer_notification_user_subscriber_billing *SoftLayer_Notification_User_Subscriber_Billing) String() string {
+	return "SoftLayer_Notification_User_Subscriber_Billing"
 }
 
 // GetObject - <nil>

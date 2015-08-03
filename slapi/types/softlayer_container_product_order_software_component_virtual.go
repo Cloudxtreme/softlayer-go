@@ -10,3 +10,7 @@ type SoftLayer_Container_Product_Order_Software_Component_Virtual struct {
 	// EndPointIpAddressIds - array of ip address ids for which a license should be allocated for.
 	EndPointIpAddressIds []int `json:"endPointIpAddressIds"`
 }
+
+func (softlayer_container_product_order_software_component_virtual *SoftLayer_Container_Product_Order_Software_Component_Virtual) String() string {
+	return "SoftLayer_Container_Product_Order_Software_Component_Virtual"
+}

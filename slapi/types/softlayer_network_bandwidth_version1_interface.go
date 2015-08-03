@@ -20,3 +20,7 @@ type SoftLayer_Network_Bandwidth_Version1_Interface struct {
 	// NetworkComponentId - no documentation
 	NetworkComponentId int `json:"networkComponentId"`
 }
+
+func (softlayer_network_bandwidth_version1_interface *SoftLayer_Network_Bandwidth_Version1_Interface) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Interface"
+}

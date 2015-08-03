@@ -6,3 +6,7 @@ package sl
 // general information relating to a single SoftLayer billing item for hardware.
 type SoftLayer_Billing_Item_Hardware_Colocation struct {
 }
+
+func (softlayer_billing_item_hardware_colocation *SoftLayer_Billing_Item_Hardware_Colocation) String() string {
+	return "SoftLayer_Billing_Item_Hardware_Colocation"
+}

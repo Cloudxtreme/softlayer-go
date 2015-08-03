@@ -21,3 +21,7 @@ type SoftLayer_Container_Network_Bandwidth_Version1_Usage struct {
 	// RecordedDate - The date and time that the bandwidth was used by a piece of hardware
 	RecordedDate *time.Time `json:"recordedDate"`
 }
+
+func (softlayer_container_network_bandwidth_version1_usage *SoftLayer_Container_Network_Bandwidth_Version1_Usage) String() string {
+	return "SoftLayer_Container_Network_Bandwidth_Version1_Usage"
+}

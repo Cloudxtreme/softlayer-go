@@ -15,3 +15,7 @@ type SoftLayer_Configuration_Template_Section_Definition_Attribute struct {
 	// Value - no documentation
 	Value string `json:"value"`
 }
+
+func (softlayer_configuration_template_section_definition_attribute *SoftLayer_Configuration_Template_Section_Definition_Attribute) String() string {
+	return "SoftLayer_Configuration_Template_Section_Definition_Attribute"
+}

@@ -13,3 +13,7 @@ type SoftLayer_Container_Utility_File_Attachment struct {
 	// Filename - The name of a file that is uploaded to the SoftLayer
 	Filename string `json:"filename"`
 }
+
+func (softlayer_container_utility_file_attachment *SoftLayer_Container_Utility_File_Attachment) String() string {
+	return "SoftLayer_Container_Utility_File_Attachment"
+}

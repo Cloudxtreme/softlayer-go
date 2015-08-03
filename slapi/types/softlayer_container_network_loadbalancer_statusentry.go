@@ -14,3 +14,7 @@ type SoftLayer_Container_Network_LoadBalancer_StatusEntry struct {
 	// Label - no documentation
 	Label string `json:"label"`
 }
+
+func (softlayer_container_network_loadbalancer_statusentry *SoftLayer_Container_Network_LoadBalancer_StatusEntry) String() string {
+	return "SoftLayer_Container_Network_LoadBalancer_StatusEntry"
+}

@@ -19,3 +19,7 @@ type SoftLayer_Container_Network_Directory_Listing struct {
 	// then type is set to "directory". Otherwise, type is a blank string.
 	Type string `json:"type"`
 }
+
+func (softlayer_container_network_directory_listing *SoftLayer_Container_Network_Directory_Listing) String() string {
+	return "SoftLayer_Container_Network_Directory_Listing"
+}

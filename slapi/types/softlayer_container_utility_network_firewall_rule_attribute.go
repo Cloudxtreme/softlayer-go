@@ -19,3 +19,7 @@ type SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute struct {
 	// SourceIpSubnetMasks - The valid source ip subnet masks for use with rules.
 	SourceIpSubnetMasks []*SoftLayer_Container_Utility_Network_Subnet_Mask_Generic_Detail `json:"sourceIpSubnetMasks"`
 }
+
+func (softlayer_container_utility_network_firewall_rule_attribute *SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute) String() string {
+	return "SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute"
+}

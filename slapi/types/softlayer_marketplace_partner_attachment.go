@@ -29,3 +29,7 @@ type SoftLayer_Marketplace_Partner_Attachment struct {
 	// SaveAsName - <nil>
 	SaveAsName string `json:"saveAsName"`
 }
+
+func (softlayer_marketplace_partner_attachment *SoftLayer_Marketplace_Partner_Attachment) String() string {
+	return "SoftLayer_Marketplace_Partner_Attachment"
+}

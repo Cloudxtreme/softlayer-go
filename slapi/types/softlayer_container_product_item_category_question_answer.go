@@ -19,3 +19,7 @@ type SoftLayer_Container_Product_Item_Category_Question_Answer struct {
 	// QuestionId - no documentation
 	QuestionId int `json:"questionId"`
 }
+
+func (softlayer_container_product_item_category_question_answer *SoftLayer_Container_Product_Item_Category_Question_Answer) String() string {
+	return "SoftLayer_Container_Product_Item_Category_Question_Answer"
+}

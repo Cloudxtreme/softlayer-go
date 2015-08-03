@@ -11,3 +11,7 @@ type SoftLayer_Billing_Item_Network_Vlan struct {
 	// Resource - The resource for a network vlan related billing item.
 	Resource *SoftLayer_Network_Vlan `json:"resource"`
 }
+
+func (softlayer_billing_item_network_vlan *SoftLayer_Billing_Item_Network_Vlan) String() string {
+	return "SoftLayer_Billing_Item_Network_Vlan"
+}

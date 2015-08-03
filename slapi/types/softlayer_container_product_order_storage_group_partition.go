@@ -16,3 +16,7 @@ type SoftLayer_Container_Product_Order_Storage_Group_Partition struct {
 	// Size - no documentation
 	Size float64 `json:"size"`
 }
+
+func (softlayer_container_product_order_storage_group_partition *SoftLayer_Container_Product_Order_Storage_Group_Partition) String() string {
+	return "SoftLayer_Container_Product_Order_Storage_Group_Partition"
+}

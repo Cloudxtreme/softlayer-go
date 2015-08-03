@@ -19,3 +19,7 @@ type SoftLayer_Product_Package_Preset_Attribute_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_product_package_preset_attribute_type *SoftLayer_Product_Package_Preset_Attribute_Type) String() string {
+	return "SoftLayer_Product_Package_Preset_Attribute_Type"
+}

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Dns_Domain_Registration_Status - SoftLayer_Dns_Domain_Registration_Status models the state
@@ -24,6 +24,10 @@ type SoftLayer_Dns_Domain_Registration_Status struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_dns_domain_registration_status *SoftLayer_Dns_Domain_Registration_Status) String() string {
+	return "SoftLayer_Dns_Domain_Registration_Status"
 }
 
 // GetAllObjects - <nil>

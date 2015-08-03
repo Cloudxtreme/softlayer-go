@@ -7,3 +7,7 @@ package sl
 // place a Message Queue order with SoftLayer.
 type SoftLayer_Container_Product_Order_Network_Message_Queue struct {
 }
+
+func (softlayer_container_product_order_network_message_queue *SoftLayer_Container_Product_Order_Network_Message_Queue) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Message_Queue"
+}

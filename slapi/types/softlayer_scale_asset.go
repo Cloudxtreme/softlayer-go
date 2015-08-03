@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Asset - <nil>
@@ -26,6 +26,10 @@ type SoftLayer_Scale_Asset struct {
 
 	// ScaleGroupId - no documentation
 	ScaleGroupId int `json:"scaleGroupId"`
+}
+
+func (softlayer_scale_asset *SoftLayer_Scale_Asset) String() string {
+	return "SoftLayer_Scale_Asset"
 }
 
 // DeleteObject - <nil>

@@ -13,19 +13,23 @@ import (
 const typeTemplateString = `package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
-import ({{ range $alias, $import := .Imports }}
+import (
+{{ range $alias, $import := .Imports }}
 	{{ $alias }} "{{ $import }}"
 {{ end }}
 {{ if .Methods }}
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 {{ end }}
 )
-
 
 {{ godoc .Type.StructName .TypeDoc "" }}type {{ .Type.StructName }} struct {
 {{ range $i, $property := .Properties }}
 {{ godoc $property.Name $property.Doc "\t" }}	{{ upper $property.Name }} {{ if $property.TypeArray }}[]{{ end }}{{ if $property.Type.GetGoType.Pointer }}*{{ end }}{{ typePath $property.Type.GetGoType }}{{ $property.Tag }}
 {{ end }}
+}
+
+func ({{ $.Type.Lower }} *{{ $.Type.StructName }}) String() string {
+	return "{{ $.Type.StructName }}"
 }
 
 {{ range $i, $method := .Methods }}

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Monitoring_Agent - A monitoring agent object contains information describing the agent.
@@ -73,6 +73,10 @@ type SoftLayer_Monitoring_Agent struct {
 	// VirtualGuest - Softlayer_Virtual_Guest object related to the monitoring agent, which this virtual
 	// guest object and hardware is on the server of the running agent.
 	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest"`
+}
+
+func (softlayer_monitoring_agent *SoftLayer_Monitoring_Agent) String() string {
+	return "SoftLayer_Monitoring_Agent"
 }
 
 // Activate - This method activates a SoftLayer_Monitoring_Agent.

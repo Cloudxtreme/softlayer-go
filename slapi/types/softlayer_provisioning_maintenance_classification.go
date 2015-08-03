@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Provisioning_Maintenance_Classification - The
@@ -25,6 +25,10 @@ type SoftLayer_Provisioning_Maintenance_Classification struct {
 
 	// Type - The type or name of the maintenance classification.
 	Type string `json:"type"`
+}
+
+func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) String() string {
+	return "SoftLayer_Provisioning_Maintenance_Classification"
 }
 
 // GetMaintenanceClassification - Retrieve an array of

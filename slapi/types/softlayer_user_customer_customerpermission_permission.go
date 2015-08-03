@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_CustomerPermission_Permission - Each SoftLayer portal account is assigned a
@@ -21,6 +21,10 @@ type SoftLayer_User_Customer_CustomerPermission_Permission struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_user_customer_customerpermission_permission *SoftLayer_User_Customer_CustomerPermission_Permission) String() string {
+	return "SoftLayer_User_Customer_CustomerPermission_Permission"
 }
 
 // GetAllObjects - no documentation

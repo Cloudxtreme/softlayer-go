@@ -51,3 +51,7 @@ type SoftLayer_Container_Utility_File_Entity struct {
 	// time a new revision of the file is uploaded.
 	Version int `json:"version"`
 }
+
+func (softlayer_container_utility_file_entity *SoftLayer_Container_Utility_File_Entity) String() string {
+	return "SoftLayer_Container_Utility_File_Entity"
+}

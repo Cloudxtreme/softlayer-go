@@ -13,3 +13,7 @@ type SoftLayer_Container_Network_ContentDelivery_PointsOfPresence struct {
 	// Name - A CDN Point of Presence's name. This is typically the city that the POP is located in.
 	Name string `json:"name"`
 }
+
+func (softlayer_container_network_contentdelivery_pointsofpresence *SoftLayer_Container_Network_ContentDelivery_PointsOfPresence) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_PointsOfPresence"
+}

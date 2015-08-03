@@ -23,3 +23,7 @@ type SoftLayer_Notification_User_Subscriber_Delivery_Method struct {
 	// NotificationUserSubscriberId - Unique identifier of the subscriber tied to the delivery method.
 	NotificationUserSubscriberId int `json:"notificationUserSubscriberId"`
 }
+
+func (softlayer_notification_user_subscriber_delivery_method *SoftLayer_Notification_User_Subscriber_Delivery_Method) String() string {
+	return "SoftLayer_Notification_User_Subscriber_Delivery_Method"
+}

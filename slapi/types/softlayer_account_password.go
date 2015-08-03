@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Password - The SoftLayer_Account_Password contains username, passwords and notes
@@ -36,6 +36,10 @@ type SoftLayer_Account_Password struct {
 
 	// Username - The username portion of a username/password combination.
 	Username string `json:"username"`
+}
+
+func (softlayer_account_password *SoftLayer_Account_Password) String() string {
+	return "SoftLayer_Account_Password"
 }
 
 // EditObject - The password and/or notes may be modified. Modifying the EVault passwords here will

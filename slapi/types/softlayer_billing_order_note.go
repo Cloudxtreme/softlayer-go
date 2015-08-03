@@ -18,3 +18,7 @@ type SoftLayer_Billing_Order_Note struct {
 	// Order - <nil>
 	Order *SoftLayer_Billing_Order `json:"order"`
 }
+
+func (softlayer_billing_order_note *SoftLayer_Billing_Order_Note) String() string {
+	return "SoftLayer_Billing_Order_Note"
+}

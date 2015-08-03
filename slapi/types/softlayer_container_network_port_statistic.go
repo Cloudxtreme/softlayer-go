@@ -44,3 +44,7 @@ type SoftLayer_Container_Network_Port_Statistic struct {
 	// Speed - <nil>
 	Speed uint64 `json:"speed"`
 }
+
+func (softlayer_container_network_port_statistic *SoftLayer_Container_Network_Port_Statistic) String() string {
+	return "SoftLayer_Container_Network_Port_Statistic"
+}

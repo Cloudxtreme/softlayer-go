@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Asset_Virtual_Guest - <nil>
@@ -14,6 +14,10 @@ type SoftLayer_Scale_Asset_Virtual_Guest struct {
 
 	// VirtualGuestId - no documentation
 	VirtualGuestId int `json:"virtualGuestId"`
+}
+
+func (softlayer_scale_asset_virtual_guest *SoftLayer_Scale_Asset_Virtual_Guest) String() string {
+	return "SoftLayer_Scale_Asset_Virtual_Guest"
 }
 
 // CreateObject - <nil>

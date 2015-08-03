@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Group - <nil>
@@ -142,6 +142,10 @@ type SoftLayer_Scale_Group struct {
 	// active, the count of guests here is guaranteed to be between minimumMemberCount and
 	// maximumMemberCount inclusively.
 	VirtualGuestMembers []*SoftLayer_Scale_Member_Virtual_Guest `json:"virtualGuestMembers"`
+}
+
+func (softlayer_scale_group *SoftLayer_Scale_Group) String() string {
+	return "SoftLayer_Scale_Group"
 }
 
 // CreateObject - <nil>

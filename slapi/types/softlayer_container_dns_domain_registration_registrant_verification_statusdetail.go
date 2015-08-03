@@ -15,3 +15,7 @@ type SoftLayer_Container_Dns_Domain_Registration_Registrant_Verification_StatusD
 	// VerificationDeadlineDate - no documentation
 	VerificationDeadlineDate *time.Time `json:"verificationDeadlineDate"`
 }
+
+func (softlayer_container_dns_domain_registration_registrant_verification_statusdetail *SoftLayer_Container_Dns_Domain_Registration_Registrant_Verification_StatusDetail) String() string {
+	return "SoftLayer_Container_Dns_Domain_Registration_Registrant_Verification_StatusDetail"
+}

@@ -42,3 +42,7 @@ type SoftLayer_Resource_Group_Member struct {
 	// Type - no documentation
 	Type *SoftLayer_Resource_Group_Member_Type `json:"type"`
 }
+
+func (softlayer_resource_group_member *SoftLayer_Resource_Group_Member) String() string {
+	return "SoftLayer_Resource_Group_Member"
+}

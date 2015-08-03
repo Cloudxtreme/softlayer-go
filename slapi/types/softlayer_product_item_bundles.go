@@ -25,3 +25,7 @@ type SoftLayer_Product_Item_Bundles struct {
 	// ItemPriceId - no documentation
 	ItemPriceId int `json:"itemPriceId"`
 }
+
+func (softlayer_product_item_bundles *SoftLayer_Product_Item_Bundles) String() string {
+	return "SoftLayer_Product_Item_Bundles"
+}

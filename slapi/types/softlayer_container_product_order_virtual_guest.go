@@ -7,3 +7,7 @@ package sl
 // order with SoftLayer.
 type SoftLayer_Container_Product_Order_Virtual_Guest struct {
 }
+
+func (softlayer_container_product_order_virtual_guest *SoftLayer_Container_Product_Order_Virtual_Guest) String() string {
+	return "SoftLayer_Container_Product_Order_Virtual_Guest"
+}

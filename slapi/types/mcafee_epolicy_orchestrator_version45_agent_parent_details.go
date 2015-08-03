@@ -19,3 +19,7 @@ type McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details struct {
 	// PolicyCount - A count of the current anti-virus policy of an agent.
 	PolicyCount uint64 `json:"policyCount"`
 }
+
+func (mcafee_epolicy_orchestrator_version45_agent_parent_details *McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details"
+}

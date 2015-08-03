@@ -3,11 +3,15 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Monitor - <nil>
 type SoftLayer_Network_Monitor struct {
+}
+
+func (softlayer_network_monitor *SoftLayer_Network_Monitor) String() string {
+	return "SoftLayer_Network_Monitor"
 }
 
 // GetIpAddressesByHardware - This will return an arrayObject of objects containing the ipaddresses.

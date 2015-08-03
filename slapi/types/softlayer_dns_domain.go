@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Dns_Domain - The SoftLayer_Dns_Domain data type represents a single DNS domain record
@@ -48,6 +48,10 @@ type SoftLayer_Dns_Domain struct {
 
 	// UpdateDate - no documentation
 	UpdateDate *time.Time `json:"updateDate"`
+}
+
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) String() string {
+	return "SoftLayer_Dns_Domain"
 }
 
 // CreateARecord - Create an A record on a SoftLayer domain. This is a shortcut method, meant to take

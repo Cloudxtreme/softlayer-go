@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_External_Binding_Phone - The SoftLayer_User_Customer_External_Binding_Phone
@@ -19,6 +19,10 @@ type SoftLayer_User_Customer_External_Binding_Phone struct {
 
 	// PinLength - <nil>
 	PinLength string `json:"pinLength"`
+}
+
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) String() string {
+	return "SoftLayer_User_Customer_External_Binding_Phone"
 }
 
 // CheckPhoneValidationResult - no documentation

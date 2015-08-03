@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Monitoring_Agent_Configuration_Template_Group - The
@@ -51,6 +51,10 @@ type SoftLayer_Monitoring_Agent_Configuration_Template_Group struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) String() string {
+	return "SoftLayer_Monitoring_Agent_Configuration_Template_Group"
 }
 
 // CreateObject - This method creates a SoftLayer_Monitoring_Agent_Configuration_Template_Group using

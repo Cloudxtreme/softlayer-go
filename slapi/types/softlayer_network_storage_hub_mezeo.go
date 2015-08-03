@@ -8,3 +8,7 @@ package sl
 // SoftLayer provides.
 type SoftLayer_Network_Storage_Hub_Mezeo struct {
 }
+
+func (softlayer_network_storage_hub_mezeo *SoftLayer_Network_Storage_Hub_Mezeo) String() string {
+	return "SoftLayer_Network_Storage_Hub_Mezeo"
+}

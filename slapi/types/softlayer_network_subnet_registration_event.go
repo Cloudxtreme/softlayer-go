@@ -37,3 +37,7 @@ type SoftLayer_Network_Subnet_Registration_Event struct {
 	// type]] object
 	TypeId int `json:"typeId"`
 }
+
+func (softlayer_network_subnet_registration_event *SoftLayer_Network_Subnet_Registration_Event) String() string {
+	return "SoftLayer_Network_Subnet_Registration_Event"
+}

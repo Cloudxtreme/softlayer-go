@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Affiliation - This service allows for a unique identifier to be associated to an
@@ -29,6 +29,10 @@ type SoftLayer_Account_Affiliation struct {
 
 	// ModifyDate - The date an account affiliation was last modified.
 	ModifyDate *time.Time `json:"modifyDate"`
+}
+
+func (softlayer_account_affiliation *SoftLayer_Account_Affiliation) String() string {
+	return "SoftLayer_Account_Affiliation"
 }
 
 // CreateObject - Create a new affiliation to associate with an existing account.

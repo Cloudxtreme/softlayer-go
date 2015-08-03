@@ -14,3 +14,7 @@ type SoftLayer_Product_Package_Attribute_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_product_package_attribute_type *SoftLayer_Product_Package_Attribute_Type) String() string {
+	return "SoftLayer_Product_Package_Attribute_Type"
+}

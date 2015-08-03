@@ -20,3 +20,7 @@ type SoftLayer_Ticket_State struct {
 	// TicketId - <nil>
 	TicketId int `json:"ticketId"`
 }
+
+func (softlayer_ticket_state *SoftLayer_Ticket_State) String() string {
+	return "SoftLayer_Ticket_State"
+}

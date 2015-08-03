@@ -51,3 +51,7 @@ type SoftLayer_Billing_Invoice_Tax_Info struct {
 	// invoice.
 	TotalTaxAmountToCurrency float32 `json:"totalTaxAmountToCurrency"`
 }
+
+func (softlayer_billing_invoice_tax_info *SoftLayer_Billing_Invoice_Tax_Info) String() string {
+	return "SoftLayer_Billing_Invoice_Tax_Info"
+}

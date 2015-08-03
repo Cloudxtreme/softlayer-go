@@ -28,3 +28,7 @@ type SoftLayer_Container_Bandwidth_Projection struct {
 	// StartDate - no documentation
 	StartDate *time.Time `json:"startDate"`
 }
+
+func (softlayer_container_bandwidth_projection *SoftLayer_Container_Bandwidth_Projection) String() string {
+	return "SoftLayer_Container_Bandwidth_Projection"
+}

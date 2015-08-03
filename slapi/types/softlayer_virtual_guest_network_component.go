@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Guest_Network_Component - The virtual guest network component data type presents
@@ -102,6 +102,10 @@ type SoftLayer_Virtual_Guest_Network_Component struct {
 
 	// Uuid - A computing instance's network component's unique ID on a virtualization platform.
 	Uuid string `json:"uuid"`
+}
+
+func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) String() string {
+	return "SoftLayer_Virtual_Guest_Network_Component"
 }
 
 // Disable - Completely restrict all incoming and outgoing bandwidth traffic to a network component

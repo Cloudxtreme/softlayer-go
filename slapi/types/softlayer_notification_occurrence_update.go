@@ -27,3 +27,7 @@ type SoftLayer_Notification_Occurrence_Update struct {
 	// StartDate - <nil>
 	StartDate *time.Time `json:"startDate"`
 }
+
+func (softlayer_notification_occurrence_update *SoftLayer_Notification_Occurrence_Update) String() string {
+	return "SoftLayer_Notification_Occurrence_Update"
+}

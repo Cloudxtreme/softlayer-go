@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Notification - Details provided for the notification are basic. Details such as the
@@ -36,6 +36,10 @@ type SoftLayer_Notification struct {
 	// RequiredPreferences - The required preferences related to the notification. While configurable, the
 	// subscriber does not have the option whether to use the preference.
 	RequiredPreferences []*SoftLayer_Notification_Preference `json:"requiredPreferences"`
+}
+
+func (softlayer_notification *SoftLayer_Notification) String() string {
+	return "SoftLayer_Notification"
 }
 
 // GetAllObjects - Use this method to retrieve all active notifications that can be subscribed to.

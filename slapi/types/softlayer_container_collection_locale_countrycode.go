@@ -15,3 +15,7 @@ type SoftLayer_Container_Collection_Locale_CountryCode struct {
 	// StateCodes - <nil>
 	StateCodes []*SoftLayer_Container_Collection_Locale_StateCode `json:"stateCodes"`
 }
+
+func (softlayer_container_collection_locale_countrycode *SoftLayer_Container_Collection_Locale_CountryCode) String() string {
+	return "SoftLayer_Container_Collection_Locale_CountryCode"
+}

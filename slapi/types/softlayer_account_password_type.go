@@ -11,3 +11,7 @@ type SoftLayer_Account_Password_Type struct {
 	// Description - A description of the use for the account username/password combination.
 	Description string `json:"description"`
 }
+
+func (softlayer_account_password_type *SoftLayer_Account_Password_Type) String() string {
+	return "SoftLayer_Account_Password_Type"
+}

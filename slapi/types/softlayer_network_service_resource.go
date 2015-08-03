@@ -58,3 +58,7 @@ type SoftLayer_Network_Service_Resource struct {
 	// Type - The network information associated with this resource.
 	Type *SoftLayer_Network_Service_Resource_Type `json:"type"`
 }
+
+func (softlayer_network_service_resource *SoftLayer_Network_Service_Resource) String() string {
+	return "SoftLayer_Network_Service_Resource"
+}

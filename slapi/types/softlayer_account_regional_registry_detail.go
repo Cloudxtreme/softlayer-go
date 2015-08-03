@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Regional_Registry_Detail - <nil>
@@ -54,6 +54,10 @@ type SoftLayer_Account_Regional_Registry_Detail struct {
 	// RegionalInternetRegistryHandleId - The detail object's associated
 	// [[SoftLayer_Account_Rwhois_Handle|RIR handle]] id
 	RegionalInternetRegistryHandleId int `json:"regionalInternetRegistryHandleId"`
+}
+
+func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) String() string {
+	return "SoftLayer_Account_Regional_Registry_Detail"
 }
 
 // CreateObject - This method will create a new SoftLayer_Account_Regional_Registry_Detail object.

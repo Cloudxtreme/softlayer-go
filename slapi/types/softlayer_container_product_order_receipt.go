@@ -48,3 +48,7 @@ type SoftLayer_Container_Product_Order_Receipt struct {
 	// data related to a quote. This will only return when a quote is processed successfully.
 	Quote *SoftLayer_Billing_Order_Quote `json:"quote"`
 }
+
+func (softlayer_container_product_order_receipt *SoftLayer_Container_Product_Order_Receipt) String() string {
+	return "SoftLayer_Container_Product_Order_Receipt"
+}

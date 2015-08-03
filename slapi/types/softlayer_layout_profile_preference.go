@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Layout_Profile_Preference - The SoftLayer_Layout_Profile_Preference contains definitions
@@ -47,6 +47,10 @@ type SoftLayer_Layout_Profile_Preference struct {
 
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+func (softlayer_layout_profile_preference *SoftLayer_Layout_Profile_Preference) String() string {
+	return "SoftLayer_Layout_Profile_Preference"
 }
 
 // GetObject - <nil>

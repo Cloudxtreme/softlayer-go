@@ -14,3 +14,7 @@ type SoftLayer_Hardware_LoadBalancer struct {
 	// Users - A list of users that have access to this hardware load balancer.
 	Users []*SoftLayer_User_Customer `json:"users"`
 }
+
+func (softlayer_hardware_loadbalancer *SoftLayer_Hardware_LoadBalancer) String() string {
+	return "SoftLayer_Hardware_LoadBalancer"
+}

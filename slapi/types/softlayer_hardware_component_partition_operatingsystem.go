@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Hardware_Component_Partition_OperatingSystem - The
@@ -28,6 +28,10 @@ type SoftLayer_Hardware_Component_Partition_OperatingSystem struct {
 	// PartitionTemplates - Information regarding an operating system's
 	// [[SoftLayer_Hardware_Component_Partition_Template|Partition Templates]].
 	PartitionTemplates []*SoftLayer_Hardware_Component_Partition_Template `json:"partitionTemplates"`
+}
+
+func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware_Component_Partition_OperatingSystem) String() string {
+	return "SoftLayer_Hardware_Component_Partition_OperatingSystem"
 }
 
 // GetAllObjects - <nil>

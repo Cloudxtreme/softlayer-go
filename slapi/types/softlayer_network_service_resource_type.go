@@ -14,3 +14,7 @@ type SoftLayer_Network_Service_Resource_Type struct {
 	// Type - <nil>
 	Type string `json:"type"`
 }
+
+func (softlayer_network_service_resource_type *SoftLayer_Network_Service_Resource_Type) String() string {
+	return "SoftLayer_Network_Service_Resource_Type"
+}

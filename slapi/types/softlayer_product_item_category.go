@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Item_Category - The SoftLayer_Product_Item_Category data type contains general
@@ -72,6 +72,10 @@ type SoftLayer_Product_Item_Category struct {
 
 	// Questions - The questions that are associated with an item category.
 	Questions []*SoftLayer_Product_Item_Category_Question `json:"questions"`
+}
+
+func (softlayer_product_item_category *SoftLayer_Product_Item_Category) String() string {
+	return "SoftLayer_Product_Item_Category"
 }
 
 // GetAdditionalProductsForCategory - Returns a list of of active Items in the "Additional Services"

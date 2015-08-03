@@ -8,3 +8,7 @@ package sl
 // classes are abstracted by this type.
 type SoftLayer_User_Interface struct {
 }
+
+func (softlayer_user_interface *SoftLayer_User_Interface) String() string {
+	return "SoftLayer_User_Interface"
+}

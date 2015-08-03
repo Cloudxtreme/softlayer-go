@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Hardware - The SoftLayer_Hardware data type contains general information relating to a
@@ -658,6 +658,10 @@ type SoftLayer_Hardware struct {
 
 	// VirtualizationPlatform - A piece of hardware's virtualization platform software.
 	VirtualizationPlatform *SoftLayer_Software_Component `json:"virtualizationPlatform"`
+}
+
+func (softlayer_hardware *SoftLayer_Hardware) String() string {
+	return "SoftLayer_Hardware"
 }
 
 // AllowAccessToNetworkStorage - This method is used to allow access to a SoftLayer_Network_Storage

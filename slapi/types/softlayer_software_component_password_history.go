@@ -28,3 +28,7 @@ type SoftLayer_Software_Component_Password_History struct {
 	// Username - The username part of this specific password history instance.
 	Username string `json:"username"`
 }
+
+func (softlayer_software_component_password_history *SoftLayer_Software_Component_Password_History) String() string {
+	return "SoftLayer_Software_Component_Password_History"
+}

@@ -6,3 +6,7 @@ package sl
 // customer to a ticket.
 type SoftLayer_Ticket_Update_Customer struct {
 }
+
+func (softlayer_ticket_update_customer *SoftLayer_Ticket_Update_Customer) String() string {
+	return "SoftLayer_Ticket_Update_Customer"
+}

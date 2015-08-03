@@ -7,3 +7,7 @@ package sl
 // relating to a single SoftLayer billing item for Urchin software components.
 type SoftLayer_Billing_Item_Software_Component_Analytics_Urchin struct {
 }
+
+func (softlayer_billing_item_software_component_analytics_urchin *SoftLayer_Billing_Item_Software_Component_Analytics_Urchin) String() string {
+	return "SoftLayer_Billing_Item_Software_Component_Analytics_Urchin"
+}

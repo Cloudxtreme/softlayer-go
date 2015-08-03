@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Auxiliary_Marketing_Event - <nil>
@@ -34,6 +34,10 @@ type SoftLayer_Auxiliary_Marketing_Event struct {
 
 	// Url - <nil>
 	Url string `json:"url"`
+}
+
+func (softlayer_auxiliary_marketing_event *SoftLayer_Auxiliary_Marketing_Event) String() string {
+	return "SoftLayer_Auxiliary_Marketing_Event"
 }
 
 // GetMarketingEvents - This method will return a collection of SoftLayer_Auxiliary_Marketing_Event

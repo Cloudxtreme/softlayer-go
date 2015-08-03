@@ -20,3 +20,7 @@ type SoftLayer_Container_Network_Authentication_Data struct {
 	// Username - no documentation
 	Username string `json:"username"`
 }
+
+func (softlayer_container_network_authentication_data *SoftLayer_Container_Network_Authentication_Data) String() string {
+	return "SoftLayer_Container_Network_Authentication_Data"
+}

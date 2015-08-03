@@ -24,3 +24,7 @@ type SoftLayer_Resource_Group_Member_Attribute struct {
 	// Value - no documentation
 	Value string `json:"value"`
 }
+
+func (softlayer_resource_group_member_attribute *SoftLayer_Resource_Group_Member_Attribute) String() string {
+	return "SoftLayer_Resource_Group_Member_Attribute"
+}

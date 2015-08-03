@@ -28,3 +28,7 @@ type SoftLayer_Account_Attribute struct {
 	// Value - no documentation
 	Value string `json:"value"`
 }
+
+func (softlayer_account_attribute *SoftLayer_Account_Attribute) String() string {
+	return "SoftLayer_Account_Attribute"
+}

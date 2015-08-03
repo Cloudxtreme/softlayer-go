@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Location_Datacenter - SoftLayer_Location_Datacenter extends the [[SoftLayer_Location]]
@@ -67,6 +67,10 @@ type SoftLayer_Location_Datacenter struct {
 	// RoutableBoundSubnets - Retrieve all subnets that are eligible to be routed; those which the account
 	// has permission to associate with a vlan.
 	RoutableBoundSubnets []*SoftLayer_Network_Subnet `json:"routableBoundSubnets"`
+}
+
+func (softlayer_location_datacenter *SoftLayer_Location_Datacenter) String() string {
+	return "SoftLayer_Location_Datacenter"
 }
 
 // GetObject - <nil>

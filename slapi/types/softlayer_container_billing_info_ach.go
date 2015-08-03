@@ -44,3 +44,7 @@ type SoftLayer_Container_Billing_Info_Ach struct {
 	// Street2 - <nil>
 	Street2 string `json:"street2"`
 }
+
+func (softlayer_container_billing_info_ach *SoftLayer_Container_Billing_Info_Ach) String() string {
+	return "SoftLayer_Container_Billing_Info_Ach"
+}

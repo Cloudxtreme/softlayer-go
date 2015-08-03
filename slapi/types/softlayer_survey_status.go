@@ -14,3 +14,7 @@ type SoftLayer_Survey_Status struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_survey_status *SoftLayer_Survey_Status) String() string {
+	return "SoftLayer_Survey_Status"
+}

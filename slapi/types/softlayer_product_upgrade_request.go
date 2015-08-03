@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Upgrade_Request - The SoftLayer_Product_Upgrade_Request data type contains general
@@ -83,6 +83,10 @@ type SoftLayer_Product_Upgrade_Request struct {
 
 	// VirtualGuest - A virtual server object associated with the upgrade request if any.
 	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest"`
+}
+
+func (softlayer_product_upgrade_request *SoftLayer_Product_Upgrade_Request) String() string {
+	return "SoftLayer_Product_Upgrade_Request"
 }
 
 // ApproveChanges - When a change is made to an upgrade by Sales, this method will approve the changes

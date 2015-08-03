@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Software_VirtualLicense - SoftLayer_Software_VirtualLicense is the application class that
@@ -54,6 +54,10 @@ type SoftLayer_Software_VirtualLicense struct {
 
 	// SubnetId - The ID of the SoftLayer Network Subnet this Virtual License belongs to.
 	SubnetId int `json:"subnetId"`
+}
+
+func (softlayer_software_virtuallicense *SoftLayer_Software_VirtualLicense) String() string {
+	return "SoftLayer_Software_VirtualLicense"
 }
 
 // GetLicenseFile - Attempt to retrieve the file associated with a virtual license, if such a file

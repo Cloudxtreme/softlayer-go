@@ -26,3 +26,7 @@ type SoftLayer_Container_User_Customer_External_Binding struct {
 	// Vendor - The name of the vendor that will be used for external authentication
 	Vendor string `json:"vendor"`
 }
+
+func (softlayer_container_user_customer_external_binding *SoftLayer_Container_User_Customer_External_Binding) String() string {
+	return "SoftLayer_Container_User_Customer_External_Binding"
+}

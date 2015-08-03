@@ -23,3 +23,7 @@ type SoftLayer_Product_Item_Resource_Conflict struct {
 	// ResourceTableId - no documentation
 	ResourceTableId int `json:"resourceTableId"`
 }
+
+func (softlayer_product_item_resource_conflict *SoftLayer_Product_Item_Resource_Conflict) String() string {
+	return "SoftLayer_Product_Item_Resource_Conflict"
+}

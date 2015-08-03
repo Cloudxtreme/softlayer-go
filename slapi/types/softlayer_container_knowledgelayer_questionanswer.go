@@ -17,3 +17,7 @@ type SoftLayer_Container_KnowledgeLayer_QuestionAnswer struct {
 	// Question - no documentation
 	Question string `json:"question"`
 }
+
+func (softlayer_container_knowledgelayer_questionanswer *SoftLayer_Container_KnowledgeLayer_QuestionAnswer) String() string {
+	return "SoftLayer_Container_KnowledgeLayer_QuestionAnswer"
+}

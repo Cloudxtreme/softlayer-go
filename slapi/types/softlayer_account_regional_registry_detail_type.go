@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Regional_Registry_Detail_Type - Subnet Registration Detail Type objects describe
@@ -30,6 +30,10 @@ type SoftLayer_Account_Regional_Registry_Detail_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_account_regional_registry_detail_type *SoftLayer_Account_Regional_Registry_Detail_Type) String() string {
+	return "SoftLayer_Account_Regional_Registry_Detail_Type"
 }
 
 // GetAllObjects - <nil>

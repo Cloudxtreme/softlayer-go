@@ -6,3 +6,7 @@ package sl
 // type abstracts information related to a motherboard.
 type SoftLayer_Hardware_Component_Motherboard struct {
 }
+
+func (softlayer_hardware_component_motherboard *SoftLayer_Hardware_Component_Motherboard) String() string {
+	return "SoftLayer_Hardware_Component_Motherboard"
+}

@@ -39,3 +39,7 @@ type SoftLayer_Notification_Subscriber struct {
 	// NotificationSubscriberTypeResourceId - <nil>
 	NotificationSubscriberTypeResourceId int `json:"notificationSubscriberTypeResourceId"`
 }
+
+func (softlayer_notification_subscriber *SoftLayer_Notification_Subscriber) String() string {
+	return "SoftLayer_Notification_Subscriber"
+}

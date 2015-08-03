@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress - <nil>
@@ -100,6 +100,10 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAdd
 
 	// VirtualServers - <nil>
 	VirtualServers []*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer `json:"virtualServers"`
+}
+
+func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress) String() string {
+	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress"
 }
 
 // EditObject - Like any other API object, the load balancers can have their exposed properties edited

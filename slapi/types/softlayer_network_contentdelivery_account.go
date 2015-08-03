@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_ContentDelivery_Account - The SoftLayer_Network_ContentDelivery_Account data type
@@ -71,6 +71,10 @@ type SoftLayer_Network_ContentDelivery_Account struct {
 
 	// TokenAuthenticationEnabledFlag - Indicates if the token authentication service is enabled or not.
 	TokenAuthenticationEnabledFlag bool `json:"tokenAuthenticationEnabledFlag"`
+}
+
+func (softlayer_network_contentdelivery_account *SoftLayer_Network_ContentDelivery_Account) String() string {
+	return "SoftLayer_Network_ContentDelivery_Account"
 }
 
 // AuthenticateResourceRequest - Internap servers attempts to validate a token before serving a

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Message_Queue_Node - The SoftLayer_Network_Message_Queue_Node data type contains
@@ -36,6 +36,10 @@ type SoftLayer_Network_Message_Queue_Node struct {
 
 	// ServiceResource - <nil>
 	ServiceResource *SoftLayer_Network_Service_Resource `json:"serviceResource"`
+}
+
+func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) String() string {
+	return "SoftLayer_Network_Message_Queue_Node"
 }
 
 // AddUser - <nil>

@@ -7,3 +7,7 @@ package sl
 // component.
 type SoftLayer_Network_Component_RemoteManagement struct {
 }
+
+func (softlayer_network_component_remotemanagement *SoftLayer_Network_Component_RemoteManagement) String() string {
+	return "SoftLayer_Network_Component_RemoteManagement"
+}

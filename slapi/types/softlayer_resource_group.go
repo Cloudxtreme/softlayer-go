@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Resource_Group - <nil>
@@ -73,6 +73,10 @@ type SoftLayer_Resource_Group struct {
 
 	// VlanMembers - no documentation
 	VlanMembers []*SoftLayer_Resource_Group_Member `json:"vlanMembers"`
+}
+
+func (softlayer_resource_group *SoftLayer_Resource_Group) String() string {
+	return "SoftLayer_Resource_Group"
 }
 
 // EditObject - <nil>

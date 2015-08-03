@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Monitoring_Robot - The SoftLayer_Monitoring_Robot data type contains general information
@@ -39,6 +39,10 @@ type SoftLayer_Monitoring_Robot struct {
 
 	// StatusId - no documentation
 	StatusId int `json:"statusId"`
+}
+
+func (softlayer_monitoring_robot *SoftLayer_Monitoring_Robot) String() string {
+	return "SoftLayer_Monitoring_Robot"
 }
 
 // CheckConnection - Checks if a monitoring robot can communicate with SoftLayer monitoring management

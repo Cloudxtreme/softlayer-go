@@ -11,3 +11,7 @@ type SoftLayer_Abuse_Lockdown_Resource struct {
 	// InvoiceItem - <nil>
 	InvoiceItem *SoftLayer_Billing_Invoice_Item `json:"invoiceItem"`
 }
+
+func (softlayer_abuse_lockdown_resource *SoftLayer_Abuse_Lockdown_Resource) String() string {
+	return "SoftLayer_Abuse_Lockdown_Resource"
+}

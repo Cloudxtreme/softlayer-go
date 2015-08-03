@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Vlan_Type - <nil>
@@ -20,6 +20,10 @@ type SoftLayer_Network_Vlan_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_network_vlan_type *SoftLayer_Network_Vlan_Type) String() string {
+	return "SoftLayer_Network_Vlan_Type"
 }
 
 // GetObject - <nil>

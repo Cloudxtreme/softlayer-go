@@ -50,3 +50,7 @@ type SoftLayer_User_Access_Facility_Log struct {
 	// Visitor - <nil>
 	Visitor *SoftLayer_Entity `json:"visitor"`
 }
+
+func (softlayer_user_access_facility_log *SoftLayer_User_Access_Facility_Log) String() string {
+	return "SoftLayer_User_Access_Facility_Log"
+}

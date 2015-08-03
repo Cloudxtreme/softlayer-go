@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Storage_Group - <nil>
@@ -59,6 +59,10 @@ type SoftLayer_Network_Storage_Group struct {
 
 	// ServiceResourceId - A SoftLayer_Network_Service_Resource that this group was created on.
 	ServiceResourceId int `json:"serviceResourceId"`
+}
+
+func (softlayer_network_storage_group *SoftLayer_Network_Storage_Group) String() string {
+	return "SoftLayer_Network_Storage_Group"
 }
 
 // AddAllowedHost - Use this method to attach a SoftLayer_Network_Storage_Allowed_Host object to this

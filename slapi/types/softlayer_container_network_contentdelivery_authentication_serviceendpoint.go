@@ -23,3 +23,7 @@ type SoftLayer_Container_Network_ContentDelivery_Authentication_ServiceEndpoint 
 	// Protocol - The protocol that the will be used for. This can be or
 	Protocol string `json:"protocol"`
 }
+
+func (softlayer_container_network_contentdelivery_authentication_serviceendpoint *SoftLayer_Container_Network_ContentDelivery_Authentication_ServiceEndpoint) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_Authentication_ServiceEndpoint"
+}

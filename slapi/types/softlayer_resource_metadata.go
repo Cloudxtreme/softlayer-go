@@ -3,11 +3,15 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Resource_Metadata - <nil>
 type SoftLayer_Resource_Metadata struct {
+}
+
+func (softlayer_resource_metadata *SoftLayer_Resource_Metadata) String() string {
+	return "SoftLayer_Resource_Metadata"
 }
 
 // GetBackendMacAddresses - The getBackendMacAddresses method retrieves a list of backend MAC addresses

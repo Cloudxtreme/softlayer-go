@@ -31,3 +31,7 @@ type SoftLayer_Notification_Occurrence_Event_Attachment struct {
 	// NotificationOccurrenceEventId - The unique event identifier that the file is attached to.
 	NotificationOccurrenceEventId int `json:"notificationOccurrenceEventId"`
 }
+
+func (softlayer_notification_occurrence_event_attachment *SoftLayer_Notification_Occurrence_Event_Attachment) String() string {
+	return "SoftLayer_Notification_Occurrence_Event_Attachment"
+}

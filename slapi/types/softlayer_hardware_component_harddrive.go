@@ -12,3 +12,7 @@ type SoftLayer_Hardware_Component_HardDrive struct {
 	// Partitions - no documentation
 	Partitions []*SoftLayer_Hardware_Component_Partition `json:"partitions"`
 }
+
+func (softlayer_hardware_component_harddrive *SoftLayer_Hardware_Component_HardDrive) String() string {
+	return "SoftLayer_Hardware_Component_HardDrive"
+}

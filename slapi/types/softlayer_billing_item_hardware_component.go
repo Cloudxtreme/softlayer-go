@@ -15,3 +15,7 @@ type SoftLayer_Billing_Item_Hardware_Component struct {
 	// ResourceTableId - The resource (unique identifier) for a server billing item.
 	ResourceTableId int `json:"resourceTableId"`
 }
+
+func (softlayer_billing_item_hardware_component *SoftLayer_Billing_Item_Hardware_Component) String() string {
+	return "SoftLayer_Billing_Item_Hardware_Component"
+}

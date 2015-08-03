@@ -26,3 +26,7 @@ type SoftLayer_Hardware_Component_Model_Attribute_Type struct {
 	// ValidComponentTypes - <nil>
 	ValidComponentTypes []*SoftLayer_Hardware_Component_Type `json:"validComponentTypes"`
 }
+
+func (softlayer_hardware_component_model_attribute_type *SoftLayer_Hardware_Component_Model_Attribute_Type) String() string {
+	return "SoftLayer_Hardware_Component_Model_Attribute_Type"
+}

@@ -14,3 +14,7 @@ type SoftLayer_Account_Link_OpenStack_LinkRequest struct {
 	// DesiredUsername - no documentation
 	DesiredUsername string `json:"desiredUsername"`
 }
+
+func (softlayer_account_link_openstack_linkrequest *SoftLayer_Account_Link_OpenStack_LinkRequest) String() string {
+	return "SoftLayer_Account_Link_OpenStack_LinkRequest"
+}

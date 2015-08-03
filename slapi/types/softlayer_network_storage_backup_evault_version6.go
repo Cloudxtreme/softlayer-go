@@ -44,3 +44,7 @@ type SoftLayer_Network_Storage_Backup_Evault_Version6 struct {
 	// Tasks - Retrieve the task information for the EVault Storage service.
 	Tasks []*SoftLayer_Container_Network_Storage_Evault_Vault_Task `json:"tasks"`
 }
+
+func (softlayer_network_storage_backup_evault_version6 *SoftLayer_Network_Storage_Backup_Evault_Version6) String() string {
+	return "SoftLayer_Network_Storage_Backup_Evault_Version6"
+}

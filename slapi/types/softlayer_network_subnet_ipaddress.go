@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Subnet_IpAddress - The SoftLayer_Network_Subnet_IpAddress data type contains
@@ -175,6 +175,10 @@ type SoftLayer_Network_Subnet_IpAddress struct {
 
 	// VirtualLicenses - no documentation
 	VirtualLicenses []*SoftLayer_Software_VirtualLicense `json:"virtualLicenses"`
+}
+
+func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) String() string {
+	return "SoftLayer_Network_Subnet_IpAddress"
 }
 
 // EditObject - no documentation

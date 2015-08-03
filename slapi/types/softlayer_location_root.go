@@ -6,3 +6,7 @@ package sl
 // include root-specific properties.
 type SoftLayer_Location_Root struct {
 }
+
+func (softlayer_location_root *SoftLayer_Location_Root) String() string {
+	return "SoftLayer_Location_Root"
+}

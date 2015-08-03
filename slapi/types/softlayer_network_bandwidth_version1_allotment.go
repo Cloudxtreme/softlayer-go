@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Bandwidth_Version1_Allotment - The SoftLayer_Network_Bandwidth_Version1_Allotment
@@ -165,6 +165,10 @@ type SoftLayer_Network_Bandwidth_Version1_Allotment struct {
 
 	// VirtualGuests - The Virtual Server contained within a virtual rack.
 	VirtualGuests []*SoftLayer_Virtual_Guest `json:"virtualGuests"`
+}
+
+func (softlayer_network_bandwidth_version1_allotment *SoftLayer_Network_Bandwidth_Version1_Allotment) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Allotment"
 }
 
 // CreateObject - Create a allotment for servers to pool bandwidth and avoid overages in billing if

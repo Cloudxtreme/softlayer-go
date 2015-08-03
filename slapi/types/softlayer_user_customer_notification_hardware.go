@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_Notification_Hardware - The Customer_Notification_Hardware object stores
@@ -29,6 +29,10 @@ type SoftLayer_User_Customer_Notification_Hardware struct {
 	// UserId - The ID of the SoftLayer_User_Customer object that represents the user to be notified on
 	// monitoring failure.
 	UserId int `json:"userId"`
+}
+
+func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) String() string {
+	return "SoftLayer_User_Customer_Notification_Hardware"
 }
 
 // CreateObject - Passing in an unsaved instances of a Customer_Notification_Hardware object into this

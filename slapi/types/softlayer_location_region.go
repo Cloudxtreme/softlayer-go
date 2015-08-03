@@ -21,3 +21,7 @@ type SoftLayer_Location_Region struct {
 	// SortOrder - An integer representing the order in which this element is displayed.
 	SortOrder int `json:"sortOrder"`
 }
+
+func (softlayer_location_region *SoftLayer_Location_Region) String() string {
+	return "SoftLayer_Location_Region"
+}

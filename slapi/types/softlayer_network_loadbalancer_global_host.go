@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_LoadBalancer_Global_Host - The SoftLayer_Network_LoadBalancer_Global_Host data
@@ -55,6 +55,10 @@ type SoftLayer_Network_LoadBalancer_Global_Host struct {
 	// Weight - The load balance weight of a host. The total weight of all hosts in the load balancing pool
 	// must not exceed 100.
 	Weight int `json:"weight"`
+}
+
+func (softlayer_network_loadbalancer_global_host *SoftLayer_Network_LoadBalancer_Global_Host) String() string {
+	return "SoftLayer_Network_LoadBalancer_Global_Host"
 }
 
 // DeleteObject - Remove a host from the load balancing pool of a global load balancer account.

@@ -57,3 +57,7 @@ type SoftLayer_Container_Network_Media_Information struct {
 	// VideoCodec - no documentation
 	VideoCodec string `json:"videoCodec"`
 }
+
+func (softlayer_container_network_media_information *SoftLayer_Container_Network_Media_Information) String() string {
+	return "SoftLayer_Container_Network_Media_Information"
+}

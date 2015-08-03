@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Storage_Iscsi_OS_Type - <nil>
@@ -25,6 +25,10 @@ type SoftLayer_Network_Storage_Iscsi_OS_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_network_storage_iscsi_os_type *SoftLayer_Network_Storage_Iscsi_OS_Type) String() string {
+	return "SoftLayer_Network_Storage_Iscsi_OS_Type"
 }
 
 // GetAllObjects - no documentation

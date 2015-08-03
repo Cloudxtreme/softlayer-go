@@ -11,3 +11,7 @@ type SoftLayer_Tag_Type struct {
 	// KeyName - <nil>
 	KeyName string `json:"keyName"`
 }
+
+func (softlayer_tag_type *SoftLayer_Tag_Type) String() string {
+	return "SoftLayer_Tag_Type"
+}

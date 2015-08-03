@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_MobileDevice - This class represents a mobile device belonging to a user.
@@ -69,6 +69,10 @@ type SoftLayer_User_Customer_MobileDevice struct {
 
 	// UserId - no documentation
 	UserId int `json:"userId"`
+}
+
+func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) String() string {
+	return "SoftLayer_User_Customer_MobileDevice"
 }
 
 // CreateObject - Create a new mobile device association for a user.

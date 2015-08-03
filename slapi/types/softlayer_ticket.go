@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Ticket - The SoftLayer_Ticket data type models a single SoftLayer customer support or
@@ -252,6 +252,10 @@ type SoftLayer_Ticket struct {
 
 	// UserEditableFlag - no documentation
 	UserEditableFlag bool `json:"userEditableFlag"`
+}
+
+func (softlayer_ticket *SoftLayer_Ticket) String() string {
+	return "SoftLayer_Ticket"
 }
 
 // AddAssignedAgent - <nil>

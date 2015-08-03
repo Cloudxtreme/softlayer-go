@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Storage_Schedule_Property_Type - A schedule property type is used to allow for a
@@ -24,6 +24,10 @@ type SoftLayer_Network_Storage_Schedule_Property_Type struct {
 
 	// NasType - The type of Storage volume type which a property type may be associated with.
 	NasType string `json:"nasType"`
+}
+
+func (softlayer_network_storage_schedule_property_type *SoftLayer_Network_Storage_Schedule_Property_Type) String() string {
+	return "SoftLayer_Network_Storage_Schedule_Property_Type"
 }
 
 // GetAllObjects - Use this method to retrieve all network storage schedule property types.

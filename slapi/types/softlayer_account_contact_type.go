@@ -27,3 +27,7 @@ type SoftLayer_Account_Contact_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_account_contact_type *SoftLayer_Account_Contact_Type) String() string {
+	return "SoftLayer_Account_Contact_Type"
+}

@@ -3,11 +3,15 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Order - <nil>
 type SoftLayer_Product_Order struct {
+}
+
+func (softlayer_product_order *SoftLayer_Product_Order) String() string {
+	return "SoftLayer_Product_Order"
 }
 
 // CheckItemAvailability - <nil>

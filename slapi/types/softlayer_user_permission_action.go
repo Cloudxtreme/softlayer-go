@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Permission_Action - <nil>
@@ -28,6 +28,10 @@ type SoftLayer_User_Permission_Action struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+func (softlayer_user_permission_action *SoftLayer_User_Permission_Action) String() string {
+	return "SoftLayer_User_Permission_Action"
 }
 
 // GetAllObjects - <nil>

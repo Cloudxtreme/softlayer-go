@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Subnet_Rwhois_Data - Every SoftLayer customer account has contact information
@@ -66,6 +66,10 @@ type SoftLayer_Network_Subnet_Rwhois_Data struct {
 	// State - A two-letter abbreviation of the state of the mailing address associated with an account's
 	// data. If an account does not reside in a province then this is typically blank.
 	State string `json:"state"`
+}
+
+func (softlayer_network_subnet_rwhois_data *SoftLayer_Network_Subnet_Rwhois_Data) String() string {
+	return "SoftLayer_Network_Subnet_Rwhois_Data"
 }
 
 // EditObject - Edit the record by passing in a modified version of the record object. All fields are

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Metric_Tracking_Object - Metric tracking objects provides a common interface to all
@@ -32,6 +32,10 @@ type SoftLayer_Metric_Tracking_Object struct {
 
 	// Type - no documentation
 	Type *SoftLayer_Metric_Tracking_Object_Type `json:"type"`
+}
+
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) String() string {
+	return "SoftLayer_Metric_Tracking_Object"
 }
 
 // GetBackboneBandwidthGraph - Retrieve a PNG image of the last 24 hours of bandwidth usage of one of

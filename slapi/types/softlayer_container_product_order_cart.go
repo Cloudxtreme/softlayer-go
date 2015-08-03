@@ -23,3 +23,7 @@ type SoftLayer_Container_Product_Order_Cart struct {
 	// SavedCartName - no documentation
 	SavedCartName string `json:"savedCartName"`
 }
+
+func (softlayer_container_product_order_cart *SoftLayer_Container_Product_Order_Cart) String() string {
+	return "SoftLayer_Container_Product_Order_Cart"
+}

@@ -25,3 +25,7 @@ type SoftLayer_Product_Item_Requirement struct {
 	// RequiredItemId - no documentation
 	RequiredItemId int `json:"requiredItemId"`
 }
+
+func (softlayer_product_item_requirement *SoftLayer_Product_Item_Requirement) String() string {
+	return "SoftLayer_Product_Item_Requirement"
+}

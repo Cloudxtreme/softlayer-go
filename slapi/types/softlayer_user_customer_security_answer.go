@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_Security_Answer - The SoftLayer_User_Customer_Security_Answer type contains
@@ -27,6 +27,10 @@ type SoftLayer_User_Customer_Security_Answer struct {
 
 	// UserId - no documentation
 	UserId int `json:"userId"`
+}
+
+func (softlayer_user_customer_security_answer *SoftLayer_User_Customer_Security_Answer) String() string {
+	return "SoftLayer_User_Customer_Security_Answer"
 }
 
 // GetObject - getObject retrieves the SoftLayer_User_Customer_Security_Answer object whose ID number

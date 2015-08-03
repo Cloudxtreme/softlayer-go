@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Info - Every SoftLayer customer account has billing specific information which is
@@ -92,6 +92,10 @@ type SoftLayer_Billing_Info struct {
 
 	// VatId - <nil>
 	VatId string `json:"vatId"`
+}
+
+func (softlayer_billing_info *SoftLayer_Billing_Info) String() string {
+	return "SoftLayer_Billing_Info"
 }
 
 // GetObject - getObject retrieves the SoftLayer_Billing_Info object whose data corresponds to the

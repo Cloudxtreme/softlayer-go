@@ -7,3 +7,7 @@ package sl
 // type defined within the SoftLayer
 type SoftLayer_Metric_Tracking_Object_Abstract struct {
 }
+
+func (softlayer_metric_tracking_object_abstract *SoftLayer_Metric_Tracking_Object_Abstract) String() string {
+	return "SoftLayer_Metric_Tracking_Object_Abstract"
+}

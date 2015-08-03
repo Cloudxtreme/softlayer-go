@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Software_Description - This class holds a description for a specific installation of a
@@ -137,6 +137,10 @@ type SoftLayer_Software_Description struct {
 	// VirtualizationPlatform - This is set to '1' if this Software Description a platform for hosting
 	// virtual servers.
 	VirtualizationPlatform int `json:"virtualizationPlatform"`
+}
+
+func (softlayer_software_description *SoftLayer_Software_Description) String() string {
+	return "SoftLayer_Software_Description"
 }
 
 // GetAllObjects - <nil>

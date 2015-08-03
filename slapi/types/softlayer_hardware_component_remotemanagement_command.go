@@ -16,3 +16,7 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command struct {
 	// Requests - All requests issued for the remote management command.
 	Requests []*SoftLayer_Hardware_Component_RemoteManagement_Command_Request `json:"requests"`
 }
+
+func (softlayer_hardware_component_remotemanagement_command *SoftLayer_Hardware_Component_RemoteManagement_Command) String() string {
+	return "SoftLayer_Hardware_Component_RemoteManagement_Command"
+}

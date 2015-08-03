@@ -33,3 +33,7 @@ type SoftLayer_Account_Link struct {
 	// ServiceProviderId - <nil>
 	ServiceProviderId int `json:"serviceProviderId"`
 }
+
+func (softlayer_account_link *SoftLayer_Account_Link) String() string {
+	return "SoftLayer_Account_Link"
+}

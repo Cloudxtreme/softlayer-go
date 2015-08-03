@@ -6,3 +6,7 @@ package sl
 // made by an agent.
 type SoftLayer_Ticket_Update_Agent struct {
 }
+
+func (softlayer_ticket_update_agent *SoftLayer_Ticket_Update_Agent) String() string {
+	return "SoftLayer_Ticket_Update_Agent"
+}

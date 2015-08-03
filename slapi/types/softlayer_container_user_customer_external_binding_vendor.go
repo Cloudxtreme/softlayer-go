@@ -12,3 +12,7 @@ type SoftLayer_Container_User_Customer_External_Binding_Vendor struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_container_user_customer_external_binding_vendor *SoftLayer_Container_User_Customer_External_Binding_Vendor) String() string {
+	return "SoftLayer_Container_User_Customer_External_Binding_Vendor"
+}

@@ -12,3 +12,7 @@ type SoftLayer_Container_Exception struct {
 	// ExceptionMessage - no documentation
 	ExceptionMessage string `json:"exceptionMessage"`
 }
+
+func (softlayer_container_exception *SoftLayer_Container_Exception) String() string {
+	return "SoftLayer_Container_Exception"
+}

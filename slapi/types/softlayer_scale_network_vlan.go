@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Network_Vlan - <nil>
@@ -32,6 +32,10 @@ type SoftLayer_Scale_Network_Vlan struct {
 
 	// ScaleGroupId - The identifier of the group this network reference applies to.
 	ScaleGroupId int `json:"scaleGroupId"`
+}
+
+func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) String() string {
+	return "SoftLayer_Scale_Network_Vlan"
 }
 
 // CreateObject - <nil>

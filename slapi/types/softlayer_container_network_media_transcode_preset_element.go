@@ -38,3 +38,7 @@ type SoftLayer_Container_Network_Media_Transcode_Preset_Element struct {
 	// Type - no documentation
 	Type string `json:"type"`
 }
+
+func (softlayer_container_network_media_transcode_preset_element *SoftLayer_Container_Network_Media_Transcode_Preset_Element) String() string {
+	return "SoftLayer_Container_Network_Media_Transcode_Preset_Element"
+}

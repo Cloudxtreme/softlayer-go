@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Type - The SoftLayer_Configuration_Template_Type data type contains
@@ -23,6 +23,10 @@ type SoftLayer_Configuration_Template_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_configuration_template_type *SoftLayer_Configuration_Template_Type) String() string {
+	return "SoftLayer_Configuration_Template_Type"
 }
 
 // GetObject - <nil>

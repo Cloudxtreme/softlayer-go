@@ -14,3 +14,7 @@ type SoftLayer_Hardware_Power_Component struct {
 	// Id - <nil>
 	Id int `json:"id"`
 }
+
+func (softlayer_hardware_power_component *SoftLayer_Hardware_Power_Component) String() string {
+	return "SoftLayer_Hardware_Power_Component"
+}

@@ -17,3 +17,7 @@ type SoftLayer_Hardware_Component_Model_Generic_MarketingFeature struct {
 	// Price - no documentation
 	Price string `json:"price"`
 }
+
+func (softlayer_hardware_component_model_generic_marketingfeature *SoftLayer_Hardware_Component_Model_Generic_MarketingFeature) String() string {
+	return "SoftLayer_Hardware_Component_Model_Generic_MarketingFeature"
+}

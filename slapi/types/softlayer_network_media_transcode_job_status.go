@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Media_Transcode_Job_Status - The SoftLayer_Network_Media_Transcode_Job_Status
@@ -18,6 +18,10 @@ type SoftLayer_Network_Media_Transcode_Job_Status struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_network_media_transcode_job_status *SoftLayer_Network_Media_Transcode_Job_Status) String() string {
+	return "SoftLayer_Network_Media_Transcode_Job_Status"
 }
 
 // GetAllStatuses - no documentation

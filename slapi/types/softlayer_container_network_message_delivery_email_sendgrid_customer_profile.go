@@ -35,3 +35,7 @@ type SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Customer_Profil
 	// Zip - <nil>
 	Zip string `json:"zip"`
 }
+
+func (softlayer_container_network_message_delivery_email_sendgrid_customer_profile *SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Customer_Profile) String() string {
+	return "SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Customer_Profile"
+}

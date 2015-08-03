@@ -47,3 +47,7 @@ type SoftLayer_Hardware_Component_Model_Generic struct {
 	// to a generic component model with a lower priority number.
 	UpgradePriority int `json:"upgradePriority"`
 }
+
+func (softlayer_hardware_component_model_generic *SoftLayer_Hardware_Component_Model_Generic) String() string {
+	return "SoftLayer_Hardware_Component_Model_Generic"
+}

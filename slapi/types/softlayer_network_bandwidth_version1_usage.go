@@ -15,3 +15,7 @@ type SoftLayer_Network_Bandwidth_Version1_Usage struct {
 	// BandwidthUsageDetailCount - A count of bandwidth usage details for this hardware.
 	BandwidthUsageDetailCount uint64 `json:"bandwidthUsageDetailCount"`
 }
+
+func (softlayer_network_bandwidth_version1_usage *SoftLayer_Network_Bandwidth_Version1_Usage) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Usage"
+}

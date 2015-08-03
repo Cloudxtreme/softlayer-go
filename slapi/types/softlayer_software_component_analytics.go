@@ -7,3 +7,7 @@ package sl
 // for usernames and passwords. Defaults are initiated by this object.
 type SoftLayer_Software_Component_Analytics struct {
 }
+
+func (softlayer_software_component_analytics *SoftLayer_Software_Component_Analytics) String() string {
+	return "SoftLayer_Software_Component_Analytics"
+}

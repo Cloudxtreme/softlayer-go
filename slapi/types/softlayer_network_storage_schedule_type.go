@@ -16,3 +16,7 @@ type SoftLayer_Network_Storage_Schedule_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_network_storage_schedule_type *SoftLayer_Network_Storage_Schedule_Type) String() string {
+	return "SoftLayer_Network_Storage_Schedule_Type"
+}

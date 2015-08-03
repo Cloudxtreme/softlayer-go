@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Subnet_IpAddress_Global - <nil>
@@ -40,6 +40,10 @@ type SoftLayer_Network_Subnet_IpAddress_Global struct {
 	// TypeId - A Global IP Address' associated type [[SoftLayer_Network_Subnet_IpAddress_Global_Type|id]]
 	// ID
 	TypeId int `json:"typeId"`
+}
+
+func (softlayer_network_subnet_ipaddress_global *SoftLayer_Network_Subnet_IpAddress_Global) String() string {
+	return "SoftLayer_Network_Subnet_IpAddress_Global"
 }
 
 // GetObject - <nil>

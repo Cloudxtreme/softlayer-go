@@ -26,3 +26,7 @@ type SoftLayer_Location_Region_Location struct {
 	// Region - no documentation
 	Region *SoftLayer_Location_Region `json:"region"`
 }
+
+func (softlayer_location_region_location *SoftLayer_Location_Region_Location) String() string {
+	return "SoftLayer_Location_Region_Location"
+}

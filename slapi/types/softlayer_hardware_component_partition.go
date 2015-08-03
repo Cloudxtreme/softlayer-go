@@ -29,3 +29,7 @@ type SoftLayer_Hardware_Component_Partition struct {
 	// this may be '/var'
 	Name string `json:"name"`
 }
+
+func (softlayer_hardware_component_partition *SoftLayer_Hardware_Component_Partition) String() string {
+	return "SoftLayer_Hardware_Component_Partition"
+}

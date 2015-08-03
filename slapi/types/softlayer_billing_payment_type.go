@@ -14,3 +14,7 @@ type SoftLayer_Billing_Payment_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_billing_payment_type *SoftLayer_Billing_Payment_Type) String() string {
+	return "SoftLayer_Billing_Payment_Type"
+}

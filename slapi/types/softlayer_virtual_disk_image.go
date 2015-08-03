@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Disk_Image - The virtual disk image data type presents the structure in which a
@@ -97,6 +97,10 @@ type SoftLayer_Virtual_Disk_Image struct {
 
 	// Uuid - A disk image's unique ID on a virtualization platform.
 	Uuid string `json:"uuid"`
+}
+
+func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) String() string {
+	return "SoftLayer_Virtual_Disk_Image"
 }
 
 // EditObject - <nil>

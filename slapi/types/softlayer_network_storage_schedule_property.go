@@ -31,3 +31,7 @@ type SoftLayer_Network_Storage_Schedule_Property struct {
 	// Value - no documentation
 	Value string `json:"value"`
 }
+
+func (softlayer_network_storage_schedule_property *SoftLayer_Network_Storage_Schedule_Property) String() string {
+	return "SoftLayer_Network_Storage_Schedule_Property"
+}

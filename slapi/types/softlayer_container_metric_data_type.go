@@ -17,3 +17,7 @@ type SoftLayer_Container_Metric_Data_Type struct {
 	// Unit - <nil>
 	Unit string `json:"unit"`
 }
+
+func (softlayer_container_metric_data_type *SoftLayer_Container_Metric_Data_Type) String() string {
+	return "SoftLayer_Container_Metric_Data_Type"
+}

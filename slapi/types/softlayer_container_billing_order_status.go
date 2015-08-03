@@ -12,3 +12,7 @@ type SoftLayer_Container_Billing_Order_Status struct {
 	// Status - no documentation
 	Status string `json:"status"`
 }
+
+func (softlayer_container_billing_order_status *SoftLayer_Container_Billing_Order_Status) String() string {
+	return "SoftLayer_Container_Billing_Order_Status"
+}

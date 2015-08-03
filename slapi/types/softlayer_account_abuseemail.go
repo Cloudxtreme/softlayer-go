@@ -16,3 +16,7 @@ type SoftLayer_Account_AbuseEmail struct {
 	// Email - no documentation
 	Email string `json:"email"`
 }
+
+func (softlayer_account_abuseemail *SoftLayer_Account_AbuseEmail) String() string {
+	return "SoftLayer_Account_AbuseEmail"
+}

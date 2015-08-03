@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Guest_Boot_Parameter - <nil>
@@ -31,6 +31,10 @@ type SoftLayer_Virtual_Guest_Boot_Parameter struct {
 
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate"`
+}
+
+func (softlayer_virtual_guest_boot_parameter *SoftLayer_Virtual_Guest_Boot_Parameter) String() string {
+	return "SoftLayer_Virtual_Guest_Boot_Parameter"
 }
 
 // CreateObject - <nil>

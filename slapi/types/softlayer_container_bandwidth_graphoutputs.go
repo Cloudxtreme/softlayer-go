@@ -22,3 +22,7 @@ type SoftLayer_Container_Bandwidth_GraphOutputs struct {
 	// MinStartDate - no documentation
 	MinStartDate *time.Time `json:"minStartDate"`
 }
+
+func (softlayer_container_bandwidth_graphoutputs *SoftLayer_Container_Bandwidth_GraphOutputs) String() string {
+	return "SoftLayer_Container_Bandwidth_GraphOutputs"
+}

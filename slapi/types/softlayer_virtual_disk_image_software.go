@@ -26,3 +26,7 @@ type SoftLayer_Virtual_Disk_Image_Software struct {
 	// associated with.
 	SoftwareDescriptionId int `json:"softwareDescriptionId"`
 }
+
+func (softlayer_virtual_disk_image_software *SoftLayer_Virtual_Disk_Image_Software) String() string {
+	return "SoftLayer_Virtual_Disk_Image_Software"
+}

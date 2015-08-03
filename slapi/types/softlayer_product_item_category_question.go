@@ -42,3 +42,7 @@ type SoftLayer_Product_Item_Category_Question struct {
 	// like.
 	ValueExample string `json:"valueExample"`
 }
+
+func (softlayer_product_item_category_question *SoftLayer_Product_Item_Category_Question) String() string {
+	return "SoftLayer_Product_Item_Category_Question"
+}

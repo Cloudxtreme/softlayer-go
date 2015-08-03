@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Sales_Presale_Event - The presale event data types indicate the information regarding an
@@ -55,6 +55,10 @@ type SoftLayer_Sales_Presale_Event struct {
 
 	// StartDate - Start date of the presale event. Orders cannot be approved before this date.
 	StartDate *time.Time `json:"startDate"`
+}
+
+func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) String() string {
+	return "SoftLayer_Sales_Presale_Event"
 }
 
 // GetAllObjects - <nil>

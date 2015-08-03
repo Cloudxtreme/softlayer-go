@@ -51,3 +51,7 @@ type SoftLayer_Network_Firewall_Template_Rule struct {
 	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
 	SourceIpSubnetMask string `json:"sourceIpSubnetMask"`
 }
+
+func (softlayer_network_firewall_template_rule *SoftLayer_Network_Firewall_Template_Rule) String() string {
+	return "SoftLayer_Network_Firewall_Template_Rule"
+}

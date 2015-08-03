@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Authentication_Saml - <nil>
@@ -59,6 +59,10 @@ type SoftLayer_Account_Authentication_Saml struct {
 
 	// SingleSignOnUrl - <nil>
 	SingleSignOnUrl string `json:"singleSignOnUrl"`
+}
+
+func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) String() string {
+	return "SoftLayer_Account_Authentication_Saml"
 }
 
 // CreateObject - <nil>

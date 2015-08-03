@@ -3,11 +3,15 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Storage_Group_Iscsi - <nil>
 type SoftLayer_Network_Storage_Group_Iscsi struct {
+}
+
+func (softlayer_network_storage_group_iscsi *SoftLayer_Network_Storage_Group_Iscsi) String() string {
+	return "SoftLayer_Network_Storage_Group_Iscsi"
 }
 
 // AddAllowedHost - Use this method to attach a SoftLayer_Network_Storage_Allowed_Host object to this

@@ -9,3 +9,7 @@ package sl
 // [[SoftLayer_Container_Product_Order_Network_PerformanceStorage_Iscsi]] for Block storage.
 type SoftLayer_Container_Product_Order_Network_PerformanceStorage struct {
 }
+
+func (softlayer_container_product_order_network_performancestorage *SoftLayer_Container_Product_Order_Network_PerformanceStorage) String() string {
+	return "SoftLayer_Container_Product_Order_Network_PerformanceStorage"
+}

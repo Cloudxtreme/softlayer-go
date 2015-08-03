@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Dns_Domain_ResourceRecord - The SoftLayer_Dns_Domain_ResourceRecord data type represents a
@@ -82,6 +82,10 @@ type SoftLayer_Dns_Domain_ResourceRecord struct {
 	// framework) record, and "txt" denotes a TXT (text) record. A domain record's type also denotes which
 	// class in the SoftLayer API is a best match for extending a resource record.
 	Type string `json:"type"`
+}
+
+func (softlayer_dns_domain_resourcerecord *SoftLayer_Dns_Domain_ResourceRecord) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord"
 }
 
 // CreateObject - createObject creates a new domain resource record. The ''host'' property of the

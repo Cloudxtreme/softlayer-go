@@ -19,3 +19,7 @@ type SoftLayer_Container_Product_Order_Network_Storage_Modification struct {
 	// VolumeId - no documentation
 	VolumeId int `json:"volumeId"`
 }
+
+func (softlayer_container_product_order_network_storage_modification *SoftLayer_Container_Product_Order_Network_Storage_Modification) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Storage_Modification"
+}

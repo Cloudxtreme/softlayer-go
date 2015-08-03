@@ -30,3 +30,7 @@ type SoftLayer_Security_Certificate_Entry struct {
 	// ValidityEnd - The UTC timestamp representing the end of the certificate's validity period.
 	ValidityEnd *time.Time `json:"validityEnd"`
 }
+
+func (softlayer_security_certificate_entry *SoftLayer_Security_Certificate_Entry) String() string {
+	return "SoftLayer_Security_Certificate_Entry"
+}

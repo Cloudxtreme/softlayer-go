@@ -67,3 +67,7 @@ type SoftLayer_Provisioning_Version1_Transaction struct {
 	// transaction group.
 	TransactionStatus *SoftLayer_Provisioning_Version1_Transaction_Status `json:"transactionStatus"`
 }
+
+func (softlayer_provisioning_version1_transaction *SoftLayer_Provisioning_Version1_Transaction) String() string {
+	return "SoftLayer_Provisioning_Version1_Transaction"
+}

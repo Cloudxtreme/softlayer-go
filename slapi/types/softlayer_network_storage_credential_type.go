@@ -24,3 +24,7 @@ type SoftLayer_Network_Storage_Credential_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_network_storage_credential_type *SoftLayer_Network_Storage_Credential_Type) String() string {
+	return "SoftLayer_Network_Storage_Credential_Type"
+}

@@ -19,3 +19,7 @@ type SoftLayer_Ticket_Attachment_Hardware struct {
 	// Resource - no documentation
 	Resource *SoftLayer_Hardware `json:"resource"`
 }
+
+func (softlayer_ticket_attachment_hardware *SoftLayer_Ticket_Attachment_Hardware) String() string {
+	return "SoftLayer_Ticket_Attachment_Hardware"
+}

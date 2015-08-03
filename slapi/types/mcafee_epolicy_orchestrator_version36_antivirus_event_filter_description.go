@@ -10,3 +10,7 @@ type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Filter_Description st
 	// Name - The name of the rule that triggered an anti-virus event.
 	Name string `json:"name"`
 }
+
+func (mcafee_epolicy_orchestrator_version36_antivirus_event_filter_description *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Filter_Description) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Filter_Description"
+}

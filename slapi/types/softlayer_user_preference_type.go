@@ -15,3 +15,7 @@ type SoftLayer_User_Preference_Type struct {
 	// ValueExample - no documentation
 	ValueExample string `json:"valueExample"`
 }
+
+func (softlayer_user_preference_type *SoftLayer_User_Preference_Type) String() string {
+	return "SoftLayer_User_Preference_Type"
+}

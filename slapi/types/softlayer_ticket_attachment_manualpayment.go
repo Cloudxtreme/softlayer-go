@@ -9,3 +9,7 @@ type SoftLayer_Ticket_Attachment_ManualPayment struct {
 	// Resource - no documentation
 	Resource *SoftLayer_Billing_Payment_Card_ManualPayment `json:"resource"`
 }
+
+func (softlayer_ticket_attachment_manualpayment *SoftLayer_Ticket_Attachment_ManualPayment) String() string {
+	return "SoftLayer_Ticket_Attachment_ManualPayment"
+}

@@ -21,3 +21,7 @@ type SoftLayer_Container_Product_Order_Network_Storage_Enterprise struct {
 	// This property is ignored for file storage orders.
 	OsFormatType *SoftLayer_Network_Storage_Iscsi_OS_Type `json:"osFormatType"`
 }
+
+func (softlayer_container_product_order_network_storage_enterprise *SoftLayer_Container_Product_Order_Network_Storage_Enterprise) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Storage_Enterprise"
+}

@@ -10,3 +10,7 @@ package sl
 // used in email verification methods such as Sender Policy Framework.
 type SoftLayer_Dns_Domain_ResourceRecord_TxtType struct {
 }
+
+func (softlayer_dns_domain_resourcerecord_txttype *SoftLayer_Dns_Domain_ResourceRecord_TxtType) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord_TxtType"
+}

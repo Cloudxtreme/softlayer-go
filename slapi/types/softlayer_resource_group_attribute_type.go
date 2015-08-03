@@ -17,3 +17,7 @@ type SoftLayer_Resource_Group_Attribute_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_resource_group_attribute_type *SoftLayer_Resource_Group_Attribute_Type) String() string {
+	return "SoftLayer_Resource_Group_Attribute_Type"
+}

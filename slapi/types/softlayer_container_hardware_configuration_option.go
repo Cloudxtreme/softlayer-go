@@ -17,3 +17,7 @@ type SoftLayer_Container_Hardware_Configuration_Option struct {
 	// creating a server with the option.
 	Template *SoftLayer_Hardware `json:"template"`
 }
+
+func (softlayer_container_hardware_configuration_option *SoftLayer_Container_Hardware_Configuration_Option) String() string {
+	return "SoftLayer_Container_Hardware_Configuration_Option"
+}

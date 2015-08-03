@@ -11,3 +11,7 @@ type SoftLayer_Network_Service_Health_Status struct {
 	// Name - The status of a SoftLayer service. This is typically "Up" or "Down".
 	Name string `json:"name"`
 }
+
+func (softlayer_network_service_health_status *SoftLayer_Network_Service_Health_Status) String() string {
+	return "SoftLayer_Network_Service_Health_Status"
+}

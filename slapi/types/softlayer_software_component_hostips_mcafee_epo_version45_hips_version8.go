@@ -8,3 +8,7 @@ package sl
 // ePolicy Orchestrator version 4.5 backend.
 type SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version45_Hips_Version8 struct {
 }
+
+func (softlayer_software_component_hostips_mcafee_epo_version45_hips_version8 *SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version45_Hips_Version8) String() string {
+	return "SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version45_Hips_Version8"
+}

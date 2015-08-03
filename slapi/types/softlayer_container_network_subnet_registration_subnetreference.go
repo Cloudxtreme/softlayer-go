@@ -14,3 +14,7 @@ type SoftLayer_Container_Network_Subnet_Registration_SubnetReference struct {
 	// SubnetCidr - no documentation
 	SubnetCidr string `json:"subnetCidr"`
 }
+
+func (softlayer_container_network_subnet_registration_subnetreference *SoftLayer_Container_Network_Subnet_Registration_SubnetReference) String() string {
+	return "SoftLayer_Container_Network_Subnet_Registration_SubnetReference"
+}

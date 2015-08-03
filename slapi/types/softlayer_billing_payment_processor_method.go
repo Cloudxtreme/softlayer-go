@@ -17,3 +17,7 @@ type SoftLayer_Billing_Payment_Processor_Method struct {
 	// PaymentType - <nil>
 	PaymentType *SoftLayer_Billing_Payment_Type `json:"paymentType"`
 }
+
+func (softlayer_billing_payment_processor_method *SoftLayer_Billing_Payment_Processor_Method) String() string {
+	return "SoftLayer_Billing_Payment_Processor_Method"
+}

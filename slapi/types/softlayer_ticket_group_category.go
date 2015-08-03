@@ -15,3 +15,7 @@ type SoftLayer_Ticket_Group_Category struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_ticket_group_category *SoftLayer_Ticket_Group_Category) String() string {
+	return "SoftLayer_Ticket_Group_Category"
+}

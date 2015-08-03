@@ -20,3 +20,7 @@ type SoftLayer_Container_Billing_Invoice_Email struct {
 	// be used.
 	Type string `json:"type"`
 }
+
+func (softlayer_container_billing_invoice_email *SoftLayer_Container_Billing_Invoice_Email) String() string {
+	return "SoftLayer_Container_Billing_Invoice_Email"
+}

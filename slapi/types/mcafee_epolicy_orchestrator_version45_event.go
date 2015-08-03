@@ -41,3 +41,7 @@ type McAfee_Epolicy_Orchestrator_Version45_Event struct {
 	// VirusActionTaken - no documentation
 	VirusActionTaken *McAfee_Epolicy_Orchestrator_Version45_Event_Filter_Description `json:"virusActionTaken"`
 }
+
+func (mcafee_epolicy_orchestrator_version45_event *McAfee_Epolicy_Orchestrator_Version45_Event) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version45_Event"
+}

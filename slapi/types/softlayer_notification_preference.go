@@ -32,3 +32,7 @@ type SoftLayer_Notification_Preference struct {
 	// Value - Default value used when setting up preferences for a new subscriber.
 	Value string `json:"value"`
 }
+
+func (softlayer_notification_preference *SoftLayer_Notification_Preference) String() string {
+	return "SoftLayer_Notification_Preference"
+}

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Notification_Occurrence_Event - <nil>
@@ -93,6 +93,10 @@ type SoftLayer_Notification_Occurrence_Event struct {
 
 	// Updates - no documentation
 	Updates []*SoftLayer_Notification_Occurrence_Update `json:"updates"`
+}
+
+func (softlayer_notification_occurrence_event *SoftLayer_Notification_Occurrence_Event) String() string {
+	return "SoftLayer_Notification_Occurrence_Event"
 }
 
 // AcknowledgeNotification - no documentation

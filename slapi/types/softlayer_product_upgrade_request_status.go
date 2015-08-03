@@ -18,3 +18,7 @@ type SoftLayer_Product_Upgrade_Request_Status struct {
 	// StatusCode - no documentation
 	StatusCode string `json:"statusCode"`
 }
+
+func (softlayer_product_upgrade_request_status *SoftLayer_Product_Upgrade_Request_Status) String() string {
+	return "SoftLayer_Product_Upgrade_Request_Status"
+}

@@ -28,3 +28,7 @@ type SoftLayer_Container_Bandwidth_GraphOutputsExtended struct {
 	// OutBoundTotalBytes - The amount of outbound traffic reported on a bandwidth graph image.
 	OutBoundTotalBytes uint64 `json:"outBoundTotalBytes"`
 }
+
+func (softlayer_container_bandwidth_graphoutputsextended *SoftLayer_Container_Bandwidth_GraphOutputsExtended) String() string {
+	return "SoftLayer_Container_Bandwidth_GraphOutputsExtended"
+}

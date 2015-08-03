@@ -21,3 +21,7 @@ type SoftLayer_Survey_Answer struct {
 	// SurveyQuestionId - A survey answer's associated [[SoftLayer_Survey_Question|Survey Question]] Id.
 	SurveyQuestionId int `json:"surveyQuestionId"`
 }
+
+func (softlayer_survey_answer *SoftLayer_Survey_Answer) String() string {
+	return "SoftLayer_Survey_Answer"
+}

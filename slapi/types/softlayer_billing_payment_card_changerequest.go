@@ -105,3 +105,7 @@ type SoftLayer_Billing_Payment_Card_ChangeRequest struct {
 	// TicketAttachmentReferences - These are tickets tied to a credit card change request.
 	TicketAttachmentReferences []*SoftLayer_Ticket_Attachment `json:"ticketAttachmentReferences"`
 }
+
+func (softlayer_billing_payment_card_changerequest *SoftLayer_Billing_Payment_Card_ChangeRequest) String() string {
+	return "SoftLayer_Billing_Payment_Card_ChangeRequest"
+}

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Contact - <nil>
@@ -79,6 +79,10 @@ type SoftLayer_Account_Contact struct {
 
 	// Url - <nil>
 	Url string `json:"url"`
+}
+
+func (softlayer_account_contact *SoftLayer_Account_Contact) String() string {
+	return "SoftLayer_Account_Contact"
 }
 
 // CreateObject - This method creates an account contact. The accountId is fixed, other properties can

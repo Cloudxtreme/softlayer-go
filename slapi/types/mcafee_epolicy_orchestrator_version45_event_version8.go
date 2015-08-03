@@ -11,3 +11,7 @@ type McAfee_Epolicy_Orchestrator_Version45_Event_Version8 struct {
 	// Signature - no documentation
 	Signature *McAfee_Epolicy_Orchestrator_Version45_Hips_Event_Signature_Version8 `json:"signature"`
 }
+
+func (mcafee_epolicy_orchestrator_version45_event_version8 *McAfee_Epolicy_Orchestrator_Version45_Event_Version8) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version45_Event_Version8"
+}

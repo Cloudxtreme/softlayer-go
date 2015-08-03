@@ -30,3 +30,7 @@ type SoftLayer_Ticket_Chat struct {
 	// Transcript - <nil>
 	Transcript string `json:"transcript"`
 }
+
+func (softlayer_ticket_chat *SoftLayer_Ticket_Chat) String() string {
+	return "SoftLayer_Ticket_Chat"
+}

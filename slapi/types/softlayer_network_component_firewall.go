@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Component_Firewall - The SoftLayer_Network_Component_Firewall data type contains
@@ -63,6 +63,10 @@ type SoftLayer_Network_Component_Firewall struct {
 
 	// Subnets - The additional subnets linked to this network component firewall.
 	Subnets []*SoftLayer_Network_Subnet `json:"subnets"`
+}
+
+func (softlayer_network_component_firewall *SoftLayer_Network_Component_Firewall) String() string {
+	return "SoftLayer_Network_Component_Firewall"
 }
 
 // GetObject - getObject returns a

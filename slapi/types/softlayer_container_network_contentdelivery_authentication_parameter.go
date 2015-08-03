@@ -21,3 +21,7 @@ type SoftLayer_Container_Network_ContentDelivery_Authentication_Parameter struct
 	// Token - no documentation
 	Token string `json:"token"`
 }
+
+func (softlayer_container_network_contentdelivery_authentication_parameter *SoftLayer_Container_Network_ContentDelivery_Authentication_Parameter) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_Authentication_Parameter"
+}

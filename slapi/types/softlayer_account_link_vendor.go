@@ -11,3 +11,7 @@ type SoftLayer_Account_Link_Vendor struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_account_link_vendor *SoftLayer_Account_Link_Vendor) String() string {
+	return "SoftLayer_Account_Link_Vendor"
+}

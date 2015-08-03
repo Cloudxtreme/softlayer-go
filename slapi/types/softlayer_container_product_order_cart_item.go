@@ -81,3 +81,7 @@ type SoftLayer_Container_Product_Order_Cart_Item struct {
 	// VerifiedConfig - <nil>
 	VerifiedConfig *SoftLayer_Product_Order `json:"verifiedConfig"`
 }
+
+func (softlayer_container_product_order_cart_item *SoftLayer_Container_Product_Order_Cart_Item) String() string {
+	return "SoftLayer_Container_Product_Order_Cart_Item"
+}

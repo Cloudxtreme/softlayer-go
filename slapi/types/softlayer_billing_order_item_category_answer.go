@@ -25,3 +25,7 @@ type SoftLayer_Billing_Order_Item_Category_Answer struct {
 	// QuestionId - The identifier for the question that the answer belongs to.
 	QuestionId int `json:"questionId"`
 }
+
+func (softlayer_billing_order_item_category_answer *SoftLayer_Billing_Order_Item_Category_Answer) String() string {
+	return "SoftLayer_Billing_Order_Item_Category_Answer"
+}

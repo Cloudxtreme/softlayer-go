@@ -21,3 +21,7 @@ type SoftLayer_Monitoring_Robot_Status struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_monitoring_robot_status *SoftLayer_Monitoring_Robot_Status) String() string {
+	return "SoftLayer_Monitoring_Robot_Status"
+}

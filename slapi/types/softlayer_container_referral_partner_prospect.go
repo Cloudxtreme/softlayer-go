@@ -47,3 +47,7 @@ type SoftLayer_Container_Referral_Partner_Prospect struct {
 	// SurveyId - <nil>
 	SurveyId string `json:"surveyId"`
 }
+
+func (softlayer_container_referral_partner_prospect *SoftLayer_Container_Referral_Partner_Prospect) String() string {
+	return "SoftLayer_Container_Referral_Partner_Prospect"
+}

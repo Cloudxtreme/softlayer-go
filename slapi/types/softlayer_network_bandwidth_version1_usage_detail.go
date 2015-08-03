@@ -27,3 +27,7 @@ type SoftLayer_Network_Bandwidth_Version1_Usage_Detail struct {
 	// Day - Day and time this bandwidth utilization event was recorded.
 	Day *time.Time `json:"day"`
 }
+
+func (softlayer_network_bandwidth_version1_usage_detail *SoftLayer_Network_Bandwidth_Version1_Usage_Detail) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Usage_Detail"
+}

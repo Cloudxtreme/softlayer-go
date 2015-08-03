@@ -7,3 +7,7 @@ package sl
 // place a network ipsec vpn order with SoftLayer.
 type SoftLayer_Container_Product_Order_Network_Tunnel_Ipsec struct {
 }
+
+func (softlayer_container_product_order_network_tunnel_ipsec *SoftLayer_Container_Product_Order_Network_Tunnel_Ipsec) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Tunnel_Ipsec"
+}

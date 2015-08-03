@@ -14,3 +14,7 @@ type SoftLayer_Catalyst_Affiliate struct {
 	// SkipCreditCardVerificationFlag - <nil>
 	SkipCreditCardVerificationFlag bool `json:"skipCreditCardVerificationFlag"`
 }
+
+func (softlayer_catalyst_affiliate *SoftLayer_Catalyst_Affiliate) String() string {
+	return "SoftLayer_Catalyst_Affiliate"
+}

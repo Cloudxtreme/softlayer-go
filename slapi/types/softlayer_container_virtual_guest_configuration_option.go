@@ -14,3 +14,7 @@ type SoftLayer_Container_Virtual_Guest_Configuration_Option struct {
 	// creating a computing instance with the option.
 	Template *SoftLayer_Virtual_Guest `json:"template"`
 }
+
+func (softlayer_container_virtual_guest_configuration_option *SoftLayer_Container_Virtual_Guest_Configuration_Option) String() string {
+	return "SoftLayer_Container_Virtual_Guest_Configuration_Option"
+}

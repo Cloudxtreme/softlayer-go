@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Policy_Action_Scale - <nil>
@@ -20,6 +20,10 @@ type SoftLayer_Scale_Policy_Action_Scale struct {
 	// is zero, -1 or 1 is used depending upon whether the percentage was negative or positive
 	// respectively. * - Scale the group up or down by the positive or negative value given in amount.
 	ScaleType string `json:"scaleType"`
+}
+
+func (softlayer_scale_policy_action_scale *SoftLayer_Scale_Policy_Action_Scale) String() string {
+	return "SoftLayer_Scale_Policy_Action_Scale"
 }
 
 // CreateObject - <nil>

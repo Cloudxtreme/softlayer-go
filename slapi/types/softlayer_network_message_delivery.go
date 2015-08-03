@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Message_Delivery - <nil>
@@ -46,6 +46,10 @@ type SoftLayer_Network_Message_Delivery struct {
 
 	// VendorId - <nil>
 	VendorId int `json:"vendorId"`
+}
+
+func (softlayer_network_message_delivery *SoftLayer_Network_Message_Delivery) String() string {
+	return "SoftLayer_Network_Message_Delivery"
 }
 
 // EditObject - <nil>

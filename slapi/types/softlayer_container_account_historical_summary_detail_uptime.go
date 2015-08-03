@@ -18,3 +18,7 @@ type SoftLayer_Container_Account_Historical_Summary_Detail_Uptime struct {
 	// Hardware - no documentation
 	Hardware *SoftLayer_Hardware `json:"hardware"`
 }
+
+func (softlayer_container_account_historical_summary_detail_uptime *SoftLayer_Container_Account_Historical_Summary_Detail_Uptime) String() string {
+	return "SoftLayer_Container_Account_Historical_Summary_Detail_Uptime"
+}

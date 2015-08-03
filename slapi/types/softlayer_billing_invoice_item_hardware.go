@@ -10,3 +10,7 @@ type SoftLayer_Billing_Invoice_Item_Hardware struct {
 	// Resource - no documentation
 	Resource *SoftLayer_Hardware `json:"resource"`
 }
+
+func (softlayer_billing_invoice_item_hardware *SoftLayer_Billing_Invoice_Item_Hardware) String() string {
+	return "SoftLayer_Billing_Invoice_Item_Hardware"
+}

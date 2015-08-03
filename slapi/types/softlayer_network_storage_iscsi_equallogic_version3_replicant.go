@@ -15,3 +15,7 @@ type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant struct {
 	// VolumeName - no documentation
 	VolumeName string `json:"volumeName"`
 }
+
+func (softlayer_network_storage_iscsi_equallogic_version3_replicant *SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant) String() string {
+	return "SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant"
+}

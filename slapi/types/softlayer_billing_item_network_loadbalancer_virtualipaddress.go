@@ -11,3 +11,7 @@ type SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress struct {
 	// Resource - The load balancer's virtual IP address that the billing item is associated with.
 	Resource *SoftLayer_Network_LoadBalancer_VirtualIpAddress `json:"resource"`
 }
+
+func (softlayer_billing_item_network_loadbalancer_virtualipaddress *SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress) String() string {
+	return "SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress"
+}

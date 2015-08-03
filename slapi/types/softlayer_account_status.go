@@ -11,3 +11,7 @@ type SoftLayer_Account_Status struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_account_status *SoftLayer_Account_Status) String() string {
+	return "SoftLayer_Account_Status"
+}

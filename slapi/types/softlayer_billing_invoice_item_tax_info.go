@@ -68,3 +68,7 @@ type SoftLayer_Billing_Invoice_Item_Tax_Info struct {
 	// ToCurrencyId - The currency code that the invoice is being converted to.
 	ToCurrencyId int `json:"toCurrencyId"`
 }
+
+func (softlayer_billing_invoice_item_tax_info *SoftLayer_Billing_Invoice_Item_Tax_Info) String() string {
+	return "SoftLayer_Billing_Invoice_Item_Tax_Info"
+}

@@ -9,3 +9,7 @@ package sl
 // attached.
 type SoftLayer_Billing_Item_Network_Subnet_IpAddress_Global struct {
 }
+
+func (softlayer_billing_item_network_subnet_ipaddress_global *SoftLayer_Billing_Item_Network_Subnet_IpAddress_Global) String() string {
+	return "SoftLayer_Billing_Item_Network_Subnet_IpAddress_Global"
+}

@@ -14,3 +14,7 @@ type SoftLayer_Layout_Item_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_layout_item_type *SoftLayer_Layout_Item_Type) String() string {
+	return "SoftLayer_Layout_Item_Type"
+}

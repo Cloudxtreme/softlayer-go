@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Subnet_Swip_Transaction - The SoftLayer_Network_Subnet_Swip_Transaction data type
@@ -33,6 +33,10 @@ type SoftLayer_Network_Subnet_Swip_Transaction struct {
 
 	// SubnetId - no documentation
 	SubnetId int `json:"subnetId"`
+}
+
+func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) String() string {
+	return "SoftLayer_Network_Subnet_Swip_Transaction"
 }
 
 // FindMyTransactions - This function will return an array of SoftLayer_Network_Subnet_Swip_Transaction

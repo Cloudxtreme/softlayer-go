@@ -29,3 +29,7 @@ type SoftLayer_Network_Storage_History struct {
 	// Username - no documentation
 	Username string `json:"username"`
 }
+
+func (softlayer_network_storage_history *SoftLayer_Network_Storage_History) String() string {
+	return "SoftLayer_Network_Storage_History"
+}

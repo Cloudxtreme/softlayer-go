@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Security_Certificate_Request_Status - SoftLayer_Security_Certificate_Request_Status data
@@ -18,6 +18,10 @@ type SoftLayer_Security_Certificate_Request_Status struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_security_certificate_request_status *SoftLayer_Security_Certificate_Request_Status) String() string {
+	return "SoftLayer_Security_Certificate_Request_Status"
 }
 
 // GetObject - <nil>

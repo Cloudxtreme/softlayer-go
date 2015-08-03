@@ -18,3 +18,7 @@ type SoftLayer_Container_Search_Result struct {
 	// ResourceType - The type of the resource object that matched search criteria.
 	ResourceType string `json:"resourceType"`
 }
+
+func (softlayer_container_search_result *SoftLayer_Container_Search_Result) String() string {
+	return "SoftLayer_Container_Search_Result"
+}

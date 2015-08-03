@@ -20,3 +20,7 @@ type SoftLayer_Ticket_Status struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_ticket_status *SoftLayer_Ticket_Status) String() string {
+	return "SoftLayer_Ticket_Status"
+}

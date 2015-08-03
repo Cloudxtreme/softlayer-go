@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Firewall_Interface - The SoftLayer_Network_Firewall_Interface data type contains
@@ -12,6 +12,10 @@ import (
 // Template]] service to pull SoftLayer recommended rule set templates. Use the [[SoftLayer Network
 // Firewall Update Request]] service to submit a firewall update request.
 type SoftLayer_Network_Firewall_Interface struct {
+}
+
+func (softlayer_network_firewall_interface *SoftLayer_Network_Firewall_Interface) String() string {
+	return "SoftLayer_Network_Firewall_Interface"
 }
 
 // GetObject - getObject returns a SoftLayer_Network_Firewall_Interface object. You can only get

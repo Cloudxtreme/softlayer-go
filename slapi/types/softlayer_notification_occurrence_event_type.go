@@ -9,3 +9,7 @@ type SoftLayer_Notification_Occurrence_Event_Type struct {
 	// KeyName - The friendly unique identifier for this event type.
 	KeyName string `json:"keyName"`
 }
+
+func (softlayer_notification_occurrence_event_type *SoftLayer_Notification_Occurrence_Event_Type) String() string {
+	return "SoftLayer_Notification_Occurrence_Event_Type"
+}

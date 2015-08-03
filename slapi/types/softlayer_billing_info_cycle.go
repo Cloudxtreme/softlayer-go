@@ -29,3 +29,7 @@ type SoftLayer_Billing_Info_Cycle struct {
 	// PreviousCycleStartDate - The starting date of an account's previous billing cycle.
 	PreviousCycleStartDate *time.Time `json:"previousCycleStartDate"`
 }
+
+func (softlayer_billing_info_cycle *SoftLayer_Billing_Info_Cycle) String() string {
+	return "SoftLayer_Billing_Info_Cycle"
+}

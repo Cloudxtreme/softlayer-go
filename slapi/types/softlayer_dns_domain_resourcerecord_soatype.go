@@ -9,3 +9,7 @@ package sl
 // associates a domain's serial number directly with it's SoftLayer_Dns_Domain record.
 type SoftLayer_Dns_Domain_ResourceRecord_SoaType struct {
 }
+
+func (softlayer_dns_domain_resourcerecord_soatype *SoftLayer_Dns_Domain_ResourceRecord_SoaType) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord_SoaType"
+}

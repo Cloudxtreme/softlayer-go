@@ -35,3 +35,7 @@ type SoftLayer_Configuration_Storage_Group_Order struct {
 	// PartitionData - <nil>
 	PartitionData string `json:"partitionData"`
 }
+
+func (softlayer_configuration_storage_group_order *SoftLayer_Configuration_Storage_Group_Order) String() string {
+	return "SoftLayer_Configuration_Storage_Group_Order"
+}

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Compliance_Report_Type - <nil>
@@ -17,6 +17,10 @@ type SoftLayer_Compliance_Report_Type struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+func (softlayer_compliance_report_type *SoftLayer_Compliance_Report_Type) String() string {
+	return "SoftLayer_Compliance_Report_Type"
 }
 
 // GetAllObjects - <nil>

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Message_Queue - The SoftLayer_Network_Message_Queue data type contains general
@@ -44,6 +44,10 @@ type SoftLayer_Network_Message_Queue struct {
 
 	// Status - no documentation
 	Status *SoftLayer_Network_Message_Queue_Status `json:"status"`
+}
+
+func (softlayer_network_message_queue *SoftLayer_Network_Message_Queue) String() string {
+	return "SoftLayer_Network_Message_Queue"
 }
 
 // GetObject - <nil>

@@ -20,3 +20,7 @@ type SoftLayer_Resource_Group_Role struct {
 	// MemberLinks - no documentation
 	MemberLinks []*SoftLayer_Resource_Group_Member_Role_Link `json:"memberLinks"`
 }
+
+func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role) String() string {
+	return "SoftLayer_Resource_Group_Role"
+}

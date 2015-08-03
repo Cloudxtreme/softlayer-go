@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer - The SoftLayer_User_Customer data type contains general information
@@ -372,6 +372,10 @@ type SoftLayer_User_Customer struct {
 
 	// Yahoo - no documentation
 	Yahoo string `json:"yahoo"`
+}
+
+func (softlayer_user_customer *SoftLayer_User_Customer) String() string {
+	return "SoftLayer_User_Customer"
 }
 
 // AcknowledgeSupportPolicy - <nil>

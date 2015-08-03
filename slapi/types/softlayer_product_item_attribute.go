@@ -26,3 +26,7 @@ type SoftLayer_Product_Item_Attribute struct {
 	// Value - <nil>
 	Value string `json:"value"`
 }
+
+func (softlayer_product_item_attribute *SoftLayer_Product_Item_Attribute) String() string {
+	return "SoftLayer_Product_Item_Attribute"
+}

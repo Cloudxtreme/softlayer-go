@@ -43,3 +43,7 @@ type SoftLayer_Billing_Invoice_Receivable_Payment struct {
 	// TypeCode - no documentation
 	TypeCode string `json:"typeCode"`
 }
+
+func (softlayer_billing_invoice_receivable_payment *SoftLayer_Billing_Invoice_Receivable_Payment) String() string {
+	return "SoftLayer_Billing_Invoice_Receivable_Payment"
+}

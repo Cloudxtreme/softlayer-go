@@ -9,3 +9,7 @@ type SoftLayer_Container_Product_Order_Account_Media_Data_Transfer_Request struc
 	// Request - An instance of [[SoftLayer_Account_Media_Data_Transfer_Request]]
 	Request *SoftLayer_Account_Media_Data_Transfer_Request `json:"request"`
 }
+
+func (softlayer_container_product_order_account_media_data_transfer_request *SoftLayer_Container_Product_Order_Account_Media_Data_Transfer_Request) String() string {
+	return "SoftLayer_Container_Product_Order_Account_Media_Data_Transfer_Request"
+}

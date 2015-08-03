@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Software_Component - A SoftLayer_Software_Component ties the installation of a specific
@@ -59,6 +59,10 @@ type SoftLayer_Software_Component struct {
 
 	// VirtualGuest - The virtual guest this software component is installed upon.
 	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest"`
+}
+
+func (softlayer_software_component *SoftLayer_Software_Component) String() string {
+	return "SoftLayer_Software_Component"
 }
 
 // GetLicenseFile - Attempt to retrieve the file associated with a software component. If the software

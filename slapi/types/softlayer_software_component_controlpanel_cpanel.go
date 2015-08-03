@@ -7,3 +7,7 @@ package sl
 // for usernames and passwords. Defaults are initiated by this object.
 type SoftLayer_Software_Component_ControlPanel_Cpanel struct {
 }
+
+func (softlayer_software_component_controlpanel_cpanel *SoftLayer_Software_Component_ControlPanel_Cpanel) String() string {
+	return "SoftLayer_Software_Component_ControlPanel_Cpanel"
+}

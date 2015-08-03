@@ -11,3 +11,7 @@ type SoftLayer_Auxiliary_Notification_Emergency_Signature struct {
 	// Name - The name or signature for the current Emergency Notification.
 	Name string `json:"name"`
 }
+
+func (softlayer_auxiliary_notification_emergency_signature *SoftLayer_Auxiliary_Notification_Emergency_Signature) String() string {
+	return "SoftLayer_Auxiliary_Notification_Emergency_Signature"
+}

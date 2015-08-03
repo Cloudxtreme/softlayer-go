@@ -56,3 +56,7 @@ type SoftLayer_Container_Account_Payment_Method_CreditCard struct {
 	// State - <nil>
 	State string `json:"state"`
 }
+
+func (softlayer_container_account_payment_method_creditcard *SoftLayer_Container_Account_Payment_Method_CreditCard) String() string {
+	return "SoftLayer_Container_Account_Payment_Method_CreditCard"
+}

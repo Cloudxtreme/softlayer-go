@@ -11,3 +11,7 @@ type SoftLayer_Network_Message_Delivery_Attribute struct {
 	// Value - <nil>
 	Value string `json:"value"`
 }
+
+func (softlayer_network_message_delivery_attribute *SoftLayer_Network_Message_Delivery_Attribute) String() string {
+	return "SoftLayer_Network_Message_Delivery_Attribute"
+}

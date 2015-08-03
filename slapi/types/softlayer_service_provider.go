@@ -17,3 +17,7 @@ type SoftLayer_Service_Provider struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_service_provider *SoftLayer_Service_Provider) String() string {
+	return "SoftLayer_Service_Provider"
+}

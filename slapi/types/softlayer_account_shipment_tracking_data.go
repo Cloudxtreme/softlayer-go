@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Shipment_Tracking_Data - The SoftLayer_Account_Shipment_Tracking_Data data type
@@ -47,6 +47,10 @@ type SoftLayer_Account_Shipment_Tracking_Data struct {
 
 	// TrackingData - The tracking data (tracking number/reference number).
 	TrackingData string `json:"trackingData"`
+}
+
+func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) String() string {
+	return "SoftLayer_Account_Shipment_Tracking_Data"
 }
 
 // CreateObject - Create a new shipment tracking data. The ''shipmentId'', ''sequence'', and

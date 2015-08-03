@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_LoadBalancer_Service - The SoftLayer_Network_LoadBalancer_Service data type
@@ -90,6 +90,10 @@ type SoftLayer_Network_LoadBalancer_Service struct {
 	// If you go over 100%, an exception will be thrown. Weights must be whole numbers, no fractions or
 	// decimals are accepted.
 	Weight int `json:"weight"`
+}
+
+func (softlayer_network_loadbalancer_service *SoftLayer_Network_LoadBalancer_Service) String() string {
+	return "SoftLayer_Network_LoadBalancer_Service"
 }
 
 // DeleteObject - Calling deleteObject on a particular server will remove it from the load balancer.

@@ -17,3 +17,7 @@ type SoftLayer_Survey_Response struct {
 	// for.
 	SurveyAnswerId int `json:"surveyAnswerId"`
 }
+
+func (softlayer_survey_response *SoftLayer_Survey_Response) String() string {
+	return "SoftLayer_Survey_Response"
+}

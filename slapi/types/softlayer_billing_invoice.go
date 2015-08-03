@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Invoice - The SoftLayer_Billing_Invoice data type contains general information
@@ -185,6 +185,10 @@ type SoftLayer_Billing_Invoice struct {
 	// along with the receivables on their account. invoice credits are generated whenever a customer makes
 	// an unscheduled payment.
 	TypeCode string `json:"typeCode"`
+}
+
+func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) String() string {
+	return "SoftLayer_Billing_Invoice"
 }
 
 // EmailInvoices - Create a transaction to email PDF and/or Excel invoice links to the requesting

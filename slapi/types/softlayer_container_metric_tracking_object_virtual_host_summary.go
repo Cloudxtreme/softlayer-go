@@ -41,3 +41,7 @@ type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Summary struct {
 	// VirtualPlatformName - no documentation
 	VirtualPlatformName string `json:"virtualPlatformName"`
 }
+
+func (softlayer_container_metric_tracking_object_virtual_host_summary *SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Summary) String() string {
+	return "SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Summary"
+}

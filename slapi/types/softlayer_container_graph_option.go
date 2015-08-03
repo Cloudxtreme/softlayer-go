@@ -11,3 +11,7 @@ type SoftLayer_Container_Graph_Option struct {
 	// Value - <nil>
 	Value string `json:"value"`
 }
+
+func (softlayer_container_graph_option *SoftLayer_Container_Graph_Option) String() string {
+	return "SoftLayer_Container_Graph_Option"
+}

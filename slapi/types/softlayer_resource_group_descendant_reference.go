@@ -13,3 +13,7 @@ type SoftLayer_Resource_Group_Descendant_Reference struct {
 	// GroupMember - <nil>
 	GroupMember *SoftLayer_Resource_Group_Member `json:"groupMember"`
 }
+
+func (softlayer_resource_group_descendant_reference *SoftLayer_Resource_Group_Descendant_Reference) String() string {
+	return "SoftLayer_Resource_Group_Descendant_Reference"
+}

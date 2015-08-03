@@ -10,3 +10,7 @@ type SoftLayer_Network_Storage_Nas struct {
 	// RecentBytesUsed - <nil>
 	RecentBytesUsed *SoftLayer_Network_Storage_Daily_Usage `json:"recentBytesUsed"`
 }
+
+func (softlayer_network_storage_nas *SoftLayer_Network_Storage_Nas) String() string {
+	return "SoftLayer_Network_Storage_Nas"
+}

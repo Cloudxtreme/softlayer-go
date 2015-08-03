@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Package_Preset - Package presets are used to simplify ordering by eliminating the
@@ -93,6 +93,10 @@ type SoftLayer_Product_Package_Preset struct {
 	// TotalMinimumRecurringFee - The starting monthly price for this configuration. Additional options not
 	// defined in the preset may increase the cost.
 	TotalMinimumRecurringFee uint `json:"totalMinimumRecurringFee"`
+}
+
+func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset) String() string {
+	return "SoftLayer_Product_Package_Preset"
 }
 
 // GetObject - <nil>

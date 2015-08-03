@@ -60,3 +60,7 @@ type SoftLayer_Container_Auxiliary_Network_Status_Reading struct {
 	// TargetType - no documentation
 	TargetType string `json:"targetType"`
 }
+
+func (softlayer_container_auxiliary_network_status_reading *SoftLayer_Container_Auxiliary_Network_Status_Reading) String() string {
+	return "SoftLayer_Container_Auxiliary_Network_Status_Reading"
+}

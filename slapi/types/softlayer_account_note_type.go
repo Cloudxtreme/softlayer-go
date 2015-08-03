@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Note_Type - <nil>
@@ -34,6 +34,10 @@ type SoftLayer_Account_Note_Type struct {
 
 	// ValueExpression - <nil>
 	ValueExpression string `json:"valueExpression"`
+}
+
+func (softlayer_account_note_type *SoftLayer_Account_Note_Type) String() string {
+	return "SoftLayer_Account_Note_Type"
 }
 
 // CreateObject - <nil>

@@ -62,3 +62,7 @@ type SoftLayer_Container_Product_Order_Billing_Information struct {
 	// VatId - no documentation
 	VatId string `json:"vatId"`
 }
+
+func (softlayer_container_product_order_billing_information *SoftLayer_Container_Product_Order_Billing_Information) String() string {
+	return "SoftLayer_Container_Product_Order_Billing_Information"
+}

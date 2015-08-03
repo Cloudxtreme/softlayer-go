@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Shipment_Item - The SoftLayer_Account_Shipment_Item data type contains information
@@ -39,6 +39,10 @@ type SoftLayer_Account_Shipment_Item struct {
 
 	// ShipmentItemTypeId - no documentation
 	ShipmentItemTypeId int `json:"shipmentItemTypeId"`
+}
+
+func (softlayer_account_shipment_item *SoftLayer_Account_Shipment_Item) String() string {
+	return "SoftLayer_Account_Shipment_Item"
 }
 
 // EditObject - Edit the properties of a shipment record by passing in a modified instance of a

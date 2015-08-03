@@ -47,3 +47,7 @@ type SoftLayer_Ticket_Attachment_File struct {
 	// uploaded by a portal or API user or if the file was uploaded by a SoftLayer employee.
 	UploaderType string `json:"uploaderType"`
 }
+
+func (softlayer_ticket_attachment_file *SoftLayer_Ticket_Attachment_File) String() string {
+	return "SoftLayer_Ticket_Attachment_File"
+}

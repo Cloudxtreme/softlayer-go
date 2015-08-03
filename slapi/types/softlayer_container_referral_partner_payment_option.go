@@ -53,3 +53,7 @@ type SoftLayer_Container_Referral_Partner_Payment_Option struct {
 	// State - <nil>
 	State string `json:"state"`
 }
+
+func (softlayer_container_referral_partner_payment_option *SoftLayer_Container_Referral_Partner_Payment_Option) String() string {
+	return "SoftLayer_Container_Referral_Partner_Payment_Option"
+}

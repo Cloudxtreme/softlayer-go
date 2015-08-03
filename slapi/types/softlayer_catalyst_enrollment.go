@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Catalyst_Enrollment - <nil>
@@ -52,6 +52,10 @@ type SoftLayer_Catalyst_Enrollment struct {
 
 	// RepresentativeEmployeeId - <nil>
 	RepresentativeEmployeeId int `json:"representativeEmployeeId"`
+}
+
+func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) String() string {
+	return "SoftLayer_Catalyst_Enrollment"
 }
 
 // GetAffiliates - <nil>

@@ -49,3 +49,7 @@ type SoftLayer_Container_Dns_Domain_Registration_Contact struct {
 	// * tech
 	Type string `json:"type"`
 }
+
+func (softlayer_container_dns_domain_registration_contact *SoftLayer_Container_Dns_Domain_Registration_Contact) String() string {
+	return "SoftLayer_Container_Dns_Domain_Registration_Contact"
+}

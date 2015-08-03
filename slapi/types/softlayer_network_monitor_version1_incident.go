@@ -13,3 +13,7 @@ type SoftLayer_Network_Monitor_Version1_Incident struct {
 	// meaning the incident has been resolved.
 	Status string `json:"status"`
 }
+
+func (softlayer_network_monitor_version1_incident *SoftLayer_Network_Monitor_Version1_Incident) String() string {
+	return "SoftLayer_Network_Monitor_Version1_Incident"
+}

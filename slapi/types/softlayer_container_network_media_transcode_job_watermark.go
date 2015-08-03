@@ -23,3 +23,7 @@ type SoftLayer_Container_Network_Media_Transcode_Job_Watermark struct {
 	// TransparencyPercentage - no documentation
 	TransparencyPercentage int `json:"transparencyPercentage"`
 }
+
+func (softlayer_container_network_media_transcode_job_watermark *SoftLayer_Container_Network_Media_Transcode_Job_Watermark) String() string {
+	return "SoftLayer_Container_Network_Media_Transcode_Job_Watermark"
+}

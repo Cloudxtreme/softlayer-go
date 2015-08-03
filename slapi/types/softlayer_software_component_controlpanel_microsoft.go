@@ -6,3 +6,7 @@ package sl
 // Products, like Web Matrix
 type SoftLayer_Software_Component_ControlPanel_Microsoft struct {
 }
+
+func (softlayer_software_component_controlpanel_microsoft *SoftLayer_Software_Component_ControlPanel_Microsoft) String() string {
+	return "SoftLayer_Software_Component_ControlPanel_Microsoft"
+}

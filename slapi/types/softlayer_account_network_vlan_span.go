@@ -30,3 +30,7 @@ type SoftLayer_Account_Network_Vlan_Span struct {
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
 }
+
+func (softlayer_account_network_vlan_span *SoftLayer_Account_Network_Vlan_Span) String() string {
+	return "SoftLayer_Account_Network_Vlan_Span"
+}

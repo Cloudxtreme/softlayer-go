@@ -7,3 +7,7 @@ package sl
 // [[SoftLayer_Network_LoadBalancer|load balancer]] instance.
 type SoftLayer_Billing_Item_Network_LoadBalancer struct {
 }
+
+func (softlayer_billing_item_network_loadbalancer *SoftLayer_Billing_Item_Network_LoadBalancer) String() string {
+	return "SoftLayer_Billing_Item_Network_LoadBalancer"
+}

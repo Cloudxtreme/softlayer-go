@@ -20,3 +20,7 @@ type SoftLayer_Account_Media_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_account_media_type *SoftLayer_Account_Media_Type) String() string {
+	return "SoftLayer_Account_Media_Type"
+}

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Gateway_Vlan - <nil>
@@ -26,6 +26,10 @@ type SoftLayer_Network_Gateway_Vlan struct {
 
 	// NetworkVlanId - no documentation
 	NetworkVlanId int `json:"networkVlanId"`
+}
+
+func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) String() string {
+	return "SoftLayer_Network_Gateway_Vlan"
 }
 
 // Bypass - Start the asynchronous process to bypass/unroute the from this gateway.

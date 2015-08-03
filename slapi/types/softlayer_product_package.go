@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Package - The SoftLayer_Product_Package data type contains information about
@@ -281,6 +281,10 @@ type SoftLayer_Product_Package struct {
 
 	// UnitSize - no documentation
 	UnitSize int `json:"unitSize"`
+}
+
+func (softlayer_product_package *SoftLayer_Product_Package) String() string {
+	return "SoftLayer_Product_Package"
 }
 
 // GetActiveItems - Return a list of Items in the package with their active prices.

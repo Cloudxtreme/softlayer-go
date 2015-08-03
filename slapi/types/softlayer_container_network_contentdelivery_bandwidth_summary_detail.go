@@ -13,3 +13,7 @@ type SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary_Detail struct
 	// ViewCount - no documentation
 	ViewCount int `json:"viewCount"`
 }
+
+func (softlayer_container_network_contentdelivery_bandwidth_summary_detail *SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary_Detail) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary_Detail"
+}

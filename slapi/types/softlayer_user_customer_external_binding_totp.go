@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_External_Binding_Totp - The SoftLayer_User_Customer_External_Binding_Totp
@@ -13,6 +13,10 @@ import (
 // The type of credential * The current state of the credential ** Active ** Inactive SoftLayer users
 // with an active external binding will be prohibited from using the API for security reasons.
 type SoftLayer_User_Customer_External_Binding_Totp struct {
+}
+
+func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) String() string {
+	return "SoftLayer_User_Customer_External_Binding_Totp"
 }
 
 // Activate - <nil>

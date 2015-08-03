@@ -23,3 +23,7 @@ type SoftLayer_User_Customer_Prospect struct {
 	// Type - <nil>
 	Type *SoftLayer_User_Customer_Prospect_Type `json:"type"`
 }
+
+func (softlayer_user_customer_prospect *SoftLayer_User_Customer_Prospect) String() string {
+	return "SoftLayer_User_Customer_Prospect"
+}

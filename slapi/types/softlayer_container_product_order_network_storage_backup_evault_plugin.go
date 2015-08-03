@@ -7,3 +7,7 @@ package sl
 // required to place an order with SoftLayer.
 type SoftLayer_Container_Product_Order_Network_Storage_Backup_Evault_Plugin struct {
 }
+
+func (softlayer_container_product_order_network_storage_backup_evault_plugin *SoftLayer_Container_Product_Order_Network_Storage_Backup_Evault_Plugin) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Storage_Backup_Evault_Plugin"
+}

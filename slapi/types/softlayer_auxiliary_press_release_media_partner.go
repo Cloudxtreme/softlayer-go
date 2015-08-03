@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Auxiliary_Press_Release_Media_Partner - <nil>
@@ -14,6 +14,10 @@ type SoftLayer_Auxiliary_Press_Release_Media_Partner struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_auxiliary_press_release_media_partner *SoftLayer_Auxiliary_Press_Release_Media_Partner) String() string {
+	return "SoftLayer_Auxiliary_Press_Release_Media_Partner"
 }
 
 // GetObject - getObject retrieves the SoftLayer_Auxiliary_Press_Release_Contact object whose contact

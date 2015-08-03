@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer - <nil>
@@ -48,6 +48,10 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServe
 
 	// VirtualIpAddressId - <nil>
 	VirtualIpAddressId int `json:"virtualIpAddressId"`
+}
+
+func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) String() string {
+	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer"
 }
 
 // DeleteObject - <nil>

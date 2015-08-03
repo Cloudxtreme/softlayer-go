@@ -26,3 +26,7 @@ type SoftLayer_Container_Provisioning_Maintenance_Window struct {
 	// WindowMaintenanceDate - no documentation
 	WindowMaintenanceDate *time.Time `json:"windowMaintenanceDate"`
 }
+
+func (softlayer_container_provisioning_maintenance_window *SoftLayer_Container_Provisioning_Maintenance_Window) String() string {
+	return "SoftLayer_Container_Provisioning_Maintenance_Window"
+}

@@ -31,3 +31,7 @@ type SoftLayer_Product_Catalog struct {
 	// Products - no documentation
 	Products []*SoftLayer_Product_Item `json:"products"`
 }
+
+func (softlayer_product_catalog *SoftLayer_Product_Catalog) String() string {
+	return "SoftLayer_Product_Catalog"
+}

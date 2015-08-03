@@ -16,3 +16,7 @@ type SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Folder struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_container_network_storage_hub_objectstorage_folder *SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Folder) String() string {
+	return "SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Folder"
+}

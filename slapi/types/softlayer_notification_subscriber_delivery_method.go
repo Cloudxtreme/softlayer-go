@@ -31,3 +31,7 @@ type SoftLayer_Notification_Subscriber_Delivery_Method struct {
 	// NotificationSubscriberId - no documentation
 	NotificationSubscriberId int `json:"notificationSubscriberId"`
 }
+
+func (softlayer_notification_subscriber_delivery_method *SoftLayer_Notification_Subscriber_Delivery_Method) String() string {
+	return "SoftLayer_Notification_Subscriber_Delivery_Method"
+}

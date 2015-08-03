@@ -17,3 +17,7 @@ type SoftLayer_Container_Network_Storage_Evault_Vault_Task struct {
 	// UsedPoolsize - no documentation
 	UsedPoolsize uint64 `json:"usedPoolsize"`
 }
+
+func (softlayer_container_network_storage_evault_vault_task *SoftLayer_Container_Network_Storage_Evault_Vault_Task) String() string {
+	return "SoftLayer_Container_Network_Storage_Evault_Vault_Task"
+}

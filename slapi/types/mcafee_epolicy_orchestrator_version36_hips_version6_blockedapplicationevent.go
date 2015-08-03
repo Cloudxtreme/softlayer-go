@@ -21,3 +21,7 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_BlockedApplicationEvent
 	// ProcessName - no documentation
 	ProcessName string `json:"processName"`
 }
+
+func (mcafee_epolicy_orchestrator_version36_hips_version6_blockedapplicationevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_BlockedApplicationEvent) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_BlockedApplicationEvent"
+}

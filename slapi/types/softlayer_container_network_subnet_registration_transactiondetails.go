@@ -13,3 +13,7 @@ type SoftLayer_Container_Network_Subnet_Registration_TransactionDetails struct {
 	// TransactionId - no documentation
 	TransactionId int `json:"transactionId"`
 }
+
+func (softlayer_container_network_subnet_registration_transactiondetails *SoftLayer_Container_Network_Subnet_Registration_TransactionDetails) String() string {
+	return "SoftLayer_Container_Network_Subnet_Registration_TransactionDetails"
+}

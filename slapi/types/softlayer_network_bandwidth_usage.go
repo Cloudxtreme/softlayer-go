@@ -22,3 +22,7 @@ type SoftLayer_Network_Bandwidth_Usage struct {
 	// Type - In and out bandwidth utilization for a specified time stamp.
 	Type *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type `json:"type"`
 }
+
+func (softlayer_network_bandwidth_usage *SoftLayer_Network_Bandwidth_Usage) String() string {
+	return "SoftLayer_Network_Bandwidth_Usage"
+}

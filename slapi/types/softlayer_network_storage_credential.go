@@ -47,3 +47,7 @@ type SoftLayer_Network_Storage_Credential struct {
 	// Volumes - These are the SoftLayer_Network_Storage volumes that this credential is assigned to.
 	Volumes []*SoftLayer_Network_Storage `json:"volumes"`
 }
+
+func (softlayer_network_storage_credential *SoftLayer_Network_Storage_Credential) String() string {
+	return "SoftLayer_Network_Storage_Credential"
+}

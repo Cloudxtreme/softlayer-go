@@ -11,3 +11,7 @@ type SoftLayer_Locale_StateProvince struct {
 	// ShortName - <nil>
 	ShortName string `json:"shortName"`
 }
+
+func (softlayer_locale_stateprovince *SoftLayer_Locale_StateProvince) String() string {
+	return "SoftLayer_Locale_StateProvince"
+}

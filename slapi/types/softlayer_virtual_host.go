@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Host - The virtual host represents the platform on which virtual guests reside. At
@@ -65,6 +65,10 @@ type SoftLayer_Virtual_Host struct {
 
 	// Uuid - Unique ID for a virtual host's record on a virtualization platform.
 	Uuid string `json:"uuid"`
+}
+
+func (softlayer_virtual_host *SoftLayer_Virtual_Host) String() string {
+	return "SoftLayer_Virtual_Host"
 }
 
 // GetLiveGuestByUuid - Query a virtualization platform directly to retrieve details regarding a guest.

@@ -42,3 +42,7 @@ type SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version45 struct {
 	// TransactionStatus - no documentation
 	TransactionStatus string `json:"transactionStatus"`
 }
+
+func (softlayer_software_component_antivirusspyware_mcafee_epo_version45 *SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version45) String() string {
+	return "SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version45"
+}

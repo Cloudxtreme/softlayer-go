@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Firewall_Template - The SoftLayer_Network_Firewall_Template type contains general
@@ -27,6 +27,10 @@ type SoftLayer_Network_Firewall_Template struct {
 
 	// Rules - The rule set that belongs to this firewall rules template.
 	Rules []*SoftLayer_Network_Firewall_Template_Rule `json:"rules"`
+}
+
+func (softlayer_network_firewall_template *SoftLayer_Network_Firewall_Template) String() string {
+	return "SoftLayer_Network_Firewall_Template"
 }
 
 // GetAllObjects - Get all available firewall template objects. ''getAllObjects'' returns an array of

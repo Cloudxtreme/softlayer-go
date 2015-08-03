@@ -51,3 +51,7 @@ type SoftLayer_Container_Network_ContentDelivery_Report_Usage struct {
 	// WindowsMedia - <nil>
 	WindowsMedia float32 `json:"windowsMedia"`
 }
+
+func (softlayer_container_network_contentdelivery_report_usage *SoftLayer_Container_Network_ContentDelivery_Report_Usage) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_Report_Usage"
+}

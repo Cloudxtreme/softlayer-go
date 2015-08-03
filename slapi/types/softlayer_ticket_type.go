@@ -11,3 +11,7 @@ type SoftLayer_Ticket_Type struct {
 	// KeyName - <nil>
 	KeyName string `json:"keyName"`
 }
+
+func (softlayer_ticket_type *SoftLayer_Ticket_Type) String() string {
+	return "SoftLayer_Ticket_Type"
+}

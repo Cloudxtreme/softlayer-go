@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Guest_Block_Device_Template_Group - The virtual block device template group data
@@ -138,6 +138,10 @@ type SoftLayer_Virtual_Guest_Block_Device_Template_Group struct {
 
 	// UserRecordId - A block device template group's [[SoftLayer_User|user]] ID
 	UserRecordId int `json:"userRecordId"`
+}
+
+func (softlayer_virtual_guest_block_device_template_group *SoftLayer_Virtual_Guest_Block_Device_Template_Group) String() string {
+	return "SoftLayer_Virtual_Guest_Block_Device_Template_Group"
 }
 
 // AddLocations - This method will create transaction(s) to add available locations to an archive image

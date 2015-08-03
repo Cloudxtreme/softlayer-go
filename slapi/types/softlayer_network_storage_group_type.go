@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Storage_Group_Type - <nil>
@@ -17,6 +17,10 @@ type SoftLayer_Network_Storage_Group_Type struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+func (softlayer_network_storage_group_type *SoftLayer_Network_Storage_Group_Type) String() string {
+	return "SoftLayer_Network_Storage_Group_Type"
 }
 
 // GetAllObjects - Use this method to retrieve all storage group types available.

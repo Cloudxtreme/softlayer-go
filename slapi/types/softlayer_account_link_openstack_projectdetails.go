@@ -11,3 +11,7 @@ type SoftLayer_Account_Link_OpenStack_ProjectDetails struct {
 	// ProjectName - no documentation
 	ProjectName string `json:"projectName"`
 }
+
+func (softlayer_account_link_openstack_projectdetails *SoftLayer_Account_Link_OpenStack_ProjectDetails) String() string {
+	return "SoftLayer_Account_Link_OpenStack_ProjectDetails"
+}

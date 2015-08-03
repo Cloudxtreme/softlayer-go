@@ -18,3 +18,7 @@ type SoftLayer_Hardware_Status struct {
 	// possible values.
 	Status string `json:"status"`
 }
+
+func (softlayer_hardware_status *SoftLayer_Hardware_Status) String() string {
+	return "SoftLayer_Hardware_Status"
+}

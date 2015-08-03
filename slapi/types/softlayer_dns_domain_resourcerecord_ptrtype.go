@@ -31,3 +31,7 @@ type SoftLayer_Dns_Domain_ResourceRecord_PtrType struct {
 	// subnet.
 	IsGatewayAddress bool `json:"isGatewayAddress"`
 }
+
+func (softlayer_dns_domain_resourcerecord_ptrtype *SoftLayer_Dns_Domain_ResourceRecord_PtrType) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord_PtrType"
+}

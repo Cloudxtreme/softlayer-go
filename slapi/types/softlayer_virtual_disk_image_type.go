@@ -17,3 +17,7 @@ type SoftLayer_Virtual_Disk_Image_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_virtual_disk_image_type *SoftLayer_Virtual_Disk_Image_Type) String() string {
+	return "SoftLayer_Virtual_Disk_Image_Type"
+}

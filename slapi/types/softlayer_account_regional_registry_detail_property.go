@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Regional_Registry_Detail_Property - Subnet registration properties are used to
@@ -44,6 +44,10 @@ type SoftLayer_Account_Regional_Registry_Detail_Property struct {
 
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+func (softlayer_account_regional_registry_detail_property *SoftLayer_Account_Regional_Registry_Detail_Property) String() string {
+	return "SoftLayer_Account_Regional_Registry_Detail_Property"
 }
 
 // CreateObject - This method will create a new SoftLayer_Account_Regional_Registry_Detail_Property

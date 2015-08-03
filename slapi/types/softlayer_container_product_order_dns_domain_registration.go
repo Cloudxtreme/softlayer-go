@@ -32,3 +32,7 @@ type SoftLayer_Container_Product_Order_Dns_Domain_Registration struct {
 	// required if registration type is 'new' or 'transfer'.
 	TechnicalContact *SoftLayer_Container_Dns_Domain_Registration_Contact `json:"technicalContact"`
 }
+
+func (softlayer_container_product_order_dns_domain_registration *SoftLayer_Container_Product_Order_Dns_Domain_Registration) String() string {
+	return "SoftLayer_Container_Product_Order_Dns_Domain_Registration"
+}

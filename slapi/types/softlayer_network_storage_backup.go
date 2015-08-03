@@ -13,3 +13,7 @@ type SoftLayer_Network_Storage_Backup struct {
 	// PreviousCyclePeakUsage - Peak number of bytes used in the vault for the previous billing cycle.
 	PreviousCyclePeakUsage uint `json:"previousCyclePeakUsage"`
 }
+
+func (softlayer_network_storage_backup *SoftLayer_Network_Storage_Backup) String() string {
+	return "SoftLayer_Network_Storage_Backup"
+}

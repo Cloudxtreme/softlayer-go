@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Provisioning_Hook_Type - <nil>
@@ -20,6 +20,10 @@ type SoftLayer_Provisioning_Hook_Type struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+func (softlayer_provisioning_hook_type *SoftLayer_Provisioning_Hook_Type) String() string {
+	return "SoftLayer_Provisioning_Hook_Type"
 }
 
 // GetAllHookTypes - <nil>

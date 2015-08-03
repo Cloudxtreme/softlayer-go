@@ -30,3 +30,7 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent struct {
 	// Signature - no documentation
 	Signature *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_Event_Signature `json:"signature"`
 }
+
+func (mcafee_epolicy_orchestrator_version36_hips_version6_ipsevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent"
+}

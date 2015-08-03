@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Layout_Item - The SoftLayer_Layout_Item contains definitions for default layout items
@@ -29,6 +29,10 @@ type SoftLayer_Layout_Item struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_layout_item *SoftLayer_Layout_Item) String() string {
+	return "SoftLayer_Layout_Item"
 }
 
 // GetObject - <nil>

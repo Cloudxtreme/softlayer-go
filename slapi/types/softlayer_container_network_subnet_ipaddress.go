@@ -24,3 +24,7 @@ type SoftLayer_Container_Network_Subnet_IpAddress struct {
 	// IsNetworkAddress - Whether an IP address is its subnet's network identifier address.
 	IsNetworkAddress bool `json:"isNetworkAddress"`
 }
+
+func (softlayer_container_network_subnet_ipaddress *SoftLayer_Container_Network_Subnet_IpAddress) String() string {
+	return "SoftLayer_Container_Network_Subnet_IpAddress"
+}

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Resource_Group_Template - <nil>
@@ -32,6 +32,10 @@ type SoftLayer_Resource_Group_Template struct {
 
 	// Package - <nil>
 	Package *SoftLayer_Product_Package `json:"package"`
+}
+
+func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) String() string {
+	return "SoftLayer_Resource_Group_Template"
 }
 
 // GetAllObjects - <nil>

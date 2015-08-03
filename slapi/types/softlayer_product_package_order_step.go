@@ -35,3 +35,7 @@ type SoftLayer_Product_Package_Order_Step struct {
 	// needed for step-based ordering.
 	Step string `json:"step"`
 }
+
+func (softlayer_product_package_order_step *SoftLayer_Product_Package_Order_Step) String() string {
+	return "SoftLayer_Product_Package_Order_Step"
+}

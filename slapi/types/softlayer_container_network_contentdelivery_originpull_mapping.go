@@ -22,3 +22,7 @@ type SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping struct {
 	// OriginUrl - The URL of a origin server. A URL can contain a directory path.
 	OriginUrl string `json:"originUrl"`
 }
+
+func (softlayer_container_network_contentdelivery_originpull_mapping *SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping"
+}

@@ -7,3 +7,7 @@ package sl
 // orders.
 type SoftLayer_Container_Product_Order_Network_Storage_Nas struct {
 }
+
+func (softlayer_container_product_order_network_storage_nas *SoftLayer_Container_Product_Order_Network_Storage_Nas) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Storage_Nas"
+}

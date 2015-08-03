@@ -27,3 +27,7 @@ type SoftLayer_User_Customer_Prospect_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_user_customer_prospect_type *SoftLayer_User_Customer_Prospect_Type) String() string {
+	return "SoftLayer_User_Customer_Prospect_Type"
+}

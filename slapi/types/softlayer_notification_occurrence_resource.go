@@ -30,3 +30,7 @@ type SoftLayer_Notification_Occurrence_Resource struct {
 	// ResourceTableId - <<< EOT The unique identifier for the physical resource that is associated
 	ResourceTableId int `json:"resourceTableId"`
 }
+
+func (softlayer_notification_occurrence_resource *SoftLayer_Notification_Occurrence_Resource) String() string {
+	return "SoftLayer_Notification_Occurrence_Resource"
+}

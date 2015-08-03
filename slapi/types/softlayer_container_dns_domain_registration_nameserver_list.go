@@ -18,3 +18,7 @@ type SoftLayer_Container_Dns_Domain_Registration_Nameserver_List struct {
 	// SortOrder - no documentation
 	SortOrder int `json:"sortOrder"`
 }
+
+func (softlayer_container_dns_domain_registration_nameserver_list *SoftLayer_Container_Dns_Domain_Registration_Nameserver_List) String() string {
+	return "SoftLayer_Container_Dns_Domain_Registration_Nameserver_List"
+}

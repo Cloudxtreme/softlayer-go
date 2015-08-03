@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Subnet_Registration_Details - The SoftLayer_Network_Subnet_Registration_Details
@@ -35,6 +35,10 @@ type SoftLayer_Network_Subnet_Registration_Details struct {
 
 	// RegistrationId - Numeric ID of the related [[SoftLayer_Network_Subnet_Registration]] object
 	RegistrationId int `json:"registrationId"`
+}
+
+func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) String() string {
+	return "SoftLayer_Network_Subnet_Registration_Details"
 }
 
 // CreateObject - This method will create a new SoftLayer_Network_Subnet_Registration_Details object.

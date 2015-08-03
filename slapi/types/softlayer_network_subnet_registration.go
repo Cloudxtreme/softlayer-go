@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Subnet_Registration - The subnet registration data type contains general
@@ -82,6 +82,10 @@ type SoftLayer_Network_Subnet_Registration struct {
 
 	// Subnet - no documentation
 	Subnet *SoftLayer_Network_Subnet `json:"subnet"`
+}
+
+func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) String() string {
+	return "SoftLayer_Network_Subnet_Registration"
 }
 
 // ClearRegistration - This method will initiate the removal of a subnet registration.

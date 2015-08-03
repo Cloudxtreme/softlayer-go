@@ -33,3 +33,7 @@ type SoftLayer_Account_Note_History struct {
 	// UserId - <nil>
 	UserId int `json:"userId"`
 }
+
+func (softlayer_account_note_history *SoftLayer_Account_Note_History) String() string {
+	return "SoftLayer_Account_Note_History"
+}

@@ -5,3 +5,7 @@ package sl
 // SoftLayer_Entity - <nil>
 type SoftLayer_Entity struct {
 }
+
+func (softlayer_entity *SoftLayer_Entity) String() string {
+	return "SoftLayer_Entity"
+}

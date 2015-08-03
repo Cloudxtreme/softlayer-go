@@ -10,3 +10,7 @@ type McAfee_Epolicy_Orchestrator_Version45_Event_Filter_Description struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (mcafee_epolicy_orchestrator_version45_event_filter_description *McAfee_Epolicy_Orchestrator_Version45_Event_Filter_Description) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version45_Event_Filter_Description"
+}

@@ -11,3 +11,7 @@ type SoftLayer_Container_Product_Order_Network_Application_Delivery_Controller s
 	// identifier that is used for upgrading an existing application delivery controller.
 	ApplicationDeliveryControllerId int `json:"applicationDeliveryControllerId"`
 }
+
+func (softlayer_container_product_order_network_application_delivery_controller *SoftLayer_Container_Product_Order_Network_Application_Delivery_Controller) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Application_Delivery_Controller"
+}

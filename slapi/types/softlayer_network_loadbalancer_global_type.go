@@ -14,3 +14,7 @@ type SoftLayer_Network_LoadBalancer_Global_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_network_loadbalancer_global_type *SoftLayer_Network_LoadBalancer_Global_Type) String() string {
+	return "SoftLayer_Network_LoadBalancer_Global_Type"
+}

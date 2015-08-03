@@ -15,3 +15,7 @@ type SoftLayer_User_Customer_AdditionalEmail struct {
 	// UserId - An internal identifier for the portal user who this additional email belongs to.
 	UserId int `json:"userId"`
 }
+
+func (softlayer_user_customer_additionalemail *SoftLayer_User_Customer_AdditionalEmail) String() string {
+	return "SoftLayer_User_Customer_AdditionalEmail"
+}

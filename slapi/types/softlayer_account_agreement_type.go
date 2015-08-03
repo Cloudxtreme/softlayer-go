@@ -8,3 +8,7 @@ type SoftLayer_Account_Agreement_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_account_agreement_type *SoftLayer_Account_Agreement_Type) String() string {
+	return "SoftLayer_Account_Agreement_Type"
+}

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Policy_Action_Type - <nil>
@@ -17,6 +17,10 @@ type SoftLayer_Scale_Policy_Action_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_scale_policy_action_type *SoftLayer_Scale_Policy_Action_Type) String() string {
+	return "SoftLayer_Scale_Policy_Action_Type"
 }
 
 // GetAllObjects - <nil>

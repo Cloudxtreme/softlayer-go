@@ -18,3 +18,7 @@ type SoftLayer_Auxiliary_Shipping_Courier struct {
 	// Url - no documentation
 	Url string `json:"url"`
 }
+
+func (softlayer_auxiliary_shipping_courier *SoftLayer_Auxiliary_Shipping_Courier) String() string {
+	return "SoftLayer_Auxiliary_Shipping_Courier"
+}

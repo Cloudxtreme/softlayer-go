@@ -8,3 +8,7 @@ package sl
 // virtual machines.
 type SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem struct {
 }
+
+func (softlayer_billing_item_software_component_virtual_operatingsystem *SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem) String() string {
+	return "SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem"
+}

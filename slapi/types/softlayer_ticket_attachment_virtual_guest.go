@@ -20,3 +20,7 @@ type SoftLayer_Ticket_Attachment_Virtual_Guest struct {
 	// that is attached to a ticket.
 	VirtualGuestId int `json:"virtualGuestId"`
 }
+
+func (softlayer_ticket_attachment_virtual_guest *SoftLayer_Ticket_Attachment_Virtual_Guest) String() string {
+	return "SoftLayer_Ticket_Attachment_Virtual_Guest"
+}

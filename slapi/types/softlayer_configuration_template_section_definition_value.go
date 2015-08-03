@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Section_Definition_Value - SoftLayer_Configuration_Section_Value is
@@ -34,6 +34,10 @@ type SoftLayer_Configuration_Template_Section_Definition_Value struct {
 
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value) String() string {
+	return "SoftLayer_Configuration_Template_Section_Definition_Value"
 }
 
 // GetObject - <nil>

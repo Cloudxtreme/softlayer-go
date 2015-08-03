@@ -60,3 +60,7 @@ type SoftLayer_Billing_Info_Ach struct {
 	// VerifiedDate - <nil>
 	VerifiedDate *time.Time `json:"verifiedDate"`
 }
+
+func (softlayer_billing_info_ach *SoftLayer_Billing_Info_Ach) String() string {
+	return "SoftLayer_Billing_Info_Ach"
+}

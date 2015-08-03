@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	slapi "go-softlayer/slapi"
-	types "go-softlayer/slapi/types"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+	types "github.com/sudorandom/softlayer-go/slapi/types"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 	ctx.Method = "getObject"
 
 	account := &types.SoftLayer_Account{}
-	err := client.Call(ctx, account)
+	err := ctx.Call(account)
 	if err != nil {
 		log.Fatal(err)
 	}

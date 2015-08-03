@@ -19,3 +19,7 @@ type SoftLayer_Container_Network_Storage_Hub_Mezeo_File struct {
 	// ''PublishUrlCount'' provides the number of URLs that have been created for this file.
 	PublishUrlCount string `json:"publishUrlCount"`
 }
+
+func (softlayer_container_network_storage_hub_mezeo_file *SoftLayer_Container_Network_Storage_Hub_Mezeo_File) String() string {
+	return "SoftLayer_Container_Network_Storage_Hub_Mezeo_File"
+}

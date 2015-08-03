@@ -50,3 +50,7 @@ type SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics stru
 	// Unsubscribes - <nil>
 	Unsubscribes int `json:"unsubscribes"`
 }
+
+func (softlayer_container_network_message_delivery_email_sendgrid_statistics *SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics) String() string {
+	return "SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics"
+}

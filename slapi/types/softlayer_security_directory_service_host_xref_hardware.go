@@ -11,3 +11,7 @@ type SoftLayer_Security_Directory_Service_Host_Xref_Hardware struct {
 	// Host - no documentation
 	Host *SoftLayer_Hardware `json:"host"`
 }
+
+func (softlayer_security_directory_service_host_xref_hardware *SoftLayer_Security_Directory_Service_Host_Xref_Hardware) String() string {
+	return "SoftLayer_Security_Directory_Service_Host_Xref_Hardware"
+}

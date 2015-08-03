@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Ticket_Subject - The SoftLayer_Ticket_Subject data type models one of the possible
@@ -19,6 +19,10 @@ type SoftLayer_Ticket_Subject struct {
 
 	// Name - A ticket subject's name. This name is used for a standard support ticket's title.
 	Name string `json:"name"`
+}
+
+func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) String() string {
+	return "SoftLayer_Ticket_Subject"
 }
 
 // GetAllObjects - Retrieve all possible ticket subjects. The SoftLayer customer portal uses this

@@ -19,3 +19,7 @@ type SoftLayer_Hardware_Attribute struct {
 	// Value - no documentation
 	Value string `json:"value"`
 }
+
+func (softlayer_hardware_attribute *SoftLayer_Hardware_Attribute) String() string {
+	return "SoftLayer_Hardware_Attribute"
+}

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_ApiAuthentication - The SoftLayer_User_Customer_ApiAuthentication type
@@ -29,6 +29,10 @@ type SoftLayer_User_Customer_ApiAuthentication struct {
 
 	// UserId - no documentation
 	UserId int `json:"userId"`
+}
+
+func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) String() string {
+	return "SoftLayer_User_Customer_ApiAuthentication"
 }
 
 // EditObject - <nil>

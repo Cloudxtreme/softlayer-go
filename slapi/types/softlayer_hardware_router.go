@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Hardware_Router - The SoftLayer_Hardware_Router data type contains general information
@@ -23,6 +23,10 @@ type SoftLayer_Hardware_Router struct {
 	// SanStorageCapabilityFlag - A flag indicating that a on the router can be assigned to a host that has
 	// SAN disk functionality.
 	SanStorageCapabilityFlag bool `json:"sanStorageCapabilityFlag"`
+}
+
+func (softlayer_hardware_router *SoftLayer_Hardware_Router) String() string {
+	return "SoftLayer_Hardware_Router"
 }
 
 // GetObject - <nil>

@@ -32,3 +32,7 @@ type SoftLayer_Network_Storage_Partnership struct {
 	// VolumeId - The volume id which a partnership is associated with.
 	VolumeId int `json:"volumeId"`
 }
+
+func (softlayer_network_storage_partnership *SoftLayer_Network_Storage_Partnership) String() string {
+	return "SoftLayer_Network_Storage_Partnership"
+}

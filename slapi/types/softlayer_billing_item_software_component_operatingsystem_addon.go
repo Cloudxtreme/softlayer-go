@@ -8,3 +8,7 @@ package sl
 // components.
 type SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon struct {
 }
+
+func (softlayer_billing_item_software_component_operatingsystem_addon *SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon) String() string {
+	return "SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon"
+}

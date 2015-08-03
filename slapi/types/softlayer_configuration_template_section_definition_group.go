@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Section_Definition_Group - Configuration definition group gives you
@@ -29,6 +29,10 @@ type SoftLayer_Configuration_Template_Section_Definition_Group struct {
 
 	// SortOrder - no documentation
 	SortOrder int `json:"sortOrder"`
+}
+
+func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) String() string {
+	return "SoftLayer_Configuration_Template_Section_Definition_Group"
 }
 
 // GetAllGroups - Get all configuration definition group objects. ''getAllGroups'' returns an array of

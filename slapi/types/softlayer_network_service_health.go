@@ -32,3 +32,7 @@ type SoftLayer_Network_Service_Health struct {
 	// StatusId - no documentation
 	StatusId int `json:"statusId"`
 }
+
+func (softlayer_network_service_health *SoftLayer_Network_Service_Health) String() string {
+	return "SoftLayer_Network_Service_Health"
+}

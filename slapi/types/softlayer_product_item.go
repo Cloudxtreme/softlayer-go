@@ -210,3 +210,7 @@ type SoftLayer_Product_Item struct {
 	// UpgradeItems - Some product items have an upgrade path. These are those upgrade product items.
 	UpgradeItems []*SoftLayer_Product_Item `json:"upgradeItems"`
 }
+
+func (softlayer_product_item *SoftLayer_Product_Item) String() string {
+	return "SoftLayer_Product_Item"
+}

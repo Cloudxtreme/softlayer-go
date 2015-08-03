@@ -9,3 +9,7 @@ package sl
 // (type)|SoftLayer_Dns_Domain_ResourceRecord]] records.
 type SoftLayer_Dns_Domain_Forward struct {
 }
+
+func (softlayer_dns_domain_forward *SoftLayer_Dns_Domain_Forward) String() string {
+	return "SoftLayer_Dns_Domain_Forward"
+}

@@ -28,3 +28,7 @@ type SoftLayer_Network_Monitor_Version1_Query_Result struct {
 	// ResponseTime - no documentation
 	ResponseTime float32 `json:"responseTime"`
 }
+
+func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result) String() string {
+	return "SoftLayer_Network_Monitor_Version1_Query_Result"
+}

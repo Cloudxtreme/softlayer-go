@@ -11,3 +11,7 @@ type SoftLayer_Container_Product_Order_Dns_Domain_Reseller struct {
 	// CreditAmount - Amount to be credited to the domain reseller account.
 	CreditAmount float64 `json:"creditAmount"`
 }
+
+func (softlayer_container_product_order_dns_domain_reseller *SoftLayer_Container_Product_Order_Dns_Domain_Reseller) String() string {
+	return "SoftLayer_Container_Product_Order_Dns_Domain_Reseller"
+}

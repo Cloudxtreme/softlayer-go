@@ -6,3 +6,7 @@ package sl
 // the SoftLayer_Hardware service.
 type SoftLayer_Hardware_Switch struct {
 }
+
+func (softlayer_hardware_switch *SoftLayer_Hardware_Switch) String() string {
+	return "SoftLayer_Hardware_Switch"
+}

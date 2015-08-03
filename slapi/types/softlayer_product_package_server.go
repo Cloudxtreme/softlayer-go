@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Package_Server - The SoftLayer_Product_Package_Server data type contains
@@ -125,6 +125,10 @@ type SoftLayer_Product_Package_Server struct {
 
 	// UnitSize - no documentation
 	UnitSize int `json:"unitSize"`
+}
+
+func (softlayer_product_package_server *SoftLayer_Product_Package_Server) String() string {
+	return "SoftLayer_Product_Package_Server"
 }
 
 // GetAllObjects - no documentation

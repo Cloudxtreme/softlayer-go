@@ -22,3 +22,7 @@ type SoftLayer_Ticket_Attachment_Scheduled_Action struct {
 	// ticket.
 	TransactionId int `json:"transactionId"`
 }
+
+func (softlayer_ticket_attachment_scheduled_action *SoftLayer_Ticket_Attachment_Scheduled_Action) String() string {
+	return "SoftLayer_Ticket_Attachment_Scheduled_Action"
+}

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Order - The SoftLayer_Billing_Order data type contains general information
@@ -161,6 +161,10 @@ type SoftLayer_Billing_Order struct {
 
 	// UserRecordId - The SoftLayer_User_Customer id of the portal or API user who submitted an order.
 	UserRecordId int `json:"userRecordId"`
+}
+
+func (softlayer_billing_order *SoftLayer_Billing_Order) String() string {
+	return "SoftLayer_Billing_Order"
 }
 
 // ApproveModifiedOrder - When an order has been modified, the customer will need to approve the

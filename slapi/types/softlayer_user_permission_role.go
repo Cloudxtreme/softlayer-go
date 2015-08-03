@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Permission_Role - <nil>
@@ -57,6 +57,10 @@ type SoftLayer_User_Permission_Role struct {
 
 	// Users - <nil>
 	Users []*SoftLayer_User_Customer `json:"users"`
+}
+
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) String() string {
+	return "SoftLayer_User_Permission_Role"
 }
 
 // AddUser - <nil>

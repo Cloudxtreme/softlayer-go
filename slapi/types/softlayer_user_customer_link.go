@@ -33,3 +33,7 @@ type SoftLayer_User_Customer_Link struct {
 	// UserId - <nil>
 	UserId int `json:"userId"`
 }
+
+func (softlayer_user_customer_link *SoftLayer_User_Customer_Link) String() string {
+	return "SoftLayer_User_Customer_Link"
+}

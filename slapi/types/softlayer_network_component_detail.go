@@ -11,3 +11,7 @@ type SoftLayer_Network_Component_Detail struct {
 	// PollingInterfaceIndex - <nil>
 	PollingInterfaceIndex int `json:"pollingInterfaceIndex"`
 }
+
+func (softlayer_network_component_detail *SoftLayer_Network_Component_Detail) String() string {
+	return "SoftLayer_Network_Component_Detail"
+}

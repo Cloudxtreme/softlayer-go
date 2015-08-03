@@ -23,3 +23,7 @@ type SoftLayer_Provisioning_Version1_Transaction_Status struct {
 	// NonCompletedTransactions - <nil>
 	NonCompletedTransactions []*SoftLayer_Provisioning_Version1_Transaction `json:"nonCompletedTransactions"`
 }
+
+func (softlayer_provisioning_version1_transaction_status *SoftLayer_Provisioning_Version1_Transaction_Status) String() string {
+	return "SoftLayer_Provisioning_Version1_Transaction_Status"
+}

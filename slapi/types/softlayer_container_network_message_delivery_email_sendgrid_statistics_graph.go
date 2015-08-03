@@ -14,3 +14,7 @@ type SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Grap
 	// GraphTitle - <nil>
 	GraphTitle string `json:"graphTitle"`
 }
+
+func (softlayer_container_network_message_delivery_email_sendgrid_statistics_graph *SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Graph) String() string {
+	return "SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Graph"
+}

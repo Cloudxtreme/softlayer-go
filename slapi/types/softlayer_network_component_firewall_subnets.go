@@ -21,3 +21,7 @@ type SoftLayer_Network_Component_Firewall_Subnets struct {
 	// SubnetId - The unique identifier of the subnet being linked to the network component firewall.
 	SubnetId int `json:"subnetId"`
 }
+
+func (softlayer_network_component_firewall_subnets *SoftLayer_Network_Component_Firewall_Subnets) String() string {
+	return "SoftLayer_Network_Component_Firewall_Subnets"
+}

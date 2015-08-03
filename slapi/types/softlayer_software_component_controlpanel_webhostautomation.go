@@ -8,3 +8,7 @@ package sl
 // Defaults are initiated by this object.
 type SoftLayer_Software_Component_ControlPanel_WebhostAutomation struct {
 }
+
+func (softlayer_software_component_controlpanel_webhostautomation *SoftLayer_Software_Component_ControlPanel_WebhostAutomation) String() string {
+	return "SoftLayer_Software_Component_ControlPanel_WebhostAutomation"
+}

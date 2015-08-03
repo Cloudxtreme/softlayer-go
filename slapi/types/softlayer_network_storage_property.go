@@ -28,3 +28,7 @@ type SoftLayer_Network_Storage_Property struct {
 	// VolumeId - no documentation
 	VolumeId int `json:"volumeId"`
 }
+
+func (softlayer_network_storage_property *SoftLayer_Network_Storage_Property) String() string {
+	return "SoftLayer_Network_Storage_Property"
+}

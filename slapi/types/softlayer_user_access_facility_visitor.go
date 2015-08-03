@@ -21,3 +21,7 @@ type SoftLayer_User_Access_Facility_Visitor struct {
 	// VisitorType - <nil>
 	VisitorType *SoftLayer_User_Access_Facility_Visitor_Type `json:"visitorType"`
 }
+
+func (softlayer_user_access_facility_visitor *SoftLayer_User_Access_Facility_Visitor) String() string {
+	return "SoftLayer_User_Access_Facility_Visitor"
+}

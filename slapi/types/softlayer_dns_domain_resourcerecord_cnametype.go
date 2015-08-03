@@ -10,3 +10,7 @@ package sl
 // should not be used as the data field for an MX record.
 type SoftLayer_Dns_Domain_ResourceRecord_CnameType struct {
 }
+
+func (softlayer_dns_domain_resourcerecord_cnametype *SoftLayer_Dns_Domain_ResourceRecord_CnameType) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord_CnameType"
+}

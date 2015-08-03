@@ -62,3 +62,7 @@ type SoftLayer_Hardware_Group struct {
 	// NetworkStatus - The value of a hardware's network status attribute.
 	NetworkStatus string `json:"networkStatus"`
 }
+
+func (softlayer_hardware_group *SoftLayer_Hardware_Group) String() string {
+	return "SoftLayer_Hardware_Group"
+}

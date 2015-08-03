@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_LoadBalancer - <nil>
@@ -59,6 +59,10 @@ type SoftLayer_Scale_LoadBalancer struct {
 
 	// VirtualServerPort - no documentation
 	VirtualServerPort int `json:"virtualServerPort"`
+}
+
+func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) String() string {
+	return "SoftLayer_Scale_LoadBalancer"
 }
 
 // CreateObject - <nil>

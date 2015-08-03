@@ -15,3 +15,7 @@ type SoftLayer_Virtual_Guest_Power_State struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_virtual_guest_power_state *SoftLayer_Virtual_Guest_Power_State) String() string {
+	return "SoftLayer_Virtual_Guest_Power_State"
+}

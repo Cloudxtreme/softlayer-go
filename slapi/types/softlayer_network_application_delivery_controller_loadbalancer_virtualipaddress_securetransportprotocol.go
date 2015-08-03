@@ -18,3 +18,7 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAdd
 	// VirtualIpAddressId - <nil>
 	VirtualIpAddressId int `json:"virtualIpAddressId"`
 }
+
+func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress_securetransportprotocol *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress_SecureTransportProtocol) String() string {
+	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress_SecureTransportProtocol"
+}

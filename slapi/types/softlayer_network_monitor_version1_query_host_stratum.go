@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Monitor_Version1_Query_Host_Stratum - The monitoring stratum type stores the
@@ -26,6 +26,10 @@ type SoftLayer_Network_Monitor_Version1_Query_Host_Stratum struct {
 
 	// ResponseLevel - The highest level of a monitoring response type allowed on this server
 	ResponseLevel int `json:"responseLevel"`
+}
+
+func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum) String() string {
+	return "SoftLayer_Network_Monitor_Version1_Query_Host_Stratum"
 }
 
 // GetAllQueryTypes - Calling this function returns all possible query type objects. These objects are

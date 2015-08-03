@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Section_Profile - Some configuration templates let you create a
@@ -35,6 +35,10 @@ type SoftLayer_Configuration_Template_Section_Profile struct {
 
 	// SectionId - Internal identifier of a configuration section that this profile belongs to.
 	SectionId int `json:"sectionId"`
+}
+
+func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile) String() string {
+	return "SoftLayer_Configuration_Template_Section_Profile"
 }
 
 // GetObject - <nil>

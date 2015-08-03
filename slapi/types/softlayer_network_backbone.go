@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Backbone - A SoftLayer_Network_Backbone represents a single backbone connection
@@ -44,6 +44,10 @@ type SoftLayer_Network_Backbone struct {
 	// connecting the private networks of SoftLayer's datacenters. Type is either the string "public",
 	// "private", or "private-interconnect".
 	Type string `json:"type"`
+}
+
+func (softlayer_network_backbone *SoftLayer_Network_Backbone) String() string {
+	return "SoftLayer_Network_Backbone"
 }
 
 // GetAllBackbones - Retrieve a list of all SoftLayer backbone connections. Use this method if you need

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_LoadBalancer_Global_Account - The SoftLayer_Network_LoadBalancer_Global_Account
@@ -59,6 +59,10 @@ type SoftLayer_Network_LoadBalancer_Global_Account struct {
 
 	// Notes - Additional customer defined information for a global load balancer account.
 	Notes string `json:"notes"`
+}
+
+func (softlayer_network_loadbalancer_global_account *SoftLayer_Network_LoadBalancer_Global_Account) String() string {
+	return "SoftLayer_Network_LoadBalancer_Global_Account"
 }
 
 // AddNsRecord - If your globally load balanced domain is hosted on the SoftLayer nameservers this

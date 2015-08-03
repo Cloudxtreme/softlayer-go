@@ -17,3 +17,7 @@ type SoftLayer_Billing_Order_Type struct {
 	// Type - A simple keyname stating where a SoftLayer order originated from.
 	Type string `json:"type"`
 }
+
+func (softlayer_billing_order_type *SoftLayer_Billing_Order_Type) String() string {
+	return "SoftLayer_Billing_Order_Type"
+}

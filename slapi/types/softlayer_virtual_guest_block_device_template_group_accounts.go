@@ -32,3 +32,7 @@ type SoftLayer_Virtual_Guest_Block_Device_Template_Group_Accounts struct {
 	// granted to.
 	GroupId int `json:"groupId"`
 }
+
+func (softlayer_virtual_guest_block_device_template_group_accounts *SoftLayer_Virtual_Guest_Block_Device_Template_Group_Accounts) String() string {
+	return "SoftLayer_Virtual_Guest_Block_Device_Template_Group_Accounts"
+}

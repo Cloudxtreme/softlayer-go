@@ -11,3 +11,7 @@ type SoftLayer_Container_Product_Order_Network_PerformanceStorage_Iscsi struct {
 	// that will be connecting to the The only required property its the keyName of the OS type.
 	OsFormatType *SoftLayer_Network_Storage_Iscsi_OS_Type `json:"osFormatType"`
 }
+
+func (softlayer_container_product_order_network_performancestorage_iscsi *SoftLayer_Container_Product_Order_Network_PerformanceStorage_Iscsi) String() string {
+	return "SoftLayer_Container_Product_Order_Network_PerformanceStorage_Iscsi"
+}

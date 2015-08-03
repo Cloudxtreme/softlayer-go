@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Software_Component_AntivirusSpyware - This object specifies a specific type of Software
@@ -11,6 +11,10 @@ import (
 // and methods such as SoftLayer_Software_Component_AntivirusSpyware::updateAntivirusSpywarePolicy.
 // Defaults are initiated by this object.
 type SoftLayer_Software_Component_AntivirusSpyware struct {
+}
+
+func (softlayer_software_component_antivirusspyware *SoftLayer_Software_Component_AntivirusSpyware) String() string {
+	return "SoftLayer_Software_Component_AntivirusSpyware"
 }
 
 // GetObject - <nil>

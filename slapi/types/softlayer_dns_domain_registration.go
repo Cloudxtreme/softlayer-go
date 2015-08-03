@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Dns_Domain_Registration - The SoftLayer_Dns_Domain_Registration data type represents a
@@ -50,6 +50,10 @@ type SoftLayer_Dns_Domain_Registration struct {
 
 	// ServiceProviderId - <nil>
 	ServiceProviderId int `json:"serviceProviderId"`
+}
+
+func (softlayer_dns_domain_registration *SoftLayer_Dns_Domain_Registration) String() string {
+	return "SoftLayer_Dns_Domain_Registration"
 }
 
 // AddNameserversToDomain - The addNameserversToDomain method adds nameservers to a domain for a domain

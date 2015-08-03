@@ -31,3 +31,7 @@ type SoftLayer_Hardware_Component_Partition_Template_Partition struct {
 	// [[SoftLayer_Hardware_Component_Partition_Template|Partition Template]] Id.
 	PartitionTemplateId int `json:"partitionTemplateId"`
 }
+
+func (softlayer_hardware_component_partition_template_partition *SoftLayer_Hardware_Component_Partition_Template_Partition) String() string {
+	return "SoftLayer_Hardware_Component_Partition_Template_Partition"
+}

@@ -11,3 +11,7 @@ type SoftLayer_Container_Message struct {
 	// Type - <nil>
 	Type string `json:"type"`
 }
+
+func (softlayer_container_message *SoftLayer_Container_Message) String() string {
+	return "SoftLayer_Container_Message"
+}

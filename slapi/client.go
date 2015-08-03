@@ -28,14 +28,14 @@ func (client *Client) Context() RequestContext {
 	return RequestContext{Client: client}
 }
 
-func (client *Client) Call(ctx RequestContext, result interface{}) error {
+func (ctx *RequestContext) Call(result interface{}) error {
 	httpClient := &http.Client{}
-	req, err := http.NewRequest("GET", client.Endpoint+ctx.Service+"/"+ctx.Method, nil)
+	req, err := http.NewRequest("GET", ctx.Client.Endpoint+ctx.Service+"/"+ctx.Method, nil)
 	if err != nil {
 		return err
 	}
 
-	req.SetBasicAuth(client.Username, client.APIKey)
+	req.SetBasicAuth(ctx.Client.Username, ctx.Client.APIKey)
 	req.Header.Add("Content-Type", "application/json")
 	values := req.URL.Query()
 

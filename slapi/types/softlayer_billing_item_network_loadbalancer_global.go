@@ -10,3 +10,7 @@ type SoftLayer_Billing_Item_Network_LoadBalancer_Global struct {
 	// Resource - The resource for a global load balancer billing item.
 	Resource *SoftLayer_Network_LoadBalancer_Global_Account `json:"resource"`
 }
+
+func (softlayer_billing_item_network_loadbalancer_global *SoftLayer_Billing_Item_Network_LoadBalancer_Global) String() string {
+	return "SoftLayer_Billing_Item_Network_LoadBalancer_Global"
+}

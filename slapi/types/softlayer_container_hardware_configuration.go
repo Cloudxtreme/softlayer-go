@@ -51,3 +51,7 @@ type SoftLayer_Container_Hardware_Configuration struct {
 	// amount of memory, in gigabytes, allocated to the server.
 	Processors []*SoftLayer_Container_Hardware_Configuration_Option `json:"processors"`
 }
+
+func (softlayer_container_hardware_configuration *SoftLayer_Container_Hardware_Configuration) String() string {
+	return "SoftLayer_Container_Hardware_Configuration"
+}

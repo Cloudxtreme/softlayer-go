@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_External_Binding - The SoftLayer_User_Customer_External_Binding data type
@@ -14,6 +14,10 @@ type SoftLayer_User_Customer_External_Binding struct {
 
 	// User - The SoftLayer user that the external authentication binding belongs to.
 	User *SoftLayer_User_Customer `json:"user"`
+}
+
+func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External_Binding) String() string {
+	return "SoftLayer_User_Customer_External_Binding"
 }
 
 // Disable - Disabling an external binding will allow you to keep the external binding on your

@@ -3,11 +3,15 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_TippingPointReporting - <nil>
 type SoftLayer_Network_TippingPointReporting struct {
+}
+
+func (softlayer_network_tippingpointreporting *SoftLayer_Network_TippingPointReporting) String() string {
+	return "SoftLayer_Network_TippingPointReporting"
 }
 
 // DrillDownAttack - This method, when given an attack signature ID (available in the return values of

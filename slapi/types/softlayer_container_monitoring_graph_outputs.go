@@ -22,3 +22,7 @@ type SoftLayer_Container_Monitoring_Graph_Outputs struct {
 	// StartDate - no documentation
 	StartDate *time.Time `json:"startDate"`
 }
+
+func (softlayer_container_monitoring_graph_outputs *SoftLayer_Container_Monitoring_Graph_Outputs) String() string {
+	return "SoftLayer_Container_Monitoring_Graph_Outputs"
+}

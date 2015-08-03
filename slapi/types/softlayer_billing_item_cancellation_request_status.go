@@ -19,3 +19,7 @@ type SoftLayer_Billing_Item_Cancellation_Request_Status struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_billing_item_cancellation_request_status *SoftLayer_Billing_Item_Cancellation_Request_Status) String() string {
+	return "SoftLayer_Billing_Item_Cancellation_Request_Status"
+}

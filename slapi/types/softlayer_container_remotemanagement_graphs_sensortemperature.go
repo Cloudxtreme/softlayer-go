@@ -13,3 +13,7 @@ type SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature struct {
 	// Title - no documentation
 	Title string `json:"title"`
 }
+
+func (softlayer_container_remotemanagement_graphs_sensortemperature *SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature) String() string {
+	return "SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature"
+}

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Security_Certificate_Request_ServerType - Represents a server type that can be specified
@@ -21,6 +21,10 @@ type SoftLayer_Security_Certificate_Request_ServerType struct {
 
 	// Value - no documentation
 	Value int `json:"value"`
+}
+
+func (softlayer_security_certificate_request_servertype *SoftLayer_Security_Certificate_Request_ServerType) String() string {
+	return "SoftLayer_Security_Certificate_Request_ServerType"
 }
 
 // GetAllObjects - Returns all SSL certificate server types, which passed in on a certificate order.

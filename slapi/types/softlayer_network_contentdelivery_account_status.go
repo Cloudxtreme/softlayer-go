@@ -15,3 +15,7 @@ type SoftLayer_Network_ContentDelivery_Account_Status struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_network_contentdelivery_account_status *SoftLayer_Network_ContentDelivery_Account_Status) String() string {
+	return "SoftLayer_Network_ContentDelivery_Account_Status"
+}

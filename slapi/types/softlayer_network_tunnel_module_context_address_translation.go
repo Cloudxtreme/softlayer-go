@@ -43,3 +43,7 @@ type SoftLayer_Network_Tunnel_Module_Context_Address_Translation struct {
 	// translation.
 	Notes string `json:"notes"`
 }
+
+func (softlayer_network_tunnel_module_context_address_translation *SoftLayer_Network_Tunnel_Module_Context_Address_Translation) String() string {
+	return "SoftLayer_Network_Tunnel_Module_Context_Address_Translation"
+}

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Address - The SoftLayer_Account_Address data type contains information on an
@@ -63,6 +63,10 @@ type SoftLayer_Account_Address struct {
 
 	// Type - no documentation
 	Type *SoftLayer_Account_Address_Type `json:"type"`
+}
+
+func (softlayer_account_address *SoftLayer_Account_Address) String() string {
+	return "SoftLayer_Account_Address"
 }
 
 // CreateObject - Create a new address record. The ''typeId'', ''accountId'', ''description'',

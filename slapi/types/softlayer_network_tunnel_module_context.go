@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Tunnel_Module_Context - The SoftLayer_Network_Tunnel_Module_Context data type
@@ -150,6 +150,10 @@ type SoftLayer_Network_Tunnel_Module_Context struct {
 
 	// TransactionHistoryCount - A count of the transaction history for this network tunnel.
 	TransactionHistoryCount uint64 `json:"transactionHistoryCount"`
+}
+
+func (softlayer_network_tunnel_module_context *SoftLayer_Network_Tunnel_Module_Context) String() string {
+	return "SoftLayer_Network_Tunnel_Module_Context"
 }
 
 // AddCustomerSubnetToNetworkTunnel - Associates a remote subnet to the network tunnel. When a remote

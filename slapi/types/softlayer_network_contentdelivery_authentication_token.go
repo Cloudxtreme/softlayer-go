@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_ContentDelivery_Authentication_Token - The
@@ -30,6 +30,10 @@ type SoftLayer_Network_ContentDelivery_Authentication_Token struct {
 
 	// Token - no documentation
 	Token string `json:"token"`
+}
+
+func (softlayer_network_contentdelivery_authentication_token *SoftLayer_Network_ContentDelivery_Authentication_Token) String() string {
+	return "SoftLayer_Network_ContentDelivery_Authentication_Token"
 }
 
 // CreateObject - This method is deprecated! Use the

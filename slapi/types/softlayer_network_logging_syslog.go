@@ -37,3 +37,7 @@ type SoftLayer_Network_Logging_Syslog struct {
 	// TotalEvents - If this is an aggregation of syslog events, this property shows the total events.
 	TotalEvents int `json:"totalEvents"`
 }
+
+func (softlayer_network_logging_syslog *SoftLayer_Network_Logging_Syslog) String() string {
+	return "SoftLayer_Network_Logging_Syslog"
+}

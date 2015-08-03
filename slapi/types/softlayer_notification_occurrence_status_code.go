@@ -17,3 +17,7 @@ type SoftLayer_Notification_Occurrence_Status_Code struct {
 	// NotificationOccurrenceEventType - <nil>
 	NotificationOccurrenceEventType *SoftLayer_Notification_Occurrence_Event_Type `json:"notificationOccurrenceEventType"`
 }
+
+func (softlayer_notification_occurrence_status_code *SoftLayer_Notification_Occurrence_Status_Code) String() string {
+	return "SoftLayer_Notification_Occurrence_Status_Code"
+}

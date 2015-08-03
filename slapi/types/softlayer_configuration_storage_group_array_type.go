@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Storage_Group_Array_Type - no documentation
@@ -38,6 +38,10 @@ type SoftLayer_Configuration_Storage_Group_Array_Type struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) String() string {
+	return "SoftLayer_Configuration_Storage_Group_Array_Type"
 }
 
 // GetAllObjects - <nil>

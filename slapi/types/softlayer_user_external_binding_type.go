@@ -13,3 +13,7 @@ type SoftLayer_User_External_Binding_Type struct {
 	// Name - The user friendly name of a type of external authentication binding.
 	Name string `json:"name"`
 }
+
+func (softlayer_user_external_binding_type *SoftLayer_User_External_Binding_Type) String() string {
+	return "SoftLayer_User_External_Binding_Type"
+}

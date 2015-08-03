@@ -13,3 +13,7 @@ type SoftLayer_Container_Network_Storage_Hub_ObjectStorage_File struct {
 	// Hash - <nil>
 	Hash string `json:"hash"`
 }
+
+func (softlayer_container_network_storage_hub_objectstorage_file *SoftLayer_Container_Network_Storage_Hub_ObjectStorage_File) String() string {
+	return "SoftLayer_Container_Network_Storage_Hub_ObjectStorage_File"
+}

@@ -18,3 +18,7 @@ type SoftLayer_Container_Product_Order_Hardware_Server struct {
 	// Tags - no documentation
 	Tags []*SoftLayer_Container_Product_Order_Property `json:"tags"`
 }
+
+func (softlayer_container_product_order_hardware_server *SoftLayer_Container_Product_Order_Hardware_Server) String() string {
+	return "SoftLayer_Container_Product_Order_Hardware_Server"
+}

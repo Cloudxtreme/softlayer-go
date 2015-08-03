@@ -20,3 +20,7 @@ type SoftLayer_Notification_Delivery_Method struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_notification_delivery_method *SoftLayer_Notification_Delivery_Method) String() string {
+	return "SoftLayer_Notification_Delivery_Method"
+}

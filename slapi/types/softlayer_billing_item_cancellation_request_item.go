@@ -36,3 +36,7 @@ type SoftLayer_Billing_Item_Cancellation_Request_Item struct {
 	// ServiceReclaimStatusCode - no documentation
 	ServiceReclaimStatusCode string `json:"serviceReclaimStatusCode"`
 }
+
+func (softlayer_billing_item_cancellation_request_item *SoftLayer_Billing_Item_Cancellation_Request_Item) String() string {
+	return "SoftLayer_Billing_Item_Cancellation_Request_Item"
+}

@@ -27,3 +27,7 @@ type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event struct {
 	// VirusType - no documentation
 	VirusType string `json:"virusType"`
 }
+
+func (mcafee_epolicy_orchestrator_version36_antivirus_event *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event"
+}

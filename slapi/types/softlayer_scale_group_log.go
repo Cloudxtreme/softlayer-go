@@ -24,3 +24,7 @@ type SoftLayer_Scale_Group_Log struct {
 	// ScaleGroupId - no documentation
 	ScaleGroupId int `json:"scaleGroupId"`
 }
+
+func (softlayer_scale_group_log *SoftLayer_Scale_Group_Log) String() string {
+	return "SoftLayer_Scale_Group_Log"
+}

@@ -12,3 +12,7 @@ type SoftLayer_Network_Storage_Replicant struct {
 	// VolumeName - no documentation
 	VolumeName string `json:"volumeName"`
 }
+
+func (softlayer_network_storage_replicant *SoftLayer_Network_Storage_Replicant) String() string {
+	return "SoftLayer_Network_Storage_Replicant"
+}

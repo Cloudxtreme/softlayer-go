@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Firewall_AccessControlList - The SoftLayer_Network_Firewall_AccessControlList data
@@ -36,6 +36,10 @@ type SoftLayer_Network_Firewall_AccessControlList struct {
 
 	// Rules - The currently running rule set of this context access control list firewall.
 	Rules []*SoftLayer_Network_Vlan_Firewall_Rule `json:"rules"`
+}
+
+func (softlayer_network_firewall_accesscontrollist *SoftLayer_Network_Firewall_AccessControlList) String() string {
+	return "SoftLayer_Network_Firewall_AccessControlList"
 }
 
 // GetObject - getObject returns a SoftLayer_Network_Firewall_AccessControlList object. You can only

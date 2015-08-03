@@ -26,3 +26,7 @@ type SoftLayer_Container_Network_Storage_Evault_WebCc_BackupResults struct {
 	// Success - no documentation
 	Success string `json:"success"`
 }
+
+func (softlayer_container_network_storage_evault_webcc_backupresults *SoftLayer_Container_Network_Storage_Evault_WebCc_BackupResults) String() string {
+	return "SoftLayer_Container_Network_Storage_Evault_WebCc_BackupResults"
+}

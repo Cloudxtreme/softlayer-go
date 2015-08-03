@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Vlan - The SoftLayer_Network_Vlan data type models a single within SoftLayer's
@@ -223,6 +223,10 @@ type SoftLayer_Network_Vlan struct {
 	// VlanNumber - A VLAN's number as recorded within the SoftLayer network. This is configured directly
 	// on SoftLayer's networking equipment and should not be confused with a VLAN's ''id'' property.
 	VlanNumber int `json:"vlanNumber"`
+}
+
+func (softlayer_network_vlan *SoftLayer_Network_Vlan) String() string {
+	return "SoftLayer_Network_Vlan"
 }
 
 // EditObject - no documentation

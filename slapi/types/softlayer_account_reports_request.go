@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Reports_Request - <nil>
@@ -64,6 +64,10 @@ type SoftLayer_Account_Reports_Request struct {
 
 	// UsrRecordId - <nil>
 	UsrRecordId int `json:"usrRecordId"`
+}
+
+func (softlayer_account_reports_request *SoftLayer_Account_Reports_Request) String() string {
+	return "SoftLayer_Account_Reports_Request"
 }
 
 // CreateRequest - <nil>

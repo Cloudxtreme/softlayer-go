@@ -10,3 +10,7 @@ package sl
 // "fe80:0:0:0:0:0:a00:0".
 type SoftLayer_Dns_Domain_ResourceRecord_AaaaType struct {
 }
+
+func (softlayer_dns_domain_resourcerecord_aaaatype *SoftLayer_Dns_Domain_ResourceRecord_AaaaType) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord_AaaaType"
+}

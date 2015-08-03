@@ -20,3 +20,7 @@ type SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration struc
 	// Uri - The URI for an object storage object (.vhd/.iso file) swift://
 	Uri string `json:"uri"`
 }
+
+func (softlayer_container_virtual_guest_block_device_template_configuration *SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration) String() string {
+	return "SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration"
+}

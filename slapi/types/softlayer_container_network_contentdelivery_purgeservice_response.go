@@ -14,3 +14,7 @@ type SoftLayer_Container_Network_ContentDelivery_PurgeService_Response struct {
 	// Url - no documentation
 	Url string `json:"url"`
 }
+
+func (softlayer_container_network_contentdelivery_purgeservice_response *SoftLayer_Container_Network_ContentDelivery_PurgeService_Response) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_PurgeService_Response"
+}

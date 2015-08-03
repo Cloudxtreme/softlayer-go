@@ -16,3 +16,7 @@ type SoftLayer_Container_Hardware_Server_Details struct {
 	// Software - no documentation
 	Software []*SoftLayer_Software_Component `json:"software"`
 }
+
+func (softlayer_container_hardware_server_details *SoftLayer_Container_Hardware_Server_Details) String() string {
+	return "SoftLayer_Container_Hardware_Server_Details"
+}

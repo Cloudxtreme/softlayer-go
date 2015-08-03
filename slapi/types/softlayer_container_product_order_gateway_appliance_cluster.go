@@ -13,3 +13,7 @@ type SoftLayer_Container_Product_Order_Gateway_Appliance_Cluster struct {
 	// ClusterOrderType - Indicates what type of cluster order is being placed Provision).
 	ClusterOrderType string `json:"clusterOrderType"`
 }
+
+func (softlayer_container_product_order_gateway_appliance_cluster *SoftLayer_Container_Product_Order_Gateway_Appliance_Cluster) String() string {
+	return "SoftLayer_Container_Product_Order_Gateway_Appliance_Cluster"
+}

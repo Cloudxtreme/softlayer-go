@@ -34,3 +34,7 @@ type SoftLayer_Container_User_Customer_External_Binding_Phone_Mode struct {
 	// PinMode - Available Pin modes are: Default: (Pin is not used)
 	PinMode string `json:"pinMode"`
 }
+
+func (softlayer_container_user_customer_external_binding_phone_mode *SoftLayer_Container_User_Customer_External_Binding_Phone_Mode) String() string {
+	return "SoftLayer_Container_User_Customer_External_Binding_Phone_Mode"
+}

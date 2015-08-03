@@ -11,3 +11,7 @@ type SoftLayer_Virtual_Guest_Attribute_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_virtual_guest_attribute_type *SoftLayer_Virtual_Guest_Attribute_Type) String() string {
+	return "SoftLayer_Virtual_Guest_Attribute_Type"
+}

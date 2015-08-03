@@ -25,3 +25,7 @@ type SoftLayer_Container_Dns_Domain_Registration_Transfer_Information struct {
 	// Transferrable - no documentation
 	Transferrable int `json:"transferrable"`
 }
+
+func (softlayer_container_dns_domain_registration_transfer_information *SoftLayer_Container_Dns_Domain_Registration_Transfer_Information) String() string {
+	return "SoftLayer_Container_Dns_Domain_Registration_Transfer_Information"
+}

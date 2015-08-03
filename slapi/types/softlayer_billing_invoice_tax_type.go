@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Invoice_Tax_Type - The invoice tax type data type models a single strategy for
@@ -18,6 +18,10 @@ type SoftLayer_Billing_Invoice_Tax_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_billing_invoice_tax_type *SoftLayer_Billing_Invoice_Tax_Type) String() string {
+	return "SoftLayer_Billing_Invoice_Tax_Type"
 }
 
 // GetAllObjects - <nil>

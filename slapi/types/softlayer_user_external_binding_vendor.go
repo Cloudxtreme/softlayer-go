@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_External_Binding_Vendor - The SoftLayer_User_External_Binding_Vendor data type
@@ -20,6 +20,10 @@ type SoftLayer_User_External_Binding_Vendor struct {
 
 	// Name - The user friendly name of an external binding vendor.
 	Name string `json:"name"`
+}
+
+func (softlayer_user_external_binding_vendor *SoftLayer_User_External_Binding_Vendor) String() string {
+	return "SoftLayer_User_External_Binding_Vendor"
 }
 
 // GetAllObjects - getAllObjects() will return a list of the available external binding vendors that

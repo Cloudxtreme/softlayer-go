@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Invoice_Item - Each billing invoice item makes up a record within an invoice. This
@@ -181,6 +181,10 @@ type SoftLayer_Billing_Invoice_Item struct {
 
 	// TotalRecurringTaxAmount - A Billing Item's total, including any child billing items if they exist.'
 	TotalRecurringTaxAmount float32 `json:"totalRecurringTaxAmount"`
+}
+
+func (softlayer_billing_invoice_item *SoftLayer_Billing_Invoice_Item) String() string {
+	return "SoftLayer_Billing_Invoice_Item"
 }
 
 // GetObject - getObject retrieves the SoftLayer_Billing_Invoice_Item object whose ID number

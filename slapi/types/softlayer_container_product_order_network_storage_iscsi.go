@@ -7,3 +7,7 @@ package sl
 // place an order with SoftLayer.
 type SoftLayer_Container_Product_Order_Network_Storage_Iscsi struct {
 }
+
+func (softlayer_container_product_order_network_storage_iscsi *SoftLayer_Container_Product_Order_Network_Storage_Iscsi) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Storage_Iscsi"
+}

@@ -19,3 +19,7 @@ type SoftLayer_Container_Tax_Cache struct {
 	// TotalTaxAmount - no documentation
 	TotalTaxAmount float64 `json:"totalTaxAmount"`
 }
+
+func (softlayer_container_tax_cache *SoftLayer_Container_Tax_Cache) String() string {
+	return "SoftLayer_Container_Tax_Cache"
+}

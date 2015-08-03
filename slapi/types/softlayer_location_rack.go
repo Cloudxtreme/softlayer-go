@@ -6,3 +6,7 @@ package sl
 // include rack-specific properties.
 type SoftLayer_Location_Rack struct {
 }
+
+func (softlayer_location_rack *SoftLayer_Location_Rack) String() string {
+	return "SoftLayer_Location_Rack"
+}

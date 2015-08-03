@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Service_Vpn_Overrides - The SoftLayer_Network_Service_Vpn_Overrides data type
@@ -25,6 +25,10 @@ type SoftLayer_Network_Service_Vpn_Overrides struct {
 
 	// UserId - no documentation
 	UserId int `json:"userId"`
+}
+
+func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides) String() string {
+	return "SoftLayer_Network_Service_Vpn_Overrides"
 }
 
 // CreateObjects - no documentation

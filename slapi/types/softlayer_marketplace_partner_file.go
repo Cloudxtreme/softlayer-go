@@ -11,3 +11,7 @@ type SoftLayer_Marketplace_Partner_File struct {
 	// Contents - <nil>
 	Contents string `json:"contents"`
 }
+
+func (softlayer_marketplace_partner_file *SoftLayer_Marketplace_Partner_File) String() string {
+	return "SoftLayer_Marketplace_Partner_File"
+}

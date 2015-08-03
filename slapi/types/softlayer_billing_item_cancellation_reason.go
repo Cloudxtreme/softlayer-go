@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Item_Cancellation_Reason - The SoftLayer_Billing_Item_Cancellation_Reason data
@@ -34,6 +34,10 @@ type SoftLayer_Billing_Item_Cancellation_Reason struct {
 
 	// TranslatedReason - <nil>
 	TranslatedReason string `json:"translatedReason"`
+}
+
+func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) String() string {
+	return "SoftLayer_Billing_Item_Cancellation_Reason"
 }
 
 // GetAllCancellationReasons - getAllCancellationReasons() retrieves a list of all cancellation reasons

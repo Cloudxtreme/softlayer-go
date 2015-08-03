@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Dns_Secondary - The SoftLayer_Dns_Secondary data type contains information on a single
@@ -54,6 +54,10 @@ type SoftLayer_Dns_Secondary struct {
 
 	// ZoneName - no documentation
 	ZoneName string `json:"zoneName"`
+}
+
+func (softlayer_dns_secondary *SoftLayer_Dns_Secondary) String() string {
+	return "SoftLayer_Dns_Secondary"
 }
 
 // ConvertToPrimary - A secondary DNS record may be converted to a primary DNS record. By converting a

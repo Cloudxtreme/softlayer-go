@@ -28,3 +28,7 @@ type SoftLayer_Software_Component_OperatingSystem struct {
 	// list of operations that will occur during the installment of an operating system.
 	ReloadTransactionGroup *SoftLayer_Provisioning_Version1_Transaction_Group `json:"reloadTransactionGroup"`
 }
+
+func (softlayer_software_component_operatingsystem *SoftLayer_Software_Component_OperatingSystem) String() string {
+	return "SoftLayer_Software_Component_OperatingSystem"
+}

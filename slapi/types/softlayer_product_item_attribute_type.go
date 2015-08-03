@@ -11,3 +11,7 @@ type SoftLayer_Product_Item_Attribute_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_product_item_attribute_type *SoftLayer_Product_Item_Attribute_Type) String() string {
+	return "SoftLayer_Product_Item_Attribute_Type"
+}

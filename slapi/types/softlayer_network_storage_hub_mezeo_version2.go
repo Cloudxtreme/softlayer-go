@@ -8,3 +8,7 @@ package sl
 // supported and created for Mezeo version 2 Virtual Server storage types.
 type SoftLayer_Network_Storage_Hub_Mezeo_Version2 struct {
 }
+
+func (softlayer_network_storage_hub_mezeo_version2 *SoftLayer_Network_Storage_Hub_Mezeo_Version2) String() string {
+	return "SoftLayer_Network_Storage_Hub_Mezeo_Version2"
+}

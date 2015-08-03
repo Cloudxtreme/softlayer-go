@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Security_Certificate - <nil>
@@ -81,6 +81,10 @@ type SoftLayer_Security_Certificate struct {
 	// ValidityEnd - The UTC timestamp representing the end of the certificate's validity period. This
 	// property is read only. Changes made will be silently ignored.
 	ValidityEnd *time.Time `json:"validityEnd"`
+}
+
+func (softlayer_security_certificate *SoftLayer_Security_Certificate) String() string {
+	return "SoftLayer_Security_Certificate"
 }
 
 // CreateObject - Add a certificate to your account for your records, or for use with various services.

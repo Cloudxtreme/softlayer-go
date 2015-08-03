@@ -29,3 +29,7 @@ type SoftLayer_Marketplace_Partner_File_Attributes struct {
 	// Width - <nil>
 	Width int `json:"width"`
 }
+
+func (softlayer_marketplace_partner_file_attributes *SoftLayer_Marketplace_Partner_File_Attributes) String() string {
+	return "SoftLayer_Marketplace_Partner_File_Attributes"
+}

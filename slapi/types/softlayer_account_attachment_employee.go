@@ -21,3 +21,7 @@ type SoftLayer_Account_Attachment_Employee struct {
 	// RoleId - no documentation
 	RoleId int `json:"roleId"`
 }
+
+func (softlayer_account_attachment_employee *SoftLayer_Account_Attachment_Employee) String() string {
+	return "SoftLayer_Account_Attachment_Employee"
+}

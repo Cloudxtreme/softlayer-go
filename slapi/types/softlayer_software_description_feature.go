@@ -19,3 +19,7 @@ type SoftLayer_Software_Description_Feature struct {
 	// Vendor - The vendor that a software description feature belongs to.
 	Vendor string `json:"vendor"`
 }
+
+func (softlayer_software_description_feature *SoftLayer_Software_Description_Feature) String() string {
+	return "SoftLayer_Software_Description_Feature"
+}

@@ -29,3 +29,7 @@ type SoftLayer_Hardware_Component_Type struct {
 	// TypeParentId - no documentation
 	TypeParentId int `json:"typeParentId"`
 }
+
+func (softlayer_hardware_component_type *SoftLayer_Hardware_Component_Type) String() string {
+	return "SoftLayer_Hardware_Component_Type"
+}

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Security_Question - The SoftLayer_User_Security_Question data type contains
@@ -21,6 +21,10 @@ type SoftLayer_User_Security_Question struct {
 
 	// Viewable - no documentation
 	Viewable int `json:"viewable"`
+}
+
+func (softlayer_user_security_question *SoftLayer_User_Security_Question) String() string {
+	return "SoftLayer_User_Security_Question"
 }
 
 // GetAllObjects - no documentation

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Item - Every individual item that a SoftLayer customer is billed for is recorded
@@ -373,6 +373,10 @@ type SoftLayer_Billing_Item struct {
 	// UpgradeItems - Billing items whose product item has an upgrade path defined in our system will
 	// return all the product items in the upgrade path.
 	UpgradeItems []*SoftLayer_Product_Item `json:"upgradeItems"`
+}
+
+func (softlayer_billing_item *SoftLayer_Billing_Item) String() string {
+	return "SoftLayer_Billing_Item"
 }
 
 // CancelItem - Cancel the resource or service for a billing Item. By default the billing item will be

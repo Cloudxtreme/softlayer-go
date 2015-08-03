@@ -18,3 +18,7 @@ type SoftLayer_Container_Ticket_Survey_Preference struct {
 	// OptedOutDate - <nil>
 	OptedOutDate *time.Time `json:"optedOutDate"`
 }
+
+func (softlayer_container_ticket_survey_preference *SoftLayer_Container_Ticket_Survey_Preference) String() string {
+	return "SoftLayer_Container_Ticket_Survey_Preference"
+}

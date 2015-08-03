@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Dns_Domain_ResourceRecord_MxType - SoftLayer_Dns_Domain_ResourceRecord_MxType is a
@@ -16,6 +16,10 @@ import (
 // their priority, defined by the mxPriority property. MX records must be defined for hosts with
 // accompanying A or resource records. They may not point mail towards a host defined by a record.
 type SoftLayer_Dns_Domain_ResourceRecord_MxType struct {
+}
+
+func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord_MxType"
 }
 
 // CreateObject - createObject creates a new MX record. The ''host'' property of the templateObject

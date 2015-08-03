@@ -28,3 +28,7 @@ type SoftLayer_Container_Product_Order_Attribute_Address struct {
 	// State - no documentation
 	State string `json:"state"`
 }
+
+func (softlayer_container_product_order_attribute_address *SoftLayer_Container_Product_Order_Attribute_Address) String() string {
+	return "SoftLayer_Container_Product_Order_Attribute_Address"
+}

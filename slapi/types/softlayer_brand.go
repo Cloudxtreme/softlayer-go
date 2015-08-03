@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Brand - The SoftLayer_Brand data type contains brand information relating to the single
@@ -100,6 +100,10 @@ type SoftLayer_Brand struct {
 
 	// VirtualGuests - no documentation
 	VirtualGuests []*SoftLayer_Virtual_Guest `json:"virtualGuests"`
+}
+
+func (softlayer_brand *SoftLayer_Brand) String() string {
+	return "SoftLayer_Brand"
 }
 
 // CreateCustomerAccount - no documentation

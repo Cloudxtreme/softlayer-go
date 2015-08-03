@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Hardware_Server - The SoftLayer_Hardware_Server data type contains general information
@@ -160,6 +160,10 @@ type SoftLayer_Hardware_Server struct {
 
 	// VirtualGuests - no documentation
 	VirtualGuests []*SoftLayer_Virtual_Guest `json:"virtualGuests"`
+}
+
+func (softlayer_hardware_server *SoftLayer_Hardware_Server) String() string {
+	return "SoftLayer_Hardware_Server"
 }
 
 // ActivatePrivatePort - no documentation

@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Auxiliary_Press_Release_About_Press_Release - <nil>
@@ -32,6 +32,10 @@ type SoftLayer_Auxiliary_Press_Release_About_Press_Release struct {
 
 	// SortOrder - no documentation
 	SortOrder int `json:"sortOrder"`
+}
+
+func (softlayer_auxiliary_press_release_about_press_release *SoftLayer_Auxiliary_Press_Release_About_Press_Release) String() string {
+	return "SoftLayer_Auxiliary_Press_Release_About_Press_Release"
 }
 
 // GetObject - getObject retrieves the SoftLayer_Auxiliary_Press_Release_About_Press_Release object

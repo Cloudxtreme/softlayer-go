@@ -19,3 +19,7 @@ type SoftLayer_Container_Utility_File_Descriptor struct {
 	// ModifyDate - The date the file was last modified on the file server.
 	ModifyDate *time.Time `json:"modifyDate"`
 }
+
+func (softlayer_container_utility_file_descriptor *SoftLayer_Container_Utility_File_Descriptor) String() string {
+	return "SoftLayer_Container_Utility_File_Descriptor"
+}

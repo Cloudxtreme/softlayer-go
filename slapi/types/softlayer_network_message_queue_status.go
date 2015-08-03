@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Message_Queue_Status - The SoftLayer_Network_Message_Queue_Status data type
@@ -18,6 +18,10 @@ type SoftLayer_Network_Message_Queue_Status struct {
 
 	// Name - A user-friendly name of a message queue account status
 	Name string `json:"name"`
+}
+
+func (softlayer_network_message_queue_status *SoftLayer_Network_Message_Queue_Status) String() string {
+	return "SoftLayer_Network_Message_Queue_Status"
 }
 
 // GetObject - <nil>

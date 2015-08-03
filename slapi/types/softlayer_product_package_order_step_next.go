@@ -19,3 +19,7 @@ type SoftLayer_Product_Package_Order_Step_Next struct {
 	// Step - The SoftLayer_Product_Package_Order_Step to which this object belongs.
 	Step *SoftLayer_Product_Package_Order_Step `json:"step"`
 }
+
+func (softlayer_product_package_order_step_next *SoftLayer_Product_Package_Order_Step_Next) String() string {
+	return "SoftLayer_Product_Package_Order_Step_Next"
+}

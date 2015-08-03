@@ -35,3 +35,7 @@ type SoftLayer_Virtual_Guest_Block_Device_Template struct {
 	// space used.
 	Units string `json:"units"`
 }
+
+func (softlayer_virtual_guest_block_device_template *SoftLayer_Virtual_Guest_Block_Device_Template) String() string {
+	return "SoftLayer_Virtual_Guest_Block_Device_Template"
+}

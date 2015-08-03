@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Security_Certificate_Request - SoftLayer_Security_Certificate_Request data type is used to
@@ -61,6 +61,10 @@ type SoftLayer_Security_Certificate_Request struct {
 
 	// TechnicalContactEmailAddress - no documentation
 	TechnicalContactEmailAddress string `json:"technicalContactEmailAddress"`
+}
+
+func (softlayer_security_certificate_request *SoftLayer_Security_Certificate_Request) String() string {
+	return "SoftLayer_Security_Certificate_Request"
 }
 
 // CancelSslOrder - Cancels a pending SSL certificate order at Certificate Authority

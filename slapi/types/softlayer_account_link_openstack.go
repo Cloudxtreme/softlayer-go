@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Link_OpenStack - <nil>
@@ -13,9 +13,14 @@ type SoftLayer_Account_Link_OpenStack struct {
 	DomainId string `json:"domainId"`
 }
 
+func (softlayer_account_link_openstack *SoftLayer_Account_Link_OpenStack) String() string {
+	return "SoftLayer_Account_Link_OpenStack"
+}
+
 // CreateOSProject - <nil>
-func (softlayer_account_link_openstack *SoftLayer_Account_Link_OpenStack) CreateOSProject(ctx *slapi.RequestContext, request SoftLayer_Account_Link_OpenStack_LinkRequest) error {
-	return nil
+func (softlayer_account_link_openstack *SoftLayer_Account_Link_OpenStack) CreateOSProject(ctx *slapi.RequestContext, request SoftLayer_Account_Link_OpenStack_LinkRequest) (*SoftLayer_Account_Link_OpenStack_ProjectCreationDetails, error) {
+	var returnValue *SoftLayer_Account_Link_OpenStack_ProjectCreationDetails
+	return returnValue, nil
 }
 
 // DeleteOSProject - <nil>

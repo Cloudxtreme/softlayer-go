@@ -103,3 +103,7 @@ type SoftLayer_Billing_Payment_Card_Transaction struct {
 	// institution.
 	SerializedRequest string `json:"serializedRequest"`
 }
+
+func (softlayer_billing_payment_card_transaction *SoftLayer_Billing_Payment_Card_Transaction) String() string {
+	return "SoftLayer_Billing_Payment_Card_Transaction"
+}

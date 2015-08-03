@@ -12,3 +12,7 @@ type SoftLayer_Container_RemoteManagement_PmInfo struct {
 	// PmInfoReading - no documentation
 	PmInfoReading string `json:"pmInfoReading"`
 }
+
+func (softlayer_container_remotemanagement_pminfo *SoftLayer_Container_RemoteManagement_PmInfo) String() string {
+	return "SoftLayer_Container_RemoteManagement_PmInfo"
+}

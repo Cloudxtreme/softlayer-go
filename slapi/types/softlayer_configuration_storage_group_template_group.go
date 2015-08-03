@@ -23,3 +23,7 @@ type SoftLayer_Configuration_Storage_Group_Template_Group struct {
 	// Type - <nil>
 	Type *SoftLayer_Configuration_Storage_Group_Array_Type `json:"type"`
 }
+
+func (softlayer_configuration_storage_group_template_group *SoftLayer_Configuration_Storage_Group_Template_Group) String() string {
+	return "SoftLayer_Configuration_Storage_Group_Template_Group"
+}

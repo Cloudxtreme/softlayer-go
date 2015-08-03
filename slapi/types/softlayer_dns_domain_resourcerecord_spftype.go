@@ -11,3 +11,7 @@ package sl
 // as Sender Policy Framework.
 type SoftLayer_Dns_Domain_ResourceRecord_SpfType struct {
 }
+
+func (softlayer_dns_domain_resourcerecord_spftype *SoftLayer_Dns_Domain_ResourceRecord_SpfType) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord_SpfType"
+}

@@ -7,3 +7,7 @@ package sl
 // usernames and passwords. Defaults are initiated by this object.
 type SoftLayer_Software_Component_Analytics_Urchin struct {
 }
+
+func (softlayer_software_component_analytics_urchin *SoftLayer_Software_Component_Analytics_Urchin) String() string {
+	return "SoftLayer_Software_Component_Analytics_Urchin"
+}

@@ -30,3 +30,7 @@ type SoftLayer_Ticket_Activity struct {
 	// Value - <nil>
 	Value string `json:"value"`
 }
+
+func (softlayer_ticket_activity *SoftLayer_Ticket_Activity) String() string {
+	return "SoftLayer_Ticket_Activity"
+}

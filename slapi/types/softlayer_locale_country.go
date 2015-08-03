@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Locale_Country - <nil>
@@ -17,6 +17,10 @@ type SoftLayer_Locale_Country struct {
 
 	// States - <nil>
 	States []*SoftLayer_Locale_StateProvince `json:"states"`
+}
+
+func (softlayer_locale_country *SoftLayer_Locale_Country) String() string {
+	return "SoftLayer_Locale_Country"
 }
 
 // GetAvailableCountries - Use this method to retrieve a list of countries and locale information

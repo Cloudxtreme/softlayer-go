@@ -39,3 +39,7 @@ type SoftLayer_Container_Network_Storage_Evault_WebCc_JobDetails struct {
 	// VirtualGuestId - no documentation
 	VirtualGuestId int `json:"virtualGuestId"`
 }
+
+func (softlayer_container_network_storage_evault_webcc_jobdetails *SoftLayer_Container_Network_Storage_Evault_WebCc_JobDetails) String() string {
+	return "SoftLayer_Container_Network_Storage_Evault_WebCc_JobDetails"
+}

@@ -10,3 +10,7 @@ package sl
 // rule set templates.
 type SoftLayer_Network_Firewall_Update_Request_Rule_Version6 struct {
 }
+
+func (softlayer_network_firewall_update_request_rule_version6 *SoftLayer_Network_Firewall_Update_Request_Rule_Version6) String() string {
+	return "SoftLayer_Network_Firewall_Update_Request_Rule_Version6"
+}

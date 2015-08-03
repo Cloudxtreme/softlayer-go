@@ -10,3 +10,7 @@ type SoftLayer_Container_Product_Order_Network_ContentDelivery_Account_Upgrade s
 	// CdnAccountId - ID of an existing CDN account. You can use this to upgrade an existing CDN account.
 	CdnAccountId string `json:"cdnAccountId"`
 }
+
+func (softlayer_container_product_order_network_contentdelivery_account_upgrade *SoftLayer_Container_Product_Order_Network_ContentDelivery_Account_Upgrade) String() string {
+	return "SoftLayer_Container_Product_Order_Network_ContentDelivery_Account_Upgrade"
+}

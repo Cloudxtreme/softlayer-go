@@ -13,3 +13,7 @@ type SoftLayer_Network_Storage_Hub struct {
 	// BandwidthBillingItems - The billing items tied to a Storage service's bandwidth usage.
 	BandwidthBillingItems []*SoftLayer_Billing_Item `json:"bandwidthBillingItems"`
 }
+
+func (softlayer_network_storage_hub *SoftLayer_Network_Storage_Hub) String() string {
+	return "SoftLayer_Network_Storage_Hub"
+}

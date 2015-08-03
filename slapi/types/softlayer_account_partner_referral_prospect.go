@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Partner_Referral_Prospect - <nil>
@@ -23,6 +23,10 @@ type SoftLayer_Account_Partner_Referral_Prospect struct {
 
 	// LastName - <nil>
 	LastName string `json:"lastName"`
+}
+
+func (softlayer_account_partner_referral_prospect *SoftLayer_Account_Partner_Referral_Prospect) String() string {
+	return "SoftLayer_Account_Partner_Referral_Prospect"
 }
 
 // CreateProspect - no documentation

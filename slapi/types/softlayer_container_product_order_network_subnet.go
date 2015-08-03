@@ -20,3 +20,7 @@ type SoftLayer_Container_Product_Order_Network_Subnet struct {
 	// Id - no documentation
 	Id int `json:"id"`
 }
+
+func (softlayer_container_product_order_network_subnet *SoftLayer_Container_Product_Order_Network_Subnet) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Subnet"
+}

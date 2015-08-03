@@ -15,3 +15,7 @@ type SoftLayer_Network_Component_Duplex_Mode struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_network_component_duplex_mode *SoftLayer_Network_Component_Duplex_Mode) String() string {
+	return "SoftLayer_Network_Component_Duplex_Mode"
+}

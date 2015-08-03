@@ -35,3 +35,7 @@ type SoftLayer_Ticket_Attachment struct {
 	// TicketId - The internal identifier of the ticket that an item is attached to.
 	TicketId int `json:"ticketId"`
 }
+
+func (softlayer_ticket_attachment *SoftLayer_Ticket_Attachment) String() string {
+	return "SoftLayer_Ticket_Attachment"
+}

@@ -20,3 +20,7 @@ type SoftLayer_Container_Tax_Rates struct {
 	// SetupTaxRate - no documentation
 	SetupTaxRate float64 `json:"setupTaxRate"`
 }
+
+func (softlayer_container_tax_rates *SoftLayer_Container_Tax_Rates) String() string {
+	return "SoftLayer_Container_Tax_Rates"
+}

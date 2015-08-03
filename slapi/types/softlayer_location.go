@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Location - Every piece of hardware and network connection owned by SoftLayer is tracked
@@ -89,6 +89,10 @@ type SoftLayer_Location struct {
 	// VdrGroup - A location can be a member of 1 Bandwidth Pooling Group. This will show which group to
 	// which a location belongs.
 	VdrGroup *SoftLayer_Location_Group_Location_CrossReference `json:"vdrGroup"`
+}
+
+func (softlayer_location *SoftLayer_Location) String() string {
+	return "SoftLayer_Location"
 }
 
 // GetAvailableObjectStorageDatacenters - Object Storage is only available in select datacenters. This

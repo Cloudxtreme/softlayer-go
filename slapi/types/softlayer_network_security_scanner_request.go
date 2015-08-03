@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Security_Scanner_Request - The SoftLayer_Network_Security_Scanner_Request data
@@ -58,6 +58,10 @@ type SoftLayer_Network_Security_Scanner_Request struct {
 
 	// StatusId - no documentation
 	StatusId int `json:"statusId"`
+}
+
+func (softlayer_network_security_scanner_request *SoftLayer_Network_Security_Scanner_Request) String() string {
+	return "SoftLayer_Network_Security_Scanner_Request"
 }
 
 // CreateObject - Create a new vulnerability scan request. New scan requests are picked up every five

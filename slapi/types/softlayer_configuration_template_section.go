@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Section - The SoftLayer_Configuration_Template_Section data type
@@ -79,6 +79,10 @@ type SoftLayer_Configuration_Template_Section struct {
 
 	// TypeId - Internal identifier of the configuration section type
 	TypeId int `json:"typeId"`
+}
+
+func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section) String() string {
+	return "SoftLayer_Configuration_Template_Section"
 }
 
 // GetObject - <nil>

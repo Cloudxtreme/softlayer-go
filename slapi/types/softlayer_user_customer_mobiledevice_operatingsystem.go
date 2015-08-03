@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_MobileDevice_OperatingSystem - This class represents the mobile operating
@@ -36,6 +36,10 @@ type SoftLayer_User_Customer_MobileDevice_OperatingSystem struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_user_customer_mobiledevice_operatingsystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem) String() string {
+	return "SoftLayer_User_Customer_MobileDevice_OperatingSystem"
 }
 
 // GetAllObjects - <nil>

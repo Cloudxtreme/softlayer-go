@@ -14,3 +14,7 @@ type SoftLayer_Container_Network_IntrusionProtection_Statistic struct {
 	// Name - Either the name of the attack in question, or the attacking IP Address
 	Name string `json:"name"`
 }
+
+func (softlayer_container_network_intrusionprotection_statistic *SoftLayer_Container_Network_IntrusionProtection_Statistic) String() string {
+	return "SoftLayer_Container_Network_IntrusionProtection_Statistic"
+}

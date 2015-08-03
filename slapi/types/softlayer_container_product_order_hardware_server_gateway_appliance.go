@@ -19,3 +19,7 @@ type SoftLayer_Container_Product_Order_Hardware_Server_Gateway_Appliance struct 
 	// RequiredUpstreamDeviceId - Used to identify which device the new server should be attached to.
 	RequiredUpstreamDeviceId int `json:"requiredUpstreamDeviceId"`
 }
+
+func (softlayer_container_product_order_hardware_server_gateway_appliance *SoftLayer_Container_Product_Order_Hardware_Server_Gateway_Appliance) String() string {
+	return "SoftLayer_Container_Product_Order_Hardware_Server_Gateway_Appliance"
+}

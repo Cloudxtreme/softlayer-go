@@ -47,3 +47,7 @@ type SoftLayer_Container_Graph struct {
 	// Width - no documentation
 	Width int `json:"width"`
 }
+
+func (softlayer_container_graph *SoftLayer_Container_Graph) String() string {
+	return "SoftLayer_Container_Graph"
+}

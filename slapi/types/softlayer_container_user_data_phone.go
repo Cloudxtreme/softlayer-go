@@ -18,3 +18,7 @@ type SoftLayer_Container_User_Data_Phone struct {
 	// PhoneType - Type of phone number such as "primary", "office" or "home"
 	PhoneType string `json:"phoneType"`
 }
+
+func (softlayer_container_user_data_phone *SoftLayer_Container_User_Data_Phone) String() string {
+	return "SoftLayer_Container_User_Data_Phone"
+}

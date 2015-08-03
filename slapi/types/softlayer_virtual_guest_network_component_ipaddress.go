@@ -26,3 +26,7 @@ type SoftLayer_Virtual_Guest_Network_Component_IpAddress struct {
 	// instance's console.
 	Type string `json:"type"`
 }
+
+func (softlayer_virtual_guest_network_component_ipaddress *SoftLayer_Virtual_Guest_Network_Component_IpAddress) String() string {
+	return "SoftLayer_Virtual_Guest_Network_Component_IpAddress"
+}

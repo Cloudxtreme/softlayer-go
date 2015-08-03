@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_ContentDelivery_Authentication_Address - The
@@ -40,6 +40,10 @@ type SoftLayer_Network_ContentDelivery_Authentication_Address struct {
 
 	// UserId - The internal identifier of the user who created an authentication IP record
 	UserId int `json:"userId"`
+}
+
+func (softlayer_network_contentdelivery_authentication_address *SoftLayer_Network_ContentDelivery_Authentication_Address) String() string {
+	return "SoftLayer_Network_ContentDelivery_Authentication_Address"
 }
 
 // CreateObject - This method creates an authentication IP record. Required parameters are *

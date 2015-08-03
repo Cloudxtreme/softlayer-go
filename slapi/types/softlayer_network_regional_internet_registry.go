@@ -16,3 +16,7 @@ type SoftLayer_Network_Regional_Internet_Registry struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_network_regional_internet_registry *SoftLayer_Network_Regional_Internet_Registry) String() string {
+	return "SoftLayer_Network_Regional_Internet_Registry"
+}

@@ -11,3 +11,7 @@ type SoftLayer_Container_Dns_Domain_Registration_Lookup_Items struct {
 	// Status - The status of the domain name if available and can be registered.
 	Status string `json:"status"`
 }
+
+func (softlayer_container_dns_domain_registration_lookup_items *SoftLayer_Container_Dns_Domain_Registration_Lookup_Items) String() string {
+	return "SoftLayer_Container_Dns_Domain_Registration_Lookup_Items"
+}

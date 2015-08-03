@@ -32,3 +32,7 @@ type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details struct {
 	// MinMemoryUsage - The minimum amount of memory utilized by this platform for the given day.
 	MinMemoryUsage int `json:"minMemoryUsage"`
 }
+
+func (softlayer_container_metric_tracking_object_virtual_host_details *SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details) String() string {
+	return "SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details"
+}

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Permission_Group - <nil>
@@ -52,6 +52,10 @@ type SoftLayer_User_Permission_Group struct {
 
 	// TypeId - no documentation
 	TypeId int `json:"typeId"`
+}
+
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) String() string {
+	return "SoftLayer_User_Permission_Group"
 }
 
 // AddAction - <nil>

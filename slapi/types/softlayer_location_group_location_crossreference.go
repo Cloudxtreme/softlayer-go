@@ -20,3 +20,7 @@ type SoftLayer_Location_Group_Location_CrossReference struct {
 	// Priority - If set, this is the priority of this cross reference record in the group.
 	Priority int `json:"priority"`
 }
+
+func (softlayer_location_group_location_crossreference *SoftLayer_Location_Group_Location_CrossReference) String() string {
+	return "SoftLayer_Location_Group_Location_CrossReference"
+}

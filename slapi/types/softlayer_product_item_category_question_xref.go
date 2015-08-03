@@ -29,3 +29,7 @@ type SoftLayer_Product_Item_Category_Question_Xref struct {
 	// Required - Flag to indicate whether an answer is required for the question..
 	Required bool `json:"required"`
 }
+
+func (softlayer_product_item_category_question_xref *SoftLayer_Product_Item_Category_Question_Xref) String() string {
+	return "SoftLayer_Product_Item_Category_Question_Xref"
+}

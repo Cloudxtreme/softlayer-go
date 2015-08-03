@@ -16,3 +16,7 @@ type SoftLayer_Container_Network_Storage_Hub_ObjectStorage_ContentDeliveryUrl st
 	// HttpUrl - <nil>
 	HttpUrl string `json:"httpUrl"`
 }
+
+func (softlayer_container_network_storage_hub_objectstorage_contentdeliveryurl *SoftLayer_Container_Network_Storage_Hub_ObjectStorage_ContentDeliveryUrl) String() string {
+	return "SoftLayer_Container_Network_Storage_Hub_ObjectStorage_ContentDeliveryUrl"
+}

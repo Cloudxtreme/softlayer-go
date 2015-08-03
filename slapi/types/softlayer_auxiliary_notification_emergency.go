@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Auxiliary_Notification_Emergency - A SoftLayer_Auxiliary_Notification_Emergency data
@@ -48,6 +48,10 @@ type SoftLayer_Auxiliary_Notification_Emergency struct {
 
 	// StatusId - no documentation
 	StatusId int `json:"statusId"`
+}
+
+func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency) String() string {
+	return "SoftLayer_Auxiliary_Notification_Emergency"
 }
 
 // GetAllObjects - Retrieve an array of SoftLayer_Auxiliary_Notification_Emergency data types, which

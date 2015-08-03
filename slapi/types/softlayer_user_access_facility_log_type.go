@@ -14,3 +14,7 @@ type SoftLayer_User_Access_Facility_Log_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_user_access_facility_log_type *SoftLayer_User_Access_Facility_Log_Type) String() string {
+	return "SoftLayer_User_Access_Facility_Log_Type"
+}

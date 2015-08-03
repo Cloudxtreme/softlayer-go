@@ -3,11 +3,15 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Ticket_Survey - <nil>
 type SoftLayer_Ticket_Survey struct {
+}
+
+func (softlayer_ticket_survey *SoftLayer_Ticket_Survey) String() string {
+	return "SoftLayer_Ticket_Survey"
 }
 
 // GetPreference - Use this method to retrieve the ticket survey preferences. It will return your

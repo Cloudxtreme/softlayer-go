@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Layout_Profile_Containers - <nil>
@@ -31,6 +31,10 @@ type SoftLayer_Layout_Profile_Containers struct {
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
+}
+
+func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) String() string {
+	return "SoftLayer_Layout_Profile_Containers"
 }
 
 // CreateObject - <nil>

@@ -17,3 +17,7 @@ type SoftLayer_Network_Message_Delivery_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_network_message_delivery_type *SoftLayer_Network_Message_Delivery_Type) String() string {
+	return "SoftLayer_Network_Message_Delivery_Type"
+}

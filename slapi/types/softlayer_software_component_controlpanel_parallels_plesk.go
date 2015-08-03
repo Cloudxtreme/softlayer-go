@@ -8,3 +8,7 @@ package sl
 // object.
 type SoftLayer_Software_Component_ControlPanel_Parallels_Plesk struct {
 }
+
+func (softlayer_software_component_controlpanel_parallels_plesk *SoftLayer_Software_Component_ControlPanel_Parallels_Plesk) String() string {
+	return "SoftLayer_Software_Component_ControlPanel_Parallels_Plesk"
+}

@@ -16,3 +16,7 @@ type SoftLayer_Container_Utility_Network_Subnet_Mask_Generic_Detail struct {
 	// Mask - no documentation
 	Mask string `json:"mask"`
 }
+
+func (softlayer_container_utility_network_subnet_mask_generic_detail *SoftLayer_Container_Utility_Network_Subnet_Mask_Generic_Detail) String() string {
+	return "SoftLayer_Container_Utility_Network_Subnet_Mask_Generic_Detail"
+}

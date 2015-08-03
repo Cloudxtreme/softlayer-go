@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_External_Binding - The SoftLayer_User_External_Binding data type contains general
@@ -58,6 +58,10 @@ type SoftLayer_User_External_Binding struct {
 	// VendorId - The [[SoftLayer_User_External_Binding_Vendor|vendor]] identifier of an external
 	// authentication binding.
 	VendorId int `json:"vendorId"`
+}
+
+func (softlayer_user_external_binding *SoftLayer_User_External_Binding) String() string {
+	return "SoftLayer_User_External_Binding"
 }
 
 // DeleteObject - Delete an external authentication binding. If the external binding currently has an

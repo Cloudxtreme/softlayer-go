@@ -3,11 +3,15 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Search - <nil>
 type SoftLayer_Search struct {
+}
+
+func (softlayer_search *SoftLayer_Search) String() string {
+	return "SoftLayer_Search"
 }
 
 // AdvancedSearch - This method allows for searching for SoftLayer resources by simple terms and

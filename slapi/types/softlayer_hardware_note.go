@@ -42,3 +42,7 @@ type SoftLayer_Hardware_Note struct {
 	// UserRecordId - <nil>
 	UserRecordId int `json:"userRecordId"`
 }
+
+func (softlayer_hardware_note *SoftLayer_Hardware_Note) String() string {
+	return "SoftLayer_Hardware_Note"
+}

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Software_Component_Password - This SoftLayer_Software_Component_Password data type
@@ -44,6 +44,10 @@ type SoftLayer_Software_Component_Password struct {
 
 	// Username - no documentation
 	Username string `json:"username"`
+}
+
+func (softlayer_software_component_password *SoftLayer_Software_Component_Password) String() string {
+	return "SoftLayer_Software_Component_Password"
 }
 
 // CreateObject - no documentation

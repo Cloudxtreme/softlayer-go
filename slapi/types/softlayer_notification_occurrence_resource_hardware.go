@@ -19,3 +19,7 @@ type SoftLayer_Notification_Occurrence_Resource_Hardware struct {
 	// ResourceType - <nil>
 	ResourceType string `json:"resourceType"`
 }
+
+func (softlayer_notification_occurrence_resource_hardware *SoftLayer_Notification_Occurrence_Resource_Hardware) String() string {
+	return "SoftLayer_Notification_Occurrence_Resource_Hardware"
+}

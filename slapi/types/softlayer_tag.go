@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Tag - The SoftLayer_Tag data type is an optional type associated with hardware. The
@@ -31,6 +31,10 @@ type SoftLayer_Tag struct {
 
 	// References - no documentation
 	References []*SoftLayer_Tag_Reference `json:"references"`
+}
+
+func (softlayer_tag *SoftLayer_Tag) String() string {
+	return "SoftLayer_Tag"
 }
 
 // AutoComplete - This function is responsible for setting the Tags values. The internal flag is set to

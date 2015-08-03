@@ -10,3 +10,7 @@ type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type struct {
 	// Alias - Database key associated with this bandwidth detail type.
 	Alias string `json:"alias"`
 }
+
+func (softlayer_network_bandwidth_version1_usage_detail_type *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type"
+}

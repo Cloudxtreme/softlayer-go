@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Message_Delivery_Email_Sendgrid - <nil>
@@ -15,6 +15,10 @@ type SoftLayer_Network_Message_Delivery_Email_Sendgrid struct {
 	// SmtpAccess - A flag that determines if a SendGrid e-mail delivery account has access to send mail
 	// through the SendGrid server.
 	SmtpAccess string `json:"smtpAccess"`
+}
+
+func (softlayer_network_message_delivery_email_sendgrid *SoftLayer_Network_Message_Delivery_Email_Sendgrid) String() string {
+	return "SoftLayer_Network_Message_Delivery_Email_Sendgrid"
 }
 
 // AddUnsubscribeEmailAddress - <nil>

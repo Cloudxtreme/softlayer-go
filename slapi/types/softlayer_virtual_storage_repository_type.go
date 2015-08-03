@@ -22,3 +22,7 @@ type SoftLayer_Virtual_Storage_Repository_Type struct {
 	// belong to this type.
 	StorageRepositoryCount uint64 `json:"storageRepositoryCount"`
 }
+
+func (softlayer_virtual_storage_repository_type *SoftLayer_Virtual_Storage_Repository_Type) String() string {
+	return "SoftLayer_Virtual_Storage_Repository_Type"
+}

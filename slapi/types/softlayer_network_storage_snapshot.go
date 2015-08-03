@@ -11,3 +11,7 @@ type SoftLayer_Network_Storage_Snapshot struct {
 	// VolumeName - no documentation
 	VolumeName string `json:"volumeName"`
 }
+
+func (softlayer_network_storage_snapshot *SoftLayer_Network_Storage_Snapshot) String() string {
+	return "SoftLayer_Network_Storage_Snapshot"
+}

@@ -14,3 +14,7 @@ type SoftLayer_Survey_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_survey_type *SoftLayer_Survey_Type) String() string {
+	return "SoftLayer_Survey_Type"
+}

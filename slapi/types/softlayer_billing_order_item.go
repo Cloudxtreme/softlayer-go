@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Order_Item - Every individual item that a SoftLayer customer is billed for is
@@ -199,6 +199,10 @@ type SoftLayer_Billing_Order_Item struct {
 
 	// UpgradeItem - The next SoftLayer_Product_Item in the upgrade path for this order item.
 	UpgradeItem *SoftLayer_Product_Item `json:"upgradeItem"`
+}
+
+func (softlayer_billing_order_item *SoftLayer_Billing_Order_Item) String() string {
+	return "SoftLayer_Billing_Order_Item"
 }
 
 // GetObject - getObject retrieves the SoftLayer_Billing_Item object whose ID number corresponds to the

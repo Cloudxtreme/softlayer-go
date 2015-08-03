@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Provisioning_Hook - The SoftLayer_Provisioning_Hook contains all the information needed to
@@ -40,6 +40,10 @@ type SoftLayer_Provisioning_Hook struct {
 	// Uri - The endpoint that the script will be downloaded from AND BE If the endpoint is the script will
 	// only be downloaded. If the endpoint is the script will be downloaded and executed.
 	Uri string `json:"uri"`
+}
+
+func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) String() string {
+	return "SoftLayer_Provisioning_Hook"
 }
 
 // CreateObject - <nil>

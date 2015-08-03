@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Vlan_Firewall - The SoftLayer_Network_Vlan_Firewall data type contains general
@@ -71,6 +71,10 @@ type SoftLayer_Network_Vlan_Firewall struct {
 
 	// TagReferences - <nil>
 	TagReferences []*SoftLayer_Tag_Reference `json:"tagReferences"`
+}
+
+func (softlayer_network_vlan_firewall *SoftLayer_Network_Vlan_Firewall) String() string {
+	return "SoftLayer_Network_Vlan_Firewall"
 }
 
 // GetObject - getObject returns a SoftLayer_Network_Vlan_Firewall object. You can only get objects for

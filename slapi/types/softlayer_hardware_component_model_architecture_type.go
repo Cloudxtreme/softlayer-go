@@ -14,3 +14,7 @@ type SoftLayer_Hardware_Component_Model_Architecture_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_hardware_component_model_architecture_type *SoftLayer_Hardware_Component_Model_Architecture_Type) String() string {
+	return "SoftLayer_Hardware_Component_Model_Architecture_Type"
+}

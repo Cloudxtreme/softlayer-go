@@ -19,3 +19,7 @@ type SoftLayer_Account_Media_Data_Transfer_Request_Status struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_account_media_data_transfer_request_status *SoftLayer_Account_Media_Data_Transfer_Request_Status) String() string {
+	return "SoftLayer_Account_Media_Data_Transfer_Request_Status"
+}

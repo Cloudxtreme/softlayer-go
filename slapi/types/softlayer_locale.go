@@ -18,3 +18,7 @@ type SoftLayer_Locale struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_locale *SoftLayer_Locale) String() string {
+	return "SoftLayer_Locale"
+}

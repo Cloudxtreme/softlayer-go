@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_FlexibleCredit_Program - <nil>
@@ -17,6 +17,10 @@ type SoftLayer_FlexibleCredit_Program struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) String() string {
+	return "SoftLayer_FlexibleCredit_Program"
 }
 
 // GetAffiliatesAvailableForSelfEnrollmentByVerificationType - <nil>

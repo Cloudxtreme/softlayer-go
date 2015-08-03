@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Item_Price - The SoftLayer_Product_Item_Price data type contains general
@@ -77,9 +77,13 @@ type SoftLayer_Product_Item_Price struct {
 	// LaborFee - no documentation
 	LaborFee float64 `json:"laborFee"`
 
-	// LocationGroupId - The id of the location group this price is applicable for. This property being
-	// null indicates this price can be used for any location that does not have another price with a
-	// location group that includes the location.
+	// LocationGroupId - The id of the [[SoftLayer_Location_Group_Pricing]] that this price is part of. If
+	// set to null, the price is considered a standard price, which can be used with any location when
+	// ordering. During order [[SoftLayer_Product_Order/verifyOrder|verification]] and
+	// [[SoftLayer_Product_Order/placeOrder|placement]], if a standard price is used, that price may be
+	// replaced with a location based price, which does not have this property set to null. The location
+	// based price must be part of a [[SoftLayer_Location_Group_Pricing]] that has the location being
+	// ordered in order for this to happen.
 	LocationGroupId int `json:"locationGroupId"`
 
 	// OnSaleFlag - no documentation
@@ -120,7 +124,9 @@ type SoftLayer_Product_Item_Price struct {
 	// PresetConfigurations - A list of preset configurations this price is used in.'
 	PresetConfigurations []*SoftLayer_Product_Package_Preset_Configuration `json:"presetConfigurations"`
 
-	// PricingLocationGroup - The pricing location group that this price is applicable for.
+	// PricingLocationGroup - The pricing location group that this price is applicable for. Prices that
+	// have a pricing location group will only be available for ordering with the locations specified on
+	// the location group.
 	PricingLocationGroup *SoftLayer_Location_Group_Pricing `json:"pricingLocationGroup"`
 
 	// ProratedRecurringFee - A recurring fee is a fee that happens every billing period. This fee is
@@ -153,6 +159,10 @@ type SoftLayer_Product_Item_Price struct {
 
 	// UsageRate - no documentation
 	UsageRate float64 `json:"usageRate"`
+}
+
+func (softlayer_product_item_price *SoftLayer_Product_Item_Price) String() string {
+	return "SoftLayer_Product_Item_Price"
 }
 
 // GetObject - <nil>

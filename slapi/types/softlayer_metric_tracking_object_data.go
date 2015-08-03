@@ -20,3 +20,7 @@ type SoftLayer_Metric_Tracking_Object_Data struct {
 	// Type - no documentation
 	Type string `json:"type"`
 }
+
+func (softlayer_metric_tracking_object_data *SoftLayer_Metric_Tracking_Object_Data) String() string {
+	return "SoftLayer_Metric_Tracking_Object_Data"
+}

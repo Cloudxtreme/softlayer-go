@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Monitor_Version1_Query_Host - The Monitoring_Query_Host type represents a
@@ -58,6 +58,10 @@ type SoftLayer_Network_Monitor_Version1_Query_Host struct {
 	// WaitCycles - The number of 5-minute cycles to wait before the "responseAction" is taken. If set to
 	// 0, the response action will be taken immediately
 	WaitCycles int `json:"waitCycles"`
+}
+
+func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) String() string {
+	return "SoftLayer_Network_Monitor_Version1_Query_Host"
 }
 
 // CreateObject - Passing in an unsaved instances of a Query_Host object into this function will create

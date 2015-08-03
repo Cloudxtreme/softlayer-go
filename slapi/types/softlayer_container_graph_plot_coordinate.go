@@ -14,3 +14,7 @@ type SoftLayer_Container_Graph_Plot_Coordinate struct {
 	// ZValue - <nil>
 	ZValue float32 `json:"zValue"`
 }
+
+func (softlayer_container_graph_plot_coordinate *SoftLayer_Container_Graph_Plot_Coordinate) String() string {
+	return "SoftLayer_Container_Graph_Plot_Coordinate"
+}

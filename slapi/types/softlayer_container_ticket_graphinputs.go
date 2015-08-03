@@ -25,3 +25,7 @@ type SoftLayer_Container_Ticket_GraphInputs struct {
 	// StartDate - This is a unix timestamp that represents the begin date/time for a graph.
 	StartDate *time.Time `json:"startDate"`
 }
+
+func (softlayer_container_ticket_graphinputs *SoftLayer_Container_Ticket_GraphInputs) String() string {
+	return "SoftLayer_Container_Ticket_GraphInputs"
+}

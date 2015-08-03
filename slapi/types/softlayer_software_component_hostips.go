@@ -3,12 +3,16 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Software_Component_HostIps - This object specifies a specific type of Software Component:
 // A Host Intrusion Protection System instance.
 type SoftLayer_Software_Component_HostIps struct {
+}
+
+func (softlayer_software_component_hostips *SoftLayer_Software_Component_HostIps) String() string {
+	return "SoftLayer_Software_Component_HostIps"
 }
 
 // GetCurrentHostIpsPolicies - no documentation

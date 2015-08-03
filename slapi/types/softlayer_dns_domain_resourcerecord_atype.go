@@ -9,3 +9,7 @@ package sl
 // for the A record equals "host" and the ''data'' property equals "10.0.0.1".
 type SoftLayer_Dns_Domain_ResourceRecord_AType struct {
 }
+
+func (softlayer_dns_domain_resourcerecord_atype *SoftLayer_Dns_Domain_ResourceRecord_AType) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord_AType"
+}

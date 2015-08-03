@@ -6,3 +6,7 @@ package sl
 // to include office-specific properties.
 type SoftLayer_Location_Office struct {
 }
+
+func (softlayer_location_office *SoftLayer_Location_Office) String() string {
+	return "SoftLayer_Location_Office"
+}

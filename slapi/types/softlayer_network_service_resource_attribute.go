@@ -14,3 +14,7 @@ type SoftLayer_Network_Service_Resource_Attribute struct {
 	// Value - <nil>
 	Value string `json:"value"`
 }
+
+func (softlayer_network_service_resource_attribute *SoftLayer_Network_Service_Resource_Attribute) String() string {
+	return "SoftLayer_Network_Service_Resource_Attribute"
+}

@@ -17,3 +17,7 @@ type SoftLayer_Container_Search_ObjectType struct {
 	// Properties - A collection of [[SoftLayer_Container_Search_ObjectType_Property|object properties]].
 	Properties []*SoftLayer_Container_Search_ObjectType_Property `json:"properties"`
 }
+
+func (softlayer_container_search_objecttype *SoftLayer_Container_Search_ObjectType) String() string {
+	return "SoftLayer_Container_Search_ObjectType"
+}

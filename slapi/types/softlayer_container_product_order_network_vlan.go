@@ -34,3 +34,7 @@ type SoftLayer_Container_Product_Order_Network_Vlan struct {
 	// VlanNumber - no documentation
 	VlanNumber int `json:"vlanNumber"`
 }
+
+func (softlayer_container_product_order_network_vlan *SoftLayer_Container_Product_Order_Network_Vlan) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Vlan"
+}

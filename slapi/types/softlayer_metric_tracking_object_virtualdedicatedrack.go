@@ -54,3 +54,7 @@ type SoftLayer_Metric_Tracking_Object_VirtualDedicatedRack struct {
 	// Resource - no documentation
 	Resource *SoftLayer_Network_Bandwidth_Version1_Allotment `json:"resource"`
 }
+
+func (softlayer_metric_tracking_object_virtualdedicatedrack *SoftLayer_Metric_Tracking_Object_VirtualDedicatedRack) String() string {
+	return "SoftLayer_Metric_Tracking_Object_VirtualDedicatedRack"
+}

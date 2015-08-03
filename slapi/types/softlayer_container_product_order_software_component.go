@@ -11,3 +11,7 @@ type SoftLayer_Container_Product_Order_Software_Component struct {
 	// a virtual machine.
 	VirtualGuestPremiumOs bool `json:"virtualGuestPremiumOs"`
 }
+
+func (softlayer_container_product_order_software_component *SoftLayer_Container_Product_Order_Software_Component) String() string {
+	return "SoftLayer_Container_Product_Order_Software_Component"
+}

@@ -12,3 +12,7 @@ type SoftLayer_Hardware_Firewall struct {
 	// Users - A list of users that have access to this hardware firewall.
 	Users []*SoftLayer_User_Customer `json:"users"`
 }
+
+func (softlayer_hardware_firewall *SoftLayer_Hardware_Firewall) String() string {
+	return "SoftLayer_Hardware_Firewall"
+}

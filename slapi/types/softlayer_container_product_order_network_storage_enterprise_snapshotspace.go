@@ -10,3 +10,7 @@ type SoftLayer_Container_Product_Order_Network_Storage_Enterprise_SnapshotSpace 
 	// VolumeId - The [[SoftLayer_Network_Storage]] id for which snapshot space is being ordered for.
 	VolumeId int `json:"volumeId"`
 }
+
+func (softlayer_container_product_order_network_storage_enterprise_snapshotspace *SoftLayer_Container_Product_Order_Network_Storage_Enterprise_SnapshotSpace) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Storage_Enterprise_SnapshotSpace"
+}

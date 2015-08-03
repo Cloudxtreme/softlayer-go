@@ -6,3 +6,7 @@ package sl
 // Component: A package management instance.
 type SoftLayer_Software_Component_Package_Management struct {
 }
+
+func (softlayer_software_component_package_management *SoftLayer_Software_Component_Package_Management) String() string {
+	return "SoftLayer_Software_Component_Package_Management"
+}

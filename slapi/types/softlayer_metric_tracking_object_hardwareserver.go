@@ -54,3 +54,7 @@ type SoftLayer_Metric_Tracking_Object_HardwareServer struct {
 	// Resource - no documentation
 	Resource *SoftLayer_Hardware_Server `json:"resource"`
 }
+
+func (softlayer_metric_tracking_object_hardwareserver *SoftLayer_Metric_Tracking_Object_HardwareServer) String() string {
+	return "SoftLayer_Metric_Tracking_Object_HardwareServer"
+}

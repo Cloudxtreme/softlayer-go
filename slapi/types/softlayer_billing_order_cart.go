@@ -3,11 +3,15 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Order_Cart - <nil>
 type SoftLayer_Billing_Order_Cart struct {
+}
+
+func (softlayer_billing_order_cart *SoftLayer_Billing_Order_Cart) String() string {
+	return "SoftLayer_Billing_Order_Cart"
 }
 
 // CreateCart - When creating a new cart, the order data is sent through

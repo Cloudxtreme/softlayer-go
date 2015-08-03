@@ -38,3 +38,7 @@ type SoftLayer_Hardware_Chassis struct {
 	// Version - no documentation
 	Version string `json:"version"`
 }
+
+func (softlayer_hardware_chassis *SoftLayer_Hardware_Chassis) String() string {
+	return "SoftLayer_Hardware_Chassis"
+}

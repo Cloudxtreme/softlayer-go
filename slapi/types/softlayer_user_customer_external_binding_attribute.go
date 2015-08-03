@@ -10,3 +10,7 @@ package sl
 // *Credential Expiration Date *Credential Last Update Date
 type SoftLayer_User_Customer_External_Binding_Attribute struct {
 }
+
+func (softlayer_user_customer_external_binding_attribute *SoftLayer_User_Customer_External_Binding_Attribute) String() string {
+	return "SoftLayer_User_Customer_External_Binding_Attribute"
+}

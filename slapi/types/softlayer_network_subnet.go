@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Subnet - The SoftLayer_Network_Subnet data type contains general information
@@ -225,6 +225,10 @@ type SoftLayer_Network_Subnet struct {
 
 	// VirtualGuests - no documentation
 	VirtualGuests []*SoftLayer_Virtual_Guest `json:"virtualGuests"`
+}
+
+func (softlayer_network_subnet *SoftLayer_Network_Subnet) String() string {
+	return "SoftLayer_Network_Subnet"
 }
 
 // CreateReverseDomainRecords - no documentation

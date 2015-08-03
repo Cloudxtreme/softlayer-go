@@ -39,3 +39,7 @@ type SoftLayer_User_Customer_Access_Authentication struct {
 	// Username - The username used when attempting to log into the SoftLayer customer portal
 	Username string `json:"username"`
 }
+
+func (softlayer_user_customer_access_authentication *SoftLayer_User_Customer_Access_Authentication) String() string {
+	return "SoftLayer_User_Customer_Access_Authentication"
+}

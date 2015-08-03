@@ -17,3 +17,7 @@ type SoftLayer_Network_Storage_Property_Type struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_network_storage_property_type *SoftLayer_Network_Storage_Property_Type) String() string {
+	return "SoftLayer_Network_Storage_Property_Type"
+}

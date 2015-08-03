@@ -14,3 +14,7 @@ type SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat st
 	// ResourceTableId - The resource (unique identifier) for a software component billing item.
 	ResourceTableId int `json:"resourceTableId"`
 }
+
+func (softlayer_billing_item_software_component_virtual_operatingsystem_redhat *SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat) String() string {
+	return "SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat"
+}

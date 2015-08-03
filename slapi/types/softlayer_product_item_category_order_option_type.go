@@ -22,3 +22,7 @@ type SoftLayer_Product_Item_Category_Order_Option_Type struct {
 	// Value - no documentation
 	Value string `json:"value"`
 }
+
+func (softlayer_product_item_category_order_option_type *SoftLayer_Product_Item_Category_Order_Option_Type) String() string {
+	return "SoftLayer_Product_Item_Category_Order_Option_Type"
+}

@@ -31,3 +31,7 @@ type SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summ
 	// ViewCount - no documentation
 	ViewCount uint64 `json:"viewCount"`
 }
+
+func (softlayer_container_network_contentdelivery_bandwidth_pointsofpresence_summary *SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summary) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summary"
+}

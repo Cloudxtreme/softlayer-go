@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Order_Quote - The SoftLayer_Billing_Oder_Quote data type contains general
@@ -58,6 +58,10 @@ type SoftLayer_Billing_Order_Quote struct {
 
 	// Status - This property Holds the current status of a Quote: pending,expired, saved or deleted
 	Status string `json:"status"`
+}
+
+func (softlayer_billing_order_quote *SoftLayer_Billing_Order_Quote) String() string {
+	return "SoftLayer_Billing_Order_Quote"
 }
 
 // Claim - This method is used to transfer an anonymous quote to the active user and associated

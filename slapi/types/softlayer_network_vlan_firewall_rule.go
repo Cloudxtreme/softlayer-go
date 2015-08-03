@@ -59,3 +59,7 @@ type SoftLayer_Network_Vlan_Firewall_Rule struct {
 	// Version - Whether this rule is an IPv4 rule or an IPv6 rule. If
 	Version int `json:"version"`
 }
+
+func (softlayer_network_vlan_firewall_rule *SoftLayer_Network_Vlan_Firewall_Rule) String() string {
+	return "SoftLayer_Network_Vlan_Firewall_Rule"
+}

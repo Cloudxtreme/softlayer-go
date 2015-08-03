@@ -13,3 +13,7 @@ type SoftLayer_Container_Product_Order_Monitoring_Package struct {
 	// ServerType - <nil>
 	ServerType string `json:"serverType"`
 }
+
+func (softlayer_container_product_order_monitoring_package *SoftLayer_Container_Product_Order_Monitoring_Package) String() string {
+	return "SoftLayer_Container_Product_Order_Monitoring_Package"
+}

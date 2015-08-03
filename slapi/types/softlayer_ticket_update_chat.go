@@ -9,3 +9,7 @@ type SoftLayer_Ticket_Update_Chat struct {
 	// Chat - no documentation
 	Chat *SoftLayer_Ticket_Chat_Liveperson `json:"chat"`
 }
+
+func (softlayer_ticket_update_chat *SoftLayer_Ticket_Update_Chat) String() string {
+	return "SoftLayer_Ticket_Update_Chat"
+}

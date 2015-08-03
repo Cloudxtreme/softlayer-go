@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Application_Delivery_Controller_Configuration_History - The
@@ -26,6 +26,10 @@ type SoftLayer_Network_Application_Delivery_Controller_Configuration_History str
 
 	// Notes - Editable notes used to describe a configuration history record
 	Notes string `json:"notes"`
+}
+
+func (softlayer_network_application_delivery_controller_configuration_history *SoftLayer_Network_Application_Delivery_Controller_Configuration_History) String() string {
+	return "SoftLayer_Network_Application_Delivery_Controller_Configuration_History"
 }
 
 // DeleteObject - deleteObject permanently removes a configuration history record

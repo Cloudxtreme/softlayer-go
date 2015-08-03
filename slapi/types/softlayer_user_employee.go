@@ -76,3 +76,7 @@ type SoftLayer_User_Employee struct {
 	// state "Employee".
 	Username string `json:"username"`
 }
+
+func (softlayer_user_employee *SoftLayer_User_Employee) String() string {
+	return "SoftLayer_User_Employee"
+}

@@ -54,3 +54,7 @@ type SoftLayer_Container_Account_Graph_Outputs struct {
 	// WaitingEmployeeResponseTicketCount - no documentation
 	WaitingEmployeeResponseTicketCount string `json:"waitingEmployeeResponseTicketCount"`
 }
+
+func (softlayer_container_account_graph_outputs *SoftLayer_Container_Account_Graph_Outputs) String() string {
+	return "SoftLayer_Container_Account_Graph_Outputs"
+}

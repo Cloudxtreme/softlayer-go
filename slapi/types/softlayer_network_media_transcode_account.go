@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Media_Transcode_Account - The SoftLayer_Network_Media_Transcode_Account contains
@@ -32,6 +32,10 @@ type SoftLayer_Network_Media_Transcode_Account struct {
 
 	// TranscodeJobs - no documentation
 	TranscodeJobs []*SoftLayer_Network_Media_Transcode_Job `json:"transcodeJobs"`
+}
+
+func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) String() string {
+	return "SoftLayer_Network_Media_Transcode_Account"
 }
 
 // CreateTranscodeAccount - With this method, you can create a transcode account. Individual SoftLayer

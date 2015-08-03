@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Provisioning_Maintenance_Window - The SoftLayer_Provisioning_Maintenance_Window represent
@@ -31,6 +31,10 @@ type SoftLayer_Provisioning_Maintenance_Window struct {
 
 	// PortalTzId - no documentation
 	PortalTzId int `json:"portalTzId"`
+}
+
+func (softlayer_provisioning_maintenance_window *SoftLayer_Provisioning_Maintenance_Window) String() string {
+	return "SoftLayer_Provisioning_Maintenance_Window"
 }
 
 // AddCustomerUpgradeWindow - no documentation

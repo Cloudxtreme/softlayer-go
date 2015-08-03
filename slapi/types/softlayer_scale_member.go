@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Member - <nil>
@@ -22,6 +22,10 @@ type SoftLayer_Scale_Member struct {
 
 	// ScaleGroupId - The identifier of the group this member belongs to.
 	ScaleGroupId int `json:"scaleGroupId"`
+}
+
+func (softlayer_scale_member *SoftLayer_Scale_Member) String() string {
+	return "SoftLayer_Scale_Member"
 }
 
 // DeleteObject - <nil>

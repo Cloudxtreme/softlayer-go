@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Currency_ExchangeRate - <nil>
@@ -28,6 +28,10 @@ type SoftLayer_Billing_Currency_ExchangeRate struct {
 
 	// Rate - <nil>
 	Rate float64 `json:"rate"`
+}
+
+func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) String() string {
+	return "SoftLayer_Billing_Currency_ExchangeRate"
 }
 
 // GetAllCurrencyExchangeRates - <nil>

@@ -32,3 +32,7 @@ type SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary struct {
 	// UsageUnits - The unit of measurement used in a CDN bandwidth summary.
 	UsageUnits string `json:"usageUnits"`
 }
+
+func (softlayer_container_network_contentdelivery_bandwidth_summary *SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary"
+}

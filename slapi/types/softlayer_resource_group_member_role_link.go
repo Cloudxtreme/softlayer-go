@@ -11,3 +11,7 @@ type SoftLayer_Resource_Group_Member_Role_Link struct {
 	// GroupTemplateRoleId - no documentation
 	GroupTemplateRoleId int `json:"groupTemplateRoleId"`
 }
+
+func (softlayer_resource_group_member_role_link *SoftLayer_Resource_Group_Member_Role_Link) String() string {
+	return "SoftLayer_Resource_Group_Member_Role_Link"
+}

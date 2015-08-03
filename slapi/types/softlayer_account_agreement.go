@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Agreement - <nil>
@@ -67,6 +67,10 @@ type SoftLayer_Account_Agreement struct {
 
 	// TopLevelBillingItems - The top level billing item associated with an agreement.
 	TopLevelBillingItems []*SoftLayer_Billing_Item `json:"topLevelBillingItems"`
+}
+
+func (softlayer_account_agreement *SoftLayer_Account_Agreement) String() string {
+	return "SoftLayer_Account_Agreement"
 }
 
 // GetObject - <nil>

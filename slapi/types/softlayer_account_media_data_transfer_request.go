@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Media_Data_Transfer_Request - The SoftLayer_Account_Media_Data_Transfer_Request
@@ -72,6 +72,10 @@ type SoftLayer_Account_Media_Data_Transfer_Request struct {
 
 	// Tickets - All tickets that are attached to the data transfer request.
 	Tickets []*SoftLayer_Ticket `json:"tickets"`
+}
+
+func (softlayer_account_media_data_transfer_request *SoftLayer_Account_Media_Data_Transfer_Request) String() string {
+	return "SoftLayer_Account_Media_Data_Transfer_Request"
 }
 
 // EditObject - Edit the properties of a data transfer request record by passing in a modified instance

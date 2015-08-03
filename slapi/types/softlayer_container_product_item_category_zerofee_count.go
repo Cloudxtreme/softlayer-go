@@ -19,3 +19,7 @@ type SoftLayer_Container_Product_Item_Category_ZeroFee_Count struct {
 	// Count - no documentation
 	Count int `json:"count"`
 }
+
+func (softlayer_container_product_item_category_zerofee_count *SoftLayer_Container_Product_Item_Category_ZeroFee_Count) String() string {
+	return "SoftLayer_Container_Product_Item_Category_ZeroFee_Count"
+}

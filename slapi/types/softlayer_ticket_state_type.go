@@ -17,3 +17,7 @@ type SoftLayer_Ticket_State_Type struct {
 	// Name - <nil>
 	Name string `json:"name"`
 }
+
+func (softlayer_ticket_state_type *SoftLayer_Ticket_State_Type) String() string {
+	return "SoftLayer_Ticket_State_Type"
+}

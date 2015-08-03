@@ -24,3 +24,7 @@ type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem str
 	// RequiresReboot - Flag indicating that a reboot is needed for this update to be fully applied
 	RequiresReboot bool `json:"requiresReboot"`
 }
+
+func (softlayer_container_utility_microsoft_windows_updateservices_updateitem *SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem) String() string {
+	return "SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem"
+}

@@ -24,3 +24,7 @@ type SoftLayer_Container_Network_ContentDelivery_SupportedProtocol struct {
 	// supported protocols are: rtmp, mms and http
 	Protocol string `json:"protocol"`
 }
+
+func (softlayer_container_network_contentdelivery_supportedprotocol *SoftLayer_Container_Network_ContentDelivery_SupportedProtocol) String() string {
+	return "SoftLayer_Container_Network_ContentDelivery_SupportedProtocol"
+}

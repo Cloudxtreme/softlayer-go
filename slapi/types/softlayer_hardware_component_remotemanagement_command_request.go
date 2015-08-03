@@ -40,3 +40,7 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command_Request struct {
 	// User - Information regarding the user who issued the remote management command.
 	User *SoftLayer_User_Customer `json:"user"`
 }
+
+func (softlayer_hardware_component_remotemanagement_command_request *SoftLayer_Hardware_Component_RemoteManagement_Command_Request) String() string {
+	return "SoftLayer_Hardware_Component_RemoteManagement_Command_Request"
+}

@@ -17,3 +17,7 @@ type SoftLayer_Notification_Occurrence_Account struct {
 	// NotificationOccurrenceEvent - <nil>
 	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent"`
 }
+
+func (softlayer_notification_occurrence_account *SoftLayer_Notification_Occurrence_Account) String() string {
+	return "SoftLayer_Notification_Occurrence_Account"
+}

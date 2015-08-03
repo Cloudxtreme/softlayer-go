@@ -44,3 +44,7 @@ type SoftLayer_Product_Package_Inventory struct {
 	// with.
 	PackageId int `json:"packageId"`
 }
+
+func (softlayer_product_package_inventory *SoftLayer_Product_Package_Inventory) String() string {
+	return "SoftLayer_Product_Package_Inventory"
+}

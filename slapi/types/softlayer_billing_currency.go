@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Currency - <nil>
@@ -17,6 +17,10 @@ type SoftLayer_Billing_Currency struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+func (softlayer_billing_currency *SoftLayer_Billing_Currency) String() string {
+	return "SoftLayer_Billing_Currency"
 }
 
 // GetAllObjects - <nil>

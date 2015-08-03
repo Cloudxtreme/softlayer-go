@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Policy - <nil>
@@ -75,6 +75,10 @@ type SoftLayer_Scale_Policy struct {
 
 	// Triggers - no documentation
 	Triggers []*SoftLayer_Scale_Policy_Trigger `json:"triggers"`
+}
+
+func (softlayer_scale_policy *SoftLayer_Scale_Policy) String() string {
+	return "SoftLayer_Scale_Policy"
 }
 
 // CreateObject - <nil>

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Storage_Repository - The SoftLayer_Virtual_Storage_Repository represents a web
@@ -62,6 +62,10 @@ type SoftLayer_Virtual_Storage_Repository struct {
 
 	// TypeId - A storage repositories [[SoftLayer_Virtual_Storage_Repository_Type|type]] ID
 	TypeId int `json:"typeId"`
+}
+
+func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository) String() string {
+	return "SoftLayer_Virtual_Storage_Repository"
 }
 
 // GetArchiveDiskUsageRatePerGb - Returns the archive storage disk usage fee rate per gigabyte.

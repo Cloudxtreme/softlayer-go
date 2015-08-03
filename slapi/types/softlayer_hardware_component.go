@@ -82,3 +82,7 @@ type SoftLayer_Hardware_Component struct {
 	// UplinkHardwareComponents - <nil>
 	UplinkHardwareComponents []*SoftLayer_Hardware_Component `json:"uplinkHardwareComponents"`
 }
+
+func (softlayer_hardware_component *SoftLayer_Hardware_Component) String() string {
+	return "SoftLayer_Hardware_Component"
+}

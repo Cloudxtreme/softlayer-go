@@ -27,3 +27,7 @@ type SoftLayer_Network_Customer_Subnet_IpAddress struct {
 	// Translations - All the address translations that are tied to an IP address.
 	Translations []*SoftLayer_Network_Tunnel_Module_Context_Address_Translation `json:"translations"`
 }
+
+func (softlayer_network_customer_subnet_ipaddress *SoftLayer_Network_Customer_Subnet_IpAddress) String() string {
+	return "SoftLayer_Network_Customer_Subnet_IpAddress"
+}

@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Guest - The virtual guest data type presents the structure in which all virtual
@@ -498,6 +498,10 @@ type SoftLayer_Virtual_Guest struct {
 
 	// VirtualRackName - The name of the bandwidth allotment that a computing instance belongs too.
 	VirtualRackName string `json:"virtualRackName"`
+}
+
+func (softlayer_virtual_guest *SoftLayer_Virtual_Guest) String() string {
+	return "SoftLayer_Virtual_Guest"
 }
 
 // ActivatePrivatePort - no documentation

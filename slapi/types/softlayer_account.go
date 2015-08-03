@@ -5,7 +5,7 @@ package sl
 import (
 	time "time"
 
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account - The SoftLayer_Account data type contains general information relating to a
@@ -1448,6 +1448,10 @@ type SoftLayer_Account struct {
 	// VirtualStoragePublicRepositoryCount - A count of an account's associated virtual server public
 	// storage repositories.
 	VirtualStoragePublicRepositoryCount uint64 `json:"virtualStoragePublicRepositoryCount"`
+}
+
+func (softlayer_account *SoftLayer_Account) String() string {
+	return "SoftLayer_Account"
 }
 
 // ActivatePartner - <nil>

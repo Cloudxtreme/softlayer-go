@@ -15,3 +15,7 @@ type SoftLayer_Hardware_Function struct {
 	// Id - no documentation
 	Id int `json:"id"`
 }
+
+func (softlayer_hardware_function *SoftLayer_Hardware_Function) String() string {
+	return "SoftLayer_Hardware_Function"
+}

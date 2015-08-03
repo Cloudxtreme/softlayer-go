@@ -53,3 +53,7 @@ type SoftLayer_Network_Protection_Address struct {
 	// UserRecord - <nil>
 	UserRecord *SoftLayer_User_Employee `json:"userRecord"`
 }
+
+func (softlayer_network_protection_address *SoftLayer_Network_Protection_Address) String() string {
+	return "SoftLayer_Network_Protection_Address"
+}

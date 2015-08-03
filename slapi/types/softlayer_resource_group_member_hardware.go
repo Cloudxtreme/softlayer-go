@@ -26,3 +26,7 @@ type SoftLayer_Resource_Group_Member_Hardware struct {
 	// ServerVotes - A resource group hardware member's associated server vote count.
 	ServerVotes *SoftLayer_Resource_Group_Member_Attribute `json:"serverVotes"`
 }
+
+func (softlayer_resource_group_member_hardware *SoftLayer_Resource_Group_Member_Hardware) String() string {
+	return "SoftLayer_Resource_Group_Member_Hardware"
+}

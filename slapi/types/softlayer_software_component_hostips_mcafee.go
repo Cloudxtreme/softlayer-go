@@ -6,3 +6,7 @@ package sl
 // represents a single host IPS software component.
 type SoftLayer_Software_Component_HostIps_Mcafee struct {
 }
+
+func (softlayer_software_component_hostips_mcafee *SoftLayer_Software_Component_HostIps_Mcafee) String() string {
+	return "SoftLayer_Software_Component_HostIps_Mcafee"
+}

@@ -32,3 +32,7 @@ type SoftLayer_Product_Package_Item_Category_Group struct {
 	// manufacturer.
 	Title string `json:"title"`
 }
+
+func (softlayer_product_package_item_category_group *SoftLayer_Product_Package_Item_Category_Group) String() string {
+	return "SoftLayer_Product_Package_Item_Category_Group"
+}

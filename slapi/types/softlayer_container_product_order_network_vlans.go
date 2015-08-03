@@ -12,3 +12,7 @@ type SoftLayer_Container_Product_Order_Network_Vlans struct {
 	// PublicVlans - The collection of public vlans available during ordering.
 	PublicVlans []*SoftLayer_Container_Product_Order `json:"publicVlans"`
 }
+
+func (softlayer_container_product_order_network_vlans *SoftLayer_Container_Product_Order_Network_Vlans) String() string {
+	return "SoftLayer_Container_Product_Order_Network_Vlans"
+}

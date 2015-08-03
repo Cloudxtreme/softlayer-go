@@ -24,3 +24,7 @@ type SoftLayer_Container_Network_IntrusionProtection_Statistics struct {
 	// TotalAttacks - Total attacks for this $target over this time frame
 	TotalAttacks int `json:"totalAttacks"`
 }
+
+func (softlayer_container_network_intrusionprotection_statistics *SoftLayer_Container_Network_IntrusionProtection_Statistics) String() string {
+	return "SoftLayer_Container_Network_IntrusionProtection_Statistics"
+}

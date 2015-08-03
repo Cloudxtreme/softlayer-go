@@ -3,7 +3,7 @@ package sl
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
-	slapi "go-softlayer/slapi"
+	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Metric_Tracking_Object_Bandwidth_Summary - This data type provides commonly used bandwidth
@@ -42,6 +42,10 @@ type SoftLayer_Metric_Tracking_Object_Bandwidth_Summary struct {
 	// ProjectedOverAllocationFlag - A flag that tells whether or not this tracking object's bandwidth
 	// usage is projected to go over the allocation, based on daily average usage. 1 means yes, 0 means no.
 	ProjectedOverAllocationFlag int `json:"projectedOverAllocationFlag"`
+}
+
+func (softlayer_metric_tracking_object_bandwidth_summary *SoftLayer_Metric_Tracking_Object_Bandwidth_Summary) String() string {
+	return "SoftLayer_Metric_Tracking_Object_Bandwidth_Summary"
 }
 
 // GetObject - <nil>

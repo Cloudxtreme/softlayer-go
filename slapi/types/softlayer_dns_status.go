@@ -11,3 +11,7 @@ type SoftLayer_Dns_Status struct {
 	// Name - no documentation
 	Name string `json:"name"`
 }
+
+func (softlayer_dns_status *SoftLayer_Dns_Status) String() string {
+	return "SoftLayer_Dns_Status"
+}

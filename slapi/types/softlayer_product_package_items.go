@@ -22,3 +22,7 @@ type SoftLayer_Product_Package_Items struct {
 	// PackageId - The SoftLayer_Product_Package id to which this instance of the object belongs.
 	PackageId int `json:"packageId"`
 }
+
+func (softlayer_product_package_items *SoftLayer_Product_Package_Items) String() string {
+	return "SoftLayer_Product_Package_Items"
+}

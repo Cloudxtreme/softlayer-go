@@ -69,3 +69,7 @@ type SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips struct {
 	// TransactionStatus - no documentation
 	TransactionStatus string `json:"transactionStatus"`
 }
+
+func (softlayer_software_component_hostips_mcafee_epo_version36_hips *SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips) String() string {
+	return "SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips"
+}
