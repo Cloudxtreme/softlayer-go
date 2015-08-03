@@ -22,23 +22,28 @@ type SoftLayer_Survey struct {
 	// Name - no documentation
 	Name string `json:"name"`
 
+	// StatusId - no documentation
+	StatusId int `json:"statusId"`
+
+	// TypeId - no documentation
+	TypeId int `json:"typeId"`
+}
+
+// SoftLayer_Survey_Extended is SoftLayer_Survey with all maskable types.
+type SoftLayer_Survey_Extended struct {
+	SoftLayer_Survey
+
 	// QuestionCount - no documentation
 	QuestionCount uint64 `json:"questionCount"`
 
 	// Questions - no documentation
 	Questions []*SoftLayer_Survey_Question `json:"questions"`
 
-	// Status - no documentation
-	Status *SoftLayer_Survey_Status `json:"status"`
-
-	// StatusId - no documentation
-	StatusId int `json:"statusId"`
-
 	// Type - no documentation
 	Type *SoftLayer_Survey_Type `json:"type"`
 
-	// TypeId - no documentation
-	TypeId int `json:"typeId"`
+	// Status - no documentation
+	Status *SoftLayer_Survey_Status `json:"status"`
 }
 
 func (softlayer_survey *SoftLayer_Survey) String() string {

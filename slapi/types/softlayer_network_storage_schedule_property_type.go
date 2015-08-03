@@ -6,9 +6,6 @@ package types
 // standardized method of defining network storage schedules.
 type SoftLayer_Network_Storage_Schedule_Property_Type struct {
 
-	// Description - A type's description, for example 'Date for the schedule to start.'.
-	Description string `json:"description"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
@@ -20,6 +17,9 @@ type SoftLayer_Network_Storage_Schedule_Property_Type struct {
 
 	// NasType - The type of Storage volume type which a property type may be associated with.
 	NasType string `json:"nasType"`
+
+	// Description - A type's description, for example 'Date for the schedule to start.'.
+	Description string `json:"description"`
 }
 
 func (softlayer_network_storage_schedule_property_type *SoftLayer_Network_Storage_Schedule_Property_Type) String() string {

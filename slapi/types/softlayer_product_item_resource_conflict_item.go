@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Product_Item_Resource_Conflict_Item - <nil>
 type SoftLayer_Product_Item_Resource_Conflict_Item struct {
+}
+
+// SoftLayer_Product_Item_Resource_Conflict_Item_Extended is SoftLayer_Product_Item_Resource_Conflict_Item with all maskable types.
+type SoftLayer_Product_Item_Resource_Conflict_Item_Extended struct {
+	SoftLayer_Product_Item_Resource_Conflict_Item
 
 	// Resource - A product item that conflicts with another product item.
 	Resource *SoftLayer_Product_Item `json:"resource"`

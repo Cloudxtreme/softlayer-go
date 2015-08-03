@@ -19,6 +19,11 @@ type SoftLayer_Configuration_Storage_Group_Template_Group struct {
 
 	// Size - Size of array. Must be within limitations of the smallest drive and raid mode
 	Size float64 `json:"size"`
+}
+
+// SoftLayer_Configuration_Storage_Group_Template_Group_Extended is SoftLayer_Configuration_Storage_Group_Template_Group with all maskable types.
+type SoftLayer_Configuration_Storage_Group_Template_Group_Extended struct {
+	SoftLayer_Configuration_Storage_Group_Template_Group
 
 	// Type - <nil>
 	Type *SoftLayer_Configuration_Storage_Group_Array_Type `json:"type"`

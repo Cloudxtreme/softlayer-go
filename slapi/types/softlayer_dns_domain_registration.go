@@ -10,17 +10,14 @@ import (
 // domain registration record.
 type SoftLayer_Dns_Domain_Registration struct {
 
-	// Account - The SoftLayer customer account that the domain is registered to.
-	Account *SoftLayer_Account `json:"account"`
+	// LockedFlag - no documentation
+	LockedFlag int `json:"lockedFlag"`
+
+	// ModifyDate - <nil>
+	ModifyDate *time.Time `json:"modifyDate"`
 
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate"`
-
-	// DomainRegistrationStatus - no documentation
-	DomainRegistrationStatus *SoftLayer_Dns_Domain_Registration_Status `json:"domainRegistrationStatus"`
-
-	// DomainRegistrationStatusId - <nil>
-	DomainRegistrationStatusId int `json:"domainRegistrationStatusId"`
 
 	// ExpireDate - no documentation
 	ExpireDate *time.Time `json:"expireDate"`
@@ -28,26 +25,34 @@ type SoftLayer_Dns_Domain_Registration struct {
 	// Id - no documentation
 	Id int `json:"id"`
 
-	// LockedFlag - no documentation
-	LockedFlag int `json:"lockedFlag"`
-
-	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
-
 	// Name - no documentation
 	Name string `json:"name"`
-
-	// RegistrantVerificationStatus - no documentation
-	RegistrantVerificationStatus *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status `json:"registrantVerificationStatus"`
 
 	// RegistrantVerificationStatusId - <nil>
 	RegistrantVerificationStatusId int `json:"registrantVerificationStatusId"`
 
+	// ServiceProviderId - <nil>
+	ServiceProviderId int `json:"serviceProviderId"`
+
+	// DomainRegistrationStatusId - <nil>
+	DomainRegistrationStatusId int `json:"domainRegistrationStatusId"`
+}
+
+// SoftLayer_Dns_Domain_Registration_Extended is SoftLayer_Dns_Domain_Registration with all maskable types.
+type SoftLayer_Dns_Domain_Registration_Extended struct {
+	SoftLayer_Dns_Domain_Registration
+
+	// DomainRegistrationStatus - no documentation
+	DomainRegistrationStatus *SoftLayer_Dns_Domain_Registration_Status `json:"domainRegistrationStatus"`
+
+	// RegistrantVerificationStatus - no documentation
+	RegistrantVerificationStatus *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status `json:"registrantVerificationStatus"`
+
 	// ServiceProvider - <nil>
 	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider"`
 
-	// ServiceProviderId - <nil>
-	ServiceProviderId int `json:"serviceProviderId"`
+	// Account - The SoftLayer customer account that the domain is registered to.
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_dns_domain_registration *SoftLayer_Dns_Domain_Registration) String() string {

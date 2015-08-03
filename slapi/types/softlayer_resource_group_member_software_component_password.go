@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Resource_Group_Member_Software_Component_Password - <nil>
 type SoftLayer_Resource_Group_Member_Software_Component_Password struct {
+}
+
+// SoftLayer_Resource_Group_Member_Software_Component_Password_Extended is SoftLayer_Resource_Group_Member_Software_Component_Password with all maskable types.
+type SoftLayer_Resource_Group_Member_Software_Component_Password_Extended struct {
+	SoftLayer_Resource_Group_Member_Software_Component_Password
 
 	// Resource - A resource group member's associated software component password.
 	Resource *SoftLayer_Software_Component_Password `json:"resource"`

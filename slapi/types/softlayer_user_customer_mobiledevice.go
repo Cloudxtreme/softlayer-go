@@ -12,18 +12,26 @@ import (
 // entities (Google, Apple,
 type SoftLayer_User_Customer_MobileDevice struct {
 
-	// AvailablePushNotificationSubscriptionCount - A count of notification subscriptions available to a
-	// mobile device.
-	AvailablePushNotificationSubscriptionCount uint64 `json:"availablePushNotificationSubscriptionCount"`
+	// MobileDeviceTypeId - no documentation
+	MobileDeviceTypeId int `json:"mobileDeviceTypeId"`
 
-	// AvailablePushNotificationSubscriptions - Notification subscriptions available to a mobile device.
-	AvailablePushNotificationSubscriptions []*SoftLayer_Notification `json:"availablePushNotificationSubscriptions"`
+	// ModelNumber - no documentation
+	ModelNumber string `json:"modelNumber"`
+
+	// PhoneNumber - no documentation
+	PhoneNumber string `json:"phoneNumber"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate"`
+
+	// Token - no documentation
+	Token string `json:"token"`
+
+	// UserId - no documentation
+	UserId int `json:"userId"`
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
-
-	// Customer - <nil>
-	Customer *SoftLayer_User_Customer `json:"customer"`
 
 	// DisplayResolutionXxY - no documentation
 	DisplayResolutionXxY string `json:"displayResolutionXxY"`
@@ -31,23 +39,28 @@ type SoftLayer_User_Customer_MobileDevice struct {
 	// Id - no documentation
 	Id int `json:"id"`
 
-	// MobileDeviceTypeId - no documentation
-	MobileDeviceTypeId int `json:"mobileDeviceTypeId"`
-
 	// MobileOperatingSystemId - no documentation
 	MobileOperatingSystemId int `json:"mobileOperatingSystemId"`
 
-	// ModelNumber - no documentation
-	ModelNumber string `json:"modelNumber"`
+	// SerialNumber - no documentation
+	SerialNumber string `json:"serialNumber"`
+}
 
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
+// SoftLayer_User_Customer_MobileDevice_Extended is SoftLayer_User_Customer_MobileDevice with all maskable types.
+type SoftLayer_User_Customer_MobileDevice_Extended struct {
+	SoftLayer_User_Customer_MobileDevice
+
+	// AvailablePushNotificationSubscriptions - Notification subscriptions available to a mobile device.
+	AvailablePushNotificationSubscriptions []*SoftLayer_Notification `json:"availablePushNotificationSubscriptions"`
+
+	// Customer - <nil>
+	Customer *SoftLayer_User_Customer `json:"customer"`
 
 	// OperatingSystem - <nil>
 	OperatingSystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem `json:"operatingSystem"`
 
-	// PhoneNumber - no documentation
-	PhoneNumber string `json:"phoneNumber"`
+	// Type - <nil>
+	Type *SoftLayer_User_Customer_MobileDevice_Type `json:"type"`
 
 	// PushNotificationSubscriptionCount - A count of notification subscriptions attached to a mobile
 	// device.
@@ -56,17 +69,9 @@ type SoftLayer_User_Customer_MobileDevice struct {
 	// PushNotificationSubscriptions - Notification subscriptions attached to a mobile device.
 	PushNotificationSubscriptions []*SoftLayer_Notification_User_Subscriber `json:"pushNotificationSubscriptions"`
 
-	// SerialNumber - no documentation
-	SerialNumber string `json:"serialNumber"`
-
-	// Token - no documentation
-	Token string `json:"token"`
-
-	// Type - <nil>
-	Type *SoftLayer_User_Customer_MobileDevice_Type `json:"type"`
-
-	// UserId - no documentation
-	UserId int `json:"userId"`
+	// AvailablePushNotificationSubscriptionCount - A count of notification subscriptions available to a
+	// mobile device.
+	AvailablePushNotificationSubscriptionCount uint64 `json:"availablePushNotificationSubscriptionCount"`
 }
 
 func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) String() string {

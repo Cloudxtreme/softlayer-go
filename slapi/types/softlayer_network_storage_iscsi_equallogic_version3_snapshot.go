@@ -9,6 +9,11 @@ package types
 // original data will be saved in the associated volume's snapshot reserve space. As a snapshot is
 // created offline it must be set mountable in order to mount it via an iscsi initiator service.
 type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot struct {
+}
+
+// SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot_Extended is SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot with all maskable types.
+type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot_Extended struct {
+	SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot
 
 	// CreationSchedule - If applicable, the schedule which was executed to create a snapshot.
 	CreationSchedule *SoftLayer_Network_Storage_Schedule `json:"creationSchedule"`

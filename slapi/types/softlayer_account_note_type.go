@@ -9,18 +9,6 @@ import (
 // SoftLayer_Account_Note_Type - <nil>
 type SoftLayer_Account_Note_Type struct {
 
-	// BrandId - <nil>
-	BrandId int `json:"brandId"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
-
-	// Description - <nil>
-	Description string `json:"description"`
-
-	// Id - <nil>
-	Id int `json:"id"`
-
 	// KeyName - <nil>
 	KeyName string `json:"keyName"`
 
@@ -32,6 +20,18 @@ type SoftLayer_Account_Note_Type struct {
 
 	// ValueExpression - <nil>
 	ValueExpression string `json:"valueExpression"`
+
+	// BrandId - <nil>
+	BrandId int `json:"brandId"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate"`
+
+	// Description - <nil>
+	Description string `json:"description"`
+
+	// Id - <nil>
+	Id int `json:"id"`
 }
 
 func (softlayer_account_note_type *SoftLayer_Account_Note_Type) String() string {

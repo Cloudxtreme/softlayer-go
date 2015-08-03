@@ -7,9 +7,6 @@ package types
 // Storage service.
 type SoftLayer_Account_Password struct {
 
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
-
 	// AccountId - The SoftLayer customer account id that a username/password combination is associated
 	// with.
 	AccountId int `json:"accountId"`
@@ -24,14 +21,22 @@ type SoftLayer_Account_Password struct {
 	// Password - The password portion of a username/password combination.
 	Password string `json:"password"`
 
-	// Type - The service that an account/password combination is tied to.
-	Type *SoftLayer_Account_Password_Type `json:"type"`
-
 	// TypeId - An identifier relating to a username/password combinations's associated service.
 	TypeId int `json:"typeId"`
 
 	// Username - The username portion of a username/password combination.
 	Username string `json:"username"`
+}
+
+// SoftLayer_Account_Password_Extended is SoftLayer_Account_Password with all maskable types.
+type SoftLayer_Account_Password_Extended struct {
+	SoftLayer_Account_Password
+
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account"`
+
+	// Type - The service that an account/password combination is tied to.
+	Type *SoftLayer_Account_Password_Type `json:"type"`
 }
 
 func (softlayer_account_password *SoftLayer_Account_Password) String() string {

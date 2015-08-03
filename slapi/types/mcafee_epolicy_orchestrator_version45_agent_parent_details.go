@@ -7,11 +7,16 @@ package types
 // anti-virus policy.
 type McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details struct {
 
-	// AgentDetails - no documentation
-	AgentDetails *McAfee_Epolicy_Orchestrator_Version45_Agent_Details `json:"agentDetails"`
-
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+// McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details_Extended is McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details with all maskable types.
+type McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details_Extended struct {
+	McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details
+
+	// AgentDetails - no documentation
+	AgentDetails *McAfee_Epolicy_Orchestrator_Version45_Agent_Details `json:"agentDetails"`
 
 	// Policies - no documentation
 	Policies []*McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details `json:"policies"`

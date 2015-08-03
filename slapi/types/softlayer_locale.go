@@ -6,17 +6,17 @@ package types
 // user's language and region information.
 type SoftLayer_Locale struct {
 
-	// FriendlyName - <nil>
-	FriendlyName string `json:"friendlyName"`
-
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// LanguageTag - <nil>
 	LanguageTag string `json:"languageTag"`
 
 	// Name - no documentation
 	Name string `json:"name"`
+
+	// FriendlyName - <nil>
+	FriendlyName string `json:"friendlyName"`
+
+	// Id - no documentation
+	Id int `json:"id"`
 }
 
 func (softlayer_locale *SoftLayer_Locale) String() string {

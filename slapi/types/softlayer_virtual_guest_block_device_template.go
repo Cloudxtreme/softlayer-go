@@ -7,22 +7,9 @@ package types
 // also known as a image template, represents the image of a virtual guest instance.
 type SoftLayer_Virtual_Guest_Block_Device_Template struct {
 
-	// Device - no documentation
-	Device string `json:"device"`
-
-	// DiskImage - no documentation
-	DiskImage *SoftLayer_Virtual_Disk_Image `json:"diskImage"`
-
-	// DiskImageId - A block device template's [[SoftLayer_Virtual_Disk_Image|disk image]] ID.
-	DiskImageId int `json:"diskImageId"`
-
 	// DiskSpace - The amount of disk space that a block device template is using. Use this number along
 	// with the units property to obtain the correct space used.
 	DiskSpace float32 `json:"diskSpace"`
-
-	// Group - A block device template's group. Several block device templates can be combined together
-	// into a group for archiving purposes.
-	Group *SoftLayer_Virtual_Guest_Block_Device_Template_Group `json:"group"`
 
 	// GroupId - A block device template's [[SoftLayer_Virtual_Guest_Block_Device_Template_Group|group]]
 	// ID.
@@ -34,6 +21,24 @@ type SoftLayer_Virtual_Guest_Block_Device_Template struct {
 	// Units - The units that will be used with the disk space property to identify the amount of disk
 	// space used.
 	Units string `json:"units"`
+
+	// Device - no documentation
+	Device string `json:"device"`
+
+	// DiskImageId - A block device template's [[SoftLayer_Virtual_Disk_Image|disk image]] ID.
+	DiskImageId int `json:"diskImageId"`
+}
+
+// SoftLayer_Virtual_Guest_Block_Device_Template_Extended is SoftLayer_Virtual_Guest_Block_Device_Template with all maskable types.
+type SoftLayer_Virtual_Guest_Block_Device_Template_Extended struct {
+	SoftLayer_Virtual_Guest_Block_Device_Template
+
+	// Group - A block device template's group. Several block device templates can be combined together
+	// into a group for archiving purposes.
+	Group *SoftLayer_Virtual_Guest_Block_Device_Template_Group `json:"group"`
+
+	// DiskImage - no documentation
+	DiskImage *SoftLayer_Virtual_Disk_Image `json:"diskImage"`
 }
 
 func (softlayer_virtual_guest_block_device_template *SoftLayer_Virtual_Guest_Block_Device_Template) String() string {

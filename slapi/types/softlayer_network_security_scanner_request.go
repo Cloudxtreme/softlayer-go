@@ -12,39 +12,44 @@ import (
 // *Scan Processing *Scan Complete *Scan Cancelled *Generating Report.
 type SoftLayer_Network_Security_Scanner_Request struct {
 
-	// Account - The account associated with a security scan request.
-	Account *SoftLayer_Account `json:"account"`
+	// StatusId - no documentation
+	StatusId int `json:"statusId"`
 
-	// AccountId - A request's associated customer account identifier.
-	AccountId int `json:"accountId"`
+	// IpAddress - no documentation
+	IpAddress string `json:"ipAddress"`
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
-
-	// Guest - no documentation
-	Guest *SoftLayer_Virtual_Guest `json:"guest"`
 
 	// GuestId - Virtual Guest Identification Number for the guest this security scanner request belongs
 	// to.
 	GuestId int `json:"guestId"`
 
-	// Hardware - no documentation
-	Hardware *SoftLayer_Hardware `json:"hardware"`
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// ModifyDate - The date and time that the request was last modified.
+	ModifyDate *time.Time `json:"modifyDate"`
+
+	// AccountId - A request's associated customer account identifier.
+	AccountId int `json:"accountId"`
 
 	// HardwareId - The identifier of the hardware item a scan is run on.
 	HardwareId int `json:"hardwareId"`
 
 	// HostId - Identification Number for the host this security scanner request belongs to.
 	HostId int `json:"hostId"`
+}
 
-	// Id - no documentation
-	Id int `json:"id"`
+// SoftLayer_Network_Security_Scanner_Request_Extended is SoftLayer_Network_Security_Scanner_Request with all maskable types.
+type SoftLayer_Network_Security_Scanner_Request_Extended struct {
+	SoftLayer_Network_Security_Scanner_Request
 
-	// IpAddress - no documentation
-	IpAddress string `json:"ipAddress"`
+	// Hardware - no documentation
+	Hardware *SoftLayer_Hardware `json:"hardware"`
 
-	// ModifyDate - The date and time that the request was last modified.
-	ModifyDate *time.Time `json:"modifyDate"`
+	// Account - The account associated with a security scan request.
+	Account *SoftLayer_Account `json:"account"`
 
 	// RequestorOwnedFlag - Flag whether the requestor owns the hardware the scan was run on. This flag
 	// will return for hardware servers only, virtual servers will result in a null return even if you have
@@ -54,8 +59,8 @@ type SoftLayer_Network_Security_Scanner_Request struct {
 	// Status - no documentation
 	Status *SoftLayer_Network_Security_Scanner_Request_Status `json:"status"`
 
-	// StatusId - no documentation
-	StatusId int `json:"statusId"`
+	// Guest - no documentation
+	Guest *SoftLayer_Virtual_Guest `json:"guest"`
 }
 
 func (softlayer_network_security_scanner_request *SoftLayer_Network_Security_Scanner_Request) String() string {

@@ -7,9 +7,6 @@ package types
 // required to place a Gateway Appliance order.
 type SoftLayer_Container_Product_Order_Hardware_Server_Gateway_Appliance struct {
 
-	// ClusterIdentifier - Used to identify which items on an order belong in the same cluster.
-	ClusterIdentifier string `json:"clusterIdentifier"`
-
 	// ClusterOrderType - Indicates what type of cluster order is being placed Provision).
 	ClusterOrderType string `json:"clusterOrderType"`
 
@@ -18,6 +15,9 @@ type SoftLayer_Container_Product_Order_Hardware_Server_Gateway_Appliance struct 
 
 	// RequiredUpstreamDeviceId - Used to identify which device the new server should be attached to.
 	RequiredUpstreamDeviceId int `json:"requiredUpstreamDeviceId"`
+
+	// ClusterIdentifier - Used to identify which items on an order belong in the same cluster.
+	ClusterIdentifier string `json:"clusterIdentifier"`
 }
 
 func (softlayer_container_product_order_hardware_server_gateway_appliance *SoftLayer_Container_Product_Order_Hardware_Server_Gateway_Appliance) String() string {

@@ -7,6 +7,11 @@ package types
 // general information relating to a single SoftLayer billing item for Citrix Essentials software
 // components.
 type SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon_Citrix_Essentials struct {
+}
+
+// SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon_Citrix_Essentials_Extended is SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon_Citrix_Essentials with all maskable types.
+type SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon_Citrix_Essentials_Extended struct {
+	SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon_Citrix_Essentials
 
 	// Resource - The Citrix Essentials software component that a billing item is associated with.
 	Resource *SoftLayer_Software_Component `json:"resource"`

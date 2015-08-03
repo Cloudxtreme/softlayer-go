@@ -6,6 +6,11 @@ package types
 // general information relating to the binding of a single network component to a single SoftLayer IP
 // address.
 type SoftLayer_Network_Component_IpAddress struct {
+}
+
+// SoftLayer_Network_Component_IpAddress_Extended is SoftLayer_Network_Component_IpAddress with all maskable types.
+type SoftLayer_Network_Component_IpAddress_Extended struct {
+	SoftLayer_Network_Component_IpAddress
 
 	// IpAddress - The IP address associated with this object's network component.
 	IpAddress *SoftLayer_Network_Subnet_IpAddress `json:"ipAddress"`

@@ -21,15 +21,26 @@ package types
 // ''type'' property and casts the object as the appropriate type.
 type SoftLayer_Dns_Domain_ResourceRecord struct {
 
-	// Data - The value of a domain's resource record. This can be an IP address or a hostname. Fully
-	// qualified host and domain name data must end with the "." character.
-	Data string `json:"data"`
+	// Refresh - The amount of time in seconds that a secondary name server should wait to check for a new
+	// copy of a DNS zone from the domain's primary name server. If a zone file has changed then the
+	// secondary DNS server will update it's copy of the zone to match the primary DNS server's zone.
+	Refresh int `json:"refresh"`
 
-	// Domain - no documentation
-	Domain *SoftLayer_Dns_Domain `json:"domain"`
+	// ResponsiblePerson - The email address of the person responsible for a domain, with the "@" replaced
+	// with a For instance, if root@example.org is responsible for example.org, then example.org's SOA
+	// responsibility is "root.example.org.".
+	ResponsiblePerson string `json:"responsiblePerson"`
 
-	// DomainId - An identifier belonging to the domain that a resource record is associated with.
-	DomainId int `json:"domainId"`
+	// Type - A domain resource record's type. A value of "a" denotes an A (address) record, "aaaa" denotes
+	// an (IPv6 address) record, "cname" denotes a (canonical name) record, "mx" denotes an MX (mail
+	// exchanger) record, "ns" denotes an NS (nameserver) record, "ptr" denotes a PTR (pointer/reverse)
+	// record, "soa" denotes the SOA (start of authority) record, "spf" denotes a SPF (sender policy
+	// framework) record, and "txt" denotes a TXT (text) record. A domain record's type also denotes which
+	// class in the SoftLayer API is a best match for extending a resource record.
+	Type string `json:"type"`
+
+	// Id - no documentation
+	Id int `json:"id"`
 
 	// Expire - The amount of time in seconds that a secondary name server (or servers) will hold a zone
 	// before it is no longer considered authoritative.
@@ -37,9 +48,6 @@ type SoftLayer_Dns_Domain_ResourceRecord struct {
 
 	// Host - The host defined by a resource record. A value of "@" denotes a wildcard.
 	Host string `json:"host"`
-
-	// Id - no documentation
-	Id int `json:"id"`
 
 	// Minimum - The amount of time in seconds that a domain's resource records are valid. This is also
 	// known as a minimum and can be overridden by an individual resource record's
@@ -51,16 +59,6 @@ type SoftLayer_Dns_Domain_ResourceRecord struct {
 	// servers. Priority is defaulted to 10 upon resource record creation.
 	MxPriority int `json:"mxPriority"`
 
-	// Refresh - The amount of time in seconds that a secondary name server should wait to check for a new
-	// copy of a DNS zone from the domain's primary name server. If a zone file has changed then the
-	// secondary DNS server will update it's copy of the zone to match the primary DNS server's zone.
-	Refresh int `json:"refresh"`
-
-	// ResponsiblePerson - The email address of the person responsible for a domain, with the "@" replaced
-	// with a For instance, if root@example.org is responsible for example.org, then example.org's SOA
-	// responsibility is "root.example.org.".
-	ResponsiblePerson string `json:"responsiblePerson"`
-
 	// Retry - The amount of time in seconds that a domain's primary name server (or servers) should wait
 	// if an attempt to refresh by a secondary name server failed before attempting to refresh a domain's
 	// zone with that secondary name server again.
@@ -71,13 +69,20 @@ type SoftLayer_Dns_Domain_ResourceRecord struct {
 	// overall
 	Ttl int `json:"ttl"`
 
-	// Type - A domain resource record's type. A value of "a" denotes an A (address) record, "aaaa" denotes
-	// an (IPv6 address) record, "cname" denotes a (canonical name) record, "mx" denotes an MX (mail
-	// exchanger) record, "ns" denotes an NS (nameserver) record, "ptr" denotes a PTR (pointer/reverse)
-	// record, "soa" denotes the SOA (start of authority) record, "spf" denotes a SPF (sender policy
-	// framework) record, and "txt" denotes a TXT (text) record. A domain record's type also denotes which
-	// class in the SoftLayer API is a best match for extending a resource record.
-	Type string `json:"type"`
+	// Data - The value of a domain's resource record. This can be an IP address or a hostname. Fully
+	// qualified host and domain name data must end with the "." character.
+	Data string `json:"data"`
+
+	// DomainId - An identifier belonging to the domain that a resource record is associated with.
+	DomainId int `json:"domainId"`
+}
+
+// SoftLayer_Dns_Domain_ResourceRecord_Extended is SoftLayer_Dns_Domain_ResourceRecord with all maskable types.
+type SoftLayer_Dns_Domain_ResourceRecord_Extended struct {
+	SoftLayer_Dns_Domain_ResourceRecord
+
+	// Domain - no documentation
+	Domain *SoftLayer_Dns_Domain `json:"domain"`
 }
 
 func (softlayer_dns_domain_resourcerecord *SoftLayer_Dns_Domain_ResourceRecord) String() string {

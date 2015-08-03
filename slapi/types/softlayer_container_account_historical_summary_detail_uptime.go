@@ -6,9 +6,6 @@ package types
 // for a host resource uptime
 type SoftLayer_Container_Account_Historical_Summary_Detail_Uptime struct {
 
-	// CloudComputingInstance - no documentation
-	CloudComputingInstance *SoftLayer_Virtual_Guest `json:"cloudComputingInstance"`
-
 	// ConfigurationValue - no documentation
 	ConfigurationValue *SoftLayer_Monitoring_Agent_Configuration_Value `json:"configurationValue"`
 
@@ -17,6 +14,9 @@ type SoftLayer_Container_Account_Historical_Summary_Detail_Uptime struct {
 
 	// Hardware - no documentation
 	Hardware *SoftLayer_Hardware `json:"hardware"`
+
+	// CloudComputingInstance - no documentation
+	CloudComputingInstance *SoftLayer_Virtual_Guest `json:"cloudComputingInstance"`
 }
 
 func (softlayer_container_account_historical_summary_detail_uptime *SoftLayer_Container_Account_Historical_Summary_Detail_Uptime) String() string {

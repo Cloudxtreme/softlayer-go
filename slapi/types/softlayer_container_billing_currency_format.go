@@ -8,6 +8,21 @@ type SoftLayer_Container_Billing_Currency_Format struct {
 	// Currency - <nil>
 	Currency string `json:"currency"`
 
+	// Position - <nil>
+	Position int `json:"position"`
+
+	// Script - <nil>
+	Script string `json:"script"`
+
+	// Service - <nil>
+	Service string `json:"service"`
+
+	// Tag - <nil>
+	Tag string `json:"tag"`
+
+	// Value - <nil>
+	Value float32 `json:"value"`
+
 	// Display - <nil>
 	Display int `json:"display"`
 
@@ -20,26 +35,11 @@ type SoftLayer_Container_Billing_Currency_Format struct {
 	// Name - <nil>
 	Name string `json:"name"`
 
-	// Position - <nil>
-	Position int `json:"position"`
-
 	// Precision - <nil>
 	Precision int `json:"precision"`
 
-	// Script - <nil>
-	Script string `json:"script"`
-
-	// Service - <nil>
-	Service string `json:"service"`
-
 	// Symbol - <nil>
 	Symbol string `json:"symbol"`
-
-	// Tag - <nil>
-	Tag string `json:"tag"`
-
-	// Value - <nil>
-	Value float32 `json:"value"`
 }
 
 func (softlayer_container_billing_currency_format *SoftLayer_Container_Billing_Currency_Format) String() string {

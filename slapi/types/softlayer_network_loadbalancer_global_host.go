@@ -21,11 +21,20 @@ type SoftLayer_Network_LoadBalancer_Global_Host struct {
 	// DestinationPort - The port of the host that will be used for health checks.
 	DestinationPort int `json:"destinationPort"`
 
-	// Enabled - Whether the host is enabled or not. The value can be '0' for disabled, or '1' for enabled.
-	Enabled int `json:"enabled"`
-
 	// HealthCheck - The health check type of a host. Valid values include 'none', 'http', and 'tcp'.
 	HealthCheck string `json:"healthCheck"`
+
+	// LoadBalanceOrder - The order of this host within the load balance pool. This is only significant if
+	// the load balance method is set to failover.
+	LoadBalanceOrder int `json:"loadBalanceOrder"`
+
+	// Status - The health status of a host. The status can be either or null which could mean that the
+	// health check type is set to 'none' or an update to the ip, port, or health check type was recently
+	// done and the host is waiting for the new status.
+	Status string `json:"status"`
+
+	// Enabled - Whether the host is enabled or not. The value can be '0' for disabled, or '1' for enabled.
+	Enabled int `json:"enabled"`
 
 	// Hits - The number of times the host was selected by the load balance method.
 	Hits float32 `json:"hits"`
@@ -33,24 +42,20 @@ type SoftLayer_Network_LoadBalancer_Global_Host struct {
 	// Id - The unique identifier of a global load balancer host.
 	Id int `json:"id"`
 
-	// LoadBalanceOrder - The order of this host within the load balance pool. This is only significant if
-	// the load balance method is set to failover.
-	LoadBalanceOrder int `json:"loadBalanceOrder"`
-
-	// LoadBalancerAccount - The global load balancer account a host belongs to.
-	LoadBalancerAccount *SoftLayer_Network_LoadBalancer_Global_Account `json:"loadBalancerAccount"`
-
 	// Location - The location of a host in a datacenter.serverRoom format.
 	Location string `json:"location"`
-
-	// Status - The health status of a host. The status can be either or null which could mean that the
-	// health check type is set to 'none' or an update to the ip, port, or health check type was recently
-	// done and the host is waiting for the new status.
-	Status string `json:"status"`
 
 	// Weight - The load balance weight of a host. The total weight of all hosts in the load balancing pool
 	// must not exceed 100.
 	Weight int `json:"weight"`
+}
+
+// SoftLayer_Network_LoadBalancer_Global_Host_Extended is SoftLayer_Network_LoadBalancer_Global_Host with all maskable types.
+type SoftLayer_Network_LoadBalancer_Global_Host_Extended struct {
+	SoftLayer_Network_LoadBalancer_Global_Host
+
+	// LoadBalancerAccount - The global load balancer account a host belongs to.
+	LoadBalancerAccount *SoftLayer_Network_LoadBalancer_Global_Account `json:"loadBalancerAccount"`
 }
 
 func (softlayer_network_loadbalancer_global_host *SoftLayer_Network_LoadBalancer_Global_Host) String() string {

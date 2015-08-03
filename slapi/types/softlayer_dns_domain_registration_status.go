@@ -9,9 +9,6 @@ package types
 // transfer. *'''Expired''': Domain name has expired.
 type SoftLayer_Dns_Domain_Registration_Status struct {
 
-	// Description - The description of the domain registration status names.
-	Description string `json:"description"`
-
 	// Id - The unique identifier of the domain registration status
 	Id int `json:"id"`
 
@@ -20,6 +17,9 @@ type SoftLayer_Dns_Domain_Registration_Status struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+
+	// Description - The description of the domain registration status names.
+	Description string `json:"description"`
 }
 
 func (softlayer_dns_domain_registration_status *SoftLayer_Dns_Domain_Registration_Status) String() string {

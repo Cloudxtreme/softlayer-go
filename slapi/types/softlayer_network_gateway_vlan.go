@@ -11,17 +11,22 @@ type SoftLayer_Network_Gateway_Vlan struct {
 	// Id - no documentation
 	Id int `json:"id"`
 
-	// NetworkGateway - no documentation
-	NetworkGateway *SoftLayer_Network_Gateway `json:"networkGateway"`
-
 	// NetworkGatewayId - The internal identifier of the gateway this is attached to.
 	NetworkGatewayId int `json:"networkGatewayId"`
 
-	// NetworkVlan - no documentation
-	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan"`
-
 	// NetworkVlanId - no documentation
 	NetworkVlanId int `json:"networkVlanId"`
+}
+
+// SoftLayer_Network_Gateway_Vlan_Extended is SoftLayer_Network_Gateway_Vlan with all maskable types.
+type SoftLayer_Network_Gateway_Vlan_Extended struct {
+	SoftLayer_Network_Gateway_Vlan
+
+	// NetworkGateway - no documentation
+	NetworkGateway *SoftLayer_Network_Gateway `json:"networkGateway"`
+
+	// NetworkVlan - no documentation
+	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan"`
 }
 
 func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) String() string {

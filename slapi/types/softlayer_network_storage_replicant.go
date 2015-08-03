@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Network_Storage_Replicant - <nil>
 type SoftLayer_Network_Storage_Replicant struct {
+}
+
+// SoftLayer_Network_Storage_Replicant_Extended is SoftLayer_Network_Storage_Replicant with all maskable types.
+type SoftLayer_Network_Storage_Replicant_Extended struct {
+	SoftLayer_Network_Storage_Replicant
 
 	// FailbackInProgressFlag - When a replicant is in the process of synchronizing with the parent volume
 	// this flag will be true.

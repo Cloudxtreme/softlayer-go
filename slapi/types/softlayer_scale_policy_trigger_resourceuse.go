@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Scale_Policy_Trigger_ResourceUse - <nil>
 type SoftLayer_Scale_Policy_Trigger_ResourceUse struct {
+}
+
+// SoftLayer_Scale_Policy_Trigger_ResourceUse_Extended is SoftLayer_Scale_Policy_Trigger_ResourceUse with all maskable types.
+type SoftLayer_Scale_Policy_Trigger_ResourceUse_Extended struct {
+	SoftLayer_Scale_Policy_Trigger_ResourceUse
 
 	// WatchCount - no documentation
 	WatchCount uint64 `json:"watchCount"`

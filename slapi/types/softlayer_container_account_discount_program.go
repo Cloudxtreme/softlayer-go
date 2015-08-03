@@ -10,14 +10,6 @@ import (
 // single outbound object for a graph of given data sets.
 type SoftLayer_Container_Account_Discount_Program struct {
 
-	// AppliedCredit - The credit allowance that has already been applied during the current billing cycle.
-	// If the lifetime limit has been or soon will be reached, this amount may included credit applied in
-	// previous billing cycles.
-	AppliedCredit float64 `json:"appliedCredit"`
-
-	// IsParticipant - Flag to signify whether the account is a participant in the discount program.
-	IsParticipant bool `json:"isParticipant"`
-
 	// LifetimeAppliedCredit - Credit allowance applied over the course of the entire program enrollment.
 	// For enrollments without a lifetime restriction, this property will not be populated as credit will
 	// be tracked on a purely monthly basis.
@@ -51,18 +43,26 @@ type SoftLayer_Container_Account_Discount_Program struct {
 	// ProgramEndDate - no documentation
 	ProgramEndDate *time.Time `json:"programEndDate"`
 
-	// ProgramName - Name of the Flexible Credit Program the account is enrolled in.
-	ProgramName string `json:"programName"`
+	// IsParticipant - Flag to signify whether the account is a participant in the discount program.
+	IsParticipant bool `json:"isParticipant"`
+
+	// RemainingCreditTax - Taxes are calculated in real time and discount amounts are shown pre-tax in all
+	// cases. Tax values in the SoftLayer_Container_Account_Discount_Program container are now populated
+	// with the related pre-tax values.
+	RemainingCreditTax float64 `json:"remainingCreditTax"`
 
 	// RemainingCredit - The credit allowance that is available during the current billing cycle. If the
 	// lifetime limit has been or soon will be reached, this amount may be reduced by credit applied in
 	// previous billing cycles.
 	RemainingCredit float64 `json:"remainingCredit"`
 
-	// RemainingCreditTax - Taxes are calculated in real time and discount amounts are shown pre-tax in all
-	// cases. Tax values in the SoftLayer_Container_Account_Discount_Program container are now populated
-	// with the related pre-tax values.
-	RemainingCreditTax float64 `json:"remainingCreditTax"`
+	// ProgramName - Name of the Flexible Credit Program the account is enrolled in.
+	ProgramName string `json:"programName"`
+
+	// AppliedCredit - The credit allowance that has already been applied during the current billing cycle.
+	// If the lifetime limit has been or soon will be reached, this amount may included credit applied in
+	// previous billing cycles.
+	AppliedCredit float64 `json:"appliedCredit"`
 }
 
 func (softlayer_container_account_discount_program *SoftLayer_Container_Account_Discount_Program) String() string {

@@ -22,11 +22,16 @@ type SoftLayer_Configuration_Template_Section_Definition_Group struct {
 	// Name - no documentation
 	Name string `json:"name"`
 
-	// Parent - <nil>
-	Parent *SoftLayer_Configuration_Template_Section_Definition_Group `json:"parent"`
-
 	// SortOrder - no documentation
 	SortOrder int `json:"sortOrder"`
+}
+
+// SoftLayer_Configuration_Template_Section_Definition_Group_Extended is SoftLayer_Configuration_Template_Section_Definition_Group with all maskable types.
+type SoftLayer_Configuration_Template_Section_Definition_Group_Extended struct {
+	SoftLayer_Configuration_Template_Section_Definition_Group
+
+	// Parent - <nil>
+	Parent *SoftLayer_Configuration_Template_Section_Definition_Group `json:"parent"`
 }
 
 func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) String() string {

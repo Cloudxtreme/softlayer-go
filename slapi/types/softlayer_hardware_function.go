@@ -6,14 +6,14 @@ package types
 // type for a piece of hardware, like switch, firewall, server, etc..
 type SoftLayer_Hardware_Function struct {
 
+	// Id - no documentation
+	Id int `json:"id"`
+
 	// Code - no documentation
 	Code string `json:"code"`
 
 	// Description - no documentation
 	Description string `json:"description"`
-
-	// Id - no documentation
-	Id int `json:"id"`
 }
 
 func (softlayer_hardware_function *SoftLayer_Hardware_Function) String() string {

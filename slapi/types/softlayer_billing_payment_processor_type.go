@@ -13,6 +13,11 @@ type SoftLayer_Billing_Payment_Processor_Type struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+// SoftLayer_Billing_Payment_Processor_Type_Extended is SoftLayer_Billing_Payment_Processor_Type with all maskable types.
+type SoftLayer_Billing_Payment_Processor_Type_Extended struct {
+	SoftLayer_Billing_Payment_Processor_Type
 
 	// PaymentProcessorCount - no documentation
 	PaymentProcessorCount uint64 `json:"paymentProcessorCount"`

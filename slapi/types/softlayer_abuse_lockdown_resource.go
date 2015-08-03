@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Abuse_Lockdown_Resource - <nil>
 type SoftLayer_Abuse_Lockdown_Resource struct {
+}
+
+// SoftLayer_Abuse_Lockdown_Resource_Extended is SoftLayer_Abuse_Lockdown_Resource with all maskable types.
+type SoftLayer_Abuse_Lockdown_Resource_Extended struct {
+	SoftLayer_Abuse_Lockdown_Resource
 
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account"`

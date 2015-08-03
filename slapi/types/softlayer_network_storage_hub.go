@@ -5,6 +5,11 @@ package types
 // SoftLayer_Network_Storage_Hub - The SoftLayer_Network_Storage_Hub data type models Virtual Server
 // type Storage storage offerings.
 type SoftLayer_Network_Storage_Hub struct {
+}
+
+// SoftLayer_Network_Storage_Hub_Extended is SoftLayer_Network_Storage_Hub with all maskable types.
+type SoftLayer_Network_Storage_Hub_Extended struct {
+	SoftLayer_Network_Storage_Hub
 
 	// BandwidthBillingItemCount - A count of the billing items tied to a Storage service's bandwidth
 	// usage.

@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Billing_Item_Link_ThePlanet - <nil>
 type SoftLayer_Billing_Item_Link_ThePlanet struct {
+}
+
+// SoftLayer_Billing_Item_Link_ThePlanet_Extended is SoftLayer_Billing_Item_Link_ThePlanet with all maskable types.
+type SoftLayer_Billing_Item_Link_ThePlanet_Extended struct {
+	SoftLayer_Billing_Item_Link_ThePlanet
 
 	// BillingItem - <nil>
 	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`

@@ -9,26 +9,19 @@ import (
 // SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch - <nil>
 type SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch struct {
 
-	// Algorithm - The algorithm to use when aggregating and comparing. Currently, the only value that is
-	// accepted is (Exponential Weighted Moving Average). is the default value if no value is given.
-	Algorithm string `json:"algorithm"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
-	// DeleteFlag - When set and true any edit that happens on this object, be it calling edit on this
-	// directly or setting as a child while editing a parent object, will end up being a deletion.
-	DeleteFlag bool `json:"deleteFlag"`
-
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// Metric - The metric to watch. Possible values: * host.cpu.percent - On a scale of 0 to 100, the
 	// percent CPU a guest is using. * host.network.backend.in and host.network.frontend.in - The network
 	// bytes-per-second incoming on the interface of either the frontend or backend network. *
 	// host.network.backend.out and host.network.frontend.out - The network bytes-per-second incoming on
 	// the interface of either the frontend or backend network.
 	Metric string `json:"metric"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// DeleteFlag - When set and true any edit that happens on this object, be it calling edit on this
+	// directly or setting as a child while editing a parent object, will end up being a deletion.
+	DeleteFlag bool `json:"deleteFlag"`
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
@@ -40,15 +33,27 @@ type SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch struct {
 	// not retrieved steadily and consecutively for the length of this period, nothing is compared.
 	Period int `json:"period"`
 
-	// ScalePolicyTrigger - no documentation
-	ScalePolicyTrigger *SoftLayer_Scale_Policy_Trigger_ResourceUse `json:"scalePolicyTrigger"`
-
 	// ScalePolicyTriggerId - no documentation
 	ScalePolicyTriggerId int `json:"scalePolicyTriggerId"`
 
 	// Value - The value to compare against. Although the value is a string, validation will be done on the
 	// value for restrictions (such as numeric-only) based on the metric.
 	Value string `json:"value"`
+
+	// Algorithm - The algorithm to use when aggregating and comparing. Currently, the only value that is
+	// accepted is (Exponential Weighted Moving Average). is the default value if no value is given.
+	Algorithm string `json:"algorithm"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+}
+
+// SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch_Extended is SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch with all maskable types.
+type SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch_Extended struct {
+	SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch
+
+	// ScalePolicyTrigger - no documentation
+	ScalePolicyTrigger *SoftLayer_Scale_Policy_Trigger_ResourceUse `json:"scalePolicyTrigger"`
 }
 
 func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) String() string {

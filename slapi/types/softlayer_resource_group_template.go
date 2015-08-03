@@ -5,12 +5,6 @@ package types
 // SoftLayer_Resource_Group_Template - <nil>
 type SoftLayer_Resource_Group_Template struct {
 
-	// Children - <nil>
-	Children []*SoftLayer_Resource_Group_Template `json:"children"`
-
-	// ChildrenCount - no documentation
-	ChildrenCount uint64 `json:"childrenCount"`
-
 	// Description - no documentation
 	Description string `json:"description"`
 
@@ -19,9 +13,20 @@ type SoftLayer_Resource_Group_Template struct {
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName"`
+}
+
+// SoftLayer_Resource_Group_Template_Extended is SoftLayer_Resource_Group_Template with all maskable types.
+type SoftLayer_Resource_Group_Template_Extended struct {
+	SoftLayer_Resource_Group_Template
+
+	// ChildrenCount - no documentation
+	ChildrenCount uint64 `json:"childrenCount"`
 
 	// MemberCount - no documentation
 	MemberCount uint64 `json:"memberCount"`
+
+	// Children - <nil>
+	Children []*SoftLayer_Resource_Group_Template `json:"children"`
 
 	// Members - <nil>
 	Members []*SoftLayer_Resource_Group_Template_Member `json:"members"`

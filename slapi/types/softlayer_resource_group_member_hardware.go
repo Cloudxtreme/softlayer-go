@@ -4,12 +4,11 @@ package types
 
 // SoftLayer_Resource_Group_Member_Hardware - <nil>
 type SoftLayer_Resource_Group_Member_Hardware struct {
+}
 
-	// Resource - no documentation
-	Resource *SoftLayer_Hardware `json:"resource"`
-
-	// ServerArbiterOnly - A resource group hardware member's associated server arbiter-only state.
-	ServerArbiterOnly *SoftLayer_Resource_Group_Member_Attribute `json:"serverArbiterOnly"`
+// SoftLayer_Resource_Group_Member_Hardware_Extended is SoftLayer_Resource_Group_Member_Hardware with all maskable types.
+type SoftLayer_Resource_Group_Member_Hardware_Extended struct {
+	SoftLayer_Resource_Group_Member_Hardware
 
 	// ServerHidden - A resource group hardware member's associated server hidden state.
 	ServerHidden *SoftLayer_Resource_Group_Member_Attribute `json:"serverHidden"`
@@ -25,6 +24,12 @@ type SoftLayer_Resource_Group_Member_Hardware struct {
 
 	// ServerVotes - A resource group hardware member's associated server vote count.
 	ServerVotes *SoftLayer_Resource_Group_Member_Attribute `json:"serverVotes"`
+
+	// Resource - no documentation
+	Resource *SoftLayer_Hardware `json:"resource"`
+
+	// ServerArbiterOnly - A resource group hardware member's associated server arbiter-only state.
+	ServerArbiterOnly *SoftLayer_Resource_Group_Member_Attribute `json:"serverArbiterOnly"`
 }
 
 func (softlayer_resource_group_member_hardware *SoftLayer_Resource_Group_Member_Hardware) String() string {

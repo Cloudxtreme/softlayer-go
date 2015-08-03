@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Product_Package_Preset_Configuration - <nil>
 type SoftLayer_Product_Package_Preset_Configuration struct {
+}
+
+// SoftLayer_Product_Package_Preset_Configuration_Extended is SoftLayer_Product_Package_Preset_Configuration with all maskable types.
+type SoftLayer_Product_Package_Preset_Configuration_Extended struct {
+	SoftLayer_Product_Package_Preset_Configuration
 
 	// Category - <nil>
 	Category *SoftLayer_Product_Item_Category `json:"category"`

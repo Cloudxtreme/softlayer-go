@@ -27,6 +27,11 @@ type SoftLayer_Metric_Tracking_Object struct {
 
 	// StartDate - The date this tracker began tracking this particular resource.
 	StartDate *time.Time `json:"startDate"`
+}
+
+// SoftLayer_Metric_Tracking_Object_Extended is SoftLayer_Metric_Tracking_Object with all maskable types.
+type SoftLayer_Metric_Tracking_Object_Extended struct {
+	SoftLayer_Metric_Tracking_Object
 
 	// Type - no documentation
 	Type *SoftLayer_Metric_Tracking_Object_Type `json:"type"`

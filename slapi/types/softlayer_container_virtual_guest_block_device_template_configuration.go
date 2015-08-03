@@ -7,9 +7,6 @@ package types
 // relating to a template's external location for importing and exporting
 type SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration struct {
 
-	// Name - The group name to be applied to the imported template
-	Name string `json:"name"`
-
 	// Note - no documentation
 	Note string `json:"note"`
 
@@ -19,6 +16,9 @@ type SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration struc
 
 	// Uri - The URI for an object storage object (.vhd/.iso file) swift://
 	Uri string `json:"uri"`
+
+	// Name - The group name to be applied to the imported template
+	Name string `json:"name"`
 }
 
 func (softlayer_container_virtual_guest_block_device_template_configuration *SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration) String() string {

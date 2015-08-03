@@ -9,6 +9,9 @@ import (
 // SoftLayer_Scale_Asset - <nil>
 type SoftLayer_Scale_Asset struct {
 
+	// ScaleGroupId - no documentation
+	ScaleGroupId int `json:"scaleGroupId"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
@@ -18,12 +21,14 @@ type SoftLayer_Scale_Asset struct {
 
 	// Id - no documentation
 	Id int `json:"id"`
+}
+
+// SoftLayer_Scale_Asset_Extended is SoftLayer_Scale_Asset with all maskable types.
+type SoftLayer_Scale_Asset_Extended struct {
+	SoftLayer_Scale_Asset
 
 	// ScaleGroup - no documentation
 	ScaleGroup *SoftLayer_Scale_Group `json:"scaleGroup"`
-
-	// ScaleGroupId - no documentation
-	ScaleGroupId int `json:"scaleGroupId"`
 }
 
 func (softlayer_scale_asset *SoftLayer_Scale_Asset) String() string {

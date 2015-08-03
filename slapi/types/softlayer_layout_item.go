@@ -11,8 +11,16 @@ type SoftLayer_Layout_Item struct {
 	// Keyname - The unique key name of the layout item, used primarily for programmatic purposes
 	Keyname string `json:"keyname"`
 
-	// LayoutItemPreferenceCount - A count of the layout preferences assigned to this layout item
-	LayoutItemPreferenceCount uint64 `json:"layoutItemPreferenceCount"`
+	// LayoutItemTypeId - The internal identifier of the related [[SoftLayer_Layout_Item_Type]]
+	LayoutItemTypeId int `json:"layoutItemTypeId"`
+
+	// Name - no documentation
+	Name string `json:"name"`
+}
+
+// SoftLayer_Layout_Item_Extended is SoftLayer_Layout_Item with all maskable types.
+type SoftLayer_Layout_Item_Extended struct {
+	SoftLayer_Layout_Item
 
 	// LayoutItemPreferences - The layout preferences assigned to this layout item
 	LayoutItemPreferences []*SoftLayer_Layout_Preference `json:"layoutItemPreferences"`
@@ -20,11 +28,8 @@ type SoftLayer_Layout_Item struct {
 	// LayoutItemType - no documentation
 	LayoutItemType *SoftLayer_Layout_Item_Type `json:"layoutItemType"`
 
-	// LayoutItemTypeId - The internal identifier of the related [[SoftLayer_Layout_Item_Type]]
-	LayoutItemTypeId int `json:"layoutItemTypeId"`
-
-	// Name - no documentation
-	Name string `json:"name"`
+	// LayoutItemPreferenceCount - A count of the layout preferences assigned to this layout item
+	LayoutItemPreferenceCount uint64 `json:"layoutItemPreferenceCount"`
 }
 
 func (softlayer_layout_item *SoftLayer_Layout_Item) String() string {

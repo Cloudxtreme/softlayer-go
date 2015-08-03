@@ -8,9 +8,6 @@ package types
 // information.
 type SoftLayer_Container_Product_Order_Attribute_Organization struct {
 
-	// Address - no documentation
-	Address *SoftLayer_Container_Product_Order_Attribute_Address `json:"address"`
-
 	// FaxNumber - The fax number associated with an organization. This is an optional value.
 	FaxNumber string `json:"faxNumber"`
 
@@ -19,6 +16,9 @@ type SoftLayer_Container_Product_Order_Attribute_Organization struct {
 
 	// PhoneNumber - no documentation
 	PhoneNumber string `json:"phoneNumber"`
+
+	// Address - no documentation
+	Address *SoftLayer_Container_Product_Order_Attribute_Address `json:"address"`
 }
 
 func (softlayer_container_product_order_attribute_organization *SoftLayer_Container_Product_Order_Attribute_Organization) String() string {

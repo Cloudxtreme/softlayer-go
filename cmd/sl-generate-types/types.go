@@ -182,6 +182,26 @@ type MetadataEntity struct {
 	Properties map[string]Property `json:"properties"`
 }
 
+func (e MetadataEntity) DefaultProperties() []Property {
+	properties := make([]Property, 0)
+	for _, prop := range e.Properties {
+		if prop.Form == "local" {
+			properties = append(properties, prop)
+		}
+	}
+	return properties
+}
+
+func (e MetadataEntity) ExtendedProperties() []Property {
+	properties := make([]Property, 0)
+	for _, prop := range e.Properties {
+		if prop.Form != "local" {
+			properties = append(properties, prop)
+		}
+	}
+	return properties
+}
+
 func (e MetadataEntity) Imports() map[string]string {
 	imports := map[string]string{}
 	for _, property := range e.Properties {
@@ -197,10 +217,6 @@ func (e MetadataEntity) Imports() map[string]string {
 	}
 
 	return imports
-}
-
-type GoEntity struct {
-	metadataEntity MetadataEntity
 }
 
 func upper(name string) string {

@@ -10,15 +10,20 @@ package types
 // ticket.
 type SoftLayer_Ticket_Attachment_Virtual_Guest struct {
 
+	// VirtualGuestId - The internal identifier of the virtualized guest or CloudLayer Computing Instance
+	// that is attached to a ticket.
+	VirtualGuestId int `json:"virtualGuestId"`
+}
+
+// SoftLayer_Ticket_Attachment_Virtual_Guest_Extended is SoftLayer_Ticket_Attachment_Virtual_Guest with all maskable types.
+type SoftLayer_Ticket_Attachment_Virtual_Guest_Extended struct {
+	SoftLayer_Ticket_Attachment_Virtual_Guest
+
 	// Resource - The virtualized guest or CloudLayer Computing Instance that is attached to a ticket.
 	Resource *SoftLayer_Virtual_Guest `json:"resource"`
 
 	// VirtualGuest - The virtualized guest or CloudLayer Computing Instance that is attached to a ticket.
 	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest"`
-
-	// VirtualGuestId - The internal identifier of the virtualized guest or CloudLayer Computing Instance
-	// that is attached to a ticket.
-	VirtualGuestId int `json:"virtualGuestId"`
 }
 
 func (softlayer_ticket_attachment_virtual_guest *SoftLayer_Ticket_Attachment_Virtual_Guest) String() string {

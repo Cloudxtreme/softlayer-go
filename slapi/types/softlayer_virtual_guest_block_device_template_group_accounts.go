@@ -15,22 +15,27 @@ import (
 // accounts should occur on the parent object.
 type SoftLayer_Virtual_Guest_Block_Device_Template_Group_Accounts struct {
 
-	// Account - The [[SoftLayer_Account|account]] that an image template group is shared with.
-	Account *SoftLayer_Account `json:"account"`
-
 	// AccountId - The [[SoftLayer_Account|account]] ID which will have access to an image.
 	AccountId int `json:"accountId"`
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
-	// Group - The [[SoftLayer_Virtual_Guest_Block_Device_Template_Group|image template group]] that is
-	// shared with an account.
-	Group *SoftLayer_Virtual_Guest_Block_Device_Template_Group `json:"group"`
-
 	// GroupId - The [[SoftLayer_Virtual_Guest_Block_Device_Template_Group|group]] ID which access will be
 	// granted to.
 	GroupId int `json:"groupId"`
+}
+
+// SoftLayer_Virtual_Guest_Block_Device_Template_Group_Accounts_Extended is SoftLayer_Virtual_Guest_Block_Device_Template_Group_Accounts with all maskable types.
+type SoftLayer_Virtual_Guest_Block_Device_Template_Group_Accounts_Extended struct {
+	SoftLayer_Virtual_Guest_Block_Device_Template_Group_Accounts
+
+	// Account - The [[SoftLayer_Account|account]] that an image template group is shared with.
+	Account *SoftLayer_Account `json:"account"`
+
+	// Group - The [[SoftLayer_Virtual_Guest_Block_Device_Template_Group|image template group]] that is
+	// shared with an account.
+	Group *SoftLayer_Virtual_Guest_Block_Device_Template_Group `json:"group"`
 }
 
 func (softlayer_virtual_guest_block_device_template_group_accounts *SoftLayer_Virtual_Guest_Block_Device_Template_Group_Accounts) String() string {

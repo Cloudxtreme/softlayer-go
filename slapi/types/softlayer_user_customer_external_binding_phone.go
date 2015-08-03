@@ -9,6 +9,11 @@ package types
 // this case using a mobile phone, mobile phone application or land-line phone. SoftLayer users with an
 // active external binding will be prohibited from using the API for security reasons.
 type SoftLayer_User_Customer_External_Binding_Phone struct {
+}
+
+// SoftLayer_User_Customer_External_Binding_Phone_Extended is SoftLayer_User_Customer_External_Binding_Phone with all maskable types.
+type SoftLayer_User_Customer_External_Binding_Phone_Extended struct {
+	SoftLayer_User_Customer_External_Binding_Phone
 
 	// BindingStatus - The current external binding status. It can be or
 	BindingStatus string `json:"bindingStatus"`

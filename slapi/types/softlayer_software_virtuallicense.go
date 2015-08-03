@@ -8,17 +8,14 @@ package types
 // Address. Not all software packages can be "virtual licensed".
 type SoftLayer_Software_VirtualLicense struct {
 
-	// Account - The customer account this Virtual License belongs to.
-	Account *SoftLayer_Account `json:"account"`
+	// SubnetId - The ID of the SoftLayer Network Subnet this Virtual License belongs to.
+	SubnetId int `json:"subnetId"`
+
+	// Key - no documentation
+	Key string `json:"key"`
 
 	// AccountId - The ID of the SoftLayer Account to which this Virtual License belongs to.
 	AccountId int `json:"accountId"`
-
-	// BillingItem - no documentation
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
-
-	// HostHardware - The hardware record to which the software virtual license is assigned.
-	HostHardware *SoftLayer_Hardware_Server `json:"hostHardware"`
 
 	// HostHardwareId - The ID of the SoftLayer Hardware Server record to which this Virtual License
 	// belongs.
@@ -30,26 +27,34 @@ type SoftLayer_Software_VirtualLicense struct {
 	// IpAddress - The specific IP address this Virtual License belongs to.
 	IpAddress string `json:"ipAddress"`
 
-	// IpAddressRecord - The IP Address record associated with a virtual license.
-	IpAddressRecord *SoftLayer_Network_Subnet_IpAddress `json:"ipAddressRecord"`
-
-	// Key - no documentation
-	Key string `json:"key"`
-
 	// Notes - A "notes" string attached to this specific Virtual License.
 	Notes string `json:"notes"`
 
-	// SoftwareDescription - The SoftLayer_Software_Description that this virtual license is for.
-	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription"`
-
 	// SoftwareDescriptionId - The Software Description ID this Virtual License is for.
 	SoftwareDescriptionId int `json:"softwareDescriptionId"`
+}
+
+// SoftLayer_Software_VirtualLicense_Extended is SoftLayer_Software_VirtualLicense with all maskable types.
+type SoftLayer_Software_VirtualLicense_Extended struct {
+	SoftLayer_Software_VirtualLicense
 
 	// Subnet - The subnet this Virtual License's IP address belongs to.
 	Subnet *SoftLayer_Network_Subnet `json:"subnet"`
 
-	// SubnetId - The ID of the SoftLayer Network Subnet this Virtual License belongs to.
-	SubnetId int `json:"subnetId"`
+	// Account - The customer account this Virtual License belongs to.
+	Account *SoftLayer_Account `json:"account"`
+
+	// IpAddressRecord - The IP Address record associated with a virtual license.
+	IpAddressRecord *SoftLayer_Network_Subnet_IpAddress `json:"ipAddressRecord"`
+
+	// BillingItem - no documentation
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
+
+	// HostHardware - The hardware record to which the software virtual license is assigned.
+	HostHardware *SoftLayer_Hardware_Server `json:"hostHardware"`
+
+	// SoftwareDescription - The SoftLayer_Software_Description that this virtual license is for.
+	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription"`
 }
 
 func (softlayer_software_virtuallicense *SoftLayer_Software_VirtualLicense) String() string {

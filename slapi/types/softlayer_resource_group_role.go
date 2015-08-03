@@ -13,6 +13,11 @@ type SoftLayer_Resource_Group_Role struct {
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName"`
+}
+
+// SoftLayer_Resource_Group_Role_Extended is SoftLayer_Resource_Group_Role with all maskable types.
+type SoftLayer_Resource_Group_Role_Extended struct {
+	SoftLayer_Resource_Group_Role
 
 	// MemberLinkCount - no documentation
 	MemberLinkCount uint64 `json:"memberLinkCount"`

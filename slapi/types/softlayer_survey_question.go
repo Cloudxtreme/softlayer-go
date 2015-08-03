@@ -6,17 +6,14 @@ package types
 // relating to a single SoftLayer survey question.
 type SoftLayer_Survey_Question struct {
 
-	// AnswerCount - A count of the possible answers for a survey question.
-	AnswerCount uint64 `json:"answerCount"`
+	// IsRequired - A flag indicating that a survey question requires a response.
+	IsRequired int `json:"isRequired"`
 
-	// Answers - no documentation
-	Answers []*SoftLayer_Survey_Answer `json:"answers"`
+	// QuestionOrder - A value indicating the order in when a survey question will be asked.
+	QuestionOrder int `json:"questionOrder"`
 
 	// Id - no documentation
 	Id int `json:"id"`
-
-	// IsRequired - A flag indicating that a survey question requires a response.
-	IsRequired int `json:"isRequired"`
 
 	// MultiAnswer - A flag indicating that a survey question can have multiple answers responded to.
 	MultiAnswer int `json:"multiAnswer"`
@@ -24,14 +21,22 @@ type SoftLayer_Survey_Question struct {
 	// Question - no documentation
 	Question string `json:"question"`
 
-	// QuestionOrder - A value indicating the order in when a survey question will be asked.
-	QuestionOrder int `json:"questionOrder"`
+	// SurveyId - A survey question's associated [[SoftLayer_Survey|Survey]] Id.
+	SurveyId int `json:"surveyId"`
+}
+
+// SoftLayer_Survey_Question_Extended is SoftLayer_Survey_Question with all maskable types.
+type SoftLayer_Survey_Question_Extended struct {
+	SoftLayer_Survey_Question
 
 	// Survey - no documentation
 	Survey *SoftLayer_Survey `json:"survey"`
 
-	// SurveyId - A survey question's associated [[SoftLayer_Survey|Survey]] Id.
-	SurveyId int `json:"surveyId"`
+	// AnswerCount - A count of the possible answers for a survey question.
+	AnswerCount uint64 `json:"answerCount"`
+
+	// Answers - no documentation
+	Answers []*SoftLayer_Survey_Answer `json:"answers"`
 }
 
 func (softlayer_survey_question *SoftLayer_Survey_Question) String() string {

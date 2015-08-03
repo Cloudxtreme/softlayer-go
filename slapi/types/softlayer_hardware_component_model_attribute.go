@@ -11,12 +11,6 @@ type SoftLayer_Hardware_Component_Model_Attribute struct {
 	// [[SoftLayer_Hardware_Component_Model_Attribute_Type|type]] Id.
 	AttributeTypeId int `json:"attributeTypeId"`
 
-	// HardwareComponent - <nil>
-	HardwareComponent *SoftLayer_Hardware_Component_Model `json:"hardwareComponent"`
-
-	// HardwareComponentAttributeType - <nil>
-	HardwareComponentAttributeType *SoftLayer_Hardware_Component_Model_Attribute_Type `json:"hardwareComponentAttributeType"`
-
 	// HardwareComponentModelId - A hardware component model attribute's associated
 	// [[SoftLayer_Hardware_Component_Model|hardware component model]] Id.
 	HardwareComponentModelId int `json:"hardwareComponentModelId"`
@@ -24,6 +18,17 @@ type SoftLayer_Hardware_Component_Model_Attribute struct {
 	// Value - A hardware component model attribute's value. A value can have many different values
 	// depending on the attributes [[SoftLayer_Hardware_Component_Model_Attribute_Type|type]].
 	Value string `json:"value"`
+}
+
+// SoftLayer_Hardware_Component_Model_Attribute_Extended is SoftLayer_Hardware_Component_Model_Attribute with all maskable types.
+type SoftLayer_Hardware_Component_Model_Attribute_Extended struct {
+	SoftLayer_Hardware_Component_Model_Attribute
+
+	// HardwareComponent - <nil>
+	HardwareComponent *SoftLayer_Hardware_Component_Model `json:"hardwareComponent"`
+
+	// HardwareComponentAttributeType - <nil>
+	HardwareComponentAttributeType *SoftLayer_Hardware_Component_Model_Attribute_Type `json:"hardwareComponentAttributeType"`
 }
 
 func (softlayer_hardware_component_model_attribute *SoftLayer_Hardware_Component_Model_Attribute) String() string {

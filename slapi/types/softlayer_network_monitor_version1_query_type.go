@@ -9,9 +9,6 @@ package types
 // retrieve all available Query Types with the getAllObjects method on this service.
 type SoftLayer_Network_Monitor_Version1_Query_Type struct {
 
-	// ArgumentDescription - The type of parameter sent to the monitoring command.
-	ArgumentDescription string `json:"argumentDescription"`
-
 	// Description - no documentation
 	Description string `json:"description"`
 
@@ -24,6 +21,9 @@ type SoftLayer_Network_Monitor_Version1_Query_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+
+	// ArgumentDescription - The type of parameter sent to the monitoring command.
+	ArgumentDescription string `json:"argumentDescription"`
 }
 
 func (softlayer_network_monitor_version1_query_type *SoftLayer_Network_Monitor_Version1_Query_Type) String() string {

@@ -8,39 +8,44 @@ package types
 // backend.
 type SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36 struct {
 
-	// AgentDetails - no documentation
-	AgentDetails *McAfee_Epolicy_Orchestrator_Version36_Agent_Details `json:"agentDetails"`
-
-	// CurrentAntivirusPolicy - no documentation
-	CurrentAntivirusPolicy int `json:"currentAntivirusPolicy"`
-
-	// DataFileVersion - no documentation
-	DataFileVersion *McAfee_Epolicy_Orchestrator_Version36_Product_Properties `json:"dataFileVersion"`
-
 	// EpoVersion - The version of ePolicy Orchestrator that the anti-virus/spyware client communicates
 	// with.
 	EpoVersion string `json:"epoVersion"`
+}
+
+// SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36_Extended is SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36 with all maskable types.
+type SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36_Extended struct {
+	SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36
 
 	// LatestAccessProtectionEventCount - no documentation
 	LatestAccessProtectionEventCount uint64 `json:"latestAccessProtectionEventCount"`
 
-	// LatestAccessProtectionEvents - no documentation
-	LatestAccessProtectionEvents []*McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_AccessProtection `json:"latestAccessProtectionEvents"`
-
 	// LatestAntivirusEventCount - no documentation
 	LatestAntivirusEventCount uint64 `json:"latestAntivirusEventCount"`
 
-	// LatestAntivirusEvents - no documentation
-	LatestAntivirusEvents []*McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event `json:"latestAntivirusEvents"`
+	// CurrentAntivirusPolicy - no documentation
+	CurrentAntivirusPolicy int `json:"currentAntivirusPolicy"`
+
+	// LatestAccessProtectionEvents - no documentation
+	LatestAccessProtectionEvents []*McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_AccessProtection `json:"latestAccessProtectionEvents"`
+
+	// TransactionStatus - no documentation
+	TransactionStatus string `json:"transactionStatus"`
 
 	// LatestSpywareEventCount - no documentation
 	LatestSpywareEventCount uint64 `json:"latestSpywareEventCount"`
 
+	// AgentDetails - no documentation
+	AgentDetails *McAfee_Epolicy_Orchestrator_Version36_Agent_Details `json:"agentDetails"`
+
+	// DataFileVersion - no documentation
+	DataFileVersion *McAfee_Epolicy_Orchestrator_Version36_Product_Properties `json:"dataFileVersion"`
+
+	// LatestAntivirusEvents - no documentation
+	LatestAntivirusEvents []*McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event `json:"latestAntivirusEvents"`
+
 	// LatestSpywareEvents - no documentation
 	LatestSpywareEvents []*McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event `json:"latestSpywareEvents"`
-
-	// TransactionStatus - no documentation
-	TransactionStatus string `json:"transactionStatus"`
 }
 
 func (softlayer_software_component_antivirusspyware_mcafee_epo_version36 *SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36) String() string {

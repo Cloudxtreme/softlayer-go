@@ -5,11 +5,11 @@ package types
 // SoftLayer_Virtual_Guest_Status - <nil>
 type SoftLayer_Virtual_Guest_Status struct {
 
-	// KeyName - <nil>
-	KeyName string `json:"keyName"`
-
 	// Name - <nil>
 	Name string `json:"name"`
+
+	// KeyName - <nil>
+	KeyName string `json:"keyName"`
 }
 
 func (softlayer_virtual_guest_status *SoftLayer_Virtual_Guest_Status) String() string {

@@ -12,26 +12,31 @@ import (
 // synchronization.
 type SoftLayer_Network_Storage_Event struct {
 
+	// TypeId - no documentation
+	TypeId int `json:"typeId"`
+
+	// VolumeId - no documentation
+	VolumeId int `json:"volumeId"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
 	// Message - no documentation
 	Message string `json:"message"`
 
+	// ScheduleId - An identifier for the schedule which is associated with an event.
+	ScheduleId int `json:"scheduleId"`
+}
+
+// SoftLayer_Network_Storage_Event_Extended is SoftLayer_Network_Storage_Event with all maskable types.
+type SoftLayer_Network_Storage_Event_Extended struct {
+	SoftLayer_Network_Storage_Event
+
 	// Schedule - A schedule that is associated with an event. Not all events will have a schedule.
 	Schedule *SoftLayer_Network_Storage_Schedule `json:"schedule"`
 
-	// ScheduleId - An identifier for the schedule which is associated with an event.
-	ScheduleId int `json:"scheduleId"`
-
-	// TypeId - no documentation
-	TypeId int `json:"typeId"`
-
 	// Volume - no documentation
 	Volume *SoftLayer_Network_Storage `json:"volume"`
-
-	// VolumeId - no documentation
-	VolumeId int `json:"volumeId"`
 }
 
 func (softlayer_network_storage_event *SoftLayer_Network_Storage_Event) String() string {

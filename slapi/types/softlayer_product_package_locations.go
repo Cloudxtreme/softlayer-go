@@ -13,17 +13,22 @@ type SoftLayer_Product_Package_Locations struct {
 	// package.
 	IsAvailable int `json:"isAvailable"`
 
-	// Location - no documentation
-	Location *SoftLayer_Location `json:"location"`
-
 	// LocationId - no documentation
 	LocationId int `json:"locationId"`
 
-	// Package - no documentation
-	Package *SoftLayer_Product_Package `json:"package"`
-
 	// PackageId - The SoftLayer_Product_Package ID tied to this object.
 	PackageId int `json:"packageId"`
+}
+
+// SoftLayer_Product_Package_Locations_Extended is SoftLayer_Product_Package_Locations with all maskable types.
+type SoftLayer_Product_Package_Locations_Extended struct {
+	SoftLayer_Product_Package_Locations
+
+	// Location - no documentation
+	Location *SoftLayer_Location `json:"location"`
+
+	// Package - no documentation
+	Package *SoftLayer_Product_Package `json:"package"`
 }
 
 func (softlayer_product_package_locations *SoftLayer_Product_Package_Locations) String() string {

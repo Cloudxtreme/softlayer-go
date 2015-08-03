@@ -10,15 +10,6 @@ type SoftLayer_Container_Product_Order_Network_Vlan struct {
 	// Description - The description which includes the primary router's hostname plus the vlan number.
 	Description string `json:"description"`
 
-	// HostnameDatacenter - no documentation
-	HostnameDatacenter string `json:"hostnameDatacenter"`
-
-	// HostnameRouter - no documentation
-	HostnameRouter string `json:"hostnameRouter"`
-
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// Name - no documentation
 	Name string `json:"name"`
 
@@ -27,6 +18,15 @@ type SoftLayer_Container_Product_Order_Network_Vlan struct {
 
 	// RouterId - The ID of the [[SoftLayer_Hardware_Router]] object on which the new should be created.
 	RouterId int `json:"routerId"`
+
+	// HostnameDatacenter - no documentation
+	HostnameDatacenter string `json:"hostnameDatacenter"`
+
+	// HostnameRouter - no documentation
+	HostnameRouter string `json:"hostnameRouter"`
+
+	// Id - no documentation
+	Id int `json:"id"`
 
 	// Subnets - The collection of subnets associated with this vlan.
 	Subnets []*SoftLayer_Container_Product_Order `json:"subnets"`

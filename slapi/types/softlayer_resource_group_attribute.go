@@ -12,17 +12,22 @@ type SoftLayer_Resource_Group_Attribute struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
-	// Group - no documentation
-	Group *SoftLayer_Resource_Group `json:"group"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
-	// Type - no documentation
-	Type *SoftLayer_Resource_Group_Attribute_Type `json:"type"`
-
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+// SoftLayer_Resource_Group_Attribute_Extended is SoftLayer_Resource_Group_Attribute with all maskable types.
+type SoftLayer_Resource_Group_Attribute_Extended struct {
+	SoftLayer_Resource_Group_Attribute
+
+	// Group - no documentation
+	Group *SoftLayer_Resource_Group `json:"group"`
+
+	// Type - no documentation
+	Type *SoftLayer_Resource_Group_Attribute_Type `json:"type"`
 }
 
 func (softlayer_resource_group_attribute *SoftLayer_Resource_Group_Attribute) String() string {

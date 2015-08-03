@@ -9,18 +9,6 @@ import (
 // SoftLayer_Hardware_Note - <nil>
 type SoftLayer_Hardware_Note struct {
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
-
-	// Employee - <nil>
-	Employee *SoftLayer_User_Employee `json:"employee"`
-
-	// Hardware - <nil>
-	Hardware *SoftLayer_Hardware `json:"hardware"`
-
-	// HardwareId - <nil>
-	HardwareId int `json:"hardwareId"`
-
 	// Id - <nil>
 	Id int `json:"id"`
 
@@ -30,17 +18,34 @@ type SoftLayer_Hardware_Note struct {
 	// Note - <nil>
 	Note string `json:"note"`
 
-	// Type - <nil>
-	Type *SoftLayer_Hardware_Note_Type `json:"type"`
-
 	// TypeId - <nil>
 	TypeId int `json:"typeId"`
 
-	// User - <nil>
-	User *SoftLayer_User_Customer `json:"user"`
-
 	// UserRecordId - <nil>
 	UserRecordId int `json:"userRecordId"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate"`
+
+	// HardwareId - <nil>
+	HardwareId int `json:"hardwareId"`
+}
+
+// SoftLayer_Hardware_Note_Extended is SoftLayer_Hardware_Note with all maskable types.
+type SoftLayer_Hardware_Note_Extended struct {
+	SoftLayer_Hardware_Note
+
+	// Employee - <nil>
+	Employee *SoftLayer_User_Employee `json:"employee"`
+
+	// Hardware - <nil>
+	Hardware *SoftLayer_Hardware `json:"hardware"`
+
+	// Type - <nil>
+	Type *SoftLayer_Hardware_Note_Type `json:"type"`
+
+	// User - <nil>
+	User *SoftLayer_User_Customer `json:"user"`
 }
 
 func (softlayer_hardware_note *SoftLayer_Hardware_Note) String() string {

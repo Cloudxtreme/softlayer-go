@@ -7,6 +7,32 @@ package types
 // a given service, like Evault, etc.
 type SoftLayer_Network_Service_Resource struct {
 
+	// Name - no documentation
+	Name string `json:"name"`
+
+	// Id - <nil>
+	Id int `json:"id"`
+
+	// BackendIpAddress - no documentation
+	BackendIpAddress string `json:"backendIpAddress"`
+
+	// FrontendIpAddress - no documentation
+	FrontendIpAddress string `json:"frontendIpAddress"`
+}
+
+// SoftLayer_Network_Service_Resource_Extended is SoftLayer_Network_Service_Resource with all maskable types.
+type SoftLayer_Network_Service_Resource_Extended struct {
+	SoftLayer_Network_Service_Resource
+
+	// Type - The network information associated with this resource.
+	Type *SoftLayer_Network_Service_Resource_Type `json:"type"`
+
+	// AttributeCount - no documentation
+	AttributeCount uint64 `json:"attributeCount"`
+
+	// ApiUsername - <nil>
+	ApiUsername string `json:"apiUsername"`
+
 	// ApiHost - <nil>
 	ApiHost string `json:"apiHost"`
 
@@ -16,47 +42,26 @@ type SoftLayer_Network_Service_Resource struct {
 	// ApiPath - <nil>
 	ApiPath string `json:"apiPath"`
 
+	// Attributes - <nil>
+	Attributes []*SoftLayer_Network_Service_Resource_Attribute `json:"attributes"`
+
 	// ApiPort - <nil>
 	ApiPort string `json:"apiPort"`
 
 	// ApiProtocol - <nil>
 	ApiProtocol string `json:"apiProtocol"`
 
-	// ApiUsername - <nil>
-	ApiUsername string `json:"apiUsername"`
-
 	// ApiVersion - <nil>
 	ApiVersion string `json:"apiVersion"`
 
-	// AttributeCount - no documentation
-	AttributeCount uint64 `json:"attributeCount"`
-
-	// Attributes - <nil>
-	Attributes []*SoftLayer_Network_Service_Resource_Attribute `json:"attributes"`
-
-	// BackendIpAddress - no documentation
-	BackendIpAddress string `json:"backendIpAddress"`
-
 	// Datacenter - <nil>
 	Datacenter *SoftLayer_Location `json:"datacenter"`
-
-	// FrontendIpAddress - no documentation
-	FrontendIpAddress string `json:"frontendIpAddress"`
-
-	// Id - <nil>
-	Id int `json:"id"`
-
-	// Name - no documentation
-	Name string `json:"name"`
 
 	// NetworkDevice - The hardware information associated with this resource.
 	NetworkDevice *SoftLayer_Hardware `json:"networkDevice"`
 
 	// SshUsername - <nil>
 	SshUsername string `json:"sshUsername"`
-
-	// Type - The network information associated with this resource.
-	Type *SoftLayer_Network_Service_Resource_Type `json:"type"`
 }
 
 func (softlayer_network_service_resource *SoftLayer_Network_Service_Resource) String() string {

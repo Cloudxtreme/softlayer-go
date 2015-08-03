@@ -11,9 +11,6 @@ import (
 // is only populated for SoftLayer customers who are billed monthly.
 type SoftLayer_Billing_Info_Cycle struct {
 
-	// Account - The account that a current billing cycle is associated with.
-	Account *SoftLayer_Account `json:"account"`
-
 	// CurrentCycleEndDate - The ending date of an account's current billing cycle.
 	CurrentCycleEndDate *time.Time `json:"currentCycleEndDate"`
 
@@ -28,6 +25,14 @@ type SoftLayer_Billing_Info_Cycle struct {
 
 	// PreviousCycleStartDate - The starting date of an account's previous billing cycle.
 	PreviousCycleStartDate *time.Time `json:"previousCycleStartDate"`
+}
+
+// SoftLayer_Billing_Info_Cycle_Extended is SoftLayer_Billing_Info_Cycle with all maskable types.
+type SoftLayer_Billing_Info_Cycle_Extended struct {
+	SoftLayer_Billing_Info_Cycle
+
+	// Account - The account that a current billing cycle is associated with.
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_billing_info_cycle *SoftLayer_Billing_Info_Cycle) String() string {

@@ -21,17 +21,22 @@ type SoftLayer_User_Customer_Link struct {
 	// Id - <nil>
 	Id int `json:"id"`
 
-	// ServiceProvider - <nil>
-	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider"`
-
 	// ServiceProviderId - <nil>
 	ServiceProviderId int `json:"serviceProviderId"`
 
-	// User - <nil>
-	User *SoftLayer_User_Customer `json:"user"`
-
 	// UserId - <nil>
 	UserId int `json:"userId"`
+}
+
+// SoftLayer_User_Customer_Link_Extended is SoftLayer_User_Customer_Link with all maskable types.
+type SoftLayer_User_Customer_Link_Extended struct {
+	SoftLayer_User_Customer_Link
+
+	// ServiceProvider - <nil>
+	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider"`
+
+	// User - <nil>
+	User *SoftLayer_User_Customer `json:"user"`
 }
 
 func (softlayer_user_customer_link *SoftLayer_User_Customer_Link) String() string {

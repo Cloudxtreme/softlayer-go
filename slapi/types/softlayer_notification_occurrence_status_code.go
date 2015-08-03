@@ -13,6 +13,11 @@ type SoftLayer_Notification_Occurrence_Status_Code struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+// SoftLayer_Notification_Occurrence_Status_Code_Extended is SoftLayer_Notification_Occurrence_Status_Code with all maskable types.
+type SoftLayer_Notification_Occurrence_Status_Code_Extended struct {
+	SoftLayer_Notification_Occurrence_Status_Code
 
 	// NotificationOccurrenceEventType - <nil>
 	NotificationOccurrenceEventType *SoftLayer_Notification_Occurrence_Event_Type `json:"notificationOccurrenceEventType"`

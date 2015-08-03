@@ -11,14 +11,14 @@ package types
 // advancedSearch() method for information on using properties in search strings.
 type SoftLayer_Container_Search_ObjectType_Property struct {
 
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// SortableFlag - no documentation
 	SortableFlag bool `json:"sortableFlag"`
 
 	// Type - Property data type. Valid values include 'boolean', 'integer', 'date', 'string' or 'text'.
 	Type string `json:"type"`
+
+	// Name - no documentation
+	Name string `json:"name"`
 }
 
 func (softlayer_container_search_objecttype_property *SoftLayer_Container_Search_ObjectType_Property) String() string {

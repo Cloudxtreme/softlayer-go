@@ -7,14 +7,14 @@ package types
 // impacted by a [[SoftLayer_Notification_Occurrence_Event]].
 type SoftLayer_Notification_Occurrence_Resource_Network_Storage_NetApp_Volume struct {
 
-	// Hostname - <nil>
-	Hostname string `json:"hostname"`
-
 	// PrivateIp - <nil>
 	PrivateIp string `json:"privateIp"`
 
 	// ResourceType - <nil>
 	ResourceType string `json:"resourceType"`
+
+	// Hostname - <nil>
+	Hostname string `json:"hostname"`
 }
 
 func (softlayer_notification_occurrence_resource_network_storage_netapp_volume *SoftLayer_Notification_Occurrence_Resource_Network_Storage_NetApp_Volume) String() string {

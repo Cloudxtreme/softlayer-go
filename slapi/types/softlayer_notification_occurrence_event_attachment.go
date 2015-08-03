@@ -25,11 +25,16 @@ type SoftLayer_Notification_Occurrence_Event_Attachment struct {
 	// Id - no documentation
 	Id int `json:"id"`
 
-	// NotificationOccurrenceEvent - <nil>
-	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent"`
-
 	// NotificationOccurrenceEventId - The unique event identifier that the file is attached to.
 	NotificationOccurrenceEventId int `json:"notificationOccurrenceEventId"`
+}
+
+// SoftLayer_Notification_Occurrence_Event_Attachment_Extended is SoftLayer_Notification_Occurrence_Event_Attachment with all maskable types.
+type SoftLayer_Notification_Occurrence_Event_Attachment_Extended struct {
+	SoftLayer_Notification_Occurrence_Event_Attachment
+
+	// NotificationOccurrenceEvent - <nil>
+	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent"`
 }
 
 func (softlayer_notification_occurrence_event_attachment *SoftLayer_Notification_Occurrence_Event_Attachment) String() string {

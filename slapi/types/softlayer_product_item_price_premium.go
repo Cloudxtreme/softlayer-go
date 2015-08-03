@@ -8,14 +8,8 @@ type SoftLayer_Product_Item_Price_Premium struct {
 	// HourlyModifier - <nil>
 	HourlyModifier float64 `json:"hourlyModifier"`
 
-	// ItemPrice - <nil>
-	ItemPrice *SoftLayer_Product_Item_Price `json:"itemPrice"`
-
 	// ItemPriceId - <nil>
 	ItemPriceId int `json:"itemPriceId"`
-
-	// Location - <nil>
-	Location *SoftLayer_Location `json:"location"`
 
 	// LocationId - <nil>
 	LocationId int `json:"locationId"`
@@ -23,11 +17,22 @@ type SoftLayer_Product_Item_Price_Premium struct {
 	// MonthlyModifier - <nil>
 	MonthlyModifier float64 `json:"monthlyModifier"`
 
-	// Package - <nil>
-	Package *SoftLayer_Product_Package `json:"package"`
-
 	// PackageId - <nil>
 	PackageId int `json:"packageId"`
+}
+
+// SoftLayer_Product_Item_Price_Premium_Extended is SoftLayer_Product_Item_Price_Premium with all maskable types.
+type SoftLayer_Product_Item_Price_Premium_Extended struct {
+	SoftLayer_Product_Item_Price_Premium
+
+	// ItemPrice - <nil>
+	ItemPrice *SoftLayer_Product_Item_Price `json:"itemPrice"`
+
+	// Location - <nil>
+	Location *SoftLayer_Location `json:"location"`
+
+	// Package - <nil>
+	Package *SoftLayer_Product_Package `json:"package"`
 }
 
 func (softlayer_product_item_price_premium *SoftLayer_Product_Item_Price_Premium) String() string {

@@ -8,11 +8,16 @@ type SoftLayer_Provisioning_Maintenance_Classification_Item_Category struct {
 	// ItemCategoryId - <nil>
 	ItemCategoryId int `json:"itemCategoryId"`
 
-	// MaintenanceClassification - <nil>
-	MaintenanceClassification *SoftLayer_Provisioning_Maintenance_Classification `json:"maintenanceClassification"`
-
 	// MaintenanceClassificationId - <nil>
 	MaintenanceClassificationId int `json:"maintenanceClassificationId"`
+}
+
+// SoftLayer_Provisioning_Maintenance_Classification_Item_Category_Extended is SoftLayer_Provisioning_Maintenance_Classification_Item_Category with all maskable types.
+type SoftLayer_Provisioning_Maintenance_Classification_Item_Category_Extended struct {
+	SoftLayer_Provisioning_Maintenance_Classification_Item_Category
+
+	// MaintenanceClassification - <nil>
+	MaintenanceClassification *SoftLayer_Provisioning_Maintenance_Classification `json:"maintenanceClassification"`
 }
 
 func (softlayer_provisioning_maintenance_classification_item_category *SoftLayer_Provisioning_Maintenance_Classification_Item_Category) String() string {

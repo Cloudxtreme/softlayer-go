@@ -11,9 +11,6 @@ import (
 // account.
 type SoftLayer_Account_Network_Vlan_Span struct {
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
-
 	// EnabledFlag - Flag indicating whether the customer wishes to have all private network VLANs
 	// associated with account automatically joined [0 or 1]
 	EnabledFlag bool `json:"enabledFlag"`
@@ -29,6 +26,14 @@ type SoftLayer_Account_Network_Vlan_Span struct {
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
+}
+
+// SoftLayer_Account_Network_Vlan_Span_Extended is SoftLayer_Account_Network_Vlan_Span with all maskable types.
+type SoftLayer_Account_Network_Vlan_Span_Extended struct {
+	SoftLayer_Account_Network_Vlan_Span
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_account_network_vlan_span *SoftLayer_Account_Network_Vlan_Span) String() string {

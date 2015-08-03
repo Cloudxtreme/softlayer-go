@@ -5,17 +5,23 @@ package types
 // SoftLayer_Account_Authentication_Saml - <nil>
 type SoftLayer_Account_Authentication_Saml struct {
 
-	// Account - The account associated with this saml configuration.
-	Account *SoftLayer_Account `json:"account"`
-
-	// AccountId - <nil>
-	AccountId string `json:"accountId"`
-
-	// Certificate - <nil>
-	Certificate string `json:"certificate"`
-
 	// CertificateFingerprint - <nil>
 	CertificateFingerprint string `json:"certificateFingerprint"`
+
+	// ServiceProviderPublicKey - <nil>
+	ServiceProviderPublicKey string `json:"serviceProviderPublicKey"`
+
+	// ServiceProviderSingleSignOnUrl - <nil>
+	ServiceProviderSingleSignOnUrl string `json:"serviceProviderSingleSignOnUrl"`
+
+	// ServiceProviderCertificate - <nil>
+	ServiceProviderCertificate string `json:"serviceProviderCertificate"`
+
+	// ServiceProviderSingleLogoutUrl - <nil>
+	ServiceProviderSingleLogoutUrl string `json:"serviceProviderSingleLogoutUrl"`
+
+	// SingleSignOnUrl - <nil>
+	SingleSignOnUrl string `json:"singleSignOnUrl"`
 
 	// EntityId - <nil>
 	EntityId string `json:"entityId"`
@@ -23,26 +29,20 @@ type SoftLayer_Account_Authentication_Saml struct {
 	// Id - <nil>
 	Id int `json:"id"`
 
-	// ServiceProviderCertificate - <nil>
-	ServiceProviderCertificate string `json:"serviceProviderCertificate"`
-
 	// ServiceProviderEntityId - <nil>
 	ServiceProviderEntityId string `json:"serviceProviderEntityId"`
-
-	// ServiceProviderPublicKey - <nil>
-	ServiceProviderPublicKey string `json:"serviceProviderPublicKey"`
 
 	// ServiceProviderSingleLogoutEncoding - <nil>
 	ServiceProviderSingleLogoutEncoding string `json:"serviceProviderSingleLogoutEncoding"`
 
-	// ServiceProviderSingleLogoutUrl - <nil>
-	ServiceProviderSingleLogoutUrl string `json:"serviceProviderSingleLogoutUrl"`
-
 	// ServiceProviderSingleSignOnEncoding - <nil>
 	ServiceProviderSingleSignOnEncoding string `json:"serviceProviderSingleSignOnEncoding"`
 
-	// ServiceProviderSingleSignOnUrl - <nil>
-	ServiceProviderSingleSignOnUrl string `json:"serviceProviderSingleSignOnUrl"`
+	// AccountId - <nil>
+	AccountId string `json:"accountId"`
+
+	// Certificate - <nil>
+	Certificate string `json:"certificate"`
 
 	// SingleLogoutEncoding - <nil>
 	SingleLogoutEncoding string `json:"singleLogoutEncoding"`
@@ -52,9 +52,14 @@ type SoftLayer_Account_Authentication_Saml struct {
 
 	// SingleSignOnEncoding - <nil>
 	SingleSignOnEncoding string `json:"singleSignOnEncoding"`
+}
 
-	// SingleSignOnUrl - <nil>
-	SingleSignOnUrl string `json:"singleSignOnUrl"`
+// SoftLayer_Account_Authentication_Saml_Extended is SoftLayer_Account_Authentication_Saml with all maskable types.
+type SoftLayer_Account_Authentication_Saml_Extended struct {
+	SoftLayer_Account_Authentication_Saml
+
+	// Account - The account associated with this saml configuration.
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) String() string {

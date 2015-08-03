@@ -14,23 +14,37 @@ import (
 // balancer services, explained more fully in the SoftLayer_Network_LoadBalancer_Service documentation.
 type SoftLayer_Network_LoadBalancer_VirtualIpAddress struct {
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
-
-	// BillingItem - no documentation
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
-
 	// ConnectionLimit - Connection limit on this Can be upgraded through the upgradeConnectionLimit()
 	// function
 	ConnectionLimit int `json:"connectionLimit"`
 
-	// CustomerManagedFlag - If false, this VIP and associated services may be edited via the portal or the
-	// If true, you must configure this VIP manually on the device.
-	CustomerManagedFlag int `json:"customerManagedFlag"`
+	// SourcePort - no documentation
+	SourcePort int `json:"sourcePort"`
+
+	// Type - The connection type of this Valid values are and
+	Type string `json:"type"`
+
+	// Name - no documentation
+	Name string `json:"name"`
+
+	// VirtualIpAddress - The virtual, public-facing IP address for your load balancer. This is the address
+	// of all incoming traffic
+	VirtualIpAddress string `json:"virtualIpAddress"`
 
 	// Id - Unique ID for this object, used for the getObject method, and must be set if you are editing
 	// this object.
 	Id int `json:"id"`
+
+	// LoadBalancingMethodFullName - A human readable version of loadBalancingMethod, intended mainly for
+	// API users.
+	LoadBalancingMethodFullName string `json:"loadBalancingMethodFullName"`
+
+	// Notes - no documentation
+	Notes string `json:"notes"`
+
+	// SecurityCertificateId - The unique identifier of the Security Certificate to be utilized when SSL
+	// support is enabled.
+	SecurityCertificateId int `json:"securityCertificateId"`
 
 	// LoadBalancingMethod - The load balancing method that determines which server is used "next" by the
 	// load balancer. The method is stored in an abbreviated form, represented in parentheses after the
@@ -50,41 +64,32 @@ type SoftLayer_Network_LoadBalancer_VirtualIpAddress struct {
 	// particular balanced server. Servers are chosen through least connections.
 	LoadBalancingMethod string `json:"loadBalancingMethod"`
 
-	// LoadBalancingMethodFullName - A human readable version of loadBalancingMethod, intended mainly for
-	// API users.
-	LoadBalancingMethodFullName string `json:"loadBalancingMethodFullName"`
-
-	// ManagedResourceFlag - A flag indicating that the load balancer is a managed resource.
-	ManagedResourceFlag bool `json:"managedResourceFlag"`
-
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
+}
 
-	// Name - no documentation
-	Name string `json:"name"`
+// SoftLayer_Network_LoadBalancer_VirtualIpAddress_Extended is SoftLayer_Network_LoadBalancer_VirtualIpAddress with all maskable types.
+type SoftLayer_Network_LoadBalancer_VirtualIpAddress_Extended struct {
+	SoftLayer_Network_LoadBalancer_VirtualIpAddress
 
-	// Notes - no documentation
-	Notes string `json:"notes"`
-
-	// SecurityCertificateId - The unique identifier of the Security Certificate to be utilized when SSL
-	// support is enabled.
-	SecurityCertificateId int `json:"securityCertificateId"`
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account"`
 
 	// ServiceCount - no documentation
 	ServiceCount uint64 `json:"serviceCount"`
 
+	// BillingItem - no documentation
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
+
+	// CustomerManagedFlag - If false, this VIP and associated services may be edited via the portal or the
+	// If true, you must configure this VIP manually on the device.
+	CustomerManagedFlag int `json:"customerManagedFlag"`
+
+	// ManagedResourceFlag - A flag indicating that the load balancer is a managed resource.
+	ManagedResourceFlag bool `json:"managedResourceFlag"`
+
 	// Services - no documentation
 	Services []*SoftLayer_Network_LoadBalancer_Service `json:"services"`
-
-	// SourcePort - no documentation
-	SourcePort int `json:"sourcePort"`
-
-	// Type - The connection type of this Valid values are and
-	Type string `json:"type"`
-
-	// VirtualIpAddress - The virtual, public-facing IP address for your load balancer. This is the address
-	// of all incoming traffic
-	VirtualIpAddress string `json:"virtualIpAddress"`
 }
 
 func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) String() string {

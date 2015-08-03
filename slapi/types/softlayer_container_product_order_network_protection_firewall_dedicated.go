@@ -7,11 +7,11 @@ package types
 // required to place a hardware (dedicated) firewall order with SoftLayer.
 type SoftLayer_Container_Product_Order_Network_Protection_Firewall_Dedicated struct {
 
-	// Vlan - no documentation
-	Vlan *SoftLayer_Network_Vlan `json:"vlan"`
-
 	// VlanId - no documentation
 	VlanId int `json:"vlanId"`
+
+	// Vlan - no documentation
+	Vlan *SoftLayer_Network_Vlan `json:"vlan"`
 }
 
 func (softlayer_container_product_order_network_protection_firewall_dedicated *SoftLayer_Container_Product_Order_Network_Protection_Firewall_Dedicated) String() string {

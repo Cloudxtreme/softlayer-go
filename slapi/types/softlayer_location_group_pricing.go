@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Location_Group_Pricing - <nil>
 type SoftLayer_Location_Group_Pricing struct {
+}
+
+// SoftLayer_Location_Group_Pricing_Extended is SoftLayer_Location_Group_Pricing with all maskable types.
+type SoftLayer_Location_Group_Pricing_Extended struct {
+	SoftLayer_Location_Group_Pricing
 
 	// PriceCount - A count of the prices that this pricing location group limits. All of these prices will
 	// only be available in the locations defined by this pricing location group.

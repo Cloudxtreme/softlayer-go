@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Product_Item_Resource_Conflict_Location - <nil>
 type SoftLayer_Product_Item_Resource_Conflict_Location struct {
+}
+
+// SoftLayer_Product_Item_Resource_Conflict_Location_Extended is SoftLayer_Product_Item_Resource_Conflict_Location with all maskable types.
+type SoftLayer_Product_Item_Resource_Conflict_Location_Extended struct {
+	SoftLayer_Product_Item_Resource_Conflict_Location
 
 	// Resource - no documentation
 	Resource *SoftLayer_Location `json:"resource"`

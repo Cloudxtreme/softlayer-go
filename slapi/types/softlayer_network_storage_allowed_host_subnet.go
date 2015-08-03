@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Network_Storage_Allowed_Host_Subnet - <nil>
 type SoftLayer_Network_Storage_Allowed_Host_Subnet struct {
+}
+
+// SoftLayer_Network_Storage_Allowed_Host_Subnet_Extended is SoftLayer_Network_Storage_Allowed_Host_Subnet with all maskable types.
+type SoftLayer_Network_Storage_Allowed_Host_Subnet_Extended struct {
+	SoftLayer_Network_Storage_Allowed_Host_Subnet
 
 	// Resource - The SoftLayer_Network_Subnet object which this SoftLayer_Network_Storage_Allowed_Host is
 	// referencing.

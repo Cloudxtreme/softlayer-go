@@ -15,6 +15,11 @@ type SoftLayer_Network_Bandwidth_Usage struct {
 
 	// BandwidthUsageDetailTypeId - ID of the bandwidth usage detail type for this record.
 	BandwidthUsageDetailTypeId float64 `json:"bandwidthUsageDetailTypeId"`
+}
+
+// SoftLayer_Network_Bandwidth_Usage_Extended is SoftLayer_Network_Bandwidth_Usage with all maskable types.
+type SoftLayer_Network_Bandwidth_Usage_Extended struct {
+	SoftLayer_Network_Bandwidth_Usage
 
 	// TrackingObject - The tracking object this bandwidth usage record describes.
 	TrackingObject *SoftLayer_Metric_Tracking_Object `json:"trackingObject"`

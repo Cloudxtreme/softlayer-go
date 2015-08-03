@@ -9,12 +9,6 @@ import (
 // SoftLayer_Ticket_Chat - <nil>
 type SoftLayer_Ticket_Chat struct {
 
-	// Agent - <nil>
-	Agent *SoftLayer_User_Employee `json:"agent"`
-
-	// Customer - <nil>
-	Customer *SoftLayer_User_Customer `json:"customer"`
-
 	// CustomerId - <nil>
 	CustomerId int `json:"customerId"`
 
@@ -24,11 +18,22 @@ type SoftLayer_Ticket_Chat struct {
 	// StartDate - <nil>
 	StartDate *time.Time `json:"startDate"`
 
+	// Transcript - <nil>
+	Transcript string `json:"transcript"`
+}
+
+// SoftLayer_Ticket_Chat_Extended is SoftLayer_Ticket_Chat with all maskable types.
+type SoftLayer_Ticket_Chat_Extended struct {
+	SoftLayer_Ticket_Chat
+
 	// TicketUpdate - <nil>
 	TicketUpdate *SoftLayer_Ticket_Update_Chat `json:"ticketUpdate"`
 
-	// Transcript - <nil>
-	Transcript string `json:"transcript"`
+	// Agent - <nil>
+	Agent *SoftLayer_User_Employee `json:"agent"`
+
+	// Customer - <nil>
+	Customer *SoftLayer_User_Customer `json:"customer"`
 }
 
 func (softlayer_ticket_chat *SoftLayer_Ticket_Chat) String() string {

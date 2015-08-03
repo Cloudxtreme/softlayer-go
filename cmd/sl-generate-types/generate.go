@@ -20,10 +20,20 @@ import (
 )
 
 {{ godoc .Type.StructName .TypeDoc "" }}type {{ .Type.StructName }} struct {
-{{ range $i, $property := .Properties }}
+{{ range $i, $property := .DefaultProperties }}
 {{ godoc $property.Name $property.Doc "\t" }}	{{ upper $property.Name }} {{ if $property.TypeArray }}[]{{ end }}{{ if $property.Type.GetGoType.Pointer }}*{{ end }}{{ typePath $property.Type.GetGoType }}{{ $property.Tag }}
 {{ end }}
 }
+
+{{ if .ExtendedProperties }}
+// {{ .Type.StructName }}_Extended is {{ .Type.StructName }} with all maskable types.
+type {{ .Type.StructName }}_Extended struct {
+{{ .Type.StructName }}
+{{ range $i, $property := .ExtendedProperties }}
+{{ godoc $property.Name $property.Doc "\t" }}	{{ upper $property.Name }} {{ if $property.TypeArray }}[]{{ end }}{{ if $property.Type.GetGoType.Pointer }}*{{ end }}{{ typePath $property.Type.GetGoType }}{{ $property.Tag }}
+{{ end }}
+}
+{{ end }}
 
 func ({{ $.Type.Lower }} *{{ $.Type.StructName }}) String() string {
 	return "{{ $.Type.StructName }}"

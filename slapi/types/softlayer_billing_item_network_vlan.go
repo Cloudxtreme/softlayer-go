@@ -7,6 +7,11 @@ package types
 // the following: * network_vlan These item categories denote that the billing item has network vlan
 // information attached.
 type SoftLayer_Billing_Item_Network_Vlan struct {
+}
+
+// SoftLayer_Billing_Item_Network_Vlan_Extended is SoftLayer_Billing_Item_Network_Vlan with all maskable types.
+type SoftLayer_Billing_Item_Network_Vlan_Extended struct {
+	SoftLayer_Billing_Item_Network_Vlan
 
 	// Resource - The resource for a network vlan related billing item.
 	Resource *SoftLayer_Network_Vlan `json:"resource"`

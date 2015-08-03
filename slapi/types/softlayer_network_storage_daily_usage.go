@@ -9,6 +9,9 @@ import (
 // SoftLayer_Network_Storage_Daily_Usage - <nil>
 type SoftLayer_Network_Storage_Daily_Usage struct {
 
+	// PublicBandwidthOut - <nil>
+	PublicBandwidthOut uint64 `json:"publicBandwidthOut"`
+
 	// BytesUsed - <nil>
 	BytesUsed uint64 `json:"bytesUsed"`
 
@@ -18,14 +21,16 @@ type SoftLayer_Network_Storage_Daily_Usage struct {
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate"`
 
-	// NasVolume - <nil>
-	NasVolume *SoftLayer_Network_Storage `json:"nasVolume"`
-
 	// NasVolumeId - <nil>
 	NasVolumeId int `json:"nasVolumeId"`
+}
 
-	// PublicBandwidthOut - <nil>
-	PublicBandwidthOut uint64 `json:"publicBandwidthOut"`
+// SoftLayer_Network_Storage_Daily_Usage_Extended is SoftLayer_Network_Storage_Daily_Usage with all maskable types.
+type SoftLayer_Network_Storage_Daily_Usage_Extended struct {
+	SoftLayer_Network_Storage_Daily_Usage
+
+	// NasVolume - <nil>
+	NasVolume *SoftLayer_Network_Storage `json:"nasVolume"`
 }
 
 func (softlayer_network_storage_daily_usage *SoftLayer_Network_Storage_Daily_Usage) String() string {

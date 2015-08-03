@@ -11,17 +11,22 @@ type SoftLayer_Resource_Group_Template_Member struct {
 	// MinQuantity - <nil>
 	MinQuantity int `json:"minQuantity"`
 
-	// Role - <nil>
-	Role *SoftLayer_Resource_Group_Role `json:"role"`
-
 	// RoleId - <nil>
 	RoleId int `json:"roleId"`
 
-	// Template - <nil>
-	Template *SoftLayer_Resource_Group_Template `json:"template"`
-
 	// TemplateId - <nil>
 	TemplateId int `json:"templateId"`
+}
+
+// SoftLayer_Resource_Group_Template_Member_Extended is SoftLayer_Resource_Group_Template_Member with all maskable types.
+type SoftLayer_Resource_Group_Template_Member_Extended struct {
+	SoftLayer_Resource_Group_Template_Member
+
+	// Role - <nil>
+	Role *SoftLayer_Resource_Group_Role `json:"role"`
+
+	// Template - <nil>
+	Template *SoftLayer_Resource_Group_Template `json:"template"`
 }
 
 func (softlayer_resource_group_template_member *SoftLayer_Resource_Group_Template_Member) String() string {

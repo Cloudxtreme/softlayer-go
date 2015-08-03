@@ -5,9 +5,6 @@ package types
 // SoftLayer_Container_Metric_Data_Type - <nil>
 type SoftLayer_Container_Metric_Data_Type struct {
 
-	// KeyName - <nil>
-	KeyName string `json:"keyName"`
-
 	// Name - <nil>
 	Name string `json:"name"`
 
@@ -16,6 +13,9 @@ type SoftLayer_Container_Metric_Data_Type struct {
 
 	// Unit - <nil>
 	Unit string `json:"unit"`
+
+	// KeyName - <nil>
+	KeyName string `json:"keyName"`
 }
 
 func (softlayer_container_metric_data_type *SoftLayer_Container_Metric_Data_Type) String() string {

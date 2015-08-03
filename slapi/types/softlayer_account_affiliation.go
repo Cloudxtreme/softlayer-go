@@ -10,8 +10,8 @@ import (
 // existing customer account.
 type SoftLayer_Account_Affiliation struct {
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
+	// ModifyDate - The date an account affiliation was last modified.
+	ModifyDate *time.Time `json:"modifyDate"`
 
 	// AccountId - no documentation
 	AccountId int `json:"accountId"`
@@ -24,9 +24,14 @@ type SoftLayer_Account_Affiliation struct {
 
 	// Id - no documentation
 	Id int `json:"id"`
+}
 
-	// ModifyDate - The date an account affiliation was last modified.
-	ModifyDate *time.Time `json:"modifyDate"`
+// SoftLayer_Account_Affiliation_Extended is SoftLayer_Account_Affiliation with all maskable types.
+type SoftLayer_Account_Affiliation_Extended struct {
+	SoftLayer_Account_Affiliation
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_account_affiliation *SoftLayer_Account_Affiliation) String() string {

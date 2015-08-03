@@ -10,26 +10,14 @@ import (
 // add a hook into a server/Virtual provision and os reload.
 type SoftLayer_Provisioning_Hook struct {
 
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
-
 	// AccountId - no documentation
 	AccountId int `json:"accountId"`
 
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate"`
 
-	// HookType - <nil>
-	HookType *SoftLayer_Provisioning_Hook_Type `json:"hookType"`
-
 	// Id - <nil>
 	Id int `json:"id"`
-
-	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
-
-	// Name - no documentation
-	Name string `json:"name"`
 
 	// TypeId - The ID of the type of hook the script is identified as. Currently only has been
 	// implemented.
@@ -38,6 +26,23 @@ type SoftLayer_Provisioning_Hook struct {
 	// Uri - The endpoint that the script will be downloaded from AND BE If the endpoint is the script will
 	// only be downloaded. If the endpoint is the script will be downloaded and executed.
 	Uri string `json:"uri"`
+
+	// ModifyDate - <nil>
+	ModifyDate *time.Time `json:"modifyDate"`
+
+	// Name - no documentation
+	Name string `json:"name"`
+}
+
+// SoftLayer_Provisioning_Hook_Extended is SoftLayer_Provisioning_Hook with all maskable types.
+type SoftLayer_Provisioning_Hook_Extended struct {
+	SoftLayer_Provisioning_Hook
+
+	// HookType - <nil>
+	HookType *SoftLayer_Provisioning_Hook_Type `json:"hookType"`
+
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) String() string {

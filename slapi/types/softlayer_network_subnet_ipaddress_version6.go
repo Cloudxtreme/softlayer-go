@@ -5,6 +5,11 @@ package types
 // SoftLayer_Network_Subnet_IpAddress_Version6 - The SoftLayer_Network_Subnet_IpAddress data type
 // contains general information relating to a single SoftLayer IPv6 address.
 type SoftLayer_Network_Subnet_IpAddress_Version6 struct {
+}
+
+// SoftLayer_Network_Subnet_IpAddress_Version6_Extended is SoftLayer_Network_Subnet_IpAddress_Version6 with all maskable types.
+type SoftLayer_Network_Subnet_IpAddress_Version6_Extended struct {
+	SoftLayer_Network_Subnet_IpAddress_Version6
 
 	// PublicVersion6NetworkGateway - The network gateway appliance using this address as the public IPv6
 	// address.

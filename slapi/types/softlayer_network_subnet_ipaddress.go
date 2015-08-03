@@ -6,34 +6,22 @@ package types
 // general information relating to a single SoftLayer IPv4 address.
 type SoftLayer_Network_Subnet_IpAddress struct {
 
-	// AllowedHost - The SoftLayer_Network_Storage_Allowed_Host information to connect this IP Address to
-	// Network Storage supporting access control lists.
-	AllowedHost *SoftLayer_Network_Storage_Allowed_Host `json:"allowedHost"`
+	// IsNetwork - Indicates if an IP address is reserved to a network address and cannot be assigned to a
+	// network interface
+	IsNetwork bool `json:"isNetwork"`
 
-	// ContextTunnelTranslationCount - A count of an IPSec network tunnel's address translations. These
-	// translations use a SoftLayer ip address from an assigned static NAT subnet to deliver the packets to
-	// the remote (customer) destination.
-	ContextTunnelTranslationCount uint64 `json:"contextTunnelTranslationCount"`
+	// IsBroadcast - Indicates if an IP address is reserved to be used as the network broadcast address and
+	// cannot be assigned to a network interface
+	IsBroadcast bool `json:"isBroadcast"`
 
-	// ContextTunnelTranslations - An IPSec network tunnel's address translations. These translations use a
-	// SoftLayer ip address from an assigned static NAT subnet to deliver the packets to the remote
-	// (customer) destination.
-	ContextTunnelTranslations []*SoftLayer_Network_Tunnel_Module_Context_Address_Translation `json:"contextTunnelTranslations"`
+	// IsReserved - Indicates if an IP address is reserved and cannot be assigned to a network interface
+	IsReserved bool `json:"isReserved"`
 
-	// EndpointSubnetCount - A count of all the subnets routed to an IP address.
-	EndpointSubnetCount uint64 `json:"endpointSubnetCount"`
+	// Note - no documentation
+	Note string `json:"note"`
 
-	// EndpointSubnets - no documentation
-	EndpointSubnets []*SoftLayer_Network_Subnet `json:"endpointSubnets"`
-
-	// GuestNetworkComponent - A network component that is statically routed to an IP address.
-	GuestNetworkComponent *SoftLayer_Virtual_Guest_Network_Component `json:"guestNetworkComponent"`
-
-	// GuestNetworkComponentBinding - A network component that is statically routed to an IP address.
-	GuestNetworkComponentBinding *SoftLayer_Virtual_Guest_Network_Component_IpAddress `json:"guestNetworkComponentBinding"`
-
-	// Hardware - no documentation
-	Hardware *SoftLayer_Hardware `json:"hardware"`
+	// SubnetId - no documentation
+	SubnetId int `json:"subnetId"`
 
 	// Id - no documentation
 	Id int `json:"id"`
@@ -41,67 +29,48 @@ type SoftLayer_Network_Subnet_IpAddress struct {
 	// IpAddress - no documentation
 	IpAddress string `json:"ipAddress"`
 
-	// IsBroadcast - Indicates if an IP address is reserved to be used as the network broadcast address and
-	// cannot be assigned to a network interface
-	IsBroadcast bool `json:"isBroadcast"`
-
 	// IsGateway - Indicates if an IP address is reserved to a gateway and cannot be assigned to a network
 	// interface
 	IsGateway bool `json:"isGateway"`
+}
 
-	// IsNetwork - Indicates if an IP address is reserved to a network address and cannot be assigned to a
-	// network interface
-	IsNetwork bool `json:"isNetwork"`
+// SoftLayer_Network_Subnet_IpAddress_Extended is SoftLayer_Network_Subnet_IpAddress with all maskable types.
+type SoftLayer_Network_Subnet_IpAddress_Extended struct {
+	SoftLayer_Network_Subnet_IpAddress
 
-	// IsReserved - Indicates if an IP address is reserved and cannot be assigned to a network interface
-	IsReserved bool `json:"isReserved"`
-
-	// NetworkComponent - A network component that is statically routed to an IP address.
-	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
-
-	// Note - no documentation
-	Note string `json:"note"`
-
-	// PrivateNetworkGateway - The network gateway appliance using this address as the private IP address.
-	PrivateNetworkGateway *SoftLayer_Network_Gateway `json:"privateNetworkGateway"`
+	// GuestNetworkComponentBinding - A network component that is statically routed to an IP address.
+	GuestNetworkComponentBinding *SoftLayer_Virtual_Guest_Network_Component_IpAddress `json:"guestNetworkComponentBinding"`
 
 	// ProtectionAddress - <nil>
 	ProtectionAddress []*SoftLayer_Network_Protection_Address `json:"protectionAddress"`
 
-	// ProtectionAddressCount - no documentation
-	ProtectionAddressCount uint64 `json:"protectionAddressCount"`
-
-	// PublicNetworkGateway - The network gateway appliance using this address as the public IP address.
-	PublicNetworkGateway *SoftLayer_Network_Gateway `json:"publicNetworkGateway"`
-
-	// RemoteManagementNetworkComponent - An IPMI-based management network component of the IP address.
-	RemoteManagementNetworkComponent *SoftLayer_Network_Component `json:"remoteManagementNetworkComponent"`
-
-	// Subnet - no documentation
-	Subnet *SoftLayer_Network_Subnet `json:"subnet"`
-
-	// SubnetId - no documentation
-	SubnetId int `json:"subnetId"`
-
-	// SyslogEventsOneDay - All events for this IP address stored in the datacenter syslogs from the last
-	// 24 hours
-	SyslogEventsOneDay []*SoftLayer_Network_Logging_Syslog `json:"syslogEventsOneDay"`
+	// EndpointSubnetCount - A count of all the subnets routed to an IP address.
+	EndpointSubnetCount uint64 `json:"endpointSubnetCount"`
 
 	// SyslogEventsOneDayCount - A count of all events for this IP address stored in the datacenter syslogs
 	// from the last 24 hours
 	SyslogEventsOneDayCount uint64 `json:"syslogEventsOneDayCount"`
 
+	// TopTenSyslogEventsBySourceIpSevenDayCount - A count of top Ten network datacenter syslog events,
+	// grouped by source ip address, for the last 7 days
+	TopTenSyslogEventsBySourceIpSevenDayCount uint64 `json:"topTenSyslogEventsBySourceIpSevenDayCount"`
+
+	// TopTenSyslogEventsBySourcePortOneDayCount - A count of top Ten network datacenter syslog events,
+	// grouped by source port, for the last 24 hours
+	TopTenSyslogEventsBySourcePortOneDayCount uint64 `json:"topTenSyslogEventsBySourcePortOneDayCount"`
+
+	// EndpointSubnets - no documentation
+	EndpointSubnets []*SoftLayer_Network_Subnet `json:"endpointSubnets"`
+
+	// NetworkComponent - A network component that is statically routed to an IP address.
+	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
+
+	// VirtualGuest - no documentation
+	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest"`
+
 	// SyslogEventsSevenDayCount - A count of all events for this IP address stored in the datacenter
 	// syslogs from the last 7 days
 	SyslogEventsSevenDayCount uint64 `json:"syslogEventsSevenDayCount"`
-
-	// SyslogEventsSevenDays - All events for this IP address stored in the datacenter syslogs from the
-	// last 7 days
-	SyslogEventsSevenDays []*SoftLayer_Network_Logging_Syslog `json:"syslogEventsSevenDays"`
-
-	// TopTenSyslogEventsByDestinationPortOneDay - Top Ten network datacenter syslog events, grouped by
-	// destination port, for the last 24 hours
-	TopTenSyslogEventsByDestinationPortOneDay []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsByDestinationPortOneDay"`
 
 	// TopTenSyslogEventsByDestinationPortOneDayCount - A count of top Ten network datacenter syslog
 	// events, grouped by destination port, for the last 24 hours
@@ -111,13 +80,28 @@ type SoftLayer_Network_Subnet_IpAddress struct {
 	// events, grouped by destination port, for the last 7 days
 	TopTenSyslogEventsByDestinationPortSevenDayCount uint64 `json:"topTenSyslogEventsByDestinationPortSevenDayCount"`
 
-	// TopTenSyslogEventsByDestinationPortSevenDays - Top Ten network datacenter syslog events, grouped by
-	// destination port, for the last 7 days
-	TopTenSyslogEventsByDestinationPortSevenDays []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsByDestinationPortSevenDays"`
+	// GuestNetworkComponent - A network component that is statically routed to an IP address.
+	GuestNetworkComponent *SoftLayer_Virtual_Guest_Network_Component `json:"guestNetworkComponent"`
+
+	// Hardware - no documentation
+	Hardware *SoftLayer_Hardware `json:"hardware"`
+
+	// PrivateNetworkGateway - The network gateway appliance using this address as the private IP address.
+	PrivateNetworkGateway *SoftLayer_Network_Gateway `json:"privateNetworkGateway"`
 
 	// TopTenSyslogEventsByProtocolsOneDay - Top Ten network datacenter syslog events, grouped by source
 	// port, for the last 24 hours
 	TopTenSyslogEventsByProtocolsOneDay []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsByProtocolsOneDay"`
+
+	// ProtectionAddressCount - no documentation
+	ProtectionAddressCount uint64 `json:"protectionAddressCount"`
+
+	// PublicNetworkGateway - The network gateway appliance using this address as the public IP address.
+	PublicNetworkGateway *SoftLayer_Network_Gateway `json:"publicNetworkGateway"`
+
+	// SyslogEventsOneDay - All events for this IP address stored in the datacenter syslogs from the last
+	// 24 hours
+	SyslogEventsOneDay []*SoftLayer_Network_Logging_Syslog `json:"syslogEventsOneDay"`
 
 	// TopTenSyslogEventsByProtocolsOneDayCount - A count of top Ten network datacenter syslog events,
 	// grouped by source port, for the last 24 hours
@@ -127,50 +111,71 @@ type SoftLayer_Network_Subnet_IpAddress struct {
 	// grouped by source port, for the last 7 days
 	TopTenSyslogEventsByProtocolsSevenDayCount uint64 `json:"topTenSyslogEventsByProtocolsSevenDayCount"`
 
-	// TopTenSyslogEventsByProtocolsSevenDays - Top Ten network datacenter syslog events, grouped by source
-	// port, for the last 7 days
-	TopTenSyslogEventsByProtocolsSevenDays []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsByProtocolsSevenDays"`
+	// ContextTunnelTranslations - An IPSec network tunnel's address translations. These translations use a
+	// SoftLayer ip address from an assigned static NAT subnet to deliver the packets to the remote
+	// (customer) destination.
+	ContextTunnelTranslations []*SoftLayer_Network_Tunnel_Module_Context_Address_Translation `json:"contextTunnelTranslations"`
 
-	// TopTenSyslogEventsBySourceIpOneDay - Top Ten network datacenter syslog events, grouped by source ip
-	// address, for the last 24 hours
-	TopTenSyslogEventsBySourceIpOneDay []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsBySourceIpOneDay"`
+	// Subnet - no documentation
+	Subnet *SoftLayer_Network_Subnet `json:"subnet"`
 
-	// TopTenSyslogEventsBySourceIpOneDayCount - A count of top Ten network datacenter syslog events,
-	// grouped by source ip address, for the last 24 hours
-	TopTenSyslogEventsBySourceIpOneDayCount uint64 `json:"topTenSyslogEventsBySourceIpOneDayCount"`
+	// SyslogEventsSevenDays - All events for this IP address stored in the datacenter syslogs from the
+	// last 7 days
+	SyslogEventsSevenDays []*SoftLayer_Network_Logging_Syslog `json:"syslogEventsSevenDays"`
 
-	// TopTenSyslogEventsBySourceIpSevenDayCount - A count of top Ten network datacenter syslog events,
-	// grouped by source ip address, for the last 7 days
-	TopTenSyslogEventsBySourceIpSevenDayCount uint64 `json:"topTenSyslogEventsBySourceIpSevenDayCount"`
+	// TopTenSyslogEventsByDestinationPortSevenDays - Top Ten network datacenter syslog events, grouped by
+	// destination port, for the last 7 days
+	TopTenSyslogEventsByDestinationPortSevenDays []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsByDestinationPortSevenDays"`
 
 	// TopTenSyslogEventsBySourceIpSevenDays - Top Ten network datacenter syslog events, grouped by source
 	// ip address, for the last 7 days
 	TopTenSyslogEventsBySourceIpSevenDays []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsBySourceIpSevenDays"`
 
-	// TopTenSyslogEventsBySourcePortOneDay - Top Ten network datacenter syslog events, grouped by source
-	// port, for the last 24 hours
-	TopTenSyslogEventsBySourcePortOneDay []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsBySourcePortOneDay"`
-
-	// TopTenSyslogEventsBySourcePortOneDayCount - A count of top Ten network datacenter syslog events,
-	// grouped by source port, for the last 24 hours
-	TopTenSyslogEventsBySourcePortOneDayCount uint64 `json:"topTenSyslogEventsBySourcePortOneDayCount"`
+	// TopTenSyslogEventsBySourceIpOneDayCount - A count of top Ten network datacenter syslog events,
+	// grouped by source ip address, for the last 24 hours
+	TopTenSyslogEventsBySourceIpOneDayCount uint64 `json:"topTenSyslogEventsBySourceIpOneDayCount"`
 
 	// TopTenSyslogEventsBySourcePortSevenDayCount - A count of top Ten network datacenter syslog events,
 	// grouped by source port, for the last 7 days
 	TopTenSyslogEventsBySourcePortSevenDayCount uint64 `json:"topTenSyslogEventsBySourcePortSevenDayCount"`
 
+	// RemoteManagementNetworkComponent - An IPMI-based management network component of the IP address.
+	RemoteManagementNetworkComponent *SoftLayer_Network_Component `json:"remoteManagementNetworkComponent"`
+
+	// TopTenSyslogEventsBySourceIpOneDay - Top Ten network datacenter syslog events, grouped by source ip
+	// address, for the last 24 hours
+	TopTenSyslogEventsBySourceIpOneDay []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsBySourceIpOneDay"`
+
 	// TopTenSyslogEventsBySourcePortSevenDays - Top Ten network datacenter syslog events, grouped by
 	// source port, for the last 7 days
 	TopTenSyslogEventsBySourcePortSevenDays []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsBySourcePortSevenDays"`
 
-	// VirtualGuest - no documentation
-	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest"`
-
 	// VirtualLicenseCount - A count of virtual licenses allocated for an IP Address.
 	VirtualLicenseCount uint64 `json:"virtualLicenseCount"`
 
+	// AllowedHost - The SoftLayer_Network_Storage_Allowed_Host information to connect this IP Address to
+	// Network Storage supporting access control lists.
+	AllowedHost *SoftLayer_Network_Storage_Allowed_Host `json:"allowedHost"`
+
+	// TopTenSyslogEventsByDestinationPortOneDay - Top Ten network datacenter syslog events, grouped by
+	// destination port, for the last 24 hours
+	TopTenSyslogEventsByDestinationPortOneDay []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsByDestinationPortOneDay"`
+
+	// TopTenSyslogEventsByProtocolsSevenDays - Top Ten network datacenter syslog events, grouped by source
+	// port, for the last 7 days
+	TopTenSyslogEventsByProtocolsSevenDays []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsByProtocolsSevenDays"`
+
+	// TopTenSyslogEventsBySourcePortOneDay - Top Ten network datacenter syslog events, grouped by source
+	// port, for the last 24 hours
+	TopTenSyslogEventsBySourcePortOneDay []*SoftLayer_Network_Logging_Syslog `json:"topTenSyslogEventsBySourcePortOneDay"`
+
 	// VirtualLicenses - no documentation
 	VirtualLicenses []*SoftLayer_Software_VirtualLicense `json:"virtualLicenses"`
+
+	// ContextTunnelTranslationCount - A count of an IPSec network tunnel's address translations. These
+	// translations use a SoftLayer ip address from an assigned static NAT subnet to deliver the packets to
+	// the remote (customer) destination.
+	ContextTunnelTranslationCount uint64 `json:"contextTunnelTranslationCount"`
 }
 
 func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) String() string {

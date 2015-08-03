@@ -14,16 +14,6 @@ import (
 // last synchronization attempt as queried from SoftLayer's servers.
 type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status struct {
 
-	// LastRebootDate - The last time a server rebooted due to a Windows Update.
-	LastRebootDate *time.Time `json:"lastRebootDate"`
-
-	// LastStatusDate - The last time that SoftLayer's local server received a status update from a
-	// customer server.
-	LastStatusDate *time.Time `json:"lastStatusDate"`
-
-	// LastSyncDate - The last time a server synchronized with SoftLayer's local server.
-	LastSyncDate *time.Time `json:"lastSyncDate"`
-
 	// PrivateIPAddress - no documentation
 	PrivateIPAddress string `json:"privateIPAddress"`
 
@@ -33,6 +23,16 @@ type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status struct 
 
 	// UpdateStatus - A server's update status, as retrieved form SoftLayer's local server.
 	UpdateStatus string `json:"updateStatus"`
+
+	// LastRebootDate - The last time a server rebooted due to a Windows Update.
+	LastRebootDate *time.Time `json:"lastRebootDate"`
+
+	// LastStatusDate - The last time that SoftLayer's local server received a status update from a
+	// customer server.
+	LastStatusDate *time.Time `json:"lastStatusDate"`
+
+	// LastSyncDate - The last time a server synchronized with SoftLayer's local server.
+	LastSyncDate *time.Time `json:"lastSyncDate"`
 }
 
 func (softlayer_container_utility_microsoft_windows_updateservices_status *SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status) String() string {

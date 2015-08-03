@@ -17,9 +17,6 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command_Request struct {
 	// CreateDate - The timestamp the remote management command was issued.
 	CreateDate *time.Time `json:"createDate"`
 
-	// Hardware - The id of the hardware to perform the remote management or powerstrip command on.
-	Hardware *SoftLayer_Hardware `json:"hardware"`
-
 	// HardwareId - no documentation
 	HardwareId int `json:"hardwareId"`
 
@@ -27,12 +24,20 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command_Request struct {
 	// command issued.
 	ModifyDate *time.Time `json:"modifyDate"`
 
+	// Processed - Execution status of the remote management command. True is successful. False is failure.
+	Processed bool `json:"processed"`
+}
+
+// SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended is SoftLayer_Hardware_Component_RemoteManagement_Command_Request with all maskable types.
+type SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended struct {
+	SoftLayer_Hardware_Component_RemoteManagement_Command_Request
+
+	// Hardware - The id of the hardware to perform the remote management or powerstrip command on.
+	Hardware *SoftLayer_Hardware `json:"hardware"`
+
 	// NetworkComponent - A hardware's network components. Network components are hardware components such
 	// as cards or Ethernet cards.
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
-
-	// Processed - Execution status of the remote management command. True is successful. False is failure.
-	Processed bool `json:"processed"`
 
 	// RemoteManagementCommand - no documentation
 	RemoteManagementCommand *SoftLayer_Hardware_Component_RemoteManagement_Command `json:"remoteManagementCommand"`

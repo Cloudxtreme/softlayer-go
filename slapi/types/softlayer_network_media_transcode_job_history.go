@@ -17,6 +17,11 @@ type SoftLayer_Network_Media_Transcode_Job_History struct {
 
 	// TranscodeJobId - no documentation
 	TranscodeJobId int `json:"transcodeJobId"`
+}
+
+// SoftLayer_Network_Media_Transcode_Job_History_Extended is SoftLayer_Network_Media_Transcode_Job_History with all maskable types.
+type SoftLayer_Network_Media_Transcode_Job_History_Extended struct {
+	SoftLayer_Network_Media_Transcode_Job_History
 
 	// TranscodeStatusName - no documentation
 	TranscodeStatusName string `json:"transcodeStatusName"`

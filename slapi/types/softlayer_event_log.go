@@ -10,23 +10,14 @@ import (
 // various SoftLayer resources.
 type SoftLayer_Event_Log struct {
 
-	// AccountId - no documentation
-	AccountId int `json:"accountId"`
-
-	// EventCreateDate - no documentation
-	EventCreateDate *time.Time `json:"eventCreateDate"`
-
 	// EventName - Event name such as "reboot", "cancel", "update host" and so on.
 	EventName string `json:"eventName"`
 
-	// IpAddress - no documentation
-	IpAddress string `json:"ipAddress"`
-
-	// Label - no documentation
-	Label string `json:"label"`
-
 	// MetaData - no documentation
 	MetaData string `json:"metaData"`
+
+	// UserType - Type of user that triggered the event. User type can be or
+	UserType string `json:"userType"`
 
 	// ObjectId - no documentation
 	ObjectId int `json:"objectId"`
@@ -34,23 +25,37 @@ type SoftLayer_Event_Log struct {
 	// ObjectName - Event object name such as "server", "dns" and so on.
 	ObjectName string `json:"objectName"`
 
-	// Resource - A resource object that is associated with the event
-	Resource *SoftLayer_Entity `json:"resource"`
-
 	// TraceId - A unique trace id. Multiple event can be grouped by a trace id.
 	TraceId string `json:"traceId"`
 
-	// User - <nil>
-	User *SoftLayer_User_Customer `json:"user"`
+	// AccountId - no documentation
+	AccountId int `json:"accountId"`
 
-	// UserId - no documentation
-	UserId int `json:"userId"`
-
-	// UserType - Type of user that triggered the event. User type can be or
-	UserType string `json:"userType"`
+	// Label - no documentation
+	Label string `json:"label"`
 
 	// Username - no documentation
 	Username string `json:"username"`
+
+	// EventCreateDate - no documentation
+	EventCreateDate *time.Time `json:"eventCreateDate"`
+
+	// IpAddress - no documentation
+	IpAddress string `json:"ipAddress"`
+
+	// Resource - A resource object that is associated with the event
+	Resource *SoftLayer_Entity `json:"resource"`
+
+	// UserId - no documentation
+	UserId int `json:"userId"`
+}
+
+// SoftLayer_Event_Log_Extended is SoftLayer_Event_Log with all maskable types.
+type SoftLayer_Event_Log_Extended struct {
+	SoftLayer_Event_Log
+
+	// User - <nil>
+	User *SoftLayer_User_Customer `json:"user"`
 }
 
 func (softlayer_event_log *SoftLayer_Event_Log) String() string {

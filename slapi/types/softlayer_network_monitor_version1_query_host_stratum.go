@@ -14,14 +14,19 @@ package types
 // getAllQueryTypes and getAllResponseTypes, respectively.
 type SoftLayer_Network_Monitor_Version1_Query_Host_Stratum struct {
 
-	// Hardware - The hardware object that these monitoring permissions applies to.
-	Hardware *SoftLayer_Hardware `json:"hardware"`
-
 	// MonitorLevel - The highest level of a monitoring query type allowed on this server
 	MonitorLevel int `json:"monitorLevel"`
 
 	// ResponseLevel - The highest level of a monitoring response type allowed on this server
 	ResponseLevel int `json:"responseLevel"`
+}
+
+// SoftLayer_Network_Monitor_Version1_Query_Host_Stratum_Extended is SoftLayer_Network_Monitor_Version1_Query_Host_Stratum with all maskable types.
+type SoftLayer_Network_Monitor_Version1_Query_Host_Stratum_Extended struct {
+	SoftLayer_Network_Monitor_Version1_Query_Host_Stratum
+
+	// Hardware - The hardware object that these monitoring permissions applies to.
+	Hardware *SoftLayer_Hardware `json:"hardware"`
 }
 
 func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum) String() string {

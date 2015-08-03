@@ -6,11 +6,16 @@ package types
 // general information relating to a single SoftLayer billing item for hardware components.
 type SoftLayer_Billing_Item_Software_Component struct {
 
-	// Resource - The software component that this billing item points to.
-	Resource *SoftLayer_Software_Component `json:"resource"`
-
 	// ResourceTableId - The resource (unique identifier) for a software component billing item.
 	ResourceTableId int `json:"resourceTableId"`
+}
+
+// SoftLayer_Billing_Item_Software_Component_Extended is SoftLayer_Billing_Item_Software_Component with all maskable types.
+type SoftLayer_Billing_Item_Software_Component_Extended struct {
+	SoftLayer_Billing_Item_Software_Component
+
+	// Resource - The software component that this billing item points to.
+	Resource *SoftLayer_Software_Component `json:"resource"`
 }
 
 func (softlayer_billing_item_software_component *SoftLayer_Billing_Item_Software_Component) String() string {

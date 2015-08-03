@@ -15,18 +15,11 @@ type SoftLayer_Account_Regional_Registry_Detail_Property struct {
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate"`
 
-	// Detail - The [[SoftLayer_Account_Regional_Registry_Detail]] object this property belongs to
-	Detail *SoftLayer_Account_Regional_Registry_Detail `json:"detail"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate"`
-
-	// PropertyType - The [[SoftLayer_Account_Regional_Registry_Detail_Property_Type]] object this property
-	// belongs to
-	PropertyType *SoftLayer_Account_Regional_Registry_Detail_Property_Type `json:"propertyType"`
 
 	// PropertyTypeId - The numeric ID of the related
 	// [[SoftLayer_Account_Regional_Registry_Detail_Property_Type|property type object]]
@@ -42,6 +35,18 @@ type SoftLayer_Account_Regional_Registry_Detail_Property struct {
 
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+// SoftLayer_Account_Regional_Registry_Detail_Property_Extended is SoftLayer_Account_Regional_Registry_Detail_Property with all maskable types.
+type SoftLayer_Account_Regional_Registry_Detail_Property_Extended struct {
+	SoftLayer_Account_Regional_Registry_Detail_Property
+
+	// Detail - The [[SoftLayer_Account_Regional_Registry_Detail]] object this property belongs to
+	Detail *SoftLayer_Account_Regional_Registry_Detail `json:"detail"`
+
+	// PropertyType - The [[SoftLayer_Account_Regional_Registry_Detail_Property_Type]] object this property
+	// belongs to
+	PropertyType *SoftLayer_Account_Regional_Registry_Detail_Property_Type `json:"propertyType"`
 }
 
 func (softlayer_account_regional_registry_detail_property *SoftLayer_Account_Regional_Registry_Detail_Property) String() string {

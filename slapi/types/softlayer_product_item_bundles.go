@@ -7,23 +7,28 @@ package types
 // prices in a particular bundle.
 type SoftLayer_Product_Item_Bundles struct {
 
-	// BundleItem - no documentation
-	BundleItem *SoftLayer_Product_Item `json:"bundleItem"`
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// ItemPriceId - no documentation
+	ItemPriceId int `json:"itemPriceId"`
 
 	// BundleItemId - no documentation
 	BundleItemId int `json:"bundleItemId"`
+}
+
+// SoftLayer_Product_Item_Bundles_Extended is SoftLayer_Product_Item_Bundles with all maskable types.
+type SoftLayer_Product_Item_Bundles_Extended struct {
+	SoftLayer_Product_Item_Bundles
 
 	// Category - no documentation
 	Category *SoftLayer_Product_Item_Category `json:"category"`
 
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// ItemPrice - no documentation
 	ItemPrice *SoftLayer_Product_Item_Price `json:"itemPrice"`
 
-	// ItemPriceId - no documentation
-	ItemPriceId int `json:"itemPriceId"`
+	// BundleItem - no documentation
+	BundleItem *SoftLayer_Product_Item `json:"bundleItem"`
 }
 
 func (softlayer_product_item_bundles *SoftLayer_Product_Item_Bundles) String() string {

@@ -11,9 +11,6 @@ import (
 // bandwidth usage and overages within a given date range.
 type SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary struct {
 
-	// CdnAccountId - no documentation
-	CdnAccountId int `json:"cdnAccountId"`
-
 	// EndDateTime - no documentation
 	EndDateTime *time.Time `json:"endDateTime"`
 
@@ -31,6 +28,9 @@ type SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary struct {
 
 	// UsageUnits - The unit of measurement used in a CDN bandwidth summary.
 	UsageUnits string `json:"usageUnits"`
+
+	// CdnAccountId - no documentation
+	CdnAccountId int `json:"cdnAccountId"`
 }
 
 func (softlayer_container_network_contentdelivery_bandwidth_summary *SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary) String() string {

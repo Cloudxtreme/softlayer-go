@@ -7,11 +7,11 @@ package types
 // to place a global load balancer order with SoftLayer.
 type SoftLayer_Container_Product_Order_Network_LoadBalancer_Global struct {
 
-	// Domain - no documentation
-	Domain string `json:"domain"`
-
 	// Hostname - no documentation
 	Hostname string `json:"hostname"`
+
+	// Domain - no documentation
+	Domain string `json:"domain"`
 }
 
 func (softlayer_container_product_order_network_loadbalancer_global *SoftLayer_Container_Product_Order_Network_LoadBalancer_Global) String() string {

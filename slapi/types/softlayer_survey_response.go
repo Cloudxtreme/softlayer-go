@@ -10,12 +10,17 @@ type SoftLayer_Survey_Response struct {
 	// response is associated with.
 	OtherAnswer string `json:"otherAnswer"`
 
-	// SurveyAnswer - no documentation
-	SurveyAnswer *SoftLayer_Survey_Answer `json:"surveyAnswer"`
-
 	// SurveyAnswerId - The Id of the [[SoftLayer_Survey_Answer|Survey Answer]] that a response was made
 	// for.
 	SurveyAnswerId int `json:"surveyAnswerId"`
+}
+
+// SoftLayer_Survey_Response_Extended is SoftLayer_Survey_Response with all maskable types.
+type SoftLayer_Survey_Response_Extended struct {
+	SoftLayer_Survey_Response
+
+	// SurveyAnswer - no documentation
+	SurveyAnswer *SoftLayer_Survey_Answer `json:"surveyAnswer"`
 }
 
 func (softlayer_survey_response *SoftLayer_Survey_Response) String() string {

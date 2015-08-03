@@ -7,21 +7,16 @@ package types
 // discount that is related to a specific product item.
 type SoftLayer_Container_Product_Item_Discount_Program struct {
 
-	// ApplicableQuantity - The number of times the item discount(s) may be applied for that order
-	// container. At a minimum the number will be 1 and at most, it will match the quantity of the order
-	// container.
-	ApplicableQuantity int `json:"applicableQuantity"`
+	// RecurringAmount - The sum of the recurring fees of the prices of this container multiplied by the
+	// applicable quantity of this container.
+	RecurringAmount float64 `json:"recurringAmount"`
+
+	// RecurringTax - The tax amount on the recurring fees of the prices of this container mulitiplied by
+	// the applicable quantity of this container.
+	RecurringTax float64 `json:"recurringTax"`
 
 	// Item - no documentation
 	Item *SoftLayer_Product_Item `json:"item"`
-
-	// OneTimeAmount - The sum of the one time fees (one time, setup and labor) of the prices of this
-	// container multiplied by the applicable quantity of this container.
-	OneTimeAmount float64 `json:"oneTimeAmount"`
-
-	// OneTimeTax - The tax amount on the one time fees (one time, setup and labor) of the prices of this
-	// container mulitiplied by the applicable quantity of this container.
-	OneTimeTax float64 `json:"oneTimeTax"`
 
 	// Prices - The item prices that contain the amount of the discount in the recurringFee field. There
 	// may be one or more prices.
@@ -45,13 +40,18 @@ type SoftLayer_Container_Product_Item_Discount_Program struct {
 	// mulitiplied by the applicable quantity of this container with the proration factor applied.
 	ProratedRecurringTax float64 `json:"proratedRecurringTax"`
 
-	// RecurringAmount - The sum of the recurring fees of the prices of this container multiplied by the
-	// applicable quantity of this container.
-	RecurringAmount float64 `json:"recurringAmount"`
+	// ApplicableQuantity - The number of times the item discount(s) may be applied for that order
+	// container. At a minimum the number will be 1 and at most, it will match the quantity of the order
+	// container.
+	ApplicableQuantity int `json:"applicableQuantity"`
 
-	// RecurringTax - The tax amount on the recurring fees of the prices of this container mulitiplied by
-	// the applicable quantity of this container.
-	RecurringTax float64 `json:"recurringTax"`
+	// OneTimeAmount - The sum of the one time fees (one time, setup and labor) of the prices of this
+	// container multiplied by the applicable quantity of this container.
+	OneTimeAmount float64 `json:"oneTimeAmount"`
+
+	// OneTimeTax - The tax amount on the one time fees (one time, setup and labor) of the prices of this
+	// container mulitiplied by the applicable quantity of this container.
+	OneTimeTax float64 `json:"oneTimeTax"`
 }
 
 func (softlayer_container_product_item_discount_program *SoftLayer_Container_Product_Item_Discount_Program) String() string {

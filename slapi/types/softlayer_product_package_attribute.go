@@ -5,14 +5,19 @@ package types
 // SoftLayer_Product_Package_Attribute - <nil>
 type SoftLayer_Product_Package_Attribute struct {
 
-	// AttributeType - <nil>
-	AttributeType *SoftLayer_Product_Package_Attribute_Type `json:"attributeType"`
+	// Value - <nil>
+	Value string `json:"value"`
+}
+
+// SoftLayer_Product_Package_Attribute_Extended is SoftLayer_Product_Package_Attribute with all maskable types.
+type SoftLayer_Product_Package_Attribute_Extended struct {
+	SoftLayer_Product_Package_Attribute
 
 	// Package - <nil>
 	Package *SoftLayer_Product_Package `json:"package"`
 
-	// Value - <nil>
-	Value string `json:"value"`
+	// AttributeType - <nil>
+	AttributeType *SoftLayer_Product_Package_Attribute_Type `json:"attributeType"`
 }
 
 func (softlayer_product_package_attribute *SoftLayer_Product_Package_Attribute) String() string {

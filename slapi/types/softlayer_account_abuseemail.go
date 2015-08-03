@@ -10,11 +10,16 @@ package types
 // to an account's abuse email address when a legal or abuse ticket is created or updated.
 type SoftLayer_Account_AbuseEmail struct {
 
-	// Account - The account associated with an abuse email address.
-	Account *SoftLayer_Account `json:"account"`
-
 	// Email - no documentation
 	Email string `json:"email"`
+}
+
+// SoftLayer_Account_AbuseEmail_Extended is SoftLayer_Account_AbuseEmail with all maskable types.
+type SoftLayer_Account_AbuseEmail_Extended struct {
+	SoftLayer_Account_AbuseEmail
+
+	// Account - The account associated with an abuse email address.
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_account_abuseemail *SoftLayer_Account_AbuseEmail) String() string {

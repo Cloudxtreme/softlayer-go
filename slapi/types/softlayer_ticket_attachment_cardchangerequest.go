@@ -5,6 +5,11 @@ package types
 // SoftLayer_Ticket_Attachment_CardChangeRequest - This datatype contains tickets referenced from card
 // change request
 type SoftLayer_Ticket_Attachment_CardChangeRequest struct {
+}
+
+// SoftLayer_Ticket_Attachment_CardChangeRequest_Extended is SoftLayer_Ticket_Attachment_CardChangeRequest with all maskable types.
+type SoftLayer_Ticket_Attachment_CardChangeRequest_Extended struct {
+	SoftLayer_Ticket_Attachment_CardChangeRequest
 
 	// Resource - The card change request that is attached to a ticket.
 	Resource *SoftLayer_Billing_Payment_Card_ChangeRequest `json:"resource"`

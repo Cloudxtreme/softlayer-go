@@ -8,11 +8,16 @@ package types
 // software components on virtual machines.
 type SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat struct {
 
-	// Resource - The software component to which this billing item points.
-	Resource *SoftLayer_Software_Component `json:"resource"`
-
 	// ResourceTableId - The resource (unique identifier) for a software component billing item.
 	ResourceTableId int `json:"resourceTableId"`
+}
+
+// SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat_Extended is SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat with all maskable types.
+type SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat_Extended struct {
+	SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat
+
+	// Resource - The software component to which this billing item points.
+	Resource *SoftLayer_Software_Component `json:"resource"`
 }
 
 func (softlayer_billing_item_software_component_virtual_operatingsystem_redhat *SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat) String() string {

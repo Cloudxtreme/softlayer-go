@@ -6,9 +6,6 @@ package types
 // information relating to a single customer subnet (remote).
 type SoftLayer_Network_Customer_Subnet struct {
 
-	// AccountId - no documentation
-	AccountId int `json:"accountId"`
-
 	// Cidr - A subnet's Classless Inter-Domain Routing prefix. This is a number between 0 and 32
 	// signifying the number of bits in a subnet's netmask. These bits separate a subnet's network address
 	// from it's host addresses. It performs the same function as the ''netmask'' property, but is
@@ -17,12 +14,6 @@ type SoftLayer_Network_Customer_Subnet struct {
 
 	// Id - no documentation
 	Id int `json:"id"`
-
-	// IpAddressCount - A count of all ip addresses associated with a subnet.
-	IpAddressCount uint64 `json:"ipAddressCount"`
-
-	// IpAddresses - no documentation
-	IpAddresses []*SoftLayer_Network_Customer_Subnet_IpAddress `json:"ipAddresses"`
 
 	// Netmask - A bitmask in dotted-quad format that is used to separate a subnet's network address from
 	// it's host addresses. This performs the same function as the ''cidr'' property, but is expressed in a
@@ -34,6 +25,20 @@ type SoftLayer_Network_Customer_Subnet struct {
 
 	// TotalIpAddresses - no documentation
 	TotalIpAddresses int `json:"totalIpAddresses"`
+
+	// AccountId - no documentation
+	AccountId int `json:"accountId"`
+}
+
+// SoftLayer_Network_Customer_Subnet_Extended is SoftLayer_Network_Customer_Subnet with all maskable types.
+type SoftLayer_Network_Customer_Subnet_Extended struct {
+	SoftLayer_Network_Customer_Subnet
+
+	// IpAddressCount - A count of all ip addresses associated with a subnet.
+	IpAddressCount uint64 `json:"ipAddressCount"`
+
+	// IpAddresses - no documentation
+	IpAddresses []*SoftLayer_Network_Customer_Subnet_IpAddress `json:"ipAddresses"`
 }
 
 func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) String() string {

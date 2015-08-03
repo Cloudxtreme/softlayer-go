@@ -10,35 +10,40 @@ import (
 // profile
 type SoftLayer_Layout_Profile struct {
 
+	// UserRecordId - The [[SoftLayer_User_Customer]] owning this layout profile
+	UserRecordId int `json:"userRecordId"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// Name - no documentation
+	Name string `json:"name"`
+
 	// ActiveFlag - no documentation
 	ActiveFlag int `json:"activeFlag"`
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
-	// Id - no documentation
-	Id int `json:"id"`
+	// ModifyDate - Timestamp of when the layout profile was last updated
+	ModifyDate *time.Time `json:"modifyDate"`
+}
 
-	// LayoutContainerCount - no documentation
-	LayoutContainerCount uint64 `json:"layoutContainerCount"`
+// SoftLayer_Layout_Profile_Extended is SoftLayer_Layout_Profile with all maskable types.
+type SoftLayer_Layout_Profile_Extended struct {
+	SoftLayer_Layout_Profile
 
 	// LayoutContainers - <nil>
 	LayoutContainers []*SoftLayer_Layout_Container `json:"layoutContainers"`
 
-	// LayoutPreferenceCount - no documentation
-	LayoutPreferenceCount uint64 `json:"layoutPreferenceCount"`
-
 	// LayoutPreferences - <nil>
 	LayoutPreferences []*SoftLayer_Layout_Profile_Preference `json:"layoutPreferences"`
 
-	// ModifyDate - Timestamp of when the layout profile was last updated
-	ModifyDate *time.Time `json:"modifyDate"`
+	// LayoutContainerCount - no documentation
+	LayoutContainerCount uint64 `json:"layoutContainerCount"`
 
-	// Name - no documentation
-	Name string `json:"name"`
-
-	// UserRecordId - The [[SoftLayer_User_Customer]] owning this layout profile
-	UserRecordId int `json:"userRecordId"`
+	// LayoutPreferenceCount - no documentation
+	LayoutPreferenceCount uint64 `json:"layoutPreferenceCount"`
 }
 
 func (softlayer_layout_profile *SoftLayer_Layout_Profile) String() string {

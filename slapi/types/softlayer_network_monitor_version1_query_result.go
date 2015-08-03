@@ -14,9 +14,6 @@ type SoftLayer_Network_Monitor_Version1_Query_Result struct {
 	// FinishTime - no documentation
 	FinishTime *time.Time `json:"finishTime"`
 
-	// QueryHost - References the queryHost that this response relates to.
-	QueryHost *SoftLayer_Network_Monitor_Version1_Query_Host `json:"queryHost"`
-
 	// ResponseStatus - The response status for this server. The response status meanings are: 0:
 	// Down/Critical: Server is down and/or has passed the critical response threshold (extremely long ping
 	// response, abnormal behavior, etc.) 1: Warning - Server may be recovering from a previous down state,
@@ -27,6 +24,14 @@ type SoftLayer_Network_Monitor_Version1_Query_Result struct {
 
 	// ResponseTime - no documentation
 	ResponseTime float32 `json:"responseTime"`
+}
+
+// SoftLayer_Network_Monitor_Version1_Query_Result_Extended is SoftLayer_Network_Monitor_Version1_Query_Result with all maskable types.
+type SoftLayer_Network_Monitor_Version1_Query_Result_Extended struct {
+	SoftLayer_Network_Monitor_Version1_Query_Result
+
+	// QueryHost - References the queryHost that this response relates to.
+	QueryHost *SoftLayer_Network_Monitor_Version1_Query_Host `json:"queryHost"`
 }
 
 func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result) String() string {

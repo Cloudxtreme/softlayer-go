@@ -5,9 +5,6 @@ package types
 // SoftLayer_Account_MasterServiceAgreement - <nil>
 type SoftLayer_Account_MasterServiceAgreement struct {
 
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
-
 	// AccountId - <nil>
 	AccountId int `json:"accountId"`
 
@@ -19,6 +16,14 @@ type SoftLayer_Account_MasterServiceAgreement struct {
 
 	// Name - <nil>
 	Name string `json:"name"`
+}
+
+// SoftLayer_Account_MasterServiceAgreement_Extended is SoftLayer_Account_MasterServiceAgreement with all maskable types.
+type SoftLayer_Account_MasterServiceAgreement_Extended struct {
+	SoftLayer_Account_MasterServiceAgreement
+
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_account_masterserviceagreement *SoftLayer_Account_MasterServiceAgreement) String() string {

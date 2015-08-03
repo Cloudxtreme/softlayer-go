@@ -12,20 +12,25 @@ import (
 // detected and the action that is taken.
 type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event struct {
 
-	// EventLocalDateTime - no documentation
-	EventLocalDateTime *time.Time `json:"eventLocalDateTime"`
-
 	// Filename - no documentation
 	Filename string `json:"filename"`
-
-	// VirusActionTaken - no documentation
-	VirusActionTaken *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Filter_Description `json:"virusActionTaken"`
 
 	// VirusName - no documentation
 	VirusName string `json:"virusName"`
 
 	// VirusType - no documentation
 	VirusType string `json:"virusType"`
+
+	// EventLocalDateTime - no documentation
+	EventLocalDateTime *time.Time `json:"eventLocalDateTime"`
+}
+
+// McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Extended is McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event with all maskable types.
+type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Extended struct {
+	McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event
+
+	// VirusActionTaken - no documentation
+	VirusActionTaken *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Filter_Description `json:"virusActionTaken"`
 }
 
 func (mcafee_epolicy_orchestrator_version36_antivirus_event *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event) String() string {

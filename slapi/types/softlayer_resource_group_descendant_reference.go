@@ -6,6 +6,11 @@ package types
 // data type simplifies the link between one SoftLayer_Resource_Group_Member object and all of its
 // parents.
 type SoftLayer_Resource_Group_Descendant_Reference struct {
+}
+
+// SoftLayer_Resource_Group_Descendant_Reference_Extended is SoftLayer_Resource_Group_Descendant_Reference with all maskable types.
+type SoftLayer_Resource_Group_Descendant_Reference_Extended struct {
+	SoftLayer_Resource_Group_Descendant_Reference
 
 	// Group - <nil>
 	Group *SoftLayer_Resource_Group `json:"group"`

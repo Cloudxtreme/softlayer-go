@@ -6,6 +6,11 @@ package types
 // regarding a NAS Storage service such as account id, username, password, maximum capacity, Storage's
 // product type and capacity.
 type SoftLayer_Network_Storage_Nas struct {
+}
+
+// SoftLayer_Network_Storage_Nas_Extended is SoftLayer_Network_Storage_Nas with all maskable types.
+type SoftLayer_Network_Storage_Nas_Extended struct {
+	SoftLayer_Network_Storage_Nas
 
 	// RecentBytesUsed - <nil>
 	RecentBytesUsed *SoftLayer_Network_Storage_Daily_Usage `json:"recentBytesUsed"`

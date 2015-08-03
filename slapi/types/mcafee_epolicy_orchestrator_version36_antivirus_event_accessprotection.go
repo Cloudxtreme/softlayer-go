@@ -12,9 +12,6 @@ import (
 // that caused it, and the rule that triggered the event.
 type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_AccessProtection struct {
 
-	// EventLocalDateTime - no documentation
-	EventLocalDateTime *time.Time `json:"eventLocalDateTime"`
-
 	// Filename - The name of the file that was protected from access.
 	Filename string `json:"filename"`
 
@@ -26,6 +23,9 @@ type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_AccessProtection stru
 
 	// Source - The IP address that caused an access protection event.
 	Source string `json:"source"`
+
+	// EventLocalDateTime - no documentation
+	EventLocalDateTime *time.Time `json:"eventLocalDateTime"`
 }
 
 func (mcafee_epolicy_orchestrator_version36_antivirus_event_accessprotection *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_AccessProtection) String() string {

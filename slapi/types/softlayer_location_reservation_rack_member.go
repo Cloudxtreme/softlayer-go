@@ -8,11 +8,16 @@ type SoftLayer_Location_Reservation_Rack_Member struct {
 	// Id - <nil>
 	Id int `json:"id"`
 
-	// Location - no documentation
-	Location *SoftLayer_Location `json:"location"`
-
 	// LocationId - <nil>
 	LocationId int `json:"locationId"`
+}
+
+// SoftLayer_Location_Reservation_Rack_Member_Extended is SoftLayer_Location_Reservation_Rack_Member with all maskable types.
+type SoftLayer_Location_Reservation_Rack_Member_Extended struct {
+	SoftLayer_Location_Reservation_Rack_Member
+
+	// Location - no documentation
+	Location *SoftLayer_Location `json:"location"`
 
 	// LocationReservationRack - <nil>
 	LocationReservationRack *SoftLayer_Location_Reservation `json:"locationReservationRack"`

@@ -9,14 +9,19 @@ type SoftLayer_Layout_Preference struct {
 	// Id - no documentation
 	Id int `json:"id"`
 
-	// LayoutPreferenceType - no documentation
-	LayoutPreferenceType *SoftLayer_Layout_Preference_Type `json:"layoutPreferenceType"`
-
 	// LayoutPreferenceTypeId - The internal identifier of the related [[SoftLayer_Layout_Preference_Type]]
 	LayoutPreferenceTypeId int `json:"layoutPreferenceTypeId"`
 
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+// SoftLayer_Layout_Preference_Extended is SoftLayer_Layout_Preference with all maskable types.
+type SoftLayer_Layout_Preference_Extended struct {
+	SoftLayer_Layout_Preference
+
+	// LayoutPreferenceType - no documentation
+	LayoutPreferenceType *SoftLayer_Layout_Preference_Type `json:"layoutPreferenceType"`
 }
 
 func (softlayer_layout_preference *SoftLayer_Layout_Preference) String() string {

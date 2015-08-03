@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Resource_Group_Member_Network_Vlan - <nil>
 type SoftLayer_Resource_Group_Member_Network_Vlan struct {
+}
+
+// SoftLayer_Resource_Group_Member_Network_Vlan_Extended is SoftLayer_Resource_Group_Member_Network_Vlan with all maskable types.
+type SoftLayer_Resource_Group_Member_Network_Vlan_Extended struct {
+	SoftLayer_Resource_Group_Member_Network_Vlan
 
 	// Resource - no documentation
 	Resource *SoftLayer_Network_Vlan `json:"resource"`

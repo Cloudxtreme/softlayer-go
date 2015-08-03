@@ -11,41 +11,41 @@ type SoftLayer_Container_Referral_Partner_Prospect struct {
 	// Address2 - <nil>
 	Address2 string `json:"address2"`
 
-	// City - <nil>
-	City string `json:"city"`
-
-	// CompanyName - <nil>
-	CompanyName string `json:"companyName"`
-
-	// Country - <nil>
-	Country string `json:"country"`
-
 	// Email - <nil>
 	Email string `json:"email"`
 
 	// FirstName - <nil>
 	FirstName string `json:"firstName"`
 
-	// LastName - <nil>
-	LastName string `json:"lastName"`
+	// State - <nil>
+	State string `json:"state"`
 
 	// OfficePhone - <nil>
 	OfficePhone string `json:"officePhone"`
 
-	// PostalCode - <nil>
-	PostalCode string `json:"postalCode"`
-
 	// Questions - <nil>
 	Questions []string `json:"questions"`
 
-	// Responses - <nil>
-	Responses []*SoftLayer_Survey_Response `json:"responses"`
-
-	// State - <nil>
-	State string `json:"state"`
+	// CompanyName - <nil>
+	CompanyName string `json:"companyName"`
 
 	// SurveyId - <nil>
 	SurveyId string `json:"surveyId"`
+
+	// City - <nil>
+	City string `json:"city"`
+
+	// Country - <nil>
+	Country string `json:"country"`
+
+	// LastName - <nil>
+	LastName string `json:"lastName"`
+
+	// PostalCode - <nil>
+	PostalCode string `json:"postalCode"`
+
+	// Responses - <nil>
+	Responses []*SoftLayer_Survey_Response `json:"responses"`
 }
 
 func (softlayer_container_referral_partner_prospect *SoftLayer_Container_Referral_Partner_Prospect) String() string {

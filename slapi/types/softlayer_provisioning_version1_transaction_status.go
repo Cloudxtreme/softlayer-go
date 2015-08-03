@@ -16,6 +16,11 @@ type SoftLayer_Provisioning_Version1_Transaction_Status struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+// SoftLayer_Provisioning_Version1_Transaction_Status_Extended is SoftLayer_Provisioning_Version1_Transaction_Status with all maskable types.
+type SoftLayer_Provisioning_Version1_Transaction_Status_Extended struct {
+	SoftLayer_Provisioning_Version1_Transaction_Status
 
 	// NonCompletedTransactionCount - no documentation
 	NonCompletedTransactionCount uint64 `json:"nonCompletedTransactionCount"`

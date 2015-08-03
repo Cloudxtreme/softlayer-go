@@ -11,14 +11,19 @@ package types
 // information attached.
 type SoftLayer_Billing_Item_Network_Subnet struct {
 
-	// Resource - no documentation
-	Resource *SoftLayer_Network_Subnet `json:"resource"`
-
 	// ResourceName - no documentation
 	ResourceName string `json:"resourceName"`
 
 	// ResourceTableId - The resource (unique identifier) for a server billing item.
 	ResourceTableId int `json:"resourceTableId"`
+}
+
+// SoftLayer_Billing_Item_Network_Subnet_Extended is SoftLayer_Billing_Item_Network_Subnet with all maskable types.
+type SoftLayer_Billing_Item_Network_Subnet_Extended struct {
+	SoftLayer_Billing_Item_Network_Subnet
+
+	// Resource - no documentation
+	Resource *SoftLayer_Network_Subnet `json:"resource"`
 }
 
 func (softlayer_billing_item_network_subnet *SoftLayer_Billing_Item_Network_Subnet) String() string {

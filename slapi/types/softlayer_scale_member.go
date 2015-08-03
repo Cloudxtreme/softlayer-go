@@ -9,17 +9,22 @@ import (
 // SoftLayer_Scale_Member - <nil>
 type SoftLayer_Scale_Member struct {
 
+	// ScaleGroupId - The identifier of the group this member belongs to.
+	ScaleGroupId int `json:"scaleGroupId"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
 	// Id - no documentation
 	Id int `json:"id"`
+}
+
+// SoftLayer_Scale_Member_Extended is SoftLayer_Scale_Member with all maskable types.
+type SoftLayer_Scale_Member_Extended struct {
+	SoftLayer_Scale_Member
 
 	// ScaleGroup - no documentation
 	ScaleGroup *SoftLayer_Scale_Group `json:"scaleGroup"`
-
-	// ScaleGroupId - The identifier of the group this member belongs to.
-	ScaleGroupId int `json:"scaleGroupId"`
 }
 
 func (softlayer_scale_member *SoftLayer_Scale_Member) String() string {

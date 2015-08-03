@@ -6,6 +6,11 @@ package types
 // SoftLayer_Billing_Item_Network_Application_Delivery_Controller data type describes the billing item
 // related to an external authentication binding
 type SoftLayer_Billing_Item_User_Customer_External_Binding struct {
+}
+
+// SoftLayer_Billing_Item_User_Customer_External_Binding_Extended is SoftLayer_Billing_Item_User_Customer_External_Binding with all maskable types.
+type SoftLayer_Billing_Item_User_Customer_External_Binding_Extended struct {
+	SoftLayer_Billing_Item_User_Customer_External_Binding
 
 	// Resource - The external authentication binding that a billing item is associated with.
 	Resource *SoftLayer_User_Customer_External_Binding `json:"resource"`

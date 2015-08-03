@@ -23,18 +23,18 @@ type SoftLayer_Container_Network_Storage_Evault_WebCc_JobDetails struct {
 	// LastRunDate - no documentation
 	LastRunDate *time.Time `json:"lastRunDate"`
 
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// OriginalSize - Size of backup job when it was first run. (provided only for backup jobs)
 	OriginalSize uint64 `json:"originalSize"`
+
+	// Result - no documentation
+	Result string `json:"result"`
+
+	// Name - no documentation
+	Name string `json:"name"`
 
 	// PercentageOfTotalUsage - Percentage of overall used space allocated by the job. (provided only for
 	// backup jobs)
 	PercentageOfTotalUsage int `json:"percentageOfTotalUsage"`
-
-	// Result - no documentation
-	Result string `json:"result"`
 
 	// VirtualGuestId - no documentation
 	VirtualGuestId int `json:"virtualGuestId"`

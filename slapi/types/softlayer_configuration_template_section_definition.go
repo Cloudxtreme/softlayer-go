@@ -14,47 +14,23 @@ import (
 // your system specific values.
 type SoftLayer_Configuration_Template_Section_Definition struct {
 
-	// AttributeCount - no documentation
-	AttributeCount uint64 `json:"attributeCount"`
-
-	// Attributes - <nil>
-	Attributes []*SoftLayer_Configuration_Template_Section_Definition_Attribute `json:"attributes"`
-
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
-
-	// DefaultValue - <nil>
-	DefaultValue *SoftLayer_Configuration_Template_Section_Definition_Value `json:"defaultValue"`
-
-	// Description - no documentation
-	Description string `json:"description"`
-
-	// EnumerationValues - no documentation
-	EnumerationValues string `json:"enumerationValues"`
-
-	// Group - <nil>
-	Group *SoftLayer_Configuration_Template_Section_Definition_Group `json:"group"`
-
-	// GroupId - no documentation
-	GroupId string `json:"groupId"`
-
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// MaximumValue - no documentation
-	MaximumValue string `json:"maximumValue"`
 
 	// MinimumValue - no documentation
 	MinimumValue string `json:"minimumValue"`
 
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
+	// Sort - no documentation
+	Sort int `json:"sort"`
 
-	// MonitoringDataFlag - <nil>
-	MonitoringDataFlag bool `json:"monitoringDataFlag"`
+	// Description - no documentation
+	Description string `json:"description"`
 
-	// Name - no documentation
-	Name string `json:"name"`
+	// GroupId - no documentation
+	GroupId string `json:"groupId"`
+
+	// MaximumValue - no documentation
+	MaximumValue string `json:"maximumValue"`
 
 	// Path - no documentation
 	Path string `json:"path"`
@@ -62,20 +38,49 @@ type SoftLayer_Configuration_Template_Section_Definition struct {
 	// RequireValueFlag - Indicates if a configuration value is required for this definition.
 	RequireValueFlag int `json:"requireValueFlag"`
 
-	// Section - <nil>
-	Section *SoftLayer_Configuration_Template_Section `json:"section"`
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// TypeId - Internal identifier of a configuration definition type.
+	TypeId int `json:"typeId"`
+
+	// EnumerationValues - no documentation
+	EnumerationValues string `json:"enumerationValues"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate"`
+
+	// Name - no documentation
+	Name string `json:"name"`
 
 	// SectionId - no documentation
 	SectionId int `json:"sectionId"`
 
 	// ShortName - no documentation
 	ShortName string `json:"shortName"`
+}
 
-	// Sort - no documentation
-	Sort int `json:"sort"`
+// SoftLayer_Configuration_Template_Section_Definition_Extended is SoftLayer_Configuration_Template_Section_Definition with all maskable types.
+type SoftLayer_Configuration_Template_Section_Definition_Extended struct {
+	SoftLayer_Configuration_Template_Section_Definition
 
-	// TypeId - Internal identifier of a configuration definition type.
-	TypeId int `json:"typeId"`
+	// Attributes - <nil>
+	Attributes []*SoftLayer_Configuration_Template_Section_Definition_Attribute `json:"attributes"`
+
+	// MonitoringDataFlag - <nil>
+	MonitoringDataFlag bool `json:"monitoringDataFlag"`
+
+	// AttributeCount - no documentation
+	AttributeCount uint64 `json:"attributeCount"`
+
+	// DefaultValue - <nil>
+	DefaultValue *SoftLayer_Configuration_Template_Section_Definition_Value `json:"defaultValue"`
+
+	// Group - <nil>
+	Group *SoftLayer_Configuration_Template_Section_Definition_Group `json:"group"`
+
+	// Section - <nil>
+	Section *SoftLayer_Configuration_Template_Section `json:"section"`
 
 	// ValueType - <nil>
 	ValueType *SoftLayer_Configuration_Template_Section_Definition_Type `json:"valueType"`

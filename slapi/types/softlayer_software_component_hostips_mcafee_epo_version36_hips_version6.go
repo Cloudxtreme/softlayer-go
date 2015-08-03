@@ -7,16 +7,21 @@ package types
 // single McAfee Secure Host IPS software component for version 6 of the Host IPS client and uses the
 // ePolicy Orchestrator version 3.6 backend.
 type SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6 struct {
+}
+
+// SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6_Extended is SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6 with all maskable types.
+type SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6_Extended struct {
+	SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6
 
 	// BlockedApplicationEventCount - A count of the blocked application events for this software
 	// component.
 	BlockedApplicationEventCount uint64 `json:"blockedApplicationEventCount"`
 
-	// BlockedApplicationEvents - The blocked application events for this software component.
-	BlockedApplicationEvents []*McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_BlockedApplicationEvent `json:"blockedApplicationEvents"`
-
 	// IpsEventCount - A count of the host IPS events for this software component.
 	IpsEventCount uint64 `json:"ipsEventCount"`
+
+	// BlockedApplicationEvents - The blocked application events for this software component.
+	BlockedApplicationEvents []*McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_BlockedApplicationEvent `json:"blockedApplicationEvents"`
 
 	// IpsEvents - no documentation
 	IpsEvents []*McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent `json:"ipsEvents"`

@@ -8,8 +8,8 @@ package types
 // Network Firewall Template]] service to pull SoftLayer recommended rule set templates.
 type SoftLayer_Network_Component_Firewall_Rule struct {
 
-	// Action - The action that the rule is to take [permit or deny].
-	Action string `json:"action"`
+	// Status - no documentation
+	Status string `json:"status"`
 
 	// DestinationIpAddress - The destination IP address considered for determining rule application.
 	DestinationIpAddress string `json:"destinationIpAddress"`
@@ -21,19 +21,12 @@ type SoftLayer_Network_Component_Firewall_Rule struct {
 	// application.
 	DestinationIpSubnetMask string `json:"destinationIpSubnetMask"`
 
-	// DestinationPortRangeEnd - The ending (upper end of range) destination port considered for
-	// determining rule application.
-	DestinationPortRangeEnd int `json:"destinationPortRangeEnd"`
-
 	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
 	// determining rule application.
 	DestinationPortRangeStart int `json:"destinationPortRangeStart"`
 
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// NetworkComponentFirewall - The network component firewall that this rule belongs to.
-	NetworkComponentFirewall *SoftLayer_Network_Component_Firewall `json:"networkComponentFirewall"`
+	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
+	SourceIpSubnetMask string `json:"sourceIpSubnetMask"`
 
 	// Notes - no documentation
 	Notes string `json:"notes"`
@@ -44,20 +37,32 @@ type SoftLayer_Network_Component_Firewall_Rule struct {
 	// Protocol - The protocol considered for determining rule application.
 	Protocol string `json:"protocol"`
 
-	// SourceIpAddress - The source IP address considered for determining rule application.
-	SourceIpAddress string `json:"sourceIpAddress"`
-
 	// SourceIpCidr - The is used for determining rule application. This value will
 	SourceIpCidr int `json:"sourceIpCidr"`
 
-	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
-	SourceIpSubnetMask string `json:"sourceIpSubnetMask"`
+	// Action - The action that the rule is to take [permit or deny].
+	Action string `json:"action"`
 
-	// Status - no documentation
-	Status string `json:"status"`
+	// Id - no documentation
+	Id int `json:"id"`
 
 	// Version - Whether this rule is an IPv4 rule or an IPv6 rule. If
 	Version int `json:"version"`
+
+	// DestinationPortRangeEnd - The ending (upper end of range) destination port considered for
+	// determining rule application.
+	DestinationPortRangeEnd int `json:"destinationPortRangeEnd"`
+
+	// SourceIpAddress - The source IP address considered for determining rule application.
+	SourceIpAddress string `json:"sourceIpAddress"`
+}
+
+// SoftLayer_Network_Component_Firewall_Rule_Extended is SoftLayer_Network_Component_Firewall_Rule with all maskable types.
+type SoftLayer_Network_Component_Firewall_Rule_Extended struct {
+	SoftLayer_Network_Component_Firewall_Rule
+
+	// NetworkComponentFirewall - The network component firewall that this rule belongs to.
+	NetworkComponentFirewall *SoftLayer_Network_Component_Firewall `json:"networkComponentFirewall"`
 }
 
 func (softlayer_network_component_firewall_rule *SoftLayer_Network_Component_Firewall_Rule) String() string {

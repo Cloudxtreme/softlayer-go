@@ -7,6 +7,10 @@ package types
 // container.
 type SoftLayer_Container_Product_Order_Storage_Group struct {
 
+	// Partitions - Defines the partitions for the storage group. If this storage group is not a secondary
+	// storage group, then this will not be used.
+	Partitions []*SoftLayer_Container_Product_Order_Storage_Group_Partition `json:"partitions"`
+
 	// ArraySize - Size of the array in gigabytes. Must be within limitations of the smallest drive
 	// assigned to the storage group and the storage group type.
 	ArraySize float64 `json:"arraySize"`
@@ -26,10 +30,6 @@ type SoftLayer_Container_Product_Order_Storage_Group struct {
 	// will determine the partitions to add to the storage group. If this storage group is not a primary
 	// storage group, then this will not be used.
 	PartitionTemplateId int `json:"partitionTemplateId"`
-
-	// Partitions - Defines the partitions for the storage group. If this storage group is not a secondary
-	// storage group, then this will not be used.
-	Partitions []*SoftLayer_Container_Product_Order_Storage_Group_Partition `json:"partitions"`
 }
 
 func (softlayer_container_product_order_storage_group *SoftLayer_Container_Product_Order_Storage_Group) String() string {

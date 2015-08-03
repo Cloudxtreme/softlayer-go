@@ -9,6 +9,9 @@ import (
 // SoftLayer_Account_Shipment_Type - <nil>
 type SoftLayer_Account_Shipment_Type struct {
 
+	// Name - <nil>
+	Name string `json:"name"`
+
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate"`
 
@@ -20,9 +23,6 @@ type SoftLayer_Account_Shipment_Type struct {
 
 	// KeyName - <nil>
 	KeyName string `json:"keyName"`
-
-	// Name - <nil>
-	Name string `json:"name"`
 }
 
 func (softlayer_account_shipment_type *SoftLayer_Account_Shipment_Type) String() string {

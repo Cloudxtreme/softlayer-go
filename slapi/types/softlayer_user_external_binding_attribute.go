@@ -9,11 +9,16 @@ package types
 // *Credential State *Credential Expiration Date *Credential Last Update Date
 type SoftLayer_User_External_Binding_Attribute struct {
 
-	// ExternalBinding - The external authentication binding an attribute belongs to.
-	ExternalBinding *SoftLayer_User_External_Binding `json:"externalBinding"`
-
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+// SoftLayer_User_External_Binding_Attribute_Extended is SoftLayer_User_External_Binding_Attribute with all maskable types.
+type SoftLayer_User_External_Binding_Attribute_Extended struct {
+	SoftLayer_User_External_Binding_Attribute
+
+	// ExternalBinding - The external authentication binding an attribute belongs to.
+	ExternalBinding *SoftLayer_User_External_Binding `json:"externalBinding"`
 }
 
 func (softlayer_user_external_binding_attribute *SoftLayer_User_External_Binding_Attribute) String() string {

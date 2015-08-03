@@ -7,14 +7,11 @@ package types
 // server's remote management card.
 type SoftLayer_Container_RemoteManagement_SensorReading struct {
 
-	// LowerCritical - no documentation
-	LowerCritical string `json:"lowerCritical"`
+	// Status - no documentation
+	Status string `json:"status"`
 
-	// LowerNonCritical - no documentation
-	LowerNonCritical string `json:"lowerNonCritical"`
-
-	// LowerNonRecoverable - no documentation
-	LowerNonRecoverable string `json:"lowerNonRecoverable"`
+	// UpperCritical - no documentation
+	UpperCritical string `json:"upperCritical"`
 
 	// SensorId - no documentation
 	SensorId string `json:"sensorId"`
@@ -22,20 +19,23 @@ type SoftLayer_Container_RemoteManagement_SensorReading struct {
 	// SensorReading - no documentation
 	SensorReading string `json:"sensorReading"`
 
+	// LowerNonRecoverable - no documentation
+	LowerNonRecoverable string `json:"lowerNonRecoverable"`
+
 	// SensorUnits - no documentation
 	SensorUnits string `json:"sensorUnits"`
-
-	// Status - no documentation
-	Status string `json:"status"`
-
-	// UpperCritical - no documentation
-	UpperCritical string `json:"upperCritical"`
 
 	// UpperNonCritical - no documentation
 	UpperNonCritical string `json:"upperNonCritical"`
 
 	// UpperNonRecoverable - no documentation
 	UpperNonRecoverable string `json:"upperNonRecoverable"`
+
+	// LowerCritical - no documentation
+	LowerCritical string `json:"lowerCritical"`
+
+	// LowerNonCritical - no documentation
+	LowerNonCritical string `json:"lowerNonCritical"`
 }
 
 func (softlayer_container_remotemanagement_sensorreading *SoftLayer_Container_RemoteManagement_SensorReading) String() string {

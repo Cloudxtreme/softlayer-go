@@ -7,6 +7,11 @@ package types
 // [[SoftLayer_Security_Directory_Service_Host_Xref]] data type to include hardware specific
 // properties.
 type SoftLayer_Security_Directory_Service_Host_Xref_Hardware struct {
+}
+
+// SoftLayer_Security_Directory_Service_Host_Xref_Hardware_Extended is SoftLayer_Security_Directory_Service_Host_Xref_Hardware with all maskable types.
+type SoftLayer_Security_Directory_Service_Host_Xref_Hardware_Extended struct {
+	SoftLayer_Security_Directory_Service_Host_Xref_Hardware
 
 	// Host - no documentation
 	Host *SoftLayer_Hardware `json:"host"`

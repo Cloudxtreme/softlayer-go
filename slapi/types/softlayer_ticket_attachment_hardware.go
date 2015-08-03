@@ -10,14 +10,19 @@ package types
 // ticket.
 type SoftLayer_Ticket_Attachment_Hardware struct {
 
-	// Hardware - no documentation
-	Hardware *SoftLayer_Hardware `json:"hardware"`
-
 	// HardwareId - The internal identifier of a piece of hardware that is attached to a ticket.
 	HardwareId int `json:"hardwareId"`
+}
+
+// SoftLayer_Ticket_Attachment_Hardware_Extended is SoftLayer_Ticket_Attachment_Hardware with all maskable types.
+type SoftLayer_Ticket_Attachment_Hardware_Extended struct {
+	SoftLayer_Ticket_Attachment_Hardware
 
 	// Resource - no documentation
 	Resource *SoftLayer_Hardware `json:"resource"`
+
+	// Hardware - no documentation
+	Hardware *SoftLayer_Hardware `json:"hardware"`
 }
 
 func (softlayer_ticket_attachment_hardware *SoftLayer_Ticket_Attachment_Hardware) String() string {

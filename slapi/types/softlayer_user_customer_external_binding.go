@@ -7,6 +7,11 @@ package types
 // of binding, and a unique identifier and password that is used to authenticate against the 3rd party
 // service.
 type SoftLayer_User_Customer_External_Binding struct {
+}
+
+// SoftLayer_User_Customer_External_Binding_Extended is SoftLayer_User_Customer_External_Binding with all maskable types.
+type SoftLayer_User_Customer_External_Binding_Extended struct {
+	SoftLayer_User_Customer_External_Binding
 
 	// User - The SoftLayer user that the external authentication binding belongs to.
 	User *SoftLayer_User_Customer `json:"user"`

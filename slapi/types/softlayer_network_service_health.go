@@ -17,20 +17,25 @@ type SoftLayer_Network_Service_Health struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
-	// Location - no documentation
-	Location *SoftLayer_Location `json:"location"`
-
 	// LocationId - no documentation
 	LocationId int `json:"locationId"`
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
 
-	// Status - The status portion of a service/status relationship.
-	Status *SoftLayer_Network_Service_Health_Status `json:"status"`
-
 	// StatusId - no documentation
 	StatusId int `json:"statusId"`
+}
+
+// SoftLayer_Network_Service_Health_Extended is SoftLayer_Network_Service_Health with all maskable types.
+type SoftLayer_Network_Service_Health_Extended struct {
+	SoftLayer_Network_Service_Health
+
+	// Location - no documentation
+	Location *SoftLayer_Location `json:"location"`
+
+	// Status - The status portion of a service/status relationship.
+	Status *SoftLayer_Network_Service_Health_Status `json:"status"`
 }
 
 func (softlayer_network_service_health *SoftLayer_Network_Service_Health) String() string {

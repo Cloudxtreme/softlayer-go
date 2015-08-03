@@ -6,6 +6,11 @@ package types
 // contains general information relating to a single SoftLayer billing item whose item category code is
 // 'firewall'
 type SoftLayer_Billing_Item_Network_Firewall struct {
+}
+
+// SoftLayer_Billing_Item_Network_Firewall_Extended is SoftLayer_Billing_Item_Network_Firewall with all maskable types.
+type SoftLayer_Billing_Item_Network_Firewall_Extended struct {
+	SoftLayer_Billing_Item_Network_Firewall
 
 	// Resource - The firewall that a firewall billing item is associated with.
 	Resource *SoftLayer_Network_Component_Firewall `json:"resource"`

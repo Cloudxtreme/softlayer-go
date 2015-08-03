@@ -17,15 +17,20 @@ type SoftLayer_Network_Bandwidth_Version1_Usage_Detail struct {
 	// AmountOut - no documentation
 	AmountOut float64 `json:"amountOut"`
 
+	// Day - Day and time this bandwidth utilization event was recorded.
+	Day *time.Time `json:"day"`
+}
+
+// SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Extended is SoftLayer_Network_Bandwidth_Version1_Usage_Detail with all maskable types.
+type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Extended struct {
+	SoftLayer_Network_Bandwidth_Version1_Usage_Detail
+
 	// BandwidthUsage - In and out bandwidth utilization for a specified time stamp.
 	BandwidthUsage *SoftLayer_Network_Bandwidth_Version1_Usage `json:"bandwidthUsage"`
 
 	// BandwidthUsageDetailType - Describes this bandwidth utilization record as on the public or private
 	// network interface.
 	BandwidthUsageDetailType *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type `json:"bandwidthUsageDetailType"`
-
-	// Day - Day and time this bandwidth utilization event was recorded.
-	Day *time.Time `json:"day"`
 }
 
 func (softlayer_network_bandwidth_version1_usage_detail *SoftLayer_Network_Bandwidth_Version1_Usage_Detail) String() string {

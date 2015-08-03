@@ -8,6 +8,11 @@ package types
 // [[SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress|load balancer]]
 // instance.
 type SoftLayer_Billing_Item_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress struct {
+}
+
+// SoftLayer_Billing_Item_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress_Extended is SoftLayer_Billing_Item_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress with all maskable types.
+type SoftLayer_Billing_Item_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress_Extended struct {
+	SoftLayer_Billing_Item_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress
 
 	// Resource - The load balancer that a load balancer billing item is associated with.
 	Resource *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress `json:"resource"`

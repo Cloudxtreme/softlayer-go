@@ -7,14 +7,19 @@ package types
 // corresponding subject's name.
 type SoftLayer_Ticket_Subject struct {
 
-	// Group - <nil>
-	Group *SoftLayer_Ticket_Group `json:"group"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
 	// Name - A ticket subject's name. This name is used for a standard support ticket's title.
 	Name string `json:"name"`
+}
+
+// SoftLayer_Ticket_Subject_Extended is SoftLayer_Ticket_Subject with all maskable types.
+type SoftLayer_Ticket_Subject_Extended struct {
+	SoftLayer_Ticket_Subject
+
+	// Group - <nil>
+	Group *SoftLayer_Ticket_Group `json:"group"`
 }
 
 func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) String() string {

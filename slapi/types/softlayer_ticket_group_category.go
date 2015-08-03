@@ -9,11 +9,11 @@ package types
 // your tickets' issues in the SoftLayer customer portal.
 type SoftLayer_Ticket_Group_Category struct {
 
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// Name - no documentation
 	Name string `json:"name"`
+
+	// Id - no documentation
+	Id int `json:"id"`
 }
 
 func (softlayer_ticket_group_category *SoftLayer_Ticket_Group_Category) String() string {

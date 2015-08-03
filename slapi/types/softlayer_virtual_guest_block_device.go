@@ -12,31 +12,6 @@ import (
 // guest, also known as a virtual server, represents an allocation of resources on a virtual host.
 type SoftLayer_Virtual_Guest_Block_Device struct {
 
-	// BootableFlag - A flag indicating if a block device can be booted from.
-	BootableFlag int `json:"bootableFlag"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
-	// Device - no documentation
-	Device string `json:"device"`
-
-	// DiskImage - The disk image that a block device connects to in a computing instance.
-	DiskImage *SoftLayer_Virtual_Disk_Image `json:"diskImage"`
-
-	// DiskImageId - A block device [[SoftLayer_Virtual_Disk_Image|disk image]]'s unique ID.
-	DiskImageId int `json:"diskImageId"`
-
-	// Guest - The computing instance that this block device is attached to.
-	Guest *SoftLayer_Virtual_Guest `json:"guest"`
-
-	// GuestId - The [[SoftLayer_Virtual_Guest|computing instance]] that a block device is associated with.
-	GuestId int `json:"guestId"`
-
-	// HotPlugFlag - A flag indicating if a block device can be plugged into a computing instance without
-	// having to shut down the instance.
-	HotPlugFlag int `json:"hotPlugFlag"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
@@ -51,14 +26,44 @@ type SoftLayer_Virtual_Guest_Block_Device struct {
 	// directly connected storage disk or for devices that are mounted as optical drives..
 	MountType string `json:"mountType"`
 
-	// Status - <nil>
-	Status *SoftLayer_Virtual_Guest_Block_Device_Status `json:"status"`
+	// BootableFlag - A flag indicating if a block device can be booted from.
+	BootableFlag int `json:"bootableFlag"`
+
+	// DiskImageId - A block device [[SoftLayer_Virtual_Disk_Image|disk image]]'s unique ID.
+	DiskImageId int `json:"diskImageId"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+
+	// GuestId - The [[SoftLayer_Virtual_Guest|computing instance]] that a block device is associated with.
+	GuestId int `json:"guestId"`
 
 	// StatusId - The status of the device, either disconnected or connected
 	StatusId int `json:"statusId"`
 
+	// Device - no documentation
+	Device string `json:"device"`
+
+	// HotPlugFlag - A flag indicating if a block device can be plugged into a computing instance without
+	// having to shut down the instance.
+	HotPlugFlag int `json:"hotPlugFlag"`
+
 	// Uuid - A block device's unique ID on a virtualization platform.
 	Uuid string `json:"uuid"`
+}
+
+// SoftLayer_Virtual_Guest_Block_Device_Extended is SoftLayer_Virtual_Guest_Block_Device with all maskable types.
+type SoftLayer_Virtual_Guest_Block_Device_Extended struct {
+	SoftLayer_Virtual_Guest_Block_Device
+
+	// DiskImage - The disk image that a block device connects to in a computing instance.
+	DiskImage *SoftLayer_Virtual_Disk_Image `json:"diskImage"`
+
+	// Guest - The computing instance that this block device is attached to.
+	Guest *SoftLayer_Virtual_Guest `json:"guest"`
+
+	// Status - <nil>
+	Status *SoftLayer_Virtual_Guest_Block_Device_Status `json:"status"`
 }
 
 func (softlayer_virtual_guest_block_device *SoftLayer_Virtual_Guest_Block_Device) String() string {

@@ -10,30 +10,11 @@ package types
 // answer that should be provided.
 type SoftLayer_Product_Item_Category_Question struct {
 
-	// AnswerValueExpression - no documentation
-	AnswerValueExpression string `json:"answerValueExpression"`
-
 	// Description - no documentation
 	Description string `json:"description"`
 
-	// FieldType - The type of field that should be used in an form to accept an answer from an end user.
-	FieldType *SoftLayer_Product_Item_Category_Question_Field_Type `json:"fieldType"`
-
-	// FieldTypeId - no documentation
-	FieldTypeId int `json:"fieldTypeId"`
-
 	// Id - no documentation
 	Id int `json:"id"`
-
-	// ItemCategoryReferenceCount - A count of the link between an item category and an item category
-	// question.
-	ItemCategoryReferenceCount uint64 `json:"itemCategoryReferenceCount"`
-
-	// ItemCategoryReferences - The link between an item category and an item category question.
-	ItemCategoryReferences []*SoftLayer_Product_Item_Category_Question_Xref `json:"itemCategoryReferences"`
-
-	// KeyName - no documentation
-	KeyName string `json:"keyName"`
 
 	// Question - no documentation
 	Question string `json:"question"`
@@ -41,6 +22,30 @@ type SoftLayer_Product_Item_Category_Question struct {
 	// ValueExample - An example and/or explanation of what the answer for the question is expected to look
 	// like.
 	ValueExample string `json:"valueExample"`
+
+	// AnswerValueExpression - no documentation
+	AnswerValueExpression string `json:"answerValueExpression"`
+
+	// FieldTypeId - no documentation
+	FieldTypeId int `json:"fieldTypeId"`
+
+	// KeyName - no documentation
+	KeyName string `json:"keyName"`
+}
+
+// SoftLayer_Product_Item_Category_Question_Extended is SoftLayer_Product_Item_Category_Question with all maskable types.
+type SoftLayer_Product_Item_Category_Question_Extended struct {
+	SoftLayer_Product_Item_Category_Question
+
+	// ItemCategoryReferenceCount - A count of the link between an item category and an item category
+	// question.
+	ItemCategoryReferenceCount uint64 `json:"itemCategoryReferenceCount"`
+
+	// FieldType - The type of field that should be used in an form to accept an answer from an end user.
+	FieldType *SoftLayer_Product_Item_Category_Question_Field_Type `json:"fieldType"`
+
+	// ItemCategoryReferences - The link between an item category and an item category question.
+	ItemCategoryReferences []*SoftLayer_Product_Item_Category_Question_Xref `json:"itemCategoryReferences"`
 }
 
 func (softlayer_product_item_category_question *SoftLayer_Product_Item_Category_Question) String() string {

@@ -11,6 +11,11 @@ type SoftLayer_Billing_Order_Note struct {
 
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate"`
+}
+
+// SoftLayer_Billing_Order_Note_Extended is SoftLayer_Billing_Order_Note with all maskable types.
+type SoftLayer_Billing_Order_Note_Extended struct {
+	SoftLayer_Billing_Order_Note
 
 	// Employee - <nil>
 	Employee *SoftLayer_User_Employee `json:"employee"`

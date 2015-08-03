@@ -10,9 +10,6 @@ import (
 // information regarding a transcode account.
 type SoftLayer_Network_Media_Transcode_Account struct {
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
-
 	// AccountId - no documentation
 	AccountId int `json:"accountId"`
 
@@ -24,12 +21,20 @@ type SoftLayer_Network_Media_Transcode_Account struct {
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
+}
+
+// SoftLayer_Network_Media_Transcode_Account_Extended is SoftLayer_Network_Media_Transcode_Account with all maskable types.
+type SoftLayer_Network_Media_Transcode_Account_Extended struct {
+	SoftLayer_Network_Media_Transcode_Account
+
+	// TranscodeJobs - no documentation
+	TranscodeJobs []*SoftLayer_Network_Media_Transcode_Job `json:"transcodeJobs"`
 
 	// TranscodeJobCount - no documentation
 	TranscodeJobCount uint64 `json:"transcodeJobCount"`
 
-	// TranscodeJobs - no documentation
-	TranscodeJobs []*SoftLayer_Network_Media_Transcode_Job `json:"transcodeJobs"`
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) String() string {

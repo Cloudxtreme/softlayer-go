@@ -15,20 +15,25 @@ type SoftLayer_Ticket_Activity struct {
 	// CreateTimestamp - <nil>
 	CreateTimestamp *time.Time `json:"createTimestamp"`
 
-	// Editor - <nil>
-	Editor *SoftLayer_User_Interface `json:"editor"`
-
 	// Id - <nil>
 	Id int `json:"id"`
+
+	// Value - <nil>
+	Value string `json:"value"`
+}
+
+// SoftLayer_Ticket_Activity_Extended is SoftLayer_Ticket_Activity with all maskable types.
+type SoftLayer_Ticket_Activity_Extended struct {
+	SoftLayer_Ticket_Activity
+
+	// Editor - <nil>
+	Editor *SoftLayer_User_Interface `json:"editor"`
 
 	// Ticket - <nil>
 	Ticket *SoftLayer_Ticket `json:"ticket"`
 
 	// TicketUpdate - <nil>
 	TicketUpdate *SoftLayer_Ticket_Update `json:"ticketUpdate"`
-
-	// Value - <nil>
-	Value string `json:"value"`
 }
 
 func (softlayer_ticket_activity *SoftLayer_Ticket_Activity) String() string {

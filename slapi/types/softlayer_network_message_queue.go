@@ -10,17 +10,14 @@ import (
 // information relating to Message Queue account
 type SoftLayer_Network_Message_Queue struct {
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+
+	// Name - no documentation
+	Name string `json:"name"`
 
 	// AccountId - A message queue's associated [[SoftLayer_Account|account]] id.
 	AccountId int `json:"accountId"`
-
-	// BillingItem - The current billing item for this message queue account.
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
 
 	// Id - no documentation
 	Id int `json:"id"`
@@ -28,20 +25,28 @@ type SoftLayer_Network_Message_Queue struct {
 	// MessageQueueStatusId - no documentation
 	MessageQueueStatusId int `json:"messageQueueStatusId"`
 
-	// Name - no documentation
-	Name string `json:"name"`
+	// Notes - no documentation
+	Notes string `json:"notes"`
+}
+
+// SoftLayer_Network_Message_Queue_Extended is SoftLayer_Network_Message_Queue with all maskable types.
+type SoftLayer_Network_Message_Queue_Extended struct {
+	SoftLayer_Network_Message_Queue
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account"`
+
+	// Status - no documentation
+	Status *SoftLayer_Network_Message_Queue_Status `json:"status"`
 
 	// NodeCount - no documentation
 	NodeCount uint64 `json:"nodeCount"`
 
+	// BillingItem - The current billing item for this message queue account.
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
+
 	// Nodes - no documentation
 	Nodes []*SoftLayer_Network_Message_Queue_Node `json:"nodes"`
-
-	// Notes - no documentation
-	Notes string `json:"notes"`
-
-	// Status - no documentation
-	Status *SoftLayer_Network_Message_Queue_Status `json:"status"`
 }
 
 func (softlayer_network_message_queue *SoftLayer_Network_Message_Queue) String() string {

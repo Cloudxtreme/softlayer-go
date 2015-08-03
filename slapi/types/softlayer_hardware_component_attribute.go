@@ -8,13 +8,9 @@ package types
 // configuration of RAID-1 will have a single attribute for this setting.
 type SoftLayer_Hardware_Component_Attribute struct {
 
-	// HardwareComponent - A hardware component attribute's associated
-	// [[SoftLayer_Hardware_Component|Hardware Component]].
-	HardwareComponent *SoftLayer_Hardware_Component `json:"hardwareComponent"`
-
-	// HardwareComponentAttributeType - A hardware component attribute's associated
-	// [[SoftLayer_Hardware_Component_Attribute_Type|type]].
-	HardwareComponentAttributeType *SoftLayer_Hardware_Component_Attribute_Type `json:"hardwareComponentAttributeType"`
+	// Value - A hardware component attribute's value. A value can have many different values depending on
+	// the attributes [[SoftLayer_Hardware_Component_Attribute_Type|type]].
+	Value string `json:"value"`
 
 	// HardwareComponentAttributeTypeId - A hardware component attribute's associated
 	// [[SoftLayer_Hardware_Component_Attribute_Type|type]] Id.
@@ -23,10 +19,19 @@ type SoftLayer_Hardware_Component_Attribute struct {
 	// HardwareComponentId - A hardware component attribute's associated
 	// [[SoftLayer_Hardware_Component|hardware component]] Id.
 	HardwareComponentId int `json:"hardwareComponentId"`
+}
 
-	// Value - A hardware component attribute's value. A value can have many different values depending on
-	// the attributes [[SoftLayer_Hardware_Component_Attribute_Type|type]].
-	Value string `json:"value"`
+// SoftLayer_Hardware_Component_Attribute_Extended is SoftLayer_Hardware_Component_Attribute with all maskable types.
+type SoftLayer_Hardware_Component_Attribute_Extended struct {
+	SoftLayer_Hardware_Component_Attribute
+
+	// HardwareComponent - A hardware component attribute's associated
+	// [[SoftLayer_Hardware_Component|Hardware Component]].
+	HardwareComponent *SoftLayer_Hardware_Component `json:"hardwareComponent"`
+
+	// HardwareComponentAttributeType - A hardware component attribute's associated
+	// [[SoftLayer_Hardware_Component_Attribute_Type|type]].
+	HardwareComponentAttributeType *SoftLayer_Hardware_Component_Attribute_Type `json:"hardwareComponentAttributeType"`
 }
 
 func (softlayer_hardware_component_attribute *SoftLayer_Hardware_Component_Attribute) String() string {

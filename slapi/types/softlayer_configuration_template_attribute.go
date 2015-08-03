@@ -6,11 +6,16 @@ package types
 // supplementary information for a configuration template.
 type SoftLayer_Configuration_Template_Attribute struct {
 
-	// ConfigurationTemplate - <nil>
-	ConfigurationTemplate *SoftLayer_Configuration_Template `json:"configurationTemplate"`
-
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+// SoftLayer_Configuration_Template_Attribute_Extended is SoftLayer_Configuration_Template_Attribute with all maskable types.
+type SoftLayer_Configuration_Template_Attribute_Extended struct {
+	SoftLayer_Configuration_Template_Attribute
+
+	// ConfigurationTemplate - <nil>
+	ConfigurationTemplate *SoftLayer_Configuration_Template `json:"configurationTemplate"`
 }
 
 func (softlayer_configuration_template_attribute *SoftLayer_Configuration_Template_Attribute) String() string {

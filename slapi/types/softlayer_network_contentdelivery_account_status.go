@@ -6,14 +6,14 @@ package types
 // SoftLayer_Network_ContentDelivery_Account_Status contains information on a CDN account.
 type SoftLayer_Network_ContentDelivery_Account_Status struct {
 
+	// Name - no documentation
+	Name string `json:"name"`
+
 	// Description - no documentation
 	Description string `json:"description"`
 
 	// Id - no documentation
 	Id int `json:"id"`
-
-	// Name - no documentation
-	Name string `json:"name"`
 }
 
 func (softlayer_network_contentdelivery_account_status *SoftLayer_Network_ContentDelivery_Account_Status) String() string {

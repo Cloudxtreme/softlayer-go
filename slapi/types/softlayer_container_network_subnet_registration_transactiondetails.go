@@ -7,11 +7,11 @@ package types
 // created Subnet Registration Transaction.
 type SoftLayer_Container_Network_Subnet_Registration_TransactionDetails struct {
 
-	// SubnetReferences - The IDs and Subnets of the [[SoftLayer_Network_Subnet_Registration]] object.
-	SubnetReferences []*SoftLayer_Container_Network_Subnet_Registration_SubnetReference `json:"subnetReferences"`
-
 	// TransactionId - no documentation
 	TransactionId int `json:"transactionId"`
+
+	// SubnetReferences - The IDs and Subnets of the [[SoftLayer_Network_Subnet_Registration]] object.
+	SubnetReferences []*SoftLayer_Container_Network_Subnet_Registration_SubnetReference `json:"subnetReferences"`
 }
 
 func (softlayer_container_network_subnet_registration_transactiondetails *SoftLayer_Container_Network_Subnet_Registration_TransactionDetails) String() string {

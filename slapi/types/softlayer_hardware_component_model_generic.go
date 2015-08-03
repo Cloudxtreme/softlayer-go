@@ -10,33 +10,9 @@ package types
 // RAM encompasses every instance of this component regardless of make and model.
 type SoftLayer_Hardware_Component_Model_Generic struct {
 
-	// Capacity - A generic component model's capacity. The capacity of a generic component model depends
-	// on the model itself. For Example: Hard drives have a capacity that reflects the amount of data that
-	// hard drive can store.
-	Capacity float64 `json:"capacity"`
-
-	// Description - A brief description for a generic component model that typically defines it's
-	// function.
-	Description string `json:"description"`
-
-	// HardwareComponentModelCount - A count of a generic component model's hardware component model.
-	HardwareComponentModelCount uint64 `json:"hardwareComponentModelCount"`
-
-	// HardwareComponentModels - A generic component model's hardware component model.
-	HardwareComponentModels []*SoftLayer_Hardware_Component_Model `json:"hardwareComponentModels"`
-
-	// HardwareComponentType - no documentation
-	HardwareComponentType *SoftLayer_Hardware_Component_Type `json:"hardwareComponentType"`
-
 	// HardwareComponentTypeId - The internal identifier of the component type for a generic component
 	// model.
 	HardwareComponentTypeId int `json:"hardwareComponentTypeId"`
-
-	// Id - A generic component model's internal identification number.
-	Id int `json:"id"`
-
-	// MarketingFeatures - A list of features that a generic component model can provide.
-	MarketingFeatures *SoftLayer_Hardware_Component_Model_Generic_MarketingFeature `json:"marketingFeatures"`
 
 	// Units - The unit of measurement for the capacity of a generic component model.
 	Units string `json:"units"`
@@ -46,6 +22,35 @@ type SoftLayer_Hardware_Component_Model_Generic struct {
 	// number indicates that a generic component model receives a higher upgrade preference in comparison
 	// to a generic component model with a lower priority number.
 	UpgradePriority int `json:"upgradePriority"`
+
+	// Id - A generic component model's internal identification number.
+	Id int `json:"id"`
+
+	// Capacity - A generic component model's capacity. The capacity of a generic component model depends
+	// on the model itself. For Example: Hard drives have a capacity that reflects the amount of data that
+	// hard drive can store.
+	Capacity float64 `json:"capacity"`
+
+	// Description - A brief description for a generic component model that typically defines it's
+	// function.
+	Description string `json:"description"`
+}
+
+// SoftLayer_Hardware_Component_Model_Generic_Extended is SoftLayer_Hardware_Component_Model_Generic with all maskable types.
+type SoftLayer_Hardware_Component_Model_Generic_Extended struct {
+	SoftLayer_Hardware_Component_Model_Generic
+
+	// HardwareComponentType - no documentation
+	HardwareComponentType *SoftLayer_Hardware_Component_Type `json:"hardwareComponentType"`
+
+	// HardwareComponentModelCount - A count of a generic component model's hardware component model.
+	HardwareComponentModelCount uint64 `json:"hardwareComponentModelCount"`
+
+	// HardwareComponentModels - A generic component model's hardware component model.
+	HardwareComponentModels []*SoftLayer_Hardware_Component_Model `json:"hardwareComponentModels"`
+
+	// MarketingFeatures - A list of features that a generic component model can provide.
+	MarketingFeatures *SoftLayer_Hardware_Component_Model_Generic_MarketingFeature `json:"marketingFeatures"`
 }
 
 func (softlayer_hardware_component_model_generic *SoftLayer_Hardware_Component_Model_Generic) String() string {

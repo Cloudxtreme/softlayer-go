@@ -8,20 +8,25 @@ package types
 // details.
 type SoftLayer_Product_Item_Price_Account_Restriction struct {
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
+	// ItemPriceId - The item price id for the item price account restriction.
+	ItemPriceId int `json:"itemPriceId"`
 
 	// AccountId - The account id for the item price account restriction.
 	AccountId int `json:"accountId"`
 
 	// Id - The unique identifier for the item price account restriction.
 	Id int `json:"id"`
+}
+
+// SoftLayer_Product_Item_Price_Account_Restriction_Extended is SoftLayer_Product_Item_Price_Account_Restriction with all maskable types.
+type SoftLayer_Product_Item_Price_Account_Restriction_Extended struct {
+	SoftLayer_Product_Item_Price_Account_Restriction
 
 	// ItemPrice - no documentation
 	ItemPrice *SoftLayer_Product_Item_Price `json:"itemPrice"`
 
-	// ItemPriceId - The item price id for the item price account restriction.
-	ItemPriceId int `json:"itemPriceId"`
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_product_item_price_account_restriction *SoftLayer_Product_Item_Price_Account_Restriction) String() string {

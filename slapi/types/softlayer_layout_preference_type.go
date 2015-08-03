@@ -6,6 +6,9 @@ package types
 // preference types
 type SoftLayer_Layout_Preference_Type struct {
 
+	// ValueExpression - A regular expression used to validate the related [[SoftLayer_Layout_Preference]]
+	ValueExpression string `json:"valueExpression"`
+
 	// Id - no documentation
 	Id int `json:"id"`
 
@@ -14,9 +17,6 @@ type SoftLayer_Layout_Preference_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
-
-	// ValueExpression - A regular expression used to validate the related [[SoftLayer_Layout_Preference]]
-	ValueExpression string `json:"valueExpression"`
 }
 
 func (softlayer_layout_preference_type *SoftLayer_Layout_Preference_Type) String() string {

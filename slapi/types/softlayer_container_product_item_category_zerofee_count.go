@@ -7,6 +7,9 @@ package types
 // billing/invoice items.
 type SoftLayer_Container_Product_Item_Category_ZeroFee_Count struct {
 
+	// Count - no documentation
+	Count int `json:"count"`
+
 	// CategoryCode - no documentation
 	CategoryCode string `json:"categoryCode"`
 
@@ -15,9 +18,6 @@ type SoftLayer_Container_Product_Item_Category_ZeroFee_Count struct {
 
 	// CategoryName - no documentation
 	CategoryName string `json:"categoryName"`
-
-	// Count - no documentation
-	Count int `json:"count"`
 }
 
 func (softlayer_container_product_item_category_zerofee_count *SoftLayer_Container_Product_Item_Category_ZeroFee_Count) String() string {

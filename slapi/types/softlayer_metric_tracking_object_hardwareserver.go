@@ -6,26 +6,38 @@ package types
 // models tracking objects specific to physical hardware and the data that are recorded by those
 // servers.
 type SoftLayer_Metric_Tracking_Object_HardwareServer struct {
+}
 
-	// BillingCycleBandwidthUsage - The raw bandwidth usage data for the current billing cycle. One object
-	// is returned for each network this server is attached to.
-	BillingCycleBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCycleBandwidthUsage"`
-
-	// BillingCycleBandwidthUsageCount - A count of the raw bandwidth usage data for the current billing
-	// cycle. One object is returned for each network this server is attached to.
-	BillingCycleBandwidthUsageCount uint64 `json:"billingCycleBandwidthUsageCount"`
-
-	// BillingCyclePrivateBandwidthUsage - The raw bandwidth usage data for the current billing cycle. One
-	// object is returned for each network this server is attached to.
-	BillingCyclePrivateBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCyclePrivateBandwidthUsage"`
+// SoftLayer_Metric_Tracking_Object_HardwareServer_Extended is SoftLayer_Metric_Tracking_Object_HardwareServer with all maskable types.
+type SoftLayer_Metric_Tracking_Object_HardwareServer_Extended struct {
+	SoftLayer_Metric_Tracking_Object_HardwareServer
 
 	// BillingCyclePrivateBandwidthUsageCount - A count of the raw bandwidth usage data for the current
 	// billing cycle. One object is returned for each network this server is attached to.
 	BillingCyclePrivateBandwidthUsageCount uint64 `json:"billingCyclePrivateBandwidthUsageCount"`
 
+	// BillingCycleBandwidthUsage - The raw bandwidth usage data for the current billing cycle. One object
+	// is returned for each network this server is attached to.
+	BillingCycleBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCycleBandwidthUsage"`
+
+	// BillingCyclePrivateBandwidthUsage - The raw bandwidth usage data for the current billing cycle. One
+	// object is returned for each network this server is attached to.
+	BillingCyclePrivateBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCyclePrivateBandwidthUsage"`
+
 	// BillingCyclePrivateUsageIn - The total private inbound bandwidth for this item's resource for the
 	// current billing cycle.
 	BillingCyclePrivateUsageIn float64 `json:"billingCyclePrivateUsageIn"`
+
+	// BillingCyclePublicUsageIn - The total public inbound bandwidth for this item's resource for the
+	// current billing cycle.
+	BillingCyclePublicUsageIn float64 `json:"billingCyclePublicUsageIn"`
+
+	// Resource - no documentation
+	Resource *SoftLayer_Hardware_Server `json:"resource"`
+
+	// BillingCycleBandwidthUsageCount - A count of the raw bandwidth usage data for the current billing
+	// cycle. One object is returned for each network this server is attached to.
+	BillingCycleBandwidthUsageCount uint64 `json:"billingCycleBandwidthUsageCount"`
 
 	// BillingCyclePrivateUsageOut - The total private outbound bandwidth for this item's resource for the
 	// current billing cycle.
@@ -39,10 +51,6 @@ type SoftLayer_Metric_Tracking_Object_HardwareServer struct {
 	// object is returned for each network this server is attached to.
 	BillingCyclePublicBandwidthUsage *SoftLayer_Network_Bandwidth_Usage `json:"billingCyclePublicBandwidthUsage"`
 
-	// BillingCyclePublicUsageIn - The total public inbound bandwidth for this item's resource for the
-	// current billing cycle.
-	BillingCyclePublicUsageIn float64 `json:"billingCyclePublicUsageIn"`
-
 	// BillingCyclePublicUsageOut - The total public outbound bandwidth for this item's resource for the
 	// current billing cycle.
 	BillingCyclePublicUsageOut float64 `json:"billingCyclePublicUsageOut"`
@@ -50,9 +58,6 @@ type SoftLayer_Metric_Tracking_Object_HardwareServer struct {
 	// BillingCyclePublicUsageTotal - The total public bandwidth for this item's resource for the current
 	// billing cycle.
 	BillingCyclePublicUsageTotal uint `json:"billingCyclePublicUsageTotal"`
-
-	// Resource - no documentation
-	Resource *SoftLayer_Hardware_Server `json:"resource"`
 }
 
 func (softlayer_metric_tracking_object_hardwareserver *SoftLayer_Metric_Tracking_Object_HardwareServer) String() string {

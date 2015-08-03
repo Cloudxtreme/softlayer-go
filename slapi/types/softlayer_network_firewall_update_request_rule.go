@@ -9,45 +9,15 @@ package types
 // pull SoftLayer recommended rule set templates.
 type SoftLayer_Network_Firewall_Update_Request_Rule struct {
 
-	// Action - The action that this update request rule is to take [permit or deny].
-	Action string `json:"action"`
-
-	// DestinationIpAddress - The destination IP address considered for determining rule application.
-	DestinationIpAddress string `json:"destinationIpAddress"`
-
-	// DestinationIpCidr - The is used for determining rule application. This value will
-	DestinationIpCidr int `json:"destinationIpCidr"`
-
-	// DestinationIpSubnetMask - The destination IP subnet mask considered for determining rule
-	// application.
-	DestinationIpSubnetMask string `json:"destinationIpSubnetMask"`
+	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
+	SourceIpSubnetMask string `json:"sourceIpSubnetMask"`
 
 	// DestinationPortRangeEnd - The ending (upper end of range) destination port considered for
 	// determining rule application.
 	DestinationPortRangeEnd int `json:"destinationPortRangeEnd"`
 
-	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
-	// determining rule application.
-	DestinationPortRangeStart int `json:"destinationPortRangeStart"`
-
-	// FirewallUpdateRequest - no documentation
-	FirewallUpdateRequest *SoftLayer_Network_Firewall_Update_Request `json:"firewallUpdateRequest"`
-
-	// FirewallUpdateRequestId - The unique identifier of the firewall update request that a firewall
-	// update request rule is associated with.
-	FirewallUpdateRequestId int `json:"firewallUpdateRequestId"`
-
-	// Id - A Firewall update request rule's internal identifier.
-	Id int `json:"id"`
-
-	// Notes - The notes field for the firewall update request rule.
-	Notes string `json:"notes"`
-
 	// OrderValue - The numeric value describing the order in which the rule should be applied.
 	OrderValue int `json:"orderValue"`
-
-	// Protocol - The protocol considered for determining rule application.
-	Protocol string `json:"protocol"`
 
 	// SourceIpAddress - The source IP address considered for determining rule application.
 	SourceIpAddress string `json:"sourceIpAddress"`
@@ -55,11 +25,46 @@ type SoftLayer_Network_Firewall_Update_Request_Rule struct {
 	// SourceIpCidr - The is used for determining rule application. This value will
 	SourceIpCidr int `json:"sourceIpCidr"`
 
-	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
-	SourceIpSubnetMask string `json:"sourceIpSubnetMask"`
-
 	// Version - Whether this rule is an IPv4 rule or an IPv6 rule. If
 	Version int `json:"version"`
+
+	// DestinationIpCidr - The is used for determining rule application. This value will
+	DestinationIpCidr int `json:"destinationIpCidr"`
+
+	// FirewallUpdateRequestId - The unique identifier of the firewall update request that a firewall
+	// update request rule is associated with.
+	FirewallUpdateRequestId int `json:"firewallUpdateRequestId"`
+
+	// Notes - The notes field for the firewall update request rule.
+	Notes string `json:"notes"`
+
+	// Protocol - The protocol considered for determining rule application.
+	Protocol string `json:"protocol"`
+
+	// Action - The action that this update request rule is to take [permit or deny].
+	Action string `json:"action"`
+
+	// DestinationIpAddress - The destination IP address considered for determining rule application.
+	DestinationIpAddress string `json:"destinationIpAddress"`
+
+	// DestinationIpSubnetMask - The destination IP subnet mask considered for determining rule
+	// application.
+	DestinationIpSubnetMask string `json:"destinationIpSubnetMask"`
+
+	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
+	// determining rule application.
+	DestinationPortRangeStart int `json:"destinationPortRangeStart"`
+
+	// Id - A Firewall update request rule's internal identifier.
+	Id int `json:"id"`
+}
+
+// SoftLayer_Network_Firewall_Update_Request_Rule_Extended is SoftLayer_Network_Firewall_Update_Request_Rule with all maskable types.
+type SoftLayer_Network_Firewall_Update_Request_Rule_Extended struct {
+	SoftLayer_Network_Firewall_Update_Request_Rule
+
+	// FirewallUpdateRequest - no documentation
+	FirewallUpdateRequest *SoftLayer_Network_Firewall_Update_Request `json:"firewallUpdateRequest"`
 }
 
 func (softlayer_network_firewall_update_request_rule *SoftLayer_Network_Firewall_Update_Request_Rule) String() string {

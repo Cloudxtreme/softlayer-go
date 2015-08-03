@@ -8,20 +8,25 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attri
 	// HealthAttributeTypeId - <nil>
 	HealthAttributeTypeId int `json:"healthAttributeTypeId"`
 
-	// HealthCheck - <nil>
-	HealthCheck *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check `json:"healthCheck"`
-
 	// HealthCheckId - <nil>
 	HealthCheckId int `json:"healthCheckId"`
 
 	// Id - <nil>
 	Id int `json:"id"`
 
-	// Type - <nil>
-	Type *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type `json:"type"`
-
 	// Value - <nil>
 	Value string `json:"value"`
+}
+
+// SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Extended is SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute with all maskable types.
+type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Extended struct {
+	SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute
+
+	// HealthCheck - <nil>
+	HealthCheck *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check `json:"healthCheck"`
+
+	// Type - <nil>
+	Type *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type `json:"type"`
 }
 
 func (softlayer_network_application_delivery_controller_loadbalancer_health_attribute *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute) String() string {

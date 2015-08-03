@@ -7,6 +7,11 @@ package types
 // contains details about the event such as the date the event occurred, the virus or intrusion that is
 // detected and the action that is taken.
 type McAfee_Epolicy_Orchestrator_Version45_Event_Version8 struct {
+}
+
+// McAfee_Epolicy_Orchestrator_Version45_Event_Version8_Extended is McAfee_Epolicy_Orchestrator_Version45_Event_Version8 with all maskable types.
+type McAfee_Epolicy_Orchestrator_Version45_Event_Version8_Extended struct {
+	McAfee_Epolicy_Orchestrator_Version45_Event_Version8
 
 	// Signature - no documentation
 	Signature *McAfee_Epolicy_Orchestrator_Version45_Hips_Event_Signature_Version8 `json:"signature"`

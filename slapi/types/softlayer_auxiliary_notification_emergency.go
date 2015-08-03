@@ -14,14 +14,11 @@ type SoftLayer_Auxiliary_Notification_Emergency struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
-	// Device - no documentation
-	Device string `json:"device"`
-
 	// Duration - no documentation
 	Duration string `json:"duration"`
 
-	// Id - no documentation
-	Id int `json:"id"`
+	// StatusId - no documentation
+	StatusId int `json:"statusId"`
 
 	// Location - no documentation
 	Location string `json:"location"`
@@ -35,17 +32,25 @@ type SoftLayer_Auxiliary_Notification_Emergency struct {
 	// ServicesAffected - no documentation
 	ServicesAffected string `json:"servicesAffected"`
 
-	// Signature - The signature of the SoftLayer employee department associated with this notification.
-	Signature *SoftLayer_Auxiliary_Notification_Emergency_Signature `json:"signature"`
+	// Device - no documentation
+	Device string `json:"device"`
+
+	// Id - no documentation
+	Id int `json:"id"`
 
 	// StartDate - no documentation
 	StartDate *time.Time `json:"startDate"`
+}
+
+// SoftLayer_Auxiliary_Notification_Emergency_Extended is SoftLayer_Auxiliary_Notification_Emergency with all maskable types.
+type SoftLayer_Auxiliary_Notification_Emergency_Extended struct {
+	SoftLayer_Auxiliary_Notification_Emergency
+
+	// Signature - The signature of the SoftLayer employee department associated with this notification.
+	Signature *SoftLayer_Auxiliary_Notification_Emergency_Signature `json:"signature"`
 
 	// Status - no documentation
 	Status *SoftLayer_Auxiliary_Notification_Emergency_Status `json:"status"`
-
-	// StatusId - no documentation
-	StatusId int `json:"statusId"`
 }
 
 func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency) String() string {

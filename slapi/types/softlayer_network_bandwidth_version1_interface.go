@@ -8,17 +8,22 @@ package types
 // relevant to bandwidth data. It is not common to use this.
 type SoftLayer_Network_Bandwidth_Version1_Interface struct {
 
-	// Host - The host for an interface. This is not to be confused with a SoftLayer hardware
-	Host *SoftLayer_Network_Bandwidth_Version1_Host `json:"host"`
-
 	// HostId - A interface's host. The host stores the pod number for the bandwidth data.
 	HostId int `json:"hostId"`
 
-	// NetworkComponent - no documentation
-	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
-
 	// NetworkComponentId - no documentation
 	NetworkComponentId int `json:"networkComponentId"`
+}
+
+// SoftLayer_Network_Bandwidth_Version1_Interface_Extended is SoftLayer_Network_Bandwidth_Version1_Interface with all maskable types.
+type SoftLayer_Network_Bandwidth_Version1_Interface_Extended struct {
+	SoftLayer_Network_Bandwidth_Version1_Interface
+
+	// Host - The host for an interface. This is not to be confused with a SoftLayer hardware
+	Host *SoftLayer_Network_Bandwidth_Version1_Host `json:"host"`
+
+	// NetworkComponent - no documentation
+	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
 }
 
 func (softlayer_network_bandwidth_version1_interface *SoftLayer_Network_Bandwidth_Version1_Interface) String() string {

@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Layout_Profile_Customer - <nil>
 type SoftLayer_Layout_Profile_Customer struct {
+}
+
+// SoftLayer_Layout_Profile_Customer_Extended is SoftLayer_Layout_Profile_Customer with all maskable types.
+type SoftLayer_Layout_Profile_Customer_Extended struct {
+	SoftLayer_Layout_Profile_Customer
 
 	// UserRecord - <nil>
 	UserRecord *SoftLayer_User_Customer `json:"userRecord"`

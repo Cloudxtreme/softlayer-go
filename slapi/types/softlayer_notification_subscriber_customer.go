@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Notification_Subscriber_Customer - <nil>
 type SoftLayer_Notification_Subscriber_Customer struct {
+}
+
+// SoftLayer_Notification_Subscriber_Customer_Extended is SoftLayer_Notification_Subscriber_Customer with all maskable types.
+type SoftLayer_Notification_Subscriber_Customer_Extended struct {
+	SoftLayer_Notification_Subscriber_Customer
 
 	// SubscriberRecord - <nil>
 	SubscriberRecord *SoftLayer_User_Customer `json:"subscriberRecord"`

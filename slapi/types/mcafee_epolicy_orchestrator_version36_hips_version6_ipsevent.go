@@ -26,6 +26,11 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent struct {
 
 	// SeverityText - no documentation
 	SeverityText string `json:"severityText"`
+}
+
+// McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent_Extended is McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent with all maskable types.
+type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent_Extended struct {
+	McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent
 
 	// Signature - no documentation
 	Signature *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_Event_Signature `json:"signature"`

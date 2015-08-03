@@ -10,30 +10,35 @@ type SoftLayer_Product_Package_Order_Step struct {
 	// Id - The unique identifier for this object. It is not used anywhere but in this object.
 	Id int `json:"id"`
 
-	// InclusivePreviousStepCount - A count of the next steps in the ordering process for the package tied
-	// to this object, including this step.
-	InclusivePreviousStepCount uint64 `json:"inclusivePreviousStepCount"`
+	// Step - The number of the step in the order process for this package. These are sequential and only
+	// needed for step-based ordering.
+	Step string `json:"step"`
+}
+
+// SoftLayer_Product_Package_Order_Step_Extended is SoftLayer_Product_Package_Order_Step with all maskable types.
+type SoftLayer_Product_Package_Order_Step_Extended struct {
+	SoftLayer_Product_Package_Order_Step
 
 	// InclusivePreviousSteps - The next steps in the ordering process for the package tied to this object,
 	// including this step.
 	InclusivePreviousSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"inclusivePreviousSteps"`
 
-	// NextStepCount - A count of the next steps in the ordering process for the package tied to this
-	// object.
-	NextStepCount uint64 `json:"nextStepCount"`
-
 	// NextSteps - The next steps in the ordering process for the package tied to this object.
 	NextSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"nextSteps"`
-
-	// PreviousStepCount - no documentation
-	PreviousStepCount uint64 `json:"previousStepCount"`
 
 	// PreviousSteps - no documentation
 	PreviousSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"previousSteps"`
 
-	// Step - The number of the step in the order process for this package. These are sequential and only
-	// needed for step-based ordering.
-	Step string `json:"step"`
+	// InclusivePreviousStepCount - A count of the next steps in the ordering process for the package tied
+	// to this object, including this step.
+	InclusivePreviousStepCount uint64 `json:"inclusivePreviousStepCount"`
+
+	// NextStepCount - A count of the next steps in the ordering process for the package tied to this
+	// object.
+	NextStepCount uint64 `json:"nextStepCount"`
+
+	// PreviousStepCount - no documentation
+	PreviousStepCount uint64 `json:"previousStepCount"`
 }
 
 func (softlayer_product_package_order_step *SoftLayer_Product_Package_Order_Step) String() string {

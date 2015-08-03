@@ -7,15 +7,9 @@ package types
 // to the binding of a single network component to a single SoftLayer IP address.
 type SoftLayer_Virtual_Guest_Network_Component_IpAddress struct {
 
-	// IpAddress - The IP address associated with this object's network component.
-	IpAddress *SoftLayer_Network_Subnet_IpAddress `json:"ipAddress"`
-
 	// IpAddressId - The unique ID of the [[SoftLayer_Network_Subnet_ipAddress|ip address]] this virtual IP
 	// address is associated with.
 	IpAddressId int `json:"ipAddressId"`
-
-	// NetworkComponent - The network component associated with this object's IP address.
-	NetworkComponent *SoftLayer_Virtual_Guest_Network_Component `json:"networkComponent"`
 
 	// Port - The port that a network component has reserved. This field is only required for some IP
 	// address types.
@@ -25,6 +19,17 @@ type SoftLayer_Virtual_Guest_Network_Component_IpAddress struct {
 	// component's primary IP address and which represents the IP information for logging into a computing
 	// instance's console.
 	Type string `json:"type"`
+}
+
+// SoftLayer_Virtual_Guest_Network_Component_IpAddress_Extended is SoftLayer_Virtual_Guest_Network_Component_IpAddress with all maskable types.
+type SoftLayer_Virtual_Guest_Network_Component_IpAddress_Extended struct {
+	SoftLayer_Virtual_Guest_Network_Component_IpAddress
+
+	// IpAddress - The IP address associated with this object's network component.
+	IpAddress *SoftLayer_Network_Subnet_IpAddress `json:"ipAddress"`
+
+	// NetworkComponent - The network component associated with this object's IP address.
+	NetworkComponent *SoftLayer_Virtual_Guest_Network_Component `json:"networkComponent"`
 }
 
 func (softlayer_virtual_guest_network_component_ipaddress *SoftLayer_Virtual_Guest_Network_Component_IpAddress) String() string {

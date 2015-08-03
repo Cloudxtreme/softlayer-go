@@ -5,12 +5,6 @@ package types
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference - <nil>
 type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference struct {
 
-	// Service - <nil>
-	Service *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service `json:"service"`
-
-	// ServiceGroup - <nil>
-	ServiceGroup *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group `json:"serviceGroup"`
-
 	// ServiceGroupId - <nil>
 	ServiceGroupId int `json:"serviceGroupId"`
 
@@ -19,6 +13,17 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Grou
 
 	// Weight - <nil>
 	Weight int `json:"weight"`
+}
+
+// SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference_Extended is SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference with all maskable types.
+type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference_Extended struct {
+	SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference
+
+	// Service - <nil>
+	Service *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service `json:"service"`
+
+	// ServiceGroup - <nil>
+	ServiceGroup *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group `json:"serviceGroup"`
 }
 
 func (softlayer_network_application_delivery_controller_loadbalancer_service_group_crossreference *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference) String() string {

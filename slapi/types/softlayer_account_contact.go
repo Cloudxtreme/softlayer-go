@@ -9,23 +9,23 @@ import (
 // SoftLayer_Account_Contact - <nil>
 type SoftLayer_Account_Contact struct {
 
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
+	// FirstName - <nil>
+	FirstName string `json:"firstName"`
 
-	// AccountId - <nil>
-	AccountId int `json:"accountId"`
+	// JobTitle - <nil>
+	JobTitle string `json:"jobTitle"`
 
-	// Address1 - <nil>
-	Address1 string `json:"address1"`
+	// ProfileName - <nil>
+	ProfileName string `json:"profileName"`
 
-	// Address2 - <nil>
-	Address2 string `json:"address2"`
+	// Url - <nil>
+	Url string `json:"url"`
 
 	// AlternatePhone - <nil>
 	AlternatePhone string `json:"alternatePhone"`
 
-	// City - <nil>
-	City string `json:"city"`
+	// Address1 - <nil>
+	Address1 string `json:"address1"`
 
 	// CompanyName - <nil>
 	CompanyName string `json:"companyName"`
@@ -33,29 +33,17 @@ type SoftLayer_Account_Contact struct {
 	// Country - <nil>
 	Country string `json:"country"`
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
-
 	// Email - <nil>
 	Email string `json:"email"`
 
 	// FaxPhone - <nil>
 	FaxPhone string `json:"faxPhone"`
 
-	// FirstName - <nil>
-	FirstName string `json:"firstName"`
+	// AccountId - <nil>
+	AccountId int `json:"accountId"`
 
-	// Id - <nil>
-	Id int `json:"id"`
-
-	// JobTitle - <nil>
-	JobTitle string `json:"jobTitle"`
-
-	// LastName - <nil>
-	LastName string `json:"lastName"`
-
-	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
+	// State - <nil>
+	State string `json:"state"`
 
 	// OfficePhone - <nil>
 	OfficePhone string `json:"officePhone"`
@@ -63,20 +51,37 @@ type SoftLayer_Account_Contact struct {
 	// PostalCode - <nil>
 	PostalCode string `json:"postalCode"`
 
-	// ProfileName - <nil>
-	ProfileName string `json:"profileName"`
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate"`
 
-	// State - <nil>
-	State string `json:"state"`
+	// Id - <nil>
+	Id int `json:"id"`
 
-	// Type - <nil>
-	Type *SoftLayer_Account_Contact_Type `json:"type"`
+	// LastName - <nil>
+	LastName string `json:"lastName"`
+
+	// ModifyDate - <nil>
+	ModifyDate *time.Time `json:"modifyDate"`
 
 	// TypeId - <nil>
 	TypeId int `json:"typeId"`
 
-	// Url - <nil>
-	Url string `json:"url"`
+	// Address2 - <nil>
+	Address2 string `json:"address2"`
+
+	// City - <nil>
+	City string `json:"city"`
+}
+
+// SoftLayer_Account_Contact_Extended is SoftLayer_Account_Contact with all maskable types.
+type SoftLayer_Account_Contact_Extended struct {
+	SoftLayer_Account_Contact
+
+	// Type - <nil>
+	Type *SoftLayer_Account_Contact_Type `json:"type"`
+
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account"`
 }
 
 func (softlayer_account_contact *SoftLayer_Account_Contact) String() string {

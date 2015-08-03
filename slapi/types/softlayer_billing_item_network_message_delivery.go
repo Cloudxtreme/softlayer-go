@@ -5,6 +5,11 @@ package types
 // SoftLayer_Billing_Item_Network_Message_Delivery - The
 // SoftLayer_Billing_Item_Network_Message_Delivery data describes the related billing item.
 type SoftLayer_Billing_Item_Network_Message_Delivery struct {
+}
+
+// SoftLayer_Billing_Item_Network_Message_Delivery_Extended is SoftLayer_Billing_Item_Network_Message_Delivery with all maskable types.
+type SoftLayer_Billing_Item_Network_Message_Delivery_Extended struct {
+	SoftLayer_Billing_Item_Network_Message_Delivery
 
 	// Resource - no documentation
 	Resource *SoftLayer_Network_Message_Delivery `json:"resource"`

@@ -7,8 +7,12 @@ package types
 // defines these chassis.
 type SoftLayer_Hardware_Chassis struct {
 
-	// DriveCapacity - The number of hard drives that a hardware chassis can hold.
-	DriveCapacity int `json:"driveCapacity"`
+	// UnitSize - The physical size of a hardware chassis. Currently this relates to the 'U' size of a
+	// chassis buy default.
+	UnitSize int `json:"unitSize"`
+
+	// Version - no documentation
+	Version string `json:"version"`
 
 	// FormFactorId - no documentation
 	FormFactorId int `json:"formFactorId"`
@@ -16,27 +20,28 @@ type SoftLayer_Hardware_Chassis struct {
 	// GpuCapacity - The number of GPUs that a hardware chassis can hold.
 	GpuCapacity int `json:"gpuCapacity"`
 
-	// HardwareFunction - no documentation
-	HardwareFunction *SoftLayer_Hardware_Function `json:"hardwareFunction"`
-
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// Manufacturer - no documentation
 	Manufacturer string `json:"manufacturer"`
 
 	// Name - no documentation
 	Name string `json:"name"`
 
+	// DriveCapacity - The number of hard drives that a hardware chassis can hold.
+	DriveCapacity int `json:"driveCapacity"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+
 	// PowerCapacity - The number of power supplies that a hardware chassis can hold.
 	PowerCapacity int `json:"powerCapacity"`
+}
 
-	// UnitSize - The physical size of a hardware chassis. Currently this relates to the 'U' size of a
-	// chassis buy default.
-	UnitSize int `json:"unitSize"`
+// SoftLayer_Hardware_Chassis_Extended is SoftLayer_Hardware_Chassis with all maskable types.
+type SoftLayer_Hardware_Chassis_Extended struct {
+	SoftLayer_Hardware_Chassis
 
-	// Version - no documentation
-	Version string `json:"version"`
+	// HardwareFunction - no documentation
+	HardwareFunction *SoftLayer_Hardware_Function `json:"hardwareFunction"`
 }
 
 func (softlayer_hardware_chassis *SoftLayer_Hardware_Chassis) String() string {

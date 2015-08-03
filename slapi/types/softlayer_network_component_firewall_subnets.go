@@ -12,14 +12,19 @@ type SoftLayer_Network_Component_Firewall_Subnets struct {
 	// intended for the host on this context slot.
 	ApplyServerRulesFlag bool `json:"applyServerRulesFlag"`
 
-	// NetworkComponentFirewall - The network component firewall that write rules for this subnet.
-	NetworkComponentFirewall *SoftLayer_Network_Component_Firewall `json:"networkComponentFirewall"`
+	// SubnetId - The unique identifier of the subnet being linked to the network component firewall.
+	SubnetId int `json:"subnetId"`
+}
+
+// SoftLayer_Network_Component_Firewall_Subnets_Extended is SoftLayer_Network_Component_Firewall_Subnets with all maskable types.
+type SoftLayer_Network_Component_Firewall_Subnets_Extended struct {
+	SoftLayer_Network_Component_Firewall_Subnets
 
 	// Subnet - The subnet that this link binds to the network component firewall.
 	Subnet *SoftLayer_Network_Subnet `json:"subnet"`
 
-	// SubnetId - The unique identifier of the subnet being linked to the network component firewall.
-	SubnetId int `json:"subnetId"`
+	// NetworkComponentFirewall - The network component firewall that write rules for this subnet.
+	NetworkComponentFirewall *SoftLayer_Network_Component_Firewall `json:"networkComponentFirewall"`
 }
 
 func (softlayer_network_component_firewall_subnets *SoftLayer_Network_Component_Firewall_Subnets) String() string {

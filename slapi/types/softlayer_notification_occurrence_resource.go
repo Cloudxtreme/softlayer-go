@@ -12,14 +12,8 @@ type SoftLayer_Notification_Occurrence_Resource struct {
 	// FilterLabel - <<< EOT A label which gives some background as to what piece of
 	FilterLabel string `json:"filterLabel"`
 
-	// NotificationOccurrenceEvent - no documentation
-	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent"`
-
 	// NotificationOccurrenceEventId - no documentation
 	NotificationOccurrenceEventId int `json:"notificationOccurrenceEventId"`
-
-	// Resource - no documentation
-	Resource *SoftLayer_Entity `json:"resource"`
 
 	// ResourceAccountId - <<< EOT The unique identifier for the [[SoftLayer_Account]] associated with
 	ResourceAccountId int `json:"resourceAccountId"`
@@ -29,6 +23,17 @@ type SoftLayer_Notification_Occurrence_Resource struct {
 
 	// ResourceTableId - <<< EOT The unique identifier for the physical resource that is associated
 	ResourceTableId int `json:"resourceTableId"`
+}
+
+// SoftLayer_Notification_Occurrence_Resource_Extended is SoftLayer_Notification_Occurrence_Resource with all maskable types.
+type SoftLayer_Notification_Occurrence_Resource_Extended struct {
+	SoftLayer_Notification_Occurrence_Resource
+
+	// NotificationOccurrenceEvent - no documentation
+	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent"`
+
+	// Resource - no documentation
+	Resource *SoftLayer_Entity `json:"resource"`
 }
 
 func (softlayer_notification_occurrence_resource *SoftLayer_Notification_Occurrence_Resource) String() string {

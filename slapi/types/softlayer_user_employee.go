@@ -9,28 +9,6 @@ package types
 // employee is assigned to the account.
 type SoftLayer_User_Employee struct {
 
-	// ActionCount - no documentation
-	ActionCount uint64 `json:"actionCount"`
-
-	// Actions - <nil>
-	Actions []*SoftLayer_User_Permission_Action `json:"actions"`
-
-	// ChatTranscript - <nil>
-	ChatTranscript []*SoftLayer_Ticket_Chat `json:"chatTranscript"`
-
-	// ChatTranscriptCount - no documentation
-	ChatTranscriptCount uint64 `json:"chatTranscriptCount"`
-
-	// DisplayName - <nil>
-	DisplayName string `json:"displayName"`
-
-	// Email - A SoftLayer employee's email address. Email addresses are only visible to
-	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
-	Email string `json:"email"`
-
-	// EmployeeDepartment - The department that a SoftLayer employee belongs to.
-	EmployeeDepartment *SoftLayer_User_Employee_Department `json:"employeeDepartment"`
-
 	// EmployeeDepartmentId - A SoftLayer employee's [[SoftLayer_User_Employee_Department|department]] id.
 	EmployeeDepartmentId int `json:"employeeDepartmentId"`
 
@@ -38,12 +16,31 @@ type SoftLayer_User_Employee struct {
 	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
 	FirstName string `json:"firstName"`
 
+	// OfficePhone - <nil>
+	OfficePhone string `json:"officePhone"`
+
+	// Email - A SoftLayer employee's email address. Email addresses are only visible to
+	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
+	Email string `json:"email"`
+
+	// DisplayName - <nil>
+	DisplayName string `json:"displayName"`
+
 	// LastName - A SoftLayer employee's last name. Last names are only visible to
 	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
 	LastName string `json:"lastName"`
 
-	// LayoutProfileCount - no documentation
-	LayoutProfileCount uint64 `json:"layoutProfileCount"`
+	// Username - A representation of a SoftLayer employee's username. In all cases this should simply
+	// state "Employee".
+	Username string `json:"username"`
+}
+
+// SoftLayer_User_Employee_Extended is SoftLayer_User_Employee with all maskable types.
+type SoftLayer_User_Employee_Extended struct {
+	SoftLayer_User_Employee
+
+	// EmployeeDepartment - The department that a SoftLayer employee belongs to.
+	EmployeeDepartment *SoftLayer_User_Employee_Department `json:"employeeDepartment"`
 
 	// LayoutProfiles - <nil>
 	LayoutProfiles []*SoftLayer_Layout_Profile `json:"layoutProfiles"`
@@ -51,30 +48,38 @@ type SoftLayer_User_Employee struct {
 	// MetricTrackingObject - <nil>
 	MetricTrackingObject *SoftLayer_Metric_Tracking_Object `json:"metricTrackingObject"`
 
-	// OfficePhone - <nil>
-	OfficePhone string `json:"officePhone"`
-
-	// RoleCount - no documentation
-	RoleCount uint64 `json:"roleCount"`
-
 	// Roles - <nil>
 	Roles []*SoftLayer_User_Permission_Role `json:"roles"`
-
-	// TicketActivities - <nil>
-	TicketActivities []*SoftLayer_Ticket_Activity `json:"ticketActivities"`
-
-	// TicketActivityCount - no documentation
-	TicketActivityCount uint64 `json:"ticketActivityCount"`
-
-	// TicketAttachmentReferenceCount - no documentation
-	TicketAttachmentReferenceCount uint64 `json:"ticketAttachmentReferenceCount"`
 
 	// TicketAttachmentReferences - <nil>
 	TicketAttachmentReferences []*SoftLayer_Ticket_Attachment `json:"ticketAttachmentReferences"`
 
-	// Username - A representation of a SoftLayer employee's username. In all cases this should simply
-	// state "Employee".
-	Username string `json:"username"`
+	// LayoutProfileCount - no documentation
+	LayoutProfileCount uint64 `json:"layoutProfileCount"`
+
+	// RoleCount - no documentation
+	RoleCount uint64 `json:"roleCount"`
+
+	// TicketActivityCount - no documentation
+	TicketActivityCount uint64 `json:"ticketActivityCount"`
+
+	// ChatTranscript - <nil>
+	ChatTranscript []*SoftLayer_Ticket_Chat `json:"chatTranscript"`
+
+	// TicketActivities - <nil>
+	TicketActivities []*SoftLayer_Ticket_Activity `json:"ticketActivities"`
+
+	// Actions - <nil>
+	Actions []*SoftLayer_User_Permission_Action `json:"actions"`
+
+	// ActionCount - no documentation
+	ActionCount uint64 `json:"actionCount"`
+
+	// ChatTranscriptCount - no documentation
+	ChatTranscriptCount uint64 `json:"chatTranscriptCount"`
+
+	// TicketAttachmentReferenceCount - no documentation
+	TicketAttachmentReferenceCount uint64 `json:"ticketAttachmentReferenceCount"`
 }
 
 func (softlayer_user_employee *SoftLayer_User_Employee) String() string {

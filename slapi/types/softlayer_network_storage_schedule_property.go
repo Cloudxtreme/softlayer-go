@@ -19,17 +19,22 @@ type SoftLayer_Network_Storage_Schedule_Property struct {
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
 
-	// Schedule - no documentation
-	Schedule *SoftLayer_Network_Storage_Schedule `json:"schedule"`
-
-	// Type - The type provides a standardized definition for a property.
-	Type *SoftLayer_Network_Storage_Schedule_Property_Type `json:"type"`
-
 	// TypeId - no documentation
 	TypeId int `json:"typeId"`
 
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+// SoftLayer_Network_Storage_Schedule_Property_Extended is SoftLayer_Network_Storage_Schedule_Property with all maskable types.
+type SoftLayer_Network_Storage_Schedule_Property_Extended struct {
+	SoftLayer_Network_Storage_Schedule_Property
+
+	// Schedule - no documentation
+	Schedule *SoftLayer_Network_Storage_Schedule `json:"schedule"`
+
+	// Type - The type provides a standardized definition for a property.
+	Type *SoftLayer_Network_Storage_Schedule_Property_Type `json:"type"`
 }
 
 func (softlayer_network_storage_schedule_property *SoftLayer_Network_Storage_Schedule_Property) String() string {

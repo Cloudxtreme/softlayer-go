@@ -7,11 +7,16 @@ package types
 // anti-virus policy.
 type McAfee_Epolicy_Orchestrator_Version36_Agent_Parent_Details struct {
 
-	// CurrentPolicy - no documentation
-	CurrentPolicy *McAfee_Epolicy_Orchestrator_Version36_Agent_Parent_Details `json:"currentPolicy"`
-
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+// McAfee_Epolicy_Orchestrator_Version36_Agent_Parent_Details_Extended is McAfee_Epolicy_Orchestrator_Version36_Agent_Parent_Details with all maskable types.
+type McAfee_Epolicy_Orchestrator_Version36_Agent_Parent_Details_Extended struct {
+	McAfee_Epolicy_Orchestrator_Version36_Agent_Parent_Details
+
+	// CurrentPolicy - no documentation
+	CurrentPolicy *McAfee_Epolicy_Orchestrator_Version36_Agent_Parent_Details `json:"currentPolicy"`
 }
 
 func (mcafee_epolicy_orchestrator_version36_agent_parent_details *McAfee_Epolicy_Orchestrator_Version36_Agent_Parent_Details) String() string {

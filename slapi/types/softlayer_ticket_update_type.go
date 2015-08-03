@@ -10,6 +10,11 @@ type SoftLayer_Ticket_Update_Type struct {
 
 	// KeyName - <nil>
 	KeyName string `json:"keyName"`
+}
+
+// SoftLayer_Ticket_Update_Type_Extended is SoftLayer_Ticket_Update_Type with all maskable types.
+type SoftLayer_Ticket_Update_Type_Extended struct {
+	SoftLayer_Ticket_Update_Type
 
 	// Ticket - <nil>
 	Ticket *SoftLayer_Ticket_Update `json:"ticket"`

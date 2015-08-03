@@ -7,9 +7,6 @@ package types
 // describe relatively arbitrary information.
 type SoftLayer_Hardware_Attribute struct {
 
-	// HardwareAttributeType - The type of hardware attribute that this represents.
-	HardwareAttributeType *SoftLayer_Hardware_Attribute_Type `json:"hardwareAttributeType"`
-
 	// HardwareAttributeTypeId - The unique identifier of a hardware attribute's type.
 	HardwareAttributeTypeId int `json:"hardwareAttributeTypeId"`
 
@@ -18,6 +15,14 @@ type SoftLayer_Hardware_Attribute struct {
 
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+// SoftLayer_Hardware_Attribute_Extended is SoftLayer_Hardware_Attribute with all maskable types.
+type SoftLayer_Hardware_Attribute_Extended struct {
+	SoftLayer_Hardware_Attribute
+
+	// HardwareAttributeType - The type of hardware attribute that this represents.
+	HardwareAttributeType *SoftLayer_Hardware_Attribute_Type `json:"hardwareAttributeType"`
 }
 
 func (softlayer_hardware_attribute *SoftLayer_Hardware_Attribute) String() string {

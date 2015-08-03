@@ -7,9 +7,6 @@ package types
 // bandwidth utilization at a specific point in time on a given network interface.
 type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total struct {
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
-
 	// AmountIn - no documentation
 	AmountIn float64 `json:"amountIn"`
 
@@ -18,6 +15,14 @@ type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total struct {
 
 	// BandwidthUsageDetailTypeId - ID of the bandwidth usage detail type for this record.
 	BandwidthUsageDetailTypeId float64 `json:"bandwidthUsageDetailTypeId"`
+}
+
+// SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total_Extended is SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total with all maskable types.
+type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total_Extended struct {
+	SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account"`
 
 	// TrackingObject - The tracking object this bandwidth usage record describes.
 	TrackingObject *SoftLayer_Metric_Tracking_Object `json:"trackingObject"`

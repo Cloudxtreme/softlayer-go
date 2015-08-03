@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Brand_Payment_Processor - <nil>
 type SoftLayer_Brand_Payment_Processor struct {
+}
+
+// SoftLayer_Brand_Payment_Processor_Extended is SoftLayer_Brand_Payment_Processor with all maskable types.
+type SoftLayer_Brand_Payment_Processor_Extended struct {
+	SoftLayer_Brand_Payment_Processor
 
 	// Brand - <nil>
 	Brand *SoftLayer_Brand `json:"brand"`

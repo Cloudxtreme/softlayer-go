@@ -14,12 +14,17 @@ type SoftLayer_Location_Region struct {
 	// order.
 	Keyname string `json:"keyname"`
 
+	// SortOrder - An integer representing the order in which this element is displayed.
+	SortOrder int `json:"sortOrder"`
+}
+
+// SoftLayer_Location_Region_Extended is SoftLayer_Location_Region with all maskable types.
+type SoftLayer_Location_Region_Extended struct {
+	SoftLayer_Location_Region
+
 	// Location - Each region can have many datacenter locations tied to it. However, this is the location
 	// we currently provision to for a region. This location is the current valid location for a region.
 	Location *SoftLayer_Location_Region_Location `json:"location"`
-
-	// SortOrder - An integer representing the order in which this element is displayed.
-	SortOrder int `json:"sortOrder"`
 }
 
 func (softlayer_location_region *SoftLayer_Location_Region) String() string {

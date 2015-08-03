@@ -5,17 +5,11 @@ package types
 // SoftLayer_Marketplace_Partner - <nil>
 type SoftLayer_Marketplace_Partner struct {
 
-	// AccountId - <nil>
-	AccountId int `json:"accountId"`
+	// LinkOrderPage - <nil>
+	LinkOrderPage string `json:"linkOrderPage"`
 
-	// AttachedFiles - <nil>
-	AttachedFiles []*SoftLayer_Marketplace_Partner_Attachment `json:"attachedFiles"`
-
-	// AttachmentCount - no documentation
-	AttachmentCount uint64 `json:"attachmentCount"`
-
-	// Attachments - <nil>
-	Attachments []*SoftLayer_Marketplace_Partner_Attachment `json:"attachments"`
+	// MetaDescription - <nil>
+	MetaDescription string `json:"metaDescription"`
 
 	// CompanyDescription - <nil>
 	CompanyDescription string `json:"companyDescription"`
@@ -26,23 +20,58 @@ type SoftLayer_Marketplace_Partner struct {
 	// HeadlineDescription - <nil>
 	HeadlineDescription string `json:"headlineDescription"`
 
-	// Id - <nil>
-	Id int `json:"id"`
+	// ProductDescriptionShort - <nil>
+	ProductDescriptionShort string `json:"productDescriptionShort"`
+
+	// UrlIdentifier - <nil>
+	UrlIdentifier string `json:"urlIdentifier"`
+
+	// AccountId - <nil>
+	AccountId int `json:"accountId"`
+
+	// AttachedFiles - <nil>
+	AttachedFiles []*SoftLayer_Marketplace_Partner_Attachment `json:"attachedFiles"`
 
 	// LinkFreeTrial - <nil>
 	LinkFreeTrial string `json:"linkFreeTrial"`
 
-	// LinkOrderPage - <nil>
-	LinkOrderPage string `json:"linkOrderPage"`
-
 	// LinkWebsite - <nil>
 	LinkWebsite string `json:"linkWebsite"`
 
+	// ProductBenefits - <nil>
+	ProductBenefits string `json:"productBenefits"`
+
+	// ProductDescriptionLong - <nil>
+	ProductDescriptionLong string `json:"productDescriptionLong"`
+
+	// ProductFeatures - <nil>
+	ProductFeatures string `json:"productFeatures"`
+
+	// Id - <nil>
+	Id int `json:"id"`
+
+	// ProductTitle - <nil>
+	ProductTitle string `json:"productTitle"`
+
+	// MetaKeywords - <nil>
+	MetaKeywords string `json:"metaKeywords"`
+
+	// ProductCategoryId - <nil>
+	ProductCategoryId int `json:"productCategoryId"`
+
+	// ProductName - <nil>
+	ProductName string `json:"productName"`
+}
+
+// SoftLayer_Marketplace_Partner_Extended is SoftLayer_Marketplace_Partner with all maskable types.
+type SoftLayer_Marketplace_Partner_Extended struct {
+	SoftLayer_Marketplace_Partner
+
+	// Attachments - <nil>
+	Attachments []*SoftLayer_Marketplace_Partner_Attachment `json:"attachments"`
+
 	// LogoMedium - <nil>
 	LogoMedium *SoftLayer_Marketplace_Partner_Attachment `json:"logoMedium"`
-
-	// LogoMediumTemp - <nil>
-	LogoMediumTemp *SoftLayer_Marketplace_Partner_Attachment `json:"logoMediumTemp"`
 
 	// LogoSmall - <nil>
 	LogoSmall *SoftLayer_Marketplace_Partner_Attachment `json:"logoSmall"`
@@ -50,35 +79,11 @@ type SoftLayer_Marketplace_Partner struct {
 	// LogoSmallTemp - <nil>
 	LogoSmallTemp *SoftLayer_Marketplace_Partner_Attachment `json:"logoSmallTemp"`
 
-	// MetaDescription - <nil>
-	MetaDescription string `json:"metaDescription"`
+	// AttachmentCount - no documentation
+	AttachmentCount uint64 `json:"attachmentCount"`
 
-	// MetaKeywords - <nil>
-	MetaKeywords string `json:"metaKeywords"`
-
-	// ProductBenefits - <nil>
-	ProductBenefits string `json:"productBenefits"`
-
-	// ProductCategoryId - <nil>
-	ProductCategoryId int `json:"productCategoryId"`
-
-	// ProductDescriptionLong - <nil>
-	ProductDescriptionLong string `json:"productDescriptionLong"`
-
-	// ProductDescriptionShort - <nil>
-	ProductDescriptionShort string `json:"productDescriptionShort"`
-
-	// ProductFeatures - <nil>
-	ProductFeatures string `json:"productFeatures"`
-
-	// ProductName - <nil>
-	ProductName string `json:"productName"`
-
-	// ProductTitle - <nil>
-	ProductTitle string `json:"productTitle"`
-
-	// UrlIdentifier - <nil>
-	UrlIdentifier string `json:"urlIdentifier"`
+	// LogoMediumTemp - <nil>
+	LogoMediumTemp *SoftLayer_Marketplace_Partner_Attachment `json:"logoMediumTemp"`
 }
 
 func (softlayer_marketplace_partner *SoftLayer_Marketplace_Partner) String() string {

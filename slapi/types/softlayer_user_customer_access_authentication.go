@@ -29,15 +29,20 @@ type SoftLayer_User_Customer_Access_Authentication struct {
 	// SuccessFlag - Whether an attempt to log into the SoftLayer customer portal was successful or not.
 	SuccessFlag bool `json:"successFlag"`
 
-	// User - The user who has attempted to log into the SoftLayer customer portal.
-	User *SoftLayer_User_Customer `json:"user"`
-
 	// UserId - The internal identifier of the user who attempted to log into the SoftLayer customer
 	// portal.
 	UserId int `json:"userId"`
 
 	// Username - The username used when attempting to log into the SoftLayer customer portal
 	Username string `json:"username"`
+}
+
+// SoftLayer_User_Customer_Access_Authentication_Extended is SoftLayer_User_Customer_Access_Authentication with all maskable types.
+type SoftLayer_User_Customer_Access_Authentication_Extended struct {
+	SoftLayer_User_Customer_Access_Authentication
+
+	// User - The user who has attempted to log into the SoftLayer customer portal.
+	User *SoftLayer_User_Customer `json:"user"`
 }
 
 func (softlayer_user_customer_access_authentication *SoftLayer_User_Customer_Access_Authentication) String() string {

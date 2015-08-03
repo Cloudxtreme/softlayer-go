@@ -5,14 +5,11 @@ package types
 // SoftLayer_Container_Network_Port_Statistic - <nil>
 type SoftLayer_Container_Network_Port_Statistic struct {
 
+	// Speed - <nil>
+	Speed uint64 `json:"speed"`
+
 	// AdministrativeStatus - <nil>
 	AdministrativeStatus int `json:"administrativeStatus"`
-
-	// InDiscardPackets - <nil>
-	InDiscardPackets uint64 `json:"inDiscardPackets"`
-
-	// InErrorPackets - <nil>
-	InErrorPackets uint64 `json:"inErrorPackets"`
 
 	// InOctets - <nil>
 	InOctets uint64 `json:"inOctets"`
@@ -20,17 +17,11 @@ type SoftLayer_Container_Network_Port_Statistic struct {
 	// InUnicastPackets - <nil>
 	InUnicastPackets uint64 `json:"inUnicastPackets"`
 
-	// MaximumTransmissionUnit - <nil>
-	MaximumTransmissionUnit uint64 `json:"maximumTransmissionUnit"`
-
-	// OperationalStatus - <nil>
-	OperationalStatus int `json:"operationalStatus"`
+	// OutErrorPackets - <nil>
+	OutErrorPackets uint64 `json:"outErrorPackets"`
 
 	// OutDiscardPackets - <nil>
 	OutDiscardPackets uint64 `json:"outDiscardPackets"`
-
-	// OutErrorPackets - <nil>
-	OutErrorPackets uint64 `json:"outErrorPackets"`
 
 	// OutOctets - <nil>
 	OutOctets uint64 `json:"outOctets"`
@@ -41,8 +32,17 @@ type SoftLayer_Container_Network_Port_Statistic struct {
 	// PortDuplex - <nil>
 	PortDuplex uint64 `json:"portDuplex"`
 
-	// Speed - <nil>
-	Speed uint64 `json:"speed"`
+	// InDiscardPackets - <nil>
+	InDiscardPackets uint64 `json:"inDiscardPackets"`
+
+	// InErrorPackets - <nil>
+	InErrorPackets uint64 `json:"inErrorPackets"`
+
+	// MaximumTransmissionUnit - <nil>
+	MaximumTransmissionUnit uint64 `json:"maximumTransmissionUnit"`
+
+	// OperationalStatus - <nil>
+	OperationalStatus int `json:"operationalStatus"`
 }
 
 func (softlayer_container_network_port_statistic *SoftLayer_Container_Network_Port_Statistic) String() string {

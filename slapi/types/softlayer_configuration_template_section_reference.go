@@ -20,17 +20,22 @@ type SoftLayer_Configuration_Template_Section_Reference struct {
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
 
-	// Section - <nil>
-	Section *SoftLayer_Configuration_Template_Section `json:"section"`
-
 	// SectionId - no documentation
 	SectionId int `json:"sectionId"`
 
-	// Template - <nil>
-	Template *SoftLayer_Configuration_Template `json:"template"`
-
 	// TemplateId - no documentation
 	TemplateId int `json:"templateId"`
+}
+
+// SoftLayer_Configuration_Template_Section_Reference_Extended is SoftLayer_Configuration_Template_Section_Reference with all maskable types.
+type SoftLayer_Configuration_Template_Section_Reference_Extended struct {
+	SoftLayer_Configuration_Template_Section_Reference
+
+	// Section - <nil>
+	Section *SoftLayer_Configuration_Template_Section `json:"section"`
+
+	// Template - <nil>
+	Template *SoftLayer_Configuration_Template `json:"template"`
 }
 
 func (softlayer_configuration_template_section_reference *SoftLayer_Configuration_Template_Section_Reference) String() string {

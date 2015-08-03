@@ -11,6 +11,11 @@ package types
 // expiration date * The last time the credential was updated SoftLayer users with an active external
 // binding will be prohibited from using the API for security reasons.
 type SoftLayer_User_Customer_External_Binding_Verisign struct {
+}
+
+// SoftLayer_User_Customer_External_Binding_Verisign_Extended is SoftLayer_User_Customer_External_Binding_Verisign with all maskable types.
+type SoftLayer_User_Customer_External_Binding_Verisign_Extended struct {
+	SoftLayer_User_Customer_External_Binding_Verisign
 
 	// CredentialExpirationDate - no documentation
 	CredentialExpirationDate string `json:"credentialExpirationDate"`

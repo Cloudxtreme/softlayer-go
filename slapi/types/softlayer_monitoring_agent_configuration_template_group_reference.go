@@ -8,20 +8,25 @@ package types
 // configuration templates.
 type SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference struct {
 
-	// ConfigurationTemplate - <nil>
-	ConfigurationTemplate *SoftLayer_Configuration_Template `json:"configurationTemplate"`
-
 	// ConfigurationTemplateId - no documentation
 	ConfigurationTemplateId int `json:"configurationTemplateId"`
 
 	// Id - Internal identifier of a configuration group reference record
 	Id int `json:"id"`
 
+	// TemplateGroupId - Internal identifier of a monitoring agent configuration group
+	TemplateGroupId int `json:"templateGroupId"`
+}
+
+// SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference_Extended is SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference with all maskable types.
+type SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference_Extended struct {
+	SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference
+
 	// TemplateGroup - <nil>
 	TemplateGroup *SoftLayer_Monitoring_Agent_Configuration_Template_Group `json:"templateGroup"`
 
-	// TemplateGroupId - Internal identifier of a monitoring agent configuration group
-	TemplateGroupId int `json:"templateGroupId"`
+	// ConfigurationTemplate - <nil>
+	ConfigurationTemplate *SoftLayer_Configuration_Template `json:"configurationTemplate"`
 }
 
 func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) String() string {

@@ -22,17 +22,22 @@ type SoftLayer_Scale_Policy_Trigger struct {
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
 
-	// ScalePolicy - no documentation
-	ScalePolicy *SoftLayer_Scale_Policy `json:"scalePolicy"`
-
 	// ScalePolicyId - no documentation
 	ScalePolicyId int `json:"scalePolicyId"`
 
-	// Type - no documentation
-	Type *SoftLayer_Scale_Policy_Trigger_Type `json:"type"`
-
 	// TypeId - no documentation
 	TypeId int `json:"typeId"`
+}
+
+// SoftLayer_Scale_Policy_Trigger_Extended is SoftLayer_Scale_Policy_Trigger with all maskable types.
+type SoftLayer_Scale_Policy_Trigger_Extended struct {
+	SoftLayer_Scale_Policy_Trigger
+
+	// ScalePolicy - no documentation
+	ScalePolicy *SoftLayer_Scale_Policy `json:"scalePolicy"`
+
+	// Type - no documentation
+	Type *SoftLayer_Scale_Policy_Trigger_Type `json:"type"`
 }
 
 func (softlayer_scale_policy_trigger *SoftLayer_Scale_Policy_Trigger) String() string {

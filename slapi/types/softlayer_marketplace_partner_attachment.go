@@ -5,9 +5,6 @@ package types
 // SoftLayer_Marketplace_Partner_Attachment - <nil>
 type SoftLayer_Marketplace_Partner_Attachment struct {
 
-	// AttachmentType - <nil>
-	AttachmentType *SoftLayer_Marketplace_Partner_Attachment_Type `json:"attachmentType"`
-
 	// AttachmentTypeId - <nil>
 	AttachmentTypeId int `json:"attachmentTypeId"`
 
@@ -28,6 +25,14 @@ type SoftLayer_Marketplace_Partner_Attachment struct {
 
 	// SaveAsName - <nil>
 	SaveAsName string `json:"saveAsName"`
+}
+
+// SoftLayer_Marketplace_Partner_Attachment_Extended is SoftLayer_Marketplace_Partner_Attachment with all maskable types.
+type SoftLayer_Marketplace_Partner_Attachment_Extended struct {
+	SoftLayer_Marketplace_Partner_Attachment
+
+	// AttachmentType - <nil>
+	AttachmentType *SoftLayer_Marketplace_Partner_Attachment_Type `json:"attachmentType"`
 }
 
 func (softlayer_marketplace_partner_attachment *SoftLayer_Marketplace_Partner_Attachment) String() string {

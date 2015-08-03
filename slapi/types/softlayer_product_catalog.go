@@ -6,30 +6,35 @@ package types
 // offers for sale. These prices are organized into packages which represent the different servers and
 // services that SoftLayer offers.
 type SoftLayer_Product_Catalog struct {
+}
 
-	// BrandCount - no documentation
-	BrandCount uint64 `json:"brandCount"`
-
-	// Brands - no documentation
-	Brands []*SoftLayer_Brand `json:"brands"`
-
-	// PackageCount - no documentation
-	PackageCount uint64 `json:"packageCount"`
-
-	// Packages - no documentation
-	Packages []*SoftLayer_Product_Package `json:"packages"`
-
-	// PriceCount - no documentation
-	PriceCount uint64 `json:"priceCount"`
-
-	// Prices - no documentation
-	Prices []*SoftLayer_Product_Item_Price `json:"prices"`
+// SoftLayer_Product_Catalog_Extended is SoftLayer_Product_Catalog with all maskable types.
+type SoftLayer_Product_Catalog_Extended struct {
+	SoftLayer_Product_Catalog
 
 	// ProductCount - no documentation
 	ProductCount uint64 `json:"productCount"`
 
+	// Brands - no documentation
+	Brands []*SoftLayer_Brand `json:"brands"`
+
+	// Packages - no documentation
+	Packages []*SoftLayer_Product_Package `json:"packages"`
+
+	// Prices - no documentation
+	Prices []*SoftLayer_Product_Item_Price `json:"prices"`
+
 	// Products - no documentation
 	Products []*SoftLayer_Product_Item `json:"products"`
+
+	// BrandCount - no documentation
+	BrandCount uint64 `json:"brandCount"`
+
+	// PackageCount - no documentation
+	PackageCount uint64 `json:"packageCount"`
+
+	// PriceCount - no documentation
+	PriceCount uint64 `json:"priceCount"`
 }
 
 func (softlayer_product_catalog *SoftLayer_Product_Catalog) String() string {

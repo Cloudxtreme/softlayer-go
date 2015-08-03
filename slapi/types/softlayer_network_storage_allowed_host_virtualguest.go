@@ -4,6 +4,11 @@ package types
 
 // SoftLayer_Network_Storage_Allowed_Host_VirtualGuest - <nil>
 type SoftLayer_Network_Storage_Allowed_Host_VirtualGuest struct {
+}
+
+// SoftLayer_Network_Storage_Allowed_Host_VirtualGuest_Extended is SoftLayer_Network_Storage_Allowed_Host_VirtualGuest with all maskable types.
+type SoftLayer_Network_Storage_Allowed_Host_VirtualGuest_Extended struct {
+	SoftLayer_Network_Storage_Allowed_Host_VirtualGuest
 
 	// Resource - The SoftLayer_Virtual_Guest object which this SoftLayer_Network_Storage_Allowed_Host is
 	// referencing.

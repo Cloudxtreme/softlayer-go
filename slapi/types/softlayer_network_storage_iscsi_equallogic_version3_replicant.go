@@ -7,6 +7,11 @@ package types
 // mountable. Upon failover the replicant can be mounted and used as a normal volume. It is suggested
 // to only do this as part of a disaster recovery plan.
 type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant struct {
+}
+
+// SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant_Extended is SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant with all maskable types.
+type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant_Extended struct {
+	SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant
 
 	// FailbackInProgressFlag - When a replicant is in the process of synchronizing with the parent volume
 	// this flag will be true.

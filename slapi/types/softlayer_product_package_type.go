@@ -16,6 +16,11 @@ type SoftLayer_Product_Package_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+// SoftLayer_Product_Package_Type_Extended is SoftLayer_Product_Package_Type with all maskable types.
+type SoftLayer_Product_Package_Type_Extended struct {
+	SoftLayer_Product_Package_Type
 
 	// PackageCount - A count of all the packages associated with the given package type.
 	PackageCount uint64 `json:"packageCount"`

@@ -13,9 +13,6 @@ type SoftLayer_Configuration_Template_Section_Definition_Value struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
-	// Definition - <nil>
-	Definition *SoftLayer_Configuration_Template_Section_Definition `json:"definition"`
-
 	// DefinitionId - Internal identifier of a configuration definition that this configuration value if
 	// defined by
 	DefinitionId int `json:"definitionId"`
@@ -23,15 +20,23 @@ type SoftLayer_Configuration_Template_Section_Definition_Value struct {
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
 
-	// Template - <nil>
-	Template *SoftLayer_Configuration_Template `json:"template"`
-
 	// TemplateId - Internal identifier of a configuration template that this configuration value belongs
 	// to
 	TemplateId int `json:"templateId"`
 
 	// Value - no documentation
 	Value string `json:"value"`
+}
+
+// SoftLayer_Configuration_Template_Section_Definition_Value_Extended is SoftLayer_Configuration_Template_Section_Definition_Value with all maskable types.
+type SoftLayer_Configuration_Template_Section_Definition_Value_Extended struct {
+	SoftLayer_Configuration_Template_Section_Definition_Value
+
+	// Definition - <nil>
+	Definition *SoftLayer_Configuration_Template_Section_Definition `json:"definition"`
+
+	// Template - <nil>
+	Template *SoftLayer_Configuration_Template `json:"template"`
 }
 
 func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value) String() string {
