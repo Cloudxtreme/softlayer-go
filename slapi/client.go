@@ -9,26 +9,45 @@ import (
 	"net/http"
 )
 
+// SoftLayerAPIError is an error returned when there's an error returned from the SoftLayer API
 type SoftLayerAPIError struct {
 	Code   string `json:"code"`
 	String string `json:"error"`
 }
 
+// Error shows a nice error string
 func (err SoftLayerAPIError) Error() string {
 	return fmt.Sprintf("(%s) %s", err.Code, err.String)
 }
 
+// Client is the SoftLayer API Client
 type Client struct {
 	Endpoint string
 	Username string
 	APIKey   string
 }
 
-func (client *Client) Context() RequestContext {
+// Request creates a new request. Specify request-specific settings on the return value
+func (client *Client) Request() RequestContext {
 	return RequestContext{Client: client}
 }
 
-func (ctx *RequestContext) Call(result interface{}) error {
+// RequestContext holds request-level information
+type RequestContext struct {
+	Service   string
+	Method    string
+	ID        interface{}
+	Arguments []interface{}
+	Mask      string
+	Filter    interface{}
+	Limit     int
+	Offset    int
+	Client    *Client
+}
+
+// Do performs the API call. The result parameter will have the API response marshalled into it
+func (ctx *RequestContext) Do(result interface{}) error {
+	// TODO: the http client should be re-used
 	httpClient := &http.Client{}
 	req, err := http.NewRequest("GET", ctx.Client.Endpoint+ctx.Service+"/"+ctx.Method, nil)
 	if err != nil {
@@ -37,8 +56,9 @@ func (ctx *RequestContext) Call(result interface{}) error {
 
 	req.SetBasicAuth(ctx.Client.Username, ctx.Client.APIKey)
 	req.Header.Add("Content-Type", "application/json")
-	values := req.URL.Query()
 
+	// Set object mask, filter, limit, offset, arguments settings
+	values := req.URL.Query()
 	body := make(map[string]interface{})
 
 	if ctx.Mask != "" {
@@ -78,8 +98,11 @@ func (ctx *RequestContext) Call(result interface{}) error {
 	}
 
 	req.URL.RawQuery = values.Encode()
+
+	// TODO: Remove this log (add debug option?)
 	log.Println(req.URL.String())
 
+	// Make the API Request
 	res, err := httpClient.Do(req)
 	if err != nil {
 		return err
@@ -91,6 +114,7 @@ func (ctx *RequestContext) Call(result interface{}) error {
 		return err
 	}
 
+	// Return error on incorrect status
 	if res.StatusCode != 200 {
 		slError := SoftLayerAPIError{}
 		err = json.Unmarshal(respBody, &slError)
@@ -103,22 +127,11 @@ func (ctx *RequestContext) Call(result interface{}) error {
 		return slError
 	}
 
+	// Unmarshal Result
 	err = json.Unmarshal(respBody, &result)
 	if err != nil {
 		return err
 	}
 
 	return nil
-}
-
-type RequestContext struct {
-	Service   string
-	Method    string
-	ID        interface{}
-	Arguments []interface{}
-	Mask      string
-	Filter    interface{}
-	Limit     int
-	Offset    int
-	Client    *Client
 }

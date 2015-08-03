@@ -20,14 +20,14 @@ func main() {
 }
 
 func makeBasicAPICall(client slapi.Client) {
-	ctx := client.Context()
+	ctx := client.Request()
 	ctx.Mask = `mask[id,companyName]`
 	ctx.Service = "SoftLayer_Account"
 	ctx.Method = "getObject"
 
 	// Make API call with basic account type
 	basicAccount := &types.SoftLayer_Account{}
-	err := ctx.Call(basicAccount)
+	err := ctx.Do(basicAccount)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -37,14 +37,14 @@ func makeBasicAPICall(client slapi.Client) {
 }
 
 func makeExtendedAPICall(client slapi.Client) {
-	ctx := client.Context()
+	ctx := client.Request()
 	ctx.Mask = `mask[id,virtualGuests]`
 	ctx.Service = "SoftLayer_Account"
 	ctx.Method = "getObject"
 
 	// Make API call with extended account type
 	extendedAccount := &types.SoftLayer_Account_Extended{}
-	err := ctx.Call(extendedAccount)
+	err := ctx.Do(extendedAccount)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -61,14 +61,14 @@ type CustomAccount struct {
 
 func makeCustomAPICall(client slapi.Client) {
 
-	ctx := client.Context()
+	ctx := client.Request()
 	ctx.Mask = `mask[id,virtualGuests,companyName]`
 	ctx.Service = "SoftLayer_Account"
 	ctx.Method = "getObject"
 
 	// Make API call with custom type based on the basic account type
 	customAccount := &CustomAccount{}
-	err := ctx.Call(customAccount)
+	err := ctx.Do(customAccount)
 	if err != nil {
 		log.Fatal(err)
 	}
