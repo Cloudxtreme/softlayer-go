@@ -8,6 +8,10 @@ package types
 type SoftLayer_Billing_Item_Gateway_Appliance_Cluster struct {
 }
 
+func (softlayer_billing_item_gateway_appliance_cluster *SoftLayer_Billing_Item_Gateway_Appliance_Cluster) String() string {
+	return "SoftLayer_Billing_Item_Gateway_Appliance_Cluster"
+}
+
 // SoftLayer_Billing_Item_Gateway_Appliance_Cluster_Extended is SoftLayer_Billing_Item_Gateway_Appliance_Cluster with all maskable types.
 type SoftLayer_Billing_Item_Gateway_Appliance_Cluster_Extended struct {
 	SoftLayer_Billing_Item_Gateway_Appliance_Cluster
@@ -16,6 +20,6 @@ type SoftLayer_Billing_Item_Gateway_Appliance_Cluster_Extended struct {
 	Resource *SoftLayer_Resource_Group `json:"resource"`
 }
 
-func (softlayer_billing_item_gateway_appliance_cluster *SoftLayer_Billing_Item_Gateway_Appliance_Cluster) String() string {
+func (softlayer_billing_item_gateway_appliance_cluster *SoftLayer_Billing_Item_Gateway_Appliance_Cluster_Extended) String() string {
 	return "SoftLayer_Billing_Item_Gateway_Appliance_Cluster"
 }

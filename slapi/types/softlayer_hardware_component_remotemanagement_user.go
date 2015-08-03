@@ -13,6 +13,10 @@ type SoftLayer_Hardware_Component_RemoteManagement_User struct {
 	Username string `json:"username"`
 }
 
+func (softlayer_hardware_component_remotemanagement_user *SoftLayer_Hardware_Component_RemoteManagement_User) String() string {
+	return "SoftLayer_Hardware_Component_RemoteManagement_User"
+}
+
 // SoftLayer_Hardware_Component_RemoteManagement_User_Extended is SoftLayer_Hardware_Component_RemoteManagement_User with all maskable types.
 type SoftLayer_Hardware_Component_RemoteManagement_User_Extended struct {
 	SoftLayer_Hardware_Component_RemoteManagement_User
@@ -24,6 +28,6 @@ type SoftLayer_Hardware_Component_RemoteManagement_User_Extended struct {
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
 }
 
-func (softlayer_hardware_component_remotemanagement_user *SoftLayer_Hardware_Component_RemoteManagement_User) String() string {
+func (softlayer_hardware_component_remotemanagement_user *SoftLayer_Hardware_Component_RemoteManagement_User_Extended) String() string {
 	return "SoftLayer_Hardware_Component_RemoteManagement_User"
 }

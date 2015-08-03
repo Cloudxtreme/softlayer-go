@@ -12,6 +12,10 @@ type SoftLayer_FlexibleCredit_Affiliate struct {
 	Name string `json:"name"`
 }
 
+func (softlayer_flexiblecredit_affiliate *SoftLayer_FlexibleCredit_Affiliate) String() string {
+	return "SoftLayer_FlexibleCredit_Affiliate"
+}
+
 // SoftLayer_FlexibleCredit_Affiliate_Extended is SoftLayer_FlexibleCredit_Affiliate with all maskable types.
 type SoftLayer_FlexibleCredit_Affiliate_Extended struct {
 	SoftLayer_FlexibleCredit_Affiliate
@@ -20,6 +24,6 @@ type SoftLayer_FlexibleCredit_Affiliate_Extended struct {
 	FlexibleCreditProgram *SoftLayer_FlexibleCredit_Program `json:"flexibleCreditProgram"`
 }
 
-func (softlayer_flexiblecredit_affiliate *SoftLayer_FlexibleCredit_Affiliate) String() string {
+func (softlayer_flexiblecredit_affiliate *SoftLayer_FlexibleCredit_Affiliate_Extended) String() string {
 	return "SoftLayer_FlexibleCredit_Affiliate"
 }

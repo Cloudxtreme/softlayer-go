@@ -18,20 +18,24 @@ type SoftLayer_Layout_Item struct {
 	Name string `json:"name"`
 }
 
+func (softlayer_layout_item *SoftLayer_Layout_Item) String() string {
+	return "SoftLayer_Layout_Item"
+}
+
 // SoftLayer_Layout_Item_Extended is SoftLayer_Layout_Item with all maskable types.
 type SoftLayer_Layout_Item_Extended struct {
 	SoftLayer_Layout_Item
+
+	// LayoutItemPreferenceCount - A count of the layout preferences assigned to this layout item
+	LayoutItemPreferenceCount uint64 `json:"layoutItemPreferenceCount"`
 
 	// LayoutItemPreferences - The layout preferences assigned to this layout item
 	LayoutItemPreferences []*SoftLayer_Layout_Preference `json:"layoutItemPreferences"`
 
 	// LayoutItemType - no documentation
 	LayoutItemType *SoftLayer_Layout_Item_Type `json:"layoutItemType"`
-
-	// LayoutItemPreferenceCount - A count of the layout preferences assigned to this layout item
-	LayoutItemPreferenceCount uint64 `json:"layoutItemPreferenceCount"`
 }
 
-func (softlayer_layout_item *SoftLayer_Layout_Item) String() string {
+func (softlayer_layout_item *SoftLayer_Layout_Item_Extended) String() string {
 	return "SoftLayer_Layout_Item"
 }

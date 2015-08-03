@@ -14,37 +14,67 @@ package types
 // item.
 type SoftLayer_Product_Package_Preset struct {
 
-	// IsActive - no documentation
-	IsActive string `json:"isActive"`
-
-	// Description - no documentation
-	Description string `json:"description"`
-
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// Id - A preset's internal identifier. Everything regarding a SoftLayer_Product_Package_Preset is tied
 	// back to this id.
 	Id int `json:"id"`
 
-	// PackageId - The package id for the package this preset belongs to.
-	PackageId int `json:"packageId"`
+	// IsActive - no documentation
+	IsActive string `json:"isActive"`
+
+	// Name - no documentation
+	Name string `json:"name"`
+
+	// Description - no documentation
+	Description string `json:"description"`
 
 	// KeyName - The key name of the package preset. For the base configuration of a package the preset key
 	// name is
 	KeyName string `json:"keyName"`
+
+	// PackageId - The package id for the package this preset belongs to.
+	PackageId int `json:"packageId"`
+}
+
+func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset) String() string {
+	return "SoftLayer_Product_Package_Preset"
 }
 
 // SoftLayer_Product_Package_Preset_Extended is SoftLayer_Product_Package_Preset with all maskable types.
 type SoftLayer_Product_Package_Preset_Extended struct {
 	SoftLayer_Product_Package_Preset
 
+	// Configuration - no documentation
+	Configuration []*SoftLayer_Product_Package_Preset_Configuration `json:"configuration"`
+
+	// LowestPresetServerPrice - The lowest server prices related to this package preset.
+	LowestPresetServerPrice *SoftLayer_Product_Item_Price `json:"lowestPresetServerPrice"`
+
+	// Prices - The item prices that are included in this package preset configuration.
+	Prices []*SoftLayer_Product_Item_Price `json:"prices"`
+
 	// CategoryCount - A count of the item categories that are included in this package preset
 	// configuration.
 	CategoryCount uint64 `json:"categoryCount"`
 
+	// PackageConfigurationCount - A count of the item categories associated with a package preset,
+	// including information detailing which item categories are required as part of a SoftLayer product
+	// order.
+	PackageConfigurationCount uint64 `json:"packageConfigurationCount"`
+
 	// PriceCount - A count of the item prices that are included in this package preset configuration.
 	PriceCount uint64 `json:"priceCount"`
+
+	// Categories - The item categories that are included in this package preset configuration.
+	Categories []*SoftLayer_Product_Item_Category `json:"categories"`
+
+	// Package - no documentation
+	Package *SoftLayer_Product_Package `json:"package"`
+
+	// StorageGroupTemplateArrays - Describes how all disks in this preset will be configured.
+	StorageGroupTemplateArrays []*SoftLayer_Configuration_Storage_Group_Template_Group `json:"storageGroupTemplateArrays"`
+
+	// ConfigurationCount - A count of the preset configuration (category and price).
+	ConfigurationCount uint64 `json:"configurationCount"`
 
 	// StorageGroupTemplateArrayCount - A count of describes how all disks in this preset will be
 	// configured.
@@ -53,49 +83,23 @@ type SoftLayer_Product_Package_Preset_Extended struct {
 	// AvailableStorageUnits - <nil>
 	AvailableStorageUnits uint `json:"availableStorageUnits"`
 
-	// FixedConfigurationFlag - A package preset with this flag set will not allow the price's defined in
-	// the preset configuration to be overriden during order placement.
-	FixedConfigurationFlag bool `json:"fixedConfigurationFlag"`
-
 	// TotalMinimumHourlyFee - The starting hourly price for this configuration. Additional options not
 	// defined in the preset may increase the cost.
 	TotalMinimumHourlyFee uint `json:"totalMinimumHourlyFee"`
 
-	// TotalMinimumRecurringFee - The starting monthly price for this configuration. Additional options not
-	// defined in the preset may increase the cost.
-	TotalMinimumRecurringFee uint `json:"totalMinimumRecurringFee"`
-
-	// LowestPresetServerPrice - The lowest server prices related to this package preset.
-	LowestPresetServerPrice *SoftLayer_Product_Item_Price `json:"lowestPresetServerPrice"`
-
-	// PackageConfigurationCount - A count of the item categories associated with a package preset,
-	// including information detailing which item categories are required as part of a SoftLayer product
-	// order.
-	PackageConfigurationCount uint64 `json:"packageConfigurationCount"`
-
-	// Prices - The item prices that are included in this package preset configuration.
-	Prices []*SoftLayer_Product_Item_Price `json:"prices"`
-
-	// ConfigurationCount - A count of the preset configuration (category and price).
-	ConfigurationCount uint64 `json:"configurationCount"`
-
-	// Categories - The item categories that are included in this package preset configuration.
-	Categories []*SoftLayer_Product_Item_Category `json:"categories"`
-
-	// Configuration - no documentation
-	Configuration []*SoftLayer_Product_Package_Preset_Configuration `json:"configuration"`
-
-	// Package - no documentation
-	Package *SoftLayer_Product_Package `json:"package"`
+	// FixedConfigurationFlag - A package preset with this flag set will not allow the price's defined in
+	// the preset configuration to be overriden during order placement.
+	FixedConfigurationFlag bool `json:"fixedConfigurationFlag"`
 
 	// PackageConfiguration - The item categories associated with a package preset, including information
 	// detailing which item categories are required as part of a SoftLayer product order.
 	PackageConfiguration []*SoftLayer_Product_Package_Order_Configuration `json:"packageConfiguration"`
 
-	// StorageGroupTemplateArrays - Describes how all disks in this preset will be configured.
-	StorageGroupTemplateArrays []*SoftLayer_Configuration_Storage_Group_Template_Group `json:"storageGroupTemplateArrays"`
+	// TotalMinimumRecurringFee - The starting monthly price for this configuration. Additional options not
+	// defined in the preset may increase the cost.
+	TotalMinimumRecurringFee uint `json:"totalMinimumRecurringFee"`
 }
 
-func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset) String() string {
+func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset_Extended) String() string {
 	return "SoftLayer_Product_Package_Preset"
 }

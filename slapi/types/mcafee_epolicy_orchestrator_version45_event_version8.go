@@ -9,6 +9,10 @@ package types
 type McAfee_Epolicy_Orchestrator_Version45_Event_Version8 struct {
 }
 
+func (mcafee_epolicy_orchestrator_version45_event_version8 *McAfee_Epolicy_Orchestrator_Version45_Event_Version8) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version45_Event_Version8"
+}
+
 // McAfee_Epolicy_Orchestrator_Version45_Event_Version8_Extended is McAfee_Epolicy_Orchestrator_Version45_Event_Version8 with all maskable types.
 type McAfee_Epolicy_Orchestrator_Version45_Event_Version8_Extended struct {
 	McAfee_Epolicy_Orchestrator_Version45_Event_Version8
@@ -17,6 +21,6 @@ type McAfee_Epolicy_Orchestrator_Version45_Event_Version8_Extended struct {
 	Signature *McAfee_Epolicy_Orchestrator_Version45_Hips_Event_Signature_Version8 `json:"signature"`
 }
 
-func (mcafee_epolicy_orchestrator_version45_event_version8 *McAfee_Epolicy_Orchestrator_Version45_Event_Version8) String() string {
+func (mcafee_epolicy_orchestrator_version45_event_version8 *McAfee_Epolicy_Orchestrator_Version45_Event_Version8_Extended) String() string {
 	return "McAfee_Epolicy_Orchestrator_Version45_Event_Version8"
 }

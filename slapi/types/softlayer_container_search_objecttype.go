@@ -11,11 +11,11 @@ package types
 // [[SoftLayer_Search/search|search()]] method for information on using object types in search strings.
 type SoftLayer_Container_Search_ObjectType struct {
 
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// Properties - A collection of [[SoftLayer_Container_Search_ObjectType_Property|object properties]].
 	Properties []*SoftLayer_Container_Search_ObjectType_Property `json:"properties"`
+
+	// Name - no documentation
+	Name string `json:"name"`
 }
 
 func (softlayer_container_search_objecttype *SoftLayer_Container_Search_ObjectType) String() string {

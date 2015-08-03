@@ -11,6 +11,10 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command struct {
 	KeyName string `json:"keyName"`
 }
 
+func (softlayer_hardware_component_remotemanagement_command *SoftLayer_Hardware_Component_RemoteManagement_Command) String() string {
+	return "SoftLayer_Hardware_Component_RemoteManagement_Command"
+}
+
 // SoftLayer_Hardware_Component_RemoteManagement_Command_Extended is SoftLayer_Hardware_Component_RemoteManagement_Command with all maskable types.
 type SoftLayer_Hardware_Component_RemoteManagement_Command_Extended struct {
 	SoftLayer_Hardware_Component_RemoteManagement_Command
@@ -22,6 +26,6 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command_Extended struct {
 	RequestCount uint64 `json:"requestCount"`
 }
 
-func (softlayer_hardware_component_remotemanagement_command *SoftLayer_Hardware_Component_RemoteManagement_Command) String() string {
+func (softlayer_hardware_component_remotemanagement_command *SoftLayer_Hardware_Component_RemoteManagement_Command_Extended) String() string {
 	return "SoftLayer_Hardware_Component_RemoteManagement_Command"
 }

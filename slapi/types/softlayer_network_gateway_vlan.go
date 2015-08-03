@@ -18,17 +18,21 @@ type SoftLayer_Network_Gateway_Vlan struct {
 	NetworkVlanId int `json:"networkVlanId"`
 }
 
+func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) String() string {
+	return "SoftLayer_Network_Gateway_Vlan"
+}
+
 // SoftLayer_Network_Gateway_Vlan_Extended is SoftLayer_Network_Gateway_Vlan with all maskable types.
 type SoftLayer_Network_Gateway_Vlan_Extended struct {
 	SoftLayer_Network_Gateway_Vlan
 
-	// NetworkGateway - no documentation
-	NetworkGateway *SoftLayer_Network_Gateway `json:"networkGateway"`
-
 	// NetworkVlan - no documentation
 	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan"`
+
+	// NetworkGateway - no documentation
+	NetworkGateway *SoftLayer_Network_Gateway `json:"networkGateway"`
 }
 
-func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) String() string {
+func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan_Extended) String() string {
 	return "SoftLayer_Network_Gateway_Vlan"
 }

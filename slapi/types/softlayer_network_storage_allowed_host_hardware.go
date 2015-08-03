@@ -6,6 +6,10 @@ package types
 type SoftLayer_Network_Storage_Allowed_Host_Hardware struct {
 }
 
+func (softlayer_network_storage_allowed_host_hardware *SoftLayer_Network_Storage_Allowed_Host_Hardware) String() string {
+	return "SoftLayer_Network_Storage_Allowed_Host_Hardware"
+}
+
 // SoftLayer_Network_Storage_Allowed_Host_Hardware_Extended is SoftLayer_Network_Storage_Allowed_Host_Hardware with all maskable types.
 type SoftLayer_Network_Storage_Allowed_Host_Hardware_Extended struct {
 	SoftLayer_Network_Storage_Allowed_Host_Hardware
@@ -15,6 +19,6 @@ type SoftLayer_Network_Storage_Allowed_Host_Hardware_Extended struct {
 	Resource *SoftLayer_Hardware `json:"resource"`
 }
 
-func (softlayer_network_storage_allowed_host_hardware *SoftLayer_Network_Storage_Allowed_Host_Hardware) String() string {
+func (softlayer_network_storage_allowed_host_hardware *SoftLayer_Network_Storage_Allowed_Host_Hardware_Extended) String() string {
 	return "SoftLayer_Network_Storage_Allowed_Host_Hardware"
 }

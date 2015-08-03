@@ -13,6 +13,10 @@ type SoftLayer_User_Customer_AdditionalEmail struct {
 	UserId int `json:"userId"`
 }
 
+func (softlayer_user_customer_additionalemail *SoftLayer_User_Customer_AdditionalEmail) String() string {
+	return "SoftLayer_User_Customer_AdditionalEmail"
+}
+
 // SoftLayer_User_Customer_AdditionalEmail_Extended is SoftLayer_User_Customer_AdditionalEmail with all maskable types.
 type SoftLayer_User_Customer_AdditionalEmail_Extended struct {
 	SoftLayer_User_Customer_AdditionalEmail
@@ -21,6 +25,6 @@ type SoftLayer_User_Customer_AdditionalEmail_Extended struct {
 	User *SoftLayer_User_Customer `json:"user"`
 }
 
-func (softlayer_user_customer_additionalemail *SoftLayer_User_Customer_AdditionalEmail) String() string {
+func (softlayer_user_customer_additionalemail *SoftLayer_User_Customer_AdditionalEmail_Extended) String() string {
 	return "SoftLayer_User_Customer_AdditionalEmail"
 }

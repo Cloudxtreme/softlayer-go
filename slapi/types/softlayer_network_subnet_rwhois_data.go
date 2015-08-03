@@ -14,15 +14,9 @@ import (
 // account or portal users' contact information.
 type SoftLayer_Network_Subnet_Rwhois_Data struct {
 
-	// Address1 - The first line of the mailing address associated with an account's data.
-	Address1 string `json:"address1"`
-
-	// State - A two-letter abbreviation of the state of the mailing address associated with an account's
-	// data. If an account does not reside in a province then this is typically blank.
-	State string `json:"state"`
-
-	// City - The city of the mailing address associated with an account's data.
-	City string `json:"city"`
+	// AbuseEmail - An email address associated with an account's data that is responsible for responding
+	// to network abuse queries about malicious traffic coming from your servers' IP addresses.
+	AbuseEmail string `json:"abuseEmail"`
 
 	// CompanyName - The company name associated with an account's data.
 	CompanyName string `json:"companyName"`
@@ -30,37 +24,47 @@ type SoftLayer_Network_Subnet_Rwhois_Data struct {
 	// PostalCode - The postal code of the mailing address associated with an account's data.
 	PostalCode string `json:"postalCode"`
 
-	// AbuseEmail - An email address associated with an account's data that is responsible for responding
-	// to network abuse queries about malicious traffic coming from your servers' IP addresses.
-	AbuseEmail string `json:"abuseEmail"`
-
 	// Address2 - The second line of the mailing address associated with an account's data.
 	Address2 string `json:"address2"`
 
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// LastName - no documentation
-	LastName string `json:"lastName"`
-
-	// FirstName - no documentation
-	FirstName string `json:"firstName"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
-
-	// PrivateResidenceFlag - Whether an account's data refers to a private residence or not.
-	PrivateResidenceFlag bool `json:"privateResidenceFlag"`
-
-	// AccountId - An account's data's associated account identifier.
-	AccountId int `json:"accountId"`
+	// City - The city of the mailing address associated with an account's data.
+	City string `json:"city"`
 
 	// Country - A two-letter abbreviation of the country of the mailing address associated with an
 	// account's data.
 	Country string `json:"country"`
 
+	// FirstName - no documentation
+	FirstName string `json:"firstName"`
+
+	// Address1 - The first line of the mailing address associated with an account's data.
+	Address1 string `json:"address1"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate"`
+
+	// State - A two-letter abbreviation of the state of the mailing address associated with an account's
+	// data. If an account does not reside in a province then this is typically blank.
+	State string `json:"state"`
+
+	// AccountId - An account's data's associated account identifier.
+	AccountId int `json:"accountId"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
+
+	// LastName - no documentation
+	LastName string `json:"lastName"`
+
+	// PrivateResidenceFlag - Whether an account's data refers to a private residence or not.
+	PrivateResidenceFlag bool `json:"privateResidenceFlag"`
+}
+
+func (softlayer_network_subnet_rwhois_data *SoftLayer_Network_Subnet_Rwhois_Data) String() string {
+	return "SoftLayer_Network_Subnet_Rwhois_Data"
 }
 
 // SoftLayer_Network_Subnet_Rwhois_Data_Extended is SoftLayer_Network_Subnet_Rwhois_Data with all maskable types.
@@ -71,6 +75,6 @@ type SoftLayer_Network_Subnet_Rwhois_Data_Extended struct {
 	Account *SoftLayer_Account `json:"account"`
 }
 
-func (softlayer_network_subnet_rwhois_data *SoftLayer_Network_Subnet_Rwhois_Data) String() string {
+func (softlayer_network_subnet_rwhois_data *SoftLayer_Network_Subnet_Rwhois_Data_Extended) String() string {
 	return "SoftLayer_Network_Subnet_Rwhois_Data"
 }

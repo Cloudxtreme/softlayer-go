@@ -16,6 +16,9 @@ type SoftLayer_Layout_Profile struct {
 	// Id - no documentation
 	Id int `json:"id"`
 
+	// ModifyDate - Timestamp of when the layout profile was last updated
+	ModifyDate *time.Time `json:"modifyDate"`
+
 	// Name - no documentation
 	Name string `json:"name"`
 
@@ -24,17 +27,15 @@ type SoftLayer_Layout_Profile struct {
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
+}
 
-	// ModifyDate - Timestamp of when the layout profile was last updated
-	ModifyDate *time.Time `json:"modifyDate"`
+func (softlayer_layout_profile *SoftLayer_Layout_Profile) String() string {
+	return "SoftLayer_Layout_Profile"
 }
 
 // SoftLayer_Layout_Profile_Extended is SoftLayer_Layout_Profile with all maskable types.
 type SoftLayer_Layout_Profile_Extended struct {
 	SoftLayer_Layout_Profile
-
-	// LayoutContainers - <nil>
-	LayoutContainers []*SoftLayer_Layout_Container `json:"layoutContainers"`
 
 	// LayoutPreferences - <nil>
 	LayoutPreferences []*SoftLayer_Layout_Profile_Preference `json:"layoutPreferences"`
@@ -44,8 +45,11 @@ type SoftLayer_Layout_Profile_Extended struct {
 
 	// LayoutPreferenceCount - no documentation
 	LayoutPreferenceCount uint64 `json:"layoutPreferenceCount"`
+
+	// LayoutContainers - <nil>
+	LayoutContainers []*SoftLayer_Layout_Container `json:"layoutContainers"`
 }
 
-func (softlayer_layout_profile *SoftLayer_Layout_Profile) String() string {
+func (softlayer_layout_profile *SoftLayer_Layout_Profile_Extended) String() string {
 	return "SoftLayer_Layout_Profile"
 }

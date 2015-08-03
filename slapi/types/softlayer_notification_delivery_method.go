@@ -5,6 +5,9 @@ package types
 // SoftLayer_Notification_Delivery_Method - Provides details for the delivery methods available.
 type SoftLayer_Notification_Delivery_Method struct {
 
+	// Name - no documentation
+	Name string `json:"name"`
+
 	// Active - Determines if the delivery method is still used by the system.
 	Active int `json:"active"`
 
@@ -16,9 +19,6 @@ type SoftLayer_Notification_Delivery_Method struct {
 
 	// KeyName - Name that can be used by external systems to refer to delivery method.
 	KeyName string `json:"keyName"`
-
-	// Name - no documentation
-	Name string `json:"name"`
 }
 
 func (softlayer_notification_delivery_method *SoftLayer_Notification_Delivery_Method) String() string {

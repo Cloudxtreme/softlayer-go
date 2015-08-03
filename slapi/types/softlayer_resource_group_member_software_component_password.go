@@ -6,6 +6,10 @@ package types
 type SoftLayer_Resource_Group_Member_Software_Component_Password struct {
 }
 
+func (softlayer_resource_group_member_software_component_password *SoftLayer_Resource_Group_Member_Software_Component_Password) String() string {
+	return "SoftLayer_Resource_Group_Member_Software_Component_Password"
+}
+
 // SoftLayer_Resource_Group_Member_Software_Component_Password_Extended is SoftLayer_Resource_Group_Member_Software_Component_Password with all maskable types.
 type SoftLayer_Resource_Group_Member_Software_Component_Password_Extended struct {
 	SoftLayer_Resource_Group_Member_Software_Component_Password
@@ -14,6 +18,6 @@ type SoftLayer_Resource_Group_Member_Software_Component_Password_Extended struct
 	Resource *SoftLayer_Software_Component_Password `json:"resource"`
 }
 
-func (softlayer_resource_group_member_software_component_password *SoftLayer_Resource_Group_Member_Software_Component_Password) String() string {
+func (softlayer_resource_group_member_software_component_password *SoftLayer_Resource_Group_Member_Software_Component_Password_Extended) String() string {
 	return "SoftLayer_Resource_Group_Member_Software_Component_Password"
 }

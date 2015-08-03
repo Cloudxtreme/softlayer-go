@@ -8,6 +8,10 @@ package types
 type SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request struct {
 }
 
+func (softlayer_billing_item_account_media_data_transfer_request *SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request) String() string {
+	return "SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request"
+}
+
 // SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request_Extended is SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request with all maskable types.
 type SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request_Extended struct {
 	SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request
@@ -16,6 +20,6 @@ type SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request_Extended struct 
 	Resource *SoftLayer_Account_Media_Data_Transfer_Request `json:"resource"`
 }
 
-func (softlayer_billing_item_account_media_data_transfer_request *SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request) String() string {
+func (softlayer_billing_item_account_media_data_transfer_request *SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request_Extended) String() string {
 	return "SoftLayer_Billing_Item_Account_Media_Data_Transfer_Request"
 }

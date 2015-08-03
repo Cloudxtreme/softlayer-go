@@ -9,9 +9,6 @@ import (
 // SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Options - <nil>
 type SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Options struct {
 
-	// StartDate - <nil>
-	StartDate *time.Time `json:"startDate"`
-
 	// AggregatesOnly - <nil>
 	AggregatesOnly bool `json:"aggregatesOnly"`
 
@@ -26,6 +23,9 @@ type SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Opti
 
 	// SelectedStatistics - <nil>
 	SelectedStatistics []string `json:"selectedStatistics"`
+
+	// StartDate - <nil>
+	StartDate *time.Time `json:"startDate"`
 }
 
 func (softlayer_container_network_message_delivery_email_sendgrid_statistics_options *SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Options) String() string {

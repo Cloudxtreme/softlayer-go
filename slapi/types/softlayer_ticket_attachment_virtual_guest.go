@@ -15,6 +15,10 @@ type SoftLayer_Ticket_Attachment_Virtual_Guest struct {
 	VirtualGuestId int `json:"virtualGuestId"`
 }
 
+func (softlayer_ticket_attachment_virtual_guest *SoftLayer_Ticket_Attachment_Virtual_Guest) String() string {
+	return "SoftLayer_Ticket_Attachment_Virtual_Guest"
+}
+
 // SoftLayer_Ticket_Attachment_Virtual_Guest_Extended is SoftLayer_Ticket_Attachment_Virtual_Guest with all maskable types.
 type SoftLayer_Ticket_Attachment_Virtual_Guest_Extended struct {
 	SoftLayer_Ticket_Attachment_Virtual_Guest
@@ -26,6 +30,6 @@ type SoftLayer_Ticket_Attachment_Virtual_Guest_Extended struct {
 	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest"`
 }
 
-func (softlayer_ticket_attachment_virtual_guest *SoftLayer_Ticket_Attachment_Virtual_Guest) String() string {
+func (softlayer_ticket_attachment_virtual_guest *SoftLayer_Ticket_Attachment_Virtual_Guest_Extended) String() string {
 	return "SoftLayer_Ticket_Attachment_Virtual_Guest"
 }

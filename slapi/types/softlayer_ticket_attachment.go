@@ -27,20 +27,24 @@ type SoftLayer_Ticket_Attachment struct {
 	TicketId int `json:"ticketId"`
 }
 
+func (softlayer_ticket_attachment *SoftLayer_Ticket_Attachment) String() string {
+	return "SoftLayer_Ticket_Attachment"
+}
+
 // SoftLayer_Ticket_Attachment_Extended is SoftLayer_Ticket_Attachment with all maskable types.
 type SoftLayer_Ticket_Attachment_Extended struct {
 	SoftLayer_Ticket_Attachment
-
-	// Ticket - no documentation
-	Ticket *SoftLayer_Ticket `json:"ticket"`
 
 	// AssignedAgent - <nil>
 	AssignedAgent *SoftLayer_User_Customer `json:"assignedAgent"`
 
 	// ScheduledAction - <nil>
 	ScheduledAction *SoftLayer_Provisioning_Version1_Transaction `json:"scheduledAction"`
+
+	// Ticket - no documentation
+	Ticket *SoftLayer_Ticket `json:"ticket"`
 }
 
-func (softlayer_ticket_attachment *SoftLayer_Ticket_Attachment) String() string {
+func (softlayer_ticket_attachment *SoftLayer_Ticket_Attachment_Extended) String() string {
 	return "SoftLayer_Ticket_Attachment"
 }

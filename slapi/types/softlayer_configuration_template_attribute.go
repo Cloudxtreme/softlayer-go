@@ -10,6 +10,10 @@ type SoftLayer_Configuration_Template_Attribute struct {
 	Value string `json:"value"`
 }
 
+func (softlayer_configuration_template_attribute *SoftLayer_Configuration_Template_Attribute) String() string {
+	return "SoftLayer_Configuration_Template_Attribute"
+}
+
 // SoftLayer_Configuration_Template_Attribute_Extended is SoftLayer_Configuration_Template_Attribute with all maskable types.
 type SoftLayer_Configuration_Template_Attribute_Extended struct {
 	SoftLayer_Configuration_Template_Attribute
@@ -18,6 +22,6 @@ type SoftLayer_Configuration_Template_Attribute_Extended struct {
 	ConfigurationTemplate *SoftLayer_Configuration_Template `json:"configurationTemplate"`
 }
 
-func (softlayer_configuration_template_attribute *SoftLayer_Configuration_Template_Attribute) String() string {
+func (softlayer_configuration_template_attribute *SoftLayer_Configuration_Template_Attribute_Extended) String() string {
 	return "SoftLayer_Configuration_Template_Attribute"
 }

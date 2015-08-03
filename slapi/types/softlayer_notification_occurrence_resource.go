@@ -25,6 +25,10 @@ type SoftLayer_Notification_Occurrence_Resource struct {
 	ResourceTableId int `json:"resourceTableId"`
 }
 
+func (softlayer_notification_occurrence_resource *SoftLayer_Notification_Occurrence_Resource) String() string {
+	return "SoftLayer_Notification_Occurrence_Resource"
+}
+
 // SoftLayer_Notification_Occurrence_Resource_Extended is SoftLayer_Notification_Occurrence_Resource with all maskable types.
 type SoftLayer_Notification_Occurrence_Resource_Extended struct {
 	SoftLayer_Notification_Occurrence_Resource
@@ -36,6 +40,6 @@ type SoftLayer_Notification_Occurrence_Resource_Extended struct {
 	Resource *SoftLayer_Entity `json:"resource"`
 }
 
-func (softlayer_notification_occurrence_resource *SoftLayer_Notification_Occurrence_Resource) String() string {
+func (softlayer_notification_occurrence_resource *SoftLayer_Notification_Occurrence_Resource_Extended) String() string {
 	return "SoftLayer_Notification_Occurrence_Resource"
 }

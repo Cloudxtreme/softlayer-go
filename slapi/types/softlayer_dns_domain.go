@@ -13,11 +13,8 @@ import (
 // records.
 type SoftLayer_Dns_Domain struct {
 
-	// UpdateDate - no documentation
-	UpdateDate *time.Time `json:"updateDate"`
-
-	// Id - no documentation
-	Id int `json:"id"`
+	// Name - A domain's name including top-level domain, for example "example.com".
+	Name string `json:"name"`
 
 	// Serial - A unique number denoting the latest revision of a domain. Whenever a domain is changed its
 	// corresponding serial number is also changed. Serial numbers typically follow the format yyyymmdd##
@@ -26,20 +23,30 @@ type SoftLayer_Dns_Domain struct {
 	// edited via the
 	Serial int `json:"serial"`
 
-	// Name - A domain's name including top-level domain, for example "example.com".
-	Name string `json:"name"`
+	// UpdateDate - no documentation
+	UpdateDate *time.Time `json:"updateDate"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+}
+
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) String() string {
+	return "SoftLayer_Dns_Domain"
 }
 
 // SoftLayer_Dns_Domain_Extended is SoftLayer_Dns_Domain with all maskable types.
 type SoftLayer_Dns_Domain_Extended struct {
 	SoftLayer_Dns_Domain
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
+	// ManagedResourceFlag - A flag indicating that the dns domain record is a managed resource.
+	ManagedResourceFlag bool `json:"managedResourceFlag"`
 
 	// ResourceRecords - The individual records contained within a domain record. These include but are not
 	// limited to A, MX, SPF and TXT records.
 	ResourceRecords []*SoftLayer_Dns_Domain_ResourceRecord `json:"resourceRecords"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account"`
 
 	// Secondary - The secondary DNS record that defines this domain as being managed through zone
 	// transfers.
@@ -48,11 +55,8 @@ type SoftLayer_Dns_Domain_Extended struct {
 	// ResourceRecordCount - A count of the individual records contained within a domain record. These
 	// include but are not limited to A, MX, SPF and TXT records.
 	ResourceRecordCount uint64 `json:"resourceRecordCount"`
-
-	// ManagedResourceFlag - A flag indicating that the dns domain record is a managed resource.
-	ManagedResourceFlag bool `json:"managedResourceFlag"`
 }
 
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) String() string {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain_Extended) String() string {
 	return "SoftLayer_Dns_Domain"
 }

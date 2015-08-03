@@ -7,6 +7,10 @@ package types
 type SoftLayer_Ticket_Update_Chat struct {
 }
 
+func (softlayer_ticket_update_chat *SoftLayer_Ticket_Update_Chat) String() string {
+	return "SoftLayer_Ticket_Update_Chat"
+}
+
 // SoftLayer_Ticket_Update_Chat_Extended is SoftLayer_Ticket_Update_Chat with all maskable types.
 type SoftLayer_Ticket_Update_Chat_Extended struct {
 	SoftLayer_Ticket_Update_Chat
@@ -15,6 +19,6 @@ type SoftLayer_Ticket_Update_Chat_Extended struct {
 	Chat *SoftLayer_Ticket_Chat_Liveperson `json:"chat"`
 }
 
-func (softlayer_ticket_update_chat *SoftLayer_Ticket_Update_Chat) String() string {
+func (softlayer_ticket_update_chat *SoftLayer_Ticket_Update_Chat_Extended) String() string {
 	return "SoftLayer_Ticket_Update_Chat"
 }

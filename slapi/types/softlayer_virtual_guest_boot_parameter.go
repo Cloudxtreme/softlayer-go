@@ -25,6 +25,10 @@ type SoftLayer_Virtual_Guest_Boot_Parameter struct {
 	ModifyDate *time.Time `json:"modifyDate"`
 }
 
+func (softlayer_virtual_guest_boot_parameter *SoftLayer_Virtual_Guest_Boot_Parameter) String() string {
+	return "SoftLayer_Virtual_Guest_Boot_Parameter"
+}
+
 // SoftLayer_Virtual_Guest_Boot_Parameter_Extended is SoftLayer_Virtual_Guest_Boot_Parameter with all maskable types.
 type SoftLayer_Virtual_Guest_Boot_Parameter_Extended struct {
 	SoftLayer_Virtual_Guest_Boot_Parameter
@@ -36,6 +40,6 @@ type SoftLayer_Virtual_Guest_Boot_Parameter_Extended struct {
 	GuestBootParameterType *SoftLayer_Virtual_Guest_Boot_Parameter_Type `json:"guestBootParameterType"`
 }
 
-func (softlayer_virtual_guest_boot_parameter *SoftLayer_Virtual_Guest_Boot_Parameter) String() string {
+func (softlayer_virtual_guest_boot_parameter *SoftLayer_Virtual_Guest_Boot_Parameter_Extended) String() string {
 	return "SoftLayer_Virtual_Guest_Boot_Parameter"
 }

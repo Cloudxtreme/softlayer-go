@@ -9,12 +9,6 @@ import (
 // SoftLayer_Network_Storage_Credential_Type - <nil>
 type SoftLayer_Network_Storage_Credential_Type struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
-	// Description - no documentation
-	Description string `json:"description"`
-
 	// KeyName - no documentation
 	KeyName string `json:"keyName"`
 
@@ -23,6 +17,12 @@ type SoftLayer_Network_Storage_Credential_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+
+	// Description - no documentation
+	Description string `json:"description"`
 }
 
 func (softlayer_network_storage_credential_type *SoftLayer_Network_Storage_Credential_Type) String() string {

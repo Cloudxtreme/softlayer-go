@@ -14,6 +14,10 @@ type SoftLayer_Software_License struct {
 	SoftwareDescriptionId int `json:"softwareDescriptionId"`
 }
 
+func (softlayer_software_license *SoftLayer_Software_License) String() string {
+	return "SoftLayer_Software_License"
+}
+
 // SoftLayer_Software_License_Extended is SoftLayer_Software_License with all maskable types.
 type SoftLayer_Software_License_Extended struct {
 	SoftLayer_Software_License
@@ -28,6 +32,6 @@ type SoftLayer_Software_License_Extended struct {
 	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription"`
 }
 
-func (softlayer_software_license *SoftLayer_Software_License) String() string {
+func (softlayer_software_license *SoftLayer_Software_License_Extended) String() string {
 	return "SoftLayer_Software_License"
 }

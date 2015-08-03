@@ -5,6 +5,9 @@ package types
 // SoftLayer_Product_Item_Price_Attribute - <nil>
 type SoftLayer_Product_Item_Price_Attribute struct {
 
+	// Value - <nil>
+	Value string `json:"value"`
+
 	// Id - <nil>
 	Id int `json:"id"`
 
@@ -13,9 +16,10 @@ type SoftLayer_Product_Item_Price_Attribute struct {
 
 	// ItemPriceId - <nil>
 	ItemPriceId int `json:"itemPriceId"`
+}
 
-	// Value - <nil>
-	Value string `json:"value"`
+func (softlayer_product_item_price_attribute *SoftLayer_Product_Item_Price_Attribute) String() string {
+	return "SoftLayer_Product_Item_Price_Attribute"
 }
 
 // SoftLayer_Product_Item_Price_Attribute_Extended is SoftLayer_Product_Item_Price_Attribute with all maskable types.
@@ -29,6 +33,6 @@ type SoftLayer_Product_Item_Price_Attribute_Extended struct {
 	ItemPriceAttributeType *SoftLayer_Product_Item_Price_Attribute_Type `json:"itemPriceAttributeType"`
 }
 
-func (softlayer_product_item_price_attribute *SoftLayer_Product_Item_Price_Attribute) String() string {
+func (softlayer_product_item_price_attribute *SoftLayer_Product_Item_Price_Attribute_Extended) String() string {
 	return "SoftLayer_Product_Item_Price_Attribute"
 }

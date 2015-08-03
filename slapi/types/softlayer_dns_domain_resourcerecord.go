@@ -21,10 +21,15 @@ package types
 // ''type'' property and casts the object as the appropriate type.
 type SoftLayer_Dns_Domain_ResourceRecord struct {
 
-	// Refresh - The amount of time in seconds that a secondary name server should wait to check for a new
-	// copy of a DNS zone from the domain's primary name server. If a zone file has changed then the
-	// secondary DNS server will update it's copy of the zone to match the primary DNS server's zone.
-	Refresh int `json:"refresh"`
+	// DomainId - An identifier belonging to the domain that a resource record is associated with.
+	DomainId int `json:"domainId"`
+
+	// Expire - The amount of time in seconds that a secondary name server (or servers) will hold a zone
+	// before it is no longer considered authoritative.
+	Expire int `json:"expire"`
+
+	// Host - The host defined by a resource record. A value of "@" denotes a wildcard.
+	Host string `json:"host"`
 
 	// ResponsiblePerson - The email address of the person responsible for a domain, with the "@" replaced
 	// with a For instance, if root@example.org is responsible for example.org, then example.org's SOA
@@ -39,25 +44,10 @@ type SoftLayer_Dns_Domain_ResourceRecord struct {
 	// class in the SoftLayer API is a best match for extending a resource record.
 	Type string `json:"type"`
 
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// Expire - The amount of time in seconds that a secondary name server (or servers) will hold a zone
-	// before it is no longer considered authoritative.
-	Expire int `json:"expire"`
-
-	// Host - The host defined by a resource record. A value of "@" denotes a wildcard.
-	Host string `json:"host"`
-
-	// Minimum - The amount of time in seconds that a domain's resource records are valid. This is also
-	// known as a minimum and can be overridden by an individual resource record's
-	Minimum int `json:"minimum"`
-
-	// MxPriority - Useful in cases where a domain has more than one mail exchanger, the priority property
-	// is the priority of the MTA that delivers mail for a domain. A lower number denotes a higher
-	// priority, and mail will attempt to deliver through that MTA before moving to lower priority mail
-	// servers. Priority is defaulted to 10 upon resource record creation.
-	MxPriority int `json:"mxPriority"`
+	// Refresh - The amount of time in seconds that a secondary name server should wait to check for a new
+	// copy of a DNS zone from the domain's primary name server. If a zone file has changed then the
+	// secondary DNS server will update it's copy of the zone to match the primary DNS server's zone.
+	Refresh int `json:"refresh"`
 
 	// Retry - The amount of time in seconds that a domain's primary name server (or servers) should wait
 	// if an attempt to refresh by a secondary name server failed before attempting to refresh a domain's
@@ -73,8 +63,22 @@ type SoftLayer_Dns_Domain_ResourceRecord struct {
 	// qualified host and domain name data must end with the "." character.
 	Data string `json:"data"`
 
-	// DomainId - An identifier belonging to the domain that a resource record is associated with.
-	DomainId int `json:"domainId"`
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// Minimum - The amount of time in seconds that a domain's resource records are valid. This is also
+	// known as a minimum and can be overridden by an individual resource record's
+	Minimum int `json:"minimum"`
+
+	// MxPriority - Useful in cases where a domain has more than one mail exchanger, the priority property
+	// is the priority of the MTA that delivers mail for a domain. A lower number denotes a higher
+	// priority, and mail will attempt to deliver through that MTA before moving to lower priority mail
+	// servers. Priority is defaulted to 10 upon resource record creation.
+	MxPriority int `json:"mxPriority"`
+}
+
+func (softlayer_dns_domain_resourcerecord *SoftLayer_Dns_Domain_ResourceRecord) String() string {
+	return "SoftLayer_Dns_Domain_ResourceRecord"
 }
 
 // SoftLayer_Dns_Domain_ResourceRecord_Extended is SoftLayer_Dns_Domain_ResourceRecord with all maskable types.
@@ -85,6 +89,6 @@ type SoftLayer_Dns_Domain_ResourceRecord_Extended struct {
 	Domain *SoftLayer_Dns_Domain `json:"domain"`
 }
 
-func (softlayer_dns_domain_resourcerecord *SoftLayer_Dns_Domain_ResourceRecord) String() string {
+func (softlayer_dns_domain_resourcerecord *SoftLayer_Dns_Domain_ResourceRecord_Extended) String() string {
 	return "SoftLayer_Dns_Domain_ResourceRecord"
 }

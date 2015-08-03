@@ -9,6 +9,10 @@ package types
 type SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7 struct {
 }
 
+func (softlayer_software_component_hostips_mcafee_epo_version36_hips_version7 *SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7) String() string {
+	return "SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7"
+}
+
 // SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7_Extended is SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7 with all maskable types.
 type SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7_Extended struct {
 	SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7
@@ -27,6 +31,6 @@ type SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7_Ext
 	IpsEventCount uint64 `json:"ipsEventCount"`
 }
 
-func (softlayer_software_component_hostips_mcafee_epo_version36_hips_version7 *SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7) String() string {
+func (softlayer_software_component_hostips_mcafee_epo_version36_hips_version7 *SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7_Extended) String() string {
 	return "SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version7"
 }

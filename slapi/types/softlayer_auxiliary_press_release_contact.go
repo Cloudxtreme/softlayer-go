@@ -5,12 +5,6 @@ package types
 // SoftLayer_Auxiliary_Press_Release_Contact - <nil>
 type SoftLayer_Auxiliary_Press_Release_Contact struct {
 
-	// Phone - no documentation
-	Phone string `json:"phone"`
-
-	// ProfessionalTitle - no documentation
-	ProfessionalTitle string `json:"professionalTitle"`
-
 	// Email - no documentation
 	Email string `json:"email"`
 
@@ -22,6 +16,12 @@ type SoftLayer_Auxiliary_Press_Release_Contact struct {
 
 	// LastName - no documentation
 	LastName string `json:"lastName"`
+
+	// Phone - no documentation
+	Phone string `json:"phone"`
+
+	// ProfessionalTitle - no documentation
+	ProfessionalTitle string `json:"professionalTitle"`
 }
 
 func (softlayer_auxiliary_press_release_contact *SoftLayer_Auxiliary_Press_Release_Contact) String() string {

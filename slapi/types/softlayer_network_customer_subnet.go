@@ -30,17 +30,21 @@ type SoftLayer_Network_Customer_Subnet struct {
 	AccountId int `json:"accountId"`
 }
 
+func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) String() string {
+	return "SoftLayer_Network_Customer_Subnet"
+}
+
 // SoftLayer_Network_Customer_Subnet_Extended is SoftLayer_Network_Customer_Subnet with all maskable types.
 type SoftLayer_Network_Customer_Subnet_Extended struct {
 	SoftLayer_Network_Customer_Subnet
 
-	// IpAddressCount - A count of all ip addresses associated with a subnet.
-	IpAddressCount uint64 `json:"ipAddressCount"`
-
 	// IpAddresses - no documentation
 	IpAddresses []*SoftLayer_Network_Customer_Subnet_IpAddress `json:"ipAddresses"`
+
+	// IpAddressCount - A count of all ip addresses associated with a subnet.
+	IpAddressCount uint64 `json:"ipAddressCount"`
 }
 
-func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) String() string {
+func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet_Extended) String() string {
 	return "SoftLayer_Network_Customer_Subnet"
 }

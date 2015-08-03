@@ -10,6 +10,10 @@ package types
 type SoftLayer_Network_Component_Uplink_Hardware struct {
 }
 
+func (softlayer_network_component_uplink_hardware *SoftLayer_Network_Component_Uplink_Hardware) String() string {
+	return "SoftLayer_Network_Component_Uplink_Hardware"
+}
+
 // SoftLayer_Network_Component_Uplink_Hardware_Extended is SoftLayer_Network_Component_Uplink_Hardware with all maskable types.
 type SoftLayer_Network_Component_Uplink_Hardware_Extended struct {
 	SoftLayer_Network_Component_Uplink_Hardware
@@ -22,6 +26,6 @@ type SoftLayer_Network_Component_Uplink_Hardware_Extended struct {
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
 }
 
-func (softlayer_network_component_uplink_hardware *SoftLayer_Network_Component_Uplink_Hardware) String() string {
+func (softlayer_network_component_uplink_hardware *SoftLayer_Network_Component_Uplink_Hardware_Extended) String() string {
 	return "SoftLayer_Network_Component_Uplink_Hardware"
 }

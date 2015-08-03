@@ -16,17 +16,21 @@ type SoftLayer_Network_Component_Firewall_Subnets struct {
 	SubnetId int `json:"subnetId"`
 }
 
+func (softlayer_network_component_firewall_subnets *SoftLayer_Network_Component_Firewall_Subnets) String() string {
+	return "SoftLayer_Network_Component_Firewall_Subnets"
+}
+
 // SoftLayer_Network_Component_Firewall_Subnets_Extended is SoftLayer_Network_Component_Firewall_Subnets with all maskable types.
 type SoftLayer_Network_Component_Firewall_Subnets_Extended struct {
 	SoftLayer_Network_Component_Firewall_Subnets
 
-	// Subnet - The subnet that this link binds to the network component firewall.
-	Subnet *SoftLayer_Network_Subnet `json:"subnet"`
-
 	// NetworkComponentFirewall - The network component firewall that write rules for this subnet.
 	NetworkComponentFirewall *SoftLayer_Network_Component_Firewall `json:"networkComponentFirewall"`
+
+	// Subnet - The subnet that this link binds to the network component firewall.
+	Subnet *SoftLayer_Network_Subnet `json:"subnet"`
 }
 
-func (softlayer_network_component_firewall_subnets *SoftLayer_Network_Component_Firewall_Subnets) String() string {
+func (softlayer_network_component_firewall_subnets *SoftLayer_Network_Component_Firewall_Subnets_Extended) String() string {
 	return "SoftLayer_Network_Component_Firewall_Subnets"
 }

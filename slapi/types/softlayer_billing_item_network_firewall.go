@@ -8,6 +8,10 @@ package types
 type SoftLayer_Billing_Item_Network_Firewall struct {
 }
 
+func (softlayer_billing_item_network_firewall *SoftLayer_Billing_Item_Network_Firewall) String() string {
+	return "SoftLayer_Billing_Item_Network_Firewall"
+}
+
 // SoftLayer_Billing_Item_Network_Firewall_Extended is SoftLayer_Billing_Item_Network_Firewall with all maskable types.
 type SoftLayer_Billing_Item_Network_Firewall_Extended struct {
 	SoftLayer_Billing_Item_Network_Firewall
@@ -16,6 +20,6 @@ type SoftLayer_Billing_Item_Network_Firewall_Extended struct {
 	Resource *SoftLayer_Network_Component_Firewall `json:"resource"`
 }
 
-func (softlayer_billing_item_network_firewall *SoftLayer_Billing_Item_Network_Firewall) String() string {
+func (softlayer_billing_item_network_firewall *SoftLayer_Billing_Item_Network_Firewall_Extended) String() string {
 	return "SoftLayer_Billing_Item_Network_Firewall"
 }

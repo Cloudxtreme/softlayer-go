@@ -31,17 +31,21 @@ type SoftLayer_Billing_Item_Association_History struct {
 	Id int `json:"id"`
 }
 
+func (softlayer_billing_item_association_history *SoftLayer_Billing_Item_Association_History) String() string {
+	return "SoftLayer_Billing_Item_Association_History"
+}
+
 // SoftLayer_Billing_Item_Association_History_Extended is SoftLayer_Billing_Item_Association_History with all maskable types.
 type SoftLayer_Billing_Item_Association_History_Extended struct {
 	SoftLayer_Billing_Item_Association_History
 
-	// BillingItem - The billing item that was associated with a server billing item.
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
-
 	// AssociatedBillingItem - The server billing item that an orphaned billing item was associated with.
 	AssociatedBillingItem *SoftLayer_Billing_Item `json:"associatedBillingItem"`
+
+	// BillingItem - The billing item that was associated with a server billing item.
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
 }
 
-func (softlayer_billing_item_association_history *SoftLayer_Billing_Item_Association_History) String() string {
+func (softlayer_billing_item_association_history *SoftLayer_Billing_Item_Association_History_Extended) String() string {
 	return "SoftLayer_Billing_Item_Association_History"
 }

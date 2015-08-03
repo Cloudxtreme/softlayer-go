@@ -6,6 +6,10 @@ package types
 type SoftLayer_Scale_Asset_Hardware struct {
 }
 
+func (softlayer_scale_asset_hardware *SoftLayer_Scale_Asset_Hardware) String() string {
+	return "SoftLayer_Scale_Asset_Hardware"
+}
+
 // SoftLayer_Scale_Asset_Hardware_Extended is SoftLayer_Scale_Asset_Hardware with all maskable types.
 type SoftLayer_Scale_Asset_Hardware_Extended struct {
 	SoftLayer_Scale_Asset_Hardware
@@ -17,6 +21,6 @@ type SoftLayer_Scale_Asset_Hardware_Extended struct {
 	HardwareId int `json:"hardwareId"`
 }
 
-func (softlayer_scale_asset_hardware *SoftLayer_Scale_Asset_Hardware) String() string {
+func (softlayer_scale_asset_hardware *SoftLayer_Scale_Asset_Hardware_Extended) String() string {
 	return "SoftLayer_Scale_Asset_Hardware"
 }

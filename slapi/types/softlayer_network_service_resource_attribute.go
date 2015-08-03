@@ -9,6 +9,10 @@ type SoftLayer_Network_Service_Resource_Attribute struct {
 	Value string `json:"value"`
 }
 
+func (softlayer_network_service_resource_attribute *SoftLayer_Network_Service_Resource_Attribute) String() string {
+	return "SoftLayer_Network_Service_Resource_Attribute"
+}
+
 // SoftLayer_Network_Service_Resource_Attribute_Extended is SoftLayer_Network_Service_Resource_Attribute with all maskable types.
 type SoftLayer_Network_Service_Resource_Attribute_Extended struct {
 	SoftLayer_Network_Service_Resource_Attribute
@@ -20,6 +24,6 @@ type SoftLayer_Network_Service_Resource_Attribute_Extended struct {
 	ServiceResource *SoftLayer_Network_Service_Resource `json:"serviceResource"`
 }
 
-func (softlayer_network_service_resource_attribute *SoftLayer_Network_Service_Resource_Attribute) String() string {
+func (softlayer_network_service_resource_attribute *SoftLayer_Network_Service_Resource_Attribute_Extended) String() string {
 	return "SoftLayer_Network_Service_Resource_Attribute"
 }

@@ -5,8 +5,20 @@ package types
 // SoftLayer_Configuration_Storage_Group_Array_Type - no documentation
 type SoftLayer_Configuration_Storage_Group_Array_Type struct {
 
+	// HotspareAllow - <nil>
+	HotspareAllow bool `json:"hotspareAllow"`
+
+	// KeyName - <nil>
+	KeyName string `json:"keyName"`
+
 	// MinimumDrives - <nil>
 	MinimumDrives int `json:"minimumDrives"`
+
+	// Name - <nil>
+	Name string `json:"name"`
+
+	// Description - <nil>
+	Description string `json:"description"`
 
 	// DriveMultiplier - <nil>
 	DriveMultiplier int `json:"driveMultiplier"`
@@ -16,18 +28,10 @@ type SoftLayer_Configuration_Storage_Group_Array_Type struct {
 
 	// MaximumDrives - <nil>
 	MaximumDrives int `json:"maximumDrives"`
+}
 
-	// KeyName - <nil>
-	KeyName string `json:"keyName"`
-
-	// Name - <nil>
-	Name string `json:"name"`
-
-	// Description - <nil>
-	Description string `json:"description"`
-
-	// HotspareAllow - <nil>
-	HotspareAllow bool `json:"hotspareAllow"`
+func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) String() string {
+	return "SoftLayer_Configuration_Storage_Group_Array_Type"
 }
 
 // SoftLayer_Configuration_Storage_Group_Array_Type_Extended is SoftLayer_Configuration_Storage_Group_Array_Type with all maskable types.
@@ -41,6 +45,6 @@ type SoftLayer_Configuration_Storage_Group_Array_Type_Extended struct {
 	HardwareComponentModels []*SoftLayer_Hardware_Component_Model `json:"hardwareComponentModels"`
 }
 
-func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) String() string {
+func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type_Extended) String() string {
 	return "SoftLayer_Configuration_Storage_Group_Array_Type"
 }

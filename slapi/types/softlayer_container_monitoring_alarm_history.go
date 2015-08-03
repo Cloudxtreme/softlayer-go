@@ -10,6 +10,9 @@ import (
 // type contains information relating to SoftLayer monitoring alarm history.
 type SoftLayer_Container_Monitoring_Alarm_History struct {
 
+	// ClosedDate - no documentation
+	ClosedDate *time.Time `json:"closedDate"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
@@ -30,9 +33,6 @@ type SoftLayer_Container_Monitoring_Alarm_History struct {
 
 	// AlarmId - no documentation
 	AlarmId string `json:"alarmId"`
-
-	// ClosedDate - no documentation
-	ClosedDate *time.Time `json:"closedDate"`
 }
 
 func (softlayer_container_monitoring_alarm_history *SoftLayer_Container_Monitoring_Alarm_History) String() string {

@@ -18,6 +18,10 @@ type SoftLayer_Product_Package_Type struct {
 	Name string `json:"name"`
 }
 
+func (softlayer_product_package_type *SoftLayer_Product_Package_Type) String() string {
+	return "SoftLayer_Product_Package_Type"
+}
+
 // SoftLayer_Product_Package_Type_Extended is SoftLayer_Product_Package_Type with all maskable types.
 type SoftLayer_Product_Package_Type_Extended struct {
 	SoftLayer_Product_Package_Type
@@ -29,6 +33,6 @@ type SoftLayer_Product_Package_Type_Extended struct {
 	Packages []*SoftLayer_Product_Package `json:"packages"`
 }
 
-func (softlayer_product_package_type *SoftLayer_Product_Package_Type) String() string {
+func (softlayer_product_package_type *SoftLayer_Product_Package_Type_Extended) String() string {
 	return "SoftLayer_Product_Package_Type"
 }

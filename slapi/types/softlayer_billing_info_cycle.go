@@ -27,6 +27,10 @@ type SoftLayer_Billing_Info_Cycle struct {
 	PreviousCycleStartDate *time.Time `json:"previousCycleStartDate"`
 }
 
+func (softlayer_billing_info_cycle *SoftLayer_Billing_Info_Cycle) String() string {
+	return "SoftLayer_Billing_Info_Cycle"
+}
+
 // SoftLayer_Billing_Info_Cycle_Extended is SoftLayer_Billing_Info_Cycle with all maskable types.
 type SoftLayer_Billing_Info_Cycle_Extended struct {
 	SoftLayer_Billing_Info_Cycle
@@ -35,6 +39,6 @@ type SoftLayer_Billing_Info_Cycle_Extended struct {
 	Account *SoftLayer_Account `json:"account"`
 }
 
-func (softlayer_billing_info_cycle *SoftLayer_Billing_Info_Cycle) String() string {
+func (softlayer_billing_info_cycle *SoftLayer_Billing_Info_Cycle_Extended) String() string {
 	return "SoftLayer_Billing_Info_Cycle"
 }

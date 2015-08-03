@@ -8,9 +8,16 @@ package types
 type SoftLayer_Product_Catalog struct {
 }
 
+func (softlayer_product_catalog *SoftLayer_Product_Catalog) String() string {
+	return "SoftLayer_Product_Catalog"
+}
+
 // SoftLayer_Product_Catalog_Extended is SoftLayer_Product_Catalog with all maskable types.
 type SoftLayer_Product_Catalog_Extended struct {
 	SoftLayer_Product_Catalog
+
+	// PriceCount - no documentation
+	PriceCount uint64 `json:"priceCount"`
 
 	// ProductCount - no documentation
 	ProductCount uint64 `json:"productCount"`
@@ -32,11 +39,8 @@ type SoftLayer_Product_Catalog_Extended struct {
 
 	// PackageCount - no documentation
 	PackageCount uint64 `json:"packageCount"`
-
-	// PriceCount - no documentation
-	PriceCount uint64 `json:"priceCount"`
 }
 
-func (softlayer_product_catalog *SoftLayer_Product_Catalog) String() string {
+func (softlayer_product_catalog *SoftLayer_Product_Catalog_Extended) String() string {
 	return "SoftLayer_Product_Catalog"
 }

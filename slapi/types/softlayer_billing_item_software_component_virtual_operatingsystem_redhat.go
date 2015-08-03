@@ -12,6 +12,10 @@ type SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat st
 	ResourceTableId int `json:"resourceTableId"`
 }
 
+func (softlayer_billing_item_software_component_virtual_operatingsystem_redhat *SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat) String() string {
+	return "SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat"
+}
+
 // SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat_Extended is SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat with all maskable types.
 type SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat_Extended struct {
 	SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat
@@ -20,6 +24,6 @@ type SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat_Ex
 	Resource *SoftLayer_Software_Component `json:"resource"`
 }
 
-func (softlayer_billing_item_software_component_virtual_operatingsystem_redhat *SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat) String() string {
+func (softlayer_billing_item_software_component_virtual_operatingsystem_redhat *SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat_Extended) String() string {
 	return "SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Redhat"
 }

@@ -18,6 +18,10 @@ type SoftLayer_Resource_Group_Template_Member struct {
 	TemplateId int `json:"templateId"`
 }
 
+func (softlayer_resource_group_template_member *SoftLayer_Resource_Group_Template_Member) String() string {
+	return "SoftLayer_Resource_Group_Template_Member"
+}
+
 // SoftLayer_Resource_Group_Template_Member_Extended is SoftLayer_Resource_Group_Template_Member with all maskable types.
 type SoftLayer_Resource_Group_Template_Member_Extended struct {
 	SoftLayer_Resource_Group_Template_Member
@@ -29,6 +33,6 @@ type SoftLayer_Resource_Group_Template_Member_Extended struct {
 	Template *SoftLayer_Resource_Group_Template `json:"template"`
 }
 
-func (softlayer_resource_group_template_member *SoftLayer_Resource_Group_Template_Member) String() string {
+func (softlayer_resource_group_template_member *SoftLayer_Resource_Group_Template_Member_Extended) String() string {
 	return "SoftLayer_Resource_Group_Template_Member"
 }

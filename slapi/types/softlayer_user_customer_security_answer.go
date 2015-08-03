@@ -19,17 +19,21 @@ type SoftLayer_User_Customer_Security_Answer struct {
 	UserId int `json:"userId"`
 }
 
+func (softlayer_user_customer_security_answer *SoftLayer_User_Customer_Security_Answer) String() string {
+	return "SoftLayer_User_Customer_Security_Answer"
+}
+
 // SoftLayer_User_Customer_Security_Answer_Extended is SoftLayer_User_Customer_Security_Answer with all maskable types.
 type SoftLayer_User_Customer_Security_Answer_Extended struct {
 	SoftLayer_User_Customer_Security_Answer
 
-	// Question - The question the security answer is associated with.
-	Question *SoftLayer_User_Security_Question `json:"question"`
-
 	// User - no documentation
 	User *SoftLayer_User_Customer `json:"user"`
+
+	// Question - The question the security answer is associated with.
+	Question *SoftLayer_User_Security_Question `json:"question"`
 }
 
-func (softlayer_user_customer_security_answer *SoftLayer_User_Customer_Security_Answer) String() string {
+func (softlayer_user_customer_security_answer *SoftLayer_User_Customer_Security_Answer_Extended) String() string {
 	return "SoftLayer_User_Customer_Security_Answer"
 }

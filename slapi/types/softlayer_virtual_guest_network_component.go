@@ -16,25 +16,11 @@ type SoftLayer_Virtual_Guest_Network_Component struct {
 	// component belongs to.
 	GuestId int `json:"guestId"`
 
+	// ModifyDate - The date a computing instance's network component was last modified.
+	ModifyDate *time.Time `json:"modifyDate"`
+
 	// NetworkId - A computing instance's network component's [[SoftLayer_Virtual_Network|network]] ID
 	NetworkId int `json:"networkId"`
-
-	// Uuid - A computing instance's network component's unique ID on a virtualization platform.
-	Uuid string `json:"uuid"`
-
-	// CreateDate - The date a computing instance's network component was created.
-	CreateDate *time.Time `json:"createDate"`
-
-	// Id - A computing instance's network component's unique ID.
-	Id int `json:"id"`
-
-	// MacAddress - A computing instance network component's unique MAC address.
-	MacAddress string `json:"macAddress"`
-
-	// Name - A computing instance network component's short name. This is usually ''eth''. Use this in
-	// conjunction with the ''port'' property to identify a network component. For instance, the "eth0"
-	// interface on a server has the network component name "eth" and port 0.
-	Name string `json:"name"`
 
 	// Status - A computing instance network component's status. This can take one of four possible values:
 	// network components are enabled and in use on a cloud instance. status components have been
@@ -42,6 +28,9 @@ type SoftLayer_Virtual_Guest_Network_Component struct {
 	// disabled by you, the user. You should never see a network interface in state. If you happen to see
 	// one please contact SoftLayer support.
 	Status string `json:"status"`
+
+	// Id - A computing instance's network component's unique ID.
+	Id int `json:"id"`
 
 	// MaxSpeed - A computing instance network component's maximum allowed speed, measured in Mbit per
 	// second. ''maxSpeed'' is determined by the capabilities of the network interface and the port speed
@@ -51,41 +40,65 @@ type SoftLayer_Virtual_Guest_Network_Component struct {
 	// Speed - A computing instance network component's speed, measured in Mbit per second.
 	Speed int `json:"speed"`
 
-	// ModifyDate - The date a computing instance's network component was last modified.
-	ModifyDate *time.Time `json:"modifyDate"`
+	// CreateDate - The date a computing instance's network component was created.
+	CreateDate *time.Time `json:"createDate"`
+
+	// MacAddress - A computing instance network component's unique MAC address.
+	MacAddress string `json:"macAddress"`
+
+	// Name - A computing instance network component's short name. This is usually ''eth''. Use this in
+	// conjunction with the ''port'' property to identify a network component. For instance, the "eth0"
+	// interface on a server has the network component name "eth" and port 0.
+	Name string `json:"name"`
 
 	// Port - A computing instance network component's port number. Most computing instances have more than
 	// one network interface. The port property separates these interfaces. Use this in conjunction with
 	// the ''name'' property to identify a network component. For instance, the "eth0" interface on a
 	// server has the network component name "eth" and port 0.
 	Port int `json:"port"`
+
+	// Uuid - A computing instance's network component's unique ID on a virtualization platform.
+	Uuid string `json:"uuid"`
+}
+
+func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) String() string {
+	return "SoftLayer_Virtual_Guest_Network_Component"
 }
 
 // SoftLayer_Virtual_Guest_Network_Component_Extended is SoftLayer_Virtual_Guest_Network_Component with all maskable types.
 type SoftLayer_Virtual_Guest_Network_Component_Extended struct {
 	SoftLayer_Virtual_Guest_Network_Component
 
-	// PrimaryIpAddressRecord - <nil>
-	PrimaryIpAddressRecord *SoftLayer_Network_Subnet_IpAddress `json:"primaryIpAddressRecord"`
-
-	// Guest - The computing instance that this network component exists on.
-	Guest *SoftLayer_Virtual_Guest `json:"guest"`
-
-	// PrimarySubnet - A network component's subnet for its primary IP address
-	PrimarySubnet *SoftLayer_Network_Subnet `json:"primarySubnet"`
-
 	// PrimaryVersion6IpAddressRecord - A network component's primary IPv6 IP address record.
 	PrimaryVersion6IpAddressRecord *SoftLayer_Network_Subnet_IpAddress `json:"primaryVersion6IpAddressRecord"`
+
+	// NetworkComponentFirewall - no documentation
+	NetworkComponentFirewall *SoftLayer_Network_Component_Firewall `json:"networkComponentFirewall"`
+
+	// PrimaryIpAddressRecord - <nil>
+	PrimaryIpAddressRecord *SoftLayer_Network_Subnet_IpAddress `json:"primaryIpAddressRecord"`
 
 	// IpAddressBindingCount - A count of the records of all IP addresses bound to a computing instance's
 	// network component.
 	IpAddressBindingCount uint64 `json:"ipAddressBindingCount"`
 
-	// SubnetCount - A count of a network component's subnets. A subnet is a group of IP addresses
-	SubnetCount uint64 `json:"subnetCount"`
+	// Guest - The computing instance that this network component exists on.
+	Guest *SoftLayer_Virtual_Guest `json:"guest"`
 
 	// HighAvailabilityFirewallFlag - <nil>
 	HighAvailabilityFirewallFlag bool `json:"highAvailabilityFirewallFlag"`
+
+	// Router - no documentation
+	Router *SoftLayer_Hardware_Router `json:"router"`
+
+	// Subnets - A network component's subnets. A subnet is a group of IP addresses
+	Subnets []*SoftLayer_Network_Subnet `json:"subnets"`
+
+	// PrimaryIpAddress - A computing instance network component's primary IP address.
+	PrimaryIpAddress string `json:"primaryIpAddress"`
+
+	// PrimarySubnet - A network component's subnet for its primary IP address
+	PrimarySubnet *SoftLayer_Network_Subnet `json:"primarySubnet"`
 
 	// IpAddressBindings - The records of all IP addresses bound to a computing instance's network
 	// component.
@@ -94,19 +107,10 @@ type SoftLayer_Virtual_Guest_Network_Component_Extended struct {
 	// NetworkVlan - The that a computing instance network component's subnet is associated with.
 	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan"`
 
-	// NetworkComponentFirewall - no documentation
-	NetworkComponentFirewall *SoftLayer_Network_Component_Firewall `json:"networkComponentFirewall"`
-
-	// PrimaryIpAddress - A computing instance network component's primary IP address.
-	PrimaryIpAddress string `json:"primaryIpAddress"`
-
-	// Router - no documentation
-	Router *SoftLayer_Hardware_Router `json:"router"`
-
-	// Subnets - A network component's subnets. A subnet is a group of IP addresses
-	Subnets []*SoftLayer_Network_Subnet `json:"subnets"`
+	// SubnetCount - A count of a network component's subnets. A subnet is a group of IP addresses
+	SubnetCount uint64 `json:"subnetCount"`
 }
 
-func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) String() string {
+func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component_Extended) String() string {
 	return "SoftLayer_Virtual_Guest_Network_Component"
 }

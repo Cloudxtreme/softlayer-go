@@ -11,9 +11,6 @@ import (
 // templates for agents in a monitoring package.
 type SoftLayer_Monitoring_Agent_Configuration_Template_Group struct {
 
-	// ItemId - Internal identifier of a configuration template type
-	ItemId int `json:"itemId"`
-
 	// AccountId - Internal identifier of a SoftLayer account that this configuration template belongs to
 	AccountId int `json:"accountId"`
 
@@ -23,14 +20,21 @@ type SoftLayer_Monitoring_Agent_Configuration_Template_Group struct {
 	// Description - Description of a monitoring agent configuration group
 	Description string `json:"description"`
 
-	// Id - Internal identifier of a monitoring agent configuration group
-	Id int `json:"id"`
-
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
 
 	// Name - no documentation
 	Name string `json:"name"`
+
+	// ItemId - Internal identifier of a configuration template type
+	ItemId int `json:"itemId"`
+
+	// Id - Internal identifier of a monitoring agent configuration group
+	Id int `json:"id"`
+}
+
+func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) String() string {
+	return "SoftLayer_Monitoring_Agent_Configuration_Template_Group"
 }
 
 // SoftLayer_Monitoring_Agent_Configuration_Template_Group_Extended is SoftLayer_Monitoring_Agent_Configuration_Template_Group with all maskable types.
@@ -40,22 +44,22 @@ type SoftLayer_Monitoring_Agent_Configuration_Template_Group_Extended struct {
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account"`
 
-	// Item - <nil>
-	Item *SoftLayer_Product_Item `json:"item"`
-
-	// ConfigurationTemplateCount - no documentation
-	ConfigurationTemplateCount uint64 `json:"configurationTemplateCount"`
-
 	// ConfigurationTemplateReferences - <nil>
 	ConfigurationTemplateReferences []*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference `json:"configurationTemplateReferences"`
 
+	// Item - <nil>
+	Item *SoftLayer_Product_Item `json:"item"`
+
 	// ConfigurationTemplates - <nil>
 	ConfigurationTemplates []*SoftLayer_Configuration_Template `json:"configurationTemplates"`
+
+	// ConfigurationTemplateCount - no documentation
+	ConfigurationTemplateCount uint64 `json:"configurationTemplateCount"`
 
 	// ConfigurationTemplateReferenceCount - no documentation
 	ConfigurationTemplateReferenceCount uint64 `json:"configurationTemplateReferenceCount"`
 }
 
-func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) String() string {
+func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Extended) String() string {
 	return "SoftLayer_Monitoring_Agent_Configuration_Template_Group"
 }

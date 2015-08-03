@@ -8,6 +8,14 @@ package types
 // place a domain registration order with SoftLayer.
 type SoftLayer_Container_Product_Order_Dns_Domain_Registration struct {
 
+	// OwnerContact - Owner contact information associated with an registraton or transfer. This is
+	// required if registration type is 'new' or 'transfer'.
+	OwnerContact *SoftLayer_Container_Dns_Domain_Registration_Contact `json:"ownerContact"`
+
+	// RegistrationType - The type of a domain registration order. The registration type is Required.
+	// Allowed values are new, transfer, and renew
+	RegistrationType string `json:"registrationType"`
+
 	// TechnicalContact - Technical contact information associated with an registraton or transfer. This is
 	// required if registration type is 'new' or 'transfer'.
 	TechnicalContact *SoftLayer_Container_Dns_Domain_Registration_Contact `json:"technicalContact"`
@@ -23,14 +31,6 @@ type SoftLayer_Container_Product_Order_Dns_Domain_Registration struct {
 	// DomainRegistrationList - The list of domains to be registered. This is required if registration type
 	// is 'new', 'renew', or 'transfer'.
 	DomainRegistrationList []*SoftLayer_Container_Dns_Domain_Registration_List `json:"domainRegistrationList"`
-
-	// OwnerContact - Owner contact information associated with an registraton or transfer. This is
-	// required if registration type is 'new' or 'transfer'.
-	OwnerContact *SoftLayer_Container_Dns_Domain_Registration_Contact `json:"ownerContact"`
-
-	// RegistrationType - The type of a domain registration order. The registration type is Required.
-	// Allowed values are new, transfer, and renew
-	RegistrationType string `json:"registrationType"`
 }
 
 func (softlayer_container_product_order_dns_domain_registration *SoftLayer_Container_Product_Order_Dns_Domain_Registration) String() string {

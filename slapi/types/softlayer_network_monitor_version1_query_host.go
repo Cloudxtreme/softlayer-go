@@ -11,34 +11,38 @@ type SoftLayer_Network_Monitor_Version1_Query_Host struct {
 	// (like ping) ignore this setting, but higher levels like custom use it.
 	Arg1Value string `json:"arg1Value"`
 
-	// HostId - Identification Number for the host being monitored.
-	HostId int `json:"hostId"`
+	// GuestId - Virtual Guest Identification Number for the guest being monitored.
+	GuestId int `json:"guestId"`
 
 	// Id - no documentation
 	Id int `json:"id"`
 
+	// IpAddress - The IP address to be monitored. Must be attached to the hardware on this object
+	IpAddress string `json:"ipAddress"`
+
+	// QueryTypeId - no documentation
+	QueryTypeId int `json:"queryTypeId"`
+
 	// ResponseActionId - The ID of the response action to take when the monitor fails
 	ResponseActionId int `json:"responseActionId"`
 
-	// WaitCycles - The number of 5-minute cycles to wait before the "responseAction" is taken. If set to
-	// 0, the response action will be taken immediately
-	WaitCycles int `json:"waitCycles"`
+	// HardwareId - no documentation
+	HardwareId int `json:"hardwareId"`
 
 	// Status - The status of this monitoring instance. Anything other than means that the monitor has been
 	// disabled
 	Status string `json:"status"`
 
-	// GuestId - Virtual Guest Identification Number for the guest being monitored.
-	GuestId int `json:"guestId"`
+	// HostId - Identification Number for the host being monitored.
+	HostId int `json:"hostId"`
 
-	// IpAddress - The IP address to be monitored. Must be attached to the hardware on this object
-	IpAddress string `json:"ipAddress"`
+	// WaitCycles - The number of 5-minute cycles to wait before the "responseAction" is taken. If set to
+	// 0, the response action will be taken immediately
+	WaitCycles int `json:"waitCycles"`
+}
 
-	// HardwareId - no documentation
-	HardwareId int `json:"hardwareId"`
-
-	// QueryTypeId - no documentation
-	QueryTypeId int `json:"queryTypeId"`
+func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) String() string {
+	return "SoftLayer_Network_Monitor_Version1_Query_Host"
 }
 
 // SoftLayer_Network_Monitor_Version1_Query_Host_Extended is SoftLayer_Network_Monitor_Version1_Query_Host with all maskable types.
@@ -51,16 +55,16 @@ type SoftLayer_Network_Monitor_Version1_Query_Host_Extended struct {
 	// LastResult - The most recent result for this particular monitoring instance.
 	LastResult *SoftLayer_Network_Monitor_Version1_Query_Result `json:"lastResult"`
 
-	// QueryType - The type of monitoring query that is executed when this hardware is monitored.
-	QueryType *SoftLayer_Network_Monitor_Version1_Query_Type `json:"queryType"`
+	// ResponseAction - no documentation
+	ResponseAction *SoftLayer_Network_Monitor_Version1_Query_ResponseType `json:"responseAction"`
 
 	// Subnet - The subnet object that holds the IP address associated with this query host.
 	Subnet *SoftLayer_Network_Subnet `json:"subnet"`
 
-	// ResponseAction - no documentation
-	ResponseAction *SoftLayer_Network_Monitor_Version1_Query_ResponseType `json:"responseAction"`
+	// QueryType - The type of monitoring query that is executed when this hardware is monitored.
+	QueryType *SoftLayer_Network_Monitor_Version1_Query_Type `json:"queryType"`
 }
 
-func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) String() string {
+func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host_Extended) String() string {
 	return "SoftLayer_Network_Monitor_Version1_Query_Host"
 }

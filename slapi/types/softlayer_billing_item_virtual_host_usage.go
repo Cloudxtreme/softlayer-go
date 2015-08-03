@@ -11,6 +11,10 @@ type SoftLayer_Billing_Item_Virtual_Host_Usage struct {
 	ResourceTableId int `json:"resourceTableId"`
 }
 
+func (softlayer_billing_item_virtual_host_usage *SoftLayer_Billing_Item_Virtual_Host_Usage) String() string {
+	return "SoftLayer_Billing_Item_Virtual_Host_Usage"
+}
+
 // SoftLayer_Billing_Item_Virtual_Host_Usage_Extended is SoftLayer_Billing_Item_Virtual_Host_Usage with all maskable types.
 type SoftLayer_Billing_Item_Virtual_Host_Usage_Extended struct {
 	SoftLayer_Billing_Item_Virtual_Host_Usage
@@ -19,6 +23,6 @@ type SoftLayer_Billing_Item_Virtual_Host_Usage_Extended struct {
 	Resource *SoftLayer_Hardware `json:"resource"`
 }
 
-func (softlayer_billing_item_virtual_host_usage *SoftLayer_Billing_Item_Virtual_Host_Usage) String() string {
+func (softlayer_billing_item_virtual_host_usage *SoftLayer_Billing_Item_Virtual_Host_Usage_Extended) String() string {
 	return "SoftLayer_Billing_Item_Virtual_Host_Usage"
 }

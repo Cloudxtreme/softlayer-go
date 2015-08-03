@@ -6,6 +6,10 @@ package types
 type SoftLayer_Location_Group_Regional struct {
 }
 
+func (softlayer_location_group_regional *SoftLayer_Location_Group_Regional) String() string {
+	return "SoftLayer_Location_Group_Regional"
+}
+
 // SoftLayer_Location_Group_Regional_Extended is SoftLayer_Location_Group_Regional with all maskable types.
 type SoftLayer_Location_Group_Regional_Extended struct {
 	SoftLayer_Location_Group_Regional
@@ -20,6 +24,6 @@ type SoftLayer_Location_Group_Regional_Extended struct {
 	DatacenterCount uint64 `json:"datacenterCount"`
 }
 
-func (softlayer_location_group_regional *SoftLayer_Location_Group_Regional) String() string {
+func (softlayer_location_group_regional *SoftLayer_Location_Group_Regional_Extended) String() string {
 	return "SoftLayer_Location_Group_Regional"
 }

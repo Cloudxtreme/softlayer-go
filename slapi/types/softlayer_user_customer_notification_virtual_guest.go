@@ -20,6 +20,10 @@ type SoftLayer_User_Customer_Notification_Virtual_Guest struct {
 	UserId int `json:"userId"`
 }
 
+func (softlayer_user_customer_notification_virtual_guest *SoftLayer_User_Customer_Notification_Virtual_Guest) String() string {
+	return "SoftLayer_User_Customer_Notification_Virtual_Guest"
+}
+
 // SoftLayer_User_Customer_Notification_Virtual_Guest_Extended is SoftLayer_User_Customer_Notification_Virtual_Guest with all maskable types.
 type SoftLayer_User_Customer_Notification_Virtual_Guest_Extended struct {
 	SoftLayer_User_Customer_Notification_Virtual_Guest
@@ -32,6 +36,6 @@ type SoftLayer_User_Customer_Notification_Virtual_Guest_Extended struct {
 	User *SoftLayer_User_Customer `json:"user"`
 }
 
-func (softlayer_user_customer_notification_virtual_guest *SoftLayer_User_Customer_Notification_Virtual_Guest) String() string {
+func (softlayer_user_customer_notification_virtual_guest *SoftLayer_User_Customer_Notification_Virtual_Guest_Extended) String() string {
 	return "SoftLayer_User_Customer_Notification_Virtual_Guest"
 }

@@ -17,6 +17,10 @@ type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total struct {
 	BandwidthUsageDetailTypeId float64 `json:"bandwidthUsageDetailTypeId"`
 }
 
+func (softlayer_network_bandwidth_version1_usage_detail_total *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total"
+}
+
 // SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total_Extended is SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total with all maskable types.
 type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total_Extended struct {
 	SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total
@@ -31,6 +35,6 @@ type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total_Extended struct {
 	Type *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type `json:"type"`
 }
 
-func (softlayer_network_bandwidth_version1_usage_detail_total *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total) String() string {
+func (softlayer_network_bandwidth_version1_usage_detail_total *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total_Extended) String() string {
 	return "SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total"
 }

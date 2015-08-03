@@ -5,6 +5,9 @@ package types
 // SoftLayer_Container_Network_Message_Delivery_Email - <nil>
 type SoftLayer_Container_Network_Message_Delivery_Email struct {
 
+	// Body - <nil>
+	Body string `json:"body"`
+
 	// ContainsHtml - <nil>
 	ContainsHtml bool `json:"containsHtml"`
 
@@ -16,9 +19,6 @@ type SoftLayer_Container_Network_Message_Delivery_Email struct {
 
 	// To - <nil>
 	To string `json:"to"`
-
-	// Body - <nil>
-	Body string `json:"body"`
 }
 
 func (softlayer_container_network_message_delivery_email *SoftLayer_Container_Network_Message_Delivery_Email) String() string {

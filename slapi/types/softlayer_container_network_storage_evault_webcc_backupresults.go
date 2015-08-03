@@ -11,6 +11,12 @@ import (
 // and the results will also be returned.
 type SoftLayer_Container_Network_Storage_Evault_WebCc_BackupResults struct {
 
+	// Failed - no documentation
+	Failed string `json:"failed"`
+
+	// Success - no documentation
+	Success string `json:"success"`
+
 	// BeginTime - no documentation
 	BeginTime *time.Time `json:"beginTime"`
 
@@ -19,12 +25,6 @@ type SoftLayer_Container_Network_Storage_Evault_WebCc_BackupResults struct {
 
 	// EndTime - no documentation
 	EndTime *time.Time `json:"endTime"`
-
-	// Failed - no documentation
-	Failed string `json:"failed"`
-
-	// Success - no documentation
-	Success string `json:"success"`
 }
 
 func (softlayer_container_network_storage_evault_webcc_backupresults *SoftLayer_Container_Network_Storage_Evault_WebCc_BackupResults) String() string {

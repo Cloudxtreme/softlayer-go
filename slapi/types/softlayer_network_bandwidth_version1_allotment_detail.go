@@ -11,8 +11,8 @@ import (
 // relating to a single bandwidth allotment record.
 type SoftLayer_Network_Bandwidth_Version1_Allotment_Detail struct {
 
-	// BandwidthAllotmentId - no documentation
-	BandwidthAllotmentId int `json:"bandwidthAllotmentId"`
+	// EndEffectiveDate - From this date the bandwidth allotment is no longer active.
+	EndEffectiveDate *time.Time `json:"endEffectiveDate"`
 
 	// Id - no documentation
 	Id int `json:"id"`
@@ -23,11 +23,15 @@ type SoftLayer_Network_Bandwidth_Version1_Allotment_Detail struct {
 	// EffectiveDate - Beginning this date the bandwidth allotment is active.
 	EffectiveDate *time.Time `json:"effectiveDate"`
 
-	// EndEffectiveDate - From this date the bandwidth allotment is no longer active.
-	EndEffectiveDate *time.Time `json:"endEffectiveDate"`
-
 	// AllocationId - no documentation
 	AllocationId int `json:"allocationId"`
+
+	// BandwidthAllotmentId - no documentation
+	BandwidthAllotmentId int `json:"bandwidthAllotmentId"`
+}
+
+func (softlayer_network_bandwidth_version1_allotment_detail *SoftLayer_Network_Bandwidth_Version1_Allotment_Detail) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Allotment_Detail"
 }
 
 // SoftLayer_Network_Bandwidth_Version1_Allotment_Detail_Extended is SoftLayer_Network_Bandwidth_Version1_Allotment_Detail with all maskable types.
@@ -40,13 +44,13 @@ type SoftLayer_Network_Bandwidth_Version1_Allotment_Detail_Extended struct {
 	// BandwidthAllotment - no documentation
 	BandwidthAllotment *SoftLayer_Network_Bandwidth_Version1_Allotment `json:"bandwidthAllotment"`
 
-	// BandwidthUsageCount - no documentation
-	BandwidthUsageCount uint64 `json:"bandwidthUsageCount"`
-
 	// BandwidthUsage - no documentation
 	BandwidthUsage []*SoftLayer_Network_Bandwidth_Version1_Usage `json:"bandwidthUsage"`
+
+	// BandwidthUsageCount - no documentation
+	BandwidthUsageCount uint64 `json:"bandwidthUsageCount"`
 }
 
-func (softlayer_network_bandwidth_version1_allotment_detail *SoftLayer_Network_Bandwidth_Version1_Allotment_Detail) String() string {
+func (softlayer_network_bandwidth_version1_allotment_detail *SoftLayer_Network_Bandwidth_Version1_Allotment_Detail_Extended) String() string {
 	return "SoftLayer_Network_Bandwidth_Version1_Allotment_Detail"
 }

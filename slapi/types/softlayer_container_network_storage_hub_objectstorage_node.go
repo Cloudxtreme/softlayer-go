@@ -7,14 +7,14 @@ package types
 // particular object storage node
 type SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Node struct {
 
-	// DeviceName - <nil>
-	DeviceName string `json:"deviceName"`
-
 	// ResourceName - <nil>
 	ResourceName string `json:"resourceName"`
 
 	// UserAuthUrl - <nil>
 	UserAuthUrl string `json:"userAuthUrl"`
+
+	// DeviceName - <nil>
+	DeviceName string `json:"deviceName"`
 }
 
 func (softlayer_container_network_storage_hub_objectstorage_node *SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Node) String() string {

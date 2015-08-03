@@ -6,14 +6,14 @@ package types
 // information.
 type SoftLayer_Container_Collection_Locale_CountryCode struct {
 
-	// LongName - <nil>
-	LongName string `json:"longName"`
-
 	// ShortName - <nil>
 	ShortName string `json:"shortName"`
 
 	// StateCodes - <nil>
 	StateCodes []*SoftLayer_Container_Collection_Locale_StateCode `json:"stateCodes"`
+
+	// LongName - <nil>
+	LongName string `json:"longName"`
 }
 
 func (softlayer_container_collection_locale_countrycode *SoftLayer_Container_Collection_Locale_CountryCode) String() string {

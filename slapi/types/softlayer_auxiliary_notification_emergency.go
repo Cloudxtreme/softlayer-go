@@ -11,20 +11,26 @@ import (
 // provide information regarding outages or current known issues.
 type SoftLayer_Auxiliary_Notification_Emergency struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
 	// Duration - no documentation
 	Duration string `json:"duration"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// Message - no documentation
+	Message string `json:"message"`
+
+	// StartDate - no documentation
+	StartDate *time.Time `json:"startDate"`
 
 	// StatusId - no documentation
 	StatusId int `json:"statusId"`
 
+	// Device - no documentation
+	Device string `json:"device"`
+
 	// Location - no documentation
 	Location string `json:"location"`
-
-	// Message - no documentation
-	Message string `json:"message"`
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
@@ -32,27 +38,25 @@ type SoftLayer_Auxiliary_Notification_Emergency struct {
 	// ServicesAffected - no documentation
 	ServicesAffected string `json:"servicesAffected"`
 
-	// Device - no documentation
-	Device string `json:"device"`
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+}
 
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// StartDate - no documentation
-	StartDate *time.Time `json:"startDate"`
+func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency) String() string {
+	return "SoftLayer_Auxiliary_Notification_Emergency"
 }
 
 // SoftLayer_Auxiliary_Notification_Emergency_Extended is SoftLayer_Auxiliary_Notification_Emergency with all maskable types.
 type SoftLayer_Auxiliary_Notification_Emergency_Extended struct {
 	SoftLayer_Auxiliary_Notification_Emergency
 
-	// Signature - The signature of the SoftLayer employee department associated with this notification.
-	Signature *SoftLayer_Auxiliary_Notification_Emergency_Signature `json:"signature"`
-
 	// Status - no documentation
 	Status *SoftLayer_Auxiliary_Notification_Emergency_Status `json:"status"`
+
+	// Signature - The signature of the SoftLayer employee department associated with this notification.
+	Signature *SoftLayer_Auxiliary_Notification_Emergency_Signature `json:"signature"`
 }
 
-func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency) String() string {
+func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency_Extended) String() string {
 	return "SoftLayer_Auxiliary_Notification_Emergency"
 }

@@ -16,19 +16,6 @@ type SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch struct {
 	// the interface of either the frontend or backend network.
 	Metric string `json:"metric"`
 
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// DeleteFlag - When set and true any edit that happens on this object, be it calling edit on this
-	// directly or setting as a child while editing a parent object, will end up being a deletion.
-	DeleteFlag bool `json:"deleteFlag"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
-
-	// Operator - The operator to use for comparison. The only two valid values are ">" and
-	Operator string `json:"operator"`
-
 	// Period - The number of seconds the values are aggregated for when compared to value. If values are
 	// not retrieved steadily and consecutively for the length of this period, nothing is compared.
 	Period int `json:"period"`
@@ -40,12 +27,29 @@ type SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch struct {
 	// value for restrictions (such as numeric-only) based on the metric.
 	Value string `json:"value"`
 
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+
+	// DeleteFlag - When set and true any edit that happens on this object, be it calling edit on this
+	// directly or setting as a child while editing a parent object, will end up being a deletion.
+	DeleteFlag bool `json:"deleteFlag"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate"`
+
+	// Operator - The operator to use for comparison. The only two valid values are ">" and
+	Operator string `json:"operator"`
+
 	// Algorithm - The algorithm to use when aggregating and comparing. Currently, the only value that is
 	// accepted is (Exponential Weighted Moving Average). is the default value if no value is given.
 	Algorithm string `json:"algorithm"`
+}
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) String() string {
+	return "SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch"
 }
 
 // SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch_Extended is SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch with all maskable types.
@@ -56,6 +60,6 @@ type SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch_Extended struct {
 	ScalePolicyTrigger *SoftLayer_Scale_Policy_Trigger_ResourceUse `json:"scalePolicyTrigger"`
 }
 
-func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) String() string {
+func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch_Extended) String() string {
 	return "SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch"
 }

@@ -9,6 +9,10 @@ type SoftLayer_Notification_Occurrence_Account struct {
 	Active int `json:"active"`
 }
 
+func (softlayer_notification_occurrence_account *SoftLayer_Notification_Occurrence_Account) String() string {
+	return "SoftLayer_Notification_Occurrence_Account"
+}
+
 // SoftLayer_Notification_Occurrence_Account_Extended is SoftLayer_Notification_Occurrence_Account with all maskable types.
 type SoftLayer_Notification_Occurrence_Account_Extended struct {
 	SoftLayer_Notification_Occurrence_Account
@@ -23,6 +27,6 @@ type SoftLayer_Notification_Occurrence_Account_Extended struct {
 	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent"`
 }
 
-func (softlayer_notification_occurrence_account *SoftLayer_Notification_Occurrence_Account) String() string {
+func (softlayer_notification_occurrence_account *SoftLayer_Notification_Occurrence_Account_Extended) String() string {
 	return "SoftLayer_Notification_Occurrence_Account"
 }

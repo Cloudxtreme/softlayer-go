@@ -7,6 +7,10 @@ package types
 type SoftLayer_Billing_Item_Network_Message_Delivery struct {
 }
 
+func (softlayer_billing_item_network_message_delivery *SoftLayer_Billing_Item_Network_Message_Delivery) String() string {
+	return "SoftLayer_Billing_Item_Network_Message_Delivery"
+}
+
 // SoftLayer_Billing_Item_Network_Message_Delivery_Extended is SoftLayer_Billing_Item_Network_Message_Delivery with all maskable types.
 type SoftLayer_Billing_Item_Network_Message_Delivery_Extended struct {
 	SoftLayer_Billing_Item_Network_Message_Delivery
@@ -15,6 +19,6 @@ type SoftLayer_Billing_Item_Network_Message_Delivery_Extended struct {
 	Resource *SoftLayer_Network_Message_Delivery `json:"resource"`
 }
 
-func (softlayer_billing_item_network_message_delivery *SoftLayer_Billing_Item_Network_Message_Delivery) String() string {
+func (softlayer_billing_item_network_message_delivery *SoftLayer_Billing_Item_Network_Message_Delivery_Extended) String() string {
 	return "SoftLayer_Billing_Item_Network_Message_Delivery"
 }

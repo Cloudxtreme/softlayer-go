@@ -6,6 +6,10 @@ package types
 type SoftLayer_Scale_Member_Virtual_Guest struct {
 }
 
+func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest) String() string {
+	return "SoftLayer_Scale_Member_Virtual_Guest"
+}
+
 // SoftLayer_Scale_Member_Virtual_Guest_Extended is SoftLayer_Scale_Member_Virtual_Guest with all maskable types.
 type SoftLayer_Scale_Member_Virtual_Guest_Extended struct {
 	SoftLayer_Scale_Member_Virtual_Guest
@@ -17,6 +21,6 @@ type SoftLayer_Scale_Member_Virtual_Guest_Extended struct {
 	VirtualGuestId int `json:"virtualGuestId"`
 }
 
-func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest) String() string {
+func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest_Extended) String() string {
 	return "SoftLayer_Scale_Member_Virtual_Guest"
 }

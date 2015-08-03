@@ -25,6 +25,10 @@ type SoftLayer_User_Permission_Group_Type struct {
 	Name string `json:"name"`
 }
 
+func (softlayer_user_permission_group_type *SoftLayer_User_Permission_Group_Type) String() string {
+	return "SoftLayer_User_Permission_Group_Type"
+}
+
 // SoftLayer_User_Permission_Group_Type_Extended is SoftLayer_User_Permission_Group_Type with all maskable types.
 type SoftLayer_User_Permission_Group_Type_Extended struct {
 	SoftLayer_User_Permission_Group_Type
@@ -36,6 +40,6 @@ type SoftLayer_User_Permission_Group_Type_Extended struct {
 	Groups []*SoftLayer_User_Permission_Group `json:"groups"`
 }
 
-func (softlayer_user_permission_group_type *SoftLayer_User_Permission_Group_Type) String() string {
+func (softlayer_user_permission_group_type *SoftLayer_User_Permission_Group_Type_Extended) String() string {
 	return "SoftLayer_User_Permission_Group_Type"
 }

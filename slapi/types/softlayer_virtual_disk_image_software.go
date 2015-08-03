@@ -15,23 +15,27 @@ type SoftLayer_Virtual_Disk_Image_Software struct {
 	SoftwareDescriptionId int `json:"softwareDescriptionId"`
 }
 
+func (softlayer_virtual_disk_image_software *SoftLayer_Virtual_Disk_Image_Software) String() string {
+	return "SoftLayer_Virtual_Disk_Image_Software"
+}
+
 // SoftLayer_Virtual_Disk_Image_Software_Extended is SoftLayer_Virtual_Disk_Image_Software with all maskable types.
 type SoftLayer_Virtual_Disk_Image_Software_Extended struct {
 	SoftLayer_Virtual_Disk_Image_Software
-
-	// SoftwareDescription - no documentation
-	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription"`
-
-	// PasswordCount - A count of username/Password pairs used for access to a Software Installation.
-	PasswordCount uint64 `json:"passwordCount"`
 
 	// DiskImage - The virtual disk image that is associated with software.
 	DiskImage *SoftLayer_Virtual_Disk_Image `json:"diskImage"`
 
 	// Passwords - Username/Password pairs used for access to a Software Installation.
 	Passwords []*SoftLayer_Virtual_Disk_Image_Software_Password `json:"passwords"`
+
+	// SoftwareDescription - no documentation
+	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription"`
+
+	// PasswordCount - A count of username/Password pairs used for access to a Software Installation.
+	PasswordCount uint64 `json:"passwordCount"`
 }
 
-func (softlayer_virtual_disk_image_software *SoftLayer_Virtual_Disk_Image_Software) String() string {
+func (softlayer_virtual_disk_image_software *SoftLayer_Virtual_Disk_Image_Software_Extended) String() string {
 	return "SoftLayer_Virtual_Disk_Image_Software"
 }

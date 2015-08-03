@@ -13,6 +13,10 @@ type SoftLayer_User_External_Binding_Attribute struct {
 	Value string `json:"value"`
 }
 
+func (softlayer_user_external_binding_attribute *SoftLayer_User_External_Binding_Attribute) String() string {
+	return "SoftLayer_User_External_Binding_Attribute"
+}
+
 // SoftLayer_User_External_Binding_Attribute_Extended is SoftLayer_User_External_Binding_Attribute with all maskable types.
 type SoftLayer_User_External_Binding_Attribute_Extended struct {
 	SoftLayer_User_External_Binding_Attribute
@@ -21,6 +25,6 @@ type SoftLayer_User_External_Binding_Attribute_Extended struct {
 	ExternalBinding *SoftLayer_User_External_Binding `json:"externalBinding"`
 }
 
-func (softlayer_user_external_binding_attribute *SoftLayer_User_External_Binding_Attribute) String() string {
+func (softlayer_user_external_binding_attribute *SoftLayer_User_External_Binding_Attribute_Extended) String() string {
 	return "SoftLayer_User_External_Binding_Attribute"
 }

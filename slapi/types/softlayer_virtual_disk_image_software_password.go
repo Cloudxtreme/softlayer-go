@@ -13,6 +13,10 @@ type SoftLayer_Virtual_Disk_Image_Software_Password struct {
 	Username string `json:"username"`
 }
 
+func (softlayer_virtual_disk_image_software_password *SoftLayer_Virtual_Disk_Image_Software_Password) String() string {
+	return "SoftLayer_Virtual_Disk_Image_Software_Password"
+}
+
 // SoftLayer_Virtual_Disk_Image_Software_Password_Extended is SoftLayer_Virtual_Disk_Image_Software_Password with all maskable types.
 type SoftLayer_Virtual_Disk_Image_Software_Password_Extended struct {
 	SoftLayer_Virtual_Disk_Image_Software_Password
@@ -21,6 +25,6 @@ type SoftLayer_Virtual_Disk_Image_Software_Password_Extended struct {
 	Software *SoftLayer_Virtual_Disk_Image_Software `json:"software"`
 }
 
-func (softlayer_virtual_disk_image_software_password *SoftLayer_Virtual_Disk_Image_Software_Password) String() string {
+func (softlayer_virtual_disk_image_software_password *SoftLayer_Virtual_Disk_Image_Software_Password_Extended) String() string {
 	return "SoftLayer_Virtual_Disk_Image_Software_Password"
 }

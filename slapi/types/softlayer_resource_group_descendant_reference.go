@@ -8,6 +8,10 @@ package types
 type SoftLayer_Resource_Group_Descendant_Reference struct {
 }
 
+func (softlayer_resource_group_descendant_reference *SoftLayer_Resource_Group_Descendant_Reference) String() string {
+	return "SoftLayer_Resource_Group_Descendant_Reference"
+}
+
 // SoftLayer_Resource_Group_Descendant_Reference_Extended is SoftLayer_Resource_Group_Descendant_Reference with all maskable types.
 type SoftLayer_Resource_Group_Descendant_Reference_Extended struct {
 	SoftLayer_Resource_Group_Descendant_Reference
@@ -19,6 +23,6 @@ type SoftLayer_Resource_Group_Descendant_Reference_Extended struct {
 	GroupMember *SoftLayer_Resource_Group_Member `json:"groupMember"`
 }
 
-func (softlayer_resource_group_descendant_reference *SoftLayer_Resource_Group_Descendant_Reference) String() string {
+func (softlayer_resource_group_descendant_reference *SoftLayer_Resource_Group_Descendant_Reference_Extended) String() string {
 	return "SoftLayer_Resource_Group_Descendant_Reference"
 }

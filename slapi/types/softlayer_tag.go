@@ -7,9 +7,6 @@ package types
 // flag to denote whether the tag is internal or not.
 type SoftLayer_Tag struct {
 
-	// AccountId - no documentation
-	AccountId int `json:"accountId"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
@@ -18,6 +15,13 @@ type SoftLayer_Tag struct {
 
 	// Name - Name of the tag. The characters permitted are 0-9, whitespace, _ (underscore),
 	Name string `json:"name"`
+
+	// AccountId - no documentation
+	AccountId int `json:"accountId"`
+}
+
+func (softlayer_tag *SoftLayer_Tag) String() string {
+	return "SoftLayer_Tag"
 }
 
 // SoftLayer_Tag_Extended is SoftLayer_Tag with all maskable types.
@@ -34,6 +38,6 @@ type SoftLayer_Tag_Extended struct {
 	References []*SoftLayer_Tag_Reference `json:"references"`
 }
 
-func (softlayer_tag *SoftLayer_Tag) String() string {
+func (softlayer_tag *SoftLayer_Tag_Extended) String() string {
 	return "SoftLayer_Tag"
 }

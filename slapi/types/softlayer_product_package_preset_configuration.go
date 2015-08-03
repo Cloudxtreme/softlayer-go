@@ -6,6 +6,10 @@ package types
 type SoftLayer_Product_Package_Preset_Configuration struct {
 }
 
+func (softlayer_product_package_preset_configuration *SoftLayer_Product_Package_Preset_Configuration) String() string {
+	return "SoftLayer_Product_Package_Preset_Configuration"
+}
+
 // SoftLayer_Product_Package_Preset_Configuration_Extended is SoftLayer_Product_Package_Preset_Configuration with all maskable types.
 type SoftLayer_Product_Package_Preset_Configuration_Extended struct {
 	SoftLayer_Product_Package_Preset_Configuration
@@ -20,6 +24,6 @@ type SoftLayer_Product_Package_Preset_Configuration_Extended struct {
 	Price *SoftLayer_Product_Item_Price `json:"price"`
 }
 
-func (softlayer_product_package_preset_configuration *SoftLayer_Product_Package_Preset_Configuration) String() string {
+func (softlayer_product_package_preset_configuration *SoftLayer_Product_Package_Preset_Configuration_Extended) String() string {
 	return "SoftLayer_Product_Package_Preset_Configuration"
 }

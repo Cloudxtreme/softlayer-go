@@ -11,21 +11,6 @@ package types
 // structure.
 type SoftLayer_Container_Hardware_Configuration struct {
 
-	// Datacenters - Available datacenter options. The datacenter.name value in the template represents
-	// which datacenter the server will be provisioned in.
-	Datacenters []*SoftLayer_Container_Hardware_Configuration_Option `json:"datacenters"`
-
-	// FixedConfigurationPresets - Available fixed configuration preset options. The
-	// fixedConfigurationPreset.keyName value in the template is an identifier for a particular fixed
-	// configuration. When provided exactly as shown in the template, that fixed configuration will be
-	// used. When providing a fixedConfigurationPreset.keyName while ordering a server the processors and
-	// hardDrives configuration options cannot be used.
-	FixedConfigurationPresets []*SoftLayer_Container_Hardware_Configuration_Option `json:"fixedConfigurationPresets"`
-
-	// HardDrives - Available hard drive options. A server will have at least one hard drive. The
-	// hardDrives.capacity value in the template represents the size, in gigabytes, of the disk.
-	HardDrives []*SoftLayer_Container_Hardware_Configuration_Option `json:"hardDrives"`
-
 	// NetworkComponents - Available network component options. The networkComponent.maxSpeed value in the
 	// template represents the link speed, in megabits per second, of the network connections for a server.
 	NetworkComponents []*SoftLayer_Container_Hardware_Configuration_Option `json:"networkComponents"`
@@ -50,6 +35,21 @@ type SoftLayer_Container_Hardware_Configuration struct {
 	// the number of cores allocated to the server. The memoryCapacity value in the template represents the
 	// amount of memory, in gigabytes, allocated to the server.
 	Processors []*SoftLayer_Container_Hardware_Configuration_Option `json:"processors"`
+
+	// Datacenters - Available datacenter options. The datacenter.name value in the template represents
+	// which datacenter the server will be provisioned in.
+	Datacenters []*SoftLayer_Container_Hardware_Configuration_Option `json:"datacenters"`
+
+	// FixedConfigurationPresets - Available fixed configuration preset options. The
+	// fixedConfigurationPreset.keyName value in the template is an identifier for a particular fixed
+	// configuration. When provided exactly as shown in the template, that fixed configuration will be
+	// used. When providing a fixedConfigurationPreset.keyName while ordering a server the processors and
+	// hardDrives configuration options cannot be used.
+	FixedConfigurationPresets []*SoftLayer_Container_Hardware_Configuration_Option `json:"fixedConfigurationPresets"`
+
+	// HardDrives - Available hard drive options. A server will have at least one hard drive. The
+	// hardDrives.capacity value in the template represents the size, in gigabytes, of the disk.
+	HardDrives []*SoftLayer_Container_Hardware_Configuration_Option `json:"hardDrives"`
 }
 
 func (softlayer_container_hardware_configuration *SoftLayer_Container_Hardware_Configuration) String() string {

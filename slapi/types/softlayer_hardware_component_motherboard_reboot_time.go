@@ -16,6 +16,10 @@ type SoftLayer_Hardware_Component_Motherboard_Reboot_Time struct {
 	WithoutRaid int `json:"withoutRaid"`
 }
 
+func (softlayer_hardware_component_motherboard_reboot_time *SoftLayer_Hardware_Component_Motherboard_Reboot_Time) String() string {
+	return "SoftLayer_Hardware_Component_Motherboard_Reboot_Time"
+}
+
 // SoftLayer_Hardware_Component_Motherboard_Reboot_Time_Extended is SoftLayer_Hardware_Component_Motherboard_Reboot_Time with all maskable types.
 type SoftLayer_Hardware_Component_Motherboard_Reboot_Time_Extended struct {
 	SoftLayer_Hardware_Component_Motherboard_Reboot_Time
@@ -24,6 +28,6 @@ type SoftLayer_Hardware_Component_Motherboard_Reboot_Time_Extended struct {
 	HardwareComponentModel *SoftLayer_Hardware_Component_Model `json:"hardwareComponentModel"`
 }
 
-func (softlayer_hardware_component_motherboard_reboot_time *SoftLayer_Hardware_Component_Motherboard_Reboot_Time) String() string {
+func (softlayer_hardware_component_motherboard_reboot_time *SoftLayer_Hardware_Component_Motherboard_Reboot_Time_Extended) String() string {
 	return "SoftLayer_Hardware_Component_Motherboard_Reboot_Time"
 }

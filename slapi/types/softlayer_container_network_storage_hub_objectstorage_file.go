@@ -7,11 +7,11 @@ package types
 // to files that are sent or received from CloudLayer storage resources.
 type SoftLayer_Container_Network_Storage_Hub_ObjectStorage_File struct {
 
-	// Folder - <nil>
-	Folder string `json:"folder"`
-
 	// Hash - <nil>
 	Hash string `json:"hash"`
+
+	// Folder - <nil>
+	Folder string `json:"folder"`
 }
 
 func (softlayer_container_network_storage_hub_objectstorage_file *SoftLayer_Container_Network_Storage_Hub_ObjectStorage_File) String() string {

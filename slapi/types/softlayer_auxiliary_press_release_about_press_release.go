@@ -18,6 +18,10 @@ type SoftLayer_Auxiliary_Press_Release_About_Press_Release struct {
 	SortOrder int `json:"sortOrder"`
 }
 
+func (softlayer_auxiliary_press_release_about_press_release *SoftLayer_Auxiliary_Press_Release_About_Press_Release) String() string {
+	return "SoftLayer_Auxiliary_Press_Release_About_Press_Release"
+}
+
 // SoftLayer_Auxiliary_Press_Release_About_Press_Release_Extended is SoftLayer_Auxiliary_Press_Release_About_Press_Release with all maskable types.
 type SoftLayer_Auxiliary_Press_Release_About_Press_Release_Extended struct {
 	SoftLayer_Auxiliary_Press_Release_About_Press_Release
@@ -35,6 +39,6 @@ type SoftLayer_Auxiliary_Press_Release_About_Press_Release_Extended struct {
 	AboutParagraphCount uint64 `json:"aboutParagraphCount"`
 }
 
-func (softlayer_auxiliary_press_release_about_press_release *SoftLayer_Auxiliary_Press_Release_About_Press_Release) String() string {
+func (softlayer_auxiliary_press_release_about_press_release *SoftLayer_Auxiliary_Press_Release_About_Press_Release_Extended) String() string {
 	return "SoftLayer_Auxiliary_Press_Release_About_Press_Release"
 }

@@ -11,6 +11,9 @@ import (
 // host's metric data.
 type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details struct {
 
+	// MinMemoryUsage - The minimum amount of memory utilized by this platform for the given day.
+	MinMemoryUsage int `json:"minMemoryUsage"`
+
 	// Day - no documentation
 	Day *time.Time `json:"day"`
 
@@ -28,9 +31,6 @@ type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details struct {
 
 	// MinInstances - The minimum number of guests hosted by this platform for the given day.
 	MinInstances int `json:"minInstances"`
-
-	// MinMemoryUsage - The minimum amount of memory utilized by this platform for the given day.
-	MinMemoryUsage int `json:"minMemoryUsage"`
 }
 
 func (softlayer_container_metric_tracking_object_virtual_host_details *SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details) String() string {

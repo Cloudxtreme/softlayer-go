@@ -6,6 +6,10 @@ package types
 type SoftLayer_Billing_Item_Link_ThePlanet struct {
 }
 
+func (softlayer_billing_item_link_theplanet *SoftLayer_Billing_Item_Link_ThePlanet) String() string {
+	return "SoftLayer_Billing_Item_Link_ThePlanet"
+}
+
 // SoftLayer_Billing_Item_Link_ThePlanet_Extended is SoftLayer_Billing_Item_Link_ThePlanet with all maskable types.
 type SoftLayer_Billing_Item_Link_ThePlanet_Extended struct {
 	SoftLayer_Billing_Item_Link_ThePlanet
@@ -17,6 +21,6 @@ type SoftLayer_Billing_Item_Link_ThePlanet_Extended struct {
 	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider"`
 }
 
-func (softlayer_billing_item_link_theplanet *SoftLayer_Billing_Item_Link_ThePlanet) String() string {
+func (softlayer_billing_item_link_theplanet *SoftLayer_Billing_Item_Link_ThePlanet_Extended) String() string {
 	return "SoftLayer_Billing_Item_Link_ThePlanet"
 }

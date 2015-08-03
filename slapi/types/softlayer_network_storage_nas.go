@@ -8,6 +8,10 @@ package types
 type SoftLayer_Network_Storage_Nas struct {
 }
 
+func (softlayer_network_storage_nas *SoftLayer_Network_Storage_Nas) String() string {
+	return "SoftLayer_Network_Storage_Nas"
+}
+
 // SoftLayer_Network_Storage_Nas_Extended is SoftLayer_Network_Storage_Nas with all maskable types.
 type SoftLayer_Network_Storage_Nas_Extended struct {
 	SoftLayer_Network_Storage_Nas
@@ -16,6 +20,6 @@ type SoftLayer_Network_Storage_Nas_Extended struct {
 	RecentBytesUsed *SoftLayer_Network_Storage_Daily_Usage `json:"recentBytesUsed"`
 }
 
-func (softlayer_network_storage_nas *SoftLayer_Network_Storage_Nas) String() string {
+func (softlayer_network_storage_nas *SoftLayer_Network_Storage_Nas_Extended) String() string {
 	return "SoftLayer_Network_Storage_Nas"
 }

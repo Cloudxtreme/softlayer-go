@@ -11,14 +11,18 @@ import (
 // to bandwidth utilization at a specific point in time on a given network interface.
 type SoftLayer_Network_Bandwidth_Version1_Usage_Detail struct {
 
+	// Day - Day and time this bandwidth utilization event was recorded.
+	Day *time.Time `json:"day"`
+
 	// AmountIn - no documentation
 	AmountIn float64 `json:"amountIn"`
 
 	// AmountOut - no documentation
 	AmountOut float64 `json:"amountOut"`
+}
 
-	// Day - Day and time this bandwidth utilization event was recorded.
-	Day *time.Time `json:"day"`
+func (softlayer_network_bandwidth_version1_usage_detail *SoftLayer_Network_Bandwidth_Version1_Usage_Detail) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Usage_Detail"
 }
 
 // SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Extended is SoftLayer_Network_Bandwidth_Version1_Usage_Detail with all maskable types.
@@ -33,6 +37,6 @@ type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Extended struct {
 	BandwidthUsageDetailType *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type `json:"bandwidthUsageDetailType"`
 }
 
-func (softlayer_network_bandwidth_version1_usage_detail *SoftLayer_Network_Bandwidth_Version1_Usage_Detail) String() string {
+func (softlayer_network_bandwidth_version1_usage_detail *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Extended) String() string {
 	return "SoftLayer_Network_Bandwidth_Version1_Usage_Detail"
 }

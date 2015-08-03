@@ -10,9 +10,6 @@ import (
 // used to set the value for a configuration definition
 type SoftLayer_Configuration_Template_Section_Definition_Value struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
 	// DefinitionId - Internal identifier of a configuration definition that this configuration value if
 	// defined by
 	DefinitionId int `json:"definitionId"`
@@ -26,6 +23,13 @@ type SoftLayer_Configuration_Template_Section_Definition_Value struct {
 
 	// Value - no documentation
 	Value string `json:"value"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+}
+
+func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value) String() string {
+	return "SoftLayer_Configuration_Template_Section_Definition_Value"
 }
 
 // SoftLayer_Configuration_Template_Section_Definition_Value_Extended is SoftLayer_Configuration_Template_Section_Definition_Value with all maskable types.
@@ -39,6 +43,6 @@ type SoftLayer_Configuration_Template_Section_Definition_Value_Extended struct {
 	Template *SoftLayer_Configuration_Template `json:"template"`
 }
 
-func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value) String() string {
+func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value_Extended) String() string {
 	return "SoftLayer_Configuration_Template_Section_Definition_Value"
 }

@@ -7,6 +7,10 @@ package types
 // relating to a single SoftLayer Template Partition.
 type SoftLayer_Hardware_Component_Partition_Template_Partition struct {
 
+	// IsGrow - A flag indication if a partition will be the grow partition. The grow partition will have
+	// its size adjusted to fill all available space on a hard drive.
+	IsGrow bool `json:"isGrow"`
+
 	// PartitionName - no documentation
 	PartitionName string `json:"partitionName"`
 
@@ -19,24 +23,24 @@ type SoftLayer_Hardware_Component_Partition_Template_Partition struct {
 
 	// Id - no documentation
 	Id int `json:"id"`
+}
 
-	// IsGrow - A flag indication if a partition will be the grow partition. The grow partition will have
-	// its size adjusted to fill all available space on a hard drive.
-	IsGrow bool `json:"isGrow"`
+func (softlayer_hardware_component_partition_template_partition *SoftLayer_Hardware_Component_Partition_Template_Partition) String() string {
+	return "SoftLayer_Hardware_Component_Partition_Template_Partition"
 }
 
 // SoftLayer_Hardware_Component_Partition_Template_Partition_Extended is SoftLayer_Hardware_Component_Partition_Template_Partition with all maskable types.
 type SoftLayer_Hardware_Component_Partition_Template_Partition_Extended struct {
 	SoftLayer_Hardware_Component_Partition_Template_Partition
 
+	// FilesystemType - no documentation
+	FilesystemType *SoftLayer_Configuration_Storage_Filesystem_Type `json:"filesystemType"`
+
 	// PartitionTemplate - A partition's [[SoftLayer_Hardware_Component_Partition_Template|Partition
 	// Template]].
 	PartitionTemplate *SoftLayer_Hardware_Component_Partition_Template `json:"partitionTemplate"`
-
-	// FilesystemType - no documentation
-	FilesystemType *SoftLayer_Configuration_Storage_Filesystem_Type `json:"filesystemType"`
 }
 
-func (softlayer_hardware_component_partition_template_partition *SoftLayer_Hardware_Component_Partition_Template_Partition) String() string {
+func (softlayer_hardware_component_partition_template_partition *SoftLayer_Hardware_Component_Partition_Template_Partition_Extended) String() string {
 	return "SoftLayer_Hardware_Component_Partition_Template_Partition"
 }

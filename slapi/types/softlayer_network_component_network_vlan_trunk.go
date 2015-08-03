@@ -14,6 +14,10 @@ type SoftLayer_Network_Component_Network_Vlan_Trunk struct {
 	NetworkVlanId int `json:"networkVlanId"`
 }
 
+func (softlayer_network_component_network_vlan_trunk *SoftLayer_Network_Component_Network_Vlan_Trunk) String() string {
+	return "SoftLayer_Network_Component_Network_Vlan_Trunk"
+}
+
 // SoftLayer_Network_Component_Network_Vlan_Trunk_Extended is SoftLayer_Network_Component_Network_Vlan_Trunk with all maskable types.
 type SoftLayer_Network_Component_Network_Vlan_Trunk_Extended struct {
 	SoftLayer_Network_Component_Network_Vlan_Trunk
@@ -25,6 +29,6 @@ type SoftLayer_Network_Component_Network_Vlan_Trunk_Extended struct {
 	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan"`
 }
 
-func (softlayer_network_component_network_vlan_trunk *SoftLayer_Network_Component_Network_Vlan_Trunk) String() string {
+func (softlayer_network_component_network_vlan_trunk *SoftLayer_Network_Component_Network_Vlan_Trunk_Extended) String() string {
 	return "SoftLayer_Network_Component_Network_Vlan_Trunk"
 }

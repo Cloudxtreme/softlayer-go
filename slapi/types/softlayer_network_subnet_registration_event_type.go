@@ -16,6 +16,12 @@ import (
 // content will be provided in the event message.
 type SoftLayer_Network_Subnet_Registration_Event_Type struct {
 
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+
 	// KeyName - no documentation
 	KeyName string `json:"keyName"`
 
@@ -24,12 +30,6 @@ type SoftLayer_Network_Subnet_Registration_Event_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
-
-	// Id - no documentation
-	Id int `json:"id"`
 }
 
 func (softlayer_network_subnet_registration_event_type *SoftLayer_Network_Subnet_Registration_Event_Type) String() string {

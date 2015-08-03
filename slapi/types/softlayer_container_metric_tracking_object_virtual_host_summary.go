@@ -11,17 +11,20 @@ import (
 // host's metric data.
 type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Summary struct {
 
-	// AvgMemoryUsageInBillingCycle - The average amount of memory usage thus far in this billing cycle.
-	AvgMemoryUsageInBillingCycle int `json:"avgMemoryUsageInBillingCycle"`
+	// PreviousBillCycleEnd - no documentation
+	PreviousBillCycleEnd *time.Time `json:"previousBillCycleEnd"`
+
+	// CurrentBillCycleEnd - no documentation
+	CurrentBillCycleEnd *time.Time `json:"currentBillCycleEnd"`
 
 	// CurrentBillCycleStart - no documentation
 	CurrentBillCycleStart *time.Time `json:"currentBillCycleStart"`
 
-	// LastPollTime - The last time this virtual host was polled for metrics.
-	LastPollTime *time.Time `json:"lastPollTime"`
-
 	// MaxInstanceInBillingCycle - The max number of instances hosted thus far in this billing cycle.
 	MaxInstanceInBillingCycle int `json:"maxInstanceInBillingCycle"`
+
+	// LastPollTime - The last time this virtual host was polled for metrics.
+	LastPollTime *time.Time `json:"lastPollTime"`
 
 	// PreviousBillCycleStart - no documentation
 	PreviousBillCycleStart *time.Time `json:"previousBillCycleStart"`
@@ -29,17 +32,14 @@ type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Summary struct {
 	// VirtualPlatformName - no documentation
 	VirtualPlatformName string `json:"virtualPlatformName"`
 
-	// CurrentBillCycleEnd - no documentation
-	CurrentBillCycleEnd *time.Time `json:"currentBillCycleEnd"`
+	// AvgMemoryUsageInBillingCycle - The average amount of memory usage thus far in this billing cycle.
+	AvgMemoryUsageInBillingCycle int `json:"avgMemoryUsageInBillingCycle"`
 
 	// LastInstanceCount - The last count of instances this platform was hosting.
 	LastInstanceCount int `json:"lastInstanceCount"`
 
 	// LastMemoryUsageAmount - no documentation
 	LastMemoryUsageAmount int `json:"lastMemoryUsageAmount"`
-
-	// PreviousBillCycleEnd - no documentation
-	PreviousBillCycleEnd *time.Time `json:"previousBillCycleEnd"`
 }
 
 func (softlayer_container_metric_tracking_object_virtual_host_summary *SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Summary) String() string {

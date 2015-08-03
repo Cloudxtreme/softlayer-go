@@ -21,23 +21,27 @@ type SoftLayer_Product_Package_Item_Category_Group struct {
 	Title string `json:"title"`
 }
 
+func (softlayer_product_package_item_category_group *SoftLayer_Product_Package_Item_Category_Group) String() string {
+	return "SoftLayer_Product_Package_Item_Category_Group"
+}
+
 // SoftLayer_Product_Package_Item_Category_Group_Extended is SoftLayer_Product_Package_Item_Category_Group with all maskable types.
 type SoftLayer_Product_Package_Item_Category_Group_Extended struct {
 	SoftLayer_Product_Package_Item_Category_Group
-
-	// PriceCount - no documentation
-	PriceCount uint64 `json:"priceCount"`
-
-	// Category - <nil>
-	Category *SoftLayer_Product_Item_Category `json:"category"`
 
 	// Package - <nil>
 	Package *SoftLayer_Product_Package `json:"package"`
 
 	// Prices - <nil>
 	Prices []*SoftLayer_Product_Item_Price `json:"prices"`
+
+	// PriceCount - no documentation
+	PriceCount uint64 `json:"priceCount"`
+
+	// Category - <nil>
+	Category *SoftLayer_Product_Item_Category `json:"category"`
 }
 
-func (softlayer_product_package_item_category_group *SoftLayer_Product_Package_Item_Category_Group) String() string {
+func (softlayer_product_package_item_category_group *SoftLayer_Product_Package_Item_Category_Group_Extended) String() string {
 	return "SoftLayer_Product_Package_Item_Category_Group"
 }

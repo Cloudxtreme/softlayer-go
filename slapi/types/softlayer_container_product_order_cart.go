@@ -5,9 +5,6 @@ package types
 // SoftLayer_Container_Product_Order_Cart - no documentation
 type SoftLayer_Container_Product_Order_Cart struct {
 
-	// SavedCartName - no documentation
-	SavedCartName string `json:"savedCartName"`
-
 	// CurrencyShortName - <nil>
 	CurrencyShortName string `json:"currencyShortName"`
 
@@ -22,6 +19,9 @@ type SoftLayer_Container_Product_Order_Cart struct {
 
 	// SavedCartKey - no documentation
 	SavedCartKey string `json:"savedCartKey"`
+
+	// SavedCartName - no documentation
+	SavedCartName string `json:"savedCartName"`
 }
 
 func (softlayer_container_product_order_cart *SoftLayer_Container_Product_Order_Cart) String() string {

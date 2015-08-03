@@ -6,17 +6,21 @@ package types
 // type contains cancellation reasons.
 type SoftLayer_Billing_Item_Cancellation_Reason struct {
 
-	// BillingCancelReasonCategoryId - no documentation
-	BillingCancelReasonCategoryId int `json:"billingCancelReasonCategoryId"`
-
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// KeyName - no documentation
 	KeyName string `json:"keyName"`
 
 	// Reason - no documentation
 	Reason string `json:"reason"`
+
+	// BillingCancelReasonCategoryId - no documentation
+	BillingCancelReasonCategoryId int `json:"billingCancelReasonCategoryId"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+}
+
+func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) String() string {
+	return "SoftLayer_Billing_Item_Cancellation_Reason"
 }
 
 // SoftLayer_Billing_Item_Cancellation_Reason_Extended is SoftLayer_Billing_Item_Cancellation_Reason with all maskable types.
@@ -37,6 +41,6 @@ type SoftLayer_Billing_Item_Cancellation_Reason_Extended struct {
 	TranslatedReason string `json:"translatedReason"`
 }
 
-func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) String() string {
+func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason_Extended) String() string {
 	return "SoftLayer_Billing_Item_Cancellation_Reason"
 }

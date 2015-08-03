@@ -23,6 +23,10 @@ type SoftLayer_Network_Application_Delivery_Controller_Configuration_History str
 	Notes string `json:"notes"`
 }
 
+func (softlayer_network_application_delivery_controller_configuration_history *SoftLayer_Network_Application_Delivery_Controller_Configuration_History) String() string {
+	return "SoftLayer_Network_Application_Delivery_Controller_Configuration_History"
+}
+
 // SoftLayer_Network_Application_Delivery_Controller_Configuration_History_Extended is SoftLayer_Network_Application_Delivery_Controller_Configuration_History with all maskable types.
 type SoftLayer_Network_Application_Delivery_Controller_Configuration_History_Extended struct {
 	SoftLayer_Network_Application_Delivery_Controller_Configuration_History
@@ -31,6 +35,6 @@ type SoftLayer_Network_Application_Delivery_Controller_Configuration_History_Ext
 	Controller *SoftLayer_Network_Application_Delivery_Controller `json:"controller"`
 }
 
-func (softlayer_network_application_delivery_controller_configuration_history *SoftLayer_Network_Application_Delivery_Controller_Configuration_History) String() string {
+func (softlayer_network_application_delivery_controller_configuration_history *SoftLayer_Network_Application_Delivery_Controller_Configuration_History_Extended) String() string {
 	return "SoftLayer_Network_Application_Delivery_Controller_Configuration_History"
 }

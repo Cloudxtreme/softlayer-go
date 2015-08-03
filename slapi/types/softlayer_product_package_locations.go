@@ -20,6 +20,10 @@ type SoftLayer_Product_Package_Locations struct {
 	PackageId int `json:"packageId"`
 }
 
+func (softlayer_product_package_locations *SoftLayer_Product_Package_Locations) String() string {
+	return "SoftLayer_Product_Package_Locations"
+}
+
 // SoftLayer_Product_Package_Locations_Extended is SoftLayer_Product_Package_Locations with all maskable types.
 type SoftLayer_Product_Package_Locations_Extended struct {
 	SoftLayer_Product_Package_Locations
@@ -31,6 +35,6 @@ type SoftLayer_Product_Package_Locations_Extended struct {
 	Package *SoftLayer_Product_Package `json:"package"`
 }
 
-func (softlayer_product_package_locations *SoftLayer_Product_Package_Locations) String() string {
+func (softlayer_product_package_locations *SoftLayer_Product_Package_Locations_Extended) String() string {
 	return "SoftLayer_Product_Package_Locations"
 }

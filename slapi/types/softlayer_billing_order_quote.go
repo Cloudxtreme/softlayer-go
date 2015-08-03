@@ -13,11 +13,15 @@ import (
 // customer.
 type SoftLayer_Billing_Order_Quote struct {
 
+	// QuoteKey - no documentation
+	QuoteKey string `json:"quoteKey"`
+
 	// Id - no documentation
 	Id int `json:"id"`
 
-	// ModifyDate - Holds the date when the quote record was modified with reference to its creation date
-	ModifyDate *time.Time `json:"modifyDate"`
+	// PublicNote - This property Holds system generated notes. In our case if a quote is tied to an order
+	// where one of the order item has an inactive promotion code, the quote will be considered invalid.
+	PublicNote string `json:"publicNote"`
 
 	// CompletedPurchaseDataId - Identification Number of the order record tied to the quote.
 	CompletedPurchaseDataId int `json:"completedPurchaseDataId"`
@@ -25,44 +29,44 @@ type SoftLayer_Billing_Order_Quote struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
-	// AccountId - Identification Number of the account record tied to the quote
-	AccountId int `json:"accountId"`
-
-	// QuoteKey - no documentation
-	QuoteKey string `json:"quoteKey"`
-
-	// PublicNote - This property Holds system generated notes. In our case if a quote is tied to an order
-	// where one of the order item has an inactive promotion code, the quote will be considered invalid.
-	PublicNote string `json:"publicNote"`
-
-	// Status - This property Holds the current status of a Quote: pending,expired, saved or deleted
-	Status string `json:"status"`
-
 	// ExpirationDate - This property holds the date of expiration of a quote, after that date the quote
 	// would be deem expired
 	ExpirationDate *time.Time `json:"expirationDate"`
 
+	// ModifyDate - Holds the date when the quote record was modified with reference to its creation date
+	ModifyDate *time.Time `json:"modifyDate"`
+
+	// Status - This property Holds the current status of a Quote: pending,expired, saved or deleted
+	Status string `json:"status"`
+
+	// AccountId - Identification Number of the account record tied to the quote
+	AccountId int `json:"accountId"`
+
 	// Name - no documentation
 	Name string `json:"name"`
+}
+
+func (softlayer_billing_order_quote *SoftLayer_Billing_Order_Quote) String() string {
+	return "SoftLayer_Billing_Order_Quote"
 }
 
 // SoftLayer_Billing_Order_Quote_Extended is SoftLayer_Billing_Order_Quote with all maskable types.
 type SoftLayer_Billing_Order_Quote_Extended struct {
 	SoftLayer_Billing_Order_Quote
 
-	// OrdersFromQuoteCount - no documentation
-	OrdersFromQuoteCount uint64 `json:"ordersFromQuoteCount"`
+	// OrdersFromQuote - no documentation
+	OrdersFromQuote []*SoftLayer_Billing_Order `json:"ordersFromQuote"`
 
 	// Order - no documentation
 	Order *SoftLayer_Billing_Order `json:"order"`
 
-	// OrdersFromQuote - no documentation
-	OrdersFromQuote []*SoftLayer_Billing_Order `json:"ordersFromQuote"`
+	// OrdersFromQuoteCount - no documentation
+	OrdersFromQuoteCount uint64 `json:"ordersFromQuoteCount"`
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account"`
 }
 
-func (softlayer_billing_order_quote *SoftLayer_Billing_Order_Quote) String() string {
+func (softlayer_billing_order_quote *SoftLayer_Billing_Order_Quote_Extended) String() string {
 	return "SoftLayer_Billing_Order_Quote"
 }

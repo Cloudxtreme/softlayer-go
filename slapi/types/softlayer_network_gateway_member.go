@@ -19,6 +19,10 @@ type SoftLayer_Network_Gateway_Member struct {
 	Priority int `json:"priority"`
 }
 
+func (softlayer_network_gateway_member *SoftLayer_Network_Gateway_Member) String() string {
+	return "SoftLayer_Network_Gateway_Member"
+}
+
 // SoftLayer_Network_Gateway_Member_Extended is SoftLayer_Network_Gateway_Member with all maskable types.
 type SoftLayer_Network_Gateway_Member_Extended struct {
 	SoftLayer_Network_Gateway_Member
@@ -30,6 +34,6 @@ type SoftLayer_Network_Gateway_Member_Extended struct {
 	NetworkGateway *SoftLayer_Network_Gateway `json:"networkGateway"`
 }
 
-func (softlayer_network_gateway_member *SoftLayer_Network_Gateway_Member) String() string {
+func (softlayer_network_gateway_member *SoftLayer_Network_Gateway_Member_Extended) String() string {
 	return "SoftLayer_Network_Gateway_Member"
 }

@@ -10,6 +10,10 @@ type SoftLayer_User_Preference struct {
 	Value string `json:"value"`
 }
 
+func (softlayer_user_preference *SoftLayer_User_Preference) String() string {
+	return "SoftLayer_User_Preference"
+}
+
 // SoftLayer_User_Preference_Extended is SoftLayer_User_Preference with all maskable types.
 type SoftLayer_User_Preference_Extended struct {
 	SoftLayer_User_Preference
@@ -21,6 +25,6 @@ type SoftLayer_User_Preference_Extended struct {
 	Type *SoftLayer_User_Preference_Type `json:"type"`
 }
 
-func (softlayer_user_preference *SoftLayer_User_Preference) String() string {
+func (softlayer_user_preference *SoftLayer_User_Preference_Extended) String() string {
 	return "SoftLayer_User_Preference"
 }

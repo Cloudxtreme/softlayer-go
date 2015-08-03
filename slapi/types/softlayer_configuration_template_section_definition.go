@@ -14,35 +14,8 @@ import (
 // your system specific values.
 type SoftLayer_Configuration_Template_Section_Definition struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
-	// MinimumValue - no documentation
-	MinimumValue string `json:"minimumValue"`
-
 	// Sort - no documentation
 	Sort int `json:"sort"`
-
-	// Description - no documentation
-	Description string `json:"description"`
-
-	// GroupId - no documentation
-	GroupId string `json:"groupId"`
-
-	// MaximumValue - no documentation
-	MaximumValue string `json:"maximumValue"`
-
-	// Path - no documentation
-	Path string `json:"path"`
-
-	// RequireValueFlag - Indicates if a configuration value is required for this definition.
-	RequireValueFlag int `json:"requireValueFlag"`
-
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// TypeId - Internal identifier of a configuration definition type.
-	TypeId int `json:"typeId"`
 
 	// EnumerationValues - no documentation
 	EnumerationValues string `json:"enumerationValues"`
@@ -53,22 +26,59 @@ type SoftLayer_Configuration_Template_Section_Definition struct {
 	// Name - no documentation
 	Name string `json:"name"`
 
-	// SectionId - no documentation
-	SectionId int `json:"sectionId"`
+	// Path - no documentation
+	Path string `json:"path"`
+
+	// TypeId - Internal identifier of a configuration definition type.
+	TypeId int `json:"typeId"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+
+	// Description - no documentation
+	Description string `json:"description"`
+
+	// GroupId - no documentation
+	GroupId string `json:"groupId"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// MaximumValue - no documentation
+	MaximumValue string `json:"maximumValue"`
+
+	// MinimumValue - no documentation
+	MinimumValue string `json:"minimumValue"`
+
+	// RequireValueFlag - Indicates if a configuration value is required for this definition.
+	RequireValueFlag int `json:"requireValueFlag"`
 
 	// ShortName - no documentation
 	ShortName string `json:"shortName"`
+
+	// SectionId - no documentation
+	SectionId int `json:"sectionId"`
+}
+
+func (softlayer_configuration_template_section_definition *SoftLayer_Configuration_Template_Section_Definition) String() string {
+	return "SoftLayer_Configuration_Template_Section_Definition"
 }
 
 // SoftLayer_Configuration_Template_Section_Definition_Extended is SoftLayer_Configuration_Template_Section_Definition with all maskable types.
 type SoftLayer_Configuration_Template_Section_Definition_Extended struct {
 	SoftLayer_Configuration_Template_Section_Definition
 
-	// Attributes - <nil>
-	Attributes []*SoftLayer_Configuration_Template_Section_Definition_Attribute `json:"attributes"`
+	// ValueType - <nil>
+	ValueType *SoftLayer_Configuration_Template_Section_Definition_Type `json:"valueType"`
+
+	// Group - <nil>
+	Group *SoftLayer_Configuration_Template_Section_Definition_Group `json:"group"`
 
 	// MonitoringDataFlag - <nil>
 	MonitoringDataFlag bool `json:"monitoringDataFlag"`
+
+	// Attributes - <nil>
+	Attributes []*SoftLayer_Configuration_Template_Section_Definition_Attribute `json:"attributes"`
 
 	// AttributeCount - no documentation
 	AttributeCount uint64 `json:"attributeCount"`
@@ -76,16 +86,10 @@ type SoftLayer_Configuration_Template_Section_Definition_Extended struct {
 	// DefaultValue - <nil>
 	DefaultValue *SoftLayer_Configuration_Template_Section_Definition_Value `json:"defaultValue"`
 
-	// Group - <nil>
-	Group *SoftLayer_Configuration_Template_Section_Definition_Group `json:"group"`
-
 	// Section - <nil>
 	Section *SoftLayer_Configuration_Template_Section `json:"section"`
-
-	// ValueType - <nil>
-	ValueType *SoftLayer_Configuration_Template_Section_Definition_Type `json:"valueType"`
 }
 
-func (softlayer_configuration_template_section_definition *SoftLayer_Configuration_Template_Section_Definition) String() string {
+func (softlayer_configuration_template_section_definition *SoftLayer_Configuration_Template_Section_Definition_Extended) String() string {
 	return "SoftLayer_Configuration_Template_Section_Definition"
 }

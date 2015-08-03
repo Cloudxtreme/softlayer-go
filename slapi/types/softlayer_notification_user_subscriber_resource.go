@@ -19,6 +19,10 @@ type SoftLayer_Notification_User_Subscriber_Resource struct {
 	ResourceTableId int `json:"resourceTableId"`
 }
 
+func (softlayer_notification_user_subscriber_resource *SoftLayer_Notification_User_Subscriber_Resource) String() string {
+	return "SoftLayer_Notification_User_Subscriber_Resource"
+}
+
 // SoftLayer_Notification_User_Subscriber_Resource_Extended is SoftLayer_Notification_User_Subscriber_Resource with all maskable types.
 type SoftLayer_Notification_User_Subscriber_Resource_Extended struct {
 	SoftLayer_Notification_User_Subscriber_Resource
@@ -27,6 +31,6 @@ type SoftLayer_Notification_User_Subscriber_Resource_Extended struct {
 	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber"`
 }
 
-func (softlayer_notification_user_subscriber_resource *SoftLayer_Notification_User_Subscriber_Resource) String() string {
+func (softlayer_notification_user_subscriber_resource *SoftLayer_Notification_User_Subscriber_Resource_Extended) String() string {
 	return "SoftLayer_Notification_User_Subscriber_Resource"
 }

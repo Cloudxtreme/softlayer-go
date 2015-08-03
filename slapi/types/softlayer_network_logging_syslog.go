@@ -13,20 +13,20 @@ type SoftLayer_Network_Logging_Syslog struct {
 	// CreateDate - Timestamp for when the connection was blocked by the firewall
 	CreateDate *time.Time `json:"createDate"`
 
-	// EventType - This tells you what kind of firewall event this log line is for: accept or deny.
-	EventType string `json:"eventType"`
-
-	// Message - no documentation
-	Message string `json:"message"`
-
-	// Protocol - Connection protocol used to make the call that was blocked (tcp, udp, etc)
-	Protocol string `json:"protocol"`
-
 	// DestinationIpAddress - The Destination IP Address of the blocked connection (your end)
 	DestinationIpAddress string `json:"destinationIpAddress"`
 
 	// DestinationPort - The Destination Port of the blocked connection (your end)
 	DestinationPort int `json:"destinationPort"`
+
+	// Message - no documentation
+	Message string `json:"message"`
+
+	// EventType - This tells you what kind of firewall event this log line is for: accept or deny.
+	EventType string `json:"eventType"`
+
+	// Protocol - Connection protocol used to make the call that was blocked (tcp, udp, etc)
+	Protocol string `json:"protocol"`
 
 	// SourceIpAddress - The Source IP Address of the call that was blocked (attacker's end)
 	SourceIpAddress string `json:"sourceIpAddress"`

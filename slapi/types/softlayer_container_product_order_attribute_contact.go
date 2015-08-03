@@ -7,18 +7,6 @@ package types
 // SoftLayer_Container_Product_Order_Attribute_Contact datatype contains the contact information.
 type SoftLayer_Container_Product_Order_Attribute_Contact struct {
 
-	// PhoneNumber - no documentation
-	PhoneNumber string `json:"phoneNumber"`
-
-	// Title - no documentation
-	Title string `json:"title"`
-
-	// Address - no documentation
-	Address *SoftLayer_Container_Product_Order_Attribute_Address `json:"address"`
-
-	// EmailAddress - no documentation
-	EmailAddress string `json:"emailAddress"`
-
 	// FaxNumber - The fax number associated with a contact. This is an optional value.
 	FaxNumber string `json:"faxNumber"`
 
@@ -30,6 +18,18 @@ type SoftLayer_Container_Product_Order_Attribute_Contact struct {
 
 	// OrganizationName - no documentation
 	OrganizationName string `json:"organizationName"`
+
+	// PhoneNumber - no documentation
+	PhoneNumber string `json:"phoneNumber"`
+
+	// Title - no documentation
+	Title string `json:"title"`
+
+	// Address - no documentation
+	Address *SoftLayer_Container_Product_Order_Attribute_Address `json:"address"`
+
+	// EmailAddress - no documentation
+	EmailAddress string `json:"emailAddress"`
 }
 
 func (softlayer_container_product_order_attribute_contact *SoftLayer_Container_Product_Order_Attribute_Contact) String() string {

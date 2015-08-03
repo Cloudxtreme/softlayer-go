@@ -29,6 +29,10 @@ type SoftLayer_Metric_Tracking_Object struct {
 	StartDate *time.Time `json:"startDate"`
 }
 
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) String() string {
+	return "SoftLayer_Metric_Tracking_Object"
+}
+
 // SoftLayer_Metric_Tracking_Object_Extended is SoftLayer_Metric_Tracking_Object with all maskable types.
 type SoftLayer_Metric_Tracking_Object_Extended struct {
 	SoftLayer_Metric_Tracking_Object
@@ -37,6 +41,6 @@ type SoftLayer_Metric_Tracking_Object_Extended struct {
 	Type *SoftLayer_Metric_Tracking_Object_Type `json:"type"`
 }
 
-func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) String() string {
+func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object_Extended) String() string {
 	return "SoftLayer_Metric_Tracking_Object"
 }

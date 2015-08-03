@@ -23,6 +23,10 @@ type SoftLayer_Scale_Asset struct {
 	Id int `json:"id"`
 }
 
+func (softlayer_scale_asset *SoftLayer_Scale_Asset) String() string {
+	return "SoftLayer_Scale_Asset"
+}
+
 // SoftLayer_Scale_Asset_Extended is SoftLayer_Scale_Asset with all maskable types.
 type SoftLayer_Scale_Asset_Extended struct {
 	SoftLayer_Scale_Asset
@@ -31,6 +35,6 @@ type SoftLayer_Scale_Asset_Extended struct {
 	ScaleGroup *SoftLayer_Scale_Group `json:"scaleGroup"`
 }
 
-func (softlayer_scale_asset *SoftLayer_Scale_Asset) String() string {
+func (softlayer_scale_asset *SoftLayer_Scale_Asset_Extended) String() string {
 	return "SoftLayer_Scale_Asset"
 }

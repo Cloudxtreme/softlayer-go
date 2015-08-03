@@ -5,14 +5,18 @@ package types
 // SoftLayer_Resource_Group_Role - <nil>
 type SoftLayer_Resource_Group_Role struct {
 
+	// KeyName - no documentation
+	KeyName string `json:"keyName"`
+
 	// Description - no documentation
 	Description string `json:"description"`
 
 	// Id - no documentation
 	Id int `json:"id"`
+}
 
-	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role) String() string {
+	return "SoftLayer_Resource_Group_Role"
 }
 
 // SoftLayer_Resource_Group_Role_Extended is SoftLayer_Resource_Group_Role with all maskable types.
@@ -26,6 +30,6 @@ type SoftLayer_Resource_Group_Role_Extended struct {
 	MemberLinks []*SoftLayer_Resource_Group_Member_Role_Link `json:"memberLinks"`
 }
 
-func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role) String() string {
+func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role_Extended) String() string {
 	return "SoftLayer_Resource_Group_Role"
 }

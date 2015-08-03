@@ -27,6 +27,10 @@ type SoftLayer_Network_Service_Health struct {
 	StatusId int `json:"statusId"`
 }
 
+func (softlayer_network_service_health *SoftLayer_Network_Service_Health) String() string {
+	return "SoftLayer_Network_Service_Health"
+}
+
 // SoftLayer_Network_Service_Health_Extended is SoftLayer_Network_Service_Health with all maskable types.
 type SoftLayer_Network_Service_Health_Extended struct {
 	SoftLayer_Network_Service_Health
@@ -38,6 +42,6 @@ type SoftLayer_Network_Service_Health_Extended struct {
 	Status *SoftLayer_Network_Service_Health_Status `json:"status"`
 }
 
-func (softlayer_network_service_health *SoftLayer_Network_Service_Health) String() string {
+func (softlayer_network_service_health *SoftLayer_Network_Service_Health_Extended) String() string {
 	return "SoftLayer_Network_Service_Health"
 }

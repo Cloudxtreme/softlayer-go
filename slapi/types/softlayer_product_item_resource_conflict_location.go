@@ -6,6 +6,10 @@ package types
 type SoftLayer_Product_Item_Resource_Conflict_Location struct {
 }
 
+func (softlayer_product_item_resource_conflict_location *SoftLayer_Product_Item_Resource_Conflict_Location) String() string {
+	return "SoftLayer_Product_Item_Resource_Conflict_Location"
+}
+
 // SoftLayer_Product_Item_Resource_Conflict_Location_Extended is SoftLayer_Product_Item_Resource_Conflict_Location with all maskable types.
 type SoftLayer_Product_Item_Resource_Conflict_Location_Extended struct {
 	SoftLayer_Product_Item_Resource_Conflict_Location
@@ -14,6 +18,6 @@ type SoftLayer_Product_Item_Resource_Conflict_Location_Extended struct {
 	Resource *SoftLayer_Location `json:"resource"`
 }
 
-func (softlayer_product_item_resource_conflict_location *SoftLayer_Product_Item_Resource_Conflict_Location) String() string {
+func (softlayer_product_item_resource_conflict_location *SoftLayer_Product_Item_Resource_Conflict_Location_Extended) String() string {
 	return "SoftLayer_Product_Item_Resource_Conflict_Location"
 }

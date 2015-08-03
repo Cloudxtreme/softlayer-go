@@ -10,6 +10,9 @@ import (
 // date, end date, interval, and other properties to a storage schedule.
 type SoftLayer_Network_Storage_Schedule_Property struct {
 
+	// Value - no documentation
+	Value string `json:"value"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
@@ -21,9 +24,10 @@ type SoftLayer_Network_Storage_Schedule_Property struct {
 
 	// TypeId - no documentation
 	TypeId int `json:"typeId"`
+}
 
-	// Value - no documentation
-	Value string `json:"value"`
+func (softlayer_network_storage_schedule_property *SoftLayer_Network_Storage_Schedule_Property) String() string {
+	return "SoftLayer_Network_Storage_Schedule_Property"
 }
 
 // SoftLayer_Network_Storage_Schedule_Property_Extended is SoftLayer_Network_Storage_Schedule_Property with all maskable types.
@@ -37,6 +41,6 @@ type SoftLayer_Network_Storage_Schedule_Property_Extended struct {
 	Type *SoftLayer_Network_Storage_Schedule_Property_Type `json:"type"`
 }
 
-func (softlayer_network_storage_schedule_property *SoftLayer_Network_Storage_Schedule_Property) String() string {
+func (softlayer_network_storage_schedule_property *SoftLayer_Network_Storage_Schedule_Property_Extended) String() string {
 	return "SoftLayer_Network_Storage_Schedule_Property"
 }

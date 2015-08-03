@@ -6,6 +6,10 @@ package types
 type SoftLayer_Resource_Group_Member_Network_Subnet struct {
 }
 
+func (softlayer_resource_group_member_network_subnet *SoftLayer_Resource_Group_Member_Network_Subnet) String() string {
+	return "SoftLayer_Resource_Group_Member_Network_Subnet"
+}
+
 // SoftLayer_Resource_Group_Member_Network_Subnet_Extended is SoftLayer_Resource_Group_Member_Network_Subnet with all maskable types.
 type SoftLayer_Resource_Group_Member_Network_Subnet_Extended struct {
 	SoftLayer_Resource_Group_Member_Network_Subnet
@@ -14,6 +18,6 @@ type SoftLayer_Resource_Group_Member_Network_Subnet_Extended struct {
 	Resource *SoftLayer_Network_Subnet `json:"resource"`
 }
 
-func (softlayer_resource_group_member_network_subnet *SoftLayer_Resource_Group_Member_Network_Subnet) String() string {
+func (softlayer_resource_group_member_network_subnet *SoftLayer_Resource_Group_Member_Network_Subnet_Extended) String() string {
 	return "SoftLayer_Resource_Group_Member_Network_Subnet"
 }

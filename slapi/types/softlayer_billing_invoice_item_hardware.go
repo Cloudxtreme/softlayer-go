@@ -8,6 +8,10 @@ package types
 type SoftLayer_Billing_Invoice_Item_Hardware struct {
 }
 
+func (softlayer_billing_invoice_item_hardware *SoftLayer_Billing_Invoice_Item_Hardware) String() string {
+	return "SoftLayer_Billing_Invoice_Item_Hardware"
+}
+
 // SoftLayer_Billing_Invoice_Item_Hardware_Extended is SoftLayer_Billing_Invoice_Item_Hardware with all maskable types.
 type SoftLayer_Billing_Invoice_Item_Hardware_Extended struct {
 	SoftLayer_Billing_Invoice_Item_Hardware
@@ -16,6 +20,6 @@ type SoftLayer_Billing_Invoice_Item_Hardware_Extended struct {
 	Resource *SoftLayer_Hardware `json:"resource"`
 }
 
-func (softlayer_billing_invoice_item_hardware *SoftLayer_Billing_Invoice_Item_Hardware) String() string {
+func (softlayer_billing_invoice_item_hardware *SoftLayer_Billing_Invoice_Item_Hardware_Extended) String() string {
 	return "SoftLayer_Billing_Invoice_Item_Hardware"
 }

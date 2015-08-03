@@ -7,9 +7,6 @@ package types
 // SRV record on a SoftLayer hosted domain.
 type SoftLayer_Dns_Domain_ResourceRecord_SrvType struct {
 
-	// Port - The TCP or UDP port on which the service is to be found.
-	Port int `json:"port"`
-
 	// Priority - The priority of the target host, lower value means more preferred.
 	Priority int `json:"priority"`
 
@@ -21,6 +18,9 @@ type SoftLayer_Dns_Domain_ResourceRecord_SrvType struct {
 
 	// Weight - A relative weight for records with the same priority.
 	Weight int `json:"weight"`
+
+	// Port - The TCP or UDP port on which the service is to be found.
+	Port int `json:"port"`
 }
 
 func (softlayer_dns_domain_resourcerecord_srvtype *SoftLayer_Dns_Domain_ResourceRecord_SrvType) String() string {

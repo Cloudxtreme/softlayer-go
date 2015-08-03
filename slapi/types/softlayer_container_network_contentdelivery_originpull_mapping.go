@@ -7,6 +7,12 @@ package types
 // currently supports origin pull method for content.
 type SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping struct {
 
+	// Cname - no documentation
+	Cname string `json:"cname"`
+
+	// Id - The unique identifier of an origin pull configuration
+	Id string `json:"id"`
+
 	// IsSecureContent - This indicates if an origin pull mapping is for the secure content or not.
 	IsSecureContent bool `json:"isSecureContent"`
 
@@ -15,12 +21,6 @@ type SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping struct {
 
 	// OriginUrl - The URL of a origin server. A URL can contain a directory path.
 	OriginUrl string `json:"originUrl"`
-
-	// Cname - no documentation
-	Cname string `json:"cname"`
-
-	// Id - The unique identifier of an origin pull configuration
-	Id string `json:"id"`
 }
 
 func (softlayer_container_network_contentdelivery_originpull_mapping *SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping) String() string {

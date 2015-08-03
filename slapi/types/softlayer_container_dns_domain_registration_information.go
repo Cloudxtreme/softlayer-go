@@ -9,6 +9,12 @@ import (
 // SoftLayer_Container_Dns_Domain_Registration_Information - no documentation
 type SoftLayer_Container_Dns_Domain_Registration_Information struct {
 
+	// RegistryExpireDate - <nil>
+	RegistryExpireDate *time.Time `json:"registryExpireDate"`
+
+	// RegistryUpdateDate - <nil>
+	RegistryUpdateDate *time.Time `json:"registryUpdateDate"`
+
 	// Contacts - no documentation
 	Contacts []*SoftLayer_Container_Dns_Domain_Registration_Contact `json:"contacts"`
 
@@ -20,12 +26,6 @@ type SoftLayer_Container_Dns_Domain_Registration_Information struct {
 
 	// RegistryCreateDate - <nil>
 	RegistryCreateDate *time.Time `json:"registryCreateDate"`
-
-	// RegistryExpireDate - <nil>
-	RegistryExpireDate *time.Time `json:"registryExpireDate"`
-
-	// RegistryUpdateDate - <nil>
-	RegistryUpdateDate *time.Time `json:"registryUpdateDate"`
 }
 
 func (softlayer_container_dns_domain_registration_information *SoftLayer_Container_Dns_Domain_Registration_Information) String() string {

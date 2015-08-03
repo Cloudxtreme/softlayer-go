@@ -7,14 +7,18 @@ package types
 // network interface.
 type SoftLayer_Network_Bandwidth_Usage struct {
 
+	// BandwidthUsageDetailTypeId - ID of the bandwidth usage detail type for this record.
+	BandwidthUsageDetailTypeId float64 `json:"bandwidthUsageDetailTypeId"`
+
 	// AmountIn - no documentation
 	AmountIn float64 `json:"amountIn"`
 
 	// AmountOut - no documentation
 	AmountOut float64 `json:"amountOut"`
+}
 
-	// BandwidthUsageDetailTypeId - ID of the bandwidth usage detail type for this record.
-	BandwidthUsageDetailTypeId float64 `json:"bandwidthUsageDetailTypeId"`
+func (softlayer_network_bandwidth_usage *SoftLayer_Network_Bandwidth_Usage) String() string {
+	return "SoftLayer_Network_Bandwidth_Usage"
 }
 
 // SoftLayer_Network_Bandwidth_Usage_Extended is SoftLayer_Network_Bandwidth_Usage with all maskable types.
@@ -28,6 +32,6 @@ type SoftLayer_Network_Bandwidth_Usage_Extended struct {
 	Type *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type `json:"type"`
 }
 
-func (softlayer_network_bandwidth_usage *SoftLayer_Network_Bandwidth_Usage) String() string {
+func (softlayer_network_bandwidth_usage *SoftLayer_Network_Bandwidth_Usage_Extended) String() string {
 	return "SoftLayer_Network_Bandwidth_Usage"
 }

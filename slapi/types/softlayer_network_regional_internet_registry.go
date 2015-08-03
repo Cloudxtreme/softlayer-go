@@ -7,14 +7,14 @@ package types
 // contained in this data type is used throughout the networking-related services in our systems.
 type SoftLayer_Network_Regional_Internet_Registry struct {
 
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName"`
+
+	// Name - no documentation
+	Name string `json:"name"`
 }
 
 func (softlayer_network_regional_internet_registry *SoftLayer_Network_Regional_Internet_Registry) String() string {

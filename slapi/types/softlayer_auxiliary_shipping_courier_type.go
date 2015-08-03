@@ -5,6 +5,9 @@ package types
 // SoftLayer_Auxiliary_Shipping_Courier_Type - <nil>
 type SoftLayer_Auxiliary_Shipping_Courier_Type struct {
 
+	// Name - <nil>
+	Name string `json:"name"`
+
 	// Description - <nil>
 	Description string `json:"description"`
 
@@ -13,9 +16,10 @@ type SoftLayer_Auxiliary_Shipping_Courier_Type struct {
 
 	// KeyName - <nil>
 	KeyName string `json:"keyName"`
+}
 
-	// Name - <nil>
-	Name string `json:"name"`
+func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type) String() string {
+	return "SoftLayer_Auxiliary_Shipping_Courier_Type"
 }
 
 // SoftLayer_Auxiliary_Shipping_Courier_Type_Extended is SoftLayer_Auxiliary_Shipping_Courier_Type with all maskable types.
@@ -29,6 +33,6 @@ type SoftLayer_Auxiliary_Shipping_Courier_Type_Extended struct {
 	CourierCount uint64 `json:"courierCount"`
 }
 
-func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type) String() string {
+func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type_Extended) String() string {
 	return "SoftLayer_Auxiliary_Shipping_Courier_Type"
 }

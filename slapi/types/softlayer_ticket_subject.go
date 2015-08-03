@@ -14,6 +14,10 @@ type SoftLayer_Ticket_Subject struct {
 	Name string `json:"name"`
 }
 
+func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) String() string {
+	return "SoftLayer_Ticket_Subject"
+}
+
 // SoftLayer_Ticket_Subject_Extended is SoftLayer_Ticket_Subject with all maskable types.
 type SoftLayer_Ticket_Subject_Extended struct {
 	SoftLayer_Ticket_Subject
@@ -22,6 +26,6 @@ type SoftLayer_Ticket_Subject_Extended struct {
 	Group *SoftLayer_Ticket_Group `json:"group"`
 }
 
-func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) String() string {
+func (softlayer_ticket_subject *SoftLayer_Ticket_Subject_Extended) String() string {
 	return "SoftLayer_Ticket_Subject"
 }

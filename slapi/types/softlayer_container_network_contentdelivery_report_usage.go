@@ -9,35 +9,35 @@ import (
 // SoftLayer_Container_Network_ContentDelivery_Report_Usage - <nil>
 type SoftLayer_Container_Network_ContentDelivery_Report_Usage struct {
 
-	// EndDate - <nil>
-	EndDate *time.Time `json:"endDate"`
+	// Region - <nil>
+	Region string `json:"region"`
 
-	// Flash - <nil>
-	Flash float32 `json:"flash"`
-
-	// StandardTotal - <nil>
-	StandardTotal float32 `json:"standardTotal"`
-
-	// WindowsMedia - <nil>
-	WindowsMedia float32 `json:"windowsMedia"`
-
-	// ApplicationDeliveryNetworkSsl - <nil>
-	ApplicationDeliveryNetworkSsl float32 `json:"applicationDeliveryNetworkSsl"`
-
-	// Https - <nil>
-	Https float32 `json:"https"`
-
-	// HttpsSmall - <nil>
-	HttpsSmall float32 `json:"httpsSmall"`
+	// StartDate - <nil>
+	StartDate *time.Time `json:"startDate"`
 
 	// DiskSpace - <nil>
 	DiskSpace float32 `json:"diskSpace"`
 
+	// Flash - <nil>
+	Flash float32 `json:"flash"`
+
+	// Https - <nil>
+	Https float32 `json:"https"`
+
+	// ApplicationDeliveryNetworkSsl - <nil>
+	ApplicationDeliveryNetworkSsl float32 `json:"applicationDeliveryNetworkSsl"`
+
 	// Http - <nil>
 	Http float32 `json:"http"`
 
+	// StandardTotal - <nil>
+	StandardTotal float32 `json:"standardTotal"`
+
 	// HttpSmall - <nil>
 	HttpSmall float32 `json:"httpSmall"`
+
+	// HttpsSmall - <nil>
+	HttpsSmall float32 `json:"httpsSmall"`
 
 	// SslTotal - <nil>
 	SslTotal float32 `json:"sslTotal"`
@@ -45,11 +45,11 @@ type SoftLayer_Container_Network_ContentDelivery_Report_Usage struct {
 	// ApplicationDeliveryNetwork - <nil>
 	ApplicationDeliveryNetwork float32 `json:"applicationDeliveryNetwork"`
 
-	// Region - <nil>
-	Region string `json:"region"`
+	// EndDate - <nil>
+	EndDate *time.Time `json:"endDate"`
 
-	// StartDate - <nil>
-	StartDate *time.Time `json:"startDate"`
+	// WindowsMedia - <nil>
+	WindowsMedia float32 `json:"windowsMedia"`
 }
 
 func (softlayer_container_network_contentdelivery_report_usage *SoftLayer_Container_Network_ContentDelivery_Report_Usage) String() string {

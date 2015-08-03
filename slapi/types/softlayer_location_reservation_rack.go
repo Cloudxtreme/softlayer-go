@@ -5,14 +5,11 @@ package types
 // SoftLayer_Location_Reservation_Rack - <nil>
 type SoftLayer_Location_Reservation_Rack struct {
 
+	// PowerConnectionReservation - <nil>
+	PowerConnectionReservation int `json:"powerConnectionReservation"`
+
 	// LocationReservationId - <nil>
 	LocationReservationId int `json:"locationReservationId"`
-
-	// SlotReservation - <nil>
-	SlotReservation int `json:"slotReservation"`
-
-	// LocationId - <nil>
-	LocationId int `json:"locationId"`
 
 	// NetworkConnectionCapacity - <nil>
 	NetworkConnectionCapacity int `json:"networkConnectionCapacity"`
@@ -20,14 +17,21 @@ type SoftLayer_Location_Reservation_Rack struct {
 	// NetworkConnectionReservation - <nil>
 	NetworkConnectionReservation int `json:"networkConnectionReservation"`
 
+	// LocationId - <nil>
+	LocationId int `json:"locationId"`
+
 	// PowerConnectionCapacity - <nil>
 	PowerConnectionCapacity int `json:"powerConnectionCapacity"`
 
-	// PowerConnectionReservation - <nil>
-	PowerConnectionReservation int `json:"powerConnectionReservation"`
-
 	// SlotCapacity - <nil>
 	SlotCapacity int `json:"slotCapacity"`
+
+	// SlotReservation - <nil>
+	SlotReservation int `json:"slotReservation"`
+}
+
+func (softlayer_location_reservation_rack *SoftLayer_Location_Reservation_Rack) String() string {
+	return "SoftLayer_Location_Reservation_Rack"
 }
 
 // SoftLayer_Location_Reservation_Rack_Extended is SoftLayer_Location_Reservation_Rack with all maskable types.
@@ -50,6 +54,6 @@ type SoftLayer_Location_Reservation_Rack_Extended struct {
 	ChildrenCount uint64 `json:"childrenCount"`
 }
 
-func (softlayer_location_reservation_rack *SoftLayer_Location_Reservation_Rack) String() string {
+func (softlayer_location_reservation_rack *SoftLayer_Location_Reservation_Rack_Extended) String() string {
 	return "SoftLayer_Location_Reservation_Rack"
 }

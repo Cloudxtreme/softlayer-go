@@ -12,52 +12,47 @@ import (
 // entities (Google, Apple,
 type SoftLayer_User_Customer_MobileDevice struct {
 
+	// UserId - no documentation
+	UserId int `json:"userId"`
+
 	// MobileDeviceTypeId - no documentation
 	MobileDeviceTypeId int `json:"mobileDeviceTypeId"`
-
-	// ModelNumber - no documentation
-	ModelNumber string `json:"modelNumber"`
-
-	// PhoneNumber - no documentation
-	PhoneNumber string `json:"phoneNumber"`
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate"`
 
-	// Token - no documentation
-	Token string `json:"token"`
-
-	// UserId - no documentation
-	UserId int `json:"userId"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	// SerialNumber - no documentation
+	SerialNumber string `json:"serialNumber"`
 
 	// DisplayResolutionXxY - no documentation
 	DisplayResolutionXxY string `json:"displayResolutionXxY"`
 
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// MobileOperatingSystemId - no documentation
 	MobileOperatingSystemId int `json:"mobileOperatingSystemId"`
 
-	// SerialNumber - no documentation
-	SerialNumber string `json:"serialNumber"`
+	// ModelNumber - no documentation
+	ModelNumber string `json:"modelNumber"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// PhoneNumber - no documentation
+	PhoneNumber string `json:"phoneNumber"`
+
+	// Token - no documentation
+	Token string `json:"token"`
+}
+
+func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) String() string {
+	return "SoftLayer_User_Customer_MobileDevice"
 }
 
 // SoftLayer_User_Customer_MobileDevice_Extended is SoftLayer_User_Customer_MobileDevice with all maskable types.
 type SoftLayer_User_Customer_MobileDevice_Extended struct {
 	SoftLayer_User_Customer_MobileDevice
-
-	// AvailablePushNotificationSubscriptions - Notification subscriptions available to a mobile device.
-	AvailablePushNotificationSubscriptions []*SoftLayer_Notification `json:"availablePushNotificationSubscriptions"`
-
-	// Customer - <nil>
-	Customer *SoftLayer_User_Customer `json:"customer"`
-
-	// OperatingSystem - <nil>
-	OperatingSystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem `json:"operatingSystem"`
 
 	// Type - <nil>
 	Type *SoftLayer_User_Customer_MobileDevice_Type `json:"type"`
@@ -66,14 +61,23 @@ type SoftLayer_User_Customer_MobileDevice_Extended struct {
 	// device.
 	PushNotificationSubscriptionCount uint64 `json:"pushNotificationSubscriptionCount"`
 
-	// PushNotificationSubscriptions - Notification subscriptions attached to a mobile device.
-	PushNotificationSubscriptions []*SoftLayer_Notification_User_Subscriber `json:"pushNotificationSubscriptions"`
+	// Customer - <nil>
+	Customer *SoftLayer_User_Customer `json:"customer"`
+
+	// OperatingSystem - <nil>
+	OperatingSystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem `json:"operatingSystem"`
 
 	// AvailablePushNotificationSubscriptionCount - A count of notification subscriptions available to a
 	// mobile device.
 	AvailablePushNotificationSubscriptionCount uint64 `json:"availablePushNotificationSubscriptionCount"`
+
+	// AvailablePushNotificationSubscriptions - Notification subscriptions available to a mobile device.
+	AvailablePushNotificationSubscriptions []*SoftLayer_Notification `json:"availablePushNotificationSubscriptions"`
+
+	// PushNotificationSubscriptions - Notification subscriptions attached to a mobile device.
+	PushNotificationSubscriptions []*SoftLayer_Notification_User_Subscriber `json:"pushNotificationSubscriptions"`
 }
 
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) String() string {
+func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice_Extended) String() string {
 	return "SoftLayer_User_Customer_MobileDevice"
 }

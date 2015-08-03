@@ -16,6 +16,10 @@ type SoftLayer_Layout_Preference struct {
 	Value string `json:"value"`
 }
 
+func (softlayer_layout_preference *SoftLayer_Layout_Preference) String() string {
+	return "SoftLayer_Layout_Preference"
+}
+
 // SoftLayer_Layout_Preference_Extended is SoftLayer_Layout_Preference with all maskable types.
 type SoftLayer_Layout_Preference_Extended struct {
 	SoftLayer_Layout_Preference
@@ -24,6 +28,6 @@ type SoftLayer_Layout_Preference_Extended struct {
 	LayoutPreferenceType *SoftLayer_Layout_Preference_Type `json:"layoutPreferenceType"`
 }
 
-func (softlayer_layout_preference *SoftLayer_Layout_Preference) String() string {
+func (softlayer_layout_preference *SoftLayer_Layout_Preference_Extended) String() string {
 	return "SoftLayer_Layout_Preference"
 }

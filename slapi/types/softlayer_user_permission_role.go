@@ -9,6 +9,18 @@ import (
 // SoftLayer_User_Permission_Role - <nil>
 type SoftLayer_User_Permission_Role struct {
 
+	// ModifyDate - The date the permission role record was last modified.
+	ModifyDate *time.Time `json:"modifyDate"`
+
+	// Name - no documentation
+	Name string `json:"name"`
+
+	// AccountId - A permission roles associated [[SoftLayer_Account|customer account]] id.
+	AccountId int `json:"accountId"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+
 	// Description - no documentation
 	Description string `json:"description"`
 
@@ -18,22 +30,14 @@ type SoftLayer_User_Permission_Role struct {
 	// NewUserDefaultFlag - A flag showing if new users should be automatically added to this role.
 	NewUserDefaultFlag int `json:"newUserDefaultFlag"`
 
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// SystemFlag - A flag showing if the permission role was created by our internal system for a single
 	// user. If this flag is set only a single user can be assigned to this permission role and it can not
 	// be deleted.
 	SystemFlag int `json:"systemFlag"`
+}
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
-	// ModifyDate - The date the permission role record was last modified.
-	ModifyDate *time.Time `json:"modifyDate"`
-
-	// AccountId - A permission roles associated [[SoftLayer_Account|customer account]] id.
-	AccountId int `json:"accountId"`
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) String() string {
+	return "SoftLayer_User_Permission_Role"
 }
 
 // SoftLayer_User_Permission_Role_Extended is SoftLayer_User_Permission_Role with all maskable types.
@@ -43,14 +47,8 @@ type SoftLayer_User_Permission_Role_Extended struct {
 	// GroupCount - no documentation
 	GroupCount uint64 `json:"groupCount"`
 
-	// UserCount - no documentation
-	UserCount uint64 `json:"userCount"`
-
-	// Users - <nil>
-	Users []*SoftLayer_User_Customer `json:"users"`
-
-	// Actions - <nil>
-	Actions []*SoftLayer_User_Permission_Action `json:"actions"`
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account"`
 
 	// Groups - <nil>
 	Groups []*SoftLayer_User_Permission_Group `json:"groups"`
@@ -58,10 +56,16 @@ type SoftLayer_User_Permission_Role_Extended struct {
 	// ActionCount - no documentation
 	ActionCount uint64 `json:"actionCount"`
 
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
+	// Actions - <nil>
+	Actions []*SoftLayer_User_Permission_Action `json:"actions"`
+
+	// Users - <nil>
+	Users []*SoftLayer_User_Customer `json:"users"`
+
+	// UserCount - no documentation
+	UserCount uint64 `json:"userCount"`
 }
 
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) String() string {
+func (softlayer_user_permission_role *SoftLayer_User_Permission_Role_Extended) String() string {
 	return "SoftLayer_User_Permission_Role"
 }

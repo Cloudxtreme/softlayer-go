@@ -21,6 +21,10 @@ type SoftLayer_Configuration_Storage_Group_Template_Group struct {
 	Size float64 `json:"size"`
 }
 
+func (softlayer_configuration_storage_group_template_group *SoftLayer_Configuration_Storage_Group_Template_Group) String() string {
+	return "SoftLayer_Configuration_Storage_Group_Template_Group"
+}
+
 // SoftLayer_Configuration_Storage_Group_Template_Group_Extended is SoftLayer_Configuration_Storage_Group_Template_Group with all maskable types.
 type SoftLayer_Configuration_Storage_Group_Template_Group_Extended struct {
 	SoftLayer_Configuration_Storage_Group_Template_Group
@@ -29,6 +33,6 @@ type SoftLayer_Configuration_Storage_Group_Template_Group_Extended struct {
 	Type *SoftLayer_Configuration_Storage_Group_Array_Type `json:"type"`
 }
 
-func (softlayer_configuration_storage_group_template_group *SoftLayer_Configuration_Storage_Group_Template_Group) String() string {
+func (softlayer_configuration_storage_group_template_group *SoftLayer_Configuration_Storage_Group_Template_Group_Extended) String() string {
 	return "SoftLayer_Configuration_Storage_Group_Template_Group"
 }

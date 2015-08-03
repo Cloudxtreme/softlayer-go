@@ -9,6 +9,9 @@ import (
 // SoftLayer_Account_Note_Type - <nil>
 type SoftLayer_Account_Note_Type struct {
 
+	// Id - <nil>
+	Id int `json:"id"`
+
 	// KeyName - <nil>
 	KeyName string `json:"keyName"`
 
@@ -29,9 +32,6 @@ type SoftLayer_Account_Note_Type struct {
 
 	// Description - <nil>
 	Description string `json:"description"`
-
-	// Id - <nil>
-	Id int `json:"id"`
 }
 
 func (softlayer_account_note_type *SoftLayer_Account_Note_Type) String() string {

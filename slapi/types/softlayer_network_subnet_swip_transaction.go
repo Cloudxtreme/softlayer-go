@@ -15,14 +15,18 @@ package types
 // may take some time.
 type SoftLayer_Network_Subnet_Swip_Transaction struct {
 
-	// SubnetId - no documentation
-	SubnetId int `json:"subnetId"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
 	// StatusName - A Name describing which state a transaction is in.
 	StatusName string `json:"statusName"`
+
+	// SubnetId - no documentation
+	SubnetId int `json:"subnetId"`
+}
+
+func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) String() string {
+	return "SoftLayer_Network_Subnet_Swip_Transaction"
 }
 
 // SoftLayer_Network_Subnet_Swip_Transaction_Extended is SoftLayer_Network_Subnet_Swip_Transaction with all maskable types.
@@ -36,6 +40,6 @@ type SoftLayer_Network_Subnet_Swip_Transaction_Extended struct {
 	Subnet *SoftLayer_Network_Subnet `json:"subnet"`
 }
 
-func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction) String() string {
+func (softlayer_network_subnet_swip_transaction *SoftLayer_Network_Subnet_Swip_Transaction_Extended) String() string {
 	return "SoftLayer_Network_Subnet_Swip_Transaction"
 }

@@ -6,14 +6,14 @@ package types
 // preference type including the accepted values.
 type SoftLayer_User_Preference_Type struct {
 
-	// ValueExample - no documentation
-	ValueExample string `json:"valueExample"`
-
 	// Description - no documentation
 	Description string `json:"description"`
 
 	// Name - no documentation
 	Name string `json:"name"`
+
+	// ValueExample - no documentation
+	ValueExample string `json:"valueExample"`
 }
 
 func (softlayer_user_preference_type *SoftLayer_User_Preference_Type) String() string {

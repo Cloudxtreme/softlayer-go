@@ -10,27 +10,31 @@ package types
 // answer that should be provided.
 type SoftLayer_Product_Item_Category_Question struct {
 
+	// AnswerValueExpression - no documentation
+	AnswerValueExpression string `json:"answerValueExpression"`
+
 	// Description - no documentation
 	Description string `json:"description"`
 
+	// FieldTypeId - no documentation
+	FieldTypeId int `json:"fieldTypeId"`
+
 	// Id - no documentation
 	Id int `json:"id"`
-
-	// Question - no documentation
-	Question string `json:"question"`
 
 	// ValueExample - An example and/or explanation of what the answer for the question is expected to look
 	// like.
 	ValueExample string `json:"valueExample"`
 
-	// AnswerValueExpression - no documentation
-	AnswerValueExpression string `json:"answerValueExpression"`
-
-	// FieldTypeId - no documentation
-	FieldTypeId int `json:"fieldTypeId"`
-
 	// KeyName - no documentation
 	KeyName string `json:"keyName"`
+
+	// Question - no documentation
+	Question string `json:"question"`
+}
+
+func (softlayer_product_item_category_question *SoftLayer_Product_Item_Category_Question) String() string {
+	return "SoftLayer_Product_Item_Category_Question"
 }
 
 // SoftLayer_Product_Item_Category_Question_Extended is SoftLayer_Product_Item_Category_Question with all maskable types.
@@ -48,6 +52,6 @@ type SoftLayer_Product_Item_Category_Question_Extended struct {
 	ItemCategoryReferences []*SoftLayer_Product_Item_Category_Question_Xref `json:"itemCategoryReferences"`
 }
 
-func (softlayer_product_item_category_question *SoftLayer_Product_Item_Category_Question) String() string {
+func (softlayer_product_item_category_question *SoftLayer_Product_Item_Category_Question_Extended) String() string {
 	return "SoftLayer_Product_Item_Category_Question"
 }

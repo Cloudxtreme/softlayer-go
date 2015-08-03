@@ -9,6 +9,15 @@ import (
 // SoftLayer_Auxiliary_Marketing_Event - <nil>
 type SoftLayer_Auxiliary_Marketing_Event struct {
 
+	// Title - <nil>
+	Title string `json:"title"`
+
+	// Url - <nil>
+	Url string `json:"url"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate"`
+
 	// EnabledFlag - <nil>
 	EnabledFlag int `json:"enabledFlag"`
 
@@ -23,15 +32,6 @@ type SoftLayer_Auxiliary_Marketing_Event struct {
 
 	// StartDate - <nil>
 	StartDate *time.Time `json:"startDate"`
-
-	// Title - <nil>
-	Title string `json:"title"`
-
-	// Url - <nil>
-	Url string `json:"url"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
 }
 
 func (softlayer_auxiliary_marketing_event *SoftLayer_Auxiliary_Marketing_Event) String() string {

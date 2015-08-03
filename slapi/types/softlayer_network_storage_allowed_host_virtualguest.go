@@ -6,6 +6,10 @@ package types
 type SoftLayer_Network_Storage_Allowed_Host_VirtualGuest struct {
 }
 
+func (softlayer_network_storage_allowed_host_virtualguest *SoftLayer_Network_Storage_Allowed_Host_VirtualGuest) String() string {
+	return "SoftLayer_Network_Storage_Allowed_Host_VirtualGuest"
+}
+
 // SoftLayer_Network_Storage_Allowed_Host_VirtualGuest_Extended is SoftLayer_Network_Storage_Allowed_Host_VirtualGuest with all maskable types.
 type SoftLayer_Network_Storage_Allowed_Host_VirtualGuest_Extended struct {
 	SoftLayer_Network_Storage_Allowed_Host_VirtualGuest
@@ -15,6 +19,6 @@ type SoftLayer_Network_Storage_Allowed_Host_VirtualGuest_Extended struct {
 	Resource *SoftLayer_Virtual_Guest `json:"resource"`
 }
 
-func (softlayer_network_storage_allowed_host_virtualguest *SoftLayer_Network_Storage_Allowed_Host_VirtualGuest) String() string {
+func (softlayer_network_storage_allowed_host_virtualguest *SoftLayer_Network_Storage_Allowed_Host_VirtualGuest_Extended) String() string {
 	return "SoftLayer_Network_Storage_Allowed_Host_VirtualGuest"
 }

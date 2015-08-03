@@ -21,6 +21,10 @@ type SoftLayer_Virtual_Guest_Network_Component_IpAddress struct {
 	Type string `json:"type"`
 }
 
+func (softlayer_virtual_guest_network_component_ipaddress *SoftLayer_Virtual_Guest_Network_Component_IpAddress) String() string {
+	return "SoftLayer_Virtual_Guest_Network_Component_IpAddress"
+}
+
 // SoftLayer_Virtual_Guest_Network_Component_IpAddress_Extended is SoftLayer_Virtual_Guest_Network_Component_IpAddress with all maskable types.
 type SoftLayer_Virtual_Guest_Network_Component_IpAddress_Extended struct {
 	SoftLayer_Virtual_Guest_Network_Component_IpAddress
@@ -32,6 +36,6 @@ type SoftLayer_Virtual_Guest_Network_Component_IpAddress_Extended struct {
 	NetworkComponent *SoftLayer_Virtual_Guest_Network_Component `json:"networkComponent"`
 }
 
-func (softlayer_virtual_guest_network_component_ipaddress *SoftLayer_Virtual_Guest_Network_Component_IpAddress) String() string {
+func (softlayer_virtual_guest_network_component_ipaddress *SoftLayer_Virtual_Guest_Network_Component_IpAddress_Extended) String() string {
 	return "SoftLayer_Virtual_Guest_Network_Component_IpAddress"
 }

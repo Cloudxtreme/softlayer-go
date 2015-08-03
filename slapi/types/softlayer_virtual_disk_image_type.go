@@ -8,14 +8,14 @@ package types
 // a disk contains crash dump information.
 type SoftLayer_Virtual_Disk_Image_Type struct {
 
+	// Name - no documentation
+	Name string `json:"name"`
+
 	// Description - A brief description of a virtual disk image type's function.
 	Description string `json:"description"`
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName"`
-
-	// Name - no documentation
-	Name string `json:"name"`
 }
 
 func (softlayer_virtual_disk_image_type *SoftLayer_Virtual_Disk_Image_Type) String() string {

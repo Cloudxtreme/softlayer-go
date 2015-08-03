@@ -10,6 +10,10 @@ type SoftLayer_Billing_Item_Software_Component struct {
 	ResourceTableId int `json:"resourceTableId"`
 }
 
+func (softlayer_billing_item_software_component *SoftLayer_Billing_Item_Software_Component) String() string {
+	return "SoftLayer_Billing_Item_Software_Component"
+}
+
 // SoftLayer_Billing_Item_Software_Component_Extended is SoftLayer_Billing_Item_Software_Component with all maskable types.
 type SoftLayer_Billing_Item_Software_Component_Extended struct {
 	SoftLayer_Billing_Item_Software_Component
@@ -18,6 +22,6 @@ type SoftLayer_Billing_Item_Software_Component_Extended struct {
 	Resource *SoftLayer_Software_Component `json:"resource"`
 }
 
-func (softlayer_billing_item_software_component *SoftLayer_Billing_Item_Software_Component) String() string {
+func (softlayer_billing_item_software_component *SoftLayer_Billing_Item_Software_Component_Extended) String() string {
 	return "SoftLayer_Billing_Item_Software_Component"
 }

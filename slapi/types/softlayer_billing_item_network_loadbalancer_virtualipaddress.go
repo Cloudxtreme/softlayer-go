@@ -9,6 +9,10 @@ package types
 type SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress struct {
 }
 
+func (softlayer_billing_item_network_loadbalancer_virtualipaddress *SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress) String() string {
+	return "SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress"
+}
+
 // SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress_Extended is SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress with all maskable types.
 type SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress_Extended struct {
 	SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress
@@ -17,6 +21,6 @@ type SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress_Extended struc
 	Resource *SoftLayer_Network_LoadBalancer_VirtualIpAddress `json:"resource"`
 }
 
-func (softlayer_billing_item_network_loadbalancer_virtualipaddress *SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress) String() string {
+func (softlayer_billing_item_network_loadbalancer_virtualipaddress *SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress_Extended) String() string {
 	return "SoftLayer_Billing_Item_Network_LoadBalancer_VirtualIpAddress"
 }

@@ -9,6 +9,10 @@ type SoftLayer_Ticket_Attachment_Assigned_Agent struct {
 	AssignedAgentId int `json:"assignedAgentId"`
 }
 
+func (softlayer_ticket_attachment_assigned_agent *SoftLayer_Ticket_Attachment_Assigned_Agent) String() string {
+	return "SoftLayer_Ticket_Attachment_Assigned_Agent"
+}
+
 // SoftLayer_Ticket_Attachment_Assigned_Agent_Extended is SoftLayer_Ticket_Attachment_Assigned_Agent with all maskable types.
 type SoftLayer_Ticket_Attachment_Assigned_Agent_Extended struct {
 	SoftLayer_Ticket_Attachment_Assigned_Agent
@@ -17,6 +21,6 @@ type SoftLayer_Ticket_Attachment_Assigned_Agent_Extended struct {
 	Resource *SoftLayer_User_Customer `json:"resource"`
 }
 
-func (softlayer_ticket_attachment_assigned_agent *SoftLayer_Ticket_Attachment_Assigned_Agent) String() string {
+func (softlayer_ticket_attachment_assigned_agent *SoftLayer_Ticket_Attachment_Assigned_Agent_Extended) String() string {
 	return "SoftLayer_Ticket_Attachment_Assigned_Agent"
 }

@@ -17,6 +17,10 @@ type SoftLayer_Network_Service_Vpn_Overrides struct {
 	Id int `json:"id"`
 }
 
+func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides) String() string {
+	return "SoftLayer_Network_Service_Vpn_Overrides"
+}
+
 // SoftLayer_Network_Service_Vpn_Overrides_Extended is SoftLayer_Network_Service_Vpn_Overrides with all maskable types.
 type SoftLayer_Network_Service_Vpn_Overrides_Extended struct {
 	SoftLayer_Network_Service_Vpn_Overrides
@@ -28,6 +32,6 @@ type SoftLayer_Network_Service_Vpn_Overrides_Extended struct {
 	User *SoftLayer_User_Customer `json:"user"`
 }
 
-func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides) String() string {
+func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides_Extended) String() string {
 	return "SoftLayer_Network_Service_Vpn_Overrides"
 }

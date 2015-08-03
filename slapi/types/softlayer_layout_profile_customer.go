@@ -6,6 +6,10 @@ package types
 type SoftLayer_Layout_Profile_Customer struct {
 }
 
+func (softlayer_layout_profile_customer *SoftLayer_Layout_Profile_Customer) String() string {
+	return "SoftLayer_Layout_Profile_Customer"
+}
+
 // SoftLayer_Layout_Profile_Customer_Extended is SoftLayer_Layout_Profile_Customer with all maskable types.
 type SoftLayer_Layout_Profile_Customer_Extended struct {
 	SoftLayer_Layout_Profile_Customer
@@ -14,6 +18,6 @@ type SoftLayer_Layout_Profile_Customer_Extended struct {
 	UserRecord *SoftLayer_User_Customer `json:"userRecord"`
 }
 
-func (softlayer_layout_profile_customer *SoftLayer_Layout_Profile_Customer) String() string {
+func (softlayer_layout_profile_customer *SoftLayer_Layout_Profile_Customer_Extended) String() string {
 	return "SoftLayer_Layout_Profile_Customer"
 }

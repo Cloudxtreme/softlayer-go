@@ -11,14 +11,14 @@ import (
 // was polled at, and the counter value that was measured at polling time.
 type SoftLayer_Metric_Tracking_Object_Data struct {
 
+	// Type - no documentation
+	Type string `json:"type"`
+
 	// Counter - no documentation
 	Counter float32 `json:"counter"`
 
 	// DateTime - no documentation
 	DateTime *time.Time `json:"dateTime"`
-
-	// Type - no documentation
-	Type string `json:"type"`
 }
 
 func (softlayer_metric_tracking_object_data *SoftLayer_Metric_Tracking_Object_Data) String() string {

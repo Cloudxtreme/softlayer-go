@@ -8,20 +8,20 @@ package types
 // be created for each array.
 type SoftLayer_Configuration_Storage_Group_Order struct {
 
+	// ArraySize - <nil>
+	ArraySize float64 `json:"arraySize"`
+
+	// BillingOrderItemId - <nil>
+	BillingOrderItemId int `json:"billingOrderItemId"`
+
 	// PartitionData - <nil>
 	PartitionData string `json:"partitionData"`
 
 	// ArrayNumber - <nil>
 	ArrayNumber int `json:"arrayNumber"`
 
-	// ArraySize - <nil>
-	ArraySize float64 `json:"arraySize"`
-
 	// ArrayTypeId - <nil>
 	ArrayTypeId int `json:"arrayTypeId"`
-
-	// BillingOrderItemId - <nil>
-	BillingOrderItemId int `json:"billingOrderItemId"`
 
 	// HardDrives - <nil>
 	HardDrives []int `json:"hardDrives"`
@@ -30,17 +30,21 @@ type SoftLayer_Configuration_Storage_Group_Order struct {
 	HotSpareDrives []int `json:"hotSpareDrives"`
 }
 
+func (softlayer_configuration_storage_group_order *SoftLayer_Configuration_Storage_Group_Order) String() string {
+	return "SoftLayer_Configuration_Storage_Group_Order"
+}
+
 // SoftLayer_Configuration_Storage_Group_Order_Extended is SoftLayer_Configuration_Storage_Group_Order with all maskable types.
 type SoftLayer_Configuration_Storage_Group_Order_Extended struct {
 	SoftLayer_Configuration_Storage_Group_Order
 
-	// BillingOrderItem - no documentation
-	BillingOrderItem *SoftLayer_Billing_Order_Item `json:"billingOrderItem"`
-
 	// ArrayType - no documentation
 	ArrayType *SoftLayer_Configuration_Storage_Group_Array_Type `json:"arrayType"`
+
+	// BillingOrderItem - no documentation
+	BillingOrderItem *SoftLayer_Billing_Order_Item `json:"billingOrderItem"`
 }
 
-func (softlayer_configuration_storage_group_order *SoftLayer_Configuration_Storage_Group_Order) String() string {
+func (softlayer_configuration_storage_group_order *SoftLayer_Configuration_Storage_Group_Order_Extended) String() string {
 	return "SoftLayer_Configuration_Storage_Group_Order"
 }

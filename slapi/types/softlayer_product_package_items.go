@@ -7,14 +7,18 @@ package types
 // SoftLayer_Product_Package.
 type SoftLayer_Product_Package_Items struct {
 
+	// PackageId - The SoftLayer_Product_Package id to which this instance of the object belongs.
+	PackageId int `json:"packageId"`
+
 	// Id - The unique identifier for this object. It is not used anywhere but in this object.
 	Id string `json:"id"`
 
 	// ItemId - The SoftLayer_Product_Item id to which this instance of the object belongs.
 	ItemId int `json:"itemId"`
+}
 
-	// PackageId - The SoftLayer_Product_Package id to which this instance of the object belongs.
-	PackageId int `json:"packageId"`
+func (softlayer_product_package_items *SoftLayer_Product_Package_Items) String() string {
+	return "SoftLayer_Product_Package_Items"
 }
 
 // SoftLayer_Product_Package_Items_Extended is SoftLayer_Product_Package_Items with all maskable types.
@@ -28,6 +32,6 @@ type SoftLayer_Product_Package_Items_Extended struct {
 	Package *SoftLayer_Product_Package `json:"package"`
 }
 
-func (softlayer_product_package_items *SoftLayer_Product_Package_Items) String() string {
+func (softlayer_product_package_items *SoftLayer_Product_Package_Items_Extended) String() string {
 	return "SoftLayer_Product_Package_Items"
 }

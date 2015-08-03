@@ -15,19 +15,13 @@ type SoftLayer_Product_Package_Order_Step struct {
 	Step string `json:"step"`
 }
 
+func (softlayer_product_package_order_step *SoftLayer_Product_Package_Order_Step) String() string {
+	return "SoftLayer_Product_Package_Order_Step"
+}
+
 // SoftLayer_Product_Package_Order_Step_Extended is SoftLayer_Product_Package_Order_Step with all maskable types.
 type SoftLayer_Product_Package_Order_Step_Extended struct {
 	SoftLayer_Product_Package_Order_Step
-
-	// InclusivePreviousSteps - The next steps in the ordering process for the package tied to this object,
-	// including this step.
-	InclusivePreviousSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"inclusivePreviousSteps"`
-
-	// NextSteps - The next steps in the ordering process for the package tied to this object.
-	NextSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"nextSteps"`
-
-	// PreviousSteps - no documentation
-	PreviousSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"previousSteps"`
 
 	// InclusivePreviousStepCount - A count of the next steps in the ordering process for the package tied
 	// to this object, including this step.
@@ -39,8 +33,18 @@ type SoftLayer_Product_Package_Order_Step_Extended struct {
 
 	// PreviousStepCount - no documentation
 	PreviousStepCount uint64 `json:"previousStepCount"`
+
+	// InclusivePreviousSteps - The next steps in the ordering process for the package tied to this object,
+	// including this step.
+	InclusivePreviousSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"inclusivePreviousSteps"`
+
+	// NextSteps - The next steps in the ordering process for the package tied to this object.
+	NextSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"nextSteps"`
+
+	// PreviousSteps - no documentation
+	PreviousSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"previousSteps"`
 }
 
-func (softlayer_product_package_order_step *SoftLayer_Product_Package_Order_Step) String() string {
+func (softlayer_product_package_order_step *SoftLayer_Product_Package_Order_Step_Extended) String() string {
 	return "SoftLayer_Product_Package_Order_Step"
 }

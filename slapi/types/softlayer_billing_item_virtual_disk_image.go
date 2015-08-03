@@ -10,6 +10,10 @@ type SoftLayer_Billing_Item_Virtual_Disk_Image struct {
 	ResourceTableId int `json:"resourceTableId"`
 }
 
+func (softlayer_billing_item_virtual_disk_image *SoftLayer_Billing_Item_Virtual_Disk_Image) String() string {
+	return "SoftLayer_Billing_Item_Virtual_Disk_Image"
+}
+
 // SoftLayer_Billing_Item_Virtual_Disk_Image_Extended is SoftLayer_Billing_Item_Virtual_Disk_Image with all maskable types.
 type SoftLayer_Billing_Item_Virtual_Disk_Image_Extended struct {
 	SoftLayer_Billing_Item_Virtual_Disk_Image
@@ -18,6 +22,6 @@ type SoftLayer_Billing_Item_Virtual_Disk_Image_Extended struct {
 	Resource *SoftLayer_Virtual_Disk_Image `json:"resource"`
 }
 
-func (softlayer_billing_item_virtual_disk_image *SoftLayer_Billing_Item_Virtual_Disk_Image) String() string {
+func (softlayer_billing_item_virtual_disk_image *SoftLayer_Billing_Item_Virtual_Disk_Image_Extended) String() string {
 	return "SoftLayer_Billing_Item_Virtual_Disk_Image"
 }

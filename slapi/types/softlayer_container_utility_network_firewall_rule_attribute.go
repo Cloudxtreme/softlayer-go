@@ -7,17 +7,17 @@ package types
 // to a single firewall rule.
 type SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute struct {
 
-	// Actions - no documentation
-	Actions []string `json:"actions"`
-
-	// MaximumRuleCount - no documentation
-	MaximumRuleCount int `json:"maximumRuleCount"`
-
 	// Protocols - no documentation
 	Protocols []string `json:"protocols"`
 
 	// SourceIpSubnetMasks - The valid source ip subnet masks for use with rules.
 	SourceIpSubnetMasks []*SoftLayer_Container_Utility_Network_Subnet_Mask_Generic_Detail `json:"sourceIpSubnetMasks"`
+
+	// Actions - no documentation
+	Actions []string `json:"actions"`
+
+	// MaximumRuleCount - no documentation
+	MaximumRuleCount int `json:"maximumRuleCount"`
 }
 
 func (softlayer_container_utility_network_firewall_rule_attribute *SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute) String() string {

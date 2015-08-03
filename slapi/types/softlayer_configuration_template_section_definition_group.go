@@ -26,6 +26,10 @@ type SoftLayer_Configuration_Template_Section_Definition_Group struct {
 	SortOrder int `json:"sortOrder"`
 }
 
+func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) String() string {
+	return "SoftLayer_Configuration_Template_Section_Definition_Group"
+}
+
 // SoftLayer_Configuration_Template_Section_Definition_Group_Extended is SoftLayer_Configuration_Template_Section_Definition_Group with all maskable types.
 type SoftLayer_Configuration_Template_Section_Definition_Group_Extended struct {
 	SoftLayer_Configuration_Template_Section_Definition_Group
@@ -34,6 +38,6 @@ type SoftLayer_Configuration_Template_Section_Definition_Group_Extended struct {
 	Parent *SoftLayer_Configuration_Template_Section_Definition_Group `json:"parent"`
 }
 
-func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) String() string {
+func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group_Extended) String() string {
 	return "SoftLayer_Configuration_Template_Section_Definition_Group"
 }

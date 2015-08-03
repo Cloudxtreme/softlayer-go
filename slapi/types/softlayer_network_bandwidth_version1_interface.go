@@ -15,6 +15,10 @@ type SoftLayer_Network_Bandwidth_Version1_Interface struct {
 	NetworkComponentId int `json:"networkComponentId"`
 }
 
+func (softlayer_network_bandwidth_version1_interface *SoftLayer_Network_Bandwidth_Version1_Interface) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Interface"
+}
+
 // SoftLayer_Network_Bandwidth_Version1_Interface_Extended is SoftLayer_Network_Bandwidth_Version1_Interface with all maskable types.
 type SoftLayer_Network_Bandwidth_Version1_Interface_Extended struct {
 	SoftLayer_Network_Bandwidth_Version1_Interface
@@ -26,6 +30,6 @@ type SoftLayer_Network_Bandwidth_Version1_Interface_Extended struct {
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
 }
 
-func (softlayer_network_bandwidth_version1_interface *SoftLayer_Network_Bandwidth_Version1_Interface) String() string {
+func (softlayer_network_bandwidth_version1_interface *SoftLayer_Network_Bandwidth_Version1_Interface_Extended) String() string {
 	return "SoftLayer_Network_Bandwidth_Version1_Interface"
 }

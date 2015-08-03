@@ -6,6 +6,9 @@ package types
 // general information relating to Message Queue node
 type SoftLayer_Network_Message_Queue_Node struct {
 
+	// Name - no documentation
+	Name string `json:"name"`
+
 	// Notes - no documentation
 	Notes string `json:"notes"`
 
@@ -17,9 +20,10 @@ type SoftLayer_Network_Message_Queue_Node struct {
 
 	// MessageQueueId - A message queue node's associated message queue id.
 	MessageQueueId int `json:"messageQueueId"`
+}
 
-	// Name - no documentation
-	Name string `json:"name"`
+func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) String() string {
+	return "SoftLayer_Network_Message_Queue_Node"
 }
 
 // SoftLayer_Network_Message_Queue_Node_Extended is SoftLayer_Network_Message_Queue_Node with all maskable types.
@@ -37,6 +41,6 @@ type SoftLayer_Network_Message_Queue_Node_Extended struct {
 	ServiceResource *SoftLayer_Network_Service_Resource `json:"serviceResource"`
 }
 
-func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) String() string {
+func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node_Extended) String() string {
 	return "SoftLayer_Network_Message_Queue_Node"
 }

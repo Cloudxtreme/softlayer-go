@@ -15,6 +15,10 @@ type SoftLayer_Location_Group_Location_CrossReference struct {
 	Priority int `json:"priority"`
 }
 
+func (softlayer_location_group_location_crossreference *SoftLayer_Location_Group_Location_CrossReference) String() string {
+	return "SoftLayer_Location_Group_Location_CrossReference"
+}
+
 // SoftLayer_Location_Group_Location_CrossReference_Extended is SoftLayer_Location_Group_Location_CrossReference with all maskable types.
 type SoftLayer_Location_Group_Location_CrossReference_Extended struct {
 	SoftLayer_Location_Group_Location_CrossReference
@@ -26,6 +30,6 @@ type SoftLayer_Location_Group_Location_CrossReference_Extended struct {
 	LocationGroup *SoftLayer_Location_Group `json:"locationGroup"`
 }
 
-func (softlayer_location_group_location_crossreference *SoftLayer_Location_Group_Location_CrossReference) String() string {
+func (softlayer_location_group_location_crossreference *SoftLayer_Location_Group_Location_CrossReference_Extended) String() string {
 	return "SoftLayer_Location_Group_Location_CrossReference"
 }

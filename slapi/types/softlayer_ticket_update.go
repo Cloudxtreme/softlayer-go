@@ -13,6 +13,12 @@ type SoftLayer_Ticket_Update struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate"`
 
+	// Entry - no documentation
+	Entry string `json:"entry"`
+
+	// TicketId - The internal identifier of the ticket that a ticket update belongs to.
+	TicketId int `json:"ticketId"`
+
 	// EditorId - The internal identifier of the SoftLayer portal or API user who created a ticket update.
 	// This is only used if a ticket update's ''editorType'' property is
 	EditorId int `json:"editorId"`
@@ -24,26 +30,24 @@ type SoftLayer_Ticket_Update struct {
 
 	// Id - no documentation
 	Id int `json:"id"`
+}
 
-	// TicketId - The internal identifier of the ticket that a ticket update belongs to.
-	TicketId int `json:"ticketId"`
-
-	// Entry - no documentation
-	Entry string `json:"entry"`
+func (softlayer_ticket_update *SoftLayer_Ticket_Update) String() string {
+	return "SoftLayer_Ticket_Update"
 }
 
 // SoftLayer_Ticket_Update_Extended is SoftLayer_Ticket_Update with all maskable types.
 type SoftLayer_Ticket_Update_Extended struct {
 	SoftLayer_Ticket_Update
 
-	// FileAttachmentCount - no documentation
-	FileAttachmentCount uint64 `json:"fileAttachmentCount"`
-
 	// Editor - The user or SoftLayer employee who created a ticket update.
 	Editor *SoftLayer_User_Interface `json:"editor"`
 
 	// Type - no documentation
 	Type *SoftLayer_Ticket_Update_Type `json:"type"`
+
+	// FileAttachmentCount - no documentation
+	FileAttachmentCount uint64 `json:"fileAttachmentCount"`
 
 	// ChangeOwnerActivity - <nil>
 	ChangeOwnerActivity string `json:"changeOwnerActivity"`
@@ -55,6 +59,6 @@ type SoftLayer_Ticket_Update_Extended struct {
 	Ticket *SoftLayer_Ticket `json:"ticket"`
 }
 
-func (softlayer_ticket_update *SoftLayer_Ticket_Update) String() string {
+func (softlayer_ticket_update *SoftLayer_Ticket_Update_Extended) String() string {
 	return "SoftLayer_Ticket_Update"
 }

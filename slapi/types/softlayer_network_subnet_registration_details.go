@@ -29,6 +29,10 @@ type SoftLayer_Network_Subnet_Registration_Details struct {
 	CreateDate *time.Time `json:"createDate"`
 }
 
+func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) String() string {
+	return "SoftLayer_Network_Subnet_Registration_Details"
+}
+
 // SoftLayer_Network_Subnet_Registration_Details_Extended is SoftLayer_Network_Subnet_Registration_Details with all maskable types.
 type SoftLayer_Network_Subnet_Registration_Details_Extended struct {
 	SoftLayer_Network_Subnet_Registration_Details
@@ -40,6 +44,6 @@ type SoftLayer_Network_Subnet_Registration_Details_Extended struct {
 	Registration *SoftLayer_Network_Subnet_Registration `json:"registration"`
 }
 
-func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) String() string {
+func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details_Extended) String() string {
 	return "SoftLayer_Network_Subnet_Registration_Details"
 }

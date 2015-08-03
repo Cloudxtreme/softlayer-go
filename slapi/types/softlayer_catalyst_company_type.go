@@ -5,11 +5,11 @@ package types
 // SoftLayer_Catalyst_Company_Type - <nil>
 type SoftLayer_Catalyst_Company_Type struct {
 
-	// Description - <nil>
-	Description string `json:"description"`
-
 	// Id - <nil>
 	Id int `json:"id"`
+
+	// Description - <nil>
+	Description string `json:"description"`
 }
 
 func (softlayer_catalyst_company_type *SoftLayer_Catalyst_Company_Type) String() string {

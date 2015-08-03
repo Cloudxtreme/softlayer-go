@@ -14,6 +14,9 @@ import (
 // when the command was issued may be retrieved.
 type SoftLayer_Hardware_Component_RemoteManagement_Command_Request struct {
 
+	// Processed - Execution status of the remote management command. True is successful. False is failure.
+	Processed bool `json:"processed"`
+
 	// CreateDate - The timestamp the remote management command was issued.
 	CreateDate *time.Time `json:"createDate"`
 
@@ -23,9 +26,10 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command_Request struct {
 	// ModifyDate - The timestamp recorded when the remote management command returned a status of the
 	// command issued.
 	ModifyDate *time.Time `json:"modifyDate"`
+}
 
-	// Processed - Execution status of the remote management command. True is successful. False is failure.
-	Processed bool `json:"processed"`
+func (softlayer_hardware_component_remotemanagement_command_request *SoftLayer_Hardware_Component_RemoteManagement_Command_Request) String() string {
+	return "SoftLayer_Hardware_Component_RemoteManagement_Command_Request"
 }
 
 // SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended is SoftLayer_Hardware_Component_RemoteManagement_Command_Request with all maskable types.
@@ -46,6 +50,6 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended stru
 	User *SoftLayer_User_Customer `json:"user"`
 }
 
-func (softlayer_hardware_component_remotemanagement_command_request *SoftLayer_Hardware_Component_RemoteManagement_Command_Request) String() string {
+func (softlayer_hardware_component_remotemanagement_command_request *SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended) String() string {
 	return "SoftLayer_Hardware_Component_RemoteManagement_Command_Request"
 }

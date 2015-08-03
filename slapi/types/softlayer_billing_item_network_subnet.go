@@ -18,6 +18,10 @@ type SoftLayer_Billing_Item_Network_Subnet struct {
 	ResourceTableId int `json:"resourceTableId"`
 }
 
+func (softlayer_billing_item_network_subnet *SoftLayer_Billing_Item_Network_Subnet) String() string {
+	return "SoftLayer_Billing_Item_Network_Subnet"
+}
+
 // SoftLayer_Billing_Item_Network_Subnet_Extended is SoftLayer_Billing_Item_Network_Subnet with all maskable types.
 type SoftLayer_Billing_Item_Network_Subnet_Extended struct {
 	SoftLayer_Billing_Item_Network_Subnet
@@ -26,6 +30,6 @@ type SoftLayer_Billing_Item_Network_Subnet_Extended struct {
 	Resource *SoftLayer_Network_Subnet `json:"resource"`
 }
 
-func (softlayer_billing_item_network_subnet *SoftLayer_Billing_Item_Network_Subnet) String() string {
+func (softlayer_billing_item_network_subnet *SoftLayer_Billing_Item_Network_Subnet_Extended) String() string {
 	return "SoftLayer_Billing_Item_Network_Subnet"
 }

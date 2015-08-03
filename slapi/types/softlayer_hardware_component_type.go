@@ -6,17 +6,21 @@ package types
 // on the type of component requested
 type SoftLayer_Hardware_Component_Type struct {
 
-	// Type - no documentation
-	Type string `json:"type"`
-
-	// TypeParentId - no documentation
-	TypeParentId int `json:"typeParentId"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName"`
+
+	// Type - no documentation
+	Type string `json:"type"`
+
+	// TypeParentId - no documentation
+	TypeParentId int `json:"typeParentId"`
+}
+
+func (softlayer_hardware_component_type *SoftLayer_Hardware_Component_Type) String() string {
+	return "SoftLayer_Hardware_Component_Type"
 }
 
 // SoftLayer_Hardware_Component_Type_Extended is SoftLayer_Hardware_Component_Type with all maskable types.
@@ -35,6 +39,6 @@ type SoftLayer_Hardware_Component_Type_Extended struct {
 	TypeParent *SoftLayer_Hardware_Component_Type `json:"typeParent"`
 }
 
-func (softlayer_hardware_component_type *SoftLayer_Hardware_Component_Type) String() string {
+func (softlayer_hardware_component_type *SoftLayer_Hardware_Component_Type_Extended) String() string {
 	return "SoftLayer_Hardware_Component_Type"
 }

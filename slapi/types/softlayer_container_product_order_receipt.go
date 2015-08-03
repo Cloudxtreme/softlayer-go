@@ -17,14 +17,6 @@ import (
 // credit card, a receipt means the order has gone to sales and is awaiting approval.
 type SoftLayer_Container_Product_Order_Receipt struct {
 
-	// OrderDetails - This is a copy of the order container (SoftLayer_Container_Product_Order) which holds
-	// all the data related to an order. This will only return when an order is processed successfully. It
-	// will contain all the items in an order as well as the order totals.
-	OrderDetails *SoftLayer_Container_Product_Order `json:"orderDetails"`
-
-	// OrderId - no documentation
-	OrderId int `json:"orderId"`
-
 	// PaypalCheckoutUrl - The paypal Token, if this order was processed via PayPal. If a token exists,
 	// proceed to the address given. This will tell PayPal that you wish to purchase services. Upon
 	// completion of the order at PayPal, you will be directed back to SoftLayer. When this happens, We
@@ -47,6 +39,14 @@ type SoftLayer_Container_Product_Order_Receipt struct {
 
 	// OrderDate - no documentation
 	OrderDate *time.Time `json:"orderDate"`
+
+	// OrderDetails - This is a copy of the order container (SoftLayer_Container_Product_Order) which holds
+	// all the data related to an order. This will only return when an order is processed successfully. It
+	// will contain all the items in an order as well as the order totals.
+	OrderDetails *SoftLayer_Container_Product_Order `json:"orderDetails"`
+
+	// OrderId - no documentation
+	OrderId int `json:"orderId"`
 }
 
 func (softlayer_container_product_order_receipt *SoftLayer_Container_Product_Order_Receipt) String() string {

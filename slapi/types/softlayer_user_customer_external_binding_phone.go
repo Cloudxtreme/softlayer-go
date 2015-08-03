@@ -11,6 +11,10 @@ package types
 type SoftLayer_User_Customer_External_Binding_Phone struct {
 }
 
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) String() string {
+	return "SoftLayer_User_Customer_External_Binding_Phone"
+}
+
 // SoftLayer_User_Customer_External_Binding_Phone_Extended is SoftLayer_User_Customer_External_Binding_Phone with all maskable types.
 type SoftLayer_User_Customer_External_Binding_Phone_Extended struct {
 	SoftLayer_User_Customer_External_Binding_Phone
@@ -22,6 +26,6 @@ type SoftLayer_User_Customer_External_Binding_Phone_Extended struct {
 	PinLength string `json:"pinLength"`
 }
 
-func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone) String() string {
+func (softlayer_user_customer_external_binding_phone *SoftLayer_User_Customer_External_Binding_Phone_Extended) String() string {
 	return "SoftLayer_User_Customer_External_Binding_Phone"
 }

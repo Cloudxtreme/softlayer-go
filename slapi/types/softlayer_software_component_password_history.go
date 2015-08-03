@@ -26,6 +26,10 @@ type SoftLayer_Software_Component_Password_History struct {
 	Username string `json:"username"`
 }
 
+func (softlayer_software_component_password_history *SoftLayer_Software_Component_Password_History) String() string {
+	return "SoftLayer_Software_Component_Password_History"
+}
+
 // SoftLayer_Software_Component_Password_History_Extended is SoftLayer_Software_Component_Password_History with all maskable types.
 type SoftLayer_Software_Component_Password_History_Extended struct {
 	SoftLayer_Software_Component_Password_History
@@ -34,6 +38,6 @@ type SoftLayer_Software_Component_Password_History_Extended struct {
 	SoftwareComponent *SoftLayer_Software_Component `json:"softwareComponent"`
 }
 
-func (softlayer_software_component_password_history *SoftLayer_Software_Component_Password_History) String() string {
+func (softlayer_software_component_password_history *SoftLayer_Software_Component_Password_History_Extended) String() string {
 	return "SoftLayer_Software_Component_Password_History"
 }

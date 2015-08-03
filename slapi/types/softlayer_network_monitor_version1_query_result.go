@@ -26,6 +26,10 @@ type SoftLayer_Network_Monitor_Version1_Query_Result struct {
 	ResponseTime float32 `json:"responseTime"`
 }
 
+func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result) String() string {
+	return "SoftLayer_Network_Monitor_Version1_Query_Result"
+}
+
 // SoftLayer_Network_Monitor_Version1_Query_Result_Extended is SoftLayer_Network_Monitor_Version1_Query_Result with all maskable types.
 type SoftLayer_Network_Monitor_Version1_Query_Result_Extended struct {
 	SoftLayer_Network_Monitor_Version1_Query_Result
@@ -34,6 +38,6 @@ type SoftLayer_Network_Monitor_Version1_Query_Result_Extended struct {
 	QueryHost *SoftLayer_Network_Monitor_Version1_Query_Host `json:"queryHost"`
 }
 
-func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result) String() string {
+func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result_Extended) String() string {
 	return "SoftLayer_Network_Monitor_Version1_Query_Result"
 }

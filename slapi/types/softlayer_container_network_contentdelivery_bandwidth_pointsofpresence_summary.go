@@ -13,15 +13,6 @@ import (
 // downloading your CDN hosted content.
 type SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summary struct {
 
-	// StartDateTime - no documentation
-	StartDateTime *time.Time `json:"startDateTime"`
-
-	// UsageUnits - The unit of measurement used in a CDN POP bandwidth summary.
-	UsageUnits string `json:"usageUnits"`
-
-	// ViewCount - no documentation
-	ViewCount uint64 `json:"viewCount"`
-
 	// Bandwidth - no documentation
 	Bandwidth uint64 `json:"bandwidth"`
 
@@ -30,6 +21,15 @@ type SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summ
 
 	// PopName - A CDN POP's name. This is typically the city the POP resides in.
 	PopName string `json:"popName"`
+
+	// StartDateTime - no documentation
+	StartDateTime *time.Time `json:"startDateTime"`
+
+	// UsageUnits - The unit of measurement used in a CDN POP bandwidth summary.
+	UsageUnits string `json:"usageUnits"`
+
+	// ViewCount - no documentation
+	ViewCount uint64 `json:"viewCount"`
 }
 
 func (softlayer_container_network_contentdelivery_bandwidth_pointsofpresence_summary *SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summary) String() string {

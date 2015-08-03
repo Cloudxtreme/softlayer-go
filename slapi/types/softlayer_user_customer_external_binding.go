@@ -9,6 +9,10 @@ package types
 type SoftLayer_User_Customer_External_Binding struct {
 }
 
+func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External_Binding) String() string {
+	return "SoftLayer_User_Customer_External_Binding"
+}
+
 // SoftLayer_User_Customer_External_Binding_Extended is SoftLayer_User_Customer_External_Binding with all maskable types.
 type SoftLayer_User_Customer_External_Binding_Extended struct {
 	SoftLayer_User_Customer_External_Binding
@@ -17,6 +21,6 @@ type SoftLayer_User_Customer_External_Binding_Extended struct {
 	User *SoftLayer_User_Customer `json:"user"`
 }
 
-func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External_Binding) String() string {
+func (softlayer_user_customer_external_binding *SoftLayer_User_Customer_External_Binding_Extended) String() string {
 	return "SoftLayer_User_Customer_External_Binding"
 }

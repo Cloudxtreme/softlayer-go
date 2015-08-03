@@ -6,6 +6,10 @@ package types
 type SoftLayer_Brand_Attribute struct {
 }
 
+func (softlayer_brand_attribute *SoftLayer_Brand_Attribute) String() string {
+	return "SoftLayer_Brand_Attribute"
+}
+
 // SoftLayer_Brand_Attribute_Extended is SoftLayer_Brand_Attribute with all maskable types.
 type SoftLayer_Brand_Attribute_Extended struct {
 	SoftLayer_Brand_Attribute
@@ -14,6 +18,6 @@ type SoftLayer_Brand_Attribute_Extended struct {
 	Brand *SoftLayer_Brand `json:"brand"`
 }
 
-func (softlayer_brand_attribute *SoftLayer_Brand_Attribute) String() string {
+func (softlayer_brand_attribute *SoftLayer_Brand_Attribute_Extended) String() string {
 	return "SoftLayer_Brand_Attribute"
 }

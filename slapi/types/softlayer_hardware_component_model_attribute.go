@@ -20,6 +20,10 @@ type SoftLayer_Hardware_Component_Model_Attribute struct {
 	Value string `json:"value"`
 }
 
+func (softlayer_hardware_component_model_attribute *SoftLayer_Hardware_Component_Model_Attribute) String() string {
+	return "SoftLayer_Hardware_Component_Model_Attribute"
+}
+
 // SoftLayer_Hardware_Component_Model_Attribute_Extended is SoftLayer_Hardware_Component_Model_Attribute with all maskable types.
 type SoftLayer_Hardware_Component_Model_Attribute_Extended struct {
 	SoftLayer_Hardware_Component_Model_Attribute
@@ -31,6 +35,6 @@ type SoftLayer_Hardware_Component_Model_Attribute_Extended struct {
 	HardwareComponentAttributeType *SoftLayer_Hardware_Component_Model_Attribute_Type `json:"hardwareComponentAttributeType"`
 }
 
-func (softlayer_hardware_component_model_attribute *SoftLayer_Hardware_Component_Model_Attribute) String() string {
+func (softlayer_hardware_component_model_attribute *SoftLayer_Hardware_Component_Model_Attribute_Extended) String() string {
 	return "SoftLayer_Hardware_Component_Model_Attribute"
 }

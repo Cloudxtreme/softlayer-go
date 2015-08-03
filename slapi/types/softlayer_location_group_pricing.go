@@ -6,19 +6,23 @@ package types
 type SoftLayer_Location_Group_Pricing struct {
 }
 
+func (softlayer_location_group_pricing *SoftLayer_Location_Group_Pricing) String() string {
+	return "SoftLayer_Location_Group_Pricing"
+}
+
 // SoftLayer_Location_Group_Pricing_Extended is SoftLayer_Location_Group_Pricing with all maskable types.
 type SoftLayer_Location_Group_Pricing_Extended struct {
 	SoftLayer_Location_Group_Pricing
 
-	// PriceCount - A count of the prices that this pricing location group limits. All of these prices will
-	// only be available in the locations defined by this pricing location group.
-	PriceCount uint64 `json:"priceCount"`
-
 	// Prices - The prices that this pricing location group limits. All of these prices will only be
 	// available in the locations defined by this pricing location group.
 	Prices []*SoftLayer_Product_Item_Price `json:"prices"`
+
+	// PriceCount - A count of the prices that this pricing location group limits. All of these prices will
+	// only be available in the locations defined by this pricing location group.
+	PriceCount uint64 `json:"priceCount"`
 }
 
-func (softlayer_location_group_pricing *SoftLayer_Location_Group_Pricing) String() string {
+func (softlayer_location_group_pricing *SoftLayer_Location_Group_Pricing_Extended) String() string {
 	return "SoftLayer_Location_Group_Pricing"
 }

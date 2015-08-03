@@ -8,6 +8,10 @@ package types
 type SoftLayer_Billing_Item_Network_LoadBalancer_Global struct {
 }
 
+func (softlayer_billing_item_network_loadbalancer_global *SoftLayer_Billing_Item_Network_LoadBalancer_Global) String() string {
+	return "SoftLayer_Billing_Item_Network_LoadBalancer_Global"
+}
+
 // SoftLayer_Billing_Item_Network_LoadBalancer_Global_Extended is SoftLayer_Billing_Item_Network_LoadBalancer_Global with all maskable types.
 type SoftLayer_Billing_Item_Network_LoadBalancer_Global_Extended struct {
 	SoftLayer_Billing_Item_Network_LoadBalancer_Global
@@ -16,6 +20,6 @@ type SoftLayer_Billing_Item_Network_LoadBalancer_Global_Extended struct {
 	Resource *SoftLayer_Network_LoadBalancer_Global_Account `json:"resource"`
 }
 
-func (softlayer_billing_item_network_loadbalancer_global *SoftLayer_Billing_Item_Network_LoadBalancer_Global) String() string {
+func (softlayer_billing_item_network_loadbalancer_global *SoftLayer_Billing_Item_Network_LoadBalancer_Global_Extended) String() string {
 	return "SoftLayer_Billing_Item_Network_LoadBalancer_Global"
 }

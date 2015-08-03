@@ -8,9 +8,19 @@ package types
 // Firewall Update Request]] service to submit a firewall update request.
 type SoftLayer_Network_Firewall_Template_Rule struct {
 
-	// DestinationIpSubnetMask - The destination IP subnet mask considered for determining rule
-	// application.
-	DestinationIpSubnetMask string `json:"destinationIpSubnetMask"`
+	// Action - The action that this template rule is to take [permit or deny].
+	Action string `json:"action"`
+
+	// DestinationIpAddress - The destination IP address considered for determining rule application.
+	DestinationIpAddress string `json:"destinationIpAddress"`
+
+	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
+	// determining rule application.
+	DestinationPortRangeStart int `json:"destinationPortRangeStart"`
+
+	// FirewallTemplateId - The unique identifier of the firewall template that a firewall template rule is
+	// associated with.
+	FirewallTemplateId int `json:"firewallTemplateId"`
 
 	// Id - no documentation
 	Id int `json:"id"`
@@ -21,32 +31,26 @@ type SoftLayer_Network_Firewall_Template_Rule struct {
 	// OrderValue - The numeric value describing the order in which the rule set should be applied.
 	OrderValue int `json:"orderValue"`
 
-	// SourceIpAddress - The source IP address considered for determining rule application.
-	SourceIpAddress string `json:"sourceIpAddress"`
+	// Protocol - The protocol considered for determining rule application.
+	Protocol string `json:"protocol"`
 
 	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
 	SourceIpSubnetMask string `json:"sourceIpSubnetMask"`
 
-	// Action - The action that this template rule is to take [permit or deny].
-	Action string `json:"action"`
-
-	// DestinationIpAddress - The destination IP address considered for determining rule application.
-	DestinationIpAddress string `json:"destinationIpAddress"`
+	// DestinationIpSubnetMask - The destination IP subnet mask considered for determining rule
+	// application.
+	DestinationIpSubnetMask string `json:"destinationIpSubnetMask"`
 
 	// DestinationPortRangeEnd - The ending (upper end of range) destination port considered for
 	// determining rule application.
 	DestinationPortRangeEnd int `json:"destinationPortRangeEnd"`
 
-	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
-	// determining rule application.
-	DestinationPortRangeStart int `json:"destinationPortRangeStart"`
+	// SourceIpAddress - The source IP address considered for determining rule application.
+	SourceIpAddress string `json:"sourceIpAddress"`
+}
 
-	// FirewallTemplateId - The unique identifier of the firewall template that a firewall template rule is
-	// associated with.
-	FirewallTemplateId int `json:"firewallTemplateId"`
-
-	// Protocol - The protocol considered for determining rule application.
-	Protocol string `json:"protocol"`
+func (softlayer_network_firewall_template_rule *SoftLayer_Network_Firewall_Template_Rule) String() string {
+	return "SoftLayer_Network_Firewall_Template_Rule"
 }
 
 // SoftLayer_Network_Firewall_Template_Rule_Extended is SoftLayer_Network_Firewall_Template_Rule with all maskable types.
@@ -57,6 +61,6 @@ type SoftLayer_Network_Firewall_Template_Rule_Extended struct {
 	FirewallTemplate *SoftLayer_Network_Firewall_Template `json:"firewallTemplate"`
 }
 
-func (softlayer_network_firewall_template_rule *SoftLayer_Network_Firewall_Template_Rule) String() string {
+func (softlayer_network_firewall_template_rule *SoftLayer_Network_Firewall_Template_Rule_Extended) String() string {
 	return "SoftLayer_Network_Firewall_Template_Rule"
 }

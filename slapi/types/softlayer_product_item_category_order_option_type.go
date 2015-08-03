@@ -7,9 +7,6 @@ package types
 // orders for prices.
 type SoftLayer_Product_Item_Category_Order_Option_Type struct {
 
-	// Description - no documentation
-	Description string `json:"description"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
@@ -21,6 +18,9 @@ type SoftLayer_Product_Item_Category_Order_Option_Type struct {
 
 	// Value - no documentation
 	Value string `json:"value"`
+
+	// Description - no documentation
+	Description string `json:"description"`
 }
 
 func (softlayer_product_item_category_order_option_type *SoftLayer_Product_Item_Category_Order_Option_Type) String() string {

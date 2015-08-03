@@ -6,10 +6,6 @@ package types
 // contains general information relating to a single hard drive partition.
 type SoftLayer_Hardware_Component_Partition struct {
 
-	// HardwareComponentId - A hardware component partition's associated
-	// [[SoftLayer_Hardware_Component|hardware component]] Id.
-	HardwareComponentId int `json:"hardwareComponentId"`
-
 	// MinimumSize - no documentation
 	MinimumSize float64 `json:"minimumSize"`
 
@@ -23,6 +19,14 @@ type SoftLayer_Hardware_Component_Partition struct {
 	// Grow - A flag indicating if a partition is the grow partition. The grow partition will grow to fill
 	// all remaining space on a disk. There can only be one.
 	Grow int `json:"grow"`
+
+	// HardwareComponentId - A hardware component partition's associated
+	// [[SoftLayer_Hardware_Component|hardware component]] Id.
+	HardwareComponentId int `json:"hardwareComponentId"`
+}
+
+func (softlayer_hardware_component_partition *SoftLayer_Hardware_Component_Partition) String() string {
+	return "SoftLayer_Hardware_Component_Partition"
 }
 
 // SoftLayer_Hardware_Component_Partition_Extended is SoftLayer_Hardware_Component_Partition with all maskable types.
@@ -35,6 +39,6 @@ type SoftLayer_Hardware_Component_Partition_Extended struct {
 	HardwareComponent *SoftLayer_Hardware_Component `json:"hardwareComponent"`
 }
 
-func (softlayer_hardware_component_partition *SoftLayer_Hardware_Component_Partition) String() string {
+func (softlayer_hardware_component_partition *SoftLayer_Hardware_Component_Partition_Extended) String() string {
 	return "SoftLayer_Hardware_Component_Partition"
 }

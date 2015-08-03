@@ -9,6 +9,10 @@ type SoftLayer_Network_Component_Detail struct {
 	PollingInterfaceIndex int `json:"pollingInterfaceIndex"`
 }
 
+func (softlayer_network_component_detail *SoftLayer_Network_Component_Detail) String() string {
+	return "SoftLayer_Network_Component_Detail"
+}
+
 // SoftLayer_Network_Component_Detail_Extended is SoftLayer_Network_Component_Detail with all maskable types.
 type SoftLayer_Network_Component_Detail_Extended struct {
 	SoftLayer_Network_Component_Detail
@@ -17,6 +21,6 @@ type SoftLayer_Network_Component_Detail_Extended struct {
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
 }
 
-func (softlayer_network_component_detail *SoftLayer_Network_Component_Detail) String() string {
+func (softlayer_network_component_detail *SoftLayer_Network_Component_Detail_Extended) String() string {
 	return "SoftLayer_Network_Component_Detail"
 }

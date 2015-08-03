@@ -11,6 +11,9 @@ import (
 // service.
 type SoftLayer_Billing_Invoice_Tax_Status struct {
 
+	// Name - <nil>
+	Name string `json:"name"`
+
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate"`
 
@@ -22,9 +25,6 @@ type SoftLayer_Billing_Invoice_Tax_Status struct {
 
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate"`
-
-	// Name - <nil>
-	Name string `json:"name"`
 }
 
 func (softlayer_billing_invoice_tax_status *SoftLayer_Billing_Invoice_Tax_Status) String() string {

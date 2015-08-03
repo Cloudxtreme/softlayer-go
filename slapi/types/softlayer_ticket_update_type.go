@@ -12,6 +12,10 @@ type SoftLayer_Ticket_Update_Type struct {
 	KeyName string `json:"keyName"`
 }
 
+func (softlayer_ticket_update_type *SoftLayer_Ticket_Update_Type) String() string {
+	return "SoftLayer_Ticket_Update_Type"
+}
+
 // SoftLayer_Ticket_Update_Type_Extended is SoftLayer_Ticket_Update_Type with all maskable types.
 type SoftLayer_Ticket_Update_Type_Extended struct {
 	SoftLayer_Ticket_Update_Type
@@ -20,6 +24,6 @@ type SoftLayer_Ticket_Update_Type_Extended struct {
 	Ticket *SoftLayer_Ticket_Update `json:"ticket"`
 }
 
-func (softlayer_ticket_update_type *SoftLayer_Ticket_Update_Type) String() string {
+func (softlayer_ticket_update_type *SoftLayer_Ticket_Update_Type_Extended) String() string {
 	return "SoftLayer_Ticket_Update_Type"
 }

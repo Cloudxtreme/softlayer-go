@@ -8,6 +8,10 @@ package types
 type SoftLayer_Network_Storage_Backup struct {
 }
 
+func (softlayer_network_storage_backup *SoftLayer_Network_Storage_Backup) String() string {
+	return "SoftLayer_Network_Storage_Backup"
+}
+
 // SoftLayer_Network_Storage_Backup_Extended is SoftLayer_Network_Storage_Backup with all maskable types.
 type SoftLayer_Network_Storage_Backup_Extended struct {
 	SoftLayer_Network_Storage_Backup
@@ -19,6 +23,6 @@ type SoftLayer_Network_Storage_Backup_Extended struct {
 	PreviousCyclePeakUsage uint `json:"previousCyclePeakUsage"`
 }
 
-func (softlayer_network_storage_backup *SoftLayer_Network_Storage_Backup) String() string {
+func (softlayer_network_storage_backup *SoftLayer_Network_Storage_Backup_Extended) String() string {
 	return "SoftLayer_Network_Storage_Backup"
 }

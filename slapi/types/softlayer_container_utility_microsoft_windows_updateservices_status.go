@@ -14,9 +14,6 @@ import (
 // last synchronization attempt as queried from SoftLayer's servers.
 type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status struct {
 
-	// PrivateIPAddress - no documentation
-	PrivateIPAddress string `json:"privateIPAddress"`
-
 	// SyncStatus - The status message returned from a server's last synchronization with SoftLayer's local
 	// server.
 	SyncStatus string `json:"syncStatus"`
@@ -33,6 +30,9 @@ type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status struct 
 
 	// LastSyncDate - The last time a server synchronized with SoftLayer's local server.
 	LastSyncDate *time.Time `json:"lastSyncDate"`
+
+	// PrivateIPAddress - no documentation
+	PrivateIPAddress string `json:"privateIPAddress"`
 }
 
 func (softlayer_container_utility_microsoft_windows_updateservices_status *SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status) String() string {

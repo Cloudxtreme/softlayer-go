@@ -18,6 +18,10 @@ type SoftLayer_Location_Region struct {
 	SortOrder int `json:"sortOrder"`
 }
 
+func (softlayer_location_region *SoftLayer_Location_Region) String() string {
+	return "SoftLayer_Location_Region"
+}
+
 // SoftLayer_Location_Region_Extended is SoftLayer_Location_Region with all maskable types.
 type SoftLayer_Location_Region_Extended struct {
 	SoftLayer_Location_Region
@@ -27,6 +31,6 @@ type SoftLayer_Location_Region_Extended struct {
 	Location *SoftLayer_Location_Region_Location `json:"location"`
 }
 
-func (softlayer_location_region *SoftLayer_Location_Region) String() string {
+func (softlayer_location_region *SoftLayer_Location_Region_Extended) String() string {
 	return "SoftLayer_Location_Region"
 }

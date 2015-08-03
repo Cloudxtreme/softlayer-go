@@ -24,6 +24,10 @@ type SoftLayer_Notification_User_Subscriber_Preference struct {
 	Value string `json:"value"`
 }
 
+func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) String() string {
+	return "SoftLayer_Notification_User_Subscriber_Preference"
+}
+
 // SoftLayer_Notification_User_Subscriber_Preference_Extended is SoftLayer_Notification_User_Subscriber_Preference with all maskable types.
 type SoftLayer_Notification_User_Subscriber_Preference_Extended struct {
 	SoftLayer_Notification_User_Subscriber_Preference
@@ -35,6 +39,6 @@ type SoftLayer_Notification_User_Subscriber_Preference_Extended struct {
 	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber"`
 }
 
-func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) String() string {
+func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference_Extended) String() string {
 	return "SoftLayer_Notification_User_Subscriber_Preference"
 }

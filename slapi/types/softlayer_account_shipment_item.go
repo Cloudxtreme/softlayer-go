@@ -11,14 +11,11 @@ import (
 // tracking information for as shipment is accessible with this data type.
 type SoftLayer_Account_Shipment_Item struct {
 
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// ShipmentId - no documentation
 	ShipmentId int `json:"shipmentId"`
 
-	// ShipmentItemTypeId - no documentation
-	ShipmentItemTypeId int `json:"shipmentItemTypeId"`
+	// Id - no documentation
+	Id int `json:"id"`
 
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate"`
@@ -31,6 +28,13 @@ type SoftLayer_Account_Shipment_Item struct {
 
 	// ShipmentItemId - no documentation
 	ShipmentItemId int `json:"shipmentItemId"`
+
+	// ShipmentItemTypeId - no documentation
+	ShipmentItemTypeId int `json:"shipmentItemTypeId"`
+}
+
+func (softlayer_account_shipment_item *SoftLayer_Account_Shipment_Item) String() string {
+	return "SoftLayer_Account_Shipment_Item"
 }
 
 // SoftLayer_Account_Shipment_Item_Extended is SoftLayer_Account_Shipment_Item with all maskable types.
@@ -44,6 +48,6 @@ type SoftLayer_Account_Shipment_Item_Extended struct {
 	Shipment *SoftLayer_Account_Shipment `json:"shipment"`
 }
 
-func (softlayer_account_shipment_item *SoftLayer_Account_Shipment_Item) String() string {
+func (softlayer_account_shipment_item *SoftLayer_Account_Shipment_Item_Extended) String() string {
 	return "SoftLayer_Account_Shipment_Item"
 }

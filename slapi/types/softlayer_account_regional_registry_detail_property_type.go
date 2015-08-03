@@ -12,15 +12,6 @@ import (
 // the value of a property object.
 type SoftLayer_Account_Regional_Registry_Detail_Property_Type struct {
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
-
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// KeyName - no documentation
-	KeyName string `json:"keyName"`
-
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate"`
 
@@ -30,6 +21,15 @@ type SoftLayer_Account_Regional_Registry_Detail_Property_Type struct {
 	// ValueExpression - A Perl-compatible regular expression used to describe the valid format of the
 	// property
 	ValueExpression string `json:"valueExpression"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate"`
+
+	// Id - no documentation
+	Id int `json:"id"`
+
+	// KeyName - no documentation
+	KeyName string `json:"keyName"`
 }
 
 func (softlayer_account_regional_registry_detail_property_type *SoftLayer_Account_Regional_Registry_Detail_Property_Type) String() string {

@@ -9,17 +9,21 @@ type SoftLayer_Product_Package_Attribute struct {
 	Value string `json:"value"`
 }
 
+func (softlayer_product_package_attribute *SoftLayer_Product_Package_Attribute) String() string {
+	return "SoftLayer_Product_Package_Attribute"
+}
+
 // SoftLayer_Product_Package_Attribute_Extended is SoftLayer_Product_Package_Attribute with all maskable types.
 type SoftLayer_Product_Package_Attribute_Extended struct {
 	SoftLayer_Product_Package_Attribute
 
-	// Package - <nil>
-	Package *SoftLayer_Product_Package `json:"package"`
-
 	// AttributeType - <nil>
 	AttributeType *SoftLayer_Product_Package_Attribute_Type `json:"attributeType"`
+
+	// Package - <nil>
+	Package *SoftLayer_Product_Package `json:"package"`
 }
 
-func (softlayer_product_package_attribute *SoftLayer_Product_Package_Attribute) String() string {
+func (softlayer_product_package_attribute *SoftLayer_Product_Package_Attribute_Extended) String() string {
 	return "SoftLayer_Product_Package_Attribute"
 }

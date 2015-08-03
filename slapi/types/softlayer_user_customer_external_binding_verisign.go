@@ -13,6 +13,10 @@ package types
 type SoftLayer_User_Customer_External_Binding_Verisign struct {
 }
 
+func (softlayer_user_customer_external_binding_verisign *SoftLayer_User_Customer_External_Binding_Verisign) String() string {
+	return "SoftLayer_User_Customer_External_Binding_Verisign"
+}
+
 // SoftLayer_User_Customer_External_Binding_Verisign_Extended is SoftLayer_User_Customer_External_Binding_Verisign with all maskable types.
 type SoftLayer_User_Customer_External_Binding_Verisign_Extended struct {
 	SoftLayer_User_Customer_External_Binding_Verisign
@@ -31,6 +35,6 @@ type SoftLayer_User_Customer_External_Binding_Verisign_Extended struct {
 	CredentialType string `json:"credentialType"`
 }
 
-func (softlayer_user_customer_external_binding_verisign *SoftLayer_User_Customer_External_Binding_Verisign) String() string {
+func (softlayer_user_customer_external_binding_verisign *SoftLayer_User_Customer_External_Binding_Verisign_Extended) String() string {
 	return "SoftLayer_User_Customer_External_Binding_Verisign"
 }

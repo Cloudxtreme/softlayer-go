@@ -9,6 +9,10 @@ package types
 type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant struct {
 }
 
+func (softlayer_network_storage_iscsi_equallogic_version3_replicant *SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant) String() string {
+	return "SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant"
+}
+
 // SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant_Extended is SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant with all maskable types.
 type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant_Extended struct {
 	SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant
@@ -21,6 +25,6 @@ type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant_Extended stru
 	VolumeName string `json:"volumeName"`
 }
 
-func (softlayer_network_storage_iscsi_equallogic_version3_replicant *SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant) String() string {
+func (softlayer_network_storage_iscsi_equallogic_version3_replicant *SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant_Extended) String() string {
 	return "SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Replicant"
 }

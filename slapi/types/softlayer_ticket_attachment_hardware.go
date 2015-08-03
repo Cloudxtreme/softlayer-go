@@ -14,17 +14,21 @@ type SoftLayer_Ticket_Attachment_Hardware struct {
 	HardwareId int `json:"hardwareId"`
 }
 
+func (softlayer_ticket_attachment_hardware *SoftLayer_Ticket_Attachment_Hardware) String() string {
+	return "SoftLayer_Ticket_Attachment_Hardware"
+}
+
 // SoftLayer_Ticket_Attachment_Hardware_Extended is SoftLayer_Ticket_Attachment_Hardware with all maskable types.
 type SoftLayer_Ticket_Attachment_Hardware_Extended struct {
 	SoftLayer_Ticket_Attachment_Hardware
 
-	// Resource - no documentation
-	Resource *SoftLayer_Hardware `json:"resource"`
-
 	// Hardware - no documentation
 	Hardware *SoftLayer_Hardware `json:"hardware"`
+
+	// Resource - no documentation
+	Resource *SoftLayer_Hardware `json:"resource"`
 }
 
-func (softlayer_ticket_attachment_hardware *SoftLayer_Ticket_Attachment_Hardware) String() string {
+func (softlayer_ticket_attachment_hardware *SoftLayer_Ticket_Attachment_Hardware_Extended) String() string {
 	return "SoftLayer_Ticket_Attachment_Hardware"
 }

@@ -5,6 +5,12 @@ package types
 // SoftLayer_Account_Link_OpenStack_ProjectCreationDetails - no documentation
 type SoftLayer_Account_Link_OpenStack_ProjectCreationDetails struct {
 
+	// UserId - Id for the user given the Project Admin role for this project.
+	UserId string `json:"userId"`
+
+	// UserName - Name for the user given the Project Admin role for this project.
+	UserName string `json:"userName"`
+
 	// DomainId - no documentation
 	DomainId string `json:"domainId"`
 
@@ -13,12 +19,6 @@ type SoftLayer_Account_Link_OpenStack_ProjectCreationDetails struct {
 
 	// ProjectName - no documentation
 	ProjectName string `json:"projectName"`
-
-	// UserId - Id for the user given the Project Admin role for this project.
-	UserId string `json:"userId"`
-
-	// UserName - Name for the user given the Project Admin role for this project.
-	UserName string `json:"userName"`
 }
 
 func (softlayer_account_link_openstack_projectcreationdetails *SoftLayer_Account_Link_OpenStack_ProjectCreationDetails) String() string {

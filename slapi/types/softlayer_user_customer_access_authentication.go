@@ -37,6 +37,10 @@ type SoftLayer_User_Customer_Access_Authentication struct {
 	Username string `json:"username"`
 }
 
+func (softlayer_user_customer_access_authentication *SoftLayer_User_Customer_Access_Authentication) String() string {
+	return "SoftLayer_User_Customer_Access_Authentication"
+}
+
 // SoftLayer_User_Customer_Access_Authentication_Extended is SoftLayer_User_Customer_Access_Authentication with all maskable types.
 type SoftLayer_User_Customer_Access_Authentication_Extended struct {
 	SoftLayer_User_Customer_Access_Authentication
@@ -45,6 +49,6 @@ type SoftLayer_User_Customer_Access_Authentication_Extended struct {
 	User *SoftLayer_User_Customer `json:"user"`
 }
 
-func (softlayer_user_customer_access_authentication *SoftLayer_User_Customer_Access_Authentication) String() string {
+func (softlayer_user_customer_access_authentication *SoftLayer_User_Customer_Access_Authentication_Extended) String() string {
 	return "SoftLayer_User_Customer_Access_Authentication"
 }

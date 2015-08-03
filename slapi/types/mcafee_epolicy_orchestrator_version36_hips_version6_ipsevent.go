@@ -28,6 +28,10 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent struct {
 	SeverityText string `json:"severityText"`
 }
 
+func (mcafee_epolicy_orchestrator_version36_hips_version6_ipsevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent"
+}
+
 // McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent_Extended is McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent with all maskable types.
 type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent_Extended struct {
 	McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent
@@ -36,6 +40,6 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent_Extended struc
 	Signature *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_Event_Signature `json:"signature"`
 }
 
-func (mcafee_epolicy_orchestrator_version36_hips_version6_ipsevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent) String() string {
+func (mcafee_epolicy_orchestrator_version36_hips_version6_ipsevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent_Extended) String() string {
 	return "McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent"
 }

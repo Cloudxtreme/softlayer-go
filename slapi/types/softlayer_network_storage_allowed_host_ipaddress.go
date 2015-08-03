@@ -6,6 +6,10 @@ package types
 type SoftLayer_Network_Storage_Allowed_Host_IpAddress struct {
 }
 
+func (softlayer_network_storage_allowed_host_ipaddress *SoftLayer_Network_Storage_Allowed_Host_IpAddress) String() string {
+	return "SoftLayer_Network_Storage_Allowed_Host_IpAddress"
+}
+
 // SoftLayer_Network_Storage_Allowed_Host_IpAddress_Extended is SoftLayer_Network_Storage_Allowed_Host_IpAddress with all maskable types.
 type SoftLayer_Network_Storage_Allowed_Host_IpAddress_Extended struct {
 	SoftLayer_Network_Storage_Allowed_Host_IpAddress
@@ -15,6 +19,6 @@ type SoftLayer_Network_Storage_Allowed_Host_IpAddress_Extended struct {
 	Resource *SoftLayer_Network_Subnet_IpAddress `json:"resource"`
 }
 
-func (softlayer_network_storage_allowed_host_ipaddress *SoftLayer_Network_Storage_Allowed_Host_IpAddress) String() string {
+func (softlayer_network_storage_allowed_host_ipaddress *SoftLayer_Network_Storage_Allowed_Host_IpAddress_Extended) String() string {
 	return "SoftLayer_Network_Storage_Allowed_Host_IpAddress"
 }

@@ -15,6 +15,10 @@ type SoftLayer_Virtual_Storage_Repository_Type struct {
 	Name string `json:"name"`
 }
 
+func (softlayer_virtual_storage_repository_type *SoftLayer_Virtual_Storage_Repository_Type) String() string {
+	return "SoftLayer_Virtual_Storage_Repository_Type"
+}
+
 // SoftLayer_Virtual_Storage_Repository_Type_Extended is SoftLayer_Virtual_Storage_Repository_Type with all maskable types.
 type SoftLayer_Virtual_Storage_Repository_Type_Extended struct {
 	SoftLayer_Virtual_Storage_Repository_Type
@@ -28,6 +32,6 @@ type SoftLayer_Virtual_Storage_Repository_Type_Extended struct {
 	StorageRepositories []*SoftLayer_Virtual_Storage_Repository `json:"storageRepositories"`
 }
 
-func (softlayer_virtual_storage_repository_type *SoftLayer_Virtual_Storage_Repository_Type) String() string {
+func (softlayer_virtual_storage_repository_type *SoftLayer_Virtual_Storage_Repository_Type_Extended) String() string {
 	return "SoftLayer_Virtual_Storage_Repository_Type"
 }

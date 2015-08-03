@@ -9,6 +9,9 @@ import (
 // SoftLayer_Security_Certificate_Entry - <nil>
 type SoftLayer_Security_Certificate_Entry struct {
 
+	// ValidityEnd - The UTC timestamp representing the end of the certificate's validity period.
+	ValidityEnd *time.Time `json:"validityEnd"`
+
 	// CertificateId - no documentation
 	CertificateId int `json:"certificateId"`
 
@@ -26,9 +29,6 @@ type SoftLayer_Security_Certificate_Entry struct {
 
 	// ValidityDays - The number of days remaining in the validity period for the certificate.
 	ValidityDays int `json:"validityDays"`
-
-	// ValidityEnd - The UTC timestamp representing the end of the certificate's validity period.
-	ValidityEnd *time.Time `json:"validityEnd"`
 }
 
 func (softlayer_security_certificate_entry *SoftLayer_Security_Certificate_Entry) String() string {

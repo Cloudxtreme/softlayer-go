@@ -20,6 +20,10 @@ type SoftLayer_Product_Item_Requirement struct {
 	RequiredItemId int `json:"requiredItemId"`
 }
 
+func (softlayer_product_item_requirement *SoftLayer_Product_Item_Requirement) String() string {
+	return "SoftLayer_Product_Item_Requirement"
+}
+
 // SoftLayer_Product_Item_Requirement_Extended is SoftLayer_Product_Item_Requirement with all maskable types.
 type SoftLayer_Product_Item_Requirement_Extended struct {
 	SoftLayer_Product_Item_Requirement
@@ -31,6 +35,6 @@ type SoftLayer_Product_Item_Requirement_Extended struct {
 	Product *SoftLayer_Product_Item `json:"product"`
 }
 
-func (softlayer_product_item_requirement *SoftLayer_Product_Item_Requirement) String() string {
+func (softlayer_product_item_requirement *SoftLayer_Product_Item_Requirement_Extended) String() string {
 	return "SoftLayer_Product_Item_Requirement"
 }

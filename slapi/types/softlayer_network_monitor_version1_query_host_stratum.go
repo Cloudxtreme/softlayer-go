@@ -21,6 +21,10 @@ type SoftLayer_Network_Monitor_Version1_Query_Host_Stratum struct {
 	ResponseLevel int `json:"responseLevel"`
 }
 
+func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum) String() string {
+	return "SoftLayer_Network_Monitor_Version1_Query_Host_Stratum"
+}
+
 // SoftLayer_Network_Monitor_Version1_Query_Host_Stratum_Extended is SoftLayer_Network_Monitor_Version1_Query_Host_Stratum with all maskable types.
 type SoftLayer_Network_Monitor_Version1_Query_Host_Stratum_Extended struct {
 	SoftLayer_Network_Monitor_Version1_Query_Host_Stratum
@@ -29,6 +33,6 @@ type SoftLayer_Network_Monitor_Version1_Query_Host_Stratum_Extended struct {
 	Hardware *SoftLayer_Hardware `json:"hardware"`
 }
 
-func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum) String() string {
+func (softlayer_network_monitor_version1_query_host_stratum *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum_Extended) String() string {
 	return "SoftLayer_Network_Monitor_Version1_Query_Host_Stratum"
 }

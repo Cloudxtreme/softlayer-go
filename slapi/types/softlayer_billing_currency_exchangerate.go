@@ -22,6 +22,10 @@ type SoftLayer_Billing_Currency_ExchangeRate struct {
 	Rate float64 `json:"rate"`
 }
 
+func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) String() string {
+	return "SoftLayer_Billing_Currency_ExchangeRate"
+}
+
 // SoftLayer_Billing_Currency_ExchangeRate_Extended is SoftLayer_Billing_Currency_ExchangeRate with all maskable types.
 type SoftLayer_Billing_Currency_ExchangeRate_Extended struct {
 	SoftLayer_Billing_Currency_ExchangeRate
@@ -33,6 +37,6 @@ type SoftLayer_Billing_Currency_ExchangeRate_Extended struct {
 	LocalCurrency *SoftLayer_Billing_Currency `json:"localCurrency"`
 }
 
-func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) String() string {
+func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate_Extended) String() string {
 	return "SoftLayer_Billing_Currency_ExchangeRate"
 }

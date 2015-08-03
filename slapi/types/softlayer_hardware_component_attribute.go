@@ -8,10 +8,6 @@ package types
 // configuration of RAID-1 will have a single attribute for this setting.
 type SoftLayer_Hardware_Component_Attribute struct {
 
-	// Value - A hardware component attribute's value. A value can have many different values depending on
-	// the attributes [[SoftLayer_Hardware_Component_Attribute_Type|type]].
-	Value string `json:"value"`
-
 	// HardwareComponentAttributeTypeId - A hardware component attribute's associated
 	// [[SoftLayer_Hardware_Component_Attribute_Type|type]] Id.
 	HardwareComponentAttributeTypeId int `json:"hardwareComponentAttributeTypeId"`
@@ -19,6 +15,14 @@ type SoftLayer_Hardware_Component_Attribute struct {
 	// HardwareComponentId - A hardware component attribute's associated
 	// [[SoftLayer_Hardware_Component|hardware component]] Id.
 	HardwareComponentId int `json:"hardwareComponentId"`
+
+	// Value - A hardware component attribute's value. A value can have many different values depending on
+	// the attributes [[SoftLayer_Hardware_Component_Attribute_Type|type]].
+	Value string `json:"value"`
+}
+
+func (softlayer_hardware_component_attribute *SoftLayer_Hardware_Component_Attribute) String() string {
+	return "SoftLayer_Hardware_Component_Attribute"
 }
 
 // SoftLayer_Hardware_Component_Attribute_Extended is SoftLayer_Hardware_Component_Attribute with all maskable types.
@@ -34,6 +38,6 @@ type SoftLayer_Hardware_Component_Attribute_Extended struct {
 	HardwareComponentAttributeType *SoftLayer_Hardware_Component_Attribute_Type `json:"hardwareComponentAttributeType"`
 }
 
-func (softlayer_hardware_component_attribute *SoftLayer_Hardware_Component_Attribute) String() string {
+func (softlayer_hardware_component_attribute *SoftLayer_Hardware_Component_Attribute_Extended) String() string {
 	return "SoftLayer_Hardware_Component_Attribute"
 }

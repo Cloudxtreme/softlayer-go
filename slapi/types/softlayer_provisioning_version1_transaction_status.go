@@ -18,6 +18,10 @@ type SoftLayer_Provisioning_Version1_Transaction_Status struct {
 	Name string `json:"name"`
 }
 
+func (softlayer_provisioning_version1_transaction_status *SoftLayer_Provisioning_Version1_Transaction_Status) String() string {
+	return "SoftLayer_Provisioning_Version1_Transaction_Status"
+}
+
 // SoftLayer_Provisioning_Version1_Transaction_Status_Extended is SoftLayer_Provisioning_Version1_Transaction_Status with all maskable types.
 type SoftLayer_Provisioning_Version1_Transaction_Status_Extended struct {
 	SoftLayer_Provisioning_Version1_Transaction_Status
@@ -29,6 +33,6 @@ type SoftLayer_Provisioning_Version1_Transaction_Status_Extended struct {
 	NonCompletedTransactions []*SoftLayer_Provisioning_Version1_Transaction `json:"nonCompletedTransactions"`
 }
 
-func (softlayer_provisioning_version1_transaction_status *SoftLayer_Provisioning_Version1_Transaction_Status) String() string {
+func (softlayer_provisioning_version1_transaction_status *SoftLayer_Provisioning_Version1_Transaction_Status_Extended) String() string {
 	return "SoftLayer_Provisioning_Version1_Transaction_Status"
 }

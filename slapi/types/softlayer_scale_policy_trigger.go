@@ -29,6 +29,10 @@ type SoftLayer_Scale_Policy_Trigger struct {
 	TypeId int `json:"typeId"`
 }
 
+func (softlayer_scale_policy_trigger *SoftLayer_Scale_Policy_Trigger) String() string {
+	return "SoftLayer_Scale_Policy_Trigger"
+}
+
 // SoftLayer_Scale_Policy_Trigger_Extended is SoftLayer_Scale_Policy_Trigger with all maskable types.
 type SoftLayer_Scale_Policy_Trigger_Extended struct {
 	SoftLayer_Scale_Policy_Trigger
@@ -40,6 +44,6 @@ type SoftLayer_Scale_Policy_Trigger_Extended struct {
 	Type *SoftLayer_Scale_Policy_Trigger_Type `json:"type"`
 }
 
-func (softlayer_scale_policy_trigger *SoftLayer_Scale_Policy_Trigger) String() string {
+func (softlayer_scale_policy_trigger *SoftLayer_Scale_Policy_Trigger_Extended) String() string {
 	return "SoftLayer_Scale_Policy_Trigger"
 }

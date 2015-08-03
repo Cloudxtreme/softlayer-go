@@ -7,11 +7,11 @@ package types
 // bandwidth usage and overages within a given date range.
 type SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary_Detail struct {
 
-	// Duration - no documentation
-	Duration float32 `json:"duration"`
-
 	// ViewCount - no documentation
 	ViewCount int `json:"viewCount"`
+
+	// Duration - no documentation
+	Duration float32 `json:"duration"`
 }
 
 func (softlayer_container_network_contentdelivery_bandwidth_summary_detail *SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary_Detail) String() string {

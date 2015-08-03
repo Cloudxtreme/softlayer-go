@@ -6,6 +6,10 @@ package types
 type SoftLayer_Network_Storage_Hub_Swift struct {
 }
 
+func (softlayer_network_storage_hub_swift *SoftLayer_Network_Storage_Hub_Swift) String() string {
+	return "SoftLayer_Network_Storage_Hub_Swift"
+}
+
 // SoftLayer_Network_Storage_Hub_Swift_Extended is SoftLayer_Network_Storage_Hub_Swift with all maskable types.
 type SoftLayer_Network_Storage_Hub_Swift_Extended struct {
 	SoftLayer_Network_Storage_Hub_Swift
@@ -17,6 +21,6 @@ type SoftLayer_Network_Storage_Hub_Swift_Extended struct {
 	StorageNodeCount uint64 `json:"storageNodeCount"`
 }
 
-func (softlayer_network_storage_hub_swift *SoftLayer_Network_Storage_Hub_Swift) String() string {
+func (softlayer_network_storage_hub_swift *SoftLayer_Network_Storage_Hub_Swift_Extended) String() string {
 	return "SoftLayer_Network_Storage_Hub_Swift"
 }

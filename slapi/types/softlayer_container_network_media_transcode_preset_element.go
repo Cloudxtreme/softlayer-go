@@ -5,11 +5,11 @@ package types
 // SoftLayer_Container_Network_Media_Transcode_Preset_Element - no documentation
 type SoftLayer_Container_Network_Media_Transcode_Preset_Element struct {
 
-	// Enabled - The flag that indicates whether an element is enabled or not
-	Enabled bool `json:"enabled"`
-
 	// ExtendedDescription - no documentation
 	ExtendedDescription string `json:"extendedDescription"`
+
+	// MaximumValue - no documentation
+	MaximumValue int `json:"maximumValue"`
 
 	// MinimumValue - no documentation
 	MinimumValue int `json:"minimumValue"`
@@ -17,26 +17,26 @@ type SoftLayer_Container_Network_Media_Transcode_Preset_Element struct {
 	// Name - no documentation
 	Name string `json:"name"`
 
-	// ParentName - no documentation
-	ParentName string `json:"parentName"`
-
 	// Type - no documentation
 	Type string `json:"type"`
+
+	// AdditionalElements - no documentation
+	AdditionalElements []*SoftLayer_Container_Network_Media_Transcode_Preset_Element_Option `json:"additionalElements"`
 
 	// DefaultValue - no documentation
 	DefaultValue string `json:"defaultValue"`
 
-	// Description - no documentation
-	Description string `json:"description"`
-
 	// Hidden - The flag that indicates whether an element is hidden or not
 	Hidden bool `json:"hidden"`
 
-	// MaximumValue - no documentation
-	MaximumValue int `json:"maximumValue"`
+	// ParentName - no documentation
+	ParentName string `json:"parentName"`
 
-	// AdditionalElements - no documentation
-	AdditionalElements []*SoftLayer_Container_Network_Media_Transcode_Preset_Element_Option `json:"additionalElements"`
+	// Description - no documentation
+	Description string `json:"description"`
+
+	// Enabled - The flag that indicates whether an element is enabled or not
+	Enabled bool `json:"enabled"`
 }
 
 func (softlayer_container_network_media_transcode_preset_element *SoftLayer_Container_Network_Media_Transcode_Preset_Element) String() string {

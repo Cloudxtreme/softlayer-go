@@ -9,9 +9,19 @@ package types
 type SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6 struct {
 }
 
+func (softlayer_software_component_hostips_mcafee_epo_version36_hips_version6 *SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6) String() string {
+	return "SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6"
+}
+
 // SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6_Extended is SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6 with all maskable types.
 type SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6_Extended struct {
 	SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6
+
+	// BlockedApplicationEvents - The blocked application events for this software component.
+	BlockedApplicationEvents []*McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_BlockedApplicationEvent `json:"blockedApplicationEvents"`
+
+	// IpsEvents - no documentation
+	IpsEvents []*McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent `json:"ipsEvents"`
 
 	// BlockedApplicationEventCount - A count of the blocked application events for this software
 	// component.
@@ -19,14 +29,8 @@ type SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6_Ext
 
 	// IpsEventCount - A count of the host IPS events for this software component.
 	IpsEventCount uint64 `json:"ipsEventCount"`
-
-	// BlockedApplicationEvents - The blocked application events for this software component.
-	BlockedApplicationEvents []*McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_BlockedApplicationEvent `json:"blockedApplicationEvents"`
-
-	// IpsEvents - no documentation
-	IpsEvents []*McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent `json:"ipsEvents"`
 }
 
-func (softlayer_software_component_hostips_mcafee_epo_version36_hips_version6 *SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6) String() string {
+func (softlayer_software_component_hostips_mcafee_epo_version36_hips_version6 *SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6_Extended) String() string {
 	return "SoftLayer_Software_Component_HostIps_Mcafee_Epo_Version36_Hips_Version6"
 }

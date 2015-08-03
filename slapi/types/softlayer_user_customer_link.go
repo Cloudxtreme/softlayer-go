@@ -9,9 +9,6 @@ import (
 // SoftLayer_User_Customer_Link - <nil>
 type SoftLayer_User_Customer_Link struct {
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
-
 	// DestinationUserAlphanumericId - <nil>
 	DestinationUserAlphanumericId string `json:"destinationUserAlphanumericId"`
 
@@ -26,6 +23,13 @@ type SoftLayer_User_Customer_Link struct {
 
 	// UserId - <nil>
 	UserId int `json:"userId"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate"`
+}
+
+func (softlayer_user_customer_link *SoftLayer_User_Customer_Link) String() string {
+	return "SoftLayer_User_Customer_Link"
 }
 
 // SoftLayer_User_Customer_Link_Extended is SoftLayer_User_Customer_Link with all maskable types.
@@ -39,6 +43,6 @@ type SoftLayer_User_Customer_Link_Extended struct {
 	User *SoftLayer_User_Customer `json:"user"`
 }
 
-func (softlayer_user_customer_link *SoftLayer_User_Customer_Link) String() string {
+func (softlayer_user_customer_link *SoftLayer_User_Customer_Link_Extended) String() string {
 	return "SoftLayer_User_Customer_Link"
 }

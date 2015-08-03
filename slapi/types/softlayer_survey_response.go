@@ -15,6 +15,10 @@ type SoftLayer_Survey_Response struct {
 	SurveyAnswerId int `json:"surveyAnswerId"`
 }
 
+func (softlayer_survey_response *SoftLayer_Survey_Response) String() string {
+	return "SoftLayer_Survey_Response"
+}
+
 // SoftLayer_Survey_Response_Extended is SoftLayer_Survey_Response with all maskable types.
 type SoftLayer_Survey_Response_Extended struct {
 	SoftLayer_Survey_Response
@@ -23,6 +27,6 @@ type SoftLayer_Survey_Response_Extended struct {
 	SurveyAnswer *SoftLayer_Survey_Answer `json:"surveyAnswer"`
 }
 
-func (softlayer_survey_response *SoftLayer_Survey_Response) String() string {
+func (softlayer_survey_response *SoftLayer_Survey_Response_Extended) String() string {
 	return "SoftLayer_Survey_Response"
 }

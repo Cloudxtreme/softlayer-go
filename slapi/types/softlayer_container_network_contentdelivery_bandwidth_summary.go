@@ -11,15 +11,6 @@ import (
 // bandwidth usage and overages within a given date range.
 type SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary struct {
 
-	// EndDateTime - no documentation
-	EndDateTime *time.Time `json:"endDateTime"`
-
-	// FileName - no documentation
-	FileName string `json:"fileName"`
-
-	// MediaType - no documentation
-	MediaType string `json:"mediaType"`
-
 	// StartDateTime - no documentation
 	StartDateTime *time.Time `json:"startDateTime"`
 
@@ -31,6 +22,15 @@ type SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary struct {
 
 	// CdnAccountId - no documentation
 	CdnAccountId int `json:"cdnAccountId"`
+
+	// EndDateTime - no documentation
+	EndDateTime *time.Time `json:"endDateTime"`
+
+	// FileName - no documentation
+	FileName string `json:"fileName"`
+
+	// MediaType - no documentation
+	MediaType string `json:"mediaType"`
 }
 
 func (softlayer_container_network_contentdelivery_bandwidth_summary *SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary) String() string {

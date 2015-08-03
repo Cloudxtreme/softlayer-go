@@ -9,6 +9,10 @@ package types
 type SoftLayer_Billing_Item_Network_Vlan struct {
 }
 
+func (softlayer_billing_item_network_vlan *SoftLayer_Billing_Item_Network_Vlan) String() string {
+	return "SoftLayer_Billing_Item_Network_Vlan"
+}
+
 // SoftLayer_Billing_Item_Network_Vlan_Extended is SoftLayer_Billing_Item_Network_Vlan with all maskable types.
 type SoftLayer_Billing_Item_Network_Vlan_Extended struct {
 	SoftLayer_Billing_Item_Network_Vlan
@@ -17,6 +21,6 @@ type SoftLayer_Billing_Item_Network_Vlan_Extended struct {
 	Resource *SoftLayer_Network_Vlan `json:"resource"`
 }
 
-func (softlayer_billing_item_network_vlan *SoftLayer_Billing_Item_Network_Vlan) String() string {
+func (softlayer_billing_item_network_vlan *SoftLayer_Billing_Item_Network_Vlan_Extended) String() string {
 	return "SoftLayer_Billing_Item_Network_Vlan"
 }

@@ -8,6 +8,9 @@ package types
 // purchased with Microsoft Windows retrieve updates from SoftLayer's servers by default.
 type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem struct {
 
+	// RequiresReboot - Flag indicating that a reboot is needed for this update to be fully applied
+	RequiresReboot bool `json:"requiresReboot"`
+
 	// Description - no documentation
 	Description string `json:"description"`
 
@@ -20,9 +23,6 @@ type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem str
 
 	// Optional - Flag indicating that the update is entirely optionals
 	Optional bool `json:"optional"`
-
-	// RequiresReboot - Flag indicating that a reboot is needed for this update to be fully applied
-	RequiresReboot bool `json:"requiresReboot"`
 }
 
 func (softlayer_container_utility_microsoft_windows_updateservices_updateitem *SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem) String() string {

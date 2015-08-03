@@ -9,15 +9,6 @@ import (
 // SoftLayer_User_Customer_Prospect_Type - <nil>
 type SoftLayer_User_Customer_Prospect_Type struct {
 
-	// Id - <nil>
-	Id int `json:"id"`
-
-	// KeyName - <nil>
-	KeyName string `json:"keyName"`
-
-	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
-
 	// Name - <nil>
 	Name string `json:"name"`
 
@@ -26,6 +17,15 @@ type SoftLayer_User_Customer_Prospect_Type struct {
 
 	// Description - <nil>
 	Description string `json:"description"`
+
+	// Id - <nil>
+	Id int `json:"id"`
+
+	// KeyName - <nil>
+	KeyName string `json:"keyName"`
+
+	// ModifyDate - <nil>
+	ModifyDate *time.Time `json:"modifyDate"`
 }
 
 func (softlayer_user_customer_prospect_type *SoftLayer_User_Customer_Prospect_Type) String() string {

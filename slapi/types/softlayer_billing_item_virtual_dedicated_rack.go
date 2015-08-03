@@ -10,40 +10,13 @@ package types
 type SoftLayer_Billing_Item_Virtual_Dedicated_Rack struct {
 }
 
+func (softlayer_billing_item_virtual_dedicated_rack *SoftLayer_Billing_Item_Virtual_Dedicated_Rack) String() string {
+	return "SoftLayer_Billing_Item_Virtual_Dedicated_Rack"
+}
+
 // SoftLayer_Billing_Item_Virtual_Dedicated_Rack_Extended is SoftLayer_Billing_Item_Virtual_Dedicated_Rack with all maskable types.
 type SoftLayer_Billing_Item_Virtual_Dedicated_Rack_Extended struct {
 	SoftLayer_Billing_Item_Virtual_Dedicated_Rack
-
-	// BillingCyclePrivateUsageOut - The total private network outbound bandwidth for this virtual rack for
-	// the current billing cycle.
-	BillingCyclePrivateUsageOut float64 `json:"billingCyclePrivateUsageOut"`
-
-	// BillingCyclePrivateUsageTotal - The total private network bandwidth for this virtual rack for the
-	// current billing cycle.
-	BillingCyclePrivateUsageTotal uint `json:"billingCyclePrivateUsageTotal"`
-
-	// Resource - The virtual rack that a virtual rack billing item is associated with.
-	Resource *SoftLayer_Network_Bandwidth_Version1_Allotment `json:"resource"`
-
-	// BillingCyclePrivateBandwidthUsageCount - A count of the raw private bandwidth usage data for the
-	// current billing cycle.
-	BillingCyclePrivateBandwidthUsageCount uint64 `json:"billingCyclePrivateBandwidthUsageCount"`
-
-	// BillingCyclePublicBandwidthUsageCount - A count of the raw public bandwidth usage data for the
-	// current billing cycle.
-	BillingCyclePublicBandwidthUsageCount uint64 `json:"billingCyclePublicBandwidthUsageCount"`
-
-	// BillingCyclePublicUsageOut - The total public outbound bandwidth for this virtual rack for the
-	// current billing cycle.
-	BillingCyclePublicUsageOut float64 `json:"billingCyclePublicUsageOut"`
-
-	// BillingCyclePublicUsageTotal - The total public bandwidth for this virtual rack for the current
-	// billing cycle.
-	BillingCyclePublicUsageTotal uint `json:"billingCyclePublicUsageTotal"`
-
-	// BillingCycleBandwidthUsageCount - A count of the raw bandwidth usage data for the current billing
-	// cycle. One object is returned for each network a virtual rack is attached to.
-	BillingCycleBandwidthUsageCount uint64 `json:"billingCycleBandwidthUsageCount"`
 
 	// BillingCycleBandwidthUsage - The raw bandwidth usage data for the current billing cycle. One object
 	// is returned for each network a virtual rack is attached to.
@@ -57,15 +30,46 @@ type SoftLayer_Billing_Item_Virtual_Dedicated_Rack_Extended struct {
 	// the current billing cycle.
 	BillingCyclePrivateUsageIn float64 `json:"billingCyclePrivateUsageIn"`
 
-	// BillingCyclePublicBandwidthUsage - The raw public bandwidth usage data for the current billing
-	// cycle.
-	BillingCyclePublicBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCyclePublicBandwidthUsage"`
+	// BillingCyclePrivateUsageOut - The total private network outbound bandwidth for this virtual rack for
+	// the current billing cycle.
+	BillingCyclePrivateUsageOut float64 `json:"billingCyclePrivateUsageOut"`
+
+	// BillingCyclePrivateUsageTotal - The total private network bandwidth for this virtual rack for the
+	// current billing cycle.
+	BillingCyclePrivateUsageTotal uint `json:"billingCyclePrivateUsageTotal"`
 
 	// BillingCyclePublicUsageIn - The total public inbound bandwidth for this virtual rack for the current
 	// billing cycle.
 	BillingCyclePublicUsageIn float64 `json:"billingCyclePublicUsageIn"`
+
+	// BillingCyclePublicUsageTotal - The total public bandwidth for this virtual rack for the current
+	// billing cycle.
+	BillingCyclePublicUsageTotal uint `json:"billingCyclePublicUsageTotal"`
+
+	// Resource - The virtual rack that a virtual rack billing item is associated with.
+	Resource *SoftLayer_Network_Bandwidth_Version1_Allotment `json:"resource"`
+
+	// BillingCyclePrivateBandwidthUsageCount - A count of the raw private bandwidth usage data for the
+	// current billing cycle.
+	BillingCyclePrivateBandwidthUsageCount uint64 `json:"billingCyclePrivateBandwidthUsageCount"`
+
+	// BillingCyclePublicBandwidthUsageCount - A count of the raw public bandwidth usage data for the
+	// current billing cycle.
+	BillingCyclePublicBandwidthUsageCount uint64 `json:"billingCyclePublicBandwidthUsageCount"`
+
+	// BillingCyclePublicBandwidthUsage - The raw public bandwidth usage data for the current billing
+	// cycle.
+	BillingCyclePublicBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCyclePublicBandwidthUsage"`
+
+	// BillingCyclePublicUsageOut - The total public outbound bandwidth for this virtual rack for the
+	// current billing cycle.
+	BillingCyclePublicUsageOut float64 `json:"billingCyclePublicUsageOut"`
+
+	// BillingCycleBandwidthUsageCount - A count of the raw bandwidth usage data for the current billing
+	// cycle. One object is returned for each network a virtual rack is attached to.
+	BillingCycleBandwidthUsageCount uint64 `json:"billingCycleBandwidthUsageCount"`
 }
 
-func (softlayer_billing_item_virtual_dedicated_rack *SoftLayer_Billing_Item_Virtual_Dedicated_Rack) String() string {
+func (softlayer_billing_item_virtual_dedicated_rack *SoftLayer_Billing_Item_Virtual_Dedicated_Rack_Extended) String() string {
 	return "SoftLayer_Billing_Item_Virtual_Dedicated_Rack"
 }

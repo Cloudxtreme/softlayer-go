@@ -12,6 +12,9 @@ import (
 // generated it, the severity of the event, and the action taken.
 type McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent struct {
 
+	// SeverityText - no documentation
+	SeverityText string `json:"severityText"`
+
 	// IncidentTime - no documentation
 	IncidentTime *time.Time `json:"incidentTime"`
 
@@ -23,9 +26,10 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent struct {
 
 	// RemoteIpAddress - no documentation
 	RemoteIpAddress string `json:"remoteIpAddress"`
+}
 
-	// SeverityText - no documentation
-	SeverityText string `json:"severityText"`
+func (mcafee_epolicy_orchestrator_version36_hips_version7_ipsevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent"
 }
 
 // McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent_Extended is McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent with all maskable types.
@@ -36,6 +40,6 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent_Extended struc
 	Signature *McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_Event_Signature `json:"signature"`
 }
 
-func (mcafee_epolicy_orchestrator_version36_hips_version7_ipsevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent) String() string {
+func (mcafee_epolicy_orchestrator_version36_hips_version7_ipsevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent_Extended) String() string {
 	return "McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent"
 }

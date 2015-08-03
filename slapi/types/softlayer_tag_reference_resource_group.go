@@ -6,6 +6,10 @@ package types
 type SoftLayer_Tag_Reference_Resource_Group struct {
 }
 
+func (softlayer_tag_reference_resource_group *SoftLayer_Tag_Reference_Resource_Group) String() string {
+	return "SoftLayer_Tag_Reference_Resource_Group"
+}
+
 // SoftLayer_Tag_Reference_Resource_Group_Extended is SoftLayer_Tag_Reference_Resource_Group with all maskable types.
 type SoftLayer_Tag_Reference_Resource_Group_Extended struct {
 	SoftLayer_Tag_Reference_Resource_Group
@@ -14,6 +18,6 @@ type SoftLayer_Tag_Reference_Resource_Group_Extended struct {
 	Resource *SoftLayer_Resource_Group `json:"resource"`
 }
 
-func (softlayer_tag_reference_resource_group *SoftLayer_Tag_Reference_Resource_Group) String() string {
+func (softlayer_tag_reference_resource_group *SoftLayer_Tag_Reference_Resource_Group_Extended) String() string {
 	return "SoftLayer_Tag_Reference_Resource_Group"
 }

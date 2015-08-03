@@ -5,12 +5,6 @@ package types
 // SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Account_Overview - <nil>
 type SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Account_Overview struct {
 
-	// CreditsRemain - <nil>
-	CreditsRemain int `json:"creditsRemain"`
-
-	// CreditsUsed - <nil>
-	CreditsUsed int `json:"creditsUsed"`
-
 	// Package - <nil>
 	Package string `json:"package"`
 
@@ -25,6 +19,12 @@ type SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Account_Overvie
 
 	// CreditsOverage - <nil>
 	CreditsOverage int `json:"creditsOverage"`
+
+	// CreditsRemain - <nil>
+	CreditsRemain int `json:"creditsRemain"`
+
+	// CreditsUsed - <nil>
+	CreditsUsed int `json:"creditsUsed"`
 }
 
 func (softlayer_container_network_message_delivery_email_sendgrid_account_overview *SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Account_Overview) String() string {

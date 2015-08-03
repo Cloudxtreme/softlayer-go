@@ -23,6 +23,10 @@ type SoftLayer_Hardware_Benchmark_Certification struct {
 	HardwareId int `json:"hardwareId"`
 }
 
+func (softlayer_hardware_benchmark_certification *SoftLayer_Hardware_Benchmark_Certification) String() string {
+	return "SoftLayer_Hardware_Benchmark_Certification"
+}
+
 // SoftLayer_Hardware_Benchmark_Certification_Extended is SoftLayer_Hardware_Benchmark_Certification with all maskable types.
 type SoftLayer_Hardware_Benchmark_Certification_Extended struct {
 	SoftLayer_Hardware_Benchmark_Certification
@@ -36,6 +40,6 @@ type SoftLayer_Hardware_Benchmark_Certification_Extended struct {
 	Hardware *SoftLayer_Hardware `json:"hardware"`
 }
 
-func (softlayer_hardware_benchmark_certification *SoftLayer_Hardware_Benchmark_Certification) String() string {
+func (softlayer_hardware_benchmark_certification *SoftLayer_Hardware_Benchmark_Certification_Extended) String() string {
 	return "SoftLayer_Hardware_Benchmark_Certification"
 }

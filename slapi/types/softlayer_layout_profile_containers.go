@@ -25,6 +25,10 @@ type SoftLayer_Layout_Profile_Containers struct {
 	ModifyDate *time.Time `json:"modifyDate"`
 }
 
+func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) String() string {
+	return "SoftLayer_Layout_Profile_Containers"
+}
+
 // SoftLayer_Layout_Profile_Containers_Extended is SoftLayer_Layout_Profile_Containers with all maskable types.
 type SoftLayer_Layout_Profile_Containers_Extended struct {
 	SoftLayer_Layout_Profile_Containers
@@ -36,6 +40,6 @@ type SoftLayer_Layout_Profile_Containers_Extended struct {
 	LayoutProfile *SoftLayer_Layout_Profile `json:"layoutProfile"`
 }
 
-func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) String() string {
+func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers_Extended) String() string {
 	return "SoftLayer_Layout_Profile_Containers"
 }

@@ -8,6 +8,10 @@ package types
 type SoftLayer_Billing_Item_Network_Application_Delivery_Controller struct {
 }
 
+func (softlayer_billing_item_network_application_delivery_controller *SoftLayer_Billing_Item_Network_Application_Delivery_Controller) String() string {
+	return "SoftLayer_Billing_Item_Network_Application_Delivery_Controller"
+}
+
 // SoftLayer_Billing_Item_Network_Application_Delivery_Controller_Extended is SoftLayer_Billing_Item_Network_Application_Delivery_Controller with all maskable types.
 type SoftLayer_Billing_Item_Network_Application_Delivery_Controller_Extended struct {
 	SoftLayer_Billing_Item_Network_Application_Delivery_Controller
@@ -19,6 +23,6 @@ type SoftLayer_Billing_Item_Network_Application_Delivery_Controller_Extended str
 	Resource *SoftLayer_Network_Application_Delivery_Controller `json:"resource"`
 }
 
-func (softlayer_billing_item_network_application_delivery_controller *SoftLayer_Billing_Item_Network_Application_Delivery_Controller) String() string {
+func (softlayer_billing_item_network_application_delivery_controller *SoftLayer_Billing_Item_Network_Application_Delivery_Controller_Extended) String() string {
 	return "SoftLayer_Billing_Item_Network_Application_Delivery_Controller"
 }

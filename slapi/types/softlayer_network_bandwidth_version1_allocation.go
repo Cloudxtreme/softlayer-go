@@ -14,6 +14,10 @@ type SoftLayer_Network_Bandwidth_Version1_Allocation struct {
 	Id int `json:"id"`
 }
 
+func (softlayer_network_bandwidth_version1_allocation *SoftLayer_Network_Bandwidth_Version1_Allocation) String() string {
+	return "SoftLayer_Network_Bandwidth_Version1_Allocation"
+}
+
 // SoftLayer_Network_Bandwidth_Version1_Allocation_Extended is SoftLayer_Network_Bandwidth_Version1_Allocation with all maskable types.
 type SoftLayer_Network_Bandwidth_Version1_Allocation_Extended struct {
 	SoftLayer_Network_Bandwidth_Version1_Allocation
@@ -25,6 +29,6 @@ type SoftLayer_Network_Bandwidth_Version1_Allocation_Extended struct {
 	BillingItem *SoftLayer_Billing_Item_Hardware `json:"billingItem"`
 }
 
-func (softlayer_network_bandwidth_version1_allocation *SoftLayer_Network_Bandwidth_Version1_Allocation) String() string {
+func (softlayer_network_bandwidth_version1_allocation *SoftLayer_Network_Bandwidth_Version1_Allocation_Extended) String() string {
 	return "SoftLayer_Network_Bandwidth_Version1_Allocation"
 }

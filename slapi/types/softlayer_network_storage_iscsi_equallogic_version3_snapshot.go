@@ -11,6 +11,10 @@ package types
 type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot struct {
 }
 
+func (softlayer_network_storage_iscsi_equallogic_version3_snapshot *SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot) String() string {
+	return "SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot"
+}
+
 // SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot_Extended is SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot with all maskable types.
 type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot_Extended struct {
 	SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot
@@ -22,6 +26,6 @@ type SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot_Extended struc
 	VolumeName string `json:"volumeName"`
 }
 
-func (softlayer_network_storage_iscsi_equallogic_version3_snapshot *SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot) String() string {
+func (softlayer_network_storage_iscsi_equallogic_version3_snapshot *SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot_Extended) String() string {
 	return "SoftLayer_Network_Storage_Iscsi_EqualLogic_Version3_Snapshot"
 }

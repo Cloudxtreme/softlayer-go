@@ -6,6 +6,10 @@ package types
 type SoftLayer_Hardware_LoadBalancer struct {
 }
 
+func (softlayer_hardware_loadbalancer *SoftLayer_Hardware_LoadBalancer) String() string {
+	return "SoftLayer_Hardware_LoadBalancer"
+}
+
 // SoftLayer_Hardware_LoadBalancer_Extended is SoftLayer_Hardware_LoadBalancer with all maskable types.
 type SoftLayer_Hardware_LoadBalancer_Extended struct {
 	SoftLayer_Hardware_LoadBalancer
@@ -20,6 +24,6 @@ type SoftLayer_Hardware_LoadBalancer_Extended struct {
 	UserCount uint64 `json:"userCount"`
 }
 
-func (softlayer_hardware_loadbalancer *SoftLayer_Hardware_LoadBalancer) String() string {
+func (softlayer_hardware_loadbalancer *SoftLayer_Hardware_LoadBalancer_Extended) String() string {
 	return "SoftLayer_Hardware_LoadBalancer"
 }

@@ -11,6 +11,10 @@ type McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details struct {
 	Name string `json:"name"`
 }
 
+func (mcafee_epolicy_orchestrator_version45_agent_parent_details *McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details) String() string {
+	return "McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details"
+}
+
 // McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details_Extended is McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details with all maskable types.
 type McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details_Extended struct {
 	McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details
@@ -25,6 +29,6 @@ type McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details_Extended struct 
 	PolicyCount uint64 `json:"policyCount"`
 }
 
-func (mcafee_epolicy_orchestrator_version45_agent_parent_details *McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details) String() string {
+func (mcafee_epolicy_orchestrator_version45_agent_parent_details *McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details_Extended) String() string {
 	return "McAfee_Epolicy_Orchestrator_Version45_Agent_Parent_Details"
 }

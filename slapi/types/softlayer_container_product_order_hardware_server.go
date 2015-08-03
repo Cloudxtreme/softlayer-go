@@ -7,6 +7,9 @@ package types
 // order with SoftLayer.
 type SoftLayer_Container_Product_Order_Hardware_Server struct {
 
+	// Tags - no documentation
+	Tags []*SoftLayer_Container_Product_Order_Property `json:"tags"`
+
 	// MonitoringAgentConfigurationTemplateGroupId - Id of the
 	// [[SoftLayer_Monitoring_Agent_Configuration_Template_Group]] to be used with the monitoring package
 	MonitoringAgentConfigurationTemplateGroupId int `json:"monitoringAgentConfigurationTemplateGroupId"`
@@ -14,9 +17,6 @@ type SoftLayer_Container_Product_Order_Hardware_Server struct {
 	// PrivateCloudServerRole - When ordering Virtual Server (Private Node), this variable specifies the
 	// role of the server configuration. (Deprecated)
 	PrivateCloudServerRole string `json:"privateCloudServerRole"`
-
-	// Tags - no documentation
-	Tags []*SoftLayer_Container_Product_Order_Property `json:"tags"`
 }
 
 func (softlayer_container_product_order_hardware_server *SoftLayer_Container_Product_Order_Hardware_Server) String() string {

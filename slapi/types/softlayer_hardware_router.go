@@ -7,16 +7,13 @@ package types
 type SoftLayer_Hardware_Router struct {
 }
 
+func (softlayer_hardware_router *SoftLayer_Hardware_Router) String() string {
+	return "SoftLayer_Hardware_Router"
+}
+
 // SoftLayer_Hardware_Router_Extended is SoftLayer_Hardware_Router with all maskable types.
 type SoftLayer_Hardware_Router_Extended struct {
 	SoftLayer_Hardware_Router
-
-	// SanStorageCapabilityFlag - A flag indicating that a on the router can be assigned to a host that has
-	// SAN disk functionality.
-	SanStorageCapabilityFlag bool `json:"sanStorageCapabilityFlag"`
-
-	// BoundSubnetCount - no documentation
-	BoundSubnetCount uint64 `json:"boundSubnetCount"`
 
 	// BoundSubnets - no documentation
 	BoundSubnets []*SoftLayer_Network_Subnet `json:"boundSubnets"`
@@ -24,8 +21,15 @@ type SoftLayer_Hardware_Router_Extended struct {
 	// LocalDiskStorageCapabilityFlag - A flag indicating that a on the router can be assigned to a host
 	// that has local disk functionality.
 	LocalDiskStorageCapabilityFlag bool `json:"localDiskStorageCapabilityFlag"`
+
+	// SanStorageCapabilityFlag - A flag indicating that a on the router can be assigned to a host that has
+	// SAN disk functionality.
+	SanStorageCapabilityFlag bool `json:"sanStorageCapabilityFlag"`
+
+	// BoundSubnetCount - no documentation
+	BoundSubnetCount uint64 `json:"boundSubnetCount"`
 }
 
-func (softlayer_hardware_router *SoftLayer_Hardware_Router) String() string {
+func (softlayer_hardware_router *SoftLayer_Hardware_Router_Extended) String() string {
 	return "SoftLayer_Hardware_Router"
 }

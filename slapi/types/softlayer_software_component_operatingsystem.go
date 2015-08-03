@@ -11,6 +11,10 @@ import (
 type SoftLayer_Software_Component_OperatingSystem struct {
 }
 
+func (softlayer_software_component_operatingsystem *SoftLayer_Software_Component_OperatingSystem) String() string {
+	return "SoftLayer_Software_Component_OperatingSystem"
+}
+
 // SoftLayer_Software_Component_OperatingSystem_Extended is SoftLayer_Software_Component_OperatingSystem with all maskable types.
 type SoftLayer_Software_Component_OperatingSystem_Extended struct {
 	SoftLayer_Software_Component_OperatingSystem
@@ -34,6 +38,6 @@ type SoftLayer_Software_Component_OperatingSystem_Extended struct {
 	PartitionTemplateCount uint64 `json:"partitionTemplateCount"`
 }
 
-func (softlayer_software_component_operatingsystem *SoftLayer_Software_Component_OperatingSystem) String() string {
+func (softlayer_software_component_operatingsystem *SoftLayer_Software_Component_OperatingSystem_Extended) String() string {
 	return "SoftLayer_Software_Component_OperatingSystem"
 }

@@ -13,9 +13,6 @@ import (
 // profiles.
 type SoftLayer_Configuration_Template_Section_Profile struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
@@ -27,6 +24,13 @@ type SoftLayer_Configuration_Template_Section_Profile struct {
 
 	// AgentId - Internal identifier of a monitoring agent this profile belongs to.
 	AgentId int `json:"agentId"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
+}
+
+func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile) String() string {
+	return "SoftLayer_Configuration_Template_Section_Profile"
 }
 
 // SoftLayer_Configuration_Template_Section_Profile_Extended is SoftLayer_Configuration_Template_Section_Profile with all maskable types.
@@ -40,6 +44,6 @@ type SoftLayer_Configuration_Template_Section_Profile_Extended struct {
 	MonitoringAgent *SoftLayer_Monitoring_Agent `json:"monitoringAgent"`
 }
 
-func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile) String() string {
+func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile_Extended) String() string {
 	return "SoftLayer_Configuration_Template_Section_Profile"
 }

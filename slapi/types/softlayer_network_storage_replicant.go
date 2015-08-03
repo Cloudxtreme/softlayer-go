@@ -6,6 +6,10 @@ package types
 type SoftLayer_Network_Storage_Replicant struct {
 }
 
+func (softlayer_network_storage_replicant *SoftLayer_Network_Storage_Replicant) String() string {
+	return "SoftLayer_Network_Storage_Replicant"
+}
+
 // SoftLayer_Network_Storage_Replicant_Extended is SoftLayer_Network_Storage_Replicant with all maskable types.
 type SoftLayer_Network_Storage_Replicant_Extended struct {
 	SoftLayer_Network_Storage_Replicant
@@ -18,6 +22,6 @@ type SoftLayer_Network_Storage_Replicant_Extended struct {
 	VolumeName string `json:"volumeName"`
 }
 
-func (softlayer_network_storage_replicant *SoftLayer_Network_Storage_Replicant) String() string {
+func (softlayer_network_storage_replicant *SoftLayer_Network_Storage_Replicant_Extended) String() string {
 	return "SoftLayer_Network_Storage_Replicant"
 }

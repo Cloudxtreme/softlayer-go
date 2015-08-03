@@ -8,6 +8,10 @@ package types
 type SoftLayer_Billing_Item_User_Customer_External_Binding struct {
 }
 
+func (softlayer_billing_item_user_customer_external_binding *SoftLayer_Billing_Item_User_Customer_External_Binding) String() string {
+	return "SoftLayer_Billing_Item_User_Customer_External_Binding"
+}
+
 // SoftLayer_Billing_Item_User_Customer_External_Binding_Extended is SoftLayer_Billing_Item_User_Customer_External_Binding with all maskable types.
 type SoftLayer_Billing_Item_User_Customer_External_Binding_Extended struct {
 	SoftLayer_Billing_Item_User_Customer_External_Binding
@@ -16,6 +20,6 @@ type SoftLayer_Billing_Item_User_Customer_External_Binding_Extended struct {
 	Resource *SoftLayer_User_Customer_External_Binding `json:"resource"`
 }
 
-func (softlayer_billing_item_user_customer_external_binding *SoftLayer_Billing_Item_User_Customer_External_Binding) String() string {
+func (softlayer_billing_item_user_customer_external_binding *SoftLayer_Billing_Item_User_Customer_External_Binding_Extended) String() string {
 	return "SoftLayer_Billing_Item_User_Customer_External_Binding"
 }

@@ -19,6 +19,10 @@ type SoftLayer_Resource_Group_Attribute struct {
 	Value string `json:"value"`
 }
 
+func (softlayer_resource_group_attribute *SoftLayer_Resource_Group_Attribute) String() string {
+	return "SoftLayer_Resource_Group_Attribute"
+}
+
 // SoftLayer_Resource_Group_Attribute_Extended is SoftLayer_Resource_Group_Attribute with all maskable types.
 type SoftLayer_Resource_Group_Attribute_Extended struct {
 	SoftLayer_Resource_Group_Attribute
@@ -30,6 +34,6 @@ type SoftLayer_Resource_Group_Attribute_Extended struct {
 	Type *SoftLayer_Resource_Group_Attribute_Type `json:"type"`
 }
 
-func (softlayer_resource_group_attribute *SoftLayer_Resource_Group_Attribute) String() string {
+func (softlayer_resource_group_attribute *SoftLayer_Resource_Group_Attribute_Extended) String() string {
 	return "SoftLayer_Resource_Group_Attribute"
 }

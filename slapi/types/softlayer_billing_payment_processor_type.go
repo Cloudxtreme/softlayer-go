@@ -15,6 +15,10 @@ type SoftLayer_Billing_Payment_Processor_Type struct {
 	Name string `json:"name"`
 }
 
+func (softlayer_billing_payment_processor_type *SoftLayer_Billing_Payment_Processor_Type) String() string {
+	return "SoftLayer_Billing_Payment_Processor_Type"
+}
+
 // SoftLayer_Billing_Payment_Processor_Type_Extended is SoftLayer_Billing_Payment_Processor_Type with all maskable types.
 type SoftLayer_Billing_Payment_Processor_Type_Extended struct {
 	SoftLayer_Billing_Payment_Processor_Type
@@ -26,6 +30,6 @@ type SoftLayer_Billing_Payment_Processor_Type_Extended struct {
 	PaymentProcessors []*SoftLayer_Billing_Payment_Processor `json:"paymentProcessors"`
 }
 
-func (softlayer_billing_payment_processor_type *SoftLayer_Billing_Payment_Processor_Type) String() string {
+func (softlayer_billing_payment_processor_type *SoftLayer_Billing_Payment_Processor_Type_Extended) String() string {
 	return "SoftLayer_Billing_Payment_Processor_Type"
 }

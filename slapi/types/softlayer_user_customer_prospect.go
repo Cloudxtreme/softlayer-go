@@ -6,12 +6,13 @@ package types
 type SoftLayer_User_Customer_Prospect struct {
 }
 
+func (softlayer_user_customer_prospect *SoftLayer_User_Customer_Prospect) String() string {
+	return "SoftLayer_User_Customer_Prospect"
+}
+
 // SoftLayer_User_Customer_Prospect_Extended is SoftLayer_User_Customer_Prospect with all maskable types.
 type SoftLayer_User_Customer_Prospect_Extended struct {
 	SoftLayer_User_Customer_Prospect
-
-	// QuoteCount - no documentation
-	QuoteCount uint64 `json:"quoteCount"`
 
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account"`
@@ -27,8 +28,11 @@ type SoftLayer_User_Customer_Prospect_Extended struct {
 
 	// AssignedEmployeeCount - no documentation
 	AssignedEmployeeCount uint64 `json:"assignedEmployeeCount"`
+
+	// QuoteCount - no documentation
+	QuoteCount uint64 `json:"quoteCount"`
 }
 
-func (softlayer_user_customer_prospect *SoftLayer_User_Customer_Prospect) String() string {
+func (softlayer_user_customer_prospect *SoftLayer_User_Customer_Prospect_Extended) String() string {
 	return "SoftLayer_User_Customer_Prospect"
 }

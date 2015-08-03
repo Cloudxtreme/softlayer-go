@@ -10,6 +10,10 @@ package types
 type SoftLayer_Location_Region_Location struct {
 }
 
+func (softlayer_location_region_location *SoftLayer_Location_Region_Location) String() string {
+	return "SoftLayer_Location_Region_Location"
+}
+
 // SoftLayer_Location_Region_Location_Extended is SoftLayer_Location_Region_Location with all maskable types.
 type SoftLayer_Location_Region_Location_Extended struct {
 	SoftLayer_Location_Region_Location
@@ -32,6 +36,6 @@ type SoftLayer_Location_Region_Location_Extended struct {
 	LocationPackageDetailCount uint64 `json:"locationPackageDetailCount"`
 }
 
-func (softlayer_location_region_location *SoftLayer_Location_Region_Location) String() string {
+func (softlayer_location_region_location *SoftLayer_Location_Region_Location_Extended) String() string {
 	return "SoftLayer_Location_Region_Location"
 }

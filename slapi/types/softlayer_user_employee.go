@@ -9,6 +9,14 @@ package types
 // employee is assigned to the account.
 type SoftLayer_User_Employee struct {
 
+	// Email - A SoftLayer employee's email address. Email addresses are only visible to
+	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
+	Email string `json:"email"`
+
+	// LastName - A SoftLayer employee's last name. Last names are only visible to
+	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
+	LastName string `json:"lastName"`
+
 	// EmployeeDepartmentId - A SoftLayer employee's [[SoftLayer_User_Employee_Department|department]] id.
 	EmployeeDepartmentId int `json:"employeeDepartmentId"`
 
@@ -19,25 +27,24 @@ type SoftLayer_User_Employee struct {
 	// OfficePhone - <nil>
 	OfficePhone string `json:"officePhone"`
 
-	// Email - A SoftLayer employee's email address. Email addresses are only visible to
-	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
-	Email string `json:"email"`
-
 	// DisplayName - <nil>
 	DisplayName string `json:"displayName"`
-
-	// LastName - A SoftLayer employee's last name. Last names are only visible to
-	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
-	LastName string `json:"lastName"`
 
 	// Username - A representation of a SoftLayer employee's username. In all cases this should simply
 	// state "Employee".
 	Username string `json:"username"`
 }
 
+func (softlayer_user_employee *SoftLayer_User_Employee) String() string {
+	return "SoftLayer_User_Employee"
+}
+
 // SoftLayer_User_Employee_Extended is SoftLayer_User_Employee with all maskable types.
 type SoftLayer_User_Employee_Extended struct {
 	SoftLayer_User_Employee
+
+	// MetricTrackingObject - <nil>
+	MetricTrackingObject *SoftLayer_Metric_Tracking_Object `json:"metricTrackingObject"`
 
 	// EmployeeDepartment - The department that a SoftLayer employee belongs to.
 	EmployeeDepartment *SoftLayer_User_Employee_Department `json:"employeeDepartment"`
@@ -45,14 +52,29 @@ type SoftLayer_User_Employee_Extended struct {
 	// LayoutProfiles - <nil>
 	LayoutProfiles []*SoftLayer_Layout_Profile `json:"layoutProfiles"`
 
-	// MetricTrackingObject - <nil>
-	MetricTrackingObject *SoftLayer_Metric_Tracking_Object `json:"metricTrackingObject"`
-
 	// Roles - <nil>
 	Roles []*SoftLayer_User_Permission_Role `json:"roles"`
 
+	// TicketActivities - <nil>
+	TicketActivities []*SoftLayer_Ticket_Activity `json:"ticketActivities"`
+
 	// TicketAttachmentReferences - <nil>
 	TicketAttachmentReferences []*SoftLayer_Ticket_Attachment `json:"ticketAttachmentReferences"`
+
+	// ActionCount - no documentation
+	ActionCount uint64 `json:"actionCount"`
+
+	// Actions - <nil>
+	Actions []*SoftLayer_User_Permission_Action `json:"actions"`
+
+	// ChatTranscript - <nil>
+	ChatTranscript []*SoftLayer_Ticket_Chat `json:"chatTranscript"`
+
+	// TicketAttachmentReferenceCount - no documentation
+	TicketAttachmentReferenceCount uint64 `json:"ticketAttachmentReferenceCount"`
+
+	// ChatTranscriptCount - no documentation
+	ChatTranscriptCount uint64 `json:"chatTranscriptCount"`
 
 	// LayoutProfileCount - no documentation
 	LayoutProfileCount uint64 `json:"layoutProfileCount"`
@@ -62,26 +84,8 @@ type SoftLayer_User_Employee_Extended struct {
 
 	// TicketActivityCount - no documentation
 	TicketActivityCount uint64 `json:"ticketActivityCount"`
-
-	// ChatTranscript - <nil>
-	ChatTranscript []*SoftLayer_Ticket_Chat `json:"chatTranscript"`
-
-	// TicketActivities - <nil>
-	TicketActivities []*SoftLayer_Ticket_Activity `json:"ticketActivities"`
-
-	// Actions - <nil>
-	Actions []*SoftLayer_User_Permission_Action `json:"actions"`
-
-	// ActionCount - no documentation
-	ActionCount uint64 `json:"actionCount"`
-
-	// ChatTranscriptCount - no documentation
-	ChatTranscriptCount uint64 `json:"chatTranscriptCount"`
-
-	// TicketAttachmentReferenceCount - no documentation
-	TicketAttachmentReferenceCount uint64 `json:"ticketAttachmentReferenceCount"`
 }
 
-func (softlayer_user_employee *SoftLayer_User_Employee) String() string {
+func (softlayer_user_employee *SoftLayer_User_Employee_Extended) String() string {
 	return "SoftLayer_User_Employee"
 }

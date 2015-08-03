@@ -9,14 +9,20 @@ import (
 // SoftLayer_User_Permission_Group - <nil>
 type SoftLayer_User_Permission_Group struct {
 
-	// Description - no documentation
-	Description string `json:"description"`
+	// ExpirationDate - no documentation
+	ExpirationDate *time.Time `json:"expirationDate"`
+
+	// AccountId - A permission groups associated [[SoftLayer_Account|customer account]] id.
+	AccountId int `json:"accountId"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate"`
 
 	// TypeId - no documentation
 	TypeId int `json:"typeId"`
 
-	// ExpirationDate - no documentation
-	ExpirationDate *time.Time `json:"expirationDate"`
+	// Id - no documentation
+	Id int `json:"id"`
 
 	// ModifyDate - The date the permission group record was last modified.
 	ModifyDate *time.Time `json:"modifyDate"`
@@ -24,19 +30,26 @@ type SoftLayer_User_Permission_Group struct {
 	// Name - no documentation
 	Name string `json:"name"`
 
-	// AccountId - A permission groups associated [[SoftLayer_Account|customer account]] id.
-	AccountId int `json:"accountId"`
+	// Description - no documentation
+	Description string `json:"description"`
+}
 
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) String() string {
+	return "SoftLayer_User_Permission_Group"
 }
 
 // SoftLayer_User_Permission_Group_Extended is SoftLayer_User_Permission_Group with all maskable types.
 type SoftLayer_User_Permission_Group_Extended struct {
 	SoftLayer_User_Permission_Group
+
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account"`
+
+	// Type - no documentation
+	Type *SoftLayer_User_Permission_Group_Type `json:"type"`
+
+	// ActionCount - no documentation
+	ActionCount uint64 `json:"actionCount"`
 
 	// RoleCount - no documentation
 	RoleCount uint64 `json:"roleCount"`
@@ -44,19 +57,10 @@ type SoftLayer_User_Permission_Group_Extended struct {
 	// Actions - <nil>
 	Actions []*SoftLayer_User_Permission_Action `json:"actions"`
 
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
-
 	// Roles - <nil>
 	Roles []*SoftLayer_User_Permission_Role `json:"roles"`
-
-	// ActionCount - no documentation
-	ActionCount uint64 `json:"actionCount"`
-
-	// Type - no documentation
-	Type *SoftLayer_User_Permission_Group_Type `json:"type"`
 }
 
-func (softlayer_user_permission_group *SoftLayer_User_Permission_Group) String() string {
+func (softlayer_user_permission_group *SoftLayer_User_Permission_Group_Extended) String() string {
 	return "SoftLayer_User_Permission_Group"
 }

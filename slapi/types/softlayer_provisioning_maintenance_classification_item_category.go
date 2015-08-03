@@ -12,6 +12,10 @@ type SoftLayer_Provisioning_Maintenance_Classification_Item_Category struct {
 	MaintenanceClassificationId int `json:"maintenanceClassificationId"`
 }
 
+func (softlayer_provisioning_maintenance_classification_item_category *SoftLayer_Provisioning_Maintenance_Classification_Item_Category) String() string {
+	return "SoftLayer_Provisioning_Maintenance_Classification_Item_Category"
+}
+
 // SoftLayer_Provisioning_Maintenance_Classification_Item_Category_Extended is SoftLayer_Provisioning_Maintenance_Classification_Item_Category with all maskable types.
 type SoftLayer_Provisioning_Maintenance_Classification_Item_Category_Extended struct {
 	SoftLayer_Provisioning_Maintenance_Classification_Item_Category
@@ -20,6 +24,6 @@ type SoftLayer_Provisioning_Maintenance_Classification_Item_Category_Extended st
 	MaintenanceClassification *SoftLayer_Provisioning_Maintenance_Classification `json:"maintenanceClassification"`
 }
 
-func (softlayer_provisioning_maintenance_classification_item_category *SoftLayer_Provisioning_Maintenance_Classification_Item_Category) String() string {
+func (softlayer_provisioning_maintenance_classification_item_category *SoftLayer_Provisioning_Maintenance_Classification_Item_Category_Extended) String() string {
 	return "SoftLayer_Provisioning_Maintenance_Classification_Item_Category"
 }

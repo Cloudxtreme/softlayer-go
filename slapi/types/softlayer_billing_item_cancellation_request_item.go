@@ -31,6 +31,10 @@ type SoftLayer_Billing_Item_Cancellation_Request_Item struct {
 	ServiceReclaimStatusCode string `json:"serviceReclaimStatusCode"`
 }
 
+func (softlayer_billing_item_cancellation_request_item *SoftLayer_Billing_Item_Cancellation_Request_Item) String() string {
+	return "SoftLayer_Billing_Item_Cancellation_Request_Item"
+}
+
 // SoftLayer_Billing_Item_Cancellation_Request_Item_Extended is SoftLayer_Billing_Item_Cancellation_Request_Item with all maskable types.
 type SoftLayer_Billing_Item_Cancellation_Request_Item_Extended struct {
 	SoftLayer_Billing_Item_Cancellation_Request_Item
@@ -42,6 +46,6 @@ type SoftLayer_Billing_Item_Cancellation_Request_Item_Extended struct {
 	CancellationRequest *SoftLayer_Billing_Item_Cancellation_Request `json:"cancellationRequest"`
 }
 
-func (softlayer_billing_item_cancellation_request_item *SoftLayer_Billing_Item_Cancellation_Request_Item) String() string {
+func (softlayer_billing_item_cancellation_request_item *SoftLayer_Billing_Item_Cancellation_Request_Item_Extended) String() string {
 	return "SoftLayer_Billing_Item_Cancellation_Request_Item"
 }

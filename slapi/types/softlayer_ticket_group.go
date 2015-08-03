@@ -9,30 +9,34 @@ package types
 // These subjects help determine which group a standard ticket is assigned to.
 type SoftLayer_Ticket_Group struct {
 
-	// TicketGroupCategoryId - The internal identifier for the category that a ticket group belongs to..
-	TicketGroupCategoryId int `json:"ticketGroupCategoryId"`
-
 	// Id - no documentation
 	Id int `json:"id"`
 
 	// Name - no documentation
 	Name string `json:"name"`
+
+	// TicketGroupCategoryId - The internal identifier for the category that a ticket group belongs to..
+	TicketGroupCategoryId int `json:"ticketGroupCategoryId"`
+}
+
+func (softlayer_ticket_group *SoftLayer_Ticket_Group) String() string {
+	return "SoftLayer_Ticket_Group"
 }
 
 // SoftLayer_Ticket_Group_Extended is SoftLayer_Ticket_Group with all maskable types.
 type SoftLayer_Ticket_Group_Extended struct {
 	SoftLayer_Ticket_Group
 
+	// AssignedBrands - <nil>
+	AssignedBrands []*SoftLayer_Brand `json:"assignedBrands"`
+
 	// Category - no documentation
 	Category *SoftLayer_Ticket_Group_Category `json:"category"`
 
 	// AssignedBrandCount - no documentation
 	AssignedBrandCount uint64 `json:"assignedBrandCount"`
-
-	// AssignedBrands - <nil>
-	AssignedBrands []*SoftLayer_Brand `json:"assignedBrands"`
 }
 
-func (softlayer_ticket_group *SoftLayer_Ticket_Group) String() string {
+func (softlayer_ticket_group *SoftLayer_Ticket_Group_Extended) String() string {
 	return "SoftLayer_Ticket_Group"
 }

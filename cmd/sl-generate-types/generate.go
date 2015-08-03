@@ -25,6 +25,10 @@ import (
 {{ end }}
 }
 
+func ({{ $.Type.Lower }} *{{ $.Type.StructName }}) String() string {
+	return "{{ $.Type.StructName }}"
+}
+
 {{ if .ExtendedProperties }}
 // {{ .Type.StructName }}_Extended is {{ .Type.StructName }} with all maskable types.
 type {{ .Type.StructName }}_Extended struct {
@@ -33,11 +37,11 @@ type {{ .Type.StructName }}_Extended struct {
 {{ godoc $property.Name $property.Doc "\t" }}	{{ upper $property.Name }} {{ if $property.TypeArray }}[]{{ end }}{{ if $property.Type.GetGoType.Pointer }}*{{ end }}{{ typePath $property.Type.GetGoType }}{{ $property.Tag }}
 {{ end }}
 }
-{{ end }}
 
-func ({{ $.Type.Lower }} *{{ $.Type.StructName }}) String() string {
+func ({{ $.Type.Lower }} *{{ $.Type.StructName }}_Extended) String() string {
 	return "{{ $.Type.StructName }}"
 }
+{{ end }}
 `
 
 func main() {

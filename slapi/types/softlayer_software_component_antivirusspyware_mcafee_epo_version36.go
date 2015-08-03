@@ -13,27 +13,13 @@ type SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36 struct {
 	EpoVersion string `json:"epoVersion"`
 }
 
+func (softlayer_software_component_antivirusspyware_mcafee_epo_version36 *SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36) String() string {
+	return "SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36"
+}
+
 // SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36_Extended is SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36 with all maskable types.
 type SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36_Extended struct {
 	SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36
-
-	// LatestAccessProtectionEventCount - no documentation
-	LatestAccessProtectionEventCount uint64 `json:"latestAccessProtectionEventCount"`
-
-	// LatestAntivirusEventCount - no documentation
-	LatestAntivirusEventCount uint64 `json:"latestAntivirusEventCount"`
-
-	// CurrentAntivirusPolicy - no documentation
-	CurrentAntivirusPolicy int `json:"currentAntivirusPolicy"`
-
-	// LatestAccessProtectionEvents - no documentation
-	LatestAccessProtectionEvents []*McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_AccessProtection `json:"latestAccessProtectionEvents"`
-
-	// TransactionStatus - no documentation
-	TransactionStatus string `json:"transactionStatus"`
-
-	// LatestSpywareEventCount - no documentation
-	LatestSpywareEventCount uint64 `json:"latestSpywareEventCount"`
 
 	// AgentDetails - no documentation
 	AgentDetails *McAfee_Epolicy_Orchestrator_Version36_Agent_Details `json:"agentDetails"`
@@ -41,13 +27,31 @@ type SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36_Extended
 	// DataFileVersion - no documentation
 	DataFileVersion *McAfee_Epolicy_Orchestrator_Version36_Product_Properties `json:"dataFileVersion"`
 
+	// LatestSpywareEvents - no documentation
+	LatestSpywareEvents []*McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event `json:"latestSpywareEvents"`
+
+	// TransactionStatus - no documentation
+	TransactionStatus string `json:"transactionStatus"`
+
+	// CurrentAntivirusPolicy - no documentation
+	CurrentAntivirusPolicy int `json:"currentAntivirusPolicy"`
+
+	// LatestAccessProtectionEvents - no documentation
+	LatestAccessProtectionEvents []*McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_AccessProtection `json:"latestAccessProtectionEvents"`
+
 	// LatestAntivirusEvents - no documentation
 	LatestAntivirusEvents []*McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event `json:"latestAntivirusEvents"`
 
-	// LatestSpywareEvents - no documentation
-	LatestSpywareEvents []*McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event `json:"latestSpywareEvents"`
+	// LatestAccessProtectionEventCount - no documentation
+	LatestAccessProtectionEventCount uint64 `json:"latestAccessProtectionEventCount"`
+
+	// LatestAntivirusEventCount - no documentation
+	LatestAntivirusEventCount uint64 `json:"latestAntivirusEventCount"`
+
+	// LatestSpywareEventCount - no documentation
+	LatestSpywareEventCount uint64 `json:"latestSpywareEventCount"`
 }
 
-func (softlayer_software_component_antivirusspyware_mcafee_epo_version36 *SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36) String() string {
+func (softlayer_software_component_antivirusspyware_mcafee_epo_version36 *SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36_Extended) String() string {
 	return "SoftLayer_Software_Component_AntivirusSpyware_Mcafee_Epo_Version36"
 }
