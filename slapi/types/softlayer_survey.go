@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Survey - The SoftLayer_Survey data type contains general information relating to a single
@@ -45,24 +43,4 @@ type SoftLayer_Survey struct {
 
 func (softlayer_survey *SoftLayer_Survey) String() string {
 	return "SoftLayer_Survey"
-}
-
-// GetActiveSurveyByType - <nil>
-func (softlayer_survey *SoftLayer_Survey) GetActiveSurveyByType(ctx *slapi.RequestContext, type_ string) (*SoftLayer_Survey, error) {
-	var returnValue *SoftLayer_Survey
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Survey object whose ID number corresponds to the ID
-// number of the init parameter passed to the SoftLayer_Survey service. You can only retrieve the
-// survey that your portal user has taken.
-func (softlayer_survey *SoftLayer_Survey) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Survey, error) {
-	var returnValue *SoftLayer_Survey
-	return returnValue, nil
-}
-
-// TakeSurvey - no documentation
-func (softlayer_survey *SoftLayer_Survey) TakeSurvey(ctx *slapi.RequestContext, responses []SoftLayer_Survey_Response) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

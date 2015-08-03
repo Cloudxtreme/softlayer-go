@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Subnet_IpAddress_Global - <nil>
 type SoftLayer_Network_Subnet_IpAddress_Global struct {
@@ -44,25 +40,4 @@ type SoftLayer_Network_Subnet_IpAddress_Global struct {
 
 func (softlayer_network_subnet_ipaddress_global *SoftLayer_Network_Subnet_IpAddress_Global) String() string {
 	return "SoftLayer_Network_Subnet_IpAddress_Global"
-}
-
-// GetObject - <nil>
-func (softlayer_network_subnet_ipaddress_global *SoftLayer_Network_Subnet_IpAddress_Global) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Subnet_IpAddress_Global, error) {
-	var returnValue *SoftLayer_Network_Subnet_IpAddress_Global
-	return returnValue, nil
-}
-
-// Route - This function is used to create a new transaction to modify a global IP route. Routes are
-// updated in one to two minutes depending on the number of transactions that are pending for a router.
-func (softlayer_network_subnet_ipaddress_global *SoftLayer_Network_Subnet_IpAddress_Global) Route(ctx *slapi.RequestContext, newEndPointIpAddress string) (*SoftLayer_Provisioning_Version1_Transaction, error) {
-	var returnValue *SoftLayer_Provisioning_Version1_Transaction
-	return returnValue, nil
-}
-
-// Unroute - This function is used to create a new transaction to unroute a global IP address. Routes
-// are updated in one to two minutes depending on the number of transactions that are pending for a
-// router.
-func (softlayer_network_subnet_ipaddress_global *SoftLayer_Network_Subnet_IpAddress_Global) Unroute(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Version1_Transaction, error) {
-	var returnValue *SoftLayer_Provisioning_Version1_Transaction
-	return returnValue, nil
 }

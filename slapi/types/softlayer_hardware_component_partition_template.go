@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Hardware_Component_Partition_Template - The
 // SoftLayer_Hardware_Component_Partition_Template data type contains general information relating to a
@@ -60,13 +56,4 @@ type SoftLayer_Hardware_Component_Partition_Template struct {
 
 func (softlayer_hardware_component_partition_template *SoftLayer_Hardware_Component_Partition_Template) String() string {
 	return "SoftLayer_Hardware_Component_Partition_Template"
-}
-
-// GetObject - getObject retrieves the SoftLayer_Hardware_Component_Partition_Template object whose ID
-// number corresponds to the ID number of the init parameter passed to the
-// SoftLayer_Hardware_Component_Partition_Template service. You can only retrieve the partition
-// templates that your account created or the templates predefined by SoftLayer.
-func (softlayer_hardware_component_partition_template *SoftLayer_Hardware_Component_Partition_Template) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Hardware_Component_Partition_Template, error) {
-	var returnValue *SoftLayer_Hardware_Component_Partition_Template
-	return returnValue, nil
 }

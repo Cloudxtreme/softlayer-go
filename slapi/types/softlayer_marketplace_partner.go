@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Marketplace_Partner - <nil>
 type SoftLayer_Marketplace_Partner struct {
@@ -87,40 +83,4 @@ type SoftLayer_Marketplace_Partner struct {
 
 func (softlayer_marketplace_partner *SoftLayer_Marketplace_Partner) String() string {
 	return "SoftLayer_Marketplace_Partner"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_marketplace_partner *SoftLayer_Marketplace_Partner) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Marketplace_Partner, error) {
-	var returnValue []*SoftLayer_Marketplace_Partner
-	return returnValue, nil
-}
-
-// GetAllPublishedPartners - <nil>
-func (softlayer_marketplace_partner *SoftLayer_Marketplace_Partner) GetAllPublishedPartners(ctx *slapi.RequestContext, searchTerm string) ([]*SoftLayer_Marketplace_Partner, error) {
-	var returnValue []*SoftLayer_Marketplace_Partner
-	return returnValue, nil
-}
-
-// GetFeaturedPartners - <nil>
-func (softlayer_marketplace_partner *SoftLayer_Marketplace_Partner) GetFeaturedPartners(ctx *slapi.RequestContext, non bool) ([]*SoftLayer_Marketplace_Partner, error) {
-	var returnValue []*SoftLayer_Marketplace_Partner
-	return returnValue, nil
-}
-
-// GetFile - <nil>
-func (softlayer_marketplace_partner *SoftLayer_Marketplace_Partner) GetFile(ctx *slapi.RequestContext, name string) (*SoftLayer_Marketplace_Partner_File, error) {
-	var returnValue *SoftLayer_Marketplace_Partner_File
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_marketplace_partner *SoftLayer_Marketplace_Partner) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Marketplace_Partner, error) {
-	var returnValue *SoftLayer_Marketplace_Partner
-	return returnValue, nil
-}
-
-// GetPartnerByUrlIdentifier - <nil>
-func (softlayer_marketplace_partner *SoftLayer_Marketplace_Partner) GetPartnerByUrlIdentifier(ctx *slapi.RequestContext, urlIdentifier string) (*SoftLayer_Marketplace_Partner, error) {
-	var returnValue *SoftLayer_Marketplace_Partner
-	return returnValue, nil
 }

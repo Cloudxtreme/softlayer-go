@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Product_Package_Server - The SoftLayer_Product_Package_Server data type contains
 // summarized information for bare metal servers regarding pricing, processor stats, and feature sets.
@@ -129,16 +125,4 @@ type SoftLayer_Product_Package_Server struct {
 
 func (softlayer_product_package_server *SoftLayer_Product_Package_Server) String() string {
 	return "SoftLayer_Product_Package_Server"
-}
-
-// GetAllObjects - no documentation
-func (softlayer_product_package_server *SoftLayer_Product_Package_Server) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package_Server, error) {
-	var returnValue []*SoftLayer_Product_Package_Server
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_product_package_server *SoftLayer_Product_Package_Server) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Package_Server, error) {
-	var returnValue *SoftLayer_Product_Package_Server
-	return returnValue, nil
 }

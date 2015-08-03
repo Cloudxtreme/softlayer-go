@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Message_Queue_Status - The SoftLayer_Network_Message_Queue_Status data type
 // contains general information relating to Message Queue account status.
@@ -22,10 +18,4 @@ type SoftLayer_Network_Message_Queue_Status struct {
 
 func (softlayer_network_message_queue_status *SoftLayer_Network_Message_Queue_Status) String() string {
 	return "SoftLayer_Network_Message_Queue_Status"
-}
-
-// GetObject - <nil>
-func (softlayer_network_message_queue_status *SoftLayer_Network_Message_Queue_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Message_Queue_Status, error) {
-	var returnValue *SoftLayer_Network_Message_Queue_Status
-	return returnValue, nil
 }

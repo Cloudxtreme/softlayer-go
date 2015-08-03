@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Layout_Profile_Preference - The SoftLayer_Layout_Profile_Preference contains definitions
@@ -51,10 +49,4 @@ type SoftLayer_Layout_Profile_Preference struct {
 
 func (softlayer_layout_profile_preference *SoftLayer_Layout_Profile_Preference) String() string {
 	return "SoftLayer_Layout_Profile_Preference"
-}
-
-// GetObject - <nil>
-func (softlayer_layout_profile_preference *SoftLayer_Layout_Profile_Preference) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Layout_Profile_Preference, error) {
-	var returnValue *SoftLayer_Layout_Profile_Preference
-	return returnValue, nil
 }

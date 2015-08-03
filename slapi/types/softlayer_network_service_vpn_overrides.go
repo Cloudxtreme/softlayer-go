@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Service_Vpn_Overrides - The SoftLayer_Network_Service_Vpn_Overrides data type
 // contains information relating user ids to subnet ids when VPN access is manually configured. It is
@@ -29,29 +25,4 @@ type SoftLayer_Network_Service_Vpn_Overrides struct {
 
 func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides) String() string {
 	return "SoftLayer_Network_Service_Vpn_Overrides"
-}
-
-// CreateObjects - no documentation
-func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Network_Service_Vpn_Overrides) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// DeleteObject - Use this method to delete a single SoftLayer portal VPN user subnet override.
-func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// DeleteObjects - Use this method to delete a collection of SoftLayer portal VPN user subnet
-// overrides.
-func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides) DeleteObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Network_Service_Vpn_Overrides) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Service_Vpn_Overrides, error) {
-	var returnValue *SoftLayer_Network_Service_Vpn_Overrides
-	return returnValue, nil
 }

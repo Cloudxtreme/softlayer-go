@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Storage_Allowed_Host - <nil>
 type SoftLayer_Network_Storage_Allowed_Host struct {
@@ -54,35 +50,4 @@ type SoftLayer_Network_Storage_Allowed_Host struct {
 
 func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) String() string {
 	return "SoftLayer_Network_Storage_Allowed_Host"
-}
-
-// CreateObject - <nil>
-func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Allowed_Host, error) {
-	var returnValue *SoftLayer_Network_Storage_Allowed_Host
-	return returnValue, nil
-}
-
-// SetCredentialPassword - Use this method to modify the credential password for a
-// SoftLayer_Network_Storage_Allowed_Host object.
-func (softlayer_network_storage_allowed_host *SoftLayer_Network_Storage_Allowed_Host) SetCredentialPassword(ctx *slapi.RequestContext, password string) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

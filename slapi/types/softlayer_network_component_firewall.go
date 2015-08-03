@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Component_Firewall - The SoftLayer_Network_Component_Firewall data type contains
 // general information relating to a single SoftLayer network component firewall. This is the object
@@ -67,12 +63,4 @@ type SoftLayer_Network_Component_Firewall struct {
 
 func (softlayer_network_component_firewall *SoftLayer_Network_Component_Firewall) String() string {
 	return "SoftLayer_Network_Component_Firewall"
-}
-
-// GetObject - getObject returns a
-// SoftLayer_Network_Firewall_Module_Context_Interface_AccessControlList_Network_Component object. You
-// can only get objects for servers attached to your account that have a network firewall enabled.
-func (softlayer_network_component_firewall *SoftLayer_Network_Component_Firewall) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Component_Firewall, error) {
-	var returnValue *SoftLayer_Network_Component_Firewall
-	return returnValue, nil
 }

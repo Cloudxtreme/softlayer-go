@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Hardware_Component_Model - The SoftLayer_Hardware_Component_Model data type contains
 // general information relating to a single SoftLayer component model. A component model represents a
@@ -102,10 +98,4 @@ type SoftLayer_Hardware_Component_Model struct {
 
 func (softlayer_hardware_component_model *SoftLayer_Hardware_Component_Model) String() string {
 	return "SoftLayer_Hardware_Component_Model"
-}
-
-// GetObject - getObject retrieves the SoftLayer_Hardware_Component_Model object.
-func (softlayer_hardware_component_model *SoftLayer_Hardware_Component_Model) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Hardware_Component_Model, error) {
-	var returnValue *SoftLayer_Hardware_Component_Model
-	return returnValue, nil
 }

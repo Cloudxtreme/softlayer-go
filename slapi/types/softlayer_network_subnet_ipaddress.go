@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Subnet_IpAddress - The SoftLayer_Network_Subnet_IpAddress data type contains
 // general information relating to a single SoftLayer IPv4 address.
@@ -179,37 +175,4 @@ type SoftLayer_Network_Subnet_IpAddress struct {
 
 func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) String() string {
 	return "SoftLayer_Network_Subnet_IpAddress"
-}
-
-// EditObject - no documentation
-func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Subnet_IpAddress) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObjects - This function is used to edit multiple objects at the same time.
-func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Network_Subnet_IpAddress) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// FindByIpv4Address - no documentation
-func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) FindByIpv4Address(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Network_Subnet_IpAddress, error) {
-	var returnValue *SoftLayer_Network_Subnet_IpAddress
-	return returnValue, nil
-}
-
-// GetByIpAddress - no documentation
-func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) GetByIpAddress(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Network_Subnet_IpAddress, error) {
-	var returnValue *SoftLayer_Network_Subnet_IpAddress
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Network_Subnet_IpAddress object whose ID number
-// corresponds to the ID number of the init parameter passed to the SoftLayer_Network_Subnet_IpAddress
-// service. You can only retrieve the IP address whose subnet is associated with a that is associated
-// with the account that your portal user is assigned to.
-func (softlayer_network_subnet_ipaddress *SoftLayer_Network_Subnet_IpAddress) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Subnet_IpAddress, error) {
-	var returnValue *SoftLayer_Network_Subnet_IpAddress
-	return returnValue, nil
 }

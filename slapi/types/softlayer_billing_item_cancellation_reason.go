@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Billing_Item_Cancellation_Reason - The SoftLayer_Billing_Item_Cancellation_Reason data
 // type contains cancellation reasons.
@@ -38,17 +34,4 @@ type SoftLayer_Billing_Item_Cancellation_Reason struct {
 
 func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) String() string {
 	return "SoftLayer_Billing_Item_Cancellation_Reason"
-}
-
-// GetAllCancellationReasons - getAllCancellationReasons() retrieves a list of all cancellation reasons
-// that a server/service may be assigned to.
-func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) GetAllCancellationReasons(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Item_Cancellation_Reason, error) {
-	var returnValue []*SoftLayer_Billing_Item_Cancellation_Reason
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Item_Cancellation_Reason, error) {
-	var returnValue *SoftLayer_Billing_Item_Cancellation_Reason
-	return returnValue, nil
 }

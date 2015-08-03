@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Note_Type - <nil>
@@ -38,34 +36,4 @@ type SoftLayer_Account_Note_Type struct {
 
 func (softlayer_account_note_type *SoftLayer_Account_Note_Type) String() string {
 	return "SoftLayer_Account_Note_Type"
-}
-
-// CreateObject - <nil>
-func (softlayer_account_note_type *SoftLayer_Account_Note_Type) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Note_Type) (*SoftLayer_Account_Note_Type, error) {
-	var returnValue *SoftLayer_Account_Note_Type
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_account_note_type *SoftLayer_Account_Note_Type) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_account_note_type *SoftLayer_Account_Note_Type) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Note_Type) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetAllObjects - <nil>
-func (softlayer_account_note_type *SoftLayer_Account_Note_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Note_Type, error) {
-	var returnValue []*SoftLayer_Account_Note_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_account_note_type *SoftLayer_Account_Note_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Note_Type, error) {
-	var returnValue *SoftLayer_Account_Note_Type
-	return returnValue, nil
 }

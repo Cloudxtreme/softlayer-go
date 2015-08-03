@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Component - Every piece of hardware running in SoftLayer's datacenters connected
@@ -186,61 +184,4 @@ type SoftLayer_Network_Component struct {
 
 func (softlayer_network_component *SoftLayer_Network_Component) String() string {
 	return "SoftLayer_Network_Component"
-}
-
-// AddNetworkVlanTrunks - Add VLANs as trunks to a network component. The VLANs given must be assigned
-// to your account, and on the router to which this network component is connected. The current native
-// (networkVlanId/networkVlan) cannot be added as a trunk. This method should be called on a network
-// component attached directly to customer assigned hardware, though all trunking operations will occur
-// on the uplinkComponent. A current list of trunks for a network component on a customer server can be
-// found at 'uplinkComponent->networkVlanTrunks'. This method returns an array of
-// SoftLayer_Network_Vlans which were added as trunks. Any requested trunks which are already trunked
-// will be silently ignored, and will not be returned. Configuration of network hardware is done
-// asynchronously, do not depend on the return of this call as an indication that the newly trunked
-// VLANs will be accessible.
-func (softlayer_network_component *SoftLayer_Network_Component) AddNetworkVlanTrunks(ctx *slapi.RequestContext, networkVlans []SoftLayer_Network_Vlan) ([]*SoftLayer_Network_Vlan, error) {
-	var returnValue []*SoftLayer_Network_Vlan
-	return returnValue, nil
-}
-
-// ClearNetworkVlanTrunks - This method will remove all VLANs trunked to this network component. The
-// native (networkVlanId/networkVlan) will remain active, and cannot be removed via the Returns a list
-// of SoftLayer_Network_Vlan objects for which the trunks were removed.
-func (softlayer_network_component *SoftLayer_Network_Component) ClearNetworkVlanTrunks(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Vlan, error) {
-	var returnValue []*SoftLayer_Network_Vlan
-	return returnValue, nil
-}
-
-// GetCustomBandwidthDataByDate - no documentation
-func (softlayer_network_component *SoftLayer_Network_Component) GetCustomBandwidthDataByDate(ctx *slapi.RequestContext, graphData SoftLayer_Container_Graph) (*SoftLayer_Container_Graph, error) {
-	var returnValue *SoftLayer_Container_Graph
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_component *SoftLayer_Network_Component) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Component, error) {
-	var returnValue *SoftLayer_Network_Component
-	return returnValue, nil
-}
-
-// GetPortStatistics - Retrieve various network statistics. The network statistics are retrieved from
-// the network device using snmpget. Below is a list of statistics retrieved: * Administrative Status *
-// Operational Status * Maximum Transmission Unit * In Octets * Out Octets * In Unicast Packets * Out
-// Unicast Packets * In Multicast Packets * Out Multicast Packets
-func (softlayer_network_component *SoftLayer_Network_Component) GetPortStatistics(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Port_Statistic, error) {
-	var returnValue *SoftLayer_Container_Network_Port_Statistic
-	return returnValue, nil
-}
-
-// RemoveNetworkVlanTrunks - Remove one or more VLANs currently attached to the uplinkComponent of this
-// networkComponent. The VLANs given must be assigned to your account, and on the router the network
-// component is connected to. If any VLANs not currently trunked are given, they will be silently
-// ignored. This method should be called on a network component attached directly to customer assigned
-// hardware, though all trunking operations will occur on the uplinkComponent. A current list of trunks
-// for a network component on a customer server can be found at 'uplinkComponent->networkVlanTrunks'.
-// Configuration of network hardware is done asynchronously, do not depend on the return of this call
-// as an indication that the removed VLANs will be inaccessible.
-func (softlayer_network_component *SoftLayer_Network_Component) RemoveNetworkVlanTrunks(ctx *slapi.RequestContext, networkVlans []SoftLayer_Network_Vlan) ([]*SoftLayer_Network_Vlan, error) {
-	var returnValue []*SoftLayer_Network_Vlan
-	return returnValue, nil
 }

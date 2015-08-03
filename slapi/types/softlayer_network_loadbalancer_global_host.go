@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_LoadBalancer_Global_Host - The SoftLayer_Network_LoadBalancer_Global_Host data
 // type represents a single host that belongs to a global load balancer account's load balancing pool.
@@ -59,19 +55,4 @@ type SoftLayer_Network_LoadBalancer_Global_Host struct {
 
 func (softlayer_network_loadbalancer_global_host *SoftLayer_Network_LoadBalancer_Global_Host) String() string {
 	return "SoftLayer_Network_LoadBalancer_Global_Host"
-}
-
-// DeleteObject - Remove a host from the load balancing pool of a global load balancer account.
-func (softlayer_network_loadbalancer_global_host *SoftLayer_Network_LoadBalancer_Global_Host) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Network_LoadBalancer_Global_Host object whose ID
-// number corresponds to the ID number of the init paramater passed to the
-// SoftLayer_Network_LoadBalancer_Global_Host service. You can only retrieve a global load balancer
-// host that is assigned to your SoftLayer global load balancer account.
-func (softlayer_network_loadbalancer_global_host *SoftLayer_Network_LoadBalancer_Global_Host) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_LoadBalancer_Global_Host, error) {
-	var returnValue *SoftLayer_Network_LoadBalancer_Global_Host
-	return returnValue, nil
 }

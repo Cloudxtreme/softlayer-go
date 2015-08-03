@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Notification_User_Subscriber_Preference - Preferences are settings that can be modified to
 // change the behavior of the subscription. For example, modify the limit preference to only receive
@@ -36,22 +32,4 @@ type SoftLayer_Notification_User_Subscriber_Preference struct {
 
 func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) String() string {
 	return "SoftLayer_Notification_User_Subscriber_Preference"
-}
-
-// CreateObject - Use the method to create a new notification preference for a subscriber
-func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Notification_User_Subscriber_Preference) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObjects - <nil>
-func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Notification_User_Subscriber_Preference) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_User_Subscriber_Preference, error) {
-	var returnValue *SoftLayer_Notification_User_Subscriber_Preference
-	return returnValue, nil
 }

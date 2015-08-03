@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Note - <nil>
@@ -50,28 +48,4 @@ type SoftLayer_Account_Note struct {
 
 func (softlayer_account_note *SoftLayer_Account_Note) String() string {
 	return "SoftLayer_Account_Note"
-}
-
-// CreateObject - <nil>
-func (softlayer_account_note *SoftLayer_Account_Note) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Note) (*SoftLayer_Account_Note, error) {
-	var returnValue *SoftLayer_Account_Note
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_account_note *SoftLayer_Account_Note) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_account_note *SoftLayer_Account_Note) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Note) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_account_note *SoftLayer_Account_Note) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Note, error) {
-	var returnValue *SoftLayer_Account_Note
-	return returnValue, nil
 }

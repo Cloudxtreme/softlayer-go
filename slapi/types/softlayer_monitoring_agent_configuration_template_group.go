@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Monitoring_Agent_Configuration_Template_Group - The
@@ -55,48 +53,4 @@ type SoftLayer_Monitoring_Agent_Configuration_Template_Group struct {
 
 func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) String() string {
 	return "SoftLayer_Monitoring_Agent_Configuration_Template_Group"
-}
-
-// CreateObject - This method creates a SoftLayer_Monitoring_Agent_Configuration_Template_Group using
-// the values provided in the template object. The template objects accountId will be overridden to use
-// the active user's accountId as it shows on their associated SoftLayer_User_Customer object.
-func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Monitoring_Agent_Configuration_Template_Group) (*SoftLayer_Monitoring_Agent_Configuration_Template_Group, error) {
-	var returnValue *SoftLayer_Monitoring_Agent_Configuration_Template_Group
-	return returnValue, nil
-}
-
-// DeleteObject - no documentation
-func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - This method edits an existing SoftLayer_Monitoring_Agent_Configuration_Template_Group
-// using the values passed in the $object parameter. The $object parameter should use the same
-// structure as a SoftLayer_Monitoring_Agent_Configuration_Template_Group object.
-func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Monitoring_Agent_Configuration_Template_Group) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetAllObjects - <nil>
-func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Monitoring_Agent_Configuration_Template_Group, error) {
-	var returnValue []*SoftLayer_Monitoring_Agent_Configuration_Template_Group
-	return returnValue, nil
-}
-
-// GetConfigurationGroups - This method retrieves an array of
-// SoftLayer_Monitoring_Agent_Configuration_Template_Group objects that are available to the active
-// user's account. The packageId parameter is not currently used.
-func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) GetConfigurationGroups(ctx *slapi.RequestContext, packageId int) ([]*SoftLayer_Monitoring_Agent_Configuration_Template_Group, error) {
-	var returnValue []*SoftLayer_Monitoring_Agent_Configuration_Template_Group
-	return returnValue, nil
-}
-
-// GetObject - This method retrieves a monitoring agent configuration template group whose identifier
-// corresponds to the value provided in the initialization parameter passed to the
-// SoftLayer_Monitoring_Agent_Configuration_Template_Group service.
-func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Monitoring_Agent_Configuration_Template_Group, error) {
-	var returnValue *SoftLayer_Monitoring_Agent_Configuration_Template_Group
-	return returnValue, nil
 }

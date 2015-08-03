@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Affiliation - This service allows for a unique identifier to be associated to an
@@ -33,35 +31,4 @@ type SoftLayer_Account_Affiliation struct {
 
 func (softlayer_account_affiliation *SoftLayer_Account_Affiliation) String() string {
 	return "SoftLayer_Account_Affiliation"
-}
-
-// CreateObject - Create a new affiliation to associate with an existing account.
-func (softlayer_account_affiliation *SoftLayer_Account_Affiliation) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Affiliation) (*SoftLayer_Account_Affiliation, error) {
-	var returnValue *SoftLayer_Account_Affiliation
-	return returnValue, nil
-}
-
-// DeleteObject - deleteObject permanently removes an account affiliation
-func (softlayer_account_affiliation *SoftLayer_Account_Affiliation) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - Edit an affiliation that is associated to an existing account.
-func (softlayer_account_affiliation *SoftLayer_Account_Affiliation) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Affiliation) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetAccountAffiliationsByAffiliateId - Get account affiliation information associated with affiliate
-// id.
-func (softlayer_account_affiliation *SoftLayer_Account_Affiliation) GetAccountAffiliationsByAffiliateId(ctx *slapi.RequestContext, affiliateId string) ([]*SoftLayer_Account_Affiliation, error) {
-	var returnValue []*SoftLayer_Account_Affiliation
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_account_affiliation *SoftLayer_Account_Affiliation) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Affiliation, error) {
-	var returnValue *SoftLayer_Account_Affiliation
-	return returnValue, nil
 }

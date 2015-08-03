@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Vlan_Type - <nil>
 type SoftLayer_Network_Vlan_Type struct {
@@ -24,10 +20,4 @@ type SoftLayer_Network_Vlan_Type struct {
 
 func (softlayer_network_vlan_type *SoftLayer_Network_Vlan_Type) String() string {
 	return "SoftLayer_Network_Vlan_Type"
-}
-
-// GetObject - <nil>
-func (softlayer_network_vlan_type *SoftLayer_Network_Vlan_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Vlan_Type, error) {
-	var returnValue *SoftLayer_Network_Vlan_Type
-	return returnValue, nil
 }

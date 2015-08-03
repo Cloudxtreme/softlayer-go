@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Product_Package_Preset - Package presets are used to simplify ordering by eliminating the
 // need for price ids when submitting orders. Orders submitted without prices or a preset id defined
@@ -97,10 +93,4 @@ type SoftLayer_Product_Package_Preset struct {
 
 func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset) String() string {
 	return "SoftLayer_Product_Package_Preset"
-}
-
-// GetObject - <nil>
-func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Package_Preset, error) {
-	var returnValue *SoftLayer_Product_Package_Preset
-	return returnValue, nil
 }

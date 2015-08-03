@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Shipment_Item - The SoftLayer_Account_Shipment_Item data type contains information
@@ -43,17 +41,4 @@ type SoftLayer_Account_Shipment_Item struct {
 
 func (softlayer_account_shipment_item *SoftLayer_Account_Shipment_Item) String() string {
 	return "SoftLayer_Account_Shipment_Item"
-}
-
-// EditObject - Edit the properties of a shipment record by passing in a modified instance of a
-// SoftLayer_Account_Shipment_Item object.
-func (softlayer_account_shipment_item *SoftLayer_Account_Shipment_Item) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Shipment_Item) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_account_shipment_item *SoftLayer_Account_Shipment_Item) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Shipment_Item, error) {
-	var returnValue *SoftLayer_Account_Shipment_Item
-	return returnValue, nil
 }

@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Auxiliary_Notification_Emergency - A SoftLayer_Auxiliary_Notification_Emergency data
@@ -52,25 +50,4 @@ type SoftLayer_Auxiliary_Notification_Emergency struct {
 
 func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency) String() string {
 	return "SoftLayer_Auxiliary_Notification_Emergency"
-}
-
-// GetAllObjects - Retrieve an array of SoftLayer_Auxiliary_Notification_Emergency data types, which
-// contain all notification events regardless of status.
-func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Auxiliary_Notification_Emergency, error) {
-	var returnValue []*SoftLayer_Auxiliary_Notification_Emergency
-	return returnValue, nil
-}
-
-// GetCurrentNotifications - Retrieve an array of SoftLayer_Auxiliary_Notification_Emergency data
-// types, which contain all current notification events.
-func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency) GetCurrentNotifications(ctx *slapi.RequestContext) ([]*SoftLayer_Auxiliary_Notification_Emergency, error) {
-	var returnValue []*SoftLayer_Auxiliary_Notification_Emergency
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Auxiliary_Notification_Emergency object, it can be
-// used to check for current notifications being broadcast by SoftLayer.
-func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Auxiliary_Notification_Emergency, error) {
-	var returnValue *SoftLayer_Auxiliary_Notification_Emergency
-	return returnValue, nil
 }

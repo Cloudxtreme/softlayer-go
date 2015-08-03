@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer - <nil>
 type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer struct {
@@ -52,29 +48,4 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServe
 
 func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) String() string {
 	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer"
-}
-
-// DeleteObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer, error) {
-	var returnValue *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer
-	return returnValue, nil
-}
-
-// StartSsl - Start SSL acceleration on all SSL virtual services (those with a type of This action
-// should be taken only after configuring an SSL certificate for the virtual IP.
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) StartSsl(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// StopSsl - Stop SSL acceleration on all SSL virtual services (those with a type of
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualserver *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer) StopSsl(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

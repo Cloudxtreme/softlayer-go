@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_User_Customer_Status - Each SoftLayer portal account is assigned a status code that
 // determines how it's treated in the customer portal. This status is reflected in the
@@ -26,18 +22,4 @@ type SoftLayer_User_Customer_Status struct {
 
 func (softlayer_user_customer_status *SoftLayer_User_Customer_Status) String() string {
 	return "SoftLayer_User_Customer_Status"
-}
-
-// GetAllObjects - no documentation
-func (softlayer_user_customer_status *SoftLayer_User_Customer_Status) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_User_Customer_Status, error) {
-	var returnValue []*SoftLayer_User_Customer_Status
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_User_Customer_Status object whose ID number
-// corresponds to the ID number of the init parameter passed to the SoftLayer_User_Customer_Status
-// service.
-func (softlayer_user_customer_status *SoftLayer_User_Customer_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_Status, error) {
-	var returnValue *SoftLayer_User_Customer_Status
-	return returnValue, nil
 }

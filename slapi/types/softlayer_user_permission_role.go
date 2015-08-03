@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Permission_Role - <nil>
@@ -61,48 +59,4 @@ type SoftLayer_User_Permission_Role struct {
 
 func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) String() string {
 	return "SoftLayer_User_Permission_Role"
-}
-
-// AddUser - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) AddUser(ctx *slapi.RequestContext, user SoftLayer_User_Customer) error {
-	return nil
-}
-
-// CreateObject - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Permission_Role) (*SoftLayer_User_Permission_Role, error) {
-	var returnValue *SoftLayer_User_Permission_Role
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Permission_Role) (*SoftLayer_User_Permission_Role, error) {
-	var returnValue *SoftLayer_User_Permission_Role
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Permission_Role, error) {
-	var returnValue *SoftLayer_User_Permission_Role
-	return returnValue, nil
-}
-
-// LinkGroup - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) LinkGroup(ctx *slapi.RequestContext, group SoftLayer_User_Permission_Group) error {
-	return nil
-}
-
-// RemoveUser - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) RemoveUser(ctx *slapi.RequestContext, user SoftLayer_User_Customer) error {
-	return nil
-}
-
-// UnlinkGroup - <nil>
-func (softlayer_user_permission_role *SoftLayer_User_Permission_Role) UnlinkGroup(ctx *slapi.RequestContext, group SoftLayer_User_Permission_Group) error {
-	return nil
 }

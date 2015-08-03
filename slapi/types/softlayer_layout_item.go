@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Layout_Item - The SoftLayer_Layout_Item contains definitions for default layout items
 type SoftLayer_Layout_Item struct {
@@ -33,10 +29,4 @@ type SoftLayer_Layout_Item struct {
 
 func (softlayer_layout_item *SoftLayer_Layout_Item) String() string {
 	return "SoftLayer_Layout_Item"
-}
-
-// GetObject - <nil>
-func (softlayer_layout_item *SoftLayer_Layout_Item) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Layout_Item, error) {
-	var returnValue *SoftLayer_Layout_Item
-	return returnValue, nil
 }

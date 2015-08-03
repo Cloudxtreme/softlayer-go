@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Section_Definition_Group - Configuration definition group gives you
@@ -33,17 +31,4 @@ type SoftLayer_Configuration_Template_Section_Definition_Group struct {
 
 func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) String() string {
 	return "SoftLayer_Configuration_Template_Section_Definition_Group"
-}
-
-// GetAllGroups - Get all configuration definition group objects. ''getAllGroups'' returns an array of
-// SoftLayer_Configuration_Template_Section_Definition_Group objects upon success.
-func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) GetAllGroups(ctx *slapi.RequestContext) ([]*SoftLayer_Configuration_Template_Section_Definition_Group, error) {
-	var returnValue []*SoftLayer_Configuration_Template_Section_Definition_Group
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_configuration_template_section_definition_group *SoftLayer_Configuration_Template_Section_Definition_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Section_Definition_Group, error) {
-	var returnValue *SoftLayer_Configuration_Template_Section_Definition_Group
-	return returnValue, nil
 }

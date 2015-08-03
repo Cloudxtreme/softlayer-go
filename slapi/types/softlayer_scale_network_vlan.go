@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Network_Vlan - <nil>
@@ -36,22 +34,4 @@ type SoftLayer_Scale_Network_Vlan struct {
 
 func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) String() string {
 	return "SoftLayer_Scale_Network_Vlan"
-}
-
-// CreateObject - <nil>
-func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Network_Vlan) (*SoftLayer_Scale_Network_Vlan, error) {
-	var returnValue *SoftLayer_Scale_Network_Vlan
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_scale_network_vlan *SoftLayer_Scale_Network_Vlan) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Network_Vlan, error) {
-	var returnValue *SoftLayer_Scale_Network_Vlan
-	return returnValue, nil
 }

@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Storage_Group_Nfs - <nil>
 type SoftLayer_Network_Storage_Group_Nfs struct {
@@ -12,42 +8,4 @@ type SoftLayer_Network_Storage_Group_Nfs struct {
 
 func (softlayer_network_storage_group_nfs *SoftLayer_Network_Storage_Group_Nfs) String() string {
 	return "SoftLayer_Network_Storage_Group_Nfs"
-}
-
-// AddAllowedHost - Use this method to attach a SoftLayer_Network_Storage_Allowed_Host object to this
-// group. This will automatically enable access from this host to any SoftLayer_Network_Storage volumes
-// currently attached to this group.
-func (softlayer_network_storage_group_nfs *SoftLayer_Network_Storage_Group_Nfs) AddAllowedHost(ctx *slapi.RequestContext, allowedHost SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// AttachToVolume - Use this method to attach a SoftLayer_Network_Storage volume to this group. This
-// will automatically enable access to this volume for any SoftLayer_Network_Storage_Allowed_Host
-// objects currently attached to this group.
-func (softlayer_network_storage_group_nfs *SoftLayer_Network_Storage_Group_Nfs) AttachToVolume(ctx *slapi.RequestContext, volume SoftLayer_Network_Storage) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_storage_group_nfs *SoftLayer_Network_Storage_Group_Nfs) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Group_Nfs, error) {
-	var returnValue *SoftLayer_Network_Storage_Group_Nfs
-	return returnValue, nil
-}
-
-// RemoveAllowedHost - Use this method to remove a SoftLayer_Network_Storage_Allowed_Host object from
-// this group. This will automatically disable access from this host to any SoftLayer_Network_Storage
-// volumes currently attached to this group.
-func (softlayer_network_storage_group_nfs *SoftLayer_Network_Storage_Group_Nfs) RemoveAllowedHost(ctx *slapi.RequestContext, allowedHost SoftLayer_Network_Storage_Allowed_Host) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// RemoveFromVolume - Use this method to remove a SoftLayer_Network_Storage volume from this group.
-// This will automatically disable access to this volume for any SoftLayer_Network_Storage_Allowed_Host
-// objects currently attached to this group.
-func (softlayer_network_storage_group_nfs *SoftLayer_Network_Storage_Group_Nfs) RemoveFromVolume(ctx *slapi.RequestContext, volume SoftLayer_Network_Storage) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

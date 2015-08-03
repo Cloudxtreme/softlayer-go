@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Layout_Container - The SoftLayer_Layout_Container contains definitions for default page
 // layouts
@@ -34,16 +30,4 @@ type SoftLayer_Layout_Container struct {
 
 func (softlayer_layout_container *SoftLayer_Layout_Container) String() string {
 	return "SoftLayer_Layout_Container"
-}
-
-// GetAllObjects - Use this method to retrieve all active layout containers that can be customized.
-func (softlayer_layout_container *SoftLayer_Layout_Container) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Layout_Container, error) {
-	var returnValue []*SoftLayer_Layout_Container
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_layout_container *SoftLayer_Layout_Container) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Layout_Container, error) {
-	var returnValue *SoftLayer_Layout_Container
-	return returnValue, nil
 }

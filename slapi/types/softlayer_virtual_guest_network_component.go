@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Guest_Network_Component - The virtual guest network component data type presents
@@ -106,29 +104,4 @@ type SoftLayer_Virtual_Guest_Network_Component struct {
 
 func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) String() string {
 	return "SoftLayer_Virtual_Guest_Network_Component"
-}
-
-// Disable - Completely restrict all incoming and outgoing bandwidth traffic to a network component
-func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) Disable(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// Enable - Allow incoming and outgoing bandwidth traffic to a network component
-func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) Enable(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Guest_Network_Component, error) {
-	var returnValue *SoftLayer_Virtual_Guest_Network_Component
-	return returnValue, nil
-}
-
-// IsPingable - Issues a ping command and returns the success (true) or failure (false) of the ping
-// command.
-func (softlayer_virtual_guest_network_component *SoftLayer_Virtual_Guest_Network_Component) IsPingable(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

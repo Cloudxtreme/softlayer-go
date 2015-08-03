@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Shipment - The SoftLayer_Account_Shipment data type contains information relating
@@ -97,41 +95,4 @@ type SoftLayer_Account_Shipment struct {
 
 func (softlayer_account_shipment *SoftLayer_Account_Shipment) String() string {
 	return "SoftLayer_Account_Shipment"
-}
-
-// EditObject - Edit the properties of a shipment record by passing in a modified instance of a
-// SoftLayer_Account_Shipment object.
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Shipment) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetAllCouriers - no documentation
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllCouriers(ctx *slapi.RequestContext) ([]*SoftLayer_Auxiliary_Shipping_Courier, error) {
-	var returnValue []*SoftLayer_Auxiliary_Shipping_Courier
-	return returnValue, nil
-}
-
-// GetAllCouriersByType - no documentation
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllCouriersByType(ctx *slapi.RequestContext, courierTypeKeyName string) ([]*SoftLayer_Auxiliary_Shipping_Courier, error) {
-	var returnValue []*SoftLayer_Auxiliary_Shipping_Courier
-	return returnValue, nil
-}
-
-// GetAllShipmentStatuses - no documentation
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllShipmentStatuses(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Shipment_Status, error) {
-	var returnValue []*SoftLayer_Account_Shipment_Status
-	return returnValue, nil
-}
-
-// GetAllShipmentTypes - no documentation
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetAllShipmentTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Shipment_Type, error) {
-	var returnValue []*SoftLayer_Account_Shipment_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_account_shipment *SoftLayer_Account_Shipment) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Shipment, error) {
-	var returnValue *SoftLayer_Account_Shipment
-	return returnValue, nil
 }

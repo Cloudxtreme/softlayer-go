@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Hardware_Router - The SoftLayer_Hardware_Router data type contains general information
 // relating to a single SoftLayer router.
@@ -27,10 +23,4 @@ type SoftLayer_Hardware_Router struct {
 
 func (softlayer_hardware_router *SoftLayer_Hardware_Router) String() string {
 	return "SoftLayer_Hardware_Router"
-}
-
-// GetObject - <nil>
-func (softlayer_hardware_router *SoftLayer_Hardware_Router) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Hardware_Router, error) {
-	var returnValue *SoftLayer_Hardware_Router
-	return returnValue, nil
 }

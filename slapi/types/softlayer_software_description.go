@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Software_Description - This class holds a description for a specific installation of a
 // Software Component. SoftLayer_Software_Licenses tie a Software Component (A specific installation on
@@ -141,16 +137,4 @@ type SoftLayer_Software_Description struct {
 
 func (softlayer_software_description *SoftLayer_Software_Description) String() string {
 	return "SoftLayer_Software_Description"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_software_description *SoftLayer_Software_Description) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Software_Description, error) {
-	var returnValue []*SoftLayer_Software_Description
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_software_description *SoftLayer_Software_Description) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Software_Description, error) {
-	var returnValue *SoftLayer_Software_Description
-	return returnValue, nil
 }

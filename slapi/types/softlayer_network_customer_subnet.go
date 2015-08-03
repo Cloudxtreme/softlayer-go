@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Customer_Subnet - The SoftLayer_Network_Customer_Subnet data type contains general
 // information relating to a single customer subnet (remote).
@@ -42,21 +38,4 @@ type SoftLayer_Network_Customer_Subnet struct {
 
 func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) String() string {
 	return "SoftLayer_Network_Customer_Subnet"
-}
-
-// CreateObject - For IPSec network tunnels, customers can create their local subnets using this
-// method. After the customer is created successfully, the customer subnet can then be added to the
-// IPSec network tunnel.
-func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Customer_Subnet) (*SoftLayer_Network_Customer_Subnet, error) {
-	var returnValue *SoftLayer_Network_Customer_Subnet
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Network_Customer_Subnet object whose ID number
-// corresponds to the ID number of the init parameter passed to the SoftLayer_Network_Customer_Subnet
-// service. You can only retrieve the subnet whose account matches the account that your portal user is
-// assigned to.
-func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Customer_Subnet, error) {
-	var returnValue *SoftLayer_Network_Customer_Subnet
-	return returnValue, nil
 }

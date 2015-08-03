@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Product_Upgrade_Request - The SoftLayer_Product_Upgrade_Request data type contains general
@@ -87,26 +85,4 @@ type SoftLayer_Product_Upgrade_Request struct {
 
 func (softlayer_product_upgrade_request *SoftLayer_Product_Upgrade_Request) String() string {
 	return "SoftLayer_Product_Upgrade_Request"
-}
-
-// ApproveChanges - When a change is made to an upgrade by Sales, this method will approve the changes
-// that were made. A customer must acknowledge the change and approve it so that the upgrade request
-// can proceed.
-func (softlayer_product_upgrade_request *SoftLayer_Product_Upgrade_Request) ApproveChanges(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves a SoftLayer_Product_Upgrade_Request object on your account whose ID
-// corresponds to the ID of the init parameter passed to the SoftLayer_Product_Upgrade_Request service.
-func (softlayer_product_upgrade_request *SoftLayer_Product_Upgrade_Request) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Upgrade_Request, error) {
-	var returnValue *SoftLayer_Product_Upgrade_Request
-	return returnValue, nil
-}
-
-// UpdateMaintenanceWindow - In case an upgrade cannot be performed, the maintenance window needs to be
-// updated to a future date.
-func (softlayer_product_upgrade_request *SoftLayer_Product_Upgrade_Request) UpdateMaintenanceWindow(ctx *slapi.RequestContext, maintenanceStartTime time.Time, maintenanceWindowId int) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

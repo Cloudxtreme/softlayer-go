@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Storage_Schedule - Schedules can be created for select Storage services, such as
@@ -86,29 +84,4 @@ type SoftLayer_Network_Storage_Schedule struct {
 
 func (softlayer_network_storage_schedule *SoftLayer_Network_Storage_Schedule) String() string {
 	return "SoftLayer_Network_Storage_Schedule"
-}
-
-// CreateObject - no documentation
-func (softlayer_network_storage_schedule *SoftLayer_Network_Storage_Schedule) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Storage_Schedule) (*SoftLayer_Network_Storage_Schedule, error) {
-	var returnValue *SoftLayer_Network_Storage_Schedule
-	return returnValue, nil
-}
-
-// DeleteObject - Delete a network storage schedule. '''This cannot be undone.''' ''deleteObject''
-// returns Boolean ''true'' on successful deletion or ''false'' if it was unable to remove a schedule;
-func (softlayer_network_storage_schedule *SoftLayer_Network_Storage_Schedule) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - no documentation
-func (softlayer_network_storage_schedule *SoftLayer_Network_Storage_Schedule) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Storage_Schedule) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_storage_schedule *SoftLayer_Network_Storage_Schedule) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Schedule, error) {
-	var returnValue *SoftLayer_Network_Storage_Schedule
-	return returnValue, nil
 }

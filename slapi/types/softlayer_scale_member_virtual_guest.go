@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Scale_Member_Virtual_Guest - <nil>
 type SoftLayer_Scale_Member_Virtual_Guest struct {
@@ -18,16 +14,4 @@ type SoftLayer_Scale_Member_Virtual_Guest struct {
 
 func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest) String() string {
 	return "SoftLayer_Scale_Member_Virtual_Guest"
-}
-
-// DeleteObject - <nil>
-func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Member_Virtual_Guest, error) {
-	var returnValue *SoftLayer_Scale_Member_Virtual_Guest
-	return returnValue, nil
 }

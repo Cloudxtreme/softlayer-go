@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_User_Customer_ApiAuthentication - The SoftLayer_User_Customer_ApiAuthentication type
 // contains user's authentication key(s).
@@ -33,18 +29,4 @@ type SoftLayer_User_Customer_ApiAuthentication struct {
 
 func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) String() string {
 	return "SoftLayer_User_Customer_ApiAuthentication"
-}
-
-// EditObject - <nil>
-func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Customer_ApiAuthentication) (*SoftLayer_User_Customer_ApiAuthentication, error) {
-	var returnValue *SoftLayer_User_Customer_ApiAuthentication
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_User_Customer_ApiAuthentication object whose ID number
-// corresponds to the ID number of the init parameter passed to the
-// SoftLayer_User_Customer_ApiAuthentication service.
-func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_ApiAuthentication, error) {
-	var returnValue *SoftLayer_User_Customer_ApiAuthentication
-	return returnValue, nil
 }

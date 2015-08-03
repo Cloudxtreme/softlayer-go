@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Billing_Invoice_Tax_Type - The invoice tax type data type models a single strategy for
 // handling tax calculations.
@@ -22,16 +18,4 @@ type SoftLayer_Billing_Invoice_Tax_Type struct {
 
 func (softlayer_billing_invoice_tax_type *SoftLayer_Billing_Invoice_Tax_Type) String() string {
 	return "SoftLayer_Billing_Invoice_Tax_Type"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_billing_invoice_tax_type *SoftLayer_Billing_Invoice_Tax_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Invoice_Tax_Type, error) {
-	var returnValue []*SoftLayer_Billing_Invoice_Tax_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_billing_invoice_tax_type *SoftLayer_Billing_Invoice_Tax_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Invoice_Tax_Type, error) {
-	var returnValue *SoftLayer_Billing_Invoice_Tax_Type
-	return returnValue, nil
 }

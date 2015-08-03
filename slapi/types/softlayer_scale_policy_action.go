@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Policy_Action - <nil>
@@ -39,22 +37,4 @@ type SoftLayer_Scale_Policy_Action struct {
 
 func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) String() string {
 	return "SoftLayer_Scale_Policy_Action"
-}
-
-// DeleteObject - <nil>
-func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Policy_Action) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Policy_Action, error) {
-	var returnValue *SoftLayer_Scale_Policy_Action
-	return returnValue, nil
 }

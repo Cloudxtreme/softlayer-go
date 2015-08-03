@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Product_Item_Price_Premium - <nil>
 type SoftLayer_Product_Item_Price_Premium struct {
@@ -36,10 +32,4 @@ type SoftLayer_Product_Item_Price_Premium struct {
 
 func (softlayer_product_item_price_premium *SoftLayer_Product_Item_Price_Premium) String() string {
 	return "SoftLayer_Product_Item_Price_Premium"
-}
-
-// GetObject - <nil>
-func (softlayer_product_item_price_premium *SoftLayer_Product_Item_Price_Premium) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Item_Price_Premium, error) {
-	var returnValue *SoftLayer_Product_Item_Price_Premium
-	return returnValue, nil
 }

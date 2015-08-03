@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Regional_Registry_Detail_Property - Subnet registration properties are used to
@@ -48,49 +46,4 @@ type SoftLayer_Account_Regional_Registry_Detail_Property struct {
 
 func (softlayer_account_regional_registry_detail_property *SoftLayer_Account_Regional_Registry_Detail_Property) String() string {
 	return "SoftLayer_Account_Regional_Registry_Detail_Property"
-}
-
-// CreateObject - This method will create a new SoftLayer_Account_Regional_Registry_Detail_Property
-// object. Input - [[SoftLayer_Account_Regional_Registry_Detail_Property
-// (type)|SoftLayer_Account_Regional_Registry_Detail_Property]] The numeric ID of the
-// [[SoftLayer_Account_Regional_Registry_Detail|detail object]] this property belongs to The numeric ID
-// of the associated [[SoftLayer_Account_Regional_Registry_Detail_Property_Type]] object When more than
-// one property of the same type exists on a detail object, this value determines the position in that
-// collection. This can be thought of more as a sort order.
-func (softlayer_account_regional_registry_detail_property *SoftLayer_Account_Regional_Registry_Detail_Property) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Regional_Registry_Detail_Property) (*SoftLayer_Account_Regional_Registry_Detail_Property, error) {
-	var returnValue *SoftLayer_Account_Regional_Registry_Detail_Property
-	return returnValue, nil
-}
-
-// CreateObjects - Edit multiple [[SoftLayer_Account_Regional_Registry_Detail_Property]] objects.
-func (softlayer_account_regional_registry_detail_property *SoftLayer_Account_Regional_Registry_Detail_Property) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Account_Regional_Registry_Detail_Property) ([]*SoftLayer_Account_Regional_Registry_Detail_Property, error) {
-	var returnValue []*SoftLayer_Account_Regional_Registry_Detail_Property
-	return returnValue, nil
-}
-
-// DeleteObject - This method will delete an existing
-// SoftLayer_Account_Regional_Registry_Detail_Property object.
-func (softlayer_account_regional_registry_detail_property *SoftLayer_Account_Regional_Registry_Detail_Property) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - This method will edit an existing SoftLayer_Account_Regional_Registry_Detail_Property
-// object. For more detail, see
-// [[SoftLayer_Account_Regional_Registry_Detail_Property::createObject|createObject]].
-func (softlayer_account_regional_registry_detail_property *SoftLayer_Account_Regional_Registry_Detail_Property) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Regional_Registry_Detail_Property) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObjects - Edit multiple [[SoftLayer_Account_Regional_Registry_Detail_Property]] objects.
-func (softlayer_account_regional_registry_detail_property *SoftLayer_Account_Regional_Registry_Detail_Property) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Account_Regional_Registry_Detail_Property) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_account_regional_registry_detail_property *SoftLayer_Account_Regional_Registry_Detail_Property) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Regional_Registry_Detail_Property, error) {
-	var returnValue *SoftLayer_Account_Regional_Registry_Detail_Property
-	return returnValue, nil
 }

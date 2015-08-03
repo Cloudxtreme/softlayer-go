@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Scale_Group_Status - <nil>
 type SoftLayer_Scale_Group_Status struct {
@@ -21,16 +17,4 @@ type SoftLayer_Scale_Group_Status struct {
 
 func (softlayer_scale_group_status *SoftLayer_Scale_Group_Status) String() string {
 	return "SoftLayer_Scale_Group_Status"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_scale_group_status *SoftLayer_Scale_Group_Status) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Scale_Group_Status, error) {
-	var returnValue []*SoftLayer_Scale_Group_Status
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_scale_group_status *SoftLayer_Scale_Group_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Group_Status, error) {
-	var returnValue *SoftLayer_Scale_Group_Status
-	return returnValue, nil
 }

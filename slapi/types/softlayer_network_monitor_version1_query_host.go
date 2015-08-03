@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Monitor_Version1_Query_Host - The Monitoring_Query_Host type represents a
 // monitoring instance. It consists of a hardware ID to monitor, an IP address attached to that
@@ -62,63 +58,4 @@ type SoftLayer_Network_Monitor_Version1_Query_Host struct {
 
 func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) String() string {
 	return "SoftLayer_Network_Monitor_Version1_Query_Host"
-}
-
-// CreateObject - Passing in an unsaved instances of a Query_Host object into this function will create
-// the object and return the results to the user.
-func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Monitor_Version1_Query_Host) (*SoftLayer_Network_Monitor_Version1_Query_Host, error) {
-	var returnValue *SoftLayer_Network_Monitor_Version1_Query_Host
-	return returnValue, nil
-}
-
-// CreateObjects - Passing in a collection of unsaved instances of Query_Host objects into this
-// function will create all objects and return the results to the user.
-func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Network_Monitor_Version1_Query_Host) ([]*SoftLayer_Network_Monitor_Version1_Query_Host, error) {
-	var returnValue []*SoftLayer_Network_Monitor_Version1_Query_Host
-	return returnValue, nil
-}
-
-// DeleteObject - Like any other API object, the monitoring objects can be deleted by passing an
-// instance of them into this function. The ID on the object must be set.
-func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// DeleteObjects - Like any other API object, the monitoring objects can be deleted by passing an
-// instance of them into this function. The ID on the object must be set.
-func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) DeleteObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Network_Monitor_Version1_Query_Host) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - Like any other API object, the monitoring objects can have their exposed properties
-// edited by passing in a modified version of the object.
-func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Monitor_Version1_Query_Host) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObjects - Like any other API object, the monitoring objects can have their exposed properties
-// edited by passing in a modified version of the object.
-func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Network_Monitor_Version1_Query_Host) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// FindByHardwareId - This method returns all Query_Host objects associated with the passed in hardware
-// ID as long as that hardware ID is owned by the current user's account. This behavior can also be
-// accomplished by simply tapping networkMonitors on the Hardware_Server object.
-func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) FindByHardwareId(ctx *slapi.RequestContext, hardwareId int) ([]*SoftLayer_Network_Monitor_Version1_Query_Host, error) {
-	var returnValue []*SoftLayer_Network_Monitor_Version1_Query_Host
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Network_Monitor_Version1_Query_Host object whose ID
-// number corresponds to the ID number of the init parameter passed to the
-// SoftLayer_Network_Monitor_Version1_Query_Host service. You can only retrieve query hosts attached to
-// hardware that belong to your account.
-func (softlayer_network_monitor_version1_query_host *SoftLayer_Network_Monitor_Version1_Query_Host) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Monitor_Version1_Query_Host, error) {
-	var returnValue *SoftLayer_Network_Monitor_Version1_Query_Host
-	return returnValue, nil
 }

@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Hardware_Benchmark_Certification - The SoftLayer_Hardware_Benchmark_Certification data
@@ -35,22 +33,4 @@ type SoftLayer_Hardware_Benchmark_Certification struct {
 
 func (softlayer_hardware_benchmark_certification *SoftLayer_Hardware_Benchmark_Certification) String() string {
 	return "SoftLayer_Hardware_Benchmark_Certification"
-}
-
-// GetObject - getObject retrieves the SoftLayer_Hardware_Benchmark_Certification object whose ID
-// number corresponds to the ID number of the init parameter passed to the
-// SoftLayer_Hardware_Benchmark_Certification service.
-func (softlayer_hardware_benchmark_certification *SoftLayer_Hardware_Benchmark_Certification) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Hardware_Benchmark_Certification, error) {
-	var returnValue *SoftLayer_Hardware_Benchmark_Certification
-	return returnValue, nil
-}
-
-// GetResultFile - Attempt to retrieve the file associated with a benchmark certification result, if
-// such a file exists. If there is no file for this benchmark certification result, calling this method
-// throws an exception. The "getResultFile" method attempts to retrieve the file associated with a
-// benchmark certification result, if such a file exists. If no file exists for the benchmark
-// certification, an exception is thrown.
-func (softlayer_hardware_benchmark_certification *SoftLayer_Hardware_Benchmark_Certification) GetResultFile(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
 }

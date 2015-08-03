@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Info - Every SoftLayer customer account has billing specific information which is
@@ -96,11 +94,4 @@ type SoftLayer_Billing_Info struct {
 
 func (softlayer_billing_info *SoftLayer_Billing_Info) String() string {
 	return "SoftLayer_Billing_Info"
-}
-
-// GetObject - getObject retrieves the SoftLayer_Billing_Info object whose data corresponds to the
-// account to which your portal user is tied.
-func (softlayer_billing_info *SoftLayer_Billing_Info) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Info, error) {
-	var returnValue *SoftLayer_Billing_Info
-	return returnValue, nil
 }

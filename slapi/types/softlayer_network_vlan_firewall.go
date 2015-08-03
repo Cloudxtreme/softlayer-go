@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Vlan_Firewall - The SoftLayer_Network_Vlan_Firewall data type contains general
 // information relating to a single SoftLayer firewall. This is the object which ties the running rules
@@ -75,34 +71,4 @@ type SoftLayer_Network_Vlan_Firewall struct {
 
 func (softlayer_network_vlan_firewall *SoftLayer_Network_Vlan_Firewall) String() string {
 	return "SoftLayer_Network_Vlan_Firewall"
-}
-
-// GetObject - getObject returns a SoftLayer_Network_Vlan_Firewall object. You can only get objects for
-// vlans attached to your account that have a network firewall enabled.
-func (softlayer_network_vlan_firewall *SoftLayer_Network_Vlan_Firewall) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Vlan_Firewall, error) {
-	var returnValue *SoftLayer_Network_Vlan_Firewall
-	return returnValue, nil
-}
-
-// RestoreDefaults - This will completely reset the firewall to factory settings. If the firewall is
-// not a dedicated appliance an error will occur. Note, this process is performed asynchronously.
-// During the process all traffic will not be routed through the firewall.
-func (softlayer_network_vlan_firewall *SoftLayer_Network_Vlan_Firewall) RestoreDefaults(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Version1_Transaction, error) {
-	var returnValue *SoftLayer_Provisioning_Version1_Transaction
-	return returnValue, nil
-}
-
-// SetTags - This method will associate a comma separated list of tags with this object.
-func (softlayer_network_vlan_firewall *SoftLayer_Network_Vlan_Firewall) SetTags(ctx *slapi.RequestContext, tags string) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// UpdateRouteBypass - Enable or disable route bypass for this context. If enabled, this will bypass
-// the firewall entirely and all traffic will be routed directly to the host(s) behind it. If disabled,
-// traffic will flow through the firewall normally. This feature is only available for Hardware
-// Firewall (Dedicated) and dedicated appliances.
-func (softlayer_network_vlan_firewall *SoftLayer_Network_Vlan_Firewall) UpdateRouteBypass(ctx *slapi.RequestContext, bypass bool) (*SoftLayer_Provisioning_Version1_Transaction, error) {
-	var returnValue *SoftLayer_Provisioning_Version1_Transaction
-	return returnValue, nil
 }

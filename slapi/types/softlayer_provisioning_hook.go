@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Provisioning_Hook - The SoftLayer_Provisioning_Hook contains all the information needed to
@@ -44,28 +42,4 @@ type SoftLayer_Provisioning_Hook struct {
 
 func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) String() string {
 	return "SoftLayer_Provisioning_Hook"
-}
-
-// CreateObject - <nil>
-func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Provisioning_Hook) (*SoftLayer_Provisioning_Hook, error) {
-	var returnValue *SoftLayer_Provisioning_Hook
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Provisioning_Hook) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_provisioning_hook *SoftLayer_Provisioning_Hook) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Hook, error) {
-	var returnValue *SoftLayer_Provisioning_Hook
-	return returnValue, nil
 }

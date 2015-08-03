@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Firewall_Template - The SoftLayer_Network_Firewall_Template type contains general
 // information for a SoftLayer network firewall template. Firewall templates are recommend rule sets
@@ -31,21 +27,4 @@ type SoftLayer_Network_Firewall_Template struct {
 
 func (softlayer_network_firewall_template *SoftLayer_Network_Firewall_Template) String() string {
 	return "SoftLayer_Network_Firewall_Template"
-}
-
-// GetAllObjects - Get all available firewall template objects. ''getAllObjects'' returns an array of
-// SoftLayer_Network_Firewall_Template objects upon success.
-func (softlayer_network_firewall_template *SoftLayer_Network_Firewall_Template) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Firewall_Template, error) {
-	var returnValue []*SoftLayer_Network_Firewall_Template
-	return returnValue, nil
-}
-
-// GetObject - getObject returns a SoftLayer_Network_Firewall_Template object. You can retrieve all
-// available firewall templates. getAllObjects returns an array of all available
-// SoftLayer_Network_Firewall_Template objects. You can use these templates to generate a [[SoftLayer
-// Network Firewall Update Request]]. @SLDNDocumentation Service See Also
-// SoftLayer_Network_Firewall_Update_Request
-func (softlayer_network_firewall_template *SoftLayer_Network_Firewall_Template) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Firewall_Template, error) {
-	var returnValue *SoftLayer_Network_Firewall_Template
-	return returnValue, nil
 }

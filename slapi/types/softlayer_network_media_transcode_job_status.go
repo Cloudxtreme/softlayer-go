@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Media_Transcode_Job_Status - The SoftLayer_Network_Media_Transcode_Job_Status
 // contains information on a transcode job status.
@@ -22,16 +18,4 @@ type SoftLayer_Network_Media_Transcode_Job_Status struct {
 
 func (softlayer_network_media_transcode_job_status *SoftLayer_Network_Media_Transcode_Job_Status) String() string {
 	return "SoftLayer_Network_Media_Transcode_Job_Status"
-}
-
-// GetAllStatuses - no documentation
-func (softlayer_network_media_transcode_job_status *SoftLayer_Network_Media_Transcode_Job_Status) GetAllStatuses(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Media_Transcode_Job_Status, error) {
-	var returnValue []*SoftLayer_Network_Media_Transcode_Job_Status
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_media_transcode_job_status *SoftLayer_Network_Media_Transcode_Job_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Media_Transcode_Job_Status, error) {
-	var returnValue *SoftLayer_Network_Media_Transcode_Job_Status
-	return returnValue, nil
 }

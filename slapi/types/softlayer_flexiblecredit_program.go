@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_FlexibleCredit_Program - <nil>
 type SoftLayer_FlexibleCredit_Program struct {
@@ -21,28 +17,4 @@ type SoftLayer_FlexibleCredit_Program struct {
 
 func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) String() string {
 	return "SoftLayer_FlexibleCredit_Program"
-}
-
-// GetAffiliatesAvailableForSelfEnrollmentByVerificationType - <nil>
-func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) GetAffiliatesAvailableForSelfEnrollmentByVerificationType(ctx *slapi.RequestContext, verificationTypeKeyName string) ([]*SoftLayer_FlexibleCredit_Affiliate, error) {
-	var returnValue []*SoftLayer_FlexibleCredit_Affiliate
-	return returnValue, nil
-}
-
-// GetCompanyTypes - <nil>
-func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) GetCompanyTypes(ctx *slapi.RequestContext) ([]*SoftLayer_FlexibleCredit_Company_Type, error) {
-	var returnValue []*SoftLayer_FlexibleCredit_Company_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) GetObject(ctx *slapi.RequestContext) (*SoftLayer_FlexibleCredit_Program, error) {
-	var returnValue *SoftLayer_FlexibleCredit_Program
-	return returnValue, nil
-}
-
-// SelfEnrollNewAccount - <nil>
-func (softlayer_flexiblecredit_program *SoftLayer_FlexibleCredit_Program) SelfEnrollNewAccount(ctx *slapi.RequestContext, accountTemplate SoftLayer_Account) (*SoftLayer_Account, error) {
-	var returnValue *SoftLayer_Account
-	return returnValue, nil
 }

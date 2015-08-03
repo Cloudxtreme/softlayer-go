@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Policy - <nil>
@@ -79,34 +77,4 @@ type SoftLayer_Scale_Policy struct {
 
 func (softlayer_scale_policy *SoftLayer_Scale_Policy) String() string {
 	return "SoftLayer_Scale_Policy"
-}
-
-// CreateObject - <nil>
-func (softlayer_scale_policy *SoftLayer_Scale_Policy) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Policy) (*SoftLayer_Scale_Policy, error) {
-	var returnValue *SoftLayer_Scale_Policy
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_scale_policy *SoftLayer_Scale_Policy) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_scale_policy *SoftLayer_Scale_Policy) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Policy) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_scale_policy *SoftLayer_Scale_Policy) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Policy, error) {
-	var returnValue *SoftLayer_Scale_Policy
-	return returnValue, nil
-}
-
-// Trigger - <nil>
-func (softlayer_scale_policy *SoftLayer_Scale_Policy) Trigger(ctx *slapi.RequestContext) ([]*SoftLayer_Scale_Member, error) {
-	var returnValue []*SoftLayer_Scale_Member
-	return returnValue, nil
 }

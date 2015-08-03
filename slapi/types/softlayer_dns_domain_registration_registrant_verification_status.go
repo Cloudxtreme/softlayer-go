@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status -
 // SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status models the state of the registrant.
@@ -31,16 +27,4 @@ type SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status struct {
 
 func (softlayer_dns_domain_registration_registrant_verification_status *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status) String() string {
 	return "SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_dns_domain_registration_registrant_verification_status *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status, error) {
-	var returnValue []*SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_dns_domain_registration_registrant_verification_status *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status, error) {
-	var returnValue *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status
-	return returnValue, nil
 }

@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Permission_Action - <nil>
@@ -32,16 +30,4 @@ type SoftLayer_User_Permission_Action struct {
 
 func (softlayer_user_permission_action *SoftLayer_User_Permission_Action) String() string {
 	return "SoftLayer_User_Permission_Action"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_user_permission_action *SoftLayer_User_Permission_Action) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_User_Permission_Action, error) {
-	var returnValue []*SoftLayer_User_Permission_Action
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_user_permission_action *SoftLayer_User_Permission_Action) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Permission_Action, error) {
-	var returnValue *SoftLayer_User_Permission_Action
-	return returnValue, nil
 }

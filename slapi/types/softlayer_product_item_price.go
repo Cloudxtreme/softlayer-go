@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Product_Item_Price - The SoftLayer_Product_Item_Price data type contains general
 // information relating to a single SoftLayer product item price. You can find out what packages each
@@ -163,19 +159,4 @@ type SoftLayer_Product_Item_Price struct {
 
 func (softlayer_product_item_price *SoftLayer_Product_Item_Price) String() string {
 	return "SoftLayer_Product_Item_Price"
-}
-
-// GetObject - <nil>
-func (softlayer_product_item_price *SoftLayer_Product_Item_Price) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Item_Price, error) {
-	var returnValue *SoftLayer_Product_Item_Price
-	return returnValue, nil
-}
-
-// GetUsageRatePrices - Returns a collection of rate-based [[SoftLayer_Product_Item_Price]] objects
-// associated with the [[SoftLayer_Product_Item]] objects and the [[SoftLayer_Location]] specified. The
-// location is required to get the appropriate rate-based prices because the usage rates may vary from
-// datacenter to datacenter.
-func (softlayer_product_item_price *SoftLayer_Product_Item_Price) GetUsageRatePrices(ctx *slapi.RequestContext, location SoftLayer_Location, items []SoftLayer_Product_Item) ([]*SoftLayer_Product_Item_Price, error) {
-	var returnValue []*SoftLayer_Product_Item_Price
-	return returnValue, nil
 }

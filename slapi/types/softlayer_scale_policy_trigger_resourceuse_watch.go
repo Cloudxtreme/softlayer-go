@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch - <nil>
@@ -55,46 +53,4 @@ type SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch struct {
 
 func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) String() string {
 	return "SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch"
-}
-
-// CreateObject - <nil>
-func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) (*SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch, error) {
-	var returnValue *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetAllPossibleAlgorithms - <nil>
-func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) GetAllPossibleAlgorithms(ctx *slapi.RequestContext) ([]string, error) {
-	var returnValue []string
-	return returnValue, nil
-}
-
-// GetAllPossibleMetrics - <nil>
-func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) GetAllPossibleMetrics(ctx *slapi.RequestContext) ([]string, error) {
-	var returnValue []string
-	return returnValue, nil
-}
-
-// GetAllPossibleOperators - <nil>
-func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) GetAllPossibleOperators(ctx *slapi.RequestContext) ([]string, error) {
-	var returnValue []string
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_scale_policy_trigger_resourceuse_watch *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch, error) {
-	var returnValue *SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch
-	return returnValue, nil
 }

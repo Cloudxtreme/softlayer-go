@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Layout_Profile_Containers - <nil>
@@ -35,22 +33,4 @@ type SoftLayer_Layout_Profile_Containers struct {
 
 func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) String() string {
 	return "SoftLayer_Layout_Profile_Containers"
-}
-
-// CreateObject - <nil>
-func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Layout_Profile_Containers) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Layout_Profile_Containers) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Layout_Profile_Containers, error) {
-	var returnValue *SoftLayer_Layout_Profile_Containers
-	return returnValue, nil
 }

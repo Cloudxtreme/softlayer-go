@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Billing_Currency - <nil>
 type SoftLayer_Billing_Currency struct {
@@ -21,22 +17,4 @@ type SoftLayer_Billing_Currency struct {
 
 func (softlayer_billing_currency *SoftLayer_Billing_Currency) String() string {
 	return "SoftLayer_Billing_Currency"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_billing_currency *SoftLayer_Billing_Currency) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Billing_Currency, error) {
-	var returnValue []*SoftLayer_Billing_Currency
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_billing_currency *SoftLayer_Billing_Currency) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Currency, error) {
-	var returnValue *SoftLayer_Billing_Currency
-	return returnValue, nil
-}
-
-// GetPrice - <nil>
-func (softlayer_billing_currency *SoftLayer_Billing_Currency) GetPrice(ctx *slapi.RequestContext, price float32, formatOptions SoftLayer_Container_Billing_Currency_Format) (string, error) {
-	var returnValue string
-	return returnValue, nil
 }

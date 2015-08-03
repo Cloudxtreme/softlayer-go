@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Host - The virtual host represents the platform on which virtual guests reside. At
@@ -69,66 +67,4 @@ type SoftLayer_Virtual_Host struct {
 
 func (softlayer_virtual_host *SoftLayer_Virtual_Host) String() string {
 	return "SoftLayer_Virtual_Host"
-}
-
-// GetLiveGuestByUuid - Query a virtualization platform directly to retrieve details regarding a guest.
-func (softlayer_virtual_host *SoftLayer_Virtual_Host) GetLiveGuestByUuid(ctx *slapi.RequestContext, uuid string) (*SoftLayer_Virtual_Guest, error) {
-	var returnValue *SoftLayer_Virtual_Guest
-	return returnValue, nil
-}
-
-// GetLiveGuestList - Query a virtualization platform directly to retrieve a list of known guests.
-func (softlayer_virtual_host *SoftLayer_Virtual_Host) GetLiveGuestList(ctx *slapi.RequestContext) ([]*SoftLayer_Virtual_Guest, error) {
-	var returnValue []*SoftLayer_Virtual_Guest
-	return returnValue, nil
-}
-
-// GetLiveGuestRecentMetricData - Query a virtualization platform directly to retrieve recent metric
-// data for a guest.
-func (softlayer_virtual_host *SoftLayer_Virtual_Host) GetLiveGuestRecentMetricData(ctx *slapi.RequestContext, uuid string, time int, limit int, interval int) ([]*SoftLayer_Metric_Tracking_Object, error) {
-	var returnValue []*SoftLayer_Metric_Tracking_Object
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_virtual_host *SoftLayer_Virtual_Host) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Host, error) {
-	var returnValue *SoftLayer_Virtual_Host
-	return returnValue, nil
-}
-
-// PauseLiveGuest - no documentation
-func (softlayer_virtual_host *SoftLayer_Virtual_Host) PauseLiveGuest(ctx *slapi.RequestContext, uuid string) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// PowerCycleLiveGuest - no documentation
-func (softlayer_virtual_host *SoftLayer_Virtual_Host) PowerCycleLiveGuest(ctx *slapi.RequestContext, uuid string) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// PowerOffLiveGuest - no documentation
-func (softlayer_virtual_host *SoftLayer_Virtual_Host) PowerOffLiveGuest(ctx *slapi.RequestContext, uuid string) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// PowerOnLiveGuest - no documentation
-func (softlayer_virtual_host *SoftLayer_Virtual_Host) PowerOnLiveGuest(ctx *slapi.RequestContext, uuid string) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// RebootSoftLiveGuest - Attempt to complete a soft reboot of a guest by shutting down the operating
-// system.
-func (softlayer_virtual_host *SoftLayer_Virtual_Host) RebootSoftLiveGuest(ctx *slapi.RequestContext, uuid string) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// ResumeLiveGuest - no documentation
-func (softlayer_virtual_host *SoftLayer_Virtual_Host) ResumeLiveGuest(ctx *slapi.RequestContext, uuid string) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

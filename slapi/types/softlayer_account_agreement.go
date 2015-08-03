@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Agreement - <nil>
@@ -71,10 +69,4 @@ type SoftLayer_Account_Agreement struct {
 
 func (softlayer_account_agreement *SoftLayer_Account_Agreement) String() string {
 	return "SoftLayer_Account_Agreement"
-}
-
-// GetObject - <nil>
-func (softlayer_account_agreement *SoftLayer_Account_Agreement) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Agreement, error) {
-	var returnValue *SoftLayer_Account_Agreement
-	return returnValue, nil
 }

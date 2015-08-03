@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Backbone_Location_Dependent - <nil>
 type SoftLayer_Network_Backbone_Location_Dependent struct {
@@ -27,22 +23,4 @@ type SoftLayer_Network_Backbone_Location_Dependent struct {
 
 func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) String() string {
 	return "SoftLayer_Network_Backbone_Location_Dependent"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Backbone_Location_Dependent, error) {
-	var returnValue []*SoftLayer_Network_Backbone_Location_Dependent
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Backbone_Location_Dependent, error) {
-	var returnValue *SoftLayer_Network_Backbone_Location_Dependent
-	return returnValue, nil
-}
-
-// GetSourceDependentsByName - <nil>
-func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) GetSourceDependentsByName(ctx *slapi.RequestContext, locationName string) (*SoftLayer_Location, error) {
-	var returnValue *SoftLayer_Location
-	return returnValue, nil
 }

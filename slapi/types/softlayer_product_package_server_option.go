@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Product_Package_Server_Option - The [[SoftLayer_Product_Package_Server_Option]] data type
 // contains various data points associated with package servers that can be used in selection criteria.
@@ -28,22 +24,4 @@ type SoftLayer_Product_Package_Server_Option struct {
 
 func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) String() string {
 	return "SoftLayer_Product_Package_Server_Option"
-}
-
-// GetAllOptions - This method will grab all the package server options.
-func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) GetAllOptions(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package_Server_Option, error) {
-	var returnValue []*SoftLayer_Product_Package_Server_Option
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Package_Server_Option, error) {
-	var returnValue *SoftLayer_Product_Package_Server_Option
-	return returnValue, nil
-}
-
-// GetOptions - This method will grab all the package server options for the specified type.
-func (softlayer_product_package_server_option *SoftLayer_Product_Package_Server_Option) GetOptions(ctx *slapi.RequestContext, type_ string) ([]*SoftLayer_Product_Package_Server_Option, error) {
-	var returnValue []*SoftLayer_Product_Package_Server_Option
-	return returnValue, nil
 }

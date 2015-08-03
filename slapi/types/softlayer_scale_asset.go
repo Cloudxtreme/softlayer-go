@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Asset - <nil>
@@ -30,16 +28,4 @@ type SoftLayer_Scale_Asset struct {
 
 func (softlayer_scale_asset *SoftLayer_Scale_Asset) String() string {
 	return "SoftLayer_Scale_Asset"
-}
-
-// DeleteObject - <nil>
-func (softlayer_scale_asset *SoftLayer_Scale_Asset) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_scale_asset *SoftLayer_Scale_Asset) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Asset, error) {
-	var returnValue *SoftLayer_Scale_Asset
-	return returnValue, nil
 }

@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Configuration_Template_Section_Type - The SoftLayer_Configuration_Template_Section_Type
 // data type contains information of a configuration section type. Configuration can contain
@@ -23,10 +19,4 @@ type SoftLayer_Configuration_Template_Section_Type struct {
 
 func (softlayer_configuration_template_section_type *SoftLayer_Configuration_Template_Section_Type) String() string {
 	return "SoftLayer_Configuration_Template_Section_Type"
-}
-
-// GetObject - <nil>
-func (softlayer_configuration_template_section_type *SoftLayer_Configuration_Template_Section_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Section_Type, error) {
-	var returnValue *SoftLayer_Configuration_Template_Section_Type
-	return returnValue, nil
 }

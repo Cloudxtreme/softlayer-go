@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Notification - Details provided for the notification are basic. Details such as the
 // related preferences, name and keyname for the notification can be retrieved. The keyname property
@@ -40,16 +36,4 @@ type SoftLayer_Notification struct {
 
 func (softlayer_notification *SoftLayer_Notification) String() string {
 	return "SoftLayer_Notification"
-}
-
-// GetAllObjects - Use this method to retrieve all active notifications that can be subscribed to.
-func (softlayer_notification *SoftLayer_Notification) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Notification, error) {
-	var returnValue []*SoftLayer_Notification
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_notification *SoftLayer_Notification) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification, error) {
-	var returnValue *SoftLayer_Notification
-	return returnValue, nil
 }

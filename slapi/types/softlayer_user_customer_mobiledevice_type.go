@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_MobileDevice_Type - Describes a supported class of mobile device. In this
@@ -31,16 +29,4 @@ type SoftLayer_User_Customer_MobileDevice_Type struct {
 
 func (softlayer_user_customer_mobiledevice_type *SoftLayer_User_Customer_MobileDevice_Type) String() string {
 	return "SoftLayer_User_Customer_MobileDevice_Type"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_user_customer_mobiledevice_type *SoftLayer_User_Customer_MobileDevice_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_User_Customer_MobileDevice_Type, error) {
-	var returnValue []*SoftLayer_User_Customer_MobileDevice_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_user_customer_mobiledevice_type *SoftLayer_User_Customer_MobileDevice_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_MobileDevice_Type, error) {
-	var returnValue *SoftLayer_User_Customer_MobileDevice_Type
-	return returnValue, nil
 }

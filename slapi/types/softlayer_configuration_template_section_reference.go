@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Section_Reference - The
@@ -37,10 +35,4 @@ type SoftLayer_Configuration_Template_Section_Reference struct {
 
 func (softlayer_configuration_template_section_reference *SoftLayer_Configuration_Template_Section_Reference) String() string {
 	return "SoftLayer_Configuration_Template_Section_Reference"
-}
-
-// GetObject - <nil>
-func (softlayer_configuration_template_section_reference *SoftLayer_Configuration_Template_Section_Reference) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Section_Reference, error) {
-	var returnValue *SoftLayer_Configuration_Template_Section_Reference
-	return returnValue, nil
 }

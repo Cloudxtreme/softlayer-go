@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Storage_Group_Type - <nil>
 type SoftLayer_Network_Storage_Group_Type struct {
@@ -21,16 +17,4 @@ type SoftLayer_Network_Storage_Group_Type struct {
 
 func (softlayer_network_storage_group_type *SoftLayer_Network_Storage_Group_Type) String() string {
 	return "SoftLayer_Network_Storage_Group_Type"
-}
-
-// GetAllObjects - Use this method to retrieve all storage group types available.
-func (softlayer_network_storage_group_type *SoftLayer_Network_Storage_Group_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Storage_Group_Type, error) {
-	var returnValue []*SoftLayer_Network_Storage_Group_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_storage_group_type *SoftLayer_Network_Storage_Group_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Storage_Group_Type, error) {
-	var returnValue *SoftLayer_Network_Storage_Group_Type
-	return returnValue, nil
 }

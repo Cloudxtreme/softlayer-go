@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Product_Package_Type - The [[SoftLayer_Product_Package_Type]] object indicates the type
 // for a service offering (package). The type can be used to filter packages. For example, if you are
@@ -30,16 +26,4 @@ type SoftLayer_Product_Package_Type struct {
 
 func (softlayer_product_package_type *SoftLayer_Product_Package_Type) String() string {
 	return "SoftLayer_Product_Package_Type"
-}
-
-// GetAllObjects - This method will return all of the available package types.
-func (softlayer_product_package_type *SoftLayer_Product_Package_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Product_Package_Type, error) {
-	var returnValue []*SoftLayer_Product_Package_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_product_package_type *SoftLayer_Product_Package_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Product_Package_Type, error) {
-	var returnValue *SoftLayer_Product_Package_Type
-	return returnValue, nil
 }

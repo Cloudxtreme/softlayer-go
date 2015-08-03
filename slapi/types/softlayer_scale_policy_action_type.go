@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Scale_Policy_Action_Type - <nil>
 type SoftLayer_Scale_Policy_Action_Type struct {
@@ -21,16 +17,4 @@ type SoftLayer_Scale_Policy_Action_Type struct {
 
 func (softlayer_scale_policy_action_type *SoftLayer_Scale_Policy_Action_Type) String() string {
 	return "SoftLayer_Scale_Policy_Action_Type"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_scale_policy_action_type *SoftLayer_Scale_Policy_Action_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Scale_Policy_Action_Type, error) {
-	var returnValue []*SoftLayer_Scale_Policy_Action_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_scale_policy_action_type *SoftLayer_Scale_Policy_Action_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Policy_Action_Type, error) {
-	var returnValue *SoftLayer_Scale_Policy_Action_Type
-	return returnValue, nil
 }

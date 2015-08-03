@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Locale_Timezone - Each User is assigned a timezone allowing for a precise local timestamp.
 type SoftLayer_Locale_Timezone struct {
@@ -28,17 +24,4 @@ type SoftLayer_Locale_Timezone struct {
 
 func (softlayer_locale_timezone *SoftLayer_Locale_Timezone) String() string {
 	return "SoftLayer_Locale_Timezone"
-}
-
-// GetAllObjects - no documentation
-func (softlayer_locale_timezone *SoftLayer_Locale_Timezone) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Locale_Timezone, error) {
-	var returnValue []*SoftLayer_Locale_Timezone
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Locale_Timezone object whose ID number corresponds to
-// the ID number of the init parameter passed to the SoftLayer_Locale_Timezone service.
-func (softlayer_locale_timezone *SoftLayer_Locale_Timezone) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Locale_Timezone, error) {
-	var returnValue *SoftLayer_Locale_Timezone
-	return returnValue, nil
 }

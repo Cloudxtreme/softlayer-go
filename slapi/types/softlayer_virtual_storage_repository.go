@@ -1,12 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Virtual_Storage_Repository - The SoftLayer_Virtual_Storage_Repository represents a web
 // based storage system that can be accessed through many types of devices, interfaces, and other
@@ -66,51 +60,4 @@ type SoftLayer_Virtual_Storage_Repository struct {
 
 func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository) String() string {
 	return "SoftLayer_Virtual_Storage_Repository"
-}
-
-// GetArchiveDiskUsageRatePerGb - Returns the archive storage disk usage fee rate per gigabyte.
-func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository) GetArchiveDiskUsageRatePerGb(ctx *slapi.RequestContext) (float64, error) {
-	var returnValue float64
-	return returnValue, nil
-}
-
-// GetAverageUsageMetricDataByDate - Returns the average disk space usage for a storage repository.
-func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository) GetAverageUsageMetricDataByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) (float32, error) {
-	var returnValue float32
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Storage_Repository, error) {
-	var returnValue *SoftLayer_Virtual_Storage_Repository
-	return returnValue, nil
-}
-
-// GetPublicImageDiskUsageRatePerGb - Returns the public image storage disk usage fee rate per
-// gigabyte.
-func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository) GetPublicImageDiskUsageRatePerGb(ctx *slapi.RequestContext) (float64, error) {
-	var returnValue float64
-	return returnValue, nil
-}
-
-// GetStorageLocations - no documentation
-func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository) GetStorageLocations(ctx *slapi.RequestContext) ([]*SoftLayer_Location, error) {
-	var returnValue []*SoftLayer_Location
-	return returnValue, nil
-}
-
-// GetUsageMetricDataByDate - Retrieve disk usage data on a [[SoftLayer_Virtual_Guest|Cloud Computing
-// Instance]] image for the time range you provide. Each data entry objects contain ''dateTime'' and
-// ''counter'' properties. ''dateTime'' property indicates the time that the disk usage data was
-// measured and ''counter'' property holds the disk usage in bytes.
-func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository) GetUsageMetricDataByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) ([]*SoftLayer_Metric_Tracking_Object_Data, error) {
-	var returnValue []*SoftLayer_Metric_Tracking_Object_Data
-	return returnValue, nil
-}
-
-// GetUsageMetricImageByDate - Returns a disk usage image based on disk usage specified by the input
-// parameters.
-func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository) GetUsageMetricImageByDate(ctx *slapi.RequestContext, startDateTime time.Time, endDateTime time.Time) (*SoftLayer_Container_Bandwidth_GraphOutputs, error) {
-	var returnValue *SoftLayer_Container_Bandwidth_GraphOutputs
-	return returnValue, nil
 }

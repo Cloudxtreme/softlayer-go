@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Sales_Presale_Event - The presale event data types indicate the information regarding an
@@ -59,18 +57,4 @@ type SoftLayer_Sales_Presale_Event struct {
 
 func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) String() string {
 	return "SoftLayer_Sales_Presale_Event"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Sales_Presale_Event, error) {
-	var returnValue []*SoftLayer_Sales_Presale_Event
-	return returnValue, nil
-}
-
-// GetObject - '''getObject''' retrieves the [[SoftLayer_Sales_Presale_Event]] object whose id number
-// corresponds to the id number of the init parameter passed to the SoftLayer_Sales_Presale_Event
-// service. Customers may only retrieve presale events that are currently active.
-func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Sales_Presale_Event, error) {
-	var returnValue *SoftLayer_Sales_Presale_Event
-	return returnValue, nil
 }

@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Provisioning_Version1_Transaction_Group - The
 // SoftLayer_Provisioning_Version1_Transaction_Group data type contains general information relating to
@@ -22,18 +18,4 @@ type SoftLayer_Provisioning_Version1_Transaction_Group struct {
 
 func (softlayer_provisioning_version1_transaction_group *SoftLayer_Provisioning_Version1_Transaction_Group) String() string {
 	return "SoftLayer_Provisioning_Version1_Transaction_Group"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_provisioning_version1_transaction_group *SoftLayer_Provisioning_Version1_Transaction_Group) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Provisioning_Version1_Transaction_Group, error) {
-	var returnValue []*SoftLayer_Provisioning_Version1_Transaction_Group
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Provisioning_Version1_Transaction_Group object whose
-// ID number corresponds to the ID number of the init parameter passed to the
-// SoftLayer_Provisioning_Version1_Transaction_Group service.
-func (softlayer_provisioning_version1_transaction_group *SoftLayer_Provisioning_Version1_Transaction_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Version1_Transaction_Group, error) {
-	var returnValue *SoftLayer_Provisioning_Version1_Transaction_Group
-	return returnValue, nil
 }

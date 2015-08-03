@@ -10,15 +10,12 @@ import (
 	"text/template"
 )
 
-const typeTemplateString = `package sl
+const typeTemplateString = `package types
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 {{ range $alias, $import := .Imports }}
 	{{ $alias }} "{{ $import }}"
-{{ end }}
-{{ if .Methods }}
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 {{ end }}
 )
 
@@ -31,13 +28,6 @@ import (
 func ({{ $.Type.Lower }} *{{ $.Type.StructName }}) String() string {
 	return "{{ $.Type.StructName }}"
 }
-
-{{ range $i, $method := .Methods }}
-{{ godoc $method.Name $method.Doc "" }}func ({{ $.Type.Lower }} *{{ $.Type.StructName }}) {{ upper $method.Name }}(ctx *slapi.RequestContext, {{ $method.Arguments }}) ({{ $method.ReturnArguments }}) {
-	{{ $method.Body }}
-}
-{{ end }}
-
 `
 
 func main() {

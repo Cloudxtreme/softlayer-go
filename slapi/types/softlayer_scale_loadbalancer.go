@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_LoadBalancer - <nil>
@@ -63,28 +61,4 @@ type SoftLayer_Scale_LoadBalancer struct {
 
 func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) String() string {
 	return "SoftLayer_Scale_LoadBalancer"
-}
-
-// CreateObject - <nil>
-func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_LoadBalancer) (*SoftLayer_Scale_LoadBalancer, error) {
-	var returnValue *SoftLayer_Scale_LoadBalancer
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_LoadBalancer) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_scale_loadbalancer *SoftLayer_Scale_LoadBalancer) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_LoadBalancer, error) {
-	var returnValue *SoftLayer_Scale_LoadBalancer
-	return returnValue, nil
 }

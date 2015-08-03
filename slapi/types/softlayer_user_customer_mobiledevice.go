@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_User_Customer_MobileDevice - This class represents a mobile device belonging to a user.
@@ -73,28 +71,4 @@ type SoftLayer_User_Customer_MobileDevice struct {
 
 func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) String() string {
 	return "SoftLayer_User_Customer_MobileDevice"
-}
-
-// CreateObject - Create a new mobile device association for a user.
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Customer_MobileDevice) (*SoftLayer_User_Customer_MobileDevice, error) {
-	var returnValue *SoftLayer_User_Customer_MobileDevice
-	return returnValue, nil
-}
-
-// DeleteObject - no documentation
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - Edit the object by passing in a modified instance of the object
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_User_Customer_MobileDevice) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_MobileDevice, error) {
-	var returnValue *SoftLayer_User_Customer_MobileDevice
-	return returnValue, nil
 }

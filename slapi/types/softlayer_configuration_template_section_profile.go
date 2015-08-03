@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Section_Profile - Some configuration templates let you create a
@@ -39,10 +37,4 @@ type SoftLayer_Configuration_Template_Section_Profile struct {
 
 func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile) String() string {
 	return "SoftLayer_Configuration_Template_Section_Profile"
-}
-
-// GetObject - <nil>
-func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Section_Profile, error) {
-	var returnValue *SoftLayer_Configuration_Template_Section_Profile
-	return returnValue, nil
 }

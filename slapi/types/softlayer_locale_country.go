@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Locale_Country - <nil>
 type SoftLayer_Locale_Country struct {
@@ -21,18 +17,4 @@ type SoftLayer_Locale_Country struct {
 
 func (softlayer_locale_country *SoftLayer_Locale_Country) String() string {
 	return "SoftLayer_Locale_Country"
-}
-
-// GetAvailableCountries - Use this method to retrieve a list of countries and locale information
-// available to the current user.
-func (softlayer_locale_country *SoftLayer_Locale_Country) GetAvailableCountries(ctx *slapi.RequestContext) ([]*SoftLayer_Locale_Country, error) {
-	var returnValue []*SoftLayer_Locale_Country
-	return returnValue, nil
-}
-
-// GetCountries - Use this method to retrieve a list of countries and locale information such as
-// country code and state/provinces.
-func (softlayer_locale_country *SoftLayer_Locale_Country) GetCountries(ctx *slapi.RequestContext) ([]*SoftLayer_Locale_Country, error) {
-	var returnValue []*SoftLayer_Locale_Country
-	return returnValue, nil
 }

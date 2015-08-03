@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Message_Delivery - <nil>
@@ -50,16 +48,4 @@ type SoftLayer_Network_Message_Delivery struct {
 
 func (softlayer_network_message_delivery *SoftLayer_Network_Message_Delivery) String() string {
 	return "SoftLayer_Network_Message_Delivery"
-}
-
-// EditObject - <nil>
-func (softlayer_network_message_delivery *SoftLayer_Network_Message_Delivery) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Message_Delivery) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_message_delivery *SoftLayer_Network_Message_Delivery) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Message_Delivery, error) {
-	var returnValue *SoftLayer_Network_Message_Delivery
-	return returnValue, nil
 }

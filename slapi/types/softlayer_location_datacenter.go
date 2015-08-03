@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Location_Datacenter - SoftLayer_Location_Datacenter extends the [[SoftLayer_Location]]
 // data type to include datacenter-specific properties.
@@ -71,20 +67,4 @@ type SoftLayer_Location_Datacenter struct {
 
 func (softlayer_location_datacenter *SoftLayer_Location_Datacenter) String() string {
 	return "SoftLayer_Location_Datacenter"
-}
-
-// GetObject - <nil>
-func (softlayer_location_datacenter *SoftLayer_Location_Datacenter) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Location_Datacenter, error) {
-	var returnValue *SoftLayer_Location_Datacenter
-	return returnValue, nil
-}
-
-// GetStatisticsGraphImage - Retrieve a graph of a SoftLayer datacenter's last 48 hours of network
-// activity. Statistics graphs show traffic outbound from a datacenter on top and inbound traffic on
-// the bottom followed by a legend of the network services tracked in the graph.
-// getStatisticsGraphImage returns a PNG image of variable width and height depending on the number of
-// services reported in the image.
-func (softlayer_location_datacenter *SoftLayer_Location_Datacenter) GetStatisticsGraphImage(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
 }

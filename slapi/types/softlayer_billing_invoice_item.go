@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Invoice_Item - Each billing invoice item makes up a record within an invoice. This
@@ -185,12 +183,4 @@ type SoftLayer_Billing_Invoice_Item struct {
 
 func (softlayer_billing_invoice_item *SoftLayer_Billing_Invoice_Item) String() string {
 	return "SoftLayer_Billing_Invoice_Item"
-}
-
-// GetObject - getObject retrieves the SoftLayer_Billing_Invoice_Item object whose ID number
-// corresponds to the ID number of the init parameter passed to the SoftLayer_Billing_Invoice_Item
-// service. You can only retrieve the items tied to the account that your portal user is assigned to.
-func (softlayer_billing_invoice_item *SoftLayer_Billing_Invoice_Item) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Invoice_Item, error) {
-	var returnValue *SoftLayer_Billing_Invoice_Item
-	return returnValue, nil
 }

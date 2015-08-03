@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Scale_Group - <nil>
@@ -146,68 +144,4 @@ type SoftLayer_Scale_Group struct {
 
 func (softlayer_scale_group *SoftLayer_Scale_Group) String() string {
 	return "SoftLayer_Scale_Group"
-}
-
-// CreateObject - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Group) (*SoftLayer_Scale_Group, error) {
-	var returnValue *SoftLayer_Scale_Group
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Scale_Group) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// ForceDeleteObject - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) ForceDeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetAvailableHourlyInstanceLimit - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) GetAvailableHourlyInstanceLimit(ctx *slapi.RequestContext) (int, error) {
-	var returnValue int
-	return returnValue, nil
-}
-
-// GetAvailableRegionalGroups - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) GetAvailableRegionalGroups(ctx *slapi.RequestContext) ([]*SoftLayer_Location_Group, error) {
-	var returnValue []*SoftLayer_Location_Group
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Scale_Group, error) {
-	var returnValue *SoftLayer_Scale_Group
-	return returnValue, nil
-}
-
-// Resume - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) Resume(ctx *slapi.RequestContext) error {
-	return nil
-}
-
-// Scale - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) Scale(ctx *slapi.RequestContext, delta int) ([]*SoftLayer_Scale_Member, error) {
-	var returnValue []*SoftLayer_Scale_Member
-	return returnValue, nil
-}
-
-// ScaleTo - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) ScaleTo(ctx *slapi.RequestContext, number int) ([]*SoftLayer_Scale_Member, error) {
-	var returnValue []*SoftLayer_Scale_Member
-	return returnValue, nil
-}
-
-// Suspend - <nil>
-func (softlayer_scale_group *SoftLayer_Scale_Group) Suspend(ctx *slapi.RequestContext) error {
-	return nil
 }

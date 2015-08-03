@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Software_VirtualLicense - SoftLayer_Software_VirtualLicense is the application class that
 // handles a special type of Software License. Most software licenses are licensed to a specific
@@ -58,20 +54,4 @@ type SoftLayer_Software_VirtualLicense struct {
 
 func (softlayer_software_virtuallicense *SoftLayer_Software_VirtualLicense) String() string {
 	return "SoftLayer_Software_VirtualLicense"
-}
-
-// GetLicenseFile - Attempt to retrieve the file associated with a virtual license, if such a file
-// exists. If there is no file for this virtual license, calling this method will either throw an
-// exception or return false.
-func (softlayer_software_virtuallicense *SoftLayer_Software_VirtualLicense) GetLicenseFile(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Software_VirtualLicense object whose ID number
-// corresponds to the ID number of the init parameter passed to the SoftLayer_Software_VirtualLicense
-// service. You can only retrieve Virtual Licenses assigned to your account number.
-func (softlayer_software_virtuallicense *SoftLayer_Software_VirtualLicense) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Software_VirtualLicense, error) {
-	var returnValue *SoftLayer_Software_VirtualLicense
-	return returnValue, nil
 }

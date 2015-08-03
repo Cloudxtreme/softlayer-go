@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type - <nil>
 type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type struct {
@@ -27,16 +23,4 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attri
 
 func (softlayer_network_application_delivery_controller_loadbalancer_health_attribute_type *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type) String() string {
 	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_health_attribute_type *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type, error) {
-	var returnValue []*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_health_attribute_type *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type, error) {
-	var returnValue *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type
-	return returnValue, nil
 }

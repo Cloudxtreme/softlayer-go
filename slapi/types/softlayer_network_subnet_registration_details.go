@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Subnet_Registration_Details - The SoftLayer_Network_Subnet_Registration_Details
@@ -39,27 +37,4 @@ type SoftLayer_Network_Subnet_Registration_Details struct {
 
 func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) String() string {
 	return "SoftLayer_Network_Subnet_Registration_Details"
-}
-
-// CreateObject - This method will create a new SoftLayer_Network_Subnet_Registration_Details object.
-// Input - [[SoftLayer_Network_Subnet_Registration_Details
-// (type)|SoftLayer_Network_Subnet_Registration_Details]] The numeric ID of the
-// [[SoftLayer_Account_Regional_Registry_Detail|detail]] object to relate. The numeric ID of the
-// [[SoftLayer_Network_Subnet_Registration|registration]] object to relate.
-func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Subnet_Registration_Details) (*SoftLayer_Network_Subnet_Registration_Details, error) {
-	var returnValue *SoftLayer_Network_Subnet_Registration_Details
-	return returnValue, nil
-}
-
-// DeleteObject - This method will delete an existing SoftLayer_Account_Regional_Registry_Detail
-// object.
-func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Subnet_Registration_Details, error) {
-	var returnValue *SoftLayer_Network_Subnet_Registration_Details
-	return returnValue, nil
 }

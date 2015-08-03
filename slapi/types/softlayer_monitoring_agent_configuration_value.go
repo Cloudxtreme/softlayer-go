@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Monitoring_Agent_Configuration_Value - no documentation
 type SoftLayer_Monitoring_Agent_Configuration_Value struct {
@@ -46,10 +42,4 @@ type SoftLayer_Monitoring_Agent_Configuration_Value struct {
 
 func (softlayer_monitoring_agent_configuration_value *SoftLayer_Monitoring_Agent_Configuration_Value) String() string {
 	return "SoftLayer_Monitoring_Agent_Configuration_Value"
-}
-
-// GetObject - <nil>
-func (softlayer_monitoring_agent_configuration_value *SoftLayer_Monitoring_Agent_Configuration_Value) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Monitoring_Agent_Configuration_Value, error) {
-	var returnValue *SoftLayer_Monitoring_Agent_Configuration_Value
-	return returnValue, nil
 }

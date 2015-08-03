@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Section_Definition - Configuration definition gives you details of
@@ -85,10 +83,4 @@ type SoftLayer_Configuration_Template_Section_Definition struct {
 
 func (softlayer_configuration_template_section_definition *SoftLayer_Configuration_Template_Section_Definition) String() string {
 	return "SoftLayer_Configuration_Template_Section_Definition"
-}
-
-// GetObject - <nil>
-func (softlayer_configuration_template_section_definition *SoftLayer_Configuration_Template_Section_Definition) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Section_Definition, error) {
-	var returnValue *SoftLayer_Configuration_Template_Section_Definition
-	return returnValue, nil
 }

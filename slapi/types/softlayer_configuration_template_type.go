@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Type - The SoftLayer_Configuration_Template_Type data type contains
@@ -27,10 +25,4 @@ type SoftLayer_Configuration_Template_Type struct {
 
 func (softlayer_configuration_template_type *SoftLayer_Configuration_Template_Type) String() string {
 	return "SoftLayer_Configuration_Template_Type"
-}
-
-// GetObject - <nil>
-func (softlayer_configuration_template_type *SoftLayer_Configuration_Template_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Type, error) {
-	var returnValue *SoftLayer_Configuration_Template_Type
-	return returnValue, nil
 }

@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Metric_Tracking_Object_Bandwidth_Summary - This data type provides commonly used bandwidth
 // summary components for the current billing cycle.
@@ -46,10 +42,4 @@ type SoftLayer_Metric_Tracking_Object_Bandwidth_Summary struct {
 
 func (softlayer_metric_tracking_object_bandwidth_summary *SoftLayer_Metric_Tracking_Object_Bandwidth_Summary) String() string {
 	return "SoftLayer_Metric_Tracking_Object_Bandwidth_Summary"
-}
-
-// GetObject - <nil>
-func (softlayer_metric_tracking_object_bandwidth_summary *SoftLayer_Metric_Tracking_Object_Bandwidth_Summary) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Metric_Tracking_Object_Bandwidth_Summary, error) {
-	var returnValue *SoftLayer_Metric_Tracking_Object_Bandwidth_Summary
-	return returnValue, nil
 }

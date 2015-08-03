@@ -196,31 +196,6 @@ func (e MetadataEntity) Imports() map[string]string {
 		imports[propertyGoType.Alias] = propertyGoType.Import
 	}
 
-	for _, method := range e.Methods {
-		// Collect import for method return types
-		methodGoType := method.Type.GetGoType()
-		if methodGoType == nil {
-			continue
-		}
-		if methodGoType.BuiltIn == true {
-			continue
-		}
-		imports[methodGoType.Alias] = methodGoType.Import
-	}
-
-	for _, method := range e.Methods {
-		// Collect import for parameters
-		for _, param := range method.Parameters {
-			paramGoType := param.Type.GetGoType()
-			if paramGoType == nil {
-				continue
-			}
-			if paramGoType.BuiltIn == true {
-				continue
-			}
-			imports[paramGoType.Alias] = paramGoType.Import
-		}
-	}
 	return imports
 }
 

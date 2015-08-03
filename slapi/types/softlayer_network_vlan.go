@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Vlan - The SoftLayer_Network_Vlan data type models a single within SoftLayer's
@@ -227,88 +225,4 @@ type SoftLayer_Network_Vlan struct {
 
 func (softlayer_network_vlan *SoftLayer_Network_Vlan) String() string {
 	return "SoftLayer_Network_Vlan"
-}
-
-// EditObject - no documentation
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Vlan) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetCancelFailureReasons - Get a set of reasons why this may not be cancelled. If the result is
-// empty, this may be cancelled.
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) GetCancelFailureReasons(ctx *slapi.RequestContext) ([]string, error) {
-	var returnValue []string
-	return returnValue, nil
-}
-
-// GetFirewallProtectableIpAddresses - Get the IP addresses associated with this server that are
-// protectable by a network component firewall. Note, this may not return all values for IPv6 subnets
-// for this Please use getFirewallProtectableSubnets to get all protectable subnets.
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) GetFirewallProtectableIpAddresses(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Subnet_IpAddress, error) {
-	var returnValue []*SoftLayer_Network_Subnet_IpAddress
-	return returnValue, nil
-}
-
-// GetFirewallProtectableSubnets - Get the subnets associated with this server that are protectable by
-// a network component firewall.
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) GetFirewallProtectableSubnets(ctx *slapi.RequestContext) ([]*SoftLayer_Network_Subnet, error) {
-	var returnValue []*SoftLayer_Network_Subnet
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Network_Vlan object whose ID number corresponds to the
-// ID number of the init parameter passed to the SoftLayer_Network_Vlan service. You can only retrieve
-// VLANs that are associated with your SoftLayer customer account.
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Vlan, error) {
-	var returnValue *SoftLayer_Network_Vlan
-	return returnValue, nil
-}
-
-// GetPrivateVlan - Retrieve a VLAN's associated private network getPrivateVlan gathers it's
-// information by retrieving the private of a VLAN's primary hardware object.
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) GetPrivateVlan(ctx *slapi.RequestContext) (*SoftLayer_Network_Vlan, error) {
-	var returnValue *SoftLayer_Network_Vlan
-	return returnValue, nil
-}
-
-// GetPrivateVlanByIpAddress - Retrieve the private network associated with an IP address.
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) GetPrivateVlanByIpAddress(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Network_Vlan, error) {
-	var returnValue *SoftLayer_Network_Vlan
-	return returnValue, nil
-}
-
-// GetPublicVlanByFqdn - Retrieve the that belongs to a server's public network interface, as described
-// by a server's fully-qualified domain name. A server's is it's hostname, followed by a period then
-// it's domain name.
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) GetPublicVlanByFqdn(ctx *slapi.RequestContext, fqdn string) (*SoftLayer_Network_Vlan, error) {
-	var returnValue *SoftLayer_Network_Vlan
-	return returnValue, nil
-}
-
-// GetReverseDomainRecords - Retrieve all reverse DNS records associated with the subnets assigned to a
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) GetReverseDomainRecords(ctx *slapi.RequestContext) ([]*SoftLayer_Dns_Domain, error) {
-	var returnValue []*SoftLayer_Dns_Domain
-	return returnValue, nil
-}
-
-// GetVlanForIpAddress - Retrieve the associated with an IP address via the IP's associated subnet.
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) GetVlanForIpAddress(ctx *slapi.RequestContext, ipAddress string) (*SoftLayer_Network_Vlan, error) {
-	var returnValue *SoftLayer_Network_Vlan
-	return returnValue, nil
-}
-
-// SetTags - Tag a by passing in one or more tags separated by a comma. Tag references are cleared out
-// every time this method is called. If your is already tagged you will need to pass the current tags
-// along with any new ones. To remove all tag references pass an empty string. To remove one or more
-// tags omit them from the tag list.
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) SetTags(ctx *slapi.RequestContext, tags string) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// UpdateFirewallIntraVlanCommunication - The '''getSensorData''' method updates a VLAN's firewall to
-// allow or disallow intra-VLAN communication.
-func (softlayer_network_vlan *SoftLayer_Network_Vlan) UpdateFirewallIntraVlanCommunication(ctx *slapi.RequestContext, enabled bool) error {
-	return nil
 }

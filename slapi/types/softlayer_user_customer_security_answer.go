@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_User_Customer_Security_Answer - The SoftLayer_User_Customer_Security_Answer type contains
 // user's answers to security questions.
@@ -31,12 +27,4 @@ type SoftLayer_User_Customer_Security_Answer struct {
 
 func (softlayer_user_customer_security_answer *SoftLayer_User_Customer_Security_Answer) String() string {
 	return "SoftLayer_User_Customer_Security_Answer"
-}
-
-// GetObject - getObject retrieves the SoftLayer_User_Customer_Security_Answer object whose ID number
-// corresponds to the ID number of the init parameter passed to the
-// SoftLayer_User_Customer_Security_Answer service.
-func (softlayer_user_customer_security_answer *SoftLayer_User_Customer_Security_Answer) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_Security_Answer, error) {
-	var returnValue *SoftLayer_User_Customer_Security_Answer
-	return returnValue, nil
 }

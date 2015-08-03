@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Configuration_Storage_Group_Array_Type - no documentation
 type SoftLayer_Configuration_Storage_Group_Array_Type struct {
@@ -42,16 +38,4 @@ type SoftLayer_Configuration_Storage_Group_Array_Type struct {
 
 func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) String() string {
 	return "SoftLayer_Configuration_Storage_Group_Array_Type"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Configuration_Storage_Group_Array_Type, error) {
-	var returnValue []*SoftLayer_Configuration_Storage_Group_Array_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Storage_Group_Array_Type, error) {
-	var returnValue *SoftLayer_Configuration_Storage_Group_Array_Type
-	return returnValue, nil
 }

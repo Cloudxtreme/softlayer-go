@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Dns_Domain_ResourceRecord_MxType - SoftLayer_Dns_Domain_ResourceRecord_MxType is a
 // SoftLayer_Dns_Domain_ResourceRecord object whose ''type'' property is set to "mx" and used to
@@ -20,71 +16,4 @@ type SoftLayer_Dns_Domain_ResourceRecord_MxType struct {
 
 func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) String() string {
 	return "SoftLayer_Dns_Domain_ResourceRecord_MxType"
-}
-
-// CreateObject - createObject creates a new MX record. The ''host'' property of the templateObject
-// parameter is scrubbed to remove all non-alpha numeric characters except for and The ''data''
-// property of the templateObject parameter is scrubbed to remove all non-alphanumeric characters for
-// "." and Creating an MX record updates the serial number of the domain the resource record is
-// associated with.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Dns_Domain_ResourceRecord_MxType) (*SoftLayer_Dns_Domain_ResourceRecord_MxType, error) {
-	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_MxType
-	return returnValue, nil
-}
-
-// CreateObjects - Create multiple MX records on a domain. This follows the same logic as
-// ''createObject'. The serial number of the domain associated with this MX record is updated upon
-// creation. ''createObjects'' returns Boolean ''true'' on successful creation or ''false'' if it was
-// unable to create a resource record.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Dns_Domain_ResourceRecord) ([]*SoftLayer_Dns_Domain_ResourceRecord, error) {
-	var returnValue []*SoftLayer_Dns_Domain_ResourceRecord
-	return returnValue, nil
-}
-
-// DeleteObject - Delete a domain's MX record. '''This cannot be undone.''' Be wary of running this
-// method. If you remove a resource record in error you will need to re-create it by creating a new
-// SoftLayer_Dns_Domain_ResourceRecord_MxType object. The serial number of the domain associated with
-// this MX record is updated upon deletion. ''deleteObject'' returns Boolean ''true'' on successful
-// deletion or ''false'' if it was unable to remove a resource record.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// DeleteObjects - Remove multiple MX records from a domain. This follows the same logic as
-// ''deleteObject'' and '''cannot be undone'''. The serial number of the domain associated with this MX
-// record is updated upon deletion. ''deleteObjects'' returns Boolean ''true'' on successful deletion
-// or ''false'' if it was unable to remove a resource record.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) DeleteObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Dns_Domain_ResourceRecord_MxType) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - editObject edits an existing MX resource record. The ''host'' property of the
-// templateObject parameter is scrubbed to remove all non-alpha numeric characters except for and The
-// ''data'' property of the templateObject parameter is scrubbed to remove all non-alphanumeric
-// characters for "." and Editing an MX record updates the serial number of the domain the record is
-// associated with. ''editObject'' returns Boolean ''true'' on a successful edit or ''false'' if it was
-// unable to edit the resource record.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Dns_Domain_ResourceRecord_MxType) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObjects - Edit multiple MX records on a domain. This follows the same logic as ''createObject'.
-// The serial number of the domain associated with this MX record is updated upon creation.
-// ''createObjects'' returns Boolean ''true'' on successful creation or ''false'' if it was unable to
-// create a resource record.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) EditObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Dns_Domain_ResourceRecord_MxType) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Dns_Domain_ResourceRecord_MxType object whose ID
-// number corresponds to the ID number of the init parameter passed to the
-// SoftLayer_Dns_Domain_ResourceRecord_MxType service. You can only retrieve resource records belonging
-// to domains that are assigned to your SoftLayer account.
-func (softlayer_dns_domain_resourcerecord_mxtype *SoftLayer_Dns_Domain_ResourceRecord_MxType) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Dns_Domain_ResourceRecord_MxType, error) {
-	var returnValue *SoftLayer_Dns_Domain_ResourceRecord_MxType
-	return returnValue, nil
 }

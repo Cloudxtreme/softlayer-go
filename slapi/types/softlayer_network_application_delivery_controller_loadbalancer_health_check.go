@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check - <nil>
 type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check struct {
@@ -45,10 +41,4 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check
 
 func (softlayer_network_application_delivery_controller_loadbalancer_health_check *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check) String() string {
 	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check"
-}
-
-// GetObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_health_check *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check, error) {
-	var returnValue *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check
-	return returnValue, nil
 }

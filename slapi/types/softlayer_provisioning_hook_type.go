@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Provisioning_Hook_Type - <nil>
 type SoftLayer_Provisioning_Hook_Type struct {
@@ -24,16 +20,4 @@ type SoftLayer_Provisioning_Hook_Type struct {
 
 func (softlayer_provisioning_hook_type *SoftLayer_Provisioning_Hook_Type) String() string {
 	return "SoftLayer_Provisioning_Hook_Type"
-}
-
-// GetAllHookTypes - <nil>
-func (softlayer_provisioning_hook_type *SoftLayer_Provisioning_Hook_Type) GetAllHookTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Provisioning_Hook_Type, error) {
-	var returnValue []*SoftLayer_Provisioning_Hook_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_provisioning_hook_type *SoftLayer_Provisioning_Hook_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Hook_Type, error) {
-	var returnValue *SoftLayer_Provisioning_Hook_Type
-	return returnValue, nil
 }

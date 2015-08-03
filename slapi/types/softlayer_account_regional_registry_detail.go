@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Regional_Registry_Detail - <nil>
@@ -58,47 +56,4 @@ type SoftLayer_Account_Regional_Registry_Detail struct {
 
 func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) String() string {
 	return "SoftLayer_Account_Regional_Registry_Detail"
-}
-
-// CreateObject - This method will create a new SoftLayer_Account_Regional_Registry_Detail object.
-// Input - [[SoftLayer_Account_Regional_Registry_Detail
-// (type)|SoftLayer_Account_Regional_Registry_Detail]] The
-// [[SoftLayer_Account_Regional_Registry_Detail_Type|type id]] of this detail object The id of the
-// [[SoftLayer_Account_Rwhois_Handle|RWhois handle]] object. This is only to be used for detailed
-// registrations, where a subnet is registered to an organization. The associated handle will be
-// required to be a valid organization object id at the relevant registry. In this case, the detail
-// object will only be valid for the registry the organization belongs to.
-func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Regional_Registry_Detail) (*SoftLayer_Account_Regional_Registry_Detail, error) {
-	var returnValue *SoftLayer_Account_Regional_Registry_Detail
-	return returnValue, nil
-}
-
-// DeleteObject - This method will delete an existing SoftLayer_Account_Regional_Registry_Detail
-// object.
-func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - This method will edit an existing SoftLayer_Account_Regional_Registry_Detail object.
-// For more detail, see [[SoftLayer_Account_Regional_Registry_Detail::createObject|createObject]].
-func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Regional_Registry_Detail) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Regional_Registry_Detail, error) {
-	var returnValue *SoftLayer_Account_Regional_Registry_Detail
-	return returnValue, nil
-}
-
-// UpdateReferencedRegistrations - This method will create a bulk transaction to update any
-// registrations that reference this detail object. It should only be called from a child class such as
-// [[SoftLayer_Account_Regional_Registry_Detail_Person]] or
-// [[SoftLayer_Account_Regional_Registry_Detail_Network]]. The registrations should be in the Open or
-// Registration_Complete status.
-func (softlayer_account_regional_registry_detail *SoftLayer_Account_Regional_Registry_Detail) UpdateReferencedRegistrations(ctx *slapi.RequestContext) (*SoftLayer_Container_Network_Subnet_Registration_TransactionDetails, error) {
-	var returnValue *SoftLayer_Container_Network_Subnet_Registration_TransactionDetails
-	return returnValue, nil
 }

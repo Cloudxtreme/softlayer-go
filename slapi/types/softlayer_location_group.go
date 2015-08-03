@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Location_Group - <nil>
 type SoftLayer_Location_Group struct {
@@ -36,16 +32,4 @@ type SoftLayer_Location_Group struct {
 
 func (softlayer_location_group *SoftLayer_Location_Group) String() string {
 	return "SoftLayer_Location_Group"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_location_group *SoftLayer_Location_Group) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Location_Group, error) {
-	var returnValue []*SoftLayer_Location_Group
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_location_group *SoftLayer_Location_Group) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Location_Group, error) {
-	var returnValue *SoftLayer_Location_Group
-	return returnValue, nil
 }

@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Application_Delivery_Controller_Configuration_History - The
@@ -30,16 +28,4 @@ type SoftLayer_Network_Application_Delivery_Controller_Configuration_History str
 
 func (softlayer_network_application_delivery_controller_configuration_history *SoftLayer_Network_Application_Delivery_Controller_Configuration_History) String() string {
 	return "SoftLayer_Network_Application_Delivery_Controller_Configuration_History"
-}
-
-// DeleteObject - deleteObject permanently removes a configuration history record
-func (softlayer_network_application_delivery_controller_configuration_history *SoftLayer_Network_Application_Delivery_Controller_Configuration_History) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_application_delivery_controller_configuration_history *SoftLayer_Network_Application_Delivery_Controller_Configuration_History) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Application_Delivery_Controller_Configuration_History, error) {
-	var returnValue *SoftLayer_Network_Application_Delivery_Controller_Configuration_History
-	return returnValue, nil
 }

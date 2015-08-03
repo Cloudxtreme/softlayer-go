@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Item - Every individual item that a SoftLayer customer is billed for is recorded
@@ -377,73 +375,4 @@ type SoftLayer_Billing_Item struct {
 
 func (softlayer_billing_item *SoftLayer_Billing_Item) String() string {
 	return "SoftLayer_Billing_Item"
-}
-
-// CancelItem - Cancel the resource or service for a billing Item. By default the billing item will be
-// cancelled immediately and reclaim of the resource will begin shortly. Setting the
-// "cancelImmediately" property to false will delay the cancellation until the next bill date. * The
-// reason parameter could be from the list below: * "No longer needed" * "Business closing down" *
-// "Server / Upgrade Costs" * "Migrating to larger server" * "Migrating to smaller server" * "Migrating
-// to a different SoftLayer datacenter" * "Network performance / latency" * "Support response / timing"
-// * "Sales process / upgrades" * "Moving to competitor"
-func (softlayer_billing_item *SoftLayer_Billing_Item) CancelItem(ctx *slapi.RequestContext, cancelImmediately bool, cancelAssociatedBillingItems bool, reason string, customerNote string) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// CancelService - Cancel the resource or service (excluding bare metal servers) for a billing Item.
-// The billing item will be cancelled immediately and reclaim of the resource will begin shortly.
-func (softlayer_billing_item *SoftLayer_Billing_Item) CancelService(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// CancelServiceOnAnniversaryDate - no documentation
-func (softlayer_billing_item *SoftLayer_Billing_Item) CancelServiceOnAnniversaryDate(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Billing_Item object whose ID number corresponds to the
-// ID number of the init parameter passed to the SoftLayer_Billing_Item service. You can only retrieve
-// billing items tied to the account that your portal user is assigned to. Billing items are an
-// account's items of billable items. There are "parent" billing items and "child" billing items. The
-// server billing item is generally referred to as a parent billing item. The items tied to a server,
-// such as ram, harddrives, and operating systems are considered "child" billing items.
-func (softlayer_billing_item *SoftLayer_Billing_Item) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Item, error) {
-	var returnValue *SoftLayer_Billing_Item
-	return returnValue, nil
-}
-
-// GetServiceBillingItemsByCategory - This service returns billing items of a specified category code.
-// This service should be used to retrieve billing items that you wish to cancel. Some billing items
-// can be canceled via [[SoftLayer_Security_Certificate_Request|service cancellation]] service. In
-// order to find billing items for cancellation, use
-// [[SoftLayer_Product_Item_Category::getValidCancelableServiceItemCategories|product categories]]
-// service to retrieve category codes that are eligible for cancellation.
-func (softlayer_billing_item *SoftLayer_Billing_Item) GetServiceBillingItemsByCategory(ctx *slapi.RequestContext, categoryCode string, includeZeroRecurringFee bool) ([]*SoftLayer_Billing_Item, error) {
-	var returnValue []*SoftLayer_Billing_Item
-	return returnValue, nil
-}
-
-// RemoveAssociationId - no documentation
-func (softlayer_billing_item *SoftLayer_Billing_Item) RemoveAssociationId(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// SetAssociationId - Set an associated billing item to an orphan billing item. Associations allow you
-// to tie an "orphaned" billing item, any non-server billing item that doesn't have a parent item such
-// as secondary IP subnets or StorageLayer accounts, to a server billing item. You may only set an
-// association for an orphan to a server. You cannot associate a server to an orphan if the either the
-// server or orphan billing items have a cancellation date set.
-func (softlayer_billing_item *SoftLayer_Billing_Item) SetAssociationId(ctx *slapi.RequestContext, associatedId int) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// VoidCancelService - no documentation
-func (softlayer_billing_item *SoftLayer_Billing_Item) VoidCancelService(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

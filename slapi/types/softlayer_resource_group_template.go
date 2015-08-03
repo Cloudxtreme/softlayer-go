@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Resource_Group_Template - <nil>
 type SoftLayer_Resource_Group_Template struct {
@@ -36,16 +32,4 @@ type SoftLayer_Resource_Group_Template struct {
 
 func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) String() string {
 	return "SoftLayer_Resource_Group_Template"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Resource_Group_Template, error) {
-	var returnValue []*SoftLayer_Resource_Group_Template
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Resource_Group_Template, error) {
-	var returnValue *SoftLayer_Resource_Group_Template
-	return returnValue, nil
 }

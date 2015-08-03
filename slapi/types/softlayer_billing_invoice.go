@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Billing_Invoice - The SoftLayer_Billing_Invoice data type contains general information
@@ -189,95 +187,4 @@ type SoftLayer_Billing_Invoice struct {
 
 func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) String() string {
 	return "SoftLayer_Billing_Invoice"
-}
-
-// EmailInvoices - Create a transaction to email PDF and/or Excel invoice links to the requesting
-// user's email address. You must have a PDF reader installed in order to view these files.
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) EmailInvoices(ctx *slapi.RequestContext, options SoftLayer_Container_Billing_Invoice_Email) error {
-	return nil
-}
-
-// GetExcel - Retrieve a Microsoft Excel spreadsheet of a SoftLayer invoice. You must have a Microsoft
-// Excel reader installed in order to view these invoice files.
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetExcel(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Billing_Invoice object whose ID number corresponds to
-// the ID number of the init parameter passed to the SoftLayer_Billing_Invoice service. You can only
-// retrieve invoices that are assigned to your portal user's account.
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Billing_Invoice, error) {
-	var returnValue *SoftLayer_Billing_Invoice
-	return returnValue, nil
-}
-
-// GetPdf - Retrieve a PDF record of a SoftLayer invoice. SoftLayer keeps PDF records of all closed
-// invoices for customer retrieval from the portal and You must have a PDF reader installed in order to
-// view these invoice files.
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetPdf(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetPdfDetailed - Retrieve a PDF record of a SoftLayer detailed invoice summary. SoftLayer keeps PDF
-// records of all closed invoices for customer retrieval from the portal and You must have a PDF reader
-// installed in order to view these files.
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetPdfDetailed(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetPdfDetailedFilename - <nil>
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetPdfDetailedFilename(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetPdfFileSize - Retrieve the size of a PDF record of a SoftLayer invoice. SoftLayer keeps PDF
-// records of all closed invoices for customer retrieval from the portal and
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetPdfFileSize(ctx *slapi.RequestContext) (int, error) {
-	var returnValue int
-	return returnValue, nil
-}
-
-// GetPdfFilename - <nil>
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetPdfFilename(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetPreliminaryExcel - Retrieve a Microsoft Excel record of a SoftLayer invoice. SoftLayer generates
-// Microsoft Excel records of all closed invoices for customer retrieval from the portal and You must
-// have a Microsoft Excel reader installed in order to view these invoice files.
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetPreliminaryExcel(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetPreliminaryPdf - Retrieve a PDF record of a SoftLayer invoice. SoftLayer keeps PDF records of all
-// closed invoices for customer retrieval from the portal and You must have a PDF reader installed in
-// order to view these invoice files.
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetPreliminaryPdf(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetPreliminaryPdfDetailed - Retrieve a PDF record of the detailed version of a SoftLayer invoice.
-// SoftLayer keeps PDF records of all closed invoices for customer retrieval from the portal and
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetPreliminaryPdfDetailed(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetXlsFilename - <nil>
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetXlsFilename(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetZeroFeeItemCounts - <nil>
-func (softlayer_billing_invoice *SoftLayer_Billing_Invoice) GetZeroFeeItemCounts(ctx *slapi.RequestContext) ([]*SoftLayer_Container_Product_Item_Category_ZeroFee_Count, error) {
-	var returnValue []*SoftLayer_Container_Product_Item_Category_ZeroFee_Count
-	return returnValue, nil
 }

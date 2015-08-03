@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Subnet_Rwhois_Data - Every SoftLayer customer account has contact information
@@ -70,19 +68,4 @@ type SoftLayer_Network_Subnet_Rwhois_Data struct {
 
 func (softlayer_network_subnet_rwhois_data *SoftLayer_Network_Subnet_Rwhois_Data) String() string {
 	return "SoftLayer_Network_Subnet_Rwhois_Data"
-}
-
-// EditObject - Edit the record by passing in a modified version of the record object. All fields are
-// editable.
-func (softlayer_network_subnet_rwhois_data *SoftLayer_Network_Subnet_Rwhois_Data) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Subnet_Rwhois_Data) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Network_Subnet_Rwhois_Data object whose ID corresponds
-// to the ID number of the init parameter passed to the SoftLayer_Network_Subnet_Rwhois_Data service.
-// The best way to get Rwhois Data for an account is through getRhwoisData on the Account service.
-func (softlayer_network_subnet_rwhois_data *SoftLayer_Network_Subnet_Rwhois_Data) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Subnet_Rwhois_Data, error) {
-	var returnValue *SoftLayer_Network_Subnet_Rwhois_Data
-	return returnValue, nil
 }

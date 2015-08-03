@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Notification_Occurrence_User - This type contains general information relating to a user
 // that may be impacted by a [[SoftLayer_Notification_Occurrence_Event]].
@@ -37,28 +33,4 @@ type SoftLayer_Notification_Occurrence_User struct {
 
 func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) String() string {
 	return "SoftLayer_Notification_Occurrence_User"
-}
-
-// Acknowledge - <nil>
-func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) Acknowledge(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetAllObjects - <nil>
-func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Notification_Occurrence_User, error) {
-	var returnValue []*SoftLayer_Notification_Occurrence_User
-	return returnValue, nil
-}
-
-// GetImpactedDeviceCount - <nil>
-func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) GetImpactedDeviceCount(ctx *slapi.RequestContext) (int, error) {
-	var returnValue int
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_Occurrence_User, error) {
-	var returnValue *SoftLayer_Notification_Occurrence_User
-	return returnValue, nil
 }

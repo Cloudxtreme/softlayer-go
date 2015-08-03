@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Location_Reservation - <nil>
 type SoftLayer_Location_Reservation struct {
@@ -42,16 +38,4 @@ type SoftLayer_Location_Reservation struct {
 
 func (softlayer_location_reservation *SoftLayer_Location_Reservation) String() string {
 	return "SoftLayer_Location_Reservation"
-}
-
-// GetAccountReservations - <nil>
-func (softlayer_location_reservation *SoftLayer_Location_Reservation) GetAccountReservations(ctx *slapi.RequestContext) ([]*SoftLayer_Location_Reservation, error) {
-	var returnValue []*SoftLayer_Location_Reservation
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_location_reservation *SoftLayer_Location_Reservation) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Location_Reservation, error) {
-	var returnValue *SoftLayer_Location_Reservation
-	return returnValue, nil
 }

@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release - <nil>
 type SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release struct {
@@ -33,12 +29,4 @@ type SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release struct {
 
 func (softlayer_auxiliary_press_release_media_partner_press_release *SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release) String() string {
 	return "SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release"
-}
-
-// GetObject - getObject retrieves the SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release
-// object whose media partner id number corresponds to the ID number of the init parameter passed to
-// the SoftLayer_Auxiliary_Press_Release service.
-func (softlayer_auxiliary_press_release_media_partner_press_release *SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release, error) {
-	var returnValue *SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release
-	return returnValue, nil
 }

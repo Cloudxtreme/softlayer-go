@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Account_Regional_Registry_Detail_Property_Type - Subnet Registration Detail Property Type
@@ -36,16 +34,4 @@ type SoftLayer_Account_Regional_Registry_Detail_Property_Type struct {
 
 func (softlayer_account_regional_registry_detail_property_type *SoftLayer_Account_Regional_Registry_Detail_Property_Type) String() string {
 	return "SoftLayer_Account_Regional_Registry_Detail_Property_Type"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_account_regional_registry_detail_property_type *SoftLayer_Account_Regional_Registry_Detail_Property_Type) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Regional_Registry_Detail_Property_Type, error) {
-	var returnValue []*SoftLayer_Account_Regional_Registry_Detail_Property_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_account_regional_registry_detail_property_type *SoftLayer_Account_Regional_Registry_Detail_Property_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Regional_Registry_Detail_Property_Type, error) {
-	var returnValue *SoftLayer_Account_Regional_Registry_Detail_Property_Type
-	return returnValue, nil
 }

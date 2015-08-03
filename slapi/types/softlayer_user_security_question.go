@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_User_Security_Question - The SoftLayer_User_Security_Question data type contains
 // questions.
@@ -25,17 +21,4 @@ type SoftLayer_User_Security_Question struct {
 
 func (softlayer_user_security_question *SoftLayer_User_Security_Question) String() string {
 	return "SoftLayer_User_Security_Question"
-}
-
-// GetAllObjects - no documentation
-func (softlayer_user_security_question *SoftLayer_User_Security_Question) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_User_Security_Question, error) {
-	var returnValue []*SoftLayer_User_Security_Question
-	return returnValue, nil
-}
-
-// GetObject - getAllObjects retrieves all the SoftLayer_User_Security_Question objects where it is set
-// to be viewable.
-func (softlayer_user_security_question *SoftLayer_User_Security_Question) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Security_Question, error) {
-	var returnValue *SoftLayer_User_Security_Question
-	return returnValue, nil
 }

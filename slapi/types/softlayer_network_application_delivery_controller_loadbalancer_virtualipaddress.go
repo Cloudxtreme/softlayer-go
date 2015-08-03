@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress - <nil>
 type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress struct {
@@ -104,47 +100,4 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAdd
 
 func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress) String() string {
 	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress"
-}
-
-// EditObject - Like any other API object, the load balancers can have their exposed properties edited
-// by passing in a modified version of the object. The load balancer object also can modify its
-// services in this way. Simply request the load balancer object you wish to edit, then modify the
-// objects in the services array and pass the modified object to this function. Services cannot be
-// deleted in this manner, you must call deleteObject() on the service to physically remove them from
-// the load balancer.
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetAvailableSecureTransportProtocols - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress) GetAvailableSecureTransportProtocols(ctx *slapi.RequestContext) ([]*SoftLayer_Security_SecureTransportProtocol, error) {
-	var returnValue []*SoftLayer_Security_SecureTransportProtocol
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress, error) {
-	var returnValue *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress
-	return returnValue, nil
-}
-
-// StartSsl - Start SSL acceleration on all SSL virtual services (those with a type of This action
-// should be taken only after configuring an SSL certificate for the virtual IP.
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress) StartSsl(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// StopSsl - Stop SSL acceleration on all SSL virtual services (those with a type of
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress) StopSsl(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// UpgradeConnectionLimit - Upgrades the connection limit on the Virtual IP to Address to the next,
-// higher connection limit of the same product.
-func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress) UpgradeConnectionLimit(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

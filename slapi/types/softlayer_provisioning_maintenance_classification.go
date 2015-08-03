@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Provisioning_Maintenance_Classification - The
 // SoftLayer_Provisioning_Maintenance_Classification represent a maintenance type for the specific
@@ -29,26 +25,4 @@ type SoftLayer_Provisioning_Maintenance_Classification struct {
 
 func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) String() string {
 	return "SoftLayer_Provisioning_Maintenance_Classification"
-}
-
-// GetMaintenanceClassification - Retrieve an array of
-// SoftLayer_Provisioning_Maintenance_Classification data types, which contain all maintenance
-// classifications.
-func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) GetMaintenanceClassification(ctx *slapi.RequestContext, maintenanceClassificationId int) ([]*SoftLayer_Provisioning_Maintenance_Classification, error) {
-	var returnValue []*SoftLayer_Provisioning_Maintenance_Classification
-	return returnValue, nil
-}
-
-// GetMaintenanceClassificationsByItemCategory - Retrieve an array of
-// SoftLayer_Provisioning_Maintenance_Classification data types, which contain all maintenance
-// classifications.
-func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) GetMaintenanceClassificationsByItemCategory(ctx *slapi.RequestContext) ([]*SoftLayer_Provisioning_Maintenance_Classification_Item_Category, error) {
-	var returnValue []*SoftLayer_Provisioning_Maintenance_Classification_Item_Category
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Maintenance_Classification, error) {
-	var returnValue *SoftLayer_Provisioning_Maintenance_Classification
-	return returnValue, nil
 }

@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Account_Media - The SoftLayer_Account_Media data type contains information on a single
 // piece of media associated with a Data Transfer Service request.
@@ -52,30 +48,4 @@ type SoftLayer_Account_Media struct {
 
 func (softlayer_account_media *SoftLayer_Account_Media) String() string {
 	return "SoftLayer_Account_Media"
-}
-
-// EditObject - Edit the properties of a media record by passing in a modified instance of a
-// SoftLayer_Account_Media object.
-func (softlayer_account_media *SoftLayer_Account_Media) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Media) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetAllMediaTypes - Retrieve a list supported media types for SoftLayer's Data Transfer Service.
-func (softlayer_account_media *SoftLayer_Account_Media) GetAllMediaTypes(ctx *slapi.RequestContext) ([]*SoftLayer_Account_Media_Type, error) {
-	var returnValue []*SoftLayer_Account_Media_Type
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_account_media *SoftLayer_Account_Media) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Media, error) {
-	var returnValue *SoftLayer_Account_Media
-	return returnValue, nil
-}
-
-// RemoveMediaFromList - Remove a media from a SoftLayer account's list of media. The media record is
-// not deleted.
-func (softlayer_account_media *SoftLayer_Account_Media) RemoveMediaFromList(ctx *slapi.RequestContext, mediaTemplate SoftLayer_Account_Media) (int, error) {
-	var returnValue int
-	return returnValue, nil
 }

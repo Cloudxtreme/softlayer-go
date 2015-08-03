@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Network_Message_Queue - The SoftLayer_Network_Message_Queue data type contains general
@@ -48,10 +46,4 @@ type SoftLayer_Network_Message_Queue struct {
 
 func (softlayer_network_message_queue *SoftLayer_Network_Message_Queue) String() string {
 	return "SoftLayer_Network_Message_Queue"
-}
-
-// GetObject - <nil>
-func (softlayer_network_message_queue *SoftLayer_Network_Message_Queue) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Message_Queue, error) {
-	var returnValue *SoftLayer_Network_Message_Queue
-	return returnValue, nil
 }

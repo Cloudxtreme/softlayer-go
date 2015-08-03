@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Dns_Domain_Registration_Status - SoftLayer_Dns_Domain_Registration_Status models the state
 // of domain name. Here are the following status codes: *'''Active''': This domain name is active.
@@ -28,16 +24,4 @@ type SoftLayer_Dns_Domain_Registration_Status struct {
 
 func (softlayer_dns_domain_registration_status *SoftLayer_Dns_Domain_Registration_Status) String() string {
 	return "SoftLayer_Dns_Domain_Registration_Status"
-}
-
-// GetAllObjects - <nil>
-func (softlayer_dns_domain_registration_status *SoftLayer_Dns_Domain_Registration_Status) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Dns_Domain_Registration_Status, error) {
-	var returnValue []*SoftLayer_Dns_Domain_Registration_Status
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_dns_domain_registration_status *SoftLayer_Dns_Domain_Registration_Status) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Dns_Domain_Registration_Status, error) {
-	var returnValue *SoftLayer_Dns_Domain_Registration_Status
-	return returnValue, nil
 }

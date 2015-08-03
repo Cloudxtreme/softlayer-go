@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_User_Customer_External_Binding_Totp - The SoftLayer_User_Customer_External_Binding_Totp
 // data type contains information about a single time-based one time password external binding. The
@@ -17,28 +13,4 @@ type SoftLayer_User_Customer_External_Binding_Totp struct {
 
 func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) String() string {
 	return "SoftLayer_User_Customer_External_Binding_Totp"
-}
-
-// Activate - <nil>
-func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) Activate(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// Deactivate - <nil>
-func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) Deactivate(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GenerateSecretKey - <nil>
-func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) GenerateSecretKey(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_user_customer_external_binding_totp *SoftLayer_User_Customer_External_Binding_Totp) GetObject(ctx *slapi.RequestContext) (*SoftLayer_User_Customer_External_Binding_Totp, error) {
-	var returnValue *SoftLayer_User_Customer_External_Binding_Totp
-	return returnValue, nil
 }

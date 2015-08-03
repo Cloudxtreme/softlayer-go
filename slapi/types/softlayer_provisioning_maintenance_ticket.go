@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Provisioning_Maintenance_Ticket - <nil>
@@ -35,10 +33,4 @@ type SoftLayer_Provisioning_Maintenance_Ticket struct {
 
 func (softlayer_provisioning_maintenance_ticket *SoftLayer_Provisioning_Maintenance_Ticket) String() string {
 	return "SoftLayer_Provisioning_Maintenance_Ticket"
-}
-
-// GetObject - <nil>
-func (softlayer_provisioning_maintenance_ticket *SoftLayer_Provisioning_Maintenance_Ticket) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Provisioning_Maintenance_Ticket, error) {
-	var returnValue *SoftLayer_Provisioning_Maintenance_Ticket
-	return returnValue, nil
 }

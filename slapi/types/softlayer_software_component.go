@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Software_Component - A SoftLayer_Software_Component ties the installation of a specific
 // piece of software onto a specific piece of hardware. SoftLayer_Software_Component works with
@@ -63,25 +59,4 @@ type SoftLayer_Software_Component struct {
 
 func (softlayer_software_component *SoftLayer_Software_Component) String() string {
 	return "SoftLayer_Software_Component"
-}
-
-// GetLicenseFile - Attempt to retrieve the file associated with a software component. If the software
-// component does not support downloading license files an exception will be thrown.
-func (softlayer_software_component *SoftLayer_Software_Component) GetLicenseFile(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Software_Component object whose ID corresponds to the
-// ID number of the init parameter passed to the SoftLayer_Software_Component service. The best way to
-// get software components is through getSoftwareComponents from the Hardware service.
-func (softlayer_software_component *SoftLayer_Software_Component) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Software_Component, error) {
-	var returnValue *SoftLayer_Software_Component
-	return returnValue, nil
-}
-
-// GetVendorSetUpConfiguration - <nil>
-func (softlayer_software_component *SoftLayer_Software_Component) GetVendorSetUpConfiguration(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
 }

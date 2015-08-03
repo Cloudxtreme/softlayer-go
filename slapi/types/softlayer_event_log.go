@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Event_Log - The SoftLayer_Event_Log data type contains an event detail occurred upon
@@ -57,28 +55,4 @@ type SoftLayer_Event_Log struct {
 
 func (softlayer_event_log *SoftLayer_Event_Log) String() string {
 	return "SoftLayer_Event_Log"
-}
-
-// GetAllEventNames - no documentation
-func (softlayer_event_log *SoftLayer_Event_Log) GetAllEventNames(ctx *slapi.RequestContext, objectName string) ([]string, error) {
-	var returnValue []string
-	return returnValue, nil
-}
-
-// GetAllEventObjectNames - no documentation
-func (softlayer_event_log *SoftLayer_Event_Log) GetAllEventObjectNames(ctx *slapi.RequestContext) ([]string, error) {
-	var returnValue []string
-	return returnValue, nil
-}
-
-// GetAllObjects - <nil>
-func (softlayer_event_log *SoftLayer_Event_Log) GetAllObjects(ctx *slapi.RequestContext) ([]*SoftLayer_Event_Log, error) {
-	var returnValue []*SoftLayer_Event_Log
-	return returnValue, nil
-}
-
-// GetAllUserTypes - <nil>
-func (softlayer_event_log *SoftLayer_Event_Log) GetAllUserTypes(ctx *slapi.RequestContext) ([]string, error) {
-	var returnValue []string
-	return returnValue, nil
 }

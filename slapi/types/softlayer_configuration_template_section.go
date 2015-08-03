@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Configuration_Template_Section - The SoftLayer_Configuration_Template_Section data type
@@ -83,16 +81,4 @@ type SoftLayer_Configuration_Template_Section struct {
 
 func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section) String() string {
 	return "SoftLayer_Configuration_Template_Section"
-}
-
-// GetObject - <nil>
-func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Configuration_Template_Section, error) {
-	var returnValue *SoftLayer_Configuration_Template_Section
-	return returnValue, nil
-}
-
-// HasSubSections - no documentation
-func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section) HasSubSections(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

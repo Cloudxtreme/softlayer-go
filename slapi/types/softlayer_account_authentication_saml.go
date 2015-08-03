@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Account_Authentication_Saml - <nil>
 type SoftLayer_Account_Authentication_Saml struct {
@@ -63,34 +59,4 @@ type SoftLayer_Account_Authentication_Saml struct {
 
 func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) String() string {
 	return "SoftLayer_Account_Authentication_Saml"
-}
-
-// CreateObject - <nil>
-func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Authentication_Saml) (*SoftLayer_Account_Authentication_Saml, error) {
-	var returnValue *SoftLayer_Account_Authentication_Saml
-	return returnValue, nil
-}
-
-// DeleteObject - <nil>
-func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - Edit the object by passing in a modified instance of the object
-func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Authentication_Saml) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetMetadata - <nil>
-func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) GetMetadata(ctx *slapi.RequestContext) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Authentication_Saml, error) {
-	var returnValue *SoftLayer_Account_Authentication_Saml
-	return returnValue, nil
 }

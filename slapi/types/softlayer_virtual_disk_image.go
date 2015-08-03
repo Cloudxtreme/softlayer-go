@@ -1,11 +1,9 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
 	time "time"
-
-	slapi "github.com/sudorandom/softlayer-go/slapi"
 )
 
 // SoftLayer_Virtual_Disk_Image - The virtual disk image data type presents the structure in which a
@@ -101,22 +99,4 @@ type SoftLayer_Virtual_Disk_Image struct {
 
 func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) String() string {
 	return "SoftLayer_Virtual_Disk_Image"
-}
-
-// EditObject - <nil>
-func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Virtual_Disk_Image) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Virtual_Disk_Image, error) {
-	var returnValue *SoftLayer_Virtual_Disk_Image
-	return returnValue, nil
-}
-
-// GetPublicIsoImages - <nil>
-func (softlayer_virtual_disk_image *SoftLayer_Virtual_Disk_Image) GetPublicIsoImages(ctx *slapi.RequestContext) ([]*SoftLayer_Virtual_Disk_Image, error) {
-	var returnValue []*SoftLayer_Virtual_Disk_Image
-	return returnValue, nil
 }

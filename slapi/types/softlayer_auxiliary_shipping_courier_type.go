@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Auxiliary_Shipping_Courier_Type - <nil>
 type SoftLayer_Auxiliary_Shipping_Courier_Type struct {
@@ -30,16 +26,4 @@ type SoftLayer_Auxiliary_Shipping_Courier_Type struct {
 
 func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type) String() string {
 	return "SoftLayer_Auxiliary_Shipping_Courier_Type"
-}
-
-// GetObject - <nil>
-func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Auxiliary_Shipping_Courier_Type, error) {
-	var returnValue *SoftLayer_Auxiliary_Shipping_Courier_Type
-	return returnValue, nil
-}
-
-// GetTypeByKeyName - <nil>
-func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type) GetTypeByKeyName(ctx *slapi.RequestContext, keyName string) (*SoftLayer_Auxiliary_Shipping_Courier_Type, error) {
-	var returnValue *SoftLayer_Auxiliary_Shipping_Courier_Type
-	return returnValue, nil
 }

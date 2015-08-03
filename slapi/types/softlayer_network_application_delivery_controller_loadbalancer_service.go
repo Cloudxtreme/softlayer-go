@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service - <nil>
 type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service struct {
@@ -54,30 +50,4 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service stru
 
 func (softlayer_network_application_delivery_controller_loadbalancer_service *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service) String() string {
 	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service"
-}
-
-// DeleteObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_service *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service) DeleteObject(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetGraphImage - Get the graph image for a load balancer service based on the supplied graph type and
-// metric. The available graph types are: 'connections' and 'status', and the available metrics are:
-// 'day', 'week' and 'month'. This method returns the raw binary image data.
-func (softlayer_network_application_delivery_controller_loadbalancer_service *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service) GetGraphImage(ctx *slapi.RequestContext, graphType string, metric string) (string, error) {
-	var returnValue string
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_service *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service, error) {
-	var returnValue *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service
-	return returnValue, nil
-}
-
-// ToggleStatus - <nil>
-func (softlayer_network_application_delivery_controller_loadbalancer_service *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service) ToggleStatus(ctx *slapi.RequestContext) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
 }

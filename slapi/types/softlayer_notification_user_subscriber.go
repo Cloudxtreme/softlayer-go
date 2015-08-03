@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Notification_User_Subscriber - A notification subscriber will have details pertaining to
 // the subscriber's notification subscription. You can receive details such as preferences, details of
@@ -58,44 +54,4 @@ type SoftLayer_Notification_User_Subscriber struct {
 
 func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) String() string {
 	return "SoftLayer_Notification_User_Subscriber"
-}
-
-// CreateObject - Use the method to create a new subscription for a notification. This method is the
-// entry method to the notification system. Certain properties are required to create a subscription
-// while others are optional. The required property is the resourceRecord property which is type
-// SoftLayer_Notification_User_Subscriber_Resource. For the resourceRecord property, the only property
-// that needs to be populated is the resourceTableId. The resourceTableId is the unique identifier of a
-// SoftLayer service to create the subscription for. For example, the unique identifier of the Storage
-// Evault service to create the subscription on. Optional properties that can be set is the preferences
-// property. The preference property is an array SoftLayer_Notification_User_Subscriber_Preference. By
-// default, the system will populate the preferences with the default values if no preferences are
-// passed in. The preferences passed in must be the preferences related to the notification subscribing
-// to. The notification preferences and preference details (such as minimum and maximum values) can be
-// retrieved using the SoftLayer_Notification service. The properties that need to be populated for
-// preferences are the notificationPreferenceId and value. For example to create a subscriber for a
-// Storage EVault service to be notified 15 times during a billing cycle and to be notified when the
-// vault usage reaches 85% of its allowed capacity use the following structure: *userRecordId = 1111
-// *notificationId = 3 *resourceRecord **resourceTableId = 1234 *preferences[1]
-// **notificationPreferenceId = 2 **value = 85 *preference[2] **notificationPreferenceId = 3 **value =
-// 15
-func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Notification_User_Subscriber) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// EditObject - The subscriber's subscription status can be "turned off" or "turned on" if the
-// subscription is not required. Subscriber preferences may also be edited. To edit the preferences,
-// you must pass in the id off the preferences to edit. Here is an example of structure to pass in. In
-// this example, the structure will set the subscriber status to active and the threshold preference to
-// 90 and the limit preference to 20 *id = 1111 *active = 1 *preferences[1] **id = 11 **value = 90
-// *preference[2] **id = 12 **value = 20
-func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Notification_User_Subscriber) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_notification_user_subscriber *SoftLayer_Notification_User_Subscriber) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_User_Subscriber, error) {
-	var returnValue *SoftLayer_Notification_User_Subscriber
-	return returnValue, nil
 }

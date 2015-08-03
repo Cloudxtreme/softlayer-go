@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Network_Gateway_Vlan - <nil>
 type SoftLayer_Network_Gateway_Vlan struct {
@@ -30,46 +26,4 @@ type SoftLayer_Network_Gateway_Vlan struct {
 
 func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) String() string {
 	return "SoftLayer_Network_Gateway_Vlan"
-}
-
-// Bypass - Start the asynchronous process to bypass/unroute the from this gateway.
-func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) Bypass(ctx *slapi.RequestContext) error {
-	return nil
-}
-
-// CreateObject - Create a new attachment. If the bypassFlag is false, this will also create an
-// asynchronous process to route the through the gateway.
-func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) CreateObject(ctx *slapi.RequestContext, templateObject SoftLayer_Network_Gateway_Vlan) (*SoftLayer_Network_Gateway_Vlan, error) {
-	var returnValue *SoftLayer_Network_Gateway_Vlan
-	return returnValue, nil
-}
-
-// CreateObjects - Create multiple new attachments. If the bypassFlag is false, this will also create
-// an asynchronous process to route the VLANs through the gateway.
-func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) CreateObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Network_Gateway_Vlan) ([]*SoftLayer_Network_Gateway_Vlan, error) {
-	var returnValue []*SoftLayer_Network_Gateway_Vlan
-	return returnValue, nil
-}
-
-// DeleteObject - Start the asynchronous process to detach this VLANs from the gateway.
-func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) DeleteObject(ctx *slapi.RequestContext) error {
-	return nil
-}
-
-// DeleteObjects - Detach several VLANs. This will not detach them right away, but rather start an
-// asynchronous process to detach.
-func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) DeleteObjects(ctx *slapi.RequestContext, templateObjects []SoftLayer_Network_Gateway_Vlan) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - <nil>
-func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Network_Gateway_Vlan, error) {
-	var returnValue *SoftLayer_Network_Gateway_Vlan
-	return returnValue, nil
-}
-
-// Unbypass - Start the asynchronous process to route the to this gateway.
-func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) Unbypass(ctx *slapi.RequestContext) error {
-	return nil
 }

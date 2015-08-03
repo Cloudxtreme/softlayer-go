@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Account_Password - The SoftLayer_Account_Password contains username, passwords and notes
 // for services that may require for external applications such the Webcc interface for the EVault
@@ -40,18 +36,4 @@ type SoftLayer_Account_Password struct {
 
 func (softlayer_account_password *SoftLayer_Account_Password) String() string {
 	return "SoftLayer_Account_Password"
-}
-
-// EditObject - The password and/or notes may be modified. Modifying the EVault passwords here will
-// also update the password the Webcc interface will use.
-func (softlayer_account_password *SoftLayer_Account_Password) EditObject(ctx *slapi.RequestContext, templateObject SoftLayer_Account_Password) (bool, error) {
-	var returnValue bool
-	return returnValue, nil
-}
-
-// GetObject - getObject retrieves the SoftLayer_Account_Password object whose ID corresponds to the ID
-// number of the init parameter passed to the SoftLayer_Account_Password service.
-func (softlayer_account_password *SoftLayer_Account_Password) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Account_Password, error) {
-	var returnValue *SoftLayer_Account_Password
-	return returnValue, nil
 }

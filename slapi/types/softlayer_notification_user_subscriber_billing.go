@@ -1,10 +1,6 @@
-package sl
+package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
-
-import (
-	slapi "github.com/sudorandom/softlayer-go/slapi"
-)
 
 // SoftLayer_Notification_User_Subscriber_Billing - A notification subscriber will have details
 // pertaining to the subscriber's notification subscription. You can receive details such as
@@ -16,10 +12,4 @@ type SoftLayer_Notification_User_Subscriber_Billing struct {
 
 func (softlayer_notification_user_subscriber_billing *SoftLayer_Notification_User_Subscriber_Billing) String() string {
 	return "SoftLayer_Notification_User_Subscriber_Billing"
-}
-
-// GetObject - <nil>
-func (softlayer_notification_user_subscriber_billing *SoftLayer_Notification_User_Subscriber_Billing) GetObject(ctx *slapi.RequestContext) (*SoftLayer_Notification_User_Subscriber_Billing, error) {
-	var returnValue *SoftLayer_Notification_User_Subscriber_Billing
-	return returnValue, nil
 }
