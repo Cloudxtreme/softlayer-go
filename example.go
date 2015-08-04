@@ -9,10 +9,11 @@ import (
 
 func main() {
 
-	client := slapi.Client{}
-	client.Endpoint = "https://api.softlayer.com/rest/v3.1/"
-	client.Username = "INSERT_USERNAME"
-	client.APIKey = "INSERT_API_KEY"
+	client := slapi.Client{
+		Endpoint: "https://api.softlayer.com/rest/v3.1/",
+		Username: "INSERT_USERNAME",
+		APIKey: "INSERT_API_KEY",
+	}
 
 	makeBasicAPICall(client)
 	makeExtendedAPICall(client)
@@ -21,12 +22,15 @@ func main() {
 
 // makeBasicAPICall demonstrates using a basic type
 func makeBasicAPICall(client slapi.Client) {
-	ctx := client.Request("SoftLayer_Account", "getObject")
-	ctx.Mask = `mask[id,companyName]`
+	req := slapi.Request{
+		Service: "SoftLayer_Account",
+		Method: "getObject",
+		Mask: `mask[id,companyName]`,
+	}
 
 	// Make API call with basic account type
 	basicAccount := &types.SoftLayer_Account{}
-	err := ctx.Do(basicAccount)
+	err := client.Call(req, basicAccount)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -37,12 +41,15 @@ func makeBasicAPICall(client slapi.Client) {
 
 // makeExtendedAPICall demonstrates using the extended type
 func makeExtendedAPICall(client slapi.Client) {
-	ctx := client.Request("SoftLayer_Account", "getObject")
-	ctx.Mask = `mask[id,virtualGuests]`
+	req := slapi.Request{
+		Service: "SoftLayer_Account",
+		Method: "getObject",
+		Mask: `mask[id,virtualGuests]`,
+	}
 
 	// Make API call with extended account type
 	extendedAccount := &types.SoftLayer_Account_Extended{}
-	err := ctx.Do(extendedAccount)
+	err := client.Call(req, extendedAccount)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -60,12 +67,15 @@ type CustomAccount struct {
 // makeCustomAPICall demonstrates using a user-defined type
 func makeCustomAPICall(client slapi.Client) {
 
-	ctx := client.Request("SoftLayer_Account", "getObject")
-	ctx.Mask = `mask[id,virtualGuests,companyName]`
+	req := slapi.Request{
+		Service: "SoftLayer_Account",
+		Method: "getObject",
+		Mask: `mask[id,virtualGuests,companyName]`,
+	}
 
 	// Make API call with custom type based on the basic account type
 	customAccount := &CustomAccount{}
-	err := ctx.Do(customAccount)
+	err := client.Call(req, customAccount)
 	if err != nil {
 		log.Fatal(err)
 	}

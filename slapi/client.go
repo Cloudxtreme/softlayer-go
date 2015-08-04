@@ -3,6 +3,7 @@ package slapi
 import (
 	"bytes"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -27,74 +28,60 @@ type Client struct {
 	APIKey   string
 }
 
-// Request creates a new request. Specify request-specific settings on the return value
-func (client *Client) Request(service string, method string) RequestContext {
-	return RequestContext{Service: service, Method: method, Client: client}
-}
-
-// RequestContext holds request-level information
-type RequestContext struct {
-	Service   string
-	Method    string
-	ID        interface{}
-	Arguments []interface{}
-	Mask      string
-	Filter    interface{}
-	Limit     int
-	Offset    int
-	Client    *Client
-}
-
 // Do performs the API call. The result parameter will have the API response marshalled into it
-func (ctx *RequestContext) Do(result interface{}) error {
+func (client *Client) Call(req Request, result interface{}) error {
+	if req.Service == "" || req.Method == "" {
+		return errors.New("service and method is required to make an API call")
+	}
+
 	// TODO: the http client should be re-used
 	httpClient := &http.Client{}
 
 	method := "GET"
-	if ctx.Method == "deleteObject" {
+	if req.Method == "deleteObject" {
 		method = "DELETE"
-	} else if ctx.Method == "createObject" || ctx.Method == "createObjects" {
+	} else if req.Method == "createObject" || req.Method == "createObjects" {
 		method = "POST"
-	} else if ctx.Method == "editObject" || ctx.Method == "editObjects" {
+	} else if req.Method == "editObject" || req.Method == "editObjects" {
 		method = "PUT"
-	} else if ctx.Arguments != nil && len(ctx.Arguments) > 0 {
+	} else if req.Arguments != nil && len(req.Arguments) > 0 {
 		method = "POST"
 	}
 
-	req, err := http.NewRequest(method, ctx.Client.Endpoint+ctx.Service+"/"+ctx.Method, nil)
+	httpReq, err := http.NewRequest(method, client.Endpoint+req.Service+"/"+req.Method, nil)
 	if err != nil {
 		return err
 	}
 
-	req.SetBasicAuth(ctx.Client.Username, ctx.Client.APIKey)
-	req.Header.Add("Content-Type", "application/json")
+	httpReq.SetBasicAuth(client.Username, client.APIKey)
+	httpReq.Header.Add("Content-Type", "application/json")
 
 	// Set object mask, filter, limit, offset, arguments settings
-	values := req.URL.Query()
+	values := httpReq.URL.Query()
 	body := make(map[string]interface{})
 
-	if ctx.Mask != "" {
-		values.Set("objectMask", string(ctx.Mask))
+	if req.Mask != "" {
+		values.Set("objectMask", string(req.Mask))
 	}
 
-	if ctx.Limit != 0 {
-		values.Set("limit", string(ctx.Limit))
+	if req.Limit != 0 {
+		values.Set("limit", string(req.Limit))
 	}
 
-	if ctx.Offset != 0 {
-		values.Set("offset", string(ctx.Offset))
+	if req.Offset != 0 {
+		values.Set("offset", string(req.Offset))
 	}
 
-	if ctx.Filter != nil {
-		filterBytes, err := json.Marshal(ctx.Filter)
+	if req.Filter != nil {
+		filterBytes, err := json.Marshal(req.Filter)
 		if err != nil {
 			return err
 		}
 		values.Set("objectFilter", string(filterBytes))
 	}
 
-	if ctx.Arguments != nil {
-		body["parameters"] = ctx.Arguments
+	if req.Arguments != nil {
+		body["parameters"] = req.Arguments
 	}
 
 	if len(body) > 0 {
@@ -103,16 +90,16 @@ func (ctx *RequestContext) Do(result interface{}) error {
 			return err
 		}
 		log.Println(string(bodyBytes))
-		req.Body = ioutil.NopCloser(bytes.NewReader(bodyBytes))
+		httpReq.Body = ioutil.NopCloser(bytes.NewReader(bodyBytes))
 	}
 
-	req.URL.RawQuery = values.Encode()
+	httpReq.URL.RawQuery = values.Encode()
 
 	// TODO: Remove this log (add debug option?)
-	log.Println(req.URL.String())
+	log.Println(httpReq.URL.String())
 
 	// Make the API Request
-	res, err := httpClient.Do(req)
+	res, err := httpClient.Do(httpReq)
 	if err != nil {
 		return err
 	}
@@ -145,4 +132,16 @@ func (ctx *RequestContext) Do(result interface{}) error {
 	}
 
 	return nil
+}
+
+// Request holds request-level information
+type Request struct {
+	Service   string
+	Method    string
+	ID        interface{}
+	Arguments []interface{}
+	Mask      string
+	Filter    interface{}
+	Limit     int
+	Offset    int
 }
