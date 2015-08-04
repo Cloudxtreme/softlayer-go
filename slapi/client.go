@@ -28,8 +28,8 @@ type Client struct {
 }
 
 // Request creates a new request. Specify request-specific settings on the return value
-func (client *Client) Request() RequestContext {
-	return RequestContext{Client: client}
+func (client *Client) Request(service string, method string) RequestContext {
+	return RequestContext{Service: service, Method: method, Client: client}
 }
 
 // RequestContext holds request-level information
