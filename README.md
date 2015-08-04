@@ -1,10 +1,11 @@
 # softlayer-go
 
-Golang bindings for SoftLayer's API. This project is a work in progress.
+Golang bindings for SoftLayer's API. This project is a work in progress. Interfaces can (and will) break.
 
 ##TODOs
 
-* Consider separating types and service calls into different packages.
-* Evaluate options for handling filters.
+* Also generate service calls
+* Evaluate options for handling filters
+* Evaluate options for handling masks
 * Examples
 * Tests
