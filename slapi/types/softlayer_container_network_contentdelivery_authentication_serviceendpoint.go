@@ -17,11 +17,11 @@ package types
 // supports 3 different protocols: (streaming Flash), and MMS (streaming Windows Media)
 type SoftLayer_Container_Network_ContentDelivery_Authentication_ServiceEndpoint struct {
 
-	// Endpoint - The authentication web service endpoint that CDN servers will use to validate a token
-	Endpoint string `json:"endpoint"`
-
 	// Protocol - The protocol that the will be used for. This can be or
-	Protocol string `json:"protocol"`
+	Protocol string `json:"protocol,omitempty"`
+
+	// Endpoint - The authentication web service endpoint that CDN servers will use to validate a token
+	Endpoint string `json:"endpoint,omitempty"`
 }
 
 func (softlayer_container_network_contentdelivery_authentication_serviceendpoint *SoftLayer_Container_Network_ContentDelivery_Authentication_ServiceEndpoint) String() string {

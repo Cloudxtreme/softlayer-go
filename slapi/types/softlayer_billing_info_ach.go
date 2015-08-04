@@ -9,53 +9,53 @@ import (
 // SoftLayer_Billing_Info_Ach - <nil>
 type SoftLayer_Billing_Info_Ach struct {
 
-	// Country - <nil>
-	Country string `json:"country"`
+	// AccountType - <nil>
+	AccountType string `json:"accountType,omitempty"`
 
 	// FirstName - <nil>
-	FirstName string `json:"firstName"`
+	FirstName string `json:"firstName,omitempty"`
 
-	// Id - <nil>
-	Id int `json:"id"`
-
-	// PhoneNumber - <nil>
-	PhoneNumber string `json:"phoneNumber"`
-
-	// Street1 - <nil>
-	Street1 string `json:"street1"`
-
-	// BankTransitNumber - <nil>
-	BankTransitNumber string `json:"bankTransitNumber"`
-
-	// Status - <nil>
-	Status string `json:"status"`
-
-	// AccountId - <nil>
-	AccountId int `json:"accountId"`
-
-	// AccountType - <nil>
-	AccountType string `json:"accountType"`
+	// Country - <nil>
+	Country string `json:"country,omitempty"`
 
 	// LastName - <nil>
-	LastName string `json:"lastName"`
+	LastName string `json:"lastName,omitempty"`
 
-	// Postalcode - <nil>
-	Postalcode string `json:"postalcode"`
+	// PhoneNumber - <nil>
+	PhoneNumber string `json:"phoneNumber,omitempty"`
 
-	// State - <nil>
-	State string `json:"state"`
-
-	// VerifiedDate - <nil>
-	VerifiedDate *time.Time `json:"verifiedDate"`
-
-	// AccountNumber - <nil>
-	AccountNumber string `json:"accountNumber"`
-
-	// City - <nil>
-	City string `json:"city"`
+	// Street1 - <nil>
+	Street1 string `json:"street1,omitempty"`
 
 	// Street2 - <nil>
-	Street2 string `json:"street2"`
+	Street2 string `json:"street2,omitempty"`
+
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
+
+	// BankTransitNumber - <nil>
+	BankTransitNumber string `json:"bankTransitNumber,omitempty"`
+
+	// City - <nil>
+	City string `json:"city,omitempty"`
+
+	// Postalcode - <nil>
+	Postalcode string `json:"postalcode,omitempty"`
+
+	// State - <nil>
+	State string `json:"state,omitempty"`
+
+	// VerifiedDate - <nil>
+	VerifiedDate *time.Time `json:"verifiedDate,omitempty"`
+
+	// AccountNumber - <nil>
+	AccountNumber string `json:"accountNumber,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
+
+	// Status - <nil>
+	Status string `json:"status,omitempty"`
 }
 
 func (softlayer_billing_info_ach *SoftLayer_Billing_Info_Ach) String() string {
@@ -67,7 +67,7 @@ type SoftLayer_Billing_Info_Ach_Extended struct {
 	SoftLayer_Billing_Info_Ach
 
 	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
 func (softlayer_billing_info_ach *SoftLayer_Billing_Info_Ach_Extended) String() string {

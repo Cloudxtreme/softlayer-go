@@ -11,19 +11,19 @@ import (
 type SoftLayer_Software_Component_Password_History struct {
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Notes - A note string stored for this username/password pair.
-	Notes string `json:"notes"`
+	Notes string `json:"notes,omitempty"`
 
 	// Password - The password part of this specific password history instance.
-	Password string `json:"password"`
+	Password string `json:"password,omitempty"`
 
 	// SoftwareComponentId - The id number for the Software Component this username/password pair is for.
-	SoftwareComponentId int `json:"softwareComponentId"`
+	SoftwareComponentId int `json:"softwareComponentId,omitempty"`
 
 	// Username - The username part of this specific password history instance.
-	Username string `json:"username"`
+	Username string `json:"username,omitempty"`
 }
 
 func (softlayer_software_component_password_history *SoftLayer_Software_Component_Password_History) String() string {
@@ -35,7 +35,7 @@ type SoftLayer_Software_Component_Password_History_Extended struct {
 	SoftLayer_Software_Component_Password_History
 
 	// SoftwareComponent - An installed and licensed instance of a piece of software
-	SoftwareComponent *SoftLayer_Software_Component `json:"softwareComponent"`
+	SoftwareComponent *SoftLayer_Software_Component `json:"softwareComponent,omitempty"`
 }
 
 func (softlayer_software_component_password_history *SoftLayer_Software_Component_Password_History_Extended) String() string {

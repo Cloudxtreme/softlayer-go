@@ -6,13 +6,13 @@ package types
 type SoftLayer_Container_Network_Storage_NetworkConnectionInformation struct {
 
 	// Id - <nil>
-	Id string `json:"id"`
+	Id string `json:"id,omitempty"`
 
 	// IpAddress - <nil>
-	IpAddress string `json:"ipAddress"`
+	IpAddress string `json:"ipAddress,omitempty"`
 
 	// StorageType - <nil>
-	StorageType string `json:"storageType"`
+	StorageType string `json:"storageType,omitempty"`
 }
 
 func (softlayer_container_network_storage_networkconnectioninformation *SoftLayer_Container_Network_Storage_NetworkConnectionInformation) String() string {

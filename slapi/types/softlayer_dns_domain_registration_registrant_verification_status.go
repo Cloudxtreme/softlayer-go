@@ -13,16 +13,16 @@ package types
 type SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status struct {
 
 	// Description - The description of the registrant verification status.
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - The unique identifier of the registrant verification status
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - The unique keyname of the registrant verification status.
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_dns_domain_registration_registrant_verification_status *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status) String() string {

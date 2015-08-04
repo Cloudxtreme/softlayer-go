@@ -6,14 +6,14 @@ package types
 // - <nil>
 type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress_SecureTransportProtocol struct {
 
-	// Id - <nil>
-	Id int `json:"id"`
-
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// VirtualIpAddressId - <nil>
-	VirtualIpAddressId int `json:"virtualIpAddressId"`
+	VirtualIpAddressId int `json:"virtualIpAddressId,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress_securetransportprotocol *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress_SecureTransportProtocol) String() string {
@@ -25,7 +25,7 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAdd
 	SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress_SecureTransportProtocol
 
 	// VirtualIpAddress - <nil>
-	VirtualIpAddress *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer `json:"virtualIpAddress"`
+	VirtualIpAddress *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer `json:"virtualIpAddress,omitempty"`
 }
 
 func (softlayer_network_application_delivery_controller_loadbalancer_virtualipaddress_securetransportprotocol *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress_SecureTransportProtocol_Extended) String() string {

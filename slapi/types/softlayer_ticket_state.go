@@ -6,13 +6,13 @@ package types
 type SoftLayer_Ticket_State struct {
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// StateTypeId - <nil>
-	StateTypeId int `json:"stateTypeId"`
+	StateTypeId int `json:"stateTypeId,omitempty"`
 
 	// TicketId - <nil>
-	TicketId int `json:"ticketId"`
+	TicketId int `json:"ticketId,omitempty"`
 }
 
 func (softlayer_ticket_state *SoftLayer_Ticket_State) String() string {
@@ -24,10 +24,10 @@ type SoftLayer_Ticket_State_Extended struct {
 	SoftLayer_Ticket_State
 
 	// StateType - <nil>
-	StateType *SoftLayer_Ticket_State_Type `json:"stateType"`
+	StateType *SoftLayer_Ticket_State_Type `json:"stateType,omitempty"`
 
 	// Ticket - <nil>
-	Ticket *SoftLayer_Ticket `json:"ticket"`
+	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
 }
 
 func (softlayer_ticket_state *SoftLayer_Ticket_State_Extended) String() string {

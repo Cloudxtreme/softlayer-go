@@ -7,16 +7,16 @@ package types
 type SoftLayer_Product_Upgrade_Request_Status struct {
 
 	// Description - The detailed description of an upgrade request status.
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - An internal identifier of an upgrade request status.
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// StatusCode - no documentation
-	StatusCode string `json:"statusCode"`
+	StatusCode string `json:"statusCode,omitempty"`
 }
 
 func (softlayer_product_upgrade_request_status *SoftLayer_Product_Upgrade_Request_Status) String() string {

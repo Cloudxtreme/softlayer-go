@@ -7,11 +7,11 @@ package types
 // current host ips policy.
 type SoftLayer_Container_Software_Component_HostIps_Policy struct {
 
-	// PolicyTitle - no documentation
-	PolicyTitle string `json:"policyTitle"`
-
 	// Policy - no documentation
-	Policy string `json:"policy"`
+	Policy string `json:"policy,omitempty"`
+
+	// PolicyTitle - no documentation
+	PolicyTitle string `json:"policyTitle,omitempty"`
 }
 
 func (softlayer_container_software_component_hostips_policy *SoftLayer_Container_Software_Component_HostIps_Policy) String() string {

@@ -6,16 +6,16 @@ package types
 type SoftLayer_Account_MasterServiceAgreement struct {
 
 	// AccountId - <nil>
-	AccountId int `json:"accountId"`
+	AccountId int `json:"accountId,omitempty"`
 
 	// Guid - <nil>
-	Guid string `json:"guid"`
+	Guid string `json:"guid,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_account_masterserviceagreement *SoftLayer_Account_MasterServiceAgreement) String() string {
@@ -27,7 +27,7 @@ type SoftLayer_Account_MasterServiceAgreement_Extended struct {
 	SoftLayer_Account_MasterServiceAgreement
 
 	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
 func (softlayer_account_masterserviceagreement *SoftLayer_Account_MasterServiceAgreement_Extended) String() string {

@@ -13,19 +13,19 @@ import (
 type SoftLayer_Account_Rwhois_Handle struct {
 
 	// AccountId - The handle object's associated [[SoftLayer_Account|account]] id
-	AccountId int `json:"accountId"`
+	AccountId int `json:"accountId,omitempty"`
 
 	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Handle - The handle object's unique identifier as assigned by the
-	Handle string `json:"handle"`
+	Handle string `json:"handle,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 }
 
 func (softlayer_account_rwhois_handle *SoftLayer_Account_Rwhois_Handle) String() string {
@@ -37,7 +37,7 @@ type SoftLayer_Account_Rwhois_Handle_Extended struct {
 	SoftLayer_Account_Rwhois_Handle
 
 	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
 func (softlayer_account_rwhois_handle *SoftLayer_Account_Rwhois_Handle_Extended) String() string {

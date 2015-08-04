@@ -6,11 +6,11 @@ package types
 // about an external authentication vendor.
 type SoftLayer_Container_User_Customer_External_Binding_Vendor struct {
 
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// KeyName - The keyname used to identify an external authentication vendor.
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_container_user_customer_external_binding_vendor *SoftLayer_Container_User_Customer_External_Binding_Vendor) String() string {

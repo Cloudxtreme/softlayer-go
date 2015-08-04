@@ -10,16 +10,16 @@ import (
 type SoftLayer_Ticket_Activity struct {
 
 	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// CreateTimestamp - <nil>
-	CreateTimestamp *time.Time `json:"createTimestamp"`
+	CreateTimestamp *time.Time `json:"createTimestamp,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Value - <nil>
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_ticket_activity *SoftLayer_Ticket_Activity) String() string {
@@ -31,13 +31,13 @@ type SoftLayer_Ticket_Activity_Extended struct {
 	SoftLayer_Ticket_Activity
 
 	// Editor - <nil>
-	Editor *SoftLayer_User_Interface `json:"editor"`
+	Editor *SoftLayer_User_Interface `json:"editor,omitempty"`
 
 	// Ticket - <nil>
-	Ticket *SoftLayer_Ticket `json:"ticket"`
+	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
 
 	// TicketUpdate - <nil>
-	TicketUpdate *SoftLayer_Ticket_Update `json:"ticketUpdate"`
+	TicketUpdate *SoftLayer_Ticket_Update `json:"ticketUpdate,omitempty"`
 }
 
 func (softlayer_ticket_activity *SoftLayer_Ticket_Activity_Extended) String() string {

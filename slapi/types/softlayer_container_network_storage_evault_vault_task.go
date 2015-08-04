@@ -9,13 +9,13 @@ package types
 type SoftLayer_Container_Network_Storage_Evault_Vault_Task struct {
 
 	// Id - no documentation
-	Id uint `json:"id"`
+	Id uint `json:"id,omitempty"`
 
 	// Name - The hostname provided at time of agent registration.
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// UsedPoolsize - no documentation
-	UsedPoolsize uint64 `json:"usedPoolsize"`
+	UsedPoolsize uint64 `json:"usedPoolsize,omitempty"`
 }
 
 func (softlayer_container_network_storage_evault_vault_task *SoftLayer_Container_Network_Storage_Evault_Vault_Task) String() string {

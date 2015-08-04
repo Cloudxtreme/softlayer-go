@@ -5,44 +5,44 @@ package types
 // SoftLayer_Container_Billing_Info_Ach - <nil>
 type SoftLayer_Container_Billing_Info_Ach struct {
 
-	// AccountNumber - <nil>
-	AccountNumber string `json:"accountNumber"`
-
 	// AccountType - <nil>
-	AccountType string `json:"accountType"`
-
-	// LastName - <nil>
-	LastName string `json:"lastName"`
-
-	// PostalCode - <nil>
-	PostalCode string `json:"postalCode"`
-
-	// State - <nil>
-	State string `json:"state"`
-
-	// PhoneNumber - <nil>
-	PhoneNumber string `json:"phoneNumber"`
-
-	// Street1 - <nil>
-	Street1 string `json:"street1"`
-
-	// Street2 - <nil>
-	Street2 string `json:"street2"`
-
-	// BankTransitNumber - <nil>
-	BankTransitNumber string `json:"bankTransitNumber"`
-
-	// City - <nil>
-	City string `json:"city"`
+	AccountType string `json:"accountType,omitempty"`
 
 	// Country - <nil>
-	Country string `json:"country"`
+	Country string `json:"country,omitempty"`
 
 	// FederalTaxId - <nil>
-	FederalTaxId string `json:"federalTaxId"`
+	FederalTaxId string `json:"federalTaxId,omitempty"`
+
+	// LastName - <nil>
+	LastName string `json:"lastName,omitempty"`
+
+	// PhoneNumber - <nil>
+	PhoneNumber string `json:"phoneNumber,omitempty"`
+
+	// State - <nil>
+	State string `json:"state,omitempty"`
+
+	// Street1 - <nil>
+	Street1 string `json:"street1,omitempty"`
+
+	// AccountNumber - <nil>
+	AccountNumber string `json:"accountNumber,omitempty"`
+
+	// BankTransitNumber - <nil>
+	BankTransitNumber string `json:"bankTransitNumber,omitempty"`
+
+	// City - <nil>
+	City string `json:"city,omitempty"`
 
 	// FirstName - <nil>
-	FirstName string `json:"firstName"`
+	FirstName string `json:"firstName,omitempty"`
+
+	// PostalCode - <nil>
+	PostalCode string `json:"postalCode,omitempty"`
+
+	// Street2 - <nil>
+	Street2 string `json:"street2,omitempty"`
 }
 
 func (softlayer_container_billing_info_ach *SoftLayer_Container_Billing_Info_Ach) String() string {

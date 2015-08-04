@@ -12,38 +12,38 @@ import (
 // entities (Google, Apple,
 type SoftLayer_User_Customer_MobileDevice struct {
 
+	// MobileOperatingSystemId - no documentation
+	MobileOperatingSystemId int `json:"mobileOperatingSystemId,omitempty"`
+
 	// UserId - no documentation
-	UserId int `json:"userId"`
-
-	// MobileDeviceTypeId - no documentation
-	MobileDeviceTypeId int `json:"mobileDeviceTypeId"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
+	UserId int `json:"userId,omitempty"`
 
 	// SerialNumber - no documentation
-	SerialNumber string `json:"serialNumber"`
+	SerialNumber string `json:"serialNumber,omitempty"`
 
-	// DisplayResolutionXxY - no documentation
-	DisplayResolutionXxY string `json:"displayResolutionXxY"`
+	// MobileDeviceTypeId - no documentation
+	MobileDeviceTypeId int `json:"mobileDeviceTypeId,omitempty"`
 
-	// MobileOperatingSystemId - no documentation
-	MobileOperatingSystemId int `json:"mobileOperatingSystemId"`
-
-	// ModelNumber - no documentation
-	ModelNumber string `json:"modelNumber"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
-	// Id - no documentation
-	Id int `json:"id"`
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// PhoneNumber - no documentation
-	PhoneNumber string `json:"phoneNumber"`
+	PhoneNumber string `json:"phoneNumber,omitempty"`
+
+	// ModelNumber - no documentation
+	ModelNumber string `json:"modelNumber,omitempty"`
 
 	// Token - no documentation
-	Token string `json:"token"`
+	Token string `json:"token,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// DisplayResolutionXxY - no documentation
+	DisplayResolutionXxY string `json:"displayResolutionXxY,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) String() string {
@@ -54,28 +54,28 @@ func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice
 type SoftLayer_User_Customer_MobileDevice_Extended struct {
 	SoftLayer_User_Customer_MobileDevice
 
-	// Type - <nil>
-	Type *SoftLayer_User_Customer_MobileDevice_Type `json:"type"`
-
-	// PushNotificationSubscriptionCount - A count of notification subscriptions attached to a mobile
-	// device.
-	PushNotificationSubscriptionCount uint64 `json:"pushNotificationSubscriptionCount"`
-
-	// Customer - <nil>
-	Customer *SoftLayer_User_Customer `json:"customer"`
-
-	// OperatingSystem - <nil>
-	OperatingSystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem `json:"operatingSystem"`
+	// PushNotificationSubscriptions - Notification subscriptions attached to a mobile device.
+	PushNotificationSubscriptions []*SoftLayer_Notification_User_Subscriber `json:"pushNotificationSubscriptions,omitempty"`
 
 	// AvailablePushNotificationSubscriptionCount - A count of notification subscriptions available to a
 	// mobile device.
-	AvailablePushNotificationSubscriptionCount uint64 `json:"availablePushNotificationSubscriptionCount"`
+	AvailablePushNotificationSubscriptionCount uint64 `json:"availablePushNotificationSubscriptionCount,omitempty"`
+
+	// PushNotificationSubscriptionCount - A count of notification subscriptions attached to a mobile
+	// device.
+	PushNotificationSubscriptionCount uint64 `json:"pushNotificationSubscriptionCount,omitempty"`
+
+	// Customer - <nil>
+	Customer *SoftLayer_User_Customer `json:"customer,omitempty"`
+
+	// Type - <nil>
+	Type *SoftLayer_User_Customer_MobileDevice_Type `json:"type,omitempty"`
 
 	// AvailablePushNotificationSubscriptions - Notification subscriptions available to a mobile device.
-	AvailablePushNotificationSubscriptions []*SoftLayer_Notification `json:"availablePushNotificationSubscriptions"`
+	AvailablePushNotificationSubscriptions []*SoftLayer_Notification `json:"availablePushNotificationSubscriptions,omitempty"`
 
-	// PushNotificationSubscriptions - Notification subscriptions attached to a mobile device.
-	PushNotificationSubscriptions []*SoftLayer_Notification_User_Subscriber `json:"pushNotificationSubscriptions"`
+	// OperatingSystem - <nil>
+	OperatingSystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem `json:"operatingSystem,omitempty"`
 }
 
 func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice_Extended) String() string {

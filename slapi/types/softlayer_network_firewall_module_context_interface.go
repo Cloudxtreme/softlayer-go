@@ -6,10 +6,10 @@ package types
 type SoftLayer_Network_Firewall_Module_Context_Interface struct {
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_network_firewall_module_context_interface *SoftLayer_Network_Firewall_Module_Context_Interface) String() string {
@@ -21,13 +21,13 @@ type SoftLayer_Network_Firewall_Module_Context_Interface_Extended struct {
 	SoftLayer_Network_Firewall_Module_Context_Interface
 
 	// FirewallContextAccessControlLists - <nil>
-	FirewallContextAccessControlLists []*SoftLayer_Network_Firewall_AccessControlList `json:"firewallContextAccessControlLists"`
+	FirewallContextAccessControlLists []*SoftLayer_Network_Firewall_AccessControlList `json:"firewallContextAccessControlLists,omitempty"`
 
 	// NetworkVlan - <nil>
-	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan"`
+	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`
 
 	// FirewallContextAccessControlListCount - no documentation
-	FirewallContextAccessControlListCount uint64 `json:"firewallContextAccessControlListCount"`
+	FirewallContextAccessControlListCount uint64 `json:"firewallContextAccessControlListCount,omitempty"`
 }
 
 func (softlayer_network_firewall_module_context_interface *SoftLayer_Network_Firewall_Module_Context_Interface_Extended) String() string {

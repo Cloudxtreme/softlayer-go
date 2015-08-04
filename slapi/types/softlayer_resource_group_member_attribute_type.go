@@ -5,17 +5,17 @@ package types
 // SoftLayer_Resource_Group_Member_Attribute_Type - <nil>
 type SoftLayer_Resource_Group_Member_Attribute_Type struct {
 
-	// KeyName - <nil>
-	KeyName string `json:"keyName"`
-
-	// Name - <nil>
-	Name string `json:"name"`
-
 	// Description - <nil>
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
+
+	// KeyName - <nil>
+	KeyName string `json:"keyName,omitempty"`
+
+	// Name - <nil>
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_resource_group_member_attribute_type *SoftLayer_Resource_Group_Member_Attribute_Type) String() string {

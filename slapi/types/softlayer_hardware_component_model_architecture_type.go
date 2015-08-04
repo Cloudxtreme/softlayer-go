@@ -6,13 +6,13 @@ package types
 type SoftLayer_Hardware_Component_Model_Architecture_Type struct {
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_hardware_component_model_architecture_type *SoftLayer_Hardware_Component_Model_Architecture_Type) String() string {

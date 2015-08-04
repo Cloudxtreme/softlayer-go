@@ -8,13 +8,13 @@ package types
 type SoftLayer_Container_Utility_Network_Subnet_Mask_Generic_Detail struct {
 
 	// Cidr - no documentation
-	Cidr string `json:"cidr"`
+	Cidr string `json:"cidr,omitempty"`
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Mask - no documentation
-	Mask string `json:"mask"`
+	Mask string `json:"mask,omitempty"`
 }
 
 func (softlayer_container_utility_network_subnet_mask_generic_detail *SoftLayer_Container_Utility_Network_Subnet_Mask_Generic_Detail) String() string {

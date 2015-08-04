@@ -7,10 +7,10 @@ package types
 type SoftLayer_Hardware_Component_RemoteManagement_User struct {
 
 	// Password - The password used for this remote management command.
-	Password string `json:"password"`
+	Password string `json:"password,omitempty"`
 
 	// Username - The username used for this remote management command.
-	Username string `json:"username"`
+	Username string `json:"username,omitempty"`
 }
 
 func (softlayer_hardware_component_remotemanagement_user *SoftLayer_Hardware_Component_RemoteManagement_User) String() string {
@@ -22,10 +22,10 @@ type SoftLayer_Hardware_Component_RemoteManagement_User_Extended struct {
 	SoftLayer_Hardware_Component_RemoteManagement_User
 
 	// Hardware - <nil>
-	Hardware *SoftLayer_Hardware `json:"hardware"`
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 
 	// NetworkComponent - <nil>
-	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
+	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent,omitempty"`
 }
 
 func (softlayer_hardware_component_remotemanagement_user *SoftLayer_Hardware_Component_RemoteManagement_User_Extended) String() string {

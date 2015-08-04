@@ -8,16 +8,16 @@ package types
 type SoftLayer_Container_Tax_Cache struct {
 
 	// EffectiveTaxRate - The percentage of the final total that should be tax.
-	EffectiveTaxRate float64 `json:"effectiveTaxRate"`
+	EffectiveTaxRate float64 `json:"effectiveTaxRate,omitempty"`
 
 	// Items - The container that holds the four actual tax rates, one for each fee type.
-	Items []*SoftLayer_Container_Tax_Cache_Item `json:"items"`
+	Items []*SoftLayer_Container_Tax_Cache_Item `json:"items,omitempty"`
 
 	// Status - The status of the tax request. This should be or
-	Status string `json:"status"`
+	Status string `json:"status,omitempty"`
 
 	// TotalTaxAmount - no documentation
-	TotalTaxAmount float64 `json:"totalTaxAmount"`
+	TotalTaxAmount float64 `json:"totalTaxAmount,omitempty"`
 }
 
 func (softlayer_container_tax_cache *SoftLayer_Container_Tax_Cache) String() string {

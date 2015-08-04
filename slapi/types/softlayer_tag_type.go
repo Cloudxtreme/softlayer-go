@@ -5,11 +5,11 @@ package types
 // SoftLayer_Tag_Type - <nil>
 type SoftLayer_Tag_Type struct {
 
-	// Description - <nil>
-	Description string `json:"description"`
-
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
+
+	// Description - <nil>
+	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_tag_type *SoftLayer_Tag_Type) String() string {

@@ -9,16 +9,16 @@ package types
 type SoftLayer_Account_Media_Type struct {
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_account_media_type *SoftLayer_Account_Media_Type) String() string {

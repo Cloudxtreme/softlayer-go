@@ -10,10 +10,10 @@ package types
 type SoftLayer_Ticket_Group_Category struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_ticket_group_category *SoftLayer_Ticket_Group_Category) String() string {

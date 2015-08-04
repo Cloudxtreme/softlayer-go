@@ -8,19 +8,19 @@ package types
 type SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping struct {
 
 	// Cname - no documentation
-	Cname string `json:"cname"`
+	Cname string `json:"cname,omitempty"`
 
 	// Id - The unique identifier of an origin pull configuration
-	Id string `json:"id"`
+	Id string `json:"id,omitempty"`
 
 	// IsSecureContent - This indicates if an origin pull mapping is for the secure content or not.
-	IsSecureContent bool `json:"isSecureContent"`
+	IsSecureContent bool `json:"isSecureContent,omitempty"`
 
 	// MediaType - The type of a media supported by Supported media types are: and
-	MediaType string `json:"mediaType"`
+	MediaType string `json:"mediaType,omitempty"`
 
 	// OriginUrl - The URL of a origin server. A URL can contain a directory path.
-	OriginUrl string `json:"originUrl"`
+	OriginUrl string `json:"originUrl,omitempty"`
 }
 
 func (softlayer_container_network_contentdelivery_originpull_mapping *SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping) String() string {

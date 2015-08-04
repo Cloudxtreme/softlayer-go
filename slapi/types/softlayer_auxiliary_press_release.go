@@ -9,23 +9,23 @@ import (
 // SoftLayer_Auxiliary_Press_Release - <nil>
 type SoftLayer_Auxiliary_Press_Release struct {
 
-	// ReleaseLocation - no documentation
-	ReleaseLocation string `json:"releaseLocation"`
-
-	// Title - no documentation
-	Title string `json:"title"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// PublishDate - no documentation
-	PublishDate *time.Time `json:"publishDate"`
+	PublishDate *time.Time `json:"publishDate,omitempty"`
 
 	// SubTitle - no documentation
-	SubTitle string `json:"subTitle"`
+	SubTitle string `json:"subTitle,omitempty"`
+
+	// ReleaseLocation - no documentation
+	ReleaseLocation string `json:"releaseLocation,omitempty"`
+
+	// Title - no documentation
+	Title string `json:"title,omitempty"`
 
 	// WebsiteHighlightFlag - Whether or not a press release is highlighted on the SoftLayer Website.
-	WebsiteHighlightFlag bool `json:"websiteHighlightFlag"`
-
-	// Id - no documentation
-	Id int `json:"id"`
+	WebsiteHighlightFlag bool `json:"websiteHighlightFlag,omitempty"`
 }
 
 func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release) String() string {
@@ -37,25 +37,25 @@ type SoftLayer_Auxiliary_Press_Release_Extended struct {
 	SoftLayer_Auxiliary_Press_Release
 
 	// AboutCount - no documentation
-	AboutCount uint64 `json:"aboutCount"`
-
-	// Contacts - <nil>
-	Contacts []*SoftLayer_Auxiliary_Press_Release_Contact_Press_Release `json:"contacts"`
-
-	// MediaPartners - <nil>
-	MediaPartners []*SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release `json:"mediaPartners"`
+	AboutCount uint64 `json:"aboutCount,omitempty"`
 
 	// ContactCount - no documentation
-	ContactCount uint64 `json:"contactCount"`
+	ContactCount uint64 `json:"contactCount,omitempty"`
 
 	// MediaPartnerCount - no documentation
-	MediaPartnerCount uint64 `json:"mediaPartnerCount"`
+	MediaPartnerCount uint64 `json:"mediaPartnerCount,omitempty"`
 
-	// About - <nil>
-	About []*SoftLayer_Auxiliary_Press_Release_About_Press_Release `json:"about"`
+	// Contacts - <nil>
+	Contacts []*SoftLayer_Auxiliary_Press_Release_Contact_Press_Release `json:"contacts,omitempty"`
 
 	// PressReleaseContent - <nil>
-	PressReleaseContent *SoftLayer_Auxiliary_Press_Release_Content `json:"pressReleaseContent"`
+	PressReleaseContent *SoftLayer_Auxiliary_Press_Release_Content `json:"pressReleaseContent,omitempty"`
+
+	// About - <nil>
+	About []*SoftLayer_Auxiliary_Press_Release_About_Press_Release `json:"about,omitempty"`
+
+	// MediaPartners - <nil>
+	MediaPartners []*SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release `json:"mediaPartners,omitempty"`
 }
 
 func (softlayer_auxiliary_press_release *SoftLayer_Auxiliary_Press_Release_Extended) String() string {

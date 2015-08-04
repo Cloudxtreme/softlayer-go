@@ -9,17 +9,17 @@ import (
 // SoftLayer_Account_Shipment_Status - <nil>
 type SoftLayer_Account_Shipment_Status struct {
 
-	// KeyName - <nil>
-	KeyName string `json:"keyName"`
-
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
+
+	// KeyName - <nil>
+	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_account_shipment_status *SoftLayer_Account_Shipment_Status) String() string {

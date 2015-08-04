@@ -7,15 +7,15 @@ package types
 // relating to a single SoftLayer Operating System Partition Template.
 type SoftLayer_Hardware_Component_Partition_OperatingSystem struct {
 
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// Notes - Information about the kinds of partition templates assigned to this operating system.
-	Notes string `json:"notes"`
-
 	// Description - A partition template operating system's description. Typically the title of the
 	// Operating System.
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// Notes - Information about the kinds of partition templates assigned to this operating system.
+	Notes string `json:"notes,omitempty"`
 }
 
 func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware_Component_Partition_OperatingSystem) String() string {
@@ -28,11 +28,11 @@ type SoftLayer_Hardware_Component_Partition_OperatingSystem_Extended struct {
 
 	// PartitionTemplates - Information regarding an operating system's
 	// [[SoftLayer_Hardware_Component_Partition_Template|Partition Templates]].
-	PartitionTemplates []*SoftLayer_Hardware_Component_Partition_Template `json:"partitionTemplates"`
+	PartitionTemplates []*SoftLayer_Hardware_Component_Partition_Template `json:"partitionTemplates,omitempty"`
 
 	// PartitionTemplateCount - A count of information regarding an operating system's
 	// [[SoftLayer_Hardware_Component_Partition_Template|Partition Templates]].
-	PartitionTemplateCount uint64 `json:"partitionTemplateCount"`
+	PartitionTemplateCount uint64 `json:"partitionTemplateCount,omitempty"`
 }
 
 func (softlayer_hardware_component_partition_operatingsystem *SoftLayer_Hardware_Component_Partition_OperatingSystem_Extended) String() string {

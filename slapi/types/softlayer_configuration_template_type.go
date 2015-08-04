@@ -10,17 +10,17 @@ import (
 // configuration template type information.
 type SoftLayer_Configuration_Template_Type struct {
 
-	// Id - Internal identifier of a configuration template type
-	Id int `json:"id"`
-
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
+
+	// Id - Internal identifier of a configuration template type
+	Id int `json:"id,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_configuration_template_type *SoftLayer_Configuration_Template_Type) String() string {

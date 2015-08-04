@@ -6,13 +6,13 @@ package types
 type SoftLayer_Network_Storage_Group_Type struct {
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_network_storage_group_type *SoftLayer_Network_Storage_Group_Type) String() string {

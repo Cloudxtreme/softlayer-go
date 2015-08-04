@@ -7,16 +7,16 @@ package types
 type SoftLayer_Security_Certificate_Request_ServerType struct {
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - The internal identifier of the certificate server type.
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// Value - no documentation
-	Value int `json:"value"`
+	Value int `json:"value,omitempty"`
 }
 
 func (softlayer_security_certificate_request_servertype *SoftLayer_Security_Certificate_Request_ServerType) String() string {

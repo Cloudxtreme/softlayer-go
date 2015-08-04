@@ -7,7 +7,7 @@ package types
 type SoftLayer_User_Preference struct {
 
 	// Value - no documentation
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_user_preference *SoftLayer_User_Preference) String() string {
@@ -18,11 +18,11 @@ func (softlayer_user_preference *SoftLayer_User_Preference) String() string {
 type SoftLayer_User_Preference_Extended struct {
 	SoftLayer_User_Preference
 
-	// Description - no documentation
-	Description string `json:"description"`
-
 	// Type - no documentation
-	Type *SoftLayer_User_Preference_Type `json:"type"`
+	Type *SoftLayer_User_Preference_Type `json:"type,omitempty"`
+
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_user_preference *SoftLayer_User_Preference_Extended) String() string {

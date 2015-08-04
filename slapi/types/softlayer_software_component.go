@@ -12,19 +12,19 @@ package types
 // hardware in accordance with it's license agreement.
 type SoftLayer_Software_Component struct {
 
-	// Id - An ID number identifying this Software Component (Software Installation)
-	Id int `json:"id"`
-
-	// ManufacturerLicenseInstance - A license key for this specific installation of software, if it is
-	// needed.
-	ManufacturerLicenseInstance string `json:"manufacturerLicenseInstance"`
-
 	// ManufacturerActivationCode - The manufacturer code that is needed to activate a license.
-	ManufacturerActivationCode string `json:"manufacturerActivationCode"`
+	ManufacturerActivationCode string `json:"manufacturerActivationCode,omitempty"`
+
+	// Id - An ID number identifying this Software Component (Software Installation)
+	Id int `json:"id,omitempty"`
 
 	// HardwareId - Hardware Identification Number for the server this Software Component is installed
 	// upon.
-	HardwareId int `json:"hardwareId"`
+	HardwareId int `json:"hardwareId,omitempty"`
+
+	// ManufacturerLicenseInstance - A license key for this specific installation of software, if it is
+	// needed.
+	ManufacturerLicenseInstance string `json:"manufacturerLicenseInstance,omitempty"`
 }
 
 func (softlayer_software_component *SoftLayer_Software_Component) String() string {
@@ -35,35 +35,35 @@ func (softlayer_software_component *SoftLayer_Software_Component) String() strin
 type SoftLayer_Software_Component_Extended struct {
 	SoftLayer_Software_Component
 
-	// PasswordHistoryCount - no documentation
-	PasswordHistoryCount uint64 `json:"passwordHistoryCount"`
-
-	// PasswordHistory - no documentation
-	PasswordHistory []*SoftLayer_Software_Component_Password_History `json:"passwordHistory"`
-
 	// Passwords - Username/Password pairs used for access to this Software Installation.
-	Passwords []*SoftLayer_Software_Component_Password `json:"passwords"`
-
-	// SoftwareLicense - no documentation
-	SoftwareLicense *SoftLayer_Software_License `json:"softwareLicense"`
-
-	// VirtualGuest - The virtual guest this software component is installed upon.
-	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest"`
-
-	// PasswordCount - A count of username/Password pairs used for access to this Software Installation.
-	PasswordCount uint64 `json:"passwordCount"`
-
-	// AverageInstallationDuration - The average amount of time that a software component takes to install.
-	AverageInstallationDuration uint64 `json:"averageInstallationDuration"`
-
-	// BillingItem - no documentation
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
-
-	// Hardware - The hardware this Software Component is installed upon.
-	Hardware *SoftLayer_Hardware `json:"hardware"`
+	Passwords []*SoftLayer_Software_Component_Password `json:"passwords,omitempty"`
 
 	// SoftwareDescription - The Software Description of this Software Component.
-	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription"`
+	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription,omitempty"`
+
+	// VirtualGuest - The virtual guest this software component is installed upon.
+	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest,omitempty"`
+
+	// PasswordHistoryCount - no documentation
+	PasswordHistoryCount uint64 `json:"passwordHistoryCount,omitempty"`
+
+	// BillingItem - no documentation
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
+
+	// SoftwareLicense - no documentation
+	SoftwareLicense *SoftLayer_Software_License `json:"softwareLicense,omitempty"`
+
+	// AverageInstallationDuration - The average amount of time that a software component takes to install.
+	AverageInstallationDuration uint64 `json:"averageInstallationDuration,omitempty"`
+
+	// PasswordCount - A count of username/Password pairs used for access to this Software Installation.
+	PasswordCount uint64 `json:"passwordCount,omitempty"`
+
+	// PasswordHistory - no documentation
+	PasswordHistory []*SoftLayer_Software_Component_Password_History `json:"passwordHistory,omitempty"`
+
+	// Hardware - The hardware this Software Component is installed upon.
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 }
 
 func (softlayer_software_component *SoftLayer_Software_Component_Extended) String() string {

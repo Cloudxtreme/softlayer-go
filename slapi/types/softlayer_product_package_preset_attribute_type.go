@@ -7,17 +7,17 @@ package types
 type SoftLayer_Product_Package_Preset_Attribute_Type struct {
 
 	// Description - A brief description of a package preset attribute type.
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - A package preset attribute type's internal identifier.
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - A package preset attribute type's key name. This is typically a shorter version of an
 	// attribute type's name.
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_product_package_preset_attribute_type *SoftLayer_Product_Package_Preset_Attribute_Type) String() string {

@@ -49,7 +49,19 @@ type RequestContext struct {
 func (ctx *RequestContext) Do(result interface{}) error {
 	// TODO: the http client should be re-used
 	httpClient := &http.Client{}
-	req, err := http.NewRequest("GET", ctx.Client.Endpoint+ctx.Service+"/"+ctx.Method, nil)
+
+	method := "GET"
+	if ctx.Method == "deleteObject" {
+		method = "DELETE"
+	} else if ctx.Method == "createObject" || ctx.Method == "createObjects" {
+		method = "POST"
+	} else if ctx.Method == "editObject" || ctx.Method == "editObjects" {
+		method = "PUT"
+	} else if ctx.Arguments != nil && len(ctx.Arguments) > 0 {
+		method = "POST"
+	}
+
+	req, err := http.NewRequest(method, ctx.Client.Endpoint+ctx.Service+"/"+ctx.Method, nil)
 	if err != nil {
 		return err
 	}
@@ -82,11 +94,7 @@ func (ctx *RequestContext) Do(result interface{}) error {
 	}
 
 	if ctx.Arguments != nil {
-		paramBytes, err := json.Marshal(ctx.Arguments)
-		if err != nil {
-			return err
-		}
-		body["parameters"] = string(paramBytes)
+		body["parameters"] = ctx.Arguments
 	}
 
 	if len(body) > 0 {
@@ -94,6 +102,7 @@ func (ctx *RequestContext) Do(result interface{}) error {
 		if err != nil {
 			return err
 		}
+		log.Println(string(bodyBytes))
 		req.Body = ioutil.NopCloser(bytes.NewReader(bodyBytes))
 	}
 
@@ -126,6 +135,8 @@ func (ctx *RequestContext) Do(result interface{}) error {
 		}
 		return slError
 	}
+
+	log.Println("RESPONSE", string(respBody))
 
 	// Unmarshal Result
 	err = json.Unmarshal(respBody, &result)

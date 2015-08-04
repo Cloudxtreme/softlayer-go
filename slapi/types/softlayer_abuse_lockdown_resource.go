@@ -15,10 +15,10 @@ type SoftLayer_Abuse_Lockdown_Resource_Extended struct {
 	SoftLayer_Abuse_Lockdown_Resource
 
 	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// InvoiceItem - <nil>
-	InvoiceItem *SoftLayer_Billing_Invoice_Item `json:"invoiceItem"`
+	InvoiceItem *SoftLayer_Billing_Invoice_Item `json:"invoiceItem,omitempty"`
 }
 
 func (softlayer_abuse_lockdown_resource *SoftLayer_Abuse_Lockdown_Resource_Extended) String() string {

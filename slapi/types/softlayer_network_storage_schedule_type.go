@@ -8,13 +8,13 @@ package types
 type SoftLayer_Network_Storage_Schedule_Type struct {
 
 	// Keyname - no documentation
-	Keyname string `json:"keyname"`
+	Keyname string `json:"keyname,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_storage_schedule_type *SoftLayer_Network_Storage_Schedule_Type) String() string {

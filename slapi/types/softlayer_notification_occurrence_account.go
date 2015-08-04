@@ -6,7 +6,7 @@ package types
 type SoftLayer_Notification_Occurrence_Account struct {
 
 	// Active - <nil>
-	Active int `json:"active"`
+	Active int `json:"active,omitempty"`
 }
 
 func (softlayer_notification_occurrence_account *SoftLayer_Notification_Occurrence_Account) String() string {
@@ -18,13 +18,13 @@ type SoftLayer_Notification_Occurrence_Account_Extended struct {
 	SoftLayer_Notification_Occurrence_Account
 
 	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// LastNotificationUpdate - <nil>
-	LastNotificationUpdate *SoftLayer_Notification_Occurrence_Update `json:"lastNotificationUpdate"`
+	LastNotificationUpdate *SoftLayer_Notification_Occurrence_Update `json:"lastNotificationUpdate,omitempty"`
 
 	// NotificationOccurrenceEvent - <nil>
-	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent"`
+	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent,omitempty"`
 }
 
 func (softlayer_notification_occurrence_account *SoftLayer_Notification_Occurrence_Account_Extended) String() string {

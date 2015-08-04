@@ -6,17 +6,17 @@ package types
 // active employee or customer.
 type SoftLayer_User_Access_Facility_Visitor struct {
 
-	// CompanyName - <nil>
-	CompanyName string `json:"companyName"`
-
-	// FirstName - <nil>
-	FirstName string `json:"firstName"`
-
 	// LastName - <nil>
-	LastName string `json:"lastName"`
+	LastName string `json:"lastName,omitempty"`
 
 	// TypeId - <nil>
-	TypeId int `json:"typeId"`
+	TypeId int `json:"typeId,omitempty"`
+
+	// CompanyName - <nil>
+	CompanyName string `json:"companyName,omitempty"`
+
+	// FirstName - <nil>
+	FirstName string `json:"firstName,omitempty"`
 }
 
 func (softlayer_user_access_facility_visitor *SoftLayer_User_Access_Facility_Visitor) String() string {
@@ -28,7 +28,7 @@ type SoftLayer_User_Access_Facility_Visitor_Extended struct {
 	SoftLayer_User_Access_Facility_Visitor
 
 	// VisitorType - <nil>
-	VisitorType *SoftLayer_User_Access_Facility_Visitor_Type `json:"visitorType"`
+	VisitorType *SoftLayer_User_Access_Facility_Visitor_Type `json:"visitorType,omitempty"`
 }
 
 func (softlayer_user_access_facility_visitor *SoftLayer_User_Access_Facility_Visitor_Extended) String() string {

@@ -13,14 +13,14 @@ type SoftLayer_Hardware_Benchmark_Certification struct {
 
 	// AccountId - The internal identifier of the SoftLayer customer account associated with a benchmark
 	// certification result.
-	AccountId int `json:"accountId"`
+	AccountId int `json:"accountId,omitempty"`
 
 	// CreateDate - The date that a benchmark certification result was generated.
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// HardwareId - A benchmark certification results's associated hardware's internal identification
 	// number.
-	HardwareId int `json:"hardwareId"`
+	HardwareId int `json:"hardwareId,omitempty"`
 }
 
 func (softlayer_hardware_benchmark_certification *SoftLayer_Hardware_Benchmark_Certification) String() string {
@@ -33,11 +33,11 @@ type SoftLayer_Hardware_Benchmark_Certification_Extended struct {
 
 	// Account - Information regarding a benchmark certification result's associated SoftLayer customer
 	// account.
-	Account *SoftLayer_Account `json:"account"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// Hardware - Information regarding the piece of hardware on which a benchmark certification test was
 	// performed.
-	Hardware *SoftLayer_Hardware `json:"hardware"`
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 }
 
 func (softlayer_hardware_benchmark_certification *SoftLayer_Hardware_Benchmark_Certification_Extended) String() string {

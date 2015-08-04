@@ -6,7 +6,7 @@ package types
 type SoftLayer_Security_SecureTransportProtocol struct {
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_security_securetransportprotocol *SoftLayer_Security_SecureTransportProtocol) String() string {

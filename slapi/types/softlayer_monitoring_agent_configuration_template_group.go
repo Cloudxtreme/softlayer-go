@@ -11,26 +11,26 @@ import (
 // templates for agents in a monitoring package.
 type SoftLayer_Monitoring_Agent_Configuration_Template_Group struct {
 
-	// AccountId - Internal identifier of a SoftLayer account that this configuration template belongs to
-	AccountId int `json:"accountId"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
 	// Description - Description of a monitoring agent configuration group
-	Description string `json:"description"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
-
-	// Name - no documentation
-	Name string `json:"name"`
-
-	// ItemId - Internal identifier of a configuration template type
-	ItemId int `json:"itemId"`
+	Description string `json:"description,omitempty"`
 
 	// Id - Internal identifier of a monitoring agent configuration group
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
+	// AccountId - Internal identifier of a SoftLayer account that this configuration template belongs to
+	AccountId int `json:"accountId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// ItemId - Internal identifier of a configuration template type
+	ItemId int `json:"itemId,omitempty"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 }
 
 func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group) String() string {
@@ -42,22 +42,22 @@ type SoftLayer_Monitoring_Agent_Configuration_Template_Group_Extended struct {
 	SoftLayer_Monitoring_Agent_Configuration_Template_Group
 
 	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
-
-	// ConfigurationTemplateReferences - <nil>
-	ConfigurationTemplateReferences []*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference `json:"configurationTemplateReferences"`
-
-	// Item - <nil>
-	Item *SoftLayer_Product_Item `json:"item"`
-
-	// ConfigurationTemplates - <nil>
-	ConfigurationTemplates []*SoftLayer_Configuration_Template `json:"configurationTemplates"`
-
-	// ConfigurationTemplateCount - no documentation
-	ConfigurationTemplateCount uint64 `json:"configurationTemplateCount"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// ConfigurationTemplateReferenceCount - no documentation
-	ConfigurationTemplateReferenceCount uint64 `json:"configurationTemplateReferenceCount"`
+	ConfigurationTemplateReferenceCount uint64 `json:"configurationTemplateReferenceCount,omitempty"`
+
+	// ConfigurationTemplateCount - no documentation
+	ConfigurationTemplateCount uint64 `json:"configurationTemplateCount,omitempty"`
+
+	// ConfigurationTemplateReferences - <nil>
+	ConfigurationTemplateReferences []*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference `json:"configurationTemplateReferences,omitempty"`
+
+	// ConfigurationTemplates - <nil>
+	ConfigurationTemplates []*SoftLayer_Configuration_Template `json:"configurationTemplates,omitempty"`
+
+	// Item - <nil>
+	Item *SoftLayer_Product_Item `json:"item,omitempty"`
 }
 
 func (softlayer_monitoring_agent_configuration_template_group *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Extended) String() string {

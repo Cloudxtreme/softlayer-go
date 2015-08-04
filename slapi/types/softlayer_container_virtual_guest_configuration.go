@@ -17,20 +17,20 @@ type SoftLayer_Container_Virtual_Guest_Configuration struct {
 	// represents the size, in gigabytes, of the disk. The localDiskFlag value in the template represents
 	// whether the option is a local or SAN based disk. Note: The block device number '1' is reserved for
 	// the disk attached to the computing instance.
-	BlockDevices []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"blockDevices"`
+	BlockDevices []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"blockDevices,omitempty"`
 
 	// Datacenters - Available datacenter options. The datacenter.name value in the template represents
 	// which datacenter the computing instance will be provisioned in.
-	Datacenters []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"datacenters"`
+	Datacenters []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"datacenters,omitempty"`
 
 	// Memory - Available memory options. The maxMemory value in the template represents the amount of
 	// memory, in megabytes, allocated to the computing instance.
-	Memory []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"memory"`
+	Memory []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"memory,omitempty"`
 
 	// NetworkComponents - Available network component options. The networkComponent.maxSpeed value in the
 	// template represents the link speed, in megabits per second, of the network connections for a
 	// computing instance.
-	NetworkComponents []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"networkComponents"`
+	NetworkComponents []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"networkComponents,omitempty"`
 
 	// OperatingSystems - Available operating system options. The operatingSystemReferenceCode value in the
 	// template is an identifier for a particular operating system. When provided exactly as shown in the
@@ -49,12 +49,12 @@ type SoftLayer_Container_Virtual_Guest_Configuration struct {
 	// specified in startCpus . The price which is used can be determined by calling
 	// [[SoftLayer_Virtual_Guest/generateOrderTemplate|generateOrderTemplate]] with your desired device
 	// specifications.
-	OperatingSystems []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"operatingSystems"`
+	OperatingSystems []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"operatingSystems,omitempty"`
 
 	// Processors - Available processor options. The startCpus value in the template represents the number
 	// of cores allocated to the computing instance. The dedicatedAccountHostOnlyFlag value in the template
 	// represents whether the instance will run on hosts with instances belonging to other accounts.
-	Processors []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"processors"`
+	Processors []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"processors,omitempty"`
 }
 
 func (softlayer_container_virtual_guest_configuration *SoftLayer_Container_Virtual_Guest_Configuration) String() string {

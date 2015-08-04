@@ -14,23 +14,23 @@ func (softlayer_user_customer_prospect *SoftLayer_User_Customer_Prospect) String
 type SoftLayer_User_Customer_Prospect_Extended struct {
 	SoftLayer_User_Customer_Prospect
 
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
-
-	// AssignedEmployees - <nil>
-	AssignedEmployees []*SoftLayer_User_Employee `json:"assignedEmployees"`
-
-	// Quotes - <nil>
-	Quotes []*SoftLayer_Billing_Order_Quote `json:"quotes"`
-
-	// Type - <nil>
-	Type *SoftLayer_User_Customer_Prospect_Type `json:"type"`
-
 	// AssignedEmployeeCount - no documentation
-	AssignedEmployeeCount uint64 `json:"assignedEmployeeCount"`
+	AssignedEmployeeCount uint64 `json:"assignedEmployeeCount,omitempty"`
 
 	// QuoteCount - no documentation
-	QuoteCount uint64 `json:"quoteCount"`
+	QuoteCount uint64 `json:"quoteCount,omitempty"`
+
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// AssignedEmployees - <nil>
+	AssignedEmployees []*SoftLayer_User_Employee `json:"assignedEmployees,omitempty"`
+
+	// Quotes - <nil>
+	Quotes []*SoftLayer_Billing_Order_Quote `json:"quotes,omitempty"`
+
+	// Type - <nil>
+	Type *SoftLayer_User_Customer_Prospect_Type `json:"type,omitempty"`
 }
 
 func (softlayer_user_customer_prospect *SoftLayer_User_Customer_Prospect_Extended) String() string {

@@ -7,14 +7,14 @@ package types
 // essentially an entry in a 'white list' of subnets a SoftLayer portal VPN user may access.
 type SoftLayer_Network_Service_Vpn_Overrides struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// SubnetId - The identifier of a subnet accessible by the SoftLayer portal VPN user.
-	SubnetId int `json:"subnetId"`
+	SubnetId int `json:"subnetId,omitempty"`
 
 	// UserId - no documentation
-	UserId int `json:"userId"`
-
-	// Id - no documentation
-	Id int `json:"id"`
+	UserId int `json:"userId,omitempty"`
 }
 
 func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides) String() string {
@@ -26,10 +26,10 @@ type SoftLayer_Network_Service_Vpn_Overrides_Extended struct {
 	SoftLayer_Network_Service_Vpn_Overrides
 
 	// Subnet - Subnet components accessible by a SoftLayer VPN portal user.
-	Subnet *SoftLayer_Network_Subnet `json:"subnet"`
+	Subnet *SoftLayer_Network_Subnet `json:"subnet,omitempty"`
 
 	// User - no documentation
-	User *SoftLayer_User_Customer `json:"user"`
+	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
 func (softlayer_network_service_vpn_overrides *SoftLayer_Network_Service_Vpn_Overrides_Extended) String() string {

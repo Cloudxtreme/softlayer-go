@@ -13,20 +13,20 @@ import (
 // profiles.
 type SoftLayer_Configuration_Template_Section_Profile struct {
 
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// SectionId - Internal identifier of a configuration section that this profile belongs to.
-	SectionId int `json:"sectionId"`
+	SectionId int `json:"sectionId,omitempty"`
 
 	// AgentId - Internal identifier of a monitoring agent this profile belongs to.
-	AgentId int `json:"agentId"`
+	AgentId int `json:"agentId,omitempty"`
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile) String() string {
@@ -38,10 +38,10 @@ type SoftLayer_Configuration_Template_Section_Profile_Extended struct {
 	SoftLayer_Configuration_Template_Section_Profile
 
 	// ConfigurationSection - <nil>
-	ConfigurationSection *SoftLayer_Configuration_Template_Section `json:"configurationSection"`
+	ConfigurationSection *SoftLayer_Configuration_Template_Section `json:"configurationSection,omitempty"`
 
 	// MonitoringAgent - <nil>
-	MonitoringAgent *SoftLayer_Monitoring_Agent `json:"monitoringAgent"`
+	MonitoringAgent *SoftLayer_Monitoring_Agent `json:"monitoringAgent,omitempty"`
 }
 
 func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile_Extended) String() string {

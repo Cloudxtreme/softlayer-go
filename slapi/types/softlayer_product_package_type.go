@@ -9,13 +9,13 @@ package types
 type SoftLayer_Product_Package_Type struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - The unique key name of the package type. Use this value when filtering.
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_product_package_type *SoftLayer_Product_Package_Type) String() string {
@@ -27,10 +27,10 @@ type SoftLayer_Product_Package_Type_Extended struct {
 	SoftLayer_Product_Package_Type
 
 	// PackageCount - A count of all the packages associated with the given package type.
-	PackageCount uint64 `json:"packageCount"`
+	PackageCount uint64 `json:"packageCount,omitempty"`
 
 	// Packages - All the packages associated with the given package type.
-	Packages []*SoftLayer_Product_Package `json:"packages"`
+	Packages []*SoftLayer_Product_Package `json:"packages,omitempty"`
 }
 
 func (softlayer_product_package_type *SoftLayer_Product_Package_Type_Extended) String() string {

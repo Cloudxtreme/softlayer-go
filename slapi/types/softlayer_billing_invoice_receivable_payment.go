@@ -11,16 +11,16 @@ import (
 type SoftLayer_Billing_Invoice_Receivable_Payment struct {
 
 	// Amount - no documentation
-	Amount float64 `json:"amount"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	Amount float64 `json:"amount,omitempty"`
 
 	// TypeCode - no documentation
-	TypeCode string `json:"typeCode"`
+	TypeCode string `json:"typeCode,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// InvoiceId - no documentation
-	InvoiceId int `json:"invoiceId"`
+	InvoiceId int `json:"invoiceId,omitempty"`
 }
 
 func (softlayer_billing_invoice_receivable_payment *SoftLayer_Billing_Invoice_Receivable_Payment) String() string {
@@ -31,26 +31,26 @@ func (softlayer_billing_invoice_receivable_payment *SoftLayer_Billing_Invoice_Re
 type SoftLayer_Billing_Invoice_Receivable_Payment_Extended struct {
 	SoftLayer_Billing_Invoice_Receivable_Payment
 
-	// ExchangeRate - <nil>
-	ExchangeRate *SoftLayer_Billing_Currency_ExchangeRate `json:"exchangeRate"`
-
-	// PaypalTransaction - <nil>
-	PaypalTransaction *SoftLayer_Billing_Payment_PayPal_Transaction `json:"paypalTransaction"`
-
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
+	// Invoice - <nil>
+	Invoice *SoftLayer_Billing_Invoice `json:"invoice,omitempty"`
 
 	// CreditCardLastFourDigits - <nil>
-	CreditCardLastFourDigits int `json:"creditCardLastFourDigits"`
+	CreditCardLastFourDigits int `json:"creditCardLastFourDigits,omitempty"`
 
-	// CreditCardRequestId - <nil>
-	CreditCardRequestId string `json:"creditCardRequestId"`
+	// ExchangeRate - <nil>
+	ExchangeRate *SoftLayer_Billing_Currency_ExchangeRate `json:"exchangeRate,omitempty"`
 
 	// CreditCardTransaction - <nil>
-	CreditCardTransaction *SoftLayer_Billing_Payment_Card_Transaction `json:"creditCardTransaction"`
+	CreditCardTransaction *SoftLayer_Billing_Payment_Card_Transaction `json:"creditCardTransaction,omitempty"`
 
-	// Invoice - <nil>
-	Invoice *SoftLayer_Billing_Invoice `json:"invoice"`
+	// PaypalTransaction - <nil>
+	PaypalTransaction *SoftLayer_Billing_Payment_PayPal_Transaction `json:"paypalTransaction,omitempty"`
+
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// CreditCardRequestId - <nil>
+	CreditCardRequestId string `json:"creditCardRequestId,omitempty"`
 }
 
 func (softlayer_billing_invoice_receivable_payment *SoftLayer_Billing_Invoice_Receivable_Payment_Extended) String() string {

@@ -10,14 +10,14 @@ package types
 type SoftLayer_User_Customer_Notification_Virtual_Guest struct {
 
 	// GuestId - The ID of the virtual guest object that is to be monitored.
-	GuestId int `json:"guestId"`
+	GuestId int `json:"guestId,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// UserId - The ID of the SoftLayer_User_Customer object that represents the user to be notified on
 	// monitoring failure.
-	UserId int `json:"userId"`
+	UserId int `json:"userId,omitempty"`
 }
 
 func (softlayer_user_customer_notification_virtual_guest *SoftLayer_User_Customer_Notification_Virtual_Guest) String() string {
@@ -29,11 +29,11 @@ type SoftLayer_User_Customer_Notification_Virtual_Guest_Extended struct {
 	SoftLayer_User_Customer_Notification_Virtual_Guest
 
 	// Guest - no documentation
-	Guest *SoftLayer_Virtual_Guest `json:"guest"`
+	Guest *SoftLayer_Virtual_Guest `json:"guest,omitempty"`
 
 	// User - The user that will be notified when the associated virtual guest object fails a monitoring
 	// instance.
-	User *SoftLayer_User_Customer `json:"user"`
+	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
 func (softlayer_user_customer_notification_virtual_guest *SoftLayer_User_Customer_Notification_Virtual_Guest_Extended) String() string {

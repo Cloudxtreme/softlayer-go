@@ -8,10 +8,10 @@ package types
 type SoftLayer_Ticket_Subject struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - A ticket subject's name. This name is used for a standard support ticket's title.
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) String() string {
@@ -23,7 +23,7 @@ type SoftLayer_Ticket_Subject_Extended struct {
 	SoftLayer_Ticket_Subject
 
 	// Group - <nil>
-	Group *SoftLayer_Ticket_Group `json:"group"`
+	Group *SoftLayer_Ticket_Group `json:"group,omitempty"`
 }
 
 func (softlayer_ticket_subject *SoftLayer_Ticket_Subject_Extended) String() string {

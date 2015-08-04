@@ -6,10 +6,10 @@ package types
 type SoftLayer_Ticket_Type struct {
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_ticket_type *SoftLayer_Ticket_Type) String() string {

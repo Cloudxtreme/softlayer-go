@@ -12,32 +12,32 @@ import (
 type SoftLayer_Container_Network_Storage_Evault_WebCc_JobDetails struct {
 
 	// HardwareId - no documentation
-	HardwareId int `json:"hardwareId"`
-
-	// LastRunDate - no documentation
-	LastRunDate *time.Time `json:"lastRunDate"`
-
-	// VirtualGuestId - no documentation
-	VirtualGuestId int `json:"virtualGuestId"`
+	HardwareId int `json:"hardwareId,omitempty"`
 
 	// OriginalSize - Size of backup job when it was first run. (provided only for backup jobs)
-	OriginalSize uint64 `json:"originalSize"`
+	OriginalSize uint64 `json:"originalSize,omitempty"`
 
 	// PercentageOfTotalUsage - Percentage of overall used space allocated by the job. (provided only for
 	// backup jobs)
-	PercentageOfTotalUsage int `json:"percentageOfTotalUsage"`
+	PercentageOfTotalUsage int `json:"percentageOfTotalUsage,omitempty"`
 
-	// Result - no documentation
-	Result string `json:"result"`
-
-	// BytesUsed - The number of bytes currently used by the backup job. (provided only for backup jobs)
-	BytesUsed uint64 `json:"bytesUsed"`
+	// VirtualGuestId - no documentation
+	VirtualGuestId int `json:"virtualGuestId,omitempty"`
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
+
+	// LastRunDate - no documentation
+	LastRunDate *time.Time `json:"lastRunDate,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
+
+	// Result - no documentation
+	Result string `json:"result,omitempty"`
+
+	// BytesUsed - The number of bytes currently used by the backup job. (provided only for backup jobs)
+	BytesUsed uint64 `json:"bytesUsed,omitempty"`
 }
 
 func (softlayer_container_network_storage_evault_webcc_jobdetails *SoftLayer_Container_Network_Storage_Evault_WebCc_JobDetails) String() string {

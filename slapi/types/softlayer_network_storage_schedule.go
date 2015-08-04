@@ -11,29 +11,29 @@ import (
 // synchronizing replicants.
 type SoftLayer_Network_Storage_Schedule struct {
 
-	// TypeId - no documentation
-	TypeId int `json:"typeId"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// Id - no documentation
-	Id int `json:"id"`
-
-	// PartnershipId - The partnership id which a schedule is associated with.
-	PartnershipId int `json:"partnershipId"`
-
-	// VolumeId - no documentation
-	VolumeId int `json:"volumeId"`
-
-	// Active - no documentation
-	Active int `json:"active"`
+	Id int `json:"id,omitempty"`
 
 	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// Active - no documentation
+	Active int `json:"active,omitempty"`
+
+	// VolumeId - no documentation
+	VolumeId int `json:"volumeId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
+	// PartnershipId - The partnership id which a schedule is associated with.
+	PartnershipId int `json:"partnershipId,omitempty"`
+
+	// TypeId - no documentation
+	TypeId int `json:"typeId,omitempty"`
 }
 
 func (softlayer_network_storage_schedule *SoftLayer_Network_Storage_Schedule) String() string {
@@ -44,51 +44,51 @@ func (softlayer_network_storage_schedule *SoftLayer_Network_Storage_Schedule) St
 type SoftLayer_Network_Storage_Schedule_Extended struct {
 	SoftLayer_Network_Storage_Schedule
 
-	// DayOfMonth - no documentation
-	DayOfMonth string `json:"dayOfMonth"`
-
-	// Hour - no documentation
-	Hour string `json:"hour"`
+	// Events - Events which have been created as the result of a schedule execution.
+	Events []*SoftLayer_Network_Storage_Event `json:"events,omitempty"`
 
 	// Partnership - no documentation
-	Partnership *SoftLayer_Network_Storage_Partnership `json:"partnership"`
+	Partnership *SoftLayer_Network_Storage_Partnership `json:"partnership,omitempty"`
 
-	// Properties - no documentation
-	Properties []*SoftLayer_Network_Storage_Schedule_Property `json:"properties"`
+	// DayOfMonth - no documentation
+	DayOfMonth string `json:"dayOfMonth,omitempty"`
+
+	// DayOfWeek - no documentation
+	DayOfWeek string `json:"dayOfWeek,omitempty"`
 
 	// RetentionCount - The number of snapshots this schedule is configured to retain.
-	RetentionCount string `json:"retentionCount"`
+	RetentionCount string `json:"retentionCount,omitempty"`
 
 	// Type - The type provides a standardized definition for a schedule.
-	Type *SoftLayer_Network_Storage_Schedule_Type `json:"type"`
+	Type *SoftLayer_Network_Storage_Schedule_Type `json:"type,omitempty"`
+
+	// Volume - no documentation
+	Volume *SoftLayer_Network_Storage `json:"volume,omitempty"`
+
+	// EventCount - A count of events which have been created as the result of a schedule execution.
+	EventCount uint64 `json:"eventCount,omitempty"`
+
+	// Hour - no documentation
+	Hour string `json:"hour,omitempty"`
+
+	// PropertyCount - A count of properties used for configuration of a schedule.
+	PropertyCount uint64 `json:"propertyCount,omitempty"`
 
 	// SnapshotCount - A count of snapshots which have been created as the result of this schedule's
 	// execution.
-	SnapshotCount uint64 `json:"snapshotCount"`
-
-	// EventCount - A count of events which have been created as the result of a schedule execution.
-	EventCount uint64 `json:"eventCount"`
-
-	// PropertyCount - A count of properties used for configuration of a schedule.
-	PropertyCount uint64 `json:"propertyCount"`
-
-	// DayOfWeek - no documentation
-	DayOfWeek string `json:"dayOfWeek"`
-
-	// Events - Events which have been created as the result of a schedule execution.
-	Events []*SoftLayer_Network_Storage_Event `json:"events"`
+	SnapshotCount uint64 `json:"snapshotCount,omitempty"`
 
 	// Minute - no documentation
-	Minute string `json:"minute"`
+	Minute string `json:"minute,omitempty"`
 
 	// MonthOfYear - no documentation
-	MonthOfYear string `json:"monthOfYear"`
+	MonthOfYear string `json:"monthOfYear,omitempty"`
+
+	// Properties - no documentation
+	Properties []*SoftLayer_Network_Storage_Schedule_Property `json:"properties,omitempty"`
 
 	// Snapshots - Snapshots which have been created as the result of this schedule's execution.
-	Snapshots []*SoftLayer_Network_Storage `json:"snapshots"`
-
-	// Volume - no documentation
-	Volume *SoftLayer_Network_Storage `json:"volume"`
+	Snapshots []*SoftLayer_Network_Storage `json:"snapshots,omitempty"`
 }
 
 func (softlayer_network_storage_schedule *SoftLayer_Network_Storage_Schedule_Extended) String() string {

@@ -8,7 +8,7 @@ package types
 type McAfee_Epolicy_Orchestrator_Version45_Hips_Event_Signature_Version8 struct {
 
 	// SignatureName - no documentation
-	SignatureName string `json:"signatureName"`
+	SignatureName string `json:"signatureName,omitempty"`
 }
 
 func (mcafee_epolicy_orchestrator_version45_hips_event_signature_version8 *McAfee_Epolicy_Orchestrator_Version45_Hips_Event_Signature_Version8) String() string {

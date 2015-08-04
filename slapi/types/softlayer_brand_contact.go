@@ -6,44 +6,44 @@ package types
 // such as Corporate or Support contact information
 type SoftLayer_Brand_Contact struct {
 
-	// Country - no documentation
-	Country string `json:"country"`
-
-	// FaxPhone - no documentation
-	FaxPhone string `json:"faxPhone"`
-
-	// State - no documentation
-	State string `json:"state"`
-
-	// LastName - no documentation
-	LastName string `json:"lastName"`
-
-	// PostalCode - no documentation
-	PostalCode string `json:"postalCode"`
-
-	// Address2 - no documentation
-	Address2 string `json:"address2"`
+	// Address1 - no documentation
+	Address1 string `json:"address1,omitempty"`
 
 	// AlternatePhone - no documentation
-	AlternatePhone string `json:"alternatePhone"`
-
-	// BrandContactTypeId - no documentation
-	BrandContactTypeId int `json:"brandContactTypeId"`
+	AlternatePhone string `json:"alternatePhone,omitempty"`
 
 	// Email - no documentation
-	Email string `json:"email"`
+	Email string `json:"email,omitempty"`
 
 	// FirstName - no documentation
-	FirstName string `json:"firstName"`
+	FirstName string `json:"firstName,omitempty"`
 
-	// Address1 - no documentation
-	Address1 string `json:"address1"`
+	// LastName - no documentation
+	LastName string `json:"lastName,omitempty"`
 
-	// City - no documentation
-	City string `json:"city"`
+	// BrandContactTypeId - no documentation
+	BrandContactTypeId int `json:"brandContactTypeId,omitempty"`
+
+	// State - no documentation
+	State string `json:"state,omitempty"`
+
+	// Country - no documentation
+	Country string `json:"country,omitempty"`
+
+	// FaxPhone - no documentation
+	FaxPhone string `json:"faxPhone,omitempty"`
 
 	// OfficePhone - no documentation
-	OfficePhone string `json:"officePhone"`
+	OfficePhone string `json:"officePhone,omitempty"`
+
+	// PostalCode - no documentation
+	PostalCode string `json:"postalCode,omitempty"`
+
+	// Address2 - no documentation
+	Address2 string `json:"address2,omitempty"`
+
+	// City - no documentation
+	City string `json:"city,omitempty"`
 }
 
 func (softlayer_brand_contact *SoftLayer_Brand_Contact) String() string {
@@ -54,11 +54,11 @@ func (softlayer_brand_contact *SoftLayer_Brand_Contact) String() string {
 type SoftLayer_Brand_Contact_Extended struct {
 	SoftLayer_Brand_Contact
 
-	// Brand - <nil>
-	Brand *SoftLayer_Brand `json:"brand"`
-
 	// BrandContactType - <nil>
-	BrandContactType *SoftLayer_Brand_Contact_Type `json:"brandContactType"`
+	BrandContactType *SoftLayer_Brand_Contact_Type `json:"brandContactType,omitempty"`
+
+	// Brand - <nil>
+	Brand *SoftLayer_Brand `json:"brand,omitempty"`
 }
 
 func (softlayer_brand_contact *SoftLayer_Brand_Contact_Extended) String() string {

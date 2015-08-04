@@ -11,13 +11,13 @@ package types
 type SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs struct {
 
 	// RawData - The raw data returned from the server's remote management card.
-	RawData []*SoftLayer_Container_RemoteManagement_SensorReading `json:"rawData"`
+	RawData []*SoftLayer_Container_RemoteManagement_SensorReading `json:"rawData,omitempty"`
 
 	// SpeedGraphs - no documentation
-	SpeedGraphs []*SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed `json:"speedGraphs"`
+	SpeedGraphs []*SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed `json:"speedGraphs,omitempty"`
 
 	// TemperatureGraphs - The graph(s) to display the server's cpu(s) and system temperatures.
-	TemperatureGraphs []*SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature `json:"temperatureGraphs"`
+	TemperatureGraphs []*SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature `json:"temperatureGraphs,omitempty"`
 }
 
 func (softlayer_container_remotemanagement_sensorreadingswithgraphs *SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs) String() string {

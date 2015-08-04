@@ -12,10 +12,10 @@ package types
 type SoftLayer_Container_Search_ObjectType struct {
 
 	// Properties - A collection of [[SoftLayer_Container_Search_ObjectType_Property|object properties]].
-	Properties []*SoftLayer_Container_Search_ObjectType_Property `json:"properties"`
+	Properties []*SoftLayer_Container_Search_ObjectType_Property `json:"properties,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_container_search_objecttype *SoftLayer_Container_Search_ObjectType) String() string {

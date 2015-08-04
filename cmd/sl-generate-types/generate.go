@@ -44,6 +44,13 @@ func ({{ $.Type.Lower }} *{{ $.Type.StructName }}_Extended) String() string {
 {{ end }}
 `
 
+func getBases(entity MetadataEntity, entities map[string]MetadataEntity) []string {
+	if entity.Base == "" {
+		return []string{string(entity.Type)}
+	}
+	return append(getBases(entities[entity.Base], entities), string(entity.Type))
+}
+
 func main() {
 	client := &http.Client{}
 	req, err := http.NewRequest("GET", "https://api.softlayer.com/metadata/v3.1", nil)
@@ -66,6 +73,17 @@ func main() {
 	err = json.Unmarshal(body, &entities)
 	if err != nil {
 		fmt.Println("error:", err)
+	}
+
+	for _, service := range entities {
+		for _, base := range getBases(service, entities) {
+			if service.Properties == nil {
+				service.Properties = make(map[string]Property)
+			}
+			for prop_name, prop := range entities[base].Properties {
+				service.Properties[prop_name] = prop
+			}
+		}
 	}
 
 	typeTemplate := template.Must(

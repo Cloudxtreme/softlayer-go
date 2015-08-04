@@ -15,10 +15,10 @@ type SoftLayer_Billing_Item_Link_ThePlanet_Extended struct {
 	SoftLayer_Billing_Item_Link_ThePlanet
 
 	// BillingItem - <nil>
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
 
 	// ServiceProvider - <nil>
-	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider"`
+	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`
 }
 
 func (softlayer_billing_item_link_theplanet *SoftLayer_Billing_Item_Link_ThePlanet_Extended) String() string {

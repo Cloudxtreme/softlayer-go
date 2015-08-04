@@ -8,11 +8,11 @@ package types
 type SoftLayer_Virtual_Disk_Image_Software struct {
 
 	// Id - The unique identifier of a virtual disk image to software relationship.
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// SoftwareDescriptionId - The unique identifier of the software that a virtual disk image is
 	// associated with.
-	SoftwareDescriptionId int `json:"softwareDescriptionId"`
+	SoftwareDescriptionId int `json:"softwareDescriptionId,omitempty"`
 }
 
 func (softlayer_virtual_disk_image_software *SoftLayer_Virtual_Disk_Image_Software) String() string {
@@ -23,17 +23,17 @@ func (softlayer_virtual_disk_image_software *SoftLayer_Virtual_Disk_Image_Softwa
 type SoftLayer_Virtual_Disk_Image_Software_Extended struct {
 	SoftLayer_Virtual_Disk_Image_Software
 
+	// PasswordCount - A count of username/Password pairs used for access to a Software Installation.
+	PasswordCount uint64 `json:"passwordCount,omitempty"`
+
 	// DiskImage - The virtual disk image that is associated with software.
-	DiskImage *SoftLayer_Virtual_Disk_Image `json:"diskImage"`
+	DiskImage *SoftLayer_Virtual_Disk_Image `json:"diskImage,omitempty"`
 
 	// Passwords - Username/Password pairs used for access to a Software Installation.
-	Passwords []*SoftLayer_Virtual_Disk_Image_Software_Password `json:"passwords"`
+	Passwords []*SoftLayer_Virtual_Disk_Image_Software_Password `json:"passwords,omitempty"`
 
 	// SoftwareDescription - no documentation
-	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription"`
-
-	// PasswordCount - A count of username/Password pairs used for access to a Software Installation.
-	PasswordCount uint64 `json:"passwordCount"`
+	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription,omitempty"`
 }
 
 func (softlayer_virtual_disk_image_software *SoftLayer_Virtual_Disk_Image_Software_Extended) String() string {

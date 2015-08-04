@@ -6,17 +6,17 @@ package types
 // layouts
 type SoftLayer_Layout_Container struct {
 
-	// LayoutContainerTypeId - The internal identifier of the related [[SoftLayer_Layout_Container_Type]]
-	LayoutContainerTypeId int `json:"layoutContainerTypeId"`
-
-	// Name - no documentation
-	Name string `json:"name"`
-
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Keyname - The unique key name of the layout container, used primarily for programmatic purposes
-	Keyname string `json:"keyname"`
+	Keyname string `json:"keyname,omitempty"`
+
+	// LayoutContainerTypeId - The internal identifier of the related [[SoftLayer_Layout_Container_Type]]
+	LayoutContainerTypeId int `json:"layoutContainerTypeId,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_layout_container *SoftLayer_Layout_Container) String() string {
@@ -27,14 +27,14 @@ func (softlayer_layout_container *SoftLayer_Layout_Container) String() string {
 type SoftLayer_Layout_Container_Extended struct {
 	SoftLayer_Layout_Container
 
+	// LayoutContainerType - no documentation
+	LayoutContainerType *SoftLayer_Layout_Container_Type `json:"layoutContainerType,omitempty"`
+
 	// LayoutItems - no documentation
-	LayoutItems []*SoftLayer_Layout_Item `json:"layoutItems"`
+	LayoutItems []*SoftLayer_Layout_Item `json:"layoutItems,omitempty"`
 
 	// LayoutItemCount - A count of the layout items assigned to this layout container
-	LayoutItemCount uint64 `json:"layoutItemCount"`
-
-	// LayoutContainerType - no documentation
-	LayoutContainerType *SoftLayer_Layout_Container_Type `json:"layoutContainerType"`
+	LayoutItemCount uint64 `json:"layoutItemCount,omitempty"`
 }
 
 func (softlayer_layout_container *SoftLayer_Layout_Container_Extended) String() string {

@@ -9,10 +9,10 @@ package types
 type SoftLayer_Container_Network_LoadBalancer_StatusEntry struct {
 
 	// Content - no documentation
-	Content string `json:"content"`
+	Content string `json:"content,omitempty"`
 
 	// Label - no documentation
-	Label string `json:"label"`
+	Label string `json:"label,omitempty"`
 }
 
 func (softlayer_container_network_loadbalancer_statusentry *SoftLayer_Container_Network_LoadBalancer_StatusEntry) String() string {

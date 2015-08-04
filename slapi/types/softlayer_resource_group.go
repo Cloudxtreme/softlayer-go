@@ -9,26 +9,26 @@ import (
 // SoftLayer_Resource_Group - <nil>
 type SoftLayer_Resource_Group struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
-	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 
 	// RootResourceGroupId - <nil>
-	RootResourceGroupId int `json:"rootResourceGroupId"`
+	RootResourceGroupId int `json:"rootResourceGroupId,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id"`
+	// KeyName - no documentation
+	KeyName string `json:"keyName,omitempty"`
 
 	// TemplateId - no documentation
-	TemplateId int `json:"templateId"`
+	TemplateId int `json:"templateId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
-	// Name - no documentation
-	Name string `json:"name"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_resource_group *SoftLayer_Resource_Group) String() string {
@@ -39,47 +39,47 @@ func (softlayer_resource_group *SoftLayer_Resource_Group) String() string {
 type SoftLayer_Resource_Group_Extended struct {
 	SoftLayer_Resource_Group
 
-	// HardwareMembers - no documentation
-	HardwareMembers []*SoftLayer_Resource_Group_Member `json:"hardwareMembers"`
-
-	// AncestorGroupCount - A count of a resource group's associated group ancestors.
-	AncestorGroupCount uint64 `json:"ancestorGroupCount"`
-
-	// VlanMemberCount - no documentation
-	VlanMemberCount uint64 `json:"vlanMemberCount"`
-
-	// Members - no documentation
-	Members []*SoftLayer_Resource_Group_Member `json:"members"`
-
-	// RootResourceGroup - no documentation
-	RootResourceGroup *SoftLayer_Resource_Group `json:"rootResourceGroup"`
-
 	// VlanMembers - no documentation
-	VlanMembers []*SoftLayer_Resource_Group_Member `json:"vlanMembers"`
+	VlanMembers []*SoftLayer_Resource_Group_Member `json:"vlanMembers,omitempty"`
 
 	// AttributeCount - A count of a resource group's associated attributes.
-	AttributeCount uint64 `json:"attributeCount"`
+	AttributeCount uint64 `json:"attributeCount,omitempty"`
 
 	// MemberCount - no documentation
-	MemberCount uint64 `json:"memberCount"`
+	MemberCount uint64 `json:"memberCount,omitempty"`
 
-	// SubnetMemberCount - A count of a resource group's associated subnet members.
-	SubnetMemberCount uint64 `json:"subnetMemberCount"`
+	// HardwareMembers - no documentation
+	HardwareMembers []*SoftLayer_Resource_Group_Member `json:"hardwareMembers,omitempty"`
 
 	// Template - no documentation
-	Template *SoftLayer_Resource_Group_Template `json:"template"`
+	Template *SoftLayer_Resource_Group_Template `json:"template,omitempty"`
 
-	// AncestorGroups - no documentation
-	AncestorGroups []*SoftLayer_Resource_Group `json:"ancestorGroups"`
+	// VlanMemberCount - no documentation
+	VlanMemberCount uint64 `json:"vlanMemberCount,omitempty"`
+
+	// Members - no documentation
+	Members []*SoftLayer_Resource_Group_Member `json:"members,omitempty"`
 
 	// Attributes - no documentation
-	Attributes []*SoftLayer_Resource_Group_Attribute `json:"attributes"`
+	Attributes []*SoftLayer_Resource_Group_Attribute `json:"attributes,omitempty"`
 
 	// SubnetMembers - no documentation
-	SubnetMembers []*SoftLayer_Resource_Group_Member `json:"subnetMembers"`
+	SubnetMembers []*SoftLayer_Resource_Group_Member `json:"subnetMembers,omitempty"`
+
+	// AncestorGroupCount - A count of a resource group's associated group ancestors.
+	AncestorGroupCount uint64 `json:"ancestorGroupCount,omitempty"`
 
 	// HardwareMemberCount - A count of a resource group's associated hardware members.
-	HardwareMemberCount uint64 `json:"hardwareMemberCount"`
+	HardwareMemberCount uint64 `json:"hardwareMemberCount,omitempty"`
+
+	// SubnetMemberCount - A count of a resource group's associated subnet members.
+	SubnetMemberCount uint64 `json:"subnetMemberCount,omitempty"`
+
+	// AncestorGroups - no documentation
+	AncestorGroups []*SoftLayer_Resource_Group `json:"ancestorGroups,omitempty"`
+
+	// RootResourceGroup - no documentation
+	RootResourceGroup *SoftLayer_Resource_Group `json:"rootResourceGroup,omitempty"`
 }
 
 func (softlayer_resource_group *SoftLayer_Resource_Group_Extended) String() string {

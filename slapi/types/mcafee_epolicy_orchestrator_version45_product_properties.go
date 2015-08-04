@@ -8,7 +8,7 @@ package types
 type McAfee_Epolicy_Orchestrator_Version45_Product_Properties struct {
 
 	// DatVersion - no documentation
-	DatVersion string `json:"datVersion"`
+	DatVersion string `json:"datVersion,omitempty"`
 }
 
 func (mcafee_epolicy_orchestrator_version45_product_properties *McAfee_Epolicy_Orchestrator_Version45_Product_Properties) String() string {

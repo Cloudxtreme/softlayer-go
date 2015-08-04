@@ -11,26 +11,29 @@ import (
 // host's metric data.
 type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details struct {
 
-	// MinMemoryUsage - The minimum amount of memory utilized by this platform for the given day.
-	MinMemoryUsage int `json:"minMemoryUsage"`
-
-	// Day - no documentation
-	Day *time.Time `json:"day"`
-
-	// MaxInstances - The maximum number of guests hosted by this platform for the given day.
-	MaxInstances int `json:"maxInstances"`
-
-	// MaxMemoryUsage - The maximum amount of memory utilized by this platform for the given day.
-	MaxMemoryUsage int `json:"maxMemoryUsage"`
-
-	// MeanInstances - The mean number of guests hosted by this platform for the given day.
-	MeanInstances float32 `json:"meanInstances"`
-
 	// MeanMemoryUsage - The mean amount of memory utilized by this platform for the given day.
-	MeanMemoryUsage float32 `json:"meanMemoryUsage"`
+	MeanMemoryUsage float32 `json:"meanMemoryUsage,omitempty"`
 
 	// MinInstances - The minimum number of guests hosted by this platform for the given day.
-	MinInstances int `json:"minInstances"`
+	MinInstances int `json:"minInstances,omitempty"`
+
+	// MinMemoryUsage - The minimum amount of memory utilized by this platform for the given day.
+	MinMemoryUsage int `json:"minMemoryUsage,omitempty"`
+
+	// MetricName - The name that best describes the metric being collected.
+	MetricName string `json:"metricName,omitempty"`
+
+	// Day - no documentation
+	Day *time.Time `json:"day,omitempty"`
+
+	// MaxInstances - The maximum number of guests hosted by this platform for the given day.
+	MaxInstances int `json:"maxInstances,omitempty"`
+
+	// MaxMemoryUsage - The maximum amount of memory utilized by this platform for the given day.
+	MaxMemoryUsage int `json:"maxMemoryUsage,omitempty"`
+
+	// MeanInstances - The mean number of guests hosted by this platform for the given day.
+	MeanInstances float32 `json:"meanInstances,omitempty"`
 }
 
 func (softlayer_container_metric_tracking_object_virtual_host_details *SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details) String() string {

@@ -10,13 +10,13 @@ package types
 type SoftLayer_Network_Firewall_AccessControlList struct {
 
 	// Direction - <nil>
-	Direction string `json:"direction"`
+	Direction string `json:"direction,omitempty"`
 
 	// FirewallContextInterfaceId - <nil>
-	FirewallContextInterfaceId int `json:"firewallContextInterfaceId"`
+	FirewallContextInterfaceId int `json:"firewallContextInterfaceId,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_firewall_accesscontrollist *SoftLayer_Network_Firewall_AccessControlList) String() string {
@@ -27,20 +27,20 @@ func (softlayer_network_firewall_accesscontrollist *SoftLayer_Network_Firewall_A
 type SoftLayer_Network_Firewall_AccessControlList_Extended struct {
 	SoftLayer_Network_Firewall_AccessControlList
 
-	// NetworkFirewallUpdateRequestCount - A count of the update requests made for this firewall.
-	NetworkFirewallUpdateRequestCount uint64 `json:"networkFirewallUpdateRequestCount"`
-
-	// RuleCount - A count of the currently running rule set of this context access control list firewall.
-	RuleCount uint64 `json:"ruleCount"`
-
 	// NetworkFirewallUpdateRequests - no documentation
-	NetworkFirewallUpdateRequests []*SoftLayer_Network_Firewall_Update_Request `json:"networkFirewallUpdateRequests"`
+	NetworkFirewallUpdateRequests []*SoftLayer_Network_Firewall_Update_Request `json:"networkFirewallUpdateRequests,omitempty"`
 
 	// NetworkVlan - <nil>
-	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan"`
+	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`
 
 	// Rules - The currently running rule set of this context access control list firewall.
-	Rules []*SoftLayer_Network_Vlan_Firewall_Rule `json:"rules"`
+	Rules []*SoftLayer_Network_Vlan_Firewall_Rule `json:"rules,omitempty"`
+
+	// NetworkFirewallUpdateRequestCount - A count of the update requests made for this firewall.
+	NetworkFirewallUpdateRequestCount uint64 `json:"networkFirewallUpdateRequestCount,omitempty"`
+
+	// RuleCount - A count of the currently running rule set of this context access control list firewall.
+	RuleCount uint64 `json:"ruleCount,omitempty"`
 }
 
 func (softlayer_network_firewall_accesscontrollist *SoftLayer_Network_Firewall_AccessControlList_Extended) String() string {

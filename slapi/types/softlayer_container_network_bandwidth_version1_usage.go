@@ -12,14 +12,14 @@ type SoftLayer_Container_Network_Bandwidth_Version1_Usage struct {
 
 	// IncomingAmount - The amount of incoming bandwidth that a server has used within the hour of the
 	// recordedDate.
-	IncomingAmount float32 `json:"incomingAmount"`
+	IncomingAmount float32 `json:"incomingAmount,omitempty"`
 
 	// OutgoingAmount - The amount of outgoing bandwidth that a server has used within the hour of the
 	// recordedDate.
-	OutgoingAmount float32 `json:"outgoingAmount"`
+	OutgoingAmount float32 `json:"outgoingAmount,omitempty"`
 
 	// RecordedDate - The date and time that the bandwidth was used by a piece of hardware
-	RecordedDate *time.Time `json:"recordedDate"`
+	RecordedDate *time.Time `json:"recordedDate,omitempty"`
 }
 
 func (softlayer_container_network_bandwidth_version1_usage *SoftLayer_Container_Network_Bandwidth_Version1_Usage) String() string {

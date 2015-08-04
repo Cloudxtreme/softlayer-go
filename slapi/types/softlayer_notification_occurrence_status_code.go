@@ -5,14 +5,14 @@ package types
 // SoftLayer_Notification_Occurrence_Status_Code - <nil>
 type SoftLayer_Notification_Occurrence_Status_Code struct {
 
-	// Name - <nil>
-	Name string `json:"name"`
-
 	// Description - <nil>
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
+
+	// Name - <nil>
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_notification_occurrence_status_code *SoftLayer_Notification_Occurrence_Status_Code) String() string {
@@ -24,7 +24,7 @@ type SoftLayer_Notification_Occurrence_Status_Code_Extended struct {
 	SoftLayer_Notification_Occurrence_Status_Code
 
 	// NotificationOccurrenceEventType - <nil>
-	NotificationOccurrenceEventType *SoftLayer_Notification_Occurrence_Event_Type `json:"notificationOccurrenceEventType"`
+	NotificationOccurrenceEventType *SoftLayer_Notification_Occurrence_Event_Type `json:"notificationOccurrenceEventType,omitempty"`
 }
 
 func (softlayer_notification_occurrence_status_code *SoftLayer_Notification_Occurrence_Status_Code_Extended) String() string {

@@ -6,10 +6,10 @@ package types
 type SoftLayer_Container_Network_Media_Transcode_Job_Watermark_Position struct {
 
 	// X - no documentation
-	X int `json:"x"`
+	X int `json:"x,omitempty"`
 
 	// Y - no documentation
-	Y int `json:"y"`
+	Y int `json:"y,omitempty"`
 }
 
 func (softlayer_container_network_media_transcode_job_watermark_position *SoftLayer_Container_Network_Media_Transcode_Job_Watermark_Position) String() string {

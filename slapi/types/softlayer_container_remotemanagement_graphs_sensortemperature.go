@@ -8,10 +8,10 @@ package types
 type SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature struct {
 
 	// Graph - The graph to display the server's cpu(s) and system temperatures.
-	Graph string `json:"graph"`
+	Graph string `json:"graph,omitempty"`
 
 	// Title - no documentation
-	Title string `json:"title"`
+	Title string `json:"title,omitempty"`
 }
 
 func (softlayer_container_remotemanagement_graphs_sensortemperature *SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature) String() string {

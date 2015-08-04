@@ -9,10 +9,10 @@ package types
 type SoftLayer_Container_Network_IntrusionProtection_Statistic struct {
 
 	// AttackCount - The number of attacks effecting this name over the time period
-	AttackCount int `json:"attackCount"`
+	AttackCount int `json:"attackCount,omitempty"`
 
 	// Name - Either the name of the attack in question, or the attacking IP Address
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_container_network_intrusionprotection_statistic *SoftLayer_Container_Network_IntrusionProtection_Statistic) String() string {

@@ -13,21 +13,21 @@ import (
 // records.
 type SoftLayer_Dns_Domain struct {
 
-	// Name - A domain's name including top-level domain, for example "example.com".
-	Name string `json:"name"`
-
 	// Serial - A unique number denoting the latest revision of a domain. Whenever a domain is changed its
 	// corresponding serial number is also changed. Serial numbers typically follow the format yyyymmdd##
 	// where yyyy is the current year, mm is the current month, dd is the current day of the month, and ##
 	// is the number of the revision for that day. A domain's serial number is automatically updated when
 	// edited via the
-	Serial int `json:"serial"`
+	Serial int `json:"serial,omitempty"`
 
 	// UpdateDate - no documentation
-	UpdateDate *time.Time `json:"updateDate"`
+	UpdateDate *time.Time `json:"updateDate,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
+
+	// Name - A domain's name including top-level domain, for example "example.com".
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_dns_domain *SoftLayer_Dns_Domain) String() string {
@@ -38,23 +38,23 @@ func (softlayer_dns_domain *SoftLayer_Dns_Domain) String() string {
 type SoftLayer_Dns_Domain_Extended struct {
 	SoftLayer_Dns_Domain
 
-	// ManagedResourceFlag - A flag indicating that the dns domain record is a managed resource.
-	ManagedResourceFlag bool `json:"managedResourceFlag"`
-
-	// ResourceRecords - The individual records contained within a domain record. These include but are not
-	// limited to A, MX, SPF and TXT records.
-	ResourceRecords []*SoftLayer_Dns_Domain_ResourceRecord `json:"resourceRecords"`
-
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
-
 	// Secondary - The secondary DNS record that defines this domain as being managed through zone
 	// transfers.
-	Secondary *SoftLayer_Dns_Secondary `json:"secondary"`
+	Secondary *SoftLayer_Dns_Secondary `json:"secondary,omitempty"`
 
 	// ResourceRecordCount - A count of the individual records contained within a domain record. These
 	// include but are not limited to A, MX, SPF and TXT records.
-	ResourceRecordCount uint64 `json:"resourceRecordCount"`
+	ResourceRecordCount uint64 `json:"resourceRecordCount,omitempty"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// ManagedResourceFlag - A flag indicating that the dns domain record is a managed resource.
+	ManagedResourceFlag bool `json:"managedResourceFlag,omitempty"`
+
+	// ResourceRecords - The individual records contained within a domain record. These include but are not
+	// limited to A, MX, SPF and TXT records.
+	ResourceRecords []*SoftLayer_Dns_Domain_ResourceRecord `json:"resourceRecords,omitempty"`
 }
 
 func (softlayer_dns_domain *SoftLayer_Dns_Domain_Extended) String() string {

@@ -21,20 +21,20 @@ import (
 type SoftLayer_User_Customer_Access_Authentication struct {
 
 	// CreateDate - The date of an attempt to log into the SoftLayer customer portal.
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// IpAddress - The IP address of the user who attempted to log into the SoftLayer customer portal.
-	IpAddress string `json:"ipAddress"`
+	IpAddress string `json:"ipAddress,omitempty"`
 
 	// SuccessFlag - Whether an attempt to log into the SoftLayer customer portal was successful or not.
-	SuccessFlag bool `json:"successFlag"`
+	SuccessFlag bool `json:"successFlag,omitempty"`
 
 	// UserId - The internal identifier of the user who attempted to log into the SoftLayer customer
 	// portal.
-	UserId int `json:"userId"`
+	UserId int `json:"userId,omitempty"`
 
 	// Username - The username used when attempting to log into the SoftLayer customer portal
-	Username string `json:"username"`
+	Username string `json:"username,omitempty"`
 }
 
 func (softlayer_user_customer_access_authentication *SoftLayer_User_Customer_Access_Authentication) String() string {
@@ -46,7 +46,7 @@ type SoftLayer_User_Customer_Access_Authentication_Extended struct {
 	SoftLayer_User_Customer_Access_Authentication
 
 	// User - The user who has attempted to log into the SoftLayer customer portal.
-	User *SoftLayer_User_Customer `json:"user"`
+	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
 func (softlayer_user_customer_access_authentication *SoftLayer_User_Customer_Access_Authentication_Extended) String() string {

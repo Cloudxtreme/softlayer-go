@@ -7,10 +7,10 @@ package types
 type SoftLayer_Container_Exception struct {
 
 	// ExceptionClass - no documentation
-	ExceptionClass string `json:"exceptionClass"`
+	ExceptionClass string `json:"exceptionClass,omitempty"`
 
 	// ExceptionMessage - no documentation
-	ExceptionMessage string `json:"exceptionMessage"`
+	ExceptionMessage string `json:"exceptionMessage,omitempty"`
 }
 
 func (softlayer_container_exception *SoftLayer_Container_Exception) String() string {

@@ -6,7 +6,7 @@ package types
 type SoftLayer_Network_Service_Resource_Attribute_Type struct {
 
 	// Keyname - <nil>
-	Keyname string `json:"keyname"`
+	Keyname string `json:"keyname,omitempty"`
 }
 
 func (softlayer_network_service_resource_attribute_type *SoftLayer_Network_Service_Resource_Attribute_Type) String() string {

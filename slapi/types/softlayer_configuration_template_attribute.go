@@ -7,7 +7,7 @@ package types
 type SoftLayer_Configuration_Template_Attribute struct {
 
 	// Value - no documentation
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_configuration_template_attribute *SoftLayer_Configuration_Template_Attribute) String() string {
@@ -19,7 +19,7 @@ type SoftLayer_Configuration_Template_Attribute_Extended struct {
 	SoftLayer_Configuration_Template_Attribute
 
 	// ConfigurationTemplate - <nil>
-	ConfigurationTemplate *SoftLayer_Configuration_Template `json:"configurationTemplate"`
+	ConfigurationTemplate *SoftLayer_Configuration_Template `json:"configurationTemplate,omitempty"`
 }
 
 func (softlayer_configuration_template_attribute *SoftLayer_Configuration_Template_Attribute_Extended) String() string {

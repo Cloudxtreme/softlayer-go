@@ -6,10 +6,10 @@ package types
 type SoftLayer_Account_Link_OpenStack_ProjectDetails struct {
 
 	// ProjectId - no documentation
-	ProjectId string `json:"projectId"`
+	ProjectId string `json:"projectId,omitempty"`
 
 	// ProjectName - no documentation
-	ProjectName string `json:"projectName"`
+	ProjectName string `json:"projectName,omitempty"`
 }
 
 func (softlayer_account_link_openstack_projectdetails *SoftLayer_Account_Link_OpenStack_ProjectDetails) String() string {

@@ -8,7 +8,7 @@ package types
 type SoftLayer_Container_Metric_Tracking_Object_Details struct {
 
 	// MetricName - The name that best describes the metric being collected.
-	MetricName string `json:"metricName"`
+	MetricName string `json:"metricName,omitempty"`
 }
 
 func (softlayer_container_metric_tracking_object_details *SoftLayer_Container_Metric_Tracking_Object_Details) String() string {

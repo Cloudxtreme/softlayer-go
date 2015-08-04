@@ -5,17 +5,17 @@ package types
 // SoftLayer_Auxiliary_Press_Release_Contact_Press_Release - <nil>
 type SoftLayer_Auxiliary_Press_Release_Contact_Press_Release struct {
 
-	// PressReleaseId - no documentation
-	PressReleaseId int `json:"pressReleaseId"`
-
 	// SortOrder - no documentation
-	SortOrder int `json:"sortOrder"`
+	SortOrder int `json:"sortOrder,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// PressReleaseContactId - no documentation
-	PressReleaseContactId int `json:"pressReleaseContactId"`
+	PressReleaseContactId int `json:"pressReleaseContactId,omitempty"`
+
+	// PressReleaseId - no documentation
+	PressReleaseId int `json:"pressReleaseId,omitempty"`
 }
 
 func (softlayer_auxiliary_press_release_contact_press_release *SoftLayer_Auxiliary_Press_Release_Contact_Press_Release) String() string {
@@ -26,17 +26,17 @@ func (softlayer_auxiliary_press_release_contact_press_release *SoftLayer_Auxilia
 type SoftLayer_Auxiliary_Press_Release_Contact_Press_Release_Extended struct {
 	SoftLayer_Auxiliary_Press_Release_Contact_Press_Release
 
+	// ContactCount - no documentation
+	ContactCount uint64 `json:"contactCount,omitempty"`
+
 	// PressReleaseCount - no documentation
-	PressReleaseCount uint64 `json:"pressReleaseCount"`
+	PressReleaseCount uint64 `json:"pressReleaseCount,omitempty"`
 
 	// Contacts - <nil>
-	Contacts []*SoftLayer_Auxiliary_Press_Release_Contact `json:"contacts"`
+	Contacts []*SoftLayer_Auxiliary_Press_Release_Contact `json:"contacts,omitempty"`
 
 	// PressReleases - <nil>
-	PressReleases []*SoftLayer_Auxiliary_Press_Release `json:"pressReleases"`
-
-	// ContactCount - no documentation
-	ContactCount uint64 `json:"contactCount"`
+	PressReleases []*SoftLayer_Auxiliary_Press_Release `json:"pressReleases,omitempty"`
 }
 
 func (softlayer_auxiliary_press_release_contact_press_release *SoftLayer_Auxiliary_Press_Release_Contact_Press_Release_Extended) String() string {

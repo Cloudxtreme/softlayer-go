@@ -12,17 +12,17 @@ import (
 // detected and the action that is taken.
 type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event struct {
 
-	// EventLocalDateTime - no documentation
-	EventLocalDateTime *time.Time `json:"eventLocalDateTime"`
-
-	// Filename - no documentation
-	Filename string `json:"filename"`
-
 	// VirusName - no documentation
-	VirusName string `json:"virusName"`
+	VirusName string `json:"virusName,omitempty"`
 
 	// VirusType - no documentation
-	VirusType string `json:"virusType"`
+	VirusType string `json:"virusType,omitempty"`
+
+	// EventLocalDateTime - no documentation
+	EventLocalDateTime *time.Time `json:"eventLocalDateTime,omitempty"`
+
+	// Filename - no documentation
+	Filename string `json:"filename,omitempty"`
 }
 
 func (mcafee_epolicy_orchestrator_version36_antivirus_event *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event) String() string {
@@ -34,7 +34,7 @@ type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Extended struct {
 	McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event
 
 	// VirusActionTaken - no documentation
-	VirusActionTaken *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Filter_Description `json:"virusActionTaken"`
+	VirusActionTaken *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Filter_Description `json:"virusActionTaken,omitempty"`
 }
 
 func (mcafee_epolicy_orchestrator_version36_antivirus_event *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Extended) String() string {

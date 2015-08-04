@@ -6,7 +6,7 @@ package types
 type SoftLayer_Network_Service_Resource_Type struct {
 
 	// Type - <nil>
-	Type string `json:"type"`
+	Type string `json:"type,omitempty"`
 }
 
 func (softlayer_network_service_resource_type *SoftLayer_Network_Service_Resource_Type) String() string {
@@ -18,10 +18,10 @@ type SoftLayer_Network_Service_Resource_Type_Extended struct {
 	SoftLayer_Network_Service_Resource_Type
 
 	// ServiceResources - <nil>
-	ServiceResources []*SoftLayer_Network_Service_Resource `json:"serviceResources"`
+	ServiceResources []*SoftLayer_Network_Service_Resource `json:"serviceResources,omitempty"`
 
 	// ServiceResourceCount - no documentation
-	ServiceResourceCount uint64 `json:"serviceResourceCount"`
+	ServiceResourceCount uint64 `json:"serviceResourceCount,omitempty"`
 }
 
 func (softlayer_network_service_resource_type *SoftLayer_Network_Service_Resource_Type_Extended) String() string {

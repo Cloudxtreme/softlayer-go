@@ -8,10 +8,10 @@ package types
 type SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed struct {
 
 	// Graph - no documentation
-	Graph string `json:"graph"`
+	Graph string `json:"graph,omitempty"`
 
 	// Title - no documentation
-	Title string `json:"title"`
+	Title string `json:"title,omitempty"`
 }
 
 func (softlayer_container_remotemanagement_graphs_sensorspeed *SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed) String() string {

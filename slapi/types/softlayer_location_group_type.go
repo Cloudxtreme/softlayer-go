@@ -6,7 +6,7 @@ package types
 type SoftLayer_Location_Group_Type struct {
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_location_group_type *SoftLayer_Location_Group_Type) String() string {

@@ -15,7 +15,7 @@ type SoftLayer_Ticket_Chat_TranscriptLine_Extended struct {
 	SoftLayer_Ticket_Chat_TranscriptLine
 
 	// Speaker - <nil>
-	Speaker *SoftLayer_User_Interface `json:"speaker"`
+	Speaker *SoftLayer_User_Interface `json:"speaker,omitempty"`
 }
 
 func (softlayer_ticket_chat_transcriptline *SoftLayer_Ticket_Chat_TranscriptLine_Extended) String() string {

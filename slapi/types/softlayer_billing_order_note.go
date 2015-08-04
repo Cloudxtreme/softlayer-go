@@ -10,7 +10,7 @@ import (
 type SoftLayer_Billing_Order_Note struct {
 
 	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_billing_order_note *SoftLayer_Billing_Order_Note) String() string {
@@ -22,10 +22,10 @@ type SoftLayer_Billing_Order_Note_Extended struct {
 	SoftLayer_Billing_Order_Note
 
 	// Employee - <nil>
-	Employee *SoftLayer_User_Employee `json:"employee"`
+	Employee *SoftLayer_User_Employee `json:"employee,omitempty"`
 
 	// Order - <nil>
-	Order *SoftLayer_Billing_Order `json:"order"`
+	Order *SoftLayer_Billing_Order `json:"order,omitempty"`
 }
 
 func (softlayer_billing_order_note *SoftLayer_Billing_Order_Note_Extended) String() string {

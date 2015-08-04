@@ -7,13 +7,13 @@ package types
 type SoftLayer_Security_Certificate_Request_Status struct {
 
 	// Description - The description of a SSL certificate request status
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - The internal identifier of an SSL certificate request status
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_security_certificate_request_status *SoftLayer_Security_Certificate_Request_Status) String() string {

@@ -10,16 +10,16 @@ import (
 type SoftLayer_Scale_Group_Log struct {
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Description - A textual description of what happened during this action.
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// ScaleGroupId - no documentation
-	ScaleGroupId int `json:"scaleGroupId"`
+	ScaleGroupId int `json:"scaleGroupId,omitempty"`
 }
 
 func (softlayer_scale_group_log *SoftLayer_Scale_Group_Log) String() string {
@@ -31,7 +31,7 @@ type SoftLayer_Scale_Group_Log_Extended struct {
 	SoftLayer_Scale_Group_Log
 
 	// ScaleGroup - no documentation
-	ScaleGroup *SoftLayer_Scale_Group `json:"scaleGroup"`
+	ScaleGroup *SoftLayer_Scale_Group `json:"scaleGroup,omitempty"`
 }
 
 func (softlayer_scale_group_log *SoftLayer_Scale_Group_Log_Extended) String() string {

@@ -7,7 +7,7 @@ package types
 type SoftLayer_Network_Bandwidth_Version1_Host struct {
 
 	// PodId - no documentation
-	PodId int `json:"podId"`
+	PodId int `json:"podId,omitempty"`
 }
 
 func (softlayer_network_bandwidth_version1_host *SoftLayer_Network_Bandwidth_Version1_Host) String() string {

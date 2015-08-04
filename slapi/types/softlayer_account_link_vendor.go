@@ -6,10 +6,10 @@ package types
 type SoftLayer_Account_Link_Vendor struct {
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_account_link_vendor *SoftLayer_Account_Link_Vendor) String() string {

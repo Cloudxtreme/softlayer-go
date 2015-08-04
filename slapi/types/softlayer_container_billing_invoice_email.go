@@ -8,17 +8,17 @@ package types
 type SoftLayer_Container_Billing_Invoice_Email struct {
 
 	// ExcelInvoiceIds - no documentation
-	ExcelInvoiceIds []int `json:"excelInvoiceIds"`
+	ExcelInvoiceIds []int `json:"excelInvoiceIds,omitempty"`
 
 	// PdfDetailedInvoiceIds - no documentation
-	PdfDetailedInvoiceIds []int `json:"pdfDetailedInvoiceIds"`
+	PdfDetailedInvoiceIds []int `json:"pdfDetailedInvoiceIds,omitempty"`
 
 	// PdfInvoiceIds - no documentation
-	PdfInvoiceIds []int `json:"pdfInvoiceIds"`
+	PdfInvoiceIds []int `json:"pdfInvoiceIds,omitempty"`
 
 	// Type - The type of Invoices to be emailed [current|next]. If next is selected, the account id will
 	// be used.
-	Type string `json:"type"`
+	Type string `json:"type,omitempty"`
 }
 
 func (softlayer_container_billing_invoice_email *SoftLayer_Container_Billing_Invoice_Email) String() string {

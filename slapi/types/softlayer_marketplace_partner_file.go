@@ -6,10 +6,10 @@ package types
 type SoftLayer_Marketplace_Partner_File struct {
 
 	// Attributes - <nil>
-	Attributes *SoftLayer_Marketplace_Partner_File_Attributes `json:"attributes"`
+	Attributes *SoftLayer_Marketplace_Partner_File_Attributes `json:"attributes,omitempty"`
 
 	// Contents - <nil>
-	Contents string `json:"contents"`
+	Contents string `json:"contents,omitempty"`
 }
 
 func (softlayer_marketplace_partner_file *SoftLayer_Marketplace_Partner_File) String() string {

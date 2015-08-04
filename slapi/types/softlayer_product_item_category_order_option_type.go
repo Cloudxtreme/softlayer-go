@@ -7,20 +7,20 @@ package types
 // orders for prices.
 type SoftLayer_Product_Item_Category_Order_Option_Type struct {
 
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// Keyname - A simple description for an item category order type.
-	Keyname string `json:"keyname"`
+	Keyname string `json:"keyname,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// Value - no documentation
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_product_item_category_order_option_type *SoftLayer_Product_Item_Category_Order_Option_Type) String() string {

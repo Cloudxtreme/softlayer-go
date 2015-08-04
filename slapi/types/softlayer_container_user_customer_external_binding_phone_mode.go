@@ -11,12 +11,6 @@ package types
 // your secret you can ensure that you have possession of your phone.
 type SoftLayer_Container_User_Customer_External_Binding_Phone_Mode struct {
 
-	// Pin - no documentation
-	Pin string `json:"pin"`
-
-	// PinMode - Available Pin modes are: Default: (Pin is not used)
-	PinMode string `json:"pinMode"`
-
 	// Mode - Authentication mode. Valid modes are: In this mode, users will receive a phone call to
 	// authenticate. Using PIN can enhance the security of the phone authentication by requiring the user
 	// to enter a PIN during the authentication call. Valid Pin modes are: (default) No PIN is used. 4 to
@@ -32,7 +26,13 @@ type SoftLayer_Container_User_Customer_External_Binding_Phone_Mode struct {
 	// Standard Mode, users will prompted to authenticate, deny, or deny and report fraud. This mode
 	// enhances the security of the authentication by requiring the user to enter their PIN in the phone
 	// app.
-	Mode string `json:"mode"`
+	Mode string `json:"mode,omitempty"`
+
+	// Pin - no documentation
+	Pin string `json:"pin,omitempty"`
+
+	// PinMode - Available Pin modes are: Default: (Pin is not used)
+	PinMode string `json:"pinMode,omitempty"`
 }
 
 func (softlayer_container_user_customer_external_binding_phone_mode *SoftLayer_Container_User_Customer_External_Binding_Phone_Mode) String() string {

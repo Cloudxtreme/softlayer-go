@@ -10,44 +10,44 @@ import (
 // various SoftLayer resources.
 type SoftLayer_Event_Log struct {
 
-	// Label - no documentation
-	Label string `json:"label"`
-
-	// ObjectId - no documentation
-	ObjectId int `json:"objectId"`
-
-	// ObjectName - Event object name such as "server", "dns" and so on.
-	ObjectName string `json:"objectName"`
-
-	// Resource - A resource object that is associated with the event
-	Resource *SoftLayer_Entity `json:"resource"`
-
-	// Username - no documentation
-	Username string `json:"username"`
-
-	// EventName - Event name such as "reboot", "cancel", "update host" and so on.
-	EventName string `json:"eventName"`
-
-	// IpAddress - no documentation
-	IpAddress string `json:"ipAddress"`
+	// EventCreateDate - no documentation
+	EventCreateDate *time.Time `json:"eventCreateDate,omitempty"`
 
 	// TraceId - A unique trace id. Multiple event can be grouped by a trace id.
-	TraceId string `json:"traceId"`
-
-	// UserType - Type of user that triggered the event. User type can be or
-	UserType string `json:"userType"`
-
-	// EventCreateDate - no documentation
-	EventCreateDate *time.Time `json:"eventCreateDate"`
-
-	// MetaData - no documentation
-	MetaData string `json:"metaData"`
-
-	// UserId - no documentation
-	UserId int `json:"userId"`
+	TraceId string `json:"traceId,omitempty"`
 
 	// AccountId - no documentation
-	AccountId int `json:"accountId"`
+	AccountId int `json:"accountId,omitempty"`
+
+	// ObjectName - Event object name such as "server", "dns" and so on.
+	ObjectName string `json:"objectName,omitempty"`
+
+	// Resource - A resource object that is associated with the event
+	Resource *SoftLayer_Entity `json:"resource,omitempty"`
+
+	// EventName - Event name such as "reboot", "cancel", "update host" and so on.
+	EventName string `json:"eventName,omitempty"`
+
+	// Label - no documentation
+	Label string `json:"label,omitempty"`
+
+	// MetaData - no documentation
+	MetaData string `json:"metaData,omitempty"`
+
+	// UserId - no documentation
+	UserId int `json:"userId,omitempty"`
+
+	// IpAddress - no documentation
+	IpAddress string `json:"ipAddress,omitempty"`
+
+	// ObjectId - no documentation
+	ObjectId int `json:"objectId,omitempty"`
+
+	// UserType - Type of user that triggered the event. User type can be or
+	UserType string `json:"userType,omitempty"`
+
+	// Username - no documentation
+	Username string `json:"username,omitempty"`
 }
 
 func (softlayer_event_log *SoftLayer_Event_Log) String() string {
@@ -59,7 +59,7 @@ type SoftLayer_Event_Log_Extended struct {
 	SoftLayer_Event_Log
 
 	// User - <nil>
-	User *SoftLayer_User_Customer `json:"user"`
+	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
 func (softlayer_event_log *SoftLayer_Event_Log_Extended) String() string {

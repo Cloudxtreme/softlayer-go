@@ -7,20 +7,20 @@ package types
 // portal or the
 type SoftLayer_Brand struct {
 
-	// KeyName - no documentation
-	KeyName string `json:"keyName"`
-
 	// LongName - no documentation
-	LongName string `json:"longName"`
+	LongName string `json:"longName,omitempty"`
+
+	// KeyName - no documentation
+	KeyName string `json:"keyName,omitempty"`
 
 	// CatalogId - no documentation
-	CatalogId int `json:"catalogId"`
-
-	// Id - <nil>
-	Id int `json:"id"`
+	CatalogId int `json:"catalogId,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_brand *SoftLayer_Brand) String() string {
@@ -31,80 +31,80 @@ func (softlayer_brand *SoftLayer_Brand) String() string {
 type SoftLayer_Brand_Extended struct {
 	SoftLayer_Brand
 
-	// OwnedAccountCount - no documentation
-	OwnedAccountCount uint64 `json:"ownedAccountCount"`
-
-	// TicketGroupCount - no documentation
-	TicketGroupCount uint64 `json:"ticketGroupCount"`
-
 	// Account - <nil>
-	Account *SoftLayer_Account `json:"account"`
-
-	// Catalog - no documentation
-	Catalog *SoftLayer_Product_Catalog `json:"catalog"`
-
-	// DistributorChildFlag - <nil>
-	DistributorChildFlag bool `json:"distributorChildFlag"`
-
-	// OwnedAccounts - no documentation
-	OwnedAccounts []*SoftLayer_Account `json:"ownedAccounts"`
-
-	// AllOwnedAccounts - no documentation
-	AllOwnedAccounts []*SoftLayer_Account `json:"allOwnedAccounts"`
-
-	// HardwareCount - A count of an account's associated hardware objects.
-	HardwareCount uint64 `json:"hardwareCount"`
-
-	// TicketGroups - <nil>
-	TicketGroups []*SoftLayer_Ticket_Group `json:"ticketGroups"`
-
-	// OpenTickets - <nil>
-	OpenTickets []*SoftLayer_Ticket `json:"openTickets"`
-
-	// Tickets - <nil>
-	Tickets []*SoftLayer_Ticket `json:"tickets"`
-
-	// OpenTicketCount - no documentation
-	OpenTicketCount uint64 `json:"openTicketCount"`
-
-	// Distributor - <nil>
-	Distributor *SoftLayer_Brand `json:"distributor"`
-
-	// HasAgentSupportFlag - <nil>
-	HasAgentSupportFlag bool `json:"hasAgentSupportFlag"`
-
-	// UserCount - no documentation
-	UserCount uint64 `json:"userCount"`
-
-	// DistributorFlag - <nil>
-	DistributorFlag string `json:"distributorFlag"`
-
-	// Contacts - no documentation
-	Contacts []*SoftLayer_Brand_Contact `json:"contacts"`
-
-	// Users - <nil>
-	Users []*SoftLayer_User_Customer `json:"users"`
-
-	// ContactCount - no documentation
-	ContactCount uint64 `json:"contactCount"`
-
-	// TicketCount - no documentation
-	TicketCount uint64 `json:"ticketCount"`
-
-	// VirtualGuestCount - A count of an account's associated virtual guest objects.
-	VirtualGuestCount uint64 `json:"virtualGuestCount"`
-
-	// AllowAccountCreationFlag - This flag indicates if creation of accounts is allowed.
-	AllowAccountCreationFlag bool `json:"allowAccountCreationFlag"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// VirtualGuests - no documentation
-	VirtualGuests []*SoftLayer_Virtual_Guest `json:"virtualGuests"`
+	VirtualGuests []*SoftLayer_Virtual_Guest `json:"virtualGuests,omitempty"`
 
-	// Hardware - no documentation
-	Hardware []*SoftLayer_Hardware `json:"hardware"`
+	// TicketGroupCount - no documentation
+	TicketGroupCount uint64 `json:"ticketGroupCount,omitempty"`
+
+	// OpenTickets - <nil>
+	OpenTickets []*SoftLayer_Ticket `json:"openTickets,omitempty"`
+
+	// Catalog - no documentation
+	Catalog *SoftLayer_Product_Catalog `json:"catalog,omitempty"`
+
+	// TicketCount - no documentation
+	TicketCount uint64 `json:"ticketCount,omitempty"`
+
+	// VirtualGuestCount - A count of an account's associated virtual guest objects.
+	VirtualGuestCount uint64 `json:"virtualGuestCount,omitempty"`
+
+	// AllowAccountCreationFlag - This flag indicates if creation of accounts is allowed.
+	AllowAccountCreationFlag bool `json:"allowAccountCreationFlag,omitempty"`
+
+	// Distributor - <nil>
+	Distributor *SoftLayer_Brand `json:"distributor,omitempty"`
+
+	// HasAgentSupportFlag - <nil>
+	HasAgentSupportFlag bool `json:"hasAgentSupportFlag,omitempty"`
+
+	// HardwareCount - A count of an account's associated hardware objects.
+	HardwareCount uint64 `json:"hardwareCount,omitempty"`
+
+	// OpenTicketCount - no documentation
+	OpenTicketCount uint64 `json:"openTicketCount,omitempty"`
+
+	// Contacts - no documentation
+	Contacts []*SoftLayer_Brand_Contact `json:"contacts,omitempty"`
+
+	// DistributorFlag - <nil>
+	DistributorFlag string `json:"distributorFlag,omitempty"`
+
+	// ContactCount - no documentation
+	ContactCount uint64 `json:"contactCount,omitempty"`
+
+	// TicketGroups - <nil>
+	TicketGroups []*SoftLayer_Ticket_Group `json:"ticketGroups,omitempty"`
 
 	// AllOwnedAccountCount - no documentation
-	AllOwnedAccountCount uint64 `json:"allOwnedAccountCount"`
+	AllOwnedAccountCount uint64 `json:"allOwnedAccountCount,omitempty"`
+
+	// OwnedAccountCount - no documentation
+	OwnedAccountCount uint64 `json:"ownedAccountCount,omitempty"`
+
+	// UserCount - no documentation
+	UserCount uint64 `json:"userCount,omitempty"`
+
+	// DistributorChildFlag - <nil>
+	DistributorChildFlag bool `json:"distributorChildFlag,omitempty"`
+
+	// Hardware - no documentation
+	Hardware []*SoftLayer_Hardware `json:"hardware,omitempty"`
+
+	// OwnedAccounts - no documentation
+	OwnedAccounts []*SoftLayer_Account `json:"ownedAccounts,omitempty"`
+
+	// AllOwnedAccounts - no documentation
+	AllOwnedAccounts []*SoftLayer_Account `json:"allOwnedAccounts,omitempty"`
+
+	// Tickets - <nil>
+	Tickets []*SoftLayer_Ticket `json:"tickets,omitempty"`
+
+	// Users - <nil>
+	Users []*SoftLayer_User_Customer `json:"users,omitempty"`
 }
 
 func (softlayer_brand *SoftLayer_Brand_Extended) String() string {

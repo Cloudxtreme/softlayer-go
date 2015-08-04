@@ -6,10 +6,10 @@ package types
 type SoftLayer_Account_Attachment_Employee_Role struct {
 
 	// Keyname - <nil>
-	Keyname string `json:"keyname"`
+	Keyname string `json:"keyname,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_account_attachment_employee_role *SoftLayer_Account_Attachment_Employee_Role) String() string {

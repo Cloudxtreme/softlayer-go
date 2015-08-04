@@ -5,17 +5,17 @@ package types
 // SoftLayer_Product_Item_Price_Attribute - <nil>
 type SoftLayer_Product_Item_Price_Attribute struct {
 
-	// Value - <nil>
-	Value string `json:"value"`
-
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// ItemPriceAttributeTypeId - <nil>
-	ItemPriceAttributeTypeId int `json:"itemPriceAttributeTypeId"`
+	ItemPriceAttributeTypeId int `json:"itemPriceAttributeTypeId,omitempty"`
 
 	// ItemPriceId - <nil>
-	ItemPriceId int `json:"itemPriceId"`
+	ItemPriceId int `json:"itemPriceId,omitempty"`
+
+	// Value - <nil>
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_product_item_price_attribute *SoftLayer_Product_Item_Price_Attribute) String() string {
@@ -27,10 +27,10 @@ type SoftLayer_Product_Item_Price_Attribute_Extended struct {
 	SoftLayer_Product_Item_Price_Attribute
 
 	// ItemPrice - <nil>
-	ItemPrice *SoftLayer_Product_Item_Price `json:"itemPrice"`
+	ItemPrice *SoftLayer_Product_Item_Price `json:"itemPrice,omitempty"`
 
 	// ItemPriceAttributeType - <nil>
-	ItemPriceAttributeType *SoftLayer_Product_Item_Price_Attribute_Type `json:"itemPriceAttributeType"`
+	ItemPriceAttributeType *SoftLayer_Product_Item_Price_Attribute_Type `json:"itemPriceAttributeType,omitempty"`
 }
 
 func (softlayer_product_item_price_attribute *SoftLayer_Product_Item_Price_Attribute_Extended) String() string {

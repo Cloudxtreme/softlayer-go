@@ -7,13 +7,13 @@ package types
 type SoftLayer_Brand_Contact_Type struct {
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_brand_contact_type *SoftLayer_Brand_Contact_Type) String() string {

@@ -11,7 +11,7 @@ type SoftLayer_Network_Monitor_Version1_Incident struct {
 
 	// Status - A network monitoring incident's status, either the string denoting an ongoing incident or
 	// meaning the incident has been resolved.
-	Status string `json:"status"`
+	Status string `json:"status,omitempty"`
 }
 
 func (softlayer_network_monitor_version1_incident *SoftLayer_Network_Monitor_Version1_Incident) String() string {

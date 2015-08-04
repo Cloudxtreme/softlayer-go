@@ -13,13 +13,13 @@ import (
 type McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_BlockedApplicationEvent struct {
 
 	// ApplicationDescription - A brief description of the application that is blocked.
-	ApplicationDescription string `json:"applicationDescription"`
+	ApplicationDescription string `json:"applicationDescription,omitempty"`
 
 	// IncidentTime - no documentation
-	IncidentTime *time.Time `json:"incidentTime"`
+	IncidentTime *time.Time `json:"incidentTime,omitempty"`
 
 	// ProcessName - no documentation
-	ProcessName string `json:"processName"`
+	ProcessName string `json:"processName,omitempty"`
 }
 
 func (mcafee_epolicy_orchestrator_version36_hips_version7_blockedapplicationevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_BlockedApplicationEvent) String() string {

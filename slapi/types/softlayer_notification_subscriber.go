@@ -9,26 +9,26 @@ import (
 // SoftLayer_Notification_Subscriber - <nil>
 type SoftLayer_Notification_Subscriber struct {
 
-	// Id - <nil>
-	Id int `json:"id"`
-
-	// NotificationId - <nil>
-	NotificationId int `json:"notificationId"`
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// NotificationSubscriberTypeId - <nil>
-	NotificationSubscriberTypeId int `json:"notificationSubscriberTypeId"`
+	NotificationSubscriberTypeId int `json:"notificationSubscriberTypeId,omitempty"`
+
+	// NotificationId - <nil>
+	NotificationId int `json:"notificationId,omitempty"`
 
 	// NotificationSubscriberTypeResourceId - <nil>
-	NotificationSubscriberTypeResourceId int `json:"notificationSubscriberTypeResourceId"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
+	NotificationSubscriberTypeResourceId int `json:"notificationSubscriberTypeResourceId,omitempty"`
 
 	// Active - <nil>
-	Active int `json:"active"`
+	Active int `json:"active,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 
 	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 }
 
 func (softlayer_notification_subscriber *SoftLayer_Notification_Subscriber) String() string {
@@ -39,14 +39,14 @@ func (softlayer_notification_subscriber *SoftLayer_Notification_Subscriber) Stri
 type SoftLayer_Notification_Subscriber_Extended struct {
 	SoftLayer_Notification_Subscriber
 
-	// DeliveryMethods - <nil>
-	DeliveryMethods []*SoftLayer_Notification_Subscriber_Delivery_Method `json:"deliveryMethods"`
-
 	// Notification - <nil>
-	Notification *SoftLayer_Notification `json:"notification"`
+	Notification *SoftLayer_Notification `json:"notification,omitempty"`
 
 	// DeliveryMethodCount - no documentation
-	DeliveryMethodCount uint64 `json:"deliveryMethodCount"`
+	DeliveryMethodCount uint64 `json:"deliveryMethodCount,omitempty"`
+
+	// DeliveryMethods - <nil>
+	DeliveryMethods []*SoftLayer_Notification_Subscriber_Delivery_Method `json:"deliveryMethods,omitempty"`
 }
 
 func (softlayer_notification_subscriber *SoftLayer_Notification_Subscriber_Extended) String() string {

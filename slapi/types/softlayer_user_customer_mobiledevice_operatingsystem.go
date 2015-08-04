@@ -11,29 +11,29 @@ import (
 // a push notification to the user.
 type SoftLayer_User_Customer_MobileDevice_OperatingSystem struct {
 
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// MajorVersion - no documentation
-	MajorVersion int `json:"majorVersion"`
-
 	// MinorVersion - no documentation
-	MinorVersion int `json:"minorVersion"`
+	MinorVersion int `json:"minorVersion,omitempty"`
 
 	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// BuildVersion - no documentation
-	BuildVersion int `json:"buildVersion"`
+	BuildVersion int `json:"buildVersion,omitempty"`
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// MajorVersion - no documentation
+	MajorVersion int `json:"majorVersion,omitempty"`
 }
 
 func (softlayer_user_customer_mobiledevice_operatingsystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem) String() string {

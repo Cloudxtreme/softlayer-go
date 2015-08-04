@@ -9,28 +9,28 @@ package types
 type SoftLayer_Notification_Preference struct {
 
 	// MinimumValue - no documentation
-	MinimumValue string `json:"minimumValue"`
+	MinimumValue string `json:"minimumValue,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// Units - The unit of measure used for the preference's value, minimum and maximum as well.
-	Units string `json:"units"`
+	Units string `json:"units,omitempty"`
 
 	// Value - Default value used when setting up preferences for a new subscriber.
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - Unique identifier for the notification preference.
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - Name that can be used by external systems to refer to preference.
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// MaximumValue - no documentation
-	MaximumValue string `json:"maximumValue"`
+	MaximumValue string `json:"maximumValue,omitempty"`
 }
 
 func (softlayer_notification_preference *SoftLayer_Notification_Preference) String() string {

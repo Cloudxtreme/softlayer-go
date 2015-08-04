@@ -6,13 +6,13 @@ package types
 type SoftLayer_Resource_Group_Template struct {
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) String() string {
@@ -23,20 +23,20 @@ func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) Stri
 type SoftLayer_Resource_Group_Template_Extended struct {
 	SoftLayer_Resource_Group_Template
 
-	// Members - <nil>
-	Members []*SoftLayer_Resource_Group_Template_Member `json:"members"`
-
-	// Package - <nil>
-	Package *SoftLayer_Product_Package `json:"package"`
-
 	// ChildrenCount - no documentation
-	ChildrenCount uint64 `json:"childrenCount"`
+	ChildrenCount uint64 `json:"childrenCount,omitempty"`
 
 	// MemberCount - no documentation
-	MemberCount uint64 `json:"memberCount"`
+	MemberCount uint64 `json:"memberCount,omitempty"`
 
 	// Children - <nil>
-	Children []*SoftLayer_Resource_Group_Template `json:"children"`
+	Children []*SoftLayer_Resource_Group_Template `json:"children,omitempty"`
+
+	// Members - <nil>
+	Members []*SoftLayer_Resource_Group_Template_Member `json:"members,omitempty"`
+
+	// Package - <nil>
+	Package *SoftLayer_Product_Package `json:"package,omitempty"`
 }
 
 func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template_Extended) String() string {

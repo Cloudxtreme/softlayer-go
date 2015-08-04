@@ -11,16 +11,16 @@ import (
 type SoftLayer_Container_Monitoring_Graph_Outputs struct {
 
 	// EndDate - no documentation
-	EndDate *time.Time `json:"endDate"`
+	EndDate *time.Time `json:"endDate,omitempty"`
 
 	// GraphError - no documentation
-	GraphError string `json:"graphError"`
+	GraphError string `json:"graphError,omitempty"`
 
 	// GraphImage - The raw PNG binary data to be displayed once the graph is drawn.
-	GraphImage string `json:"graphImage"`
+	GraphImage string `json:"graphImage,omitempty"`
 
 	// StartDate - no documentation
-	StartDate *time.Time `json:"startDate"`
+	StartDate *time.Time `json:"startDate,omitempty"`
 }
 
 func (softlayer_container_monitoring_graph_outputs *SoftLayer_Container_Monitoring_Graph_Outputs) String() string {

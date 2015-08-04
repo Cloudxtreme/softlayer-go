@@ -6,10 +6,10 @@ package types
 type SoftLayer_Provisioning_Maintenance_Classification_Item_Category struct {
 
 	// ItemCategoryId - <nil>
-	ItemCategoryId int `json:"itemCategoryId"`
+	ItemCategoryId int `json:"itemCategoryId,omitempty"`
 
 	// MaintenanceClassificationId - <nil>
-	MaintenanceClassificationId int `json:"maintenanceClassificationId"`
+	MaintenanceClassificationId int `json:"maintenanceClassificationId,omitempty"`
 }
 
 func (softlayer_provisioning_maintenance_classification_item_category *SoftLayer_Provisioning_Maintenance_Classification_Item_Category) String() string {
@@ -21,7 +21,7 @@ type SoftLayer_Provisioning_Maintenance_Classification_Item_Category_Extended st
 	SoftLayer_Provisioning_Maintenance_Classification_Item_Category
 
 	// MaintenanceClassification - <nil>
-	MaintenanceClassification *SoftLayer_Provisioning_Maintenance_Classification `json:"maintenanceClassification"`
+	MaintenanceClassification *SoftLayer_Provisioning_Maintenance_Classification `json:"maintenanceClassification,omitempty"`
 }
 
 func (softlayer_provisioning_maintenance_classification_item_category *SoftLayer_Provisioning_Maintenance_Classification_Item_Category_Extended) String() string {

@@ -9,13 +9,13 @@ type SoftLayer_Network_Storage_Property_Type struct {
 
 	// Description - A type's description, for example 'Determines whether the volume is currently
 	// mountable'.
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Keyname - no documentation
-	Keyname string `json:"keyname"`
+	Keyname string `json:"keyname,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_network_storage_property_type *SoftLayer_Network_Storage_Property_Type) String() string {

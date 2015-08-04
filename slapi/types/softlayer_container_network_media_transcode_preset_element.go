@@ -5,38 +5,38 @@ package types
 // SoftLayer_Container_Network_Media_Transcode_Preset_Element - no documentation
 type SoftLayer_Container_Network_Media_Transcode_Preset_Element struct {
 
-	// ExtendedDescription - no documentation
-	ExtendedDescription string `json:"extendedDescription"`
+	// DefaultValue - no documentation
+	DefaultValue string `json:"defaultValue,omitempty"`
 
 	// MaximumValue - no documentation
-	MaximumValue int `json:"maximumValue"`
-
-	// MinimumValue - no documentation
-	MinimumValue int `json:"minimumValue"`
+	MaximumValue int `json:"maximumValue,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
-
-	// Type - no documentation
-	Type string `json:"type"`
-
-	// AdditionalElements - no documentation
-	AdditionalElements []*SoftLayer_Container_Network_Media_Transcode_Preset_Element_Option `json:"additionalElements"`
-
-	// DefaultValue - no documentation
-	DefaultValue string `json:"defaultValue"`
-
-	// Hidden - The flag that indicates whether an element is hidden or not
-	Hidden bool `json:"hidden"`
+	Name string `json:"name,omitempty"`
 
 	// ParentName - no documentation
-	ParentName string `json:"parentName"`
+	ParentName string `json:"parentName,omitempty"`
+
+	// Type - no documentation
+	Type string `json:"type,omitempty"`
+
+	// AdditionalElements - no documentation
+	AdditionalElements []*SoftLayer_Container_Network_Media_Transcode_Preset_Element_Option `json:"additionalElements,omitempty"`
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Enabled - The flag that indicates whether an element is enabled or not
-	Enabled bool `json:"enabled"`
+	Enabled bool `json:"enabled,omitempty"`
+
+	// ExtendedDescription - no documentation
+	ExtendedDescription string `json:"extendedDescription,omitempty"`
+
+	// Hidden - The flag that indicates whether an element is hidden or not
+	Hidden bool `json:"hidden,omitempty"`
+
+	// MinimumValue - no documentation
+	MinimumValue int `json:"minimumValue,omitempty"`
 }
 
 func (softlayer_container_network_media_transcode_preset_element *SoftLayer_Container_Network_Media_Transcode_Preset_Element) String() string {

@@ -9,13 +9,13 @@ package types
 type SoftLayer_Billing_Order_Type struct {
 
 	// Description - A brief description of where a SoftLayer order originated from.
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Type - A simple keyname stating where a SoftLayer order originated from.
-	Type string `json:"type"`
+	Type string `json:"type,omitempty"`
 }
 
 func (softlayer_billing_order_type *SoftLayer_Billing_Order_Type) String() string {

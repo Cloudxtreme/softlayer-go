@@ -7,7 +7,7 @@ package types
 type SoftLayer_Software_Description_Attribute_Type struct {
 
 	// Keyname - no documentation
-	Keyname string `json:"keyname"`
+	Keyname string `json:"keyname,omitempty"`
 }
 
 func (softlayer_software_description_attribute_type *SoftLayer_Software_Description_Attribute_Type) String() string {

@@ -10,13 +10,13 @@ import (
 type SoftLayer_Network_Media_Transcode_Job_History struct {
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// PublicNotes - no documentation
-	PublicNotes string `json:"publicNotes"`
+	PublicNotes string `json:"publicNotes,omitempty"`
 
 	// TranscodeJobId - no documentation
-	TranscodeJobId int `json:"transcodeJobId"`
+	TranscodeJobId int `json:"transcodeJobId,omitempty"`
 }
 
 func (softlayer_network_media_transcode_job_history *SoftLayer_Network_Media_Transcode_Job_History) String() string {
@@ -28,7 +28,7 @@ type SoftLayer_Network_Media_Transcode_Job_History_Extended struct {
 	SoftLayer_Network_Media_Transcode_Job_History
 
 	// TranscodeStatusName - no documentation
-	TranscodeStatusName string `json:"transcodeStatusName"`
+	TranscodeStatusName string `json:"transcodeStatusName,omitempty"`
 }
 
 func (softlayer_network_media_transcode_job_history *SoftLayer_Network_Media_Transcode_Job_History_Extended) String() string {

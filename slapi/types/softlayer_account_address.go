@@ -6,41 +6,41 @@ package types
 // address associated with a SoftLayer account.
 type SoftLayer_Account_Address struct {
 
-	// PostalCode - no documentation
-	PostalCode string `json:"postalCode"`
-
-	// AccountId - <nil>
-	AccountId int `json:"accountId"`
-
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// IsActive - no documentation
-	IsActive int `json:"isActive"`
+	// Address1 - Line 1 of the address (normally the street address).
+	Address1 string `json:"address1,omitempty"`
 
 	// Address2 - no documentation
-	Address2 string `json:"address2"`
+	Address2 string `json:"address2,omitempty"`
 
-	// ContactName - no documentation
-	ContactName string `json:"contactName"`
-
-	// Description - no documentation
-	Description string `json:"description"`
+	// PostalCode - no documentation
+	PostalCode string `json:"postalCode,omitempty"`
 
 	// State - no documentation
-	State string `json:"state"`
+	State string `json:"state,omitempty"`
 
-	// LocationId - no documentation
-	LocationId int `json:"locationId"`
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
 
-	// Address1 - Line 1 of the address (normally the street address).
-	Address1 string `json:"address1"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// IsActive - no documentation
+	IsActive int `json:"isActive,omitempty"`
+
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
 
 	// City - no documentation
-	City string `json:"city"`
+	City string `json:"city,omitempty"`
+
+	// ContactName - no documentation
+	ContactName string `json:"contactName,omitempty"`
 
 	// Country - no documentation
-	Country string `json:"country"`
+	Country string `json:"country,omitempty"`
+
+	// LocationId - no documentation
+	LocationId int `json:"locationId,omitempty"`
 }
 
 func (softlayer_account_address *SoftLayer_Account_Address) String() string {
@@ -52,22 +52,22 @@ type SoftLayer_Account_Address_Extended struct {
 	SoftLayer_Account_Address
 
 	// Location - no documentation
-	Location *SoftLayer_Location `json:"location"`
-
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
-
-	// CreateUser - no documentation
-	CreateUser *SoftLayer_User_Customer `json:"createUser"`
-
-	// ModifyEmployee - no documentation
-	ModifyEmployee *SoftLayer_User_Employee `json:"modifyEmployee"`
-
-	// ModifyUser - no documentation
-	ModifyUser *SoftLayer_User_Customer `json:"modifyUser"`
+	Location *SoftLayer_Location `json:"location,omitempty"`
 
 	// Type - no documentation
-	Type *SoftLayer_Account_Address_Type `json:"type"`
+	Type *SoftLayer_Account_Address_Type `json:"type,omitempty"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// CreateUser - no documentation
+	CreateUser *SoftLayer_User_Customer `json:"createUser,omitempty"`
+
+	// ModifyUser - no documentation
+	ModifyUser *SoftLayer_User_Customer `json:"modifyUser,omitempty"`
+
+	// ModifyEmployee - no documentation
+	ModifyEmployee *SoftLayer_User_Employee `json:"modifyEmployee,omitempty"`
 }
 
 func (softlayer_account_address *SoftLayer_Account_Address_Extended) String() string {

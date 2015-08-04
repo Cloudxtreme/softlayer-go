@@ -12,11 +12,11 @@ import (
 type SoftLayer_Container_Network_Storage_Evault_WebCc_AgentStatus struct {
 
 	// LastBackup - Timestamp of last backup performed by the EVault backup agent
-	LastBackup *time.Time `json:"lastBackup"`
+	LastBackup *time.Time `json:"lastBackup,omitempty"`
 
 	// Status - Status indicating the accumulative status result of all jobs performed by the evault agent.
 	// For example, if one job out three jobs failed agent status will by "Failed Backup(s)".
-	Status string `json:"status"`
+	Status string `json:"status,omitempty"`
 }
 
 func (softlayer_container_network_storage_evault_webcc_agentstatus *SoftLayer_Container_Network_Storage_Evault_WebCc_AgentStatus) String() string {

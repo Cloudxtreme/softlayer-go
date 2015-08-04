@@ -5,44 +5,44 @@ package types
 // SoftLayer_Container_Network_Port_Statistic - <nil>
 type SoftLayer_Container_Network_Port_Statistic struct {
 
-	// OperationalStatus - <nil>
-	OperationalStatus int `json:"operationalStatus"`
-
-	// OutOctets - <nil>
-	OutOctets uint64 `json:"outOctets"`
-
-	// OutUnicastPackets - <nil>
-	OutUnicastPackets uint64 `json:"outUnicastPackets"`
-
 	// InDiscardPackets - <nil>
-	InDiscardPackets uint64 `json:"inDiscardPackets"`
-
-	// InOctets - <nil>
-	InOctets uint64 `json:"inOctets"`
-
-	// InUnicastPackets - <nil>
-	InUnicastPackets uint64 `json:"inUnicastPackets"`
+	InDiscardPackets uint64 `json:"inDiscardPackets,omitempty"`
 
 	// MaximumTransmissionUnit - <nil>
-	MaximumTransmissionUnit uint64 `json:"maximumTransmissionUnit"`
+	MaximumTransmissionUnit uint64 `json:"maximumTransmissionUnit,omitempty"`
+
+	// OperationalStatus - <nil>
+	OperationalStatus int `json:"operationalStatus,omitempty"`
+
+	// OutOctets - <nil>
+	OutOctets uint64 `json:"outOctets,omitempty"`
 
 	// PortDuplex - <nil>
-	PortDuplex uint64 `json:"portDuplex"`
+	PortDuplex uint64 `json:"portDuplex,omitempty"`
 
 	// Speed - <nil>
-	Speed uint64 `json:"speed"`
+	Speed uint64 `json:"speed,omitempty"`
 
 	// AdministrativeStatus - <nil>
-	AdministrativeStatus int `json:"administrativeStatus"`
+	AdministrativeStatus int `json:"administrativeStatus,omitempty"`
 
-	// InErrorPackets - <nil>
-	InErrorPackets uint64 `json:"inErrorPackets"`
+	// InOctets - <nil>
+	InOctets uint64 `json:"inOctets,omitempty"`
+
+	// InUnicastPackets - <nil>
+	InUnicastPackets uint64 `json:"inUnicastPackets,omitempty"`
 
 	// OutDiscardPackets - <nil>
-	OutDiscardPackets uint64 `json:"outDiscardPackets"`
+	OutDiscardPackets uint64 `json:"outDiscardPackets,omitempty"`
 
 	// OutErrorPackets - <nil>
-	OutErrorPackets uint64 `json:"outErrorPackets"`
+	OutErrorPackets uint64 `json:"outErrorPackets,omitempty"`
+
+	// OutUnicastPackets - <nil>
+	OutUnicastPackets uint64 `json:"outUnicastPackets,omitempty"`
+
+	// InErrorPackets - <nil>
+	InErrorPackets uint64 `json:"inErrorPackets,omitempty"`
 }
 
 func (softlayer_container_network_port_statistic *SoftLayer_Container_Network_Port_Statistic) String() string {

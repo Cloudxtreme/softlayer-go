@@ -8,12 +8,12 @@ package types
 // hardware transactions or the hardware transaction group.
 type SoftLayer_Provisioning_Version1_Transaction_Group struct {
 
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
 	// AverageTimeToComplete - Average time, in minutes, for this type of transaction to complete. Please
 	// note that this is only an estimate.
-	AverageTimeToComplete float64 `json:"averageTimeToComplete"`
-
-	// Name - no documentation
-	Name string `json:"name"`
+	AverageTimeToComplete float64 `json:"averageTimeToComplete,omitempty"`
 }
 
 func (softlayer_provisioning_version1_transaction_group *SoftLayer_Provisioning_Version1_Transaction_Group) String() string {

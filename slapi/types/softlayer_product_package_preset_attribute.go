@@ -6,18 +6,18 @@ package types
 // information for a package preset.
 type SoftLayer_Product_Package_Preset_Attribute struct {
 
-	// Value - no documentation
-	Value string `json:"value"`
-
 	// AttributeTypeId - The internal identifier of the type of attribute that a pacakge preset attribute
 	// belongs to.
-	AttributeTypeId int `json:"attributeTypeId"`
+	AttributeTypeId int `json:"attributeTypeId,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// PresetId - The internal identifier of the package preset an attribute belongs to.
-	PresetId int `json:"presetId"`
+	PresetId int `json:"presetId,omitempty"`
+
+	// Value - no documentation
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_product_package_preset_attribute *SoftLayer_Product_Package_Preset_Attribute) String() string {
@@ -29,10 +29,10 @@ type SoftLayer_Product_Package_Preset_Attribute_Extended struct {
 	SoftLayer_Product_Package_Preset_Attribute
 
 	// AttributeType - <nil>
-	AttributeType *SoftLayer_Product_Package_Preset_Attribute_Type `json:"attributeType"`
+	AttributeType *SoftLayer_Product_Package_Preset_Attribute_Type `json:"attributeType,omitempty"`
 
 	// Preset - <nil>
-	Preset *SoftLayer_Product_Package_Preset `json:"preset"`
+	Preset *SoftLayer_Product_Package_Preset `json:"preset,omitempty"`
 }
 
 func (softlayer_product_package_preset_attribute *SoftLayer_Product_Package_Preset_Attribute_Extended) String() string {

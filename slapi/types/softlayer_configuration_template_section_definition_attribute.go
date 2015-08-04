@@ -7,7 +7,7 @@ package types
 type SoftLayer_Configuration_Template_Section_Definition_Attribute struct {
 
 	// Value - no documentation
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_configuration_template_section_definition_attribute *SoftLayer_Configuration_Template_Section_Definition_Attribute) String() string {
@@ -19,10 +19,10 @@ type SoftLayer_Configuration_Template_Section_Definition_Attribute_Extended stru
 	SoftLayer_Configuration_Template_Section_Definition_Attribute
 
 	// AttributeType - <nil>
-	AttributeType *SoftLayer_Configuration_Template_Section_Definition_Attribute_Type `json:"attributeType"`
+	AttributeType *SoftLayer_Configuration_Template_Section_Definition_Attribute_Type `json:"attributeType,omitempty"`
 
 	// ConfigurationDefinition - <nil>
-	ConfigurationDefinition *SoftLayer_Configuration_Template_Section_Definition `json:"configurationDefinition"`
+	ConfigurationDefinition *SoftLayer_Configuration_Template_Section_Definition `json:"configurationDefinition,omitempty"`
 }
 
 func (softlayer_configuration_template_section_definition_attribute *SoftLayer_Configuration_Template_Section_Definition_Attribute_Extended) String() string {

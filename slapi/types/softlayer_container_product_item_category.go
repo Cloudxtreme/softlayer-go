@@ -7,7 +7,7 @@ package types
 type SoftLayer_Container_Product_Item_Category struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_container_product_item_category *SoftLayer_Container_Product_Item_Category) String() string {

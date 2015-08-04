@@ -5,14 +5,14 @@ package types
 // SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release - <nil>
 type SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// MediaPartnerId - no documentation
-	MediaPartnerId int `json:"mediaPartnerId"`
+	MediaPartnerId int `json:"mediaPartnerId,omitempty"`
 
 	// PressReleaseId - no documentation
-	PressReleaseId int `json:"pressReleaseId"`
-
-	// Id - no documentation
-	Id int `json:"id"`
+	PressReleaseId int `json:"pressReleaseId,omitempty"`
 }
 
 func (softlayer_auxiliary_press_release_media_partner_press_release *SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release) String() string {
@@ -24,16 +24,16 @@ type SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release_Extended stru
 	SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release
 
 	// MediaPartnerCount - no documentation
-	MediaPartnerCount uint64 `json:"mediaPartnerCount"`
+	MediaPartnerCount uint64 `json:"mediaPartnerCount,omitempty"`
 
 	// PressReleaseCount - no documentation
-	PressReleaseCount uint64 `json:"pressReleaseCount"`
+	PressReleaseCount uint64 `json:"pressReleaseCount,omitempty"`
 
 	// MediaPartners - <nil>
-	MediaPartners []*SoftLayer_Auxiliary_Press_Release_Media_Partner `json:"mediaPartners"`
+	MediaPartners []*SoftLayer_Auxiliary_Press_Release_Media_Partner `json:"mediaPartners,omitempty"`
 
 	// PressReleases - <nil>
-	PressReleases []*SoftLayer_Auxiliary_Press_Release `json:"pressReleases"`
+	PressReleases []*SoftLayer_Auxiliary_Press_Release `json:"pressReleases,omitempty"`
 }
 
 func (softlayer_auxiliary_press_release_media_partner_press_release *SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release_Extended) String() string {

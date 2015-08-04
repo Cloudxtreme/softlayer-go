@@ -9,23 +9,23 @@ import (
 // SoftLayer_User_Customer_Link - <nil>
 type SoftLayer_User_Customer_Link struct {
 
-	// DestinationUserAlphanumericId - <nil>
-	DestinationUserAlphanumericId string `json:"destinationUserAlphanumericId"`
-
-	// DestinationUserId - <nil>
-	DestinationUserId int `json:"destinationUserId"`
-
-	// Id - <nil>
-	Id int `json:"id"`
-
 	// ServiceProviderId - <nil>
-	ServiceProviderId int `json:"serviceProviderId"`
+	ServiceProviderId int `json:"serviceProviderId,omitempty"`
 
 	// UserId - <nil>
-	UserId int `json:"userId"`
+	UserId int `json:"userId,omitempty"`
 
 	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// DestinationUserAlphanumericId - <nil>
+	DestinationUserAlphanumericId string `json:"destinationUserAlphanumericId,omitempty"`
+
+	// DestinationUserId - <nil>
+	DestinationUserId int `json:"destinationUserId,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_user_customer_link *SoftLayer_User_Customer_Link) String() string {
@@ -37,10 +37,10 @@ type SoftLayer_User_Customer_Link_Extended struct {
 	SoftLayer_User_Customer_Link
 
 	// ServiceProvider - <nil>
-	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider"`
+	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`
 
 	// User - <nil>
-	User *SoftLayer_User_Customer `json:"user"`
+	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
 func (softlayer_user_customer_link *SoftLayer_User_Customer_Link_Extended) String() string {

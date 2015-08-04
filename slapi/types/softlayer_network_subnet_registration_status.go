@@ -15,19 +15,19 @@ import (
 type SoftLayer_Network_Subnet_Registration_Status struct {
 
 	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_network_subnet_registration_status *SoftLayer_Network_Subnet_Registration_Status) String() string {

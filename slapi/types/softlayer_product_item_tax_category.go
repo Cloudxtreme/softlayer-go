@@ -7,13 +7,13 @@ package types
 type SoftLayer_Product_Item_Tax_Category struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// StatusFlag - no documentation
-	StatusFlag int `json:"statusFlag"`
+	StatusFlag int `json:"statusFlag,omitempty"`
 }
 
 func (softlayer_product_item_tax_category *SoftLayer_Product_Item_Tax_Category) String() string {
@@ -24,11 +24,11 @@ func (softlayer_product_item_tax_category *SoftLayer_Product_Item_Tax_Category) 
 type SoftLayer_Product_Item_Tax_Category_Extended struct {
 	SoftLayer_Product_Item_Tax_Category
 
-	// Items - <nil>
-	Items []*SoftLayer_Product_Item `json:"items"`
-
 	// ItemCount - no documentation
-	ItemCount uint64 `json:"itemCount"`
+	ItemCount uint64 `json:"itemCount,omitempty"`
+
+	// Items - <nil>
+	Items []*SoftLayer_Product_Item `json:"items,omitempty"`
 }
 
 func (softlayer_product_item_tax_category *SoftLayer_Product_Item_Tax_Category_Extended) String() string {

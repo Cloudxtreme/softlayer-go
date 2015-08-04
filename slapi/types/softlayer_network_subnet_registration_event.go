@@ -13,23 +13,23 @@ import (
 type SoftLayer_Network_Subnet_Registration_Event struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Message - A string message indicating what took place during this event
-	Message string `json:"message"`
+	Message string `json:"message,omitempty"`
 
 	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// RegistrationId - The numeric ID of the related [[SoftLayer_Network_Subnet_Registration]] object
-	RegistrationId int `json:"registrationId"`
+	RegistrationId int `json:"registrationId,omitempty"`
 
 	// TypeId - The numeric ID of the associated [[SoftLayer_Network_Subnet_Registration_Event_Type|event
 	// type]] object
-	TypeId int `json:"typeId"`
+	TypeId int `json:"typeId,omitempty"`
 
 	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_network_subnet_registration_event *SoftLayer_Network_Subnet_Registration_Event) String() string {
@@ -41,10 +41,10 @@ type SoftLayer_Network_Subnet_Registration_Event_Extended struct {
 	SoftLayer_Network_Subnet_Registration_Event
 
 	// Registration - no documentation
-	Registration *SoftLayer_Network_Subnet_Registration `json:"registration"`
+	Registration *SoftLayer_Network_Subnet_Registration `json:"registration,omitempty"`
 
 	// Type - no documentation
-	Type *SoftLayer_Network_Subnet_Registration_Event_Type `json:"type"`
+	Type *SoftLayer_Network_Subnet_Registration_Event_Type `json:"type,omitempty"`
 }
 
 func (softlayer_network_subnet_registration_event *SoftLayer_Network_Subnet_Registration_Event_Extended) String() string {

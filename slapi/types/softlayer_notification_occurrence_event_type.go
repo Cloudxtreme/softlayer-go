@@ -7,7 +7,7 @@ package types
 type SoftLayer_Notification_Occurrence_Event_Type struct {
 
 	// KeyName - The friendly unique identifier for this event type.
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_notification_occurrence_event_type *SoftLayer_Notification_Occurrence_Event_Type) String() string {

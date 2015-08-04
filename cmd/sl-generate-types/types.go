@@ -170,7 +170,7 @@ type Property struct {
 }
 
 func (p Property) Tag() string {
-	return " `json:\"" + p.Name + "\"`"
+	return " `json:\"" + p.Name + ",omitempty\"`"
 }
 
 type MetadataEntity struct {

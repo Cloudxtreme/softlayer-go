@@ -9,13 +9,13 @@ package types
 type SoftLayer_User_External_Binding_Vendor struct {
 
 	// Id - The unique identifier for an external binding vendor.
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - The user friendly name of an external binding vendor.
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_user_external_binding_vendor *SoftLayer_User_External_Binding_Vendor) String() string {

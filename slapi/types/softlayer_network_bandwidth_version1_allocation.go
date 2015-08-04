@@ -8,10 +8,10 @@ package types
 type SoftLayer_Network_Bandwidth_Version1_Allocation struct {
 
 	// Amount - no documentation
-	Amount float64 `json:"amount"`
+	Amount float64 `json:"amount,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_bandwidth_version1_allocation *SoftLayer_Network_Bandwidth_Version1_Allocation) String() string {
@@ -22,11 +22,11 @@ func (softlayer_network_bandwidth_version1_allocation *SoftLayer_Network_Bandwid
 type SoftLayer_Network_Bandwidth_Version1_Allocation_Extended struct {
 	SoftLayer_Network_Bandwidth_Version1_Allocation
 
-	// AllotmentDetail - no documentation
-	AllotmentDetail *SoftLayer_Network_Bandwidth_Version1_Allotment_Detail `json:"allotmentDetail"`
-
 	// BillingItem - Billing item associated with this hardware allocation.
-	BillingItem *SoftLayer_Billing_Item_Hardware `json:"billingItem"`
+	BillingItem *SoftLayer_Billing_Item_Hardware `json:"billingItem,omitempty"`
+
+	// AllotmentDetail - no documentation
+	AllotmentDetail *SoftLayer_Network_Bandwidth_Version1_Allotment_Detail `json:"allotmentDetail,omitempty"`
 }
 
 func (softlayer_network_bandwidth_version1_allocation *SoftLayer_Network_Bandwidth_Version1_Allocation_Extended) String() string {

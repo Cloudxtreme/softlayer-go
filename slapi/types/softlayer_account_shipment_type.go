@@ -10,19 +10,19 @@ import (
 type SoftLayer_Account_Shipment_Type struct {
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Description - <nil>
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_account_shipment_type *SoftLayer_Account_Shipment_Type) String() string {

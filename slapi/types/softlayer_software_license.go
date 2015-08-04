@@ -7,11 +7,11 @@ package types
 type SoftLayer_Software_License struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// SoftwareDescriptionId - The ID number of a Software Description that this specific license is valid
 	// for.
-	SoftwareDescriptionId int `json:"softwareDescriptionId"`
+	SoftwareDescriptionId int `json:"softwareDescriptionId,omitempty"`
 }
 
 func (softlayer_software_license *SoftLayer_Software_License) String() string {
@@ -23,13 +23,13 @@ type SoftLayer_Software_License_Extended struct {
 	SoftLayer_Software_License
 
 	// Account - The account that owns this specific License instance.
-	Account *SoftLayer_Account `json:"account"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// Owner - The account that owns this specific License instance.
-	Owner *SoftLayer_Account `json:"owner"`
+	Owner *SoftLayer_Account `json:"owner,omitempty"`
 
 	// SoftwareDescription - A Description of the software that this license instance is valid for.
-	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription"`
+	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription,omitempty"`
 }
 
 func (softlayer_software_license *SoftLayer_Software_License_Extended) String() string {

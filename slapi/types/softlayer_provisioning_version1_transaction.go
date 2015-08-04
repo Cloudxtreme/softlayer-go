@@ -11,26 +11,26 @@ import (
 // customers are unable to change their hardware transactions.
 type SoftLayer_Provisioning_Version1_Transaction struct {
 
-	// Id - no documentation
-	Id int `json:"id"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
-	// ElapsedSeconds - The amount of seconds that have elapsed since the transaction was last modified.
-	ElapsedSeconds int `json:"elapsedSeconds"`
-
 	// GuestId - A transaction's associated guest identification number.
-	GuestId int `json:"guestId"`
-
-	// HardwareId - A transaction's associated hardware identification number.
-	HardwareId int `json:"hardwareId"`
+	GuestId int `json:"guestId,omitempty"`
 
 	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// ElapsedSeconds - The amount of seconds that have elapsed since the transaction was last modified.
+	ElapsedSeconds int `json:"elapsedSeconds,omitempty"`
+
+	// HardwareId - A transaction's associated hardware identification number.
+	HardwareId int `json:"hardwareId,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// StatusChangeDate - no documentation
-	StatusChangeDate *time.Time `json:"statusChangeDate"`
+	StatusChangeDate *time.Time `json:"statusChangeDate,omitempty"`
 }
 
 func (softlayer_provisioning_version1_transaction *SoftLayer_Provisioning_Version1_Transaction) String() string {
@@ -41,40 +41,40 @@ func (softlayer_provisioning_version1_transaction *SoftLayer_Provisioning_Versio
 type SoftLayer_Provisioning_Version1_Transaction_Extended struct {
 	SoftLayer_Provisioning_Version1_Transaction
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
-
-	// Guest - no documentation
-	Guest *SoftLayer_Virtual_Guest `json:"guest"`
-
-	// TransactionGroup - A transaction's group. This group object determines what type of service is being
-	// done on the hardware.
-	TransactionGroup *SoftLayer_Provisioning_Version1_Transaction_Group `json:"transactionGroup"`
+	// LoopbackCount - no documentation
+	LoopbackCount uint64 `json:"loopbackCount,omitempty"`
 
 	// PendingTransactionCount - no documentation
-	PendingTransactionCount uint64 `json:"pendingTransactionCount"`
-
-	// LoopbackCount - no documentation
-	LoopbackCount uint64 `json:"loopbackCount"`
+	PendingTransactionCount uint64 `json:"pendingTransactionCount,omitempty"`
 
 	// Hardware - no documentation
-	Hardware *SoftLayer_Hardware `json:"hardware"`
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 
 	// Loopback - <nil>
-	Loopback []*SoftLayer_Provisioning_Version1_Transaction `json:"loopback"`
+	Loopback []*SoftLayer_Provisioning_Version1_Transaction `json:"loopback,omitempty"`
 
 	// TransactionStatus - A transaction's status. This status object determines the state it is in the
 	// transaction group.
-	TransactionStatus *SoftLayer_Provisioning_Version1_Transaction_Status `json:"transactionStatus"`
+	TransactionStatus *SoftLayer_Provisioning_Version1_Transaction_Status `json:"transactionStatus,omitempty"`
 
 	// PendingTransactions - <nil>
-	PendingTransactions []*SoftLayer_Provisioning_Version1_Transaction `json:"pendingTransactions"`
+	PendingTransactions []*SoftLayer_Provisioning_Version1_Transaction `json:"pendingTransactions,omitempty"`
 
-	// TicketScheduledActionReference - <nil>
-	TicketScheduledActionReference []*SoftLayer_Ticket_Attachment `json:"ticketScheduledActionReference"`
+	// TransactionGroup - A transaction's group. This group object determines what type of service is being
+	// done on the hardware.
+	TransactionGroup *SoftLayer_Provisioning_Version1_Transaction_Group `json:"transactionGroup,omitempty"`
 
 	// TicketScheduledActionReferenceCount - no documentation
-	TicketScheduledActionReferenceCount uint64 `json:"ticketScheduledActionReferenceCount"`
+	TicketScheduledActionReferenceCount uint64 `json:"ticketScheduledActionReferenceCount,omitempty"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// Guest - no documentation
+	Guest *SoftLayer_Virtual_Guest `json:"guest,omitempty"`
+
+	// TicketScheduledActionReference - <nil>
+	TicketScheduledActionReference []*SoftLayer_Ticket_Attachment `json:"ticketScheduledActionReference,omitempty"`
 }
 
 func (softlayer_provisioning_version1_transaction *SoftLayer_Provisioning_Version1_Transaction_Extended) String() string {

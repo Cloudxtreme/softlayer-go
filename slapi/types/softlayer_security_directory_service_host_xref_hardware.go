@@ -18,7 +18,7 @@ type SoftLayer_Security_Directory_Service_Host_Xref_Hardware_Extended struct {
 	SoftLayer_Security_Directory_Service_Host_Xref_Hardware
 
 	// Host - no documentation
-	Host *SoftLayer_Hardware `json:"host"`
+	Host *SoftLayer_Hardware `json:"host,omitempty"`
 }
 
 func (softlayer_security_directory_service_host_xref_hardware *SoftLayer_Security_Directory_Service_Host_Xref_Hardware_Extended) String() string {

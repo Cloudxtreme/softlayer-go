@@ -11,20 +11,20 @@ import (
 // datatype has everything required to place an order with SoftLayer.
 type SoftLayer_Container_Provisioning_Maintenance_Window struct {
 
-	// ClassificationIds - no documentation
-	ClassificationIds []*SoftLayer_Provisioning_Maintenance_Classification `json:"classificationIds"`
-
-	// ItemCategoryIds - no documentation
-	ItemCategoryIds []*SoftLayer_Product_Item_Category `json:"itemCategoryIds"`
-
 	// MaintenanceWindowId - no documentation
-	MaintenanceWindowId int `json:"maintenanceWindowId"`
+	MaintenanceWindowId int `json:"maintenanceWindowId,omitempty"`
 
 	// TicketId - no documentation
-	TicketId int `json:"ticketId"`
+	TicketId int `json:"ticketId,omitempty"`
 
 	// WindowMaintenanceDate - no documentation
-	WindowMaintenanceDate *time.Time `json:"windowMaintenanceDate"`
+	WindowMaintenanceDate *time.Time `json:"windowMaintenanceDate,omitempty"`
+
+	// ClassificationIds - no documentation
+	ClassificationIds []*SoftLayer_Provisioning_Maintenance_Classification `json:"classificationIds,omitempty"`
+
+	// ItemCategoryIds - no documentation
+	ItemCategoryIds []*SoftLayer_Product_Item_Category `json:"itemCategoryIds,omitempty"`
 }
 
 func (softlayer_container_provisioning_maintenance_window *SoftLayer_Container_Provisioning_Maintenance_Window) String() string {

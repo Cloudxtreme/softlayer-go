@@ -6,13 +6,13 @@ package types
 type SoftLayer_Locale_Country struct {
 
 	// LongName - <nil>
-	LongName string `json:"longName"`
+	LongName string `json:"longName,omitempty"`
 
 	// ShortName - <nil>
-	ShortName string `json:"shortName"`
+	ShortName string `json:"shortName,omitempty"`
 
 	// States - <nil>
-	States []*SoftLayer_Locale_StateProvince `json:"states"`
+	States []*SoftLayer_Locale_StateProvince `json:"states,omitempty"`
 }
 
 func (softlayer_locale_country *SoftLayer_Locale_Country) String() string {

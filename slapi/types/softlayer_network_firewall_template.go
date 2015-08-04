@@ -13,10 +13,10 @@ package types
 type SoftLayer_Network_Firewall_Template struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_network_firewall_template *SoftLayer_Network_Firewall_Template) String() string {
@@ -27,11 +27,11 @@ func (softlayer_network_firewall_template *SoftLayer_Network_Firewall_Template) 
 type SoftLayer_Network_Firewall_Template_Extended struct {
 	SoftLayer_Network_Firewall_Template
 
-	// RuleCount - A count of the rule set that belongs to this firewall rules template.
-	RuleCount uint64 `json:"ruleCount"`
-
 	// Rules - The rule set that belongs to this firewall rules template.
-	Rules []*SoftLayer_Network_Firewall_Template_Rule `json:"rules"`
+	Rules []*SoftLayer_Network_Firewall_Template_Rule `json:"rules,omitempty"`
+
+	// RuleCount - A count of the rule set that belongs to this firewall rules template.
+	RuleCount uint64 `json:"ruleCount,omitempty"`
 }
 
 func (softlayer_network_firewall_template *SoftLayer_Network_Firewall_Template_Extended) String() string {

@@ -10,23 +10,23 @@ import (
 // bandwidth use over a time range.
 type SoftLayer_Container_Bandwidth_Projection struct {
 
-	// EstimatedUsage - Estimated bandwidth usage so far this billing cycle.
-	EstimatedUsage string `json:"estimatedUsage"`
-
-	// HardwareId - no documentation
-	HardwareId int `json:"hardwareId"`
-
-	// ProjectedUsage - Projected usage for this hardware based on previous usage this billing cycle.
-	ProjectedUsage string `json:"projectedUsage"`
-
-	// ServerName - no documentation
-	ServerName string `json:"serverName"`
-
 	// StartDate - no documentation
-	StartDate *time.Time `json:"startDate"`
+	StartDate *time.Time `json:"startDate,omitempty"`
 
 	// AllowedUsage - no documentation
-	AllowedUsage string `json:"allowedUsage"`
+	AllowedUsage string `json:"allowedUsage,omitempty"`
+
+	// EstimatedUsage - Estimated bandwidth usage so far this billing cycle.
+	EstimatedUsage string `json:"estimatedUsage,omitempty"`
+
+	// HardwareId - no documentation
+	HardwareId int `json:"hardwareId,omitempty"`
+
+	// ProjectedUsage - Projected usage for this hardware based on previous usage this billing cycle.
+	ProjectedUsage string `json:"projectedUsage,omitempty"`
+
+	// ServerName - no documentation
+	ServerName string `json:"serverName,omitempty"`
 }
 
 func (softlayer_container_bandwidth_projection *SoftLayer_Container_Bandwidth_Projection) String() string {

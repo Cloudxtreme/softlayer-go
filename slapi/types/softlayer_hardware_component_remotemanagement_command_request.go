@@ -14,18 +14,18 @@ import (
 // when the command was issued may be retrieved.
 type SoftLayer_Hardware_Component_RemoteManagement_Command_Request struct {
 
-	// Processed - Execution status of the remote management command. True is successful. False is failure.
-	Processed bool `json:"processed"`
-
 	// CreateDate - The timestamp the remote management command was issued.
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// HardwareId - no documentation
-	HardwareId int `json:"hardwareId"`
+	HardwareId int `json:"hardwareId,omitempty"`
 
 	// ModifyDate - The timestamp recorded when the remote management command returned a status of the
 	// command issued.
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// Processed - Execution status of the remote management command. True is successful. False is failure.
+	Processed bool `json:"processed,omitempty"`
 }
 
 func (softlayer_hardware_component_remotemanagement_command_request *SoftLayer_Hardware_Component_RemoteManagement_Command_Request) String() string {
@@ -36,18 +36,18 @@ func (softlayer_hardware_component_remotemanagement_command_request *SoftLayer_H
 type SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended struct {
 	SoftLayer_Hardware_Component_RemoteManagement_Command_Request
 
+	// RemoteManagementCommand - no documentation
+	RemoteManagementCommand *SoftLayer_Hardware_Component_RemoteManagement_Command `json:"remoteManagementCommand,omitempty"`
+
+	// User - Information regarding the user who issued the remote management command.
+	User *SoftLayer_User_Customer `json:"user,omitempty"`
+
 	// Hardware - The id of the hardware to perform the remote management or powerstrip command on.
-	Hardware *SoftLayer_Hardware `json:"hardware"`
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 
 	// NetworkComponent - A hardware's network components. Network components are hardware components such
 	// as cards or Ethernet cards.
-	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent"`
-
-	// RemoteManagementCommand - no documentation
-	RemoteManagementCommand *SoftLayer_Hardware_Component_RemoteManagement_Command `json:"remoteManagementCommand"`
-
-	// User - Information regarding the user who issued the remote management command.
-	User *SoftLayer_User_Customer `json:"user"`
+	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent,omitempty"`
 }
 
 func (softlayer_hardware_component_remotemanagement_command_request *SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended) String() string {

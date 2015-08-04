@@ -7,14 +7,14 @@ package types
 // can be added to an order container.
 type SoftLayer_Container_Product_Order_Storage_Group_Partition struct {
 
+	// Size - no documentation
+	Size float64 `json:"size,omitempty"`
+
 	// IsGrow - no documentation
-	IsGrow bool `json:"isGrow"`
+	IsGrow bool `json:"isGrow,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
-
-	// Size - no documentation
-	Size float64 `json:"size"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_container_product_order_storage_group_partition *SoftLayer_Container_Product_Order_Storage_Group_Partition) String() string {

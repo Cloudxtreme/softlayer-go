@@ -8,13 +8,13 @@ type SoftLayer_Product_Package_Order_Step_Next struct {
 
 	// NextOrderStepId - The unique identifier for SoftLayer_Product_Package_Order_Step for the next step
 	// in the process.
-	NextOrderStepId int `json:"nextOrderStepId"`
+	NextOrderStepId int `json:"nextOrderStepId,omitempty"`
 
 	// OrderStepId - The unique identifier for SoftLayer_Product_Package_Order_Step for the current step.
-	OrderStepId int `json:"orderStepId"`
+	OrderStepId int `json:"orderStepId,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_product_package_order_step_next *SoftLayer_Product_Package_Order_Step_Next) String() string {
@@ -26,7 +26,7 @@ type SoftLayer_Product_Package_Order_Step_Next_Extended struct {
 	SoftLayer_Product_Package_Order_Step_Next
 
 	// Step - The SoftLayer_Product_Package_Order_Step to which this object belongs.
-	Step *SoftLayer_Product_Package_Order_Step `json:"step"`
+	Step *SoftLayer_Product_Package_Order_Step `json:"step,omitempty"`
 }
 
 func (softlayer_product_package_order_step_next *SoftLayer_Product_Package_Order_Step_Next_Extended) String() string {

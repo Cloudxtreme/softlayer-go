@@ -6,10 +6,10 @@ package types
 type SoftLayer_Marketplace_EmailDistribution struct {
 
 	// Email - <nil>
-	Email string `json:"email"`
+	Email string `json:"email,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_marketplace_emaildistribution *SoftLayer_Marketplace_EmailDistribution) String() string {

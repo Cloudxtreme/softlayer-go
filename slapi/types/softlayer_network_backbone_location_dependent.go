@@ -5,14 +5,14 @@ package types
 // SoftLayer_Network_Backbone_Location_Dependent - <nil>
 type SoftLayer_Network_Backbone_Location_Dependent struct {
 
-	// SourceLocationId - <nil>
-	SourceLocationId int `json:"sourceLocationId"`
-
 	// DependentLocationId - <nil>
-	DependentLocationId int `json:"dependentLocationId"`
+	DependentLocationId int `json:"dependentLocationId,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
+
+	// SourceLocationId - <nil>
+	SourceLocationId int `json:"sourceLocationId,omitempty"`
 }
 
 func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent) String() string {
@@ -24,10 +24,10 @@ type SoftLayer_Network_Backbone_Location_Dependent_Extended struct {
 	SoftLayer_Network_Backbone_Location_Dependent
 
 	// DependentLocation - <nil>
-	DependentLocation *SoftLayer_Location `json:"dependentLocation"`
+	DependentLocation *SoftLayer_Location `json:"dependentLocation,omitempty"`
 
 	// SourceLocation - <nil>
-	SourceLocation *SoftLayer_Location `json:"sourceLocation"`
+	SourceLocation *SoftLayer_Location `json:"sourceLocation,omitempty"`
 }
 
 func (softlayer_network_backbone_location_dependent *SoftLayer_Network_Backbone_Location_Dependent_Extended) String() string {

@@ -9,19 +9,19 @@ package types
 type SoftLayer_Notification_User_Subscriber_Preference struct {
 
 	// Id - Unique identifier for the subscriber's preferences.
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// NotificationPreferenceId - Unique identifier of the default preference for which the subscriber
 	// preference is based on. For example, if no preferences are supplied during the creation of a
 	// subscriber. The default values are pulled using this property.
-	NotificationPreferenceId int `json:"notificationPreferenceId"`
+	NotificationPreferenceId int `json:"notificationPreferenceId,omitempty"`
 
 	// NotificationUserSubscriberId - Unique identifier of the subscriber tied to the subscriber
 	// preference.
-	NotificationUserSubscriberId int `json:"notificationUserSubscriberId"`
+	NotificationUserSubscriberId int `json:"notificationUserSubscriberId,omitempty"`
 
 	// Value - The user supplied value to "override" the "default" preference's value.
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) String() string {
@@ -33,10 +33,10 @@ type SoftLayer_Notification_User_Subscriber_Preference_Extended struct {
 	SoftLayer_Notification_User_Subscriber_Preference
 
 	// DefaultPreference - Details such name, keyname, minimum and maximum values for the preference.
-	DefaultPreference *SoftLayer_Notification_Preference `json:"defaultPreference"`
+	DefaultPreference *SoftLayer_Notification_Preference `json:"defaultPreference,omitempty"`
 
 	// NotificationUserSubscriber - no documentation
-	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber"`
+	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber,omitempty"`
 }
 
 func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference_Extended) String() string {

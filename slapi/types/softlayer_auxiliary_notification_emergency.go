@@ -11,35 +11,35 @@ import (
 // provide information regarding outages or current known issues.
 type SoftLayer_Auxiliary_Notification_Emergency struct {
 
+	// Device - no documentation
+	Device string `json:"device,omitempty"`
+
 	// Duration - no documentation
-	Duration string `json:"duration"`
+	Duration string `json:"duration,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
-
-	// Message - no documentation
-	Message string `json:"message"`
-
-	// StartDate - no documentation
-	StartDate *time.Time `json:"startDate"`
-
-	// StatusId - no documentation
-	StatusId int `json:"statusId"`
-
-	// Device - no documentation
-	Device string `json:"device"`
-
-	// Location - no documentation
-	Location string `json:"location"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
+	Id int `json:"id,omitempty"`
 
 	// ServicesAffected - no documentation
-	ServicesAffected string `json:"servicesAffected"`
+	ServicesAffected string `json:"servicesAffected,omitempty"`
+
+	// StatusId - no documentation
+	StatusId int `json:"statusId,omitempty"`
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Location - no documentation
+	Location string `json:"location,omitempty"`
+
+	// Message - no documentation
+	Message string `json:"message,omitempty"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// StartDate - no documentation
+	StartDate *time.Time `json:"startDate,omitempty"`
 }
 
 func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency) String() string {
@@ -50,11 +50,11 @@ func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notificati
 type SoftLayer_Auxiliary_Notification_Emergency_Extended struct {
 	SoftLayer_Auxiliary_Notification_Emergency
 
-	// Status - no documentation
-	Status *SoftLayer_Auxiliary_Notification_Emergency_Status `json:"status"`
-
 	// Signature - The signature of the SoftLayer employee department associated with this notification.
-	Signature *SoftLayer_Auxiliary_Notification_Emergency_Signature `json:"signature"`
+	Signature *SoftLayer_Auxiliary_Notification_Emergency_Signature `json:"signature,omitempty"`
+
+	// Status - no documentation
+	Status *SoftLayer_Auxiliary_Notification_Emergency_Status `json:"status,omitempty"`
 }
 
 func (softlayer_auxiliary_notification_emergency *SoftLayer_Auxiliary_Notification_Emergency_Extended) String() string {

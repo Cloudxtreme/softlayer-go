@@ -7,7 +7,7 @@ package types
 type SoftLayer_Provisioning_Maintenance_Slots struct {
 
 	// AvailableSlots - no documentation
-	AvailableSlots int `json:"availableSlots"`
+	AvailableSlots int `json:"availableSlots,omitempty"`
 }
 
 func (softlayer_provisioning_maintenance_slots *SoftLayer_Provisioning_Maintenance_Slots) String() string {

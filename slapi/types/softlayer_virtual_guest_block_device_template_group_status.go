@@ -10,13 +10,13 @@ package types
 type SoftLayer_Virtual_Guest_Block_Device_Template_Group_Status struct {
 
 	// Description - <nil>
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_virtual_guest_block_device_template_group_status *SoftLayer_Virtual_Guest_Block_Device_Template_Group_Status) String() string {

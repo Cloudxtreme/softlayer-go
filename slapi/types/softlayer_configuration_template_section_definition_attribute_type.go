@@ -8,10 +8,10 @@ package types
 type SoftLayer_Configuration_Template_Section_Definition_Attribute_Type struct {
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_configuration_template_section_definition_attribute_type *SoftLayer_Configuration_Template_Section_Definition_Attribute_Type) String() string {

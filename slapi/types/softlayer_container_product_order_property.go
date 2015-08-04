@@ -7,10 +7,10 @@ package types
 type SoftLayer_Container_Product_Order_Property struct {
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// Value - no documentation
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_container_product_order_property *SoftLayer_Container_Product_Order_Property) String() string {

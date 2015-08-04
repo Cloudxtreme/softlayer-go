@@ -6,18 +6,18 @@ package types
 // that can be assigned to a SoftLayer customer account.
 type SoftLayer_Account_Attribute_Type struct {
 
-	// Description - A brief description of a SoftLayer account attribute type.
-	Description string `json:"description"`
-
 	// Id - A SoftLayer account attribute type's internal identifier.
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// KeyName - A SoftLayer account attribute type's key name. This is typically a shorter version of an
 	// attribute type's name.
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
+
+	// Description - A brief description of a SoftLayer account attribute type.
+	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_account_attribute_type *SoftLayer_Account_Attribute_Type) String() string {

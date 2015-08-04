@@ -11,7 +11,7 @@ package types
 type SoftLayer_Account_AbuseEmail struct {
 
 	// Email - no documentation
-	Email string `json:"email"`
+	Email string `json:"email,omitempty"`
 }
 
 func (softlayer_account_abuseemail *SoftLayer_Account_AbuseEmail) String() string {
@@ -23,7 +23,7 @@ type SoftLayer_Account_AbuseEmail_Extended struct {
 	SoftLayer_Account_AbuseEmail
 
 	// Account - The account associated with an abuse email address.
-	Account *SoftLayer_Account `json:"account"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
 func (softlayer_account_abuseemail *SoftLayer_Account_AbuseEmail_Extended) String() string {

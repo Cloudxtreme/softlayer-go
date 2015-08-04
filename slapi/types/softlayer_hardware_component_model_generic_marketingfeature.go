@@ -8,10 +8,10 @@ package types
 type SoftLayer_Hardware_Component_Model_Generic_MarketingFeature struct {
 
 	// Features - no documentation
-	Features string `json:"features"`
+	Features string `json:"features,omitempty"`
 
 	// Price - no documentation
-	Price string `json:"price"`
+	Price string `json:"price,omitempty"`
 }
 
 func (softlayer_hardware_component_model_generic_marketingfeature *SoftLayer_Hardware_Component_Model_Generic_MarketingFeature) String() string {
@@ -24,7 +24,7 @@ type SoftLayer_Hardware_Component_Model_Generic_MarketingFeature_Extended struct
 
 	// HardwareGenericComponentModel - The generic component model for a list of advertising or marketing
 	// features
-	HardwareGenericComponentModel *SoftLayer_Hardware_Component_Model_Generic `json:"hardwareGenericComponentModel"`
+	HardwareGenericComponentModel *SoftLayer_Hardware_Component_Model_Generic `json:"hardwareGenericComponentModel,omitempty"`
 }
 
 func (softlayer_hardware_component_model_generic_marketingfeature *SoftLayer_Hardware_Component_Model_Generic_MarketingFeature_Extended) String() string {

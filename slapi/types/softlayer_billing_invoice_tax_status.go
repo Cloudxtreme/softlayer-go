@@ -11,20 +11,20 @@ import (
 // service.
 type SoftLayer_Billing_Invoice_Tax_Status struct {
 
-	// Name - <nil>
-	Name string `json:"name"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
-
-	// Id - <nil>
-	Id int `json:"id"`
-
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// Name - <nil>
+	Name string `json:"name,omitempty"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_billing_invoice_tax_status *SoftLayer_Billing_Invoice_Tax_Status) String() string {

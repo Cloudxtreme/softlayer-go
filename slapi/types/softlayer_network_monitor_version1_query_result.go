@@ -12,7 +12,7 @@ import (
 type SoftLayer_Network_Monitor_Version1_Query_Result struct {
 
 	// FinishTime - no documentation
-	FinishTime *time.Time `json:"finishTime"`
+	FinishTime *time.Time `json:"finishTime,omitempty"`
 
 	// ResponseStatus - The response status for this server. The response status meanings are: 0:
 	// Down/Critical: Server is down and/or has passed the critical response threshold (extremely long ping
@@ -20,10 +20,10 @@ type SoftLayer_Network_Monitor_Version1_Query_Result struct {
 	// or may have taken too long to respond 2: Up 3: Not used 4: Unknown - An unknown error has occurred.
 	// If the problem persists, contact support. 5: Unknown - An unknown error has occurred. If the problem
 	// persists, contact support.
-	ResponseStatus int `json:"responseStatus"`
+	ResponseStatus int `json:"responseStatus,omitempty"`
 
 	// ResponseTime - no documentation
-	ResponseTime float32 `json:"responseTime"`
+	ResponseTime float32 `json:"responseTime,omitempty"`
 }
 
 func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result) String() string {
@@ -35,7 +35,7 @@ type SoftLayer_Network_Monitor_Version1_Query_Result_Extended struct {
 	SoftLayer_Network_Monitor_Version1_Query_Result
 
 	// QueryHost - References the queryHost that this response relates to.
-	QueryHost *SoftLayer_Network_Monitor_Version1_Query_Host `json:"queryHost"`
+	QueryHost *SoftLayer_Network_Monitor_Version1_Query_Host `json:"queryHost,omitempty"`
 }
 
 func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result_Extended) String() string {

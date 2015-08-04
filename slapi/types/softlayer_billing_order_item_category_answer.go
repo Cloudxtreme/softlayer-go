@@ -11,13 +11,13 @@ import (
 type SoftLayer_Billing_Order_Item_Category_Answer struct {
 
 	// Answer - no documentation
-	Answer string `json:"answer"`
+	Answer string `json:"answer,omitempty"`
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// QuestionId - The identifier for the question that the answer belongs to.
-	QuestionId int `json:"questionId"`
+	QuestionId int `json:"questionId,omitempty"`
 }
 
 func (softlayer_billing_order_item_category_answer *SoftLayer_Billing_Order_Item_Category_Answer) String() string {
@@ -29,10 +29,10 @@ type SoftLayer_Billing_Order_Item_Category_Answer_Extended struct {
 	SoftLayer_Billing_Order_Item_Category_Answer
 
 	// OrderItem - no documentation
-	OrderItem *SoftLayer_Billing_Order_Item `json:"orderItem"`
+	OrderItem *SoftLayer_Billing_Order_Item `json:"orderItem,omitempty"`
 
 	// Question - no documentation
-	Question *SoftLayer_Product_Item_Category_Question `json:"question"`
+	Question *SoftLayer_Product_Item_Category_Question `json:"question,omitempty"`
 }
 
 func (softlayer_billing_order_item_category_answer *SoftLayer_Billing_Order_Item_Category_Answer_Extended) String() string {

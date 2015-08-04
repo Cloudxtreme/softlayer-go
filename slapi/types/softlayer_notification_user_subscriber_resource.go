@@ -11,12 +11,12 @@ type SoftLayer_Notification_User_Subscriber_Resource struct {
 
 	// NotificationUserSubscriberId - Unique identifier of the subscriber that will receive the alerts for
 	// the resource subscribed to a notification.
-	NotificationUserSubscriberId int `json:"notificationUserSubscriberId"`
+	NotificationUserSubscriberId int `json:"notificationUserSubscriberId,omitempty"`
 
 	// ResourceTableId - Unique identifier for a SoftLayer service that is subscribed to a notification.
 	// Currently, the SoftLayer services that can be subscribed to notifications are: Storage EVault CDN
 	// Global Load Balancer
-	ResourceTableId int `json:"resourceTableId"`
+	ResourceTableId int `json:"resourceTableId,omitempty"`
 }
 
 func (softlayer_notification_user_subscriber_resource *SoftLayer_Notification_User_Subscriber_Resource) String() string {
@@ -28,7 +28,7 @@ type SoftLayer_Notification_User_Subscriber_Resource_Extended struct {
 	SoftLayer_Notification_User_Subscriber_Resource
 
 	// NotificationUserSubscriber - The Subscriber information tied to the resource service.
-	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber"`
+	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber,omitempty"`
 }
 
 func (softlayer_notification_user_subscriber_resource *SoftLayer_Notification_User_Subscriber_Resource_Extended) String() string {

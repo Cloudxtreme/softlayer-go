@@ -9,13 +9,13 @@ package types
 type SoftLayer_Container_KnowledgeLayer_QuestionAnswer struct {
 
 	// Answer - The answer to a question asked on the SoftLayer KnowledgeLayer.
-	Answer string `json:"answer"`
+	Answer string `json:"answer,omitempty"`
 
 	// Link - The link to a question asked on the SoftLayer KnowledgeLayer.
-	Link string `json:"link"`
+	Link string `json:"link,omitempty"`
 
 	// Question - no documentation
-	Question string `json:"question"`
+	Question string `json:"question,omitempty"`
 }
 
 func (softlayer_container_knowledgelayer_questionanswer *SoftLayer_Container_KnowledgeLayer_QuestionAnswer) String() string {

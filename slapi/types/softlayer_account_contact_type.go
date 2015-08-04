@@ -9,23 +9,23 @@ import (
 // SoftLayer_Account_Contact_Type - <nil>
 type SoftLayer_Account_Contact_Type struct {
 
-	// KeyName - <nil>
-	KeyName string `json:"keyName"`
-
-	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
-
-	// Name - <nil>
-	Name string `json:"name"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
-
 	// Description - <nil>
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
+
+	// KeyName - <nil>
+	KeyName string `json:"keyName,omitempty"`
+
+	// ModifyDate - <nil>
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// Name - <nil>
+	Name string `json:"name,omitempty"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_account_contact_type *SoftLayer_Account_Contact_Type) String() string {

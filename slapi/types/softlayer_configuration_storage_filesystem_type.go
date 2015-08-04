@@ -6,10 +6,10 @@ package types
 type SoftLayer_Configuration_Storage_Filesystem_Type struct {
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_configuration_storage_filesystem_type *SoftLayer_Configuration_Storage_Filesystem_Type) String() string {

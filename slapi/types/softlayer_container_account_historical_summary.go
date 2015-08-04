@@ -10,14 +10,14 @@ import (
 // details
 type SoftLayer_Container_Account_Historical_Summary struct {
 
+	// StartDate - no documentation
+	StartDate *time.Time `json:"startDate,omitempty"`
+
 	// Details - no documentation
-	Details []*SoftLayer_Container_Account_Historical_Summary_Detail `json:"details"`
+	Details []*SoftLayer_Container_Account_Historical_Summary_Detail `json:"details,omitempty"`
 
 	// EndDate - no documentation
-	EndDate *time.Time `json:"endDate"`
-
-	// StartDate - no documentation
-	StartDate *time.Time `json:"startDate"`
+	EndDate *time.Time `json:"endDate,omitempty"`
 }
 
 func (softlayer_container_account_historical_summary *SoftLayer_Container_Account_Historical_Summary) String() string {

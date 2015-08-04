@@ -6,16 +6,16 @@ package types
 type SoftLayer_Product_Item_Attribute struct {
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// ItemAttributeTypeId - <nil>
-	ItemAttributeTypeId int `json:"itemAttributeTypeId"`
+	ItemAttributeTypeId int `json:"itemAttributeTypeId,omitempty"`
 
 	// ItemId - <nil>
-	ItemId int `json:"itemId"`
+	ItemId int `json:"itemId,omitempty"`
 
 	// Value - <nil>
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_product_item_attribute *SoftLayer_Product_Item_Attribute) String() string {
@@ -27,13 +27,13 @@ type SoftLayer_Product_Item_Attribute_Extended struct {
 	SoftLayer_Product_Item_Attribute
 
 	// AttributeType - <nil>
-	AttributeType *SoftLayer_Product_Item_Attribute_Type `json:"attributeType"`
+	AttributeType *SoftLayer_Product_Item_Attribute_Type `json:"attributeType,omitempty"`
 
 	// AttributeTypeKeyName - <nil>
-	AttributeTypeKeyName string `json:"attributeTypeKeyName"`
+	AttributeTypeKeyName string `json:"attributeTypeKeyName,omitempty"`
 
 	// Item - <nil>
-	Item *SoftLayer_Product_Item `json:"item"`
+	Item *SoftLayer_Product_Item `json:"item,omitempty"`
 }
 
 func (softlayer_product_item_attribute *SoftLayer_Product_Item_Attribute_Extended) String() string {

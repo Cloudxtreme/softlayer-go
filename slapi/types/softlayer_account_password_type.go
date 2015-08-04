@@ -9,7 +9,7 @@ package types
 type SoftLayer_Account_Password_Type struct {
 
 	// Description - A description of the use for the account username/password combination.
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_account_password_type *SoftLayer_Account_Password_Type) String() string {

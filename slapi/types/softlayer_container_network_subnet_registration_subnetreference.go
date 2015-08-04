@@ -9,10 +9,10 @@ package types
 type SoftLayer_Container_Network_Subnet_Registration_SubnetReference struct {
 
 	// RegistrationId - The ID of the [[SoftLayer_Network_Subnet_Registration]] object.
-	RegistrationId int `json:"registrationId"`
+	RegistrationId int `json:"registrationId,omitempty"`
 
 	// SubnetCidr - no documentation
-	SubnetCidr string `json:"subnetCidr"`
+	SubnetCidr string `json:"subnetCidr,omitempty"`
 }
 
 func (softlayer_container_network_subnet_registration_subnetreference *SoftLayer_Container_Network_Subnet_Registration_SubnetReference) String() string {

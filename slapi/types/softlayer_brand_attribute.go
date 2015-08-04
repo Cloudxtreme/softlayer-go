@@ -15,7 +15,7 @@ type SoftLayer_Brand_Attribute_Extended struct {
 	SoftLayer_Brand_Attribute
 
 	// Brand - <nil>
-	Brand *SoftLayer_Brand `json:"brand"`
+	Brand *SoftLayer_Brand `json:"brand,omitempty"`
 }
 
 func (softlayer_brand_attribute *SoftLayer_Brand_Attribute_Extended) String() string {

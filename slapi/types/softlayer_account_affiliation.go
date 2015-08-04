@@ -10,20 +10,20 @@ import (
 // existing customer account.
 type SoftLayer_Account_Affiliation struct {
 
-	// AccountId - no documentation
-	AccountId int `json:"accountId"`
-
-	// AffiliateId - An affiliate identifier associated with the customer account.
-	AffiliateId string `json:"affiliateId"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
-
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// ModifyDate - The date an account affiliation was last modified.
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// AccountId - no documentation
+	AccountId int `json:"accountId,omitempty"`
+
+	// AffiliateId - An affiliate identifier associated with the customer account.
+	AffiliateId string `json:"affiliateId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_account_affiliation *SoftLayer_Account_Affiliation) String() string {
@@ -35,7 +35,7 @@ type SoftLayer_Account_Affiliation_Extended struct {
 	SoftLayer_Account_Affiliation
 
 	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
 func (softlayer_account_affiliation *SoftLayer_Account_Affiliation_Extended) String() string {

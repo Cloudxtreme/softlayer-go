@@ -9,20 +9,20 @@ import (
 // SoftLayer_Container_Utility_Message - <nil>
 type SoftLayer_Container_Utility_Message struct {
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
-
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Message - <nil>
-	Message string `json:"message"`
+	Message string `json:"message,omitempty"`
 
 	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// Summary - <nil>
-	Summary string `json:"summary"`
+	Summary string `json:"summary,omitempty"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_container_utility_message *SoftLayer_Container_Utility_Message) String() string {

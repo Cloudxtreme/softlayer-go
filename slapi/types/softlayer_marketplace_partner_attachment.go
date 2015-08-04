@@ -5,26 +5,26 @@ package types
 // SoftLayer_Marketplace_Partner_Attachment - <nil>
 type SoftLayer_Marketplace_Partner_Attachment struct {
 
-	// AttachmentTypeId - <nil>
-	AttachmentTypeId int `json:"attachmentTypeId"`
-
-	// BaseName - <nil>
-	BaseName string `json:"baseName"`
-
-	// DisplayName - <nil>
-	DisplayName string `json:"displayName"`
-
-	// FileName - <nil>
-	FileName string `json:"fileName"`
-
-	// Id - <nil>
-	Id int `json:"id"`
-
 	// MarketplacePartnerId - <nil>
-	MarketplacePartnerId int `json:"marketplacePartnerId"`
+	MarketplacePartnerId int `json:"marketplacePartnerId,omitempty"`
 
 	// SaveAsName - <nil>
-	SaveAsName string `json:"saveAsName"`
+	SaveAsName string `json:"saveAsName,omitempty"`
+
+	// AttachmentTypeId - <nil>
+	AttachmentTypeId int `json:"attachmentTypeId,omitempty"`
+
+	// BaseName - <nil>
+	BaseName string `json:"baseName,omitempty"`
+
+	// DisplayName - <nil>
+	DisplayName string `json:"displayName,omitempty"`
+
+	// FileName - <nil>
+	FileName string `json:"fileName,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_marketplace_partner_attachment *SoftLayer_Marketplace_Partner_Attachment) String() string {
@@ -36,7 +36,7 @@ type SoftLayer_Marketplace_Partner_Attachment_Extended struct {
 	SoftLayer_Marketplace_Partner_Attachment
 
 	// AttachmentType - <nil>
-	AttachmentType *SoftLayer_Marketplace_Partner_Attachment_Type `json:"attachmentType"`
+	AttachmentType *SoftLayer_Marketplace_Partner_Attachment_Type `json:"attachmentType,omitempty"`
 }
 
 func (softlayer_marketplace_partner_attachment *SoftLayer_Marketplace_Partner_Attachment_Extended) String() string {

@@ -9,52 +9,52 @@ package types
 type SoftLayer_Network_Vlan_Firewall_Rule struct {
 
 	// Action - The action that the rule is to take [permit or deny].
-	Action string `json:"action"`
-
-	// OrderValue - The numeric value describing the order in which the rule should be applied.
-	OrderValue int `json:"orderValue"`
-
-	// Protocol - The protocol considered for determining rule application.
-	Protocol string `json:"protocol"`
-
-	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
-	SourceIpSubnetMask string `json:"sourceIpSubnetMask"`
-
-	// DestinationIpAddress - The destination IP address considered for determining rule application.
-	DestinationIpAddress string `json:"destinationIpAddress"`
-
-	// DestinationIpCidr - The is used for determining rule application. This value will
-	DestinationIpCidr int `json:"destinationIpCidr"`
+	Action string `json:"action,omitempty"`
 
 	// DestinationIpSubnetMask - The destination IP subnet mask considered for determining rule
 	// application.
-	DestinationIpSubnetMask string `json:"destinationIpSubnetMask"`
-
-	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
-	// determining rule application.
-	DestinationPortRangeStart int `json:"destinationPortRangeStart"`
+	DestinationIpSubnetMask string `json:"destinationIpSubnetMask,omitempty"`
 
 	// Notes - no documentation
-	Notes string `json:"notes"`
+	Notes string `json:"notes,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id"`
+	// Protocol - The protocol considered for determining rule application.
+	Protocol string `json:"protocol,omitempty"`
 
-	// SourceIpCidr - The is used for determining rule application. This value will
-	SourceIpCidr int `json:"sourceIpCidr"`
+	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
+	SourceIpSubnetMask string `json:"sourceIpSubnetMask,omitempty"`
 
-	// Status - no documentation
-	Status string `json:"status"`
+	// DestinationIpCidr - The is used for determining rule application. This value will
+	DestinationIpCidr int `json:"destinationIpCidr,omitempty"`
+
+	// OrderValue - The numeric value describing the order in which the rule should be applied.
+	OrderValue int `json:"orderValue,omitempty"`
+
+	// SourceIpAddress - The source IP address considered for determining rule application.
+	SourceIpAddress string `json:"sourceIpAddress,omitempty"`
 
 	// Version - Whether this rule is an IPv4 rule or an IPv6 rule. If
-	Version int `json:"version"`
+	Version int `json:"version,omitempty"`
 
 	// DestinationPortRangeEnd - The ending (upper end of range) destination port considered for
 	// determining rule application.
-	DestinationPortRangeEnd int `json:"destinationPortRangeEnd"`
+	DestinationPortRangeEnd int `json:"destinationPortRangeEnd,omitempty"`
 
-	// SourceIpAddress - The source IP address considered for determining rule application.
-	SourceIpAddress string `json:"sourceIpAddress"`
+	// DestinationIpAddress - The destination IP address considered for determining rule application.
+	DestinationIpAddress string `json:"destinationIpAddress,omitempty"`
+
+	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
+	// determining rule application.
+	DestinationPortRangeStart int `json:"destinationPortRangeStart,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// SourceIpCidr - The is used for determining rule application. This value will
+	SourceIpCidr int `json:"sourceIpCidr,omitempty"`
+
+	// Status - no documentation
+	Status string `json:"status,omitempty"`
 }
 
 func (softlayer_network_vlan_firewall_rule *SoftLayer_Network_Vlan_Firewall_Rule) String() string {
@@ -66,7 +66,7 @@ type SoftLayer_Network_Vlan_Firewall_Rule_Extended struct {
 	SoftLayer_Network_Vlan_Firewall_Rule
 
 	// NetworkComponentFirewall - The network component firewall that this rule belongs to.
-	NetworkComponentFirewall *SoftLayer_Network_Component_Firewall `json:"networkComponentFirewall"`
+	NetworkComponentFirewall *SoftLayer_Network_Component_Firewall `json:"networkComponentFirewall,omitempty"`
 }
 
 func (softlayer_network_vlan_firewall_rule *SoftLayer_Network_Vlan_Firewall_Rule_Extended) String() string {

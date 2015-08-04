@@ -6,13 +6,13 @@ package types
 type SoftLayer_Billing_Payment_Processor_Type struct {
 
 	// Description - <nil>
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_billing_payment_processor_type *SoftLayer_Billing_Payment_Processor_Type) String() string {
@@ -23,11 +23,11 @@ func (softlayer_billing_payment_processor_type *SoftLayer_Billing_Payment_Proces
 type SoftLayer_Billing_Payment_Processor_Type_Extended struct {
 	SoftLayer_Billing_Payment_Processor_Type
 
-	// PaymentProcessorCount - no documentation
-	PaymentProcessorCount uint64 `json:"paymentProcessorCount"`
-
 	// PaymentProcessors - <nil>
-	PaymentProcessors []*SoftLayer_Billing_Payment_Processor `json:"paymentProcessors"`
+	PaymentProcessors []*SoftLayer_Billing_Payment_Processor `json:"paymentProcessors,omitempty"`
+
+	// PaymentProcessorCount - no documentation
+	PaymentProcessorCount uint64 `json:"paymentProcessorCount,omitempty"`
 }
 
 func (softlayer_billing_payment_processor_type *SoftLayer_Billing_Payment_Processor_Type_Extended) String() string {

@@ -6,13 +6,13 @@ package types
 type SoftLayer_Product_Package_Attribute_Type struct {
 
 	// Description - <nil>
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_product_package_attribute_type *SoftLayer_Product_Package_Attribute_Type) String() string {

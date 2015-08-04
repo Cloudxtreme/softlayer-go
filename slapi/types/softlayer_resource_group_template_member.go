@@ -6,16 +6,16 @@ package types
 type SoftLayer_Resource_Group_Template_Member struct {
 
 	// MaxQuantity - <nil>
-	MaxQuantity int `json:"maxQuantity"`
+	MaxQuantity int `json:"maxQuantity,omitempty"`
 
 	// MinQuantity - <nil>
-	MinQuantity int `json:"minQuantity"`
+	MinQuantity int `json:"minQuantity,omitempty"`
 
 	// RoleId - <nil>
-	RoleId int `json:"roleId"`
+	RoleId int `json:"roleId,omitempty"`
 
 	// TemplateId - <nil>
-	TemplateId int `json:"templateId"`
+	TemplateId int `json:"templateId,omitempty"`
 }
 
 func (softlayer_resource_group_template_member *SoftLayer_Resource_Group_Template_Member) String() string {
@@ -27,10 +27,10 @@ type SoftLayer_Resource_Group_Template_Member_Extended struct {
 	SoftLayer_Resource_Group_Template_Member
 
 	// Role - <nil>
-	Role *SoftLayer_Resource_Group_Role `json:"role"`
+	Role *SoftLayer_Resource_Group_Role `json:"role,omitempty"`
 
 	// Template - <nil>
-	Template *SoftLayer_Resource_Group_Template `json:"template"`
+	Template *SoftLayer_Resource_Group_Template `json:"template,omitempty"`
 }
 
 func (softlayer_resource_group_template_member *SoftLayer_Resource_Group_Template_Member_Extended) String() string {

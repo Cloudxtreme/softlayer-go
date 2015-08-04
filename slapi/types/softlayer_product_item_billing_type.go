@@ -7,7 +7,7 @@ package types
 type SoftLayer_Product_Item_Billing_Type struct {
 
 	// Name - A keyword describing a SoftLayer product item billing type.
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_product_item_billing_type *SoftLayer_Product_Item_Billing_Type) String() string {

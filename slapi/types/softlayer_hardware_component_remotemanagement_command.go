@@ -8,7 +8,7 @@ package types
 type SoftLayer_Hardware_Component_RemoteManagement_Command struct {
 
 	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_hardware_component_remotemanagement_command *SoftLayer_Hardware_Component_RemoteManagement_Command) String() string {
@@ -20,10 +20,10 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command_Extended struct {
 	SoftLayer_Hardware_Component_RemoteManagement_Command
 
 	// Requests - All requests issued for the remote management command.
-	Requests []*SoftLayer_Hardware_Component_RemoteManagement_Command_Request `json:"requests"`
+	Requests []*SoftLayer_Hardware_Component_RemoteManagement_Command_Request `json:"requests,omitempty"`
 
 	// RequestCount - A count of all requests issued for the remote management command.
-	RequestCount uint64 `json:"requestCount"`
+	RequestCount uint64 `json:"requestCount,omitempty"`
 }
 
 func (softlayer_hardware_component_remotemanagement_command *SoftLayer_Hardware_Component_RemoteManagement_Command_Extended) String() string {

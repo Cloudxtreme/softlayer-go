@@ -15,13 +15,13 @@ type SoftLayer_Product_Package_Preset_Configuration_Extended struct {
 	SoftLayer_Product_Package_Preset_Configuration
 
 	// Category - <nil>
-	Category *SoftLayer_Product_Item_Category `json:"category"`
+	Category *SoftLayer_Product_Item_Category `json:"category,omitempty"`
 
 	// PackagePreset - <nil>
-	PackagePreset *SoftLayer_Product_Package_Preset `json:"packagePreset"`
+	PackagePreset *SoftLayer_Product_Package_Preset `json:"packagePreset,omitempty"`
 
 	// Price - <nil>
-	Price *SoftLayer_Product_Item_Price `json:"price"`
+	Price *SoftLayer_Product_Item_Price `json:"price,omitempty"`
 }
 
 func (softlayer_product_package_preset_configuration *SoftLayer_Product_Package_Preset_Configuration_Extended) String() string {

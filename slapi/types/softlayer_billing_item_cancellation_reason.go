@@ -6,17 +6,17 @@ package types
 // type contains cancellation reasons.
 type SoftLayer_Billing_Item_Cancellation_Reason struct {
 
-	// KeyName - no documentation
-	KeyName string `json:"keyName"`
-
-	// Reason - no documentation
-	Reason string `json:"reason"`
-
 	// BillingCancelReasonCategoryId - no documentation
-	BillingCancelReasonCategoryId int `json:"billingCancelReasonCategoryId"`
+	BillingCancelReasonCategoryId int `json:"billingCancelReasonCategoryId,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
+
+	// KeyName - no documentation
+	KeyName string `json:"keyName,omitempty"`
+
+	// Reason - no documentation
+	Reason string `json:"reason,omitempty"`
 }
 
 func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason) String() string {
@@ -27,18 +27,18 @@ func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancell
 type SoftLayer_Billing_Item_Cancellation_Reason_Extended struct {
 	SoftLayer_Billing_Item_Cancellation_Reason
 
-	// BillingItemCount - A count of the corresponding billing items having the specific cancellation
-	// reason.
-	BillingItemCount uint64 `json:"billingItemCount"`
-
-	// BillingCancellationReasonCategory - no documentation
-	BillingCancellationReasonCategory *SoftLayer_Billing_Item_Cancellation_Reason_Category `json:"billingCancellationReasonCategory"`
-
 	// BillingItems - The corresponding billing items having the specific cancellation reason.
-	BillingItems []*SoftLayer_Billing_Item `json:"billingItems"`
+	BillingItems []*SoftLayer_Billing_Item `json:"billingItems,omitempty"`
 
 	// TranslatedReason - <nil>
-	TranslatedReason string `json:"translatedReason"`
+	TranslatedReason string `json:"translatedReason,omitempty"`
+
+	// BillingItemCount - A count of the corresponding billing items having the specific cancellation
+	// reason.
+	BillingItemCount uint64 `json:"billingItemCount,omitempty"`
+
+	// BillingCancellationReasonCategory - no documentation
+	BillingCancellationReasonCategory *SoftLayer_Billing_Item_Cancellation_Reason_Category `json:"billingCancellationReasonCategory,omitempty"`
 }
 
 func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason_Extended) String() string {

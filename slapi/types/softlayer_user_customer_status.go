@@ -8,16 +8,16 @@ package types
 // applies globally to the portal while user permissions are applied to specific portal functions.
 type SoftLayer_User_Customer_Status struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - A user's status. This can be either "Active" for user accounts with portal access, "Inactive"
 	// for users disabled by another portal user, "Disabled" for accounts turned off by SoftLayer, or Only"
 	// for user accounts with no access to the customer portal but VPN access to the private network.
-	Name string `json:"name"`
-
-	// Id - no documentation
-	Id int `json:"id"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_user_customer_status *SoftLayer_User_Customer_Status) String() string {

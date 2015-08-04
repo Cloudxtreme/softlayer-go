@@ -9,20 +9,20 @@ package types
 // the attacks.
 type SoftLayer_Container_Network_IntrusionProtection_Statistics struct {
 
-	// TotalAttacks - Total attacks for this $target over this time frame
-	TotalAttacks int `json:"totalAttacks"`
-
 	// Target - The actual target, either a datacenter name, an account ID, or a subnet
-	Target string `json:"target"`
+	Target string `json:"target,omitempty"`
 
 	// TargetType - The type of the target, right now either "datacenter", "account", or "subnet"
-	TargetType string `json:"targetType"`
+	TargetType string `json:"targetType,omitempty"`
 
 	// TimeFrame - The time frame of the attack, in string form, like "Last 24 hours"
-	TimeFrame string `json:"timeFrame"`
+	TimeFrame string `json:"timeFrame,omitempty"`
 
 	// TopAttacks - The top attacks for this target over this time frame
-	TopAttacks []*SoftLayer_Container_Network_IntrusionProtection_Statistic `json:"topAttacks"`
+	TopAttacks []*SoftLayer_Container_Network_IntrusionProtection_Statistic `json:"topAttacks,omitempty"`
+
+	// TotalAttacks - Total attacks for this $target over this time frame
+	TotalAttacks int `json:"totalAttacks,omitempty"`
 }
 
 func (softlayer_container_network_intrusionprotection_statistics *SoftLayer_Container_Network_IntrusionProtection_Statistics) String() string {

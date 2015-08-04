@@ -12,23 +12,23 @@ import (
 type SoftLayer_Billing_Item_Cancellation_Request_Item struct {
 
 	// BillingItemId - no documentation
-	BillingItemId int `json:"billingItemId"`
+	BillingItemId int `json:"billingItemId,omitempty"`
 
 	// CancellationRequestId - no documentation
-	CancellationRequestId int `json:"cancellationRequestId"`
+	CancellationRequestId int `json:"cancellationRequestId,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// ImmediateCancellationFlag - This flag indicated if a billing item should be canceled immediately or
 	// not. Set this flag to true when creating a cancellation request.
-	ImmediateCancellationFlag bool `json:"immediateCancellationFlag"`
+	ImmediateCancellationFlag bool `json:"immediateCancellationFlag,omitempty"`
 
 	// ScheduledCancellationDate - no documentation
-	ScheduledCancellationDate *time.Time `json:"scheduledCancellationDate"`
+	ScheduledCancellationDate *time.Time `json:"scheduledCancellationDate,omitempty"`
 
 	// ServiceReclaimStatusCode - no documentation
-	ServiceReclaimStatusCode string `json:"serviceReclaimStatusCode"`
+	ServiceReclaimStatusCode string `json:"serviceReclaimStatusCode,omitempty"`
 }
 
 func (softlayer_billing_item_cancellation_request_item *SoftLayer_Billing_Item_Cancellation_Request_Item) String() string {
@@ -40,10 +40,10 @@ type SoftLayer_Billing_Item_Cancellation_Request_Item_Extended struct {
 	SoftLayer_Billing_Item_Cancellation_Request_Item
 
 	// BillingItem - no documentation
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
 
 	// CancellationRequest - The service cancellation request that a cancellation item belongs to.
-	CancellationRequest *SoftLayer_Billing_Item_Cancellation_Request `json:"cancellationRequest"`
+	CancellationRequest *SoftLayer_Billing_Item_Cancellation_Request `json:"cancellationRequest,omitempty"`
 }
 
 func (softlayer_billing_item_cancellation_request_item *SoftLayer_Billing_Item_Cancellation_Request_Item_Extended) String() string {

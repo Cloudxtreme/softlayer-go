@@ -8,13 +8,13 @@ package types
 // and is referred to in tracking objects to reflect what type of data they track.
 type SoftLayer_Metric_Tracking_Object_Type struct {
 
-	// Keyname - Description A tracking object type's key name. This is a shorter description of what kind
-	// of data a tracking object group is polling.
-	Keyname string `json:"keyname"`
-
 	// Name - Description A tracking object type's name. This describes what kind of data a tracking object
 	// group is polling.
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
+
+	// Keyname - Description A tracking object type's key name. This is a shorter description of what kind
+	// of data a tracking object group is polling.
+	Keyname string `json:"keyname,omitempty"`
 }
 
 func (softlayer_metric_tracking_object_type *SoftLayer_Metric_Tracking_Object_Type) String() string {

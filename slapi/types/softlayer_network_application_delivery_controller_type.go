@@ -6,10 +6,10 @@ package types
 type SoftLayer_Network_Application_Delivery_Controller_Type struct {
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_network_application_delivery_controller_type *SoftLayer_Network_Application_Delivery_Controller_Type) String() string {

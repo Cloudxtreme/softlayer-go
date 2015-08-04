@@ -14,13 +14,13 @@ import (
 type SoftLayer_Network_Application_Delivery_Controller_Configuration_History struct {
 
 	// CreateDate - The date a configuration history record was created.
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Id - An configuration history record's unique identifier
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Notes - Editable notes used to describe a configuration history record
-	Notes string `json:"notes"`
+	Notes string `json:"notes,omitempty"`
 }
 
 func (softlayer_network_application_delivery_controller_configuration_history *SoftLayer_Network_Application_Delivery_Controller_Configuration_History) String() string {
@@ -32,7 +32,7 @@ type SoftLayer_Network_Application_Delivery_Controller_Configuration_History_Ext
 	SoftLayer_Network_Application_Delivery_Controller_Configuration_History
 
 	// Controller - The application delivery controller that a configuration history record belongs to.
-	Controller *SoftLayer_Network_Application_Delivery_Controller `json:"controller"`
+	Controller *SoftLayer_Network_Application_Delivery_Controller `json:"controller,omitempty"`
 }
 
 func (softlayer_network_application_delivery_controller_configuration_history *SoftLayer_Network_Application_Delivery_Controller_Configuration_History_Extended) String() string {

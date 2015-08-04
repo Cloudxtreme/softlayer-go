@@ -8,7 +8,7 @@ package types
 type McAfee_Epolicy_Orchestrator_Version45_Policy_Object struct {
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (mcafee_epolicy_orchestrator_version45_policy_object *McAfee_Epolicy_Orchestrator_Version45_Policy_Object) String() string {

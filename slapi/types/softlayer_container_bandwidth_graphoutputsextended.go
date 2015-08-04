@@ -11,22 +11,22 @@ import (
 type SoftLayer_Container_Bandwidth_GraphOutputsExtended struct {
 
 	// GraphTitle - no documentation
-	GraphTitle string `json:"graphTitle"`
+	GraphTitle string `json:"graphTitle,omitempty"`
 
 	// InBoundTotalBytes - The amount of inbound traffic reported on a bandwidth graph image.
-	InBoundTotalBytes uint64 `json:"inBoundTotalBytes"`
+	InBoundTotalBytes uint64 `json:"inBoundTotalBytes,omitempty"`
 
 	// MaxEndDate - The ending date of the data represented in a bandwidth graph.
-	MaxEndDate *time.Time `json:"maxEndDate"`
+	MaxEndDate *time.Time `json:"maxEndDate,omitempty"`
 
 	// MinStartDate - The beginning date of the data represented in a bandwidth graph.
-	MinStartDate *time.Time `json:"minStartDate"`
+	MinStartDate *time.Time `json:"minStartDate,omitempty"`
 
 	// OutBoundTotalBytes - The amount of outbound traffic reported on a bandwidth graph image.
-	OutBoundTotalBytes uint64 `json:"outBoundTotalBytes"`
+	OutBoundTotalBytes uint64 `json:"outBoundTotalBytes,omitempty"`
 
 	// GraphImage - The raw PNG binary data of a bandwidth graph image.
-	GraphImage string `json:"graphImage"`
+	GraphImage string `json:"graphImage,omitempty"`
 }
 
 func (softlayer_container_bandwidth_graphoutputsextended *SoftLayer_Container_Bandwidth_GraphOutputsExtended) String() string {

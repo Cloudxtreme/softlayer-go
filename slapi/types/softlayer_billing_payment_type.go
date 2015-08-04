@@ -6,13 +6,13 @@ package types
 type SoftLayer_Billing_Payment_Type struct {
 
 	// Description - <nil>
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_billing_payment_type *SoftLayer_Billing_Payment_Type) String() string {

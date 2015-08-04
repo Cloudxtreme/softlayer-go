@@ -6,10 +6,10 @@ package types
 type SoftLayer_FlexibleCredit_Company_Type struct {
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_flexiblecredit_company_type *SoftLayer_FlexibleCredit_Company_Type) String() string {

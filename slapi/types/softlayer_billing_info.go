@@ -11,64 +11,64 @@ import (
 // group when sending invoices and making billing inquiries.
 type SoftLayer_Billing_Info struct {
 
-	// LastFourPaymentCardDigits - The last four digits of the credit card currently on the account. This
-	// is the only portion of the card that we store. For Paypal customers, this value will be empty.
-	LastFourPaymentCardDigits int `json:"lastFourPaymentCardDigits"`
-
 	// CardExpirationMonth - no documentation
-	CardExpirationMonth int `json:"cardExpirationMonth"`
-
-	// CardExpirationYear - no documentation
-	CardExpirationYear int `json:"cardExpirationYear"`
-
-	// CreateDate - The date a customer's billing information was created.
-	CreateDate *time.Time `json:"createDate"`
-
-	// Id - A SoftLayer customer's billing information identifier.
-	Id int `json:"id"`
-
-	// AccountId - no documentation
-	AccountId int `json:"accountId"`
-
-	// AnniversaryDayOfMonth - The day of the month that a SoftLayer customer is billed.
-	AnniversaryDayOfMonth int `json:"anniversaryDayOfMonth"`
-
-	// LastPaymentDate - The date of the last payment received by SoftLayer from the account holder.
-	LastPaymentDate *time.Time `json:"lastPaymentDate"`
-
-	// PercentDiscountRecurring - The percentage discount received on all recurring charges on a customer's
-	// monthly bill.
-	PercentDiscountRecurring int `json:"percentDiscountRecurring"`
-
-	// SparePoolAmount - The total recurring fee amount for servers that are in the spare pool status.
-	SparePoolAmount int `json:"sparePoolAmount"`
-
-	// VatId - <nil>
-	VatId string `json:"vatId"`
-
-	// CardType - no documentation
-	CardType string `json:"cardType"`
-
-	// PaymentTerms - no documentation
-	PaymentTerms int `json:"paymentTerms"`
-
-	// PercentDiscountOnetime - The percentage discount received on all one-time charges on a customer's
-	// monthly bill.
-	PercentDiscountOnetime int `json:"percentDiscountOnetime"`
-
-	// CardAccountNumber - This value doesn't persist to this object. It's used as part of the account
-	// creation process only;
-	CardAccountNumber string `json:"cardAccountNumber"`
-
-	// CardNickname - <nil>
-	CardNickname string `json:"cardNickname"`
+	CardExpirationMonth int `json:"cardExpirationMonth,omitempty"`
 
 	// CardVerificationNumber - This value doesn't persist to this object. It's used as part of the account
 	// creation process only.
-	CardVerificationNumber string `json:"cardVerificationNumber"`
+	CardVerificationNumber string `json:"cardVerificationNumber,omitempty"`
+
+	// PaymentTerms - no documentation
+	PaymentTerms int `json:"paymentTerms,omitempty"`
+
+	// PercentDiscountOnetime - The percentage discount received on all one-time charges on a customer's
+	// monthly bill.
+	PercentDiscountOnetime int `json:"percentDiscountOnetime,omitempty"`
+
+	// PercentDiscountRecurring - The percentage discount received on all recurring charges on a customer's
+	// monthly bill.
+	PercentDiscountRecurring int `json:"percentDiscountRecurring,omitempty"`
+
+	// CardAccountNumber - This value doesn't persist to this object. It's used as part of the account
+	// creation process only;
+	CardAccountNumber string `json:"cardAccountNumber,omitempty"`
+
+	// CardExpirationYear - no documentation
+	CardExpirationYear int `json:"cardExpirationYear,omitempty"`
+
+	// Id - A SoftLayer customer's billing information identifier.
+	Id int `json:"id,omitempty"`
+
+	// LastPaymentDate - The date of the last payment received by SoftLayer from the account holder.
+	LastPaymentDate *time.Time `json:"lastPaymentDate,omitempty"`
+
+	// SparePoolAmount - The total recurring fee amount for servers that are in the spare pool status.
+	SparePoolAmount int `json:"sparePoolAmount,omitempty"`
+
+	// CardNickname - <nil>
+	CardNickname string `json:"cardNickname,omitempty"`
+
+	// CardType - no documentation
+	CardType string `json:"cardType,omitempty"`
+
+	// LastFourPaymentCardDigits - The last four digits of the credit card currently on the account. This
+	// is the only portion of the card that we store. For Paypal customers, this value will be empty.
+	LastFourPaymentCardDigits int `json:"lastFourPaymentCardDigits,omitempty"`
 
 	// ModifyDate - The date a customer's billing information was last modified.
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// VatId - <nil>
+	VatId string `json:"vatId,omitempty"`
+
+	// AccountId - no documentation
+	AccountId int `json:"accountId,omitempty"`
+
+	// AnniversaryDayOfMonth - The day of the month that a SoftLayer customer is billed.
+	AnniversaryDayOfMonth int `json:"anniversaryDayOfMonth,omitempty"`
+
+	// CreateDate - The date a customer's billing information was created.
+	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_billing_info *SoftLayer_Billing_Info) String() string {
@@ -79,26 +79,26 @@ func (softlayer_billing_info *SoftLayer_Billing_Info) String() string {
 type SoftLayer_Billing_Info_Extended struct {
 	SoftLayer_Billing_Info
 
-	// Account - The SoftLayer customer account associated with this billing information.
-	Account *SoftLayer_Account `json:"account"`
+	// AchInformation - <nil>
+	AchInformation []*SoftLayer_Billing_Info_Ach `json:"achInformation,omitempty"`
 
-	// AchInformationCount - no documentation
-	AchInformationCount uint64 `json:"achInformationCount"`
+	// Account - The SoftLayer customer account associated with this billing information.
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// Currency - no documentation
-	Currency *SoftLayer_Billing_Currency `json:"currency"`
+	Currency *SoftLayer_Billing_Currency `json:"currency,omitempty"`
 
-	// LastBillDate - no documentation
-	LastBillDate *time.Time `json:"lastBillDate"`
-
-	// AchInformation - <nil>
-	AchInformation []*SoftLayer_Billing_Info_Ach `json:"achInformation"`
+	// AchInformationCount - no documentation
+	AchInformationCount uint64 `json:"achInformationCount,omitempty"`
 
 	// CurrentBillingCycle - Information related to an account's current and previous billing cycles.
-	CurrentBillingCycle *SoftLayer_Billing_Info_Cycle `json:"currentBillingCycle"`
+	CurrentBillingCycle *SoftLayer_Billing_Info_Cycle `json:"currentBillingCycle,omitempty"`
+
+	// LastBillDate - no documentation
+	LastBillDate *time.Time `json:"lastBillDate,omitempty"`
 
 	// NextBillDate - no documentation
-	NextBillDate *time.Time `json:"nextBillDate"`
+	NextBillDate *time.Time `json:"nextBillDate,omitempty"`
 }
 
 func (softlayer_billing_info *SoftLayer_Billing_Info_Extended) String() string {

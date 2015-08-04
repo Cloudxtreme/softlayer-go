@@ -6,10 +6,10 @@ package types
 type SoftLayer_Ticket_Update_Type struct {
 
 	// Description - <nil>
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// KeyName - <nil>
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_ticket_update_type *SoftLayer_Ticket_Update_Type) String() string {
@@ -21,7 +21,7 @@ type SoftLayer_Ticket_Update_Type_Extended struct {
 	SoftLayer_Ticket_Update_Type
 
 	// Ticket - <nil>
-	Ticket *SoftLayer_Ticket_Update `json:"ticket"`
+	Ticket *SoftLayer_Ticket_Update `json:"ticket,omitempty"`
 }
 
 func (softlayer_ticket_update_type *SoftLayer_Ticket_Update_Type_Extended) String() string {

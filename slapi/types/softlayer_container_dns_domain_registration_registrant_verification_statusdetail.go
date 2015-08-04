@@ -9,11 +9,11 @@ import (
 // SoftLayer_Container_Dns_Domain_Registration_Registrant_Verification_StatusDetail - <nil>
 type SoftLayer_Container_Dns_Domain_Registration_Registrant_Verification_StatusDetail struct {
 
-	// VerificationDeadlineDate - no documentation
-	VerificationDeadlineDate *time.Time `json:"verificationDeadlineDate"`
-
 	// Status - no documentation
-	Status *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status `json:"status"`
+	Status *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status `json:"status,omitempty"`
+
+	// VerificationDeadlineDate - no documentation
+	VerificationDeadlineDate *time.Time `json:"verificationDeadlineDate,omitempty"`
 }
 
 func (softlayer_container_dns_domain_registration_registrant_verification_statusdetail *SoftLayer_Container_Dns_Domain_Registration_Registrant_Verification_StatusDetail) String() string {

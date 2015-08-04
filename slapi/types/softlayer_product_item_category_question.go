@@ -10,27 +10,27 @@ package types
 // answer that should be provided.
 type SoftLayer_Product_Item_Category_Question struct {
 
-	// AnswerValueExpression - no documentation
-	AnswerValueExpression string `json:"answerValueExpression"`
-
-	// Description - no documentation
-	Description string `json:"description"`
-
-	// FieldTypeId - no documentation
-	FieldTypeId int `json:"fieldTypeId"`
-
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// ValueExample - An example and/or explanation of what the answer for the question is expected to look
 	// like.
-	ValueExample string `json:"valueExample"`
+	ValueExample string `json:"valueExample,omitempty"`
+
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
+
+	// FieldTypeId - no documentation
+	FieldTypeId int `json:"fieldTypeId,omitempty"`
+
+	// AnswerValueExpression - no documentation
+	AnswerValueExpression string `json:"answerValueExpression,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Question - no documentation
-	Question string `json:"question"`
+	Question string `json:"question,omitempty"`
 }
 
 func (softlayer_product_item_category_question *SoftLayer_Product_Item_Category_Question) String() string {
@@ -43,13 +43,13 @@ type SoftLayer_Product_Item_Category_Question_Extended struct {
 
 	// ItemCategoryReferenceCount - A count of the link between an item category and an item category
 	// question.
-	ItemCategoryReferenceCount uint64 `json:"itemCategoryReferenceCount"`
+	ItemCategoryReferenceCount uint64 `json:"itemCategoryReferenceCount,omitempty"`
 
 	// FieldType - The type of field that should be used in an form to accept an answer from an end user.
-	FieldType *SoftLayer_Product_Item_Category_Question_Field_Type `json:"fieldType"`
+	FieldType *SoftLayer_Product_Item_Category_Question_Field_Type `json:"fieldType,omitempty"`
 
 	// ItemCategoryReferences - The link between an item category and an item category question.
-	ItemCategoryReferences []*SoftLayer_Product_Item_Category_Question_Xref `json:"itemCategoryReferences"`
+	ItemCategoryReferences []*SoftLayer_Product_Item_Category_Question_Xref `json:"itemCategoryReferences,omitempty"`
 }
 
 func (softlayer_product_item_category_question *SoftLayer_Product_Item_Category_Question_Extended) String() string {

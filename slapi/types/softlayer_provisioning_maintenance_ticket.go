@@ -10,16 +10,16 @@ import (
 type SoftLayer_Provisioning_Maintenance_Ticket struct {
 
 	// MaintClassId - <nil>
-	MaintClassId int `json:"maintClassId"`
+	MaintClassId int `json:"maintClassId,omitempty"`
 
 	// MaintWindowId - <nil>
-	MaintWindowId int `json:"maintWindowId"`
+	MaintWindowId int `json:"maintWindowId,omitempty"`
 
 	// MaintenanceDate - <nil>
-	MaintenanceDate *time.Time `json:"maintenanceDate"`
+	MaintenanceDate *time.Time `json:"maintenanceDate,omitempty"`
 
 	// TicketId - <nil>
-	TicketId int `json:"ticketId"`
+	TicketId int `json:"ticketId,omitempty"`
 }
 
 func (softlayer_provisioning_maintenance_ticket *SoftLayer_Provisioning_Maintenance_Ticket) String() string {
@@ -30,14 +30,14 @@ func (softlayer_provisioning_maintenance_ticket *SoftLayer_Provisioning_Maintena
 type SoftLayer_Provisioning_Maintenance_Ticket_Extended struct {
 	SoftLayer_Provisioning_Maintenance_Ticket
 
-	// Ticket - <nil>
-	Ticket *SoftLayer_Ticket `json:"ticket"`
-
 	// AvailableSlots - <nil>
-	AvailableSlots *SoftLayer_Provisioning_Maintenance_Slots `json:"availableSlots"`
+	AvailableSlots *SoftLayer_Provisioning_Maintenance_Slots `json:"availableSlots,omitempty"`
 
 	// MaintenanceClass - <nil>
-	MaintenanceClass *SoftLayer_Provisioning_Maintenance_Classification `json:"maintenanceClass"`
+	MaintenanceClass *SoftLayer_Provisioning_Maintenance_Classification `json:"maintenanceClass,omitempty"`
+
+	// Ticket - <nil>
+	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
 }
 
 func (softlayer_provisioning_maintenance_ticket *SoftLayer_Provisioning_Maintenance_Ticket_Extended) String() string {

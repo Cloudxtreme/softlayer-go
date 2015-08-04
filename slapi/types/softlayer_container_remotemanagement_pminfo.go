@@ -7,10 +7,10 @@ package types
 type SoftLayer_Container_RemoteManagement_PmInfo struct {
 
 	// PmInfoId - no documentation
-	PmInfoId string `json:"pmInfoId"`
+	PmInfoId string `json:"pmInfoId,omitempty"`
 
 	// PmInfoReading - no documentation
-	PmInfoReading string `json:"pmInfoReading"`
+	PmInfoReading string `json:"pmInfoReading,omitempty"`
 }
 
 func (softlayer_container_remotemanagement_pminfo *SoftLayer_Container_RemoteManagement_PmInfo) String() string {

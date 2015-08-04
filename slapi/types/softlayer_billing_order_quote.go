@@ -14,36 +14,36 @@ import (
 type SoftLayer_Billing_Order_Quote struct {
 
 	// QuoteKey - no documentation
-	QuoteKey string `json:"quoteKey"`
+	QuoteKey string `json:"quoteKey,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id"`
+	// ModifyDate - Holds the date when the quote record was modified with reference to its creation date
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// PublicNote - This property Holds system generated notes. In our case if a quote is tied to an order
 	// where one of the order item has an inactive promotion code, the quote will be considered invalid.
-	PublicNote string `json:"publicNote"`
+	PublicNote string `json:"publicNote,omitempty"`
 
 	// CompletedPurchaseDataId - Identification Number of the order record tied to the quote.
-	CompletedPurchaseDataId int `json:"completedPurchaseDataId"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CompletedPurchaseDataId int `json:"completedPurchaseDataId,omitempty"`
 
 	// ExpirationDate - This property holds the date of expiration of a quote, after that date the quote
 	// would be deem expired
-	ExpirationDate *time.Time `json:"expirationDate"`
+	ExpirationDate *time.Time `json:"expirationDate,omitempty"`
 
-	// ModifyDate - Holds the date when the quote record was modified with reference to its creation date
-	ModifyDate *time.Time `json:"modifyDate"`
-
-	// Status - This property Holds the current status of a Quote: pending,expired, saved or deleted
-	Status string `json:"status"`
-
-	// AccountId - Identification Number of the account record tied to the quote
-	AccountId int `json:"accountId"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
+
+	// Status - This property Holds the current status of a Quote: pending,expired, saved or deleted
+	Status string `json:"status,omitempty"`
+
+	// AccountId - Identification Number of the account record tied to the quote
+	AccountId int `json:"accountId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_billing_order_quote *SoftLayer_Billing_Order_Quote) String() string {
@@ -54,17 +54,17 @@ func (softlayer_billing_order_quote *SoftLayer_Billing_Order_Quote) String() str
 type SoftLayer_Billing_Order_Quote_Extended struct {
 	SoftLayer_Billing_Order_Quote
 
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
 	// OrdersFromQuote - no documentation
-	OrdersFromQuote []*SoftLayer_Billing_Order `json:"ordersFromQuote"`
+	OrdersFromQuote []*SoftLayer_Billing_Order `json:"ordersFromQuote,omitempty"`
 
 	// Order - no documentation
-	Order *SoftLayer_Billing_Order `json:"order"`
+	Order *SoftLayer_Billing_Order `json:"order,omitempty"`
 
 	// OrdersFromQuoteCount - no documentation
-	OrdersFromQuoteCount uint64 `json:"ordersFromQuoteCount"`
-
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
+	OrdersFromQuoteCount uint64 `json:"ordersFromQuoteCount,omitempty"`
 }
 
 func (softlayer_billing_order_quote *SoftLayer_Billing_Order_Quote_Extended) String() string {

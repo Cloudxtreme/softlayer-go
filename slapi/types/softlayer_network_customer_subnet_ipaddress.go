@@ -7,16 +7,16 @@ package types
 type SoftLayer_Network_Customer_Subnet_IpAddress struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// IpAddress - no documentation
-	IpAddress string `json:"ipAddress"`
+	IpAddress string `json:"ipAddress,omitempty"`
 
 	// Notes - no documentation
-	Notes string `json:"notes"`
+	Notes string `json:"notes,omitempty"`
 
 	// SubnetId - The unique identifier for the customer subnet (remote) the ip address belongs to.
-	SubnetId int `json:"subnetId"`
+	SubnetId int `json:"subnetId,omitempty"`
 }
 
 func (softlayer_network_customer_subnet_ipaddress *SoftLayer_Network_Customer_Subnet_IpAddress) String() string {
@@ -28,13 +28,13 @@ type SoftLayer_Network_Customer_Subnet_IpAddress_Extended struct {
 	SoftLayer_Network_Customer_Subnet_IpAddress
 
 	// Translations - All the address translations that are tied to an IP address.
-	Translations []*SoftLayer_Network_Tunnel_Module_Context_Address_Translation `json:"translations"`
+	Translations []*SoftLayer_Network_Tunnel_Module_Context_Address_Translation `json:"translations,omitempty"`
 
 	// TranslationCount - A count of all the address translations that are tied to an IP address.
-	TranslationCount uint64 `json:"translationCount"`
+	TranslationCount uint64 `json:"translationCount,omitempty"`
 
 	// Subnet - The customer subnet (remote) that the ip address belongs to.
-	Subnet *SoftLayer_Network_Customer_Subnet `json:"subnet"`
+	Subnet *SoftLayer_Network_Customer_Subnet `json:"subnet,omitempty"`
 }
 
 func (softlayer_network_customer_subnet_ipaddress *SoftLayer_Network_Customer_Subnet_IpAddress_Extended) String() string {

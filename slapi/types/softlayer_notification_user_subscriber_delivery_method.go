@@ -8,13 +8,13 @@ package types
 type SoftLayer_Notification_User_Subscriber_Delivery_Method struct {
 
 	// Active - Determines if the delivery method is active for the user.
-	Active int `json:"active"`
+	Active int `json:"active,omitempty"`
 
 	// NotificationMethodId - Unique identifier of the method used to deliver notification.
-	NotificationMethodId int `json:"notificationMethodId"`
+	NotificationMethodId int `json:"notificationMethodId,omitempty"`
 
 	// NotificationUserSubscriberId - Unique identifier of the subscriber tied to the delivery method.
-	NotificationUserSubscriberId int `json:"notificationUserSubscriberId"`
+	NotificationUserSubscriberId int `json:"notificationUserSubscriberId,omitempty"`
 }
 
 func (softlayer_notification_user_subscriber_delivery_method *SoftLayer_Notification_User_Subscriber_Delivery_Method) String() string {
@@ -27,10 +27,10 @@ type SoftLayer_Notification_User_Subscriber_Delivery_Method_Extended struct {
 
 	// DeliveryMethod - Provides details for the method used to deliver the notification (email, sms,
 	// ticket).
-	DeliveryMethod *SoftLayer_Notification_Delivery_Method `json:"deliveryMethod"`
+	DeliveryMethod *SoftLayer_Notification_Delivery_Method `json:"deliveryMethod,omitempty"`
 
 	// NotificationUserSubscriber - The Subscriber information tied to the delivery method.
-	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber"`
+	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber,omitempty"`
 }
 
 func (softlayer_notification_user_subscriber_delivery_method *SoftLayer_Notification_User_Subscriber_Delivery_Method_Extended) String() string {

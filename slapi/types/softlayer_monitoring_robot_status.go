@@ -13,13 +13,13 @@ package types
 type SoftLayer_Monitoring_Robot_Status struct {
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_monitoring_robot_status *SoftLayer_Monitoring_Robot_Status) String() string {

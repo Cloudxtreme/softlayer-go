@@ -7,23 +7,23 @@ package types
 // resources.
 type SoftLayer_Virtual_Storage_Repository struct {
 
-	// Id - no documentation
-	Id int `json:"id"`
+	// Capacity - A storage repositories capacity measured in Giga-Bytes
+	Capacity float32 `json:"capacity,omitempty"`
 
 	// Description - A storage repositories description that describes its purpose or contents
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
-	// TypeId - A storage repositories [[SoftLayer_Virtual_Storage_Repository_Type|type]] ID
-	TypeId int `json:"typeId"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// PublicFlag - <nil>
-	PublicFlag int `json:"publicFlag"`
-
-	// Capacity - A storage repositories capacity measured in Giga-Bytes
-	Capacity float32 `json:"capacity"`
+	PublicFlag int `json:"publicFlag,omitempty"`
 
 	// Name - A storage repositories name that describes its purpose or contents
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
+
+	// TypeId - A storage repositories [[SoftLayer_Virtual_Storage_Repository_Type|type]] ID
+	TypeId int `json:"typeId,omitempty"`
 }
 
 func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository) String() string {
@@ -35,36 +35,36 @@ type SoftLayer_Virtual_Storage_Repository_Extended struct {
 	SoftLayer_Virtual_Storage_Repository
 
 	// Account - The [[SoftLayer_Account|account]] that a storage repository belongs to.
-	Account *SoftLayer_Account `json:"account"`
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// Guests - The computing instances that have disk images in a storage repository.
+	Guests []*SoftLayer_Virtual_Guest `json:"guests,omitempty"`
+
+	// PublicImageBillingItem - The current billing item for a public storage repository.
+	PublicImageBillingItem *SoftLayer_Billing_Item `json:"publicImageBillingItem,omitempty"`
+
+	// Type - A storage repository's [[SoftLayer_Virtual_Storage_Repository_Type|type]].
+	Type *SoftLayer_Virtual_Storage_Repository_Type `json:"type,omitempty"`
+
+	// GuestCount - A count of the computing instances that have disk images in a storage repository.
+	GuestCount uint64 `json:"guestCount,omitempty"`
 
 	// BillingItem - no documentation
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem"`
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
 
 	// Datacenter - The datacenter that a virtual storage repository resides in.
-	Datacenter *SoftLayer_Location `json:"datacenter"`
+	Datacenter *SoftLayer_Location `json:"datacenter,omitempty"`
+
+	// MetricTrackingObject - <nil>
+	MetricTrackingObject *SoftLayer_Metric_Tracking_Object_Virtual_Storage_Repository `json:"metricTrackingObject,omitempty"`
 
 	// DiskImageCount - A count of the [[SoftLayer_Virtual_Disk_Image|disk images]] that are in a storage
 	// repository. Disk images are the virtual hard drives for a virtual guest.
-	DiskImageCount uint64 `json:"diskImageCount"`
-
-	// GuestCount - A count of the computing instances that have disk images in a storage repository.
-	GuestCount uint64 `json:"guestCount"`
-
-	// Guests - The computing instances that have disk images in a storage repository.
-	Guests []*SoftLayer_Virtual_Guest `json:"guests"`
-
-	// PublicImageBillingItem - The current billing item for a public storage repository.
-	PublicImageBillingItem *SoftLayer_Billing_Item `json:"publicImageBillingItem"`
+	DiskImageCount uint64 `json:"diskImageCount,omitempty"`
 
 	// DiskImages - The [[SoftLayer_Virtual_Disk_Image|disk images]] that are in a storage repository. Disk
 	// images are the virtual hard drives for a virtual guest.
-	DiskImages []*SoftLayer_Virtual_Disk_Image `json:"diskImages"`
-
-	// MetricTrackingObject - <nil>
-	MetricTrackingObject *SoftLayer_Metric_Tracking_Object_Virtual_Storage_Repository `json:"metricTrackingObject"`
-
-	// Type - A storage repository's [[SoftLayer_Virtual_Storage_Repository_Type|type]].
-	Type *SoftLayer_Virtual_Storage_Repository_Type `json:"type"`
+	DiskImages []*SoftLayer_Virtual_Disk_Image `json:"diskImages,omitempty"`
 }
 
 func (softlayer_virtual_storage_repository *SoftLayer_Virtual_Storage_Repository_Extended) String() string {

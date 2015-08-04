@@ -12,16 +12,16 @@ import (
 type SoftLayer_Network_Storage_Partnership struct {
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// PartnerVolumeId - The child volume id which a partnership is associated with.
-	PartnerVolumeId int `json:"partnerVolumeId"`
+	PartnerVolumeId int `json:"partnerVolumeId,omitempty"`
 
 	// VolumeId - The volume id which a partnership is associated with.
-	VolumeId int `json:"volumeId"`
+	VolumeId int `json:"volumeId,omitempty"`
 }
 
 func (softlayer_network_storage_partnership *SoftLayer_Network_Storage_Partnership) String() string {
@@ -32,14 +32,14 @@ func (softlayer_network_storage_partnership *SoftLayer_Network_Storage_Partnersh
 type SoftLayer_Network_Storage_Partnership_Extended struct {
 	SoftLayer_Network_Storage_Partnership
 
-	// Volume - no documentation
-	Volume *SoftLayer_Network_Storage `json:"volume"`
-
 	// PartnerVolume - no documentation
-	PartnerVolume *SoftLayer_Network_Storage `json:"partnerVolume"`
+	PartnerVolume *SoftLayer_Network_Storage `json:"partnerVolume,omitempty"`
 
 	// Type - The type provides a standardized definition for a partnership.
-	Type *SoftLayer_Network_Storage_Partnership_Type `json:"type"`
+	Type *SoftLayer_Network_Storage_Partnership_Type `json:"type,omitempty"`
+
+	// Volume - no documentation
+	Volume *SoftLayer_Network_Storage `json:"volume,omitempty"`
 }
 
 func (softlayer_network_storage_partnership *SoftLayer_Network_Storage_Partnership_Extended) String() string {

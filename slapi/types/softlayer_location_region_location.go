@@ -20,20 +20,20 @@ type SoftLayer_Location_Region_Location_Extended struct {
 
 	// Location - The SoftLayer_Location tied to a region's location. This provides more information about
 	// the location, including specific datacenter information.
-	Location *SoftLayer_Location `json:"location"`
+	Location *SoftLayer_Location `json:"location,omitempty"`
 
 	// LocationPackageDetails - A region's location also has delivery information as well as other
 	// information to be determined. For now, availability is provided and could weigh into the decision as
 	// to where to decide to have a server provisioned.'
-	LocationPackageDetails []*SoftLayer_Product_Package_Locations `json:"locationPackageDetails"`
+	LocationPackageDetails []*SoftLayer_Product_Package_Locations `json:"locationPackageDetails,omitempty"`
 
 	// Region - no documentation
-	Region *SoftLayer_Location_Region `json:"region"`
+	Region *SoftLayer_Location_Region `json:"region,omitempty"`
 
 	// LocationPackageDetailCount - A count of a region's location also has delivery information as well as
 	// other information to be determined. For now, availability is provided and could weigh into the
 	// decision as to where to decide to have a server provisioned.'
-	LocationPackageDetailCount uint64 `json:"locationPackageDetailCount"`
+	LocationPackageDetailCount uint64 `json:"locationPackageDetailCount,omitempty"`
 }
 
 func (softlayer_location_region_location *SoftLayer_Location_Region_Location_Extended) String() string {

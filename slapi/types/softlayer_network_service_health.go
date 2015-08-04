@@ -15,16 +15,16 @@ import (
 type SoftLayer_Network_Service_Health struct {
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// LocationId - no documentation
-	LocationId int `json:"locationId"`
+	LocationId int `json:"locationId,omitempty"`
 
 	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// StatusId - no documentation
-	StatusId int `json:"statusId"`
+	StatusId int `json:"statusId,omitempty"`
 }
 
 func (softlayer_network_service_health *SoftLayer_Network_Service_Health) String() string {
@@ -36,10 +36,10 @@ type SoftLayer_Network_Service_Health_Extended struct {
 	SoftLayer_Network_Service_Health
 
 	// Location - no documentation
-	Location *SoftLayer_Location `json:"location"`
+	Location *SoftLayer_Location `json:"location,omitempty"`
 
 	// Status - The status portion of a service/status relationship.
-	Status *SoftLayer_Network_Service_Health_Status `json:"status"`
+	Status *SoftLayer_Network_Service_Health_Status `json:"status,omitempty"`
 }
 
 func (softlayer_network_service_health *SoftLayer_Network_Service_Health_Extended) String() string {

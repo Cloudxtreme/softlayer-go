@@ -7,14 +7,14 @@ package types
 // network interface.
 type SoftLayer_Network_Bandwidth_Usage struct {
 
-	// BandwidthUsageDetailTypeId - ID of the bandwidth usage detail type for this record.
-	BandwidthUsageDetailTypeId float64 `json:"bandwidthUsageDetailTypeId"`
-
 	// AmountIn - no documentation
-	AmountIn float64 `json:"amountIn"`
+	AmountIn float64 `json:"amountIn,omitempty"`
 
 	// AmountOut - no documentation
-	AmountOut float64 `json:"amountOut"`
+	AmountOut float64 `json:"amountOut,omitempty"`
+
+	// BandwidthUsageDetailTypeId - ID of the bandwidth usage detail type for this record.
+	BandwidthUsageDetailTypeId float64 `json:"bandwidthUsageDetailTypeId,omitempty"`
 }
 
 func (softlayer_network_bandwidth_usage *SoftLayer_Network_Bandwidth_Usage) String() string {
@@ -26,10 +26,10 @@ type SoftLayer_Network_Bandwidth_Usage_Extended struct {
 	SoftLayer_Network_Bandwidth_Usage
 
 	// TrackingObject - The tracking object this bandwidth usage record describes.
-	TrackingObject *SoftLayer_Metric_Tracking_Object `json:"trackingObject"`
+	TrackingObject *SoftLayer_Metric_Tracking_Object `json:"trackingObject,omitempty"`
 
 	// Type - In and out bandwidth utilization for a specified time stamp.
-	Type *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type `json:"type"`
+	Type *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type `json:"type,omitempty"`
 }
 
 func (softlayer_network_bandwidth_usage *SoftLayer_Network_Bandwidth_Usage_Extended) String() string {

@@ -10,13 +10,13 @@ package types
 type SoftLayer_Ticket_Group struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// TicketGroupCategoryId - The internal identifier for the category that a ticket group belongs to..
-	TicketGroupCategoryId int `json:"ticketGroupCategoryId"`
+	TicketGroupCategoryId int `json:"ticketGroupCategoryId,omitempty"`
 }
 
 func (softlayer_ticket_group *SoftLayer_Ticket_Group) String() string {
@@ -27,14 +27,14 @@ func (softlayer_ticket_group *SoftLayer_Ticket_Group) String() string {
 type SoftLayer_Ticket_Group_Extended struct {
 	SoftLayer_Ticket_Group
 
+	// AssignedBrandCount - no documentation
+	AssignedBrandCount uint64 `json:"assignedBrandCount,omitempty"`
+
 	// AssignedBrands - <nil>
-	AssignedBrands []*SoftLayer_Brand `json:"assignedBrands"`
+	AssignedBrands []*SoftLayer_Brand `json:"assignedBrands,omitempty"`
 
 	// Category - no documentation
-	Category *SoftLayer_Ticket_Group_Category `json:"category"`
-
-	// AssignedBrandCount - no documentation
-	AssignedBrandCount uint64 `json:"assignedBrandCount"`
+	Category *SoftLayer_Ticket_Group_Category `json:"category,omitempty"`
 }
 
 func (softlayer_ticket_group *SoftLayer_Ticket_Group_Extended) String() string {

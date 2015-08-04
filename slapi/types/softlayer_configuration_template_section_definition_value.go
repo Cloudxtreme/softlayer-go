@@ -10,22 +10,22 @@ import (
 // used to set the value for a configuration definition
 type SoftLayer_Configuration_Template_Section_Definition_Value struct {
 
-	// DefinitionId - Internal identifier of a configuration definition that this configuration value if
-	// defined by
-	DefinitionId int `json:"definitionId"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
-
 	// TemplateId - Internal identifier of a configuration template that this configuration value belongs
 	// to
-	TemplateId int `json:"templateId"`
+	TemplateId int `json:"templateId,omitempty"`
 
 	// Value - no documentation
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// DefinitionId - Internal identifier of a configuration definition that this configuration value if
+	// defined by
+	DefinitionId int `json:"definitionId,omitempty"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 }
 
 func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value) String() string {
@@ -37,10 +37,10 @@ type SoftLayer_Configuration_Template_Section_Definition_Value_Extended struct {
 	SoftLayer_Configuration_Template_Section_Definition_Value
 
 	// Definition - <nil>
-	Definition *SoftLayer_Configuration_Template_Section_Definition `json:"definition"`
+	Definition *SoftLayer_Configuration_Template_Section_Definition `json:"definition,omitempty"`
 
 	// Template - <nil>
-	Template *SoftLayer_Configuration_Template `json:"template"`
+	Template *SoftLayer_Configuration_Template `json:"template,omitempty"`
 }
 
 func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value_Extended) String() string {

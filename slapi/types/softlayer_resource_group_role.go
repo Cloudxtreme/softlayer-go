@@ -5,14 +5,14 @@ package types
 // SoftLayer_Resource_Group_Role - <nil>
 type SoftLayer_Resource_Group_Role struct {
 
-	// KeyName - no documentation
-	KeyName string `json:"keyName"`
-
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
+
+	// KeyName - no documentation
+	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role) String() string {
@@ -23,11 +23,11 @@ func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role) String() str
 type SoftLayer_Resource_Group_Role_Extended struct {
 	SoftLayer_Resource_Group_Role
 
-	// MemberLinkCount - no documentation
-	MemberLinkCount uint64 `json:"memberLinkCount"`
-
 	// MemberLinks - no documentation
-	MemberLinks []*SoftLayer_Resource_Group_Member_Role_Link `json:"memberLinks"`
+	MemberLinks []*SoftLayer_Resource_Group_Member_Role_Link `json:"memberLinks,omitempty"`
+
+	// MemberLinkCount - no documentation
+	MemberLinkCount uint64 `json:"memberLinkCount,omitempty"`
 }
 
 func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role_Extended) String() string {

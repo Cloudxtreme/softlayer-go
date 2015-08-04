@@ -14,11 +14,11 @@ func (softlayer_brand_payment_processor *SoftLayer_Brand_Payment_Processor) Stri
 type SoftLayer_Brand_Payment_Processor_Extended struct {
 	SoftLayer_Brand_Payment_Processor
 
-	// PaymentProcessor - <nil>
-	PaymentProcessor *SoftLayer_Billing_Payment_Processor `json:"paymentProcessor"`
-
 	// Brand - <nil>
-	Brand *SoftLayer_Brand `json:"brand"`
+	Brand *SoftLayer_Brand `json:"brand,omitempty"`
+
+	// PaymentProcessor - <nil>
+	PaymentProcessor *SoftLayer_Billing_Payment_Processor `json:"paymentProcessor,omitempty"`
 }
 
 func (softlayer_brand_payment_processor *SoftLayer_Brand_Payment_Processor_Extended) String() string {

@@ -8,16 +8,16 @@ package types
 type SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute struct {
 
 	// Protocols - no documentation
-	Protocols []string `json:"protocols"`
+	Protocols []string `json:"protocols,omitempty"`
 
 	// SourceIpSubnetMasks - The valid source ip subnet masks for use with rules.
-	SourceIpSubnetMasks []*SoftLayer_Container_Utility_Network_Subnet_Mask_Generic_Detail `json:"sourceIpSubnetMasks"`
+	SourceIpSubnetMasks []*SoftLayer_Container_Utility_Network_Subnet_Mask_Generic_Detail `json:"sourceIpSubnetMasks,omitempty"`
 
 	// Actions - no documentation
-	Actions []string `json:"actions"`
+	Actions []string `json:"actions,omitempty"`
 
 	// MaximumRuleCount - no documentation
-	MaximumRuleCount int `json:"maximumRuleCount"`
+	MaximumRuleCount int `json:"maximumRuleCount,omitempty"`
 }
 
 func (softlayer_container_utility_network_firewall_rule_attribute *SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute) String() string {

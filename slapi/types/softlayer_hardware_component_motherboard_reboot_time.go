@@ -10,10 +10,10 @@ package types
 type SoftLayer_Hardware_Component_Motherboard_Reboot_Time struct {
 
 	// WithRaid - Average reboot time in seconds for the motherboard when raid is installed.
-	WithRaid int `json:"withRaid"`
+	WithRaid int `json:"withRaid,omitempty"`
 
 	// WithoutRaid - Average reboot time in seconds for the motherboard when NO raid is installed.
-	WithoutRaid int `json:"withoutRaid"`
+	WithoutRaid int `json:"withoutRaid,omitempty"`
 }
 
 func (softlayer_hardware_component_motherboard_reboot_time *SoftLayer_Hardware_Component_Motherboard_Reboot_Time) String() string {
@@ -25,7 +25,7 @@ type SoftLayer_Hardware_Component_Motherboard_Reboot_Time_Extended struct {
 	SoftLayer_Hardware_Component_Motherboard_Reboot_Time
 
 	// HardwareComponentModel - Motherboard's specifications (manufacturer, version, etc....)
-	HardwareComponentModel *SoftLayer_Hardware_Component_Model `json:"hardwareComponentModel"`
+	HardwareComponentModel *SoftLayer_Hardware_Component_Model `json:"hardwareComponentModel,omitempty"`
 }
 
 func (softlayer_hardware_component_motherboard_reboot_time *SoftLayer_Hardware_Component_Motherboard_Reboot_Time_Extended) String() string {

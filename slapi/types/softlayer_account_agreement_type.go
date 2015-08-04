@@ -6,7 +6,7 @@ package types
 type SoftLayer_Account_Agreement_Type struct {
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_account_agreement_type *SoftLayer_Account_Agreement_Type) String() string {

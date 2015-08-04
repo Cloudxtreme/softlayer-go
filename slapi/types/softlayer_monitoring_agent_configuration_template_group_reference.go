@@ -8,14 +8,14 @@ package types
 // configuration templates.
 type SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference struct {
 
+	// TemplateGroupId - Internal identifier of a monitoring agent configuration group
+	TemplateGroupId int `json:"templateGroupId,omitempty"`
+
 	// ConfigurationTemplateId - no documentation
-	ConfigurationTemplateId int `json:"configurationTemplateId"`
+	ConfigurationTemplateId int `json:"configurationTemplateId,omitempty"`
 
 	// Id - Internal identifier of a configuration group reference record
-	Id int `json:"id"`
-
-	// TemplateGroupId - Internal identifier of a monitoring agent configuration group
-	TemplateGroupId int `json:"templateGroupId"`
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) String() string {
@@ -27,10 +27,10 @@ type SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference_Extended 
 	SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference
 
 	// ConfigurationTemplate - <nil>
-	ConfigurationTemplate *SoftLayer_Configuration_Template `json:"configurationTemplate"`
+	ConfigurationTemplate *SoftLayer_Configuration_Template `json:"configurationTemplate,omitempty"`
 
 	// TemplateGroup - <nil>
-	TemplateGroup *SoftLayer_Monitoring_Agent_Configuration_Template_Group `json:"templateGroup"`
+	TemplateGroup *SoftLayer_Monitoring_Agent_Configuration_Template_Group `json:"templateGroup,omitempty"`
 }
 
 func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference_Extended) String() string {

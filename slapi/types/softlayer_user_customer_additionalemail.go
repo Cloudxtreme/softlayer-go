@@ -7,10 +7,10 @@ package types
 type SoftLayer_User_Customer_AdditionalEmail struct {
 
 	// Email - Email assigned to user for use in ticket update notifications.
-	Email string `json:"email"`
+	Email string `json:"email,omitempty"`
 
 	// UserId - An internal identifier for the portal user who this additional email belongs to.
-	UserId int `json:"userId"`
+	UserId int `json:"userId,omitempty"`
 }
 
 func (softlayer_user_customer_additionalemail *SoftLayer_User_Customer_AdditionalEmail) String() string {
@@ -22,7 +22,7 @@ type SoftLayer_User_Customer_AdditionalEmail_Extended struct {
 	SoftLayer_User_Customer_AdditionalEmail
 
 	// User - The portal user that owns this additional email address.
-	User *SoftLayer_User_Customer `json:"user"`
+	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
 func (softlayer_user_customer_additionalemail *SoftLayer_User_Customer_AdditionalEmail_Extended) String() string {

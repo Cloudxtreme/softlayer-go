@@ -8,21 +8,21 @@ package types
 // purchased with Microsoft Windows retrieve updates from SoftLayer's servers by default.
 type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem struct {
 
-	// RequiresReboot - Flag indicating that a reboot is needed for this update to be fully applied
-	RequiresReboot bool `json:"requiresReboot"`
-
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Failed - Flag indicating that this patch failed to properly install
-	Failed bool `json:"failed"`
+	Failed bool `json:"failed,omitempty"`
 
 	// KbArticleNumber - A Windows Update's knowledge base article number. Every Windows Update can be
 	// referenced on the Microsoft Help and Support site at the URL
-	KbArticleNumber int `json:"kbArticleNumber"`
+	KbArticleNumber int `json:"kbArticleNumber,omitempty"`
 
 	// Optional - Flag indicating that the update is entirely optionals
-	Optional bool `json:"optional"`
+	Optional bool `json:"optional,omitempty"`
+
+	// RequiresReboot - Flag indicating that a reboot is needed for this update to be fully applied
+	RequiresReboot bool `json:"requiresReboot,omitempty"`
 }
 
 func (softlayer_container_utility_microsoft_windows_updateservices_updateitem *SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem) String() string {

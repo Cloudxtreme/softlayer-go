@@ -17,10 +17,10 @@ type SoftLayer_Resource_Group_Descendant_Reference_Extended struct {
 	SoftLayer_Resource_Group_Descendant_Reference
 
 	// Group - <nil>
-	Group *SoftLayer_Resource_Group `json:"group"`
+	Group *SoftLayer_Resource_Group `json:"group,omitempty"`
 
 	// GroupMember - <nil>
-	GroupMember *SoftLayer_Resource_Group_Member `json:"groupMember"`
+	GroupMember *SoftLayer_Resource_Group_Member `json:"groupMember,omitempty"`
 }
 
 func (softlayer_resource_group_descendant_reference *SoftLayer_Resource_Group_Descendant_Reference_Extended) String() string {

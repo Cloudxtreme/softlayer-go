@@ -7,13 +7,13 @@ package types
 type SoftLayer_Hardware_Function struct {
 
 	// Code - no documentation
-	Code string `json:"code"`
+	Code string `json:"code,omitempty"`
 
 	// Description - no documentation
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_hardware_function *SoftLayer_Hardware_Function) String() string {

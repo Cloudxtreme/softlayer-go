@@ -6,10 +6,10 @@ package types
 type SoftLayer_Account_Status struct {
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Name - <nil>
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_account_status *SoftLayer_Account_Status) String() string {

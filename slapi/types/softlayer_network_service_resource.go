@@ -8,16 +8,16 @@ package types
 type SoftLayer_Network_Service_Resource struct {
 
 	// BackendIpAddress - no documentation
-	BackendIpAddress string `json:"backendIpAddress"`
-
-	// FrontendIpAddress - no documentation
-	FrontendIpAddress string `json:"frontendIpAddress"`
+	BackendIpAddress string `json:"backendIpAddress,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
+
+	// FrontendIpAddress - no documentation
+	FrontendIpAddress string `json:"frontendIpAddress,omitempty"`
 
 	// Id - <nil>
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_service_resource *SoftLayer_Network_Service_Resource) String() string {
@@ -28,44 +28,44 @@ func (softlayer_network_service_resource *SoftLayer_Network_Service_Resource) St
 type SoftLayer_Network_Service_Resource_Extended struct {
 	SoftLayer_Network_Service_Resource
 
-	// SshUsername - <nil>
-	SshUsername string `json:"sshUsername"`
-
 	// AttributeCount - no documentation
-	AttributeCount uint64 `json:"attributeCount"`
+	AttributeCount uint64 `json:"attributeCount,omitempty"`
 
 	// ApiPort - <nil>
-	ApiPort string `json:"apiPort"`
-
-	// ApiVersion - <nil>
-	ApiVersion string `json:"apiVersion"`
+	ApiPort string `json:"apiPort,omitempty"`
 
 	// NetworkDevice - The hardware information associated with this resource.
-	NetworkDevice *SoftLayer_Hardware `json:"networkDevice"`
-
-	// ApiPassword - <nil>
-	ApiPassword string `json:"apiPassword"`
-
-	// Attributes - <nil>
-	Attributes []*SoftLayer_Network_Service_Resource_Attribute `json:"attributes"`
-
-	// ApiProtocol - <nil>
-	ApiProtocol string `json:"apiProtocol"`
-
-	// ApiUsername - <nil>
-	ApiUsername string `json:"apiUsername"`
-
-	// Datacenter - <nil>
-	Datacenter *SoftLayer_Location `json:"datacenter"`
+	NetworkDevice *SoftLayer_Hardware `json:"networkDevice,omitempty"`
 
 	// Type - The network information associated with this resource.
-	Type *SoftLayer_Network_Service_Resource_Type `json:"type"`
+	Type *SoftLayer_Network_Service_Resource_Type `json:"type,omitempty"`
 
-	// ApiHost - <nil>
-	ApiHost string `json:"apiHost"`
+	// ApiUsername - <nil>
+	ApiUsername string `json:"apiUsername,omitempty"`
+
+	// ApiPassword - <nil>
+	ApiPassword string `json:"apiPassword,omitempty"`
 
 	// ApiPath - <nil>
-	ApiPath string `json:"apiPath"`
+	ApiPath string `json:"apiPath,omitempty"`
+
+	// SshUsername - <nil>
+	SshUsername string `json:"sshUsername,omitempty"`
+
+	// ApiHost - <nil>
+	ApiHost string `json:"apiHost,omitempty"`
+
+	// ApiVersion - <nil>
+	ApiVersion string `json:"apiVersion,omitempty"`
+
+	// Attributes - <nil>
+	Attributes []*SoftLayer_Network_Service_Resource_Attribute `json:"attributes,omitempty"`
+
+	// Datacenter - <nil>
+	Datacenter *SoftLayer_Location `json:"datacenter,omitempty"`
+
+	// ApiProtocol - <nil>
+	ApiProtocol string `json:"apiProtocol,omitempty"`
 }
 
 func (softlayer_network_service_resource *SoftLayer_Network_Service_Resource_Extended) String() string {

@@ -10,7 +10,7 @@ package types
 type SoftLayer_Hardware_Component_Model_Generic_Attribute struct {
 
 	// Value - no documentation
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_hardware_component_model_generic_attribute *SoftLayer_Hardware_Component_Model_Generic_Attribute) String() string {
@@ -22,7 +22,7 @@ type SoftLayer_Hardware_Component_Model_Generic_Attribute_Extended struct {
 	SoftLayer_Hardware_Component_Model_Generic_Attribute
 
 	// HardwareGenericComponentModel - no documentation
-	HardwareGenericComponentModel *SoftLayer_Hardware_Component_Model_Generic `json:"hardwareGenericComponentModel"`
+	HardwareGenericComponentModel *SoftLayer_Hardware_Component_Model_Generic `json:"hardwareGenericComponentModel,omitempty"`
 }
 
 func (softlayer_hardware_component_model_generic_attribute *SoftLayer_Hardware_Component_Model_Generic_Attribute_Extended) String() string {

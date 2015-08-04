@@ -6,13 +6,13 @@ package types
 type SoftLayer_Container_Graph_Plot_Coordinate struct {
 
 	// XValue - <nil>
-	XValue float32 `json:"xValue"`
+	XValue float32 `json:"xValue,omitempty"`
 
 	// YValue - <nil>
-	YValue float32 `json:"yValue"`
+	YValue float32 `json:"yValue,omitempty"`
 
 	// ZValue - <nil>
-	ZValue float32 `json:"zValue"`
+	ZValue float32 `json:"zValue,omitempty"`
 }
 
 func (softlayer_container_graph_plot_coordinate *SoftLayer_Container_Graph_Plot_Coordinate) String() string {

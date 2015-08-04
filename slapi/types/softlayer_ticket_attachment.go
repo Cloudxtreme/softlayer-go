@@ -15,16 +15,16 @@ import (
 type SoftLayer_Ticket_Attachment struct {
 
 	// AttachmentId - The internal identifier of an item that is attached to a ticket.
-	AttachmentId int `json:"attachmentId"`
+	AttachmentId int `json:"attachmentId,omitempty"`
 
 	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// TicketId - The internal identifier of the ticket that an item is attached to.
-	TicketId int `json:"ticketId"`
+	TicketId int `json:"ticketId,omitempty"`
 }
 
 func (softlayer_ticket_attachment *SoftLayer_Ticket_Attachment) String() string {
@@ -36,13 +36,13 @@ type SoftLayer_Ticket_Attachment_Extended struct {
 	SoftLayer_Ticket_Attachment
 
 	// AssignedAgent - <nil>
-	AssignedAgent *SoftLayer_User_Customer `json:"assignedAgent"`
+	AssignedAgent *SoftLayer_User_Customer `json:"assignedAgent,omitempty"`
 
 	// ScheduledAction - <nil>
-	ScheduledAction *SoftLayer_Provisioning_Version1_Transaction `json:"scheduledAction"`
+	ScheduledAction *SoftLayer_Provisioning_Version1_Transaction `json:"scheduledAction,omitempty"`
 
 	// Ticket - no documentation
-	Ticket *SoftLayer_Ticket `json:"ticket"`
+	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
 }
 
 func (softlayer_ticket_attachment *SoftLayer_Ticket_Attachment_Extended) String() string {

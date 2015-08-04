@@ -10,13 +10,13 @@ package types
 type SoftLayer_User_Customer_CustomerPermission_Permission struct {
 
 	// Key - no documentation
-	Key string `json:"key"`
+	Key string `json:"key,omitempty"`
 
 	// KeyName - no documentation
-	KeyName string `json:"keyName"`
+	KeyName string `json:"keyName,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_user_customer_customerpermission_permission *SoftLayer_User_Customer_CustomerPermission_Permission) String() string {

@@ -11,48 +11,48 @@ import (
 // [[SoftLayer_Billing_Order]] to a [[SoftLayer_Ticket]].
 type SoftLayer_Product_Upgrade_Request struct {
 
-	// ProratedTotal - no documentation
-	ProratedTotal float64 `json:"proratedTotal"`
+	// OrderTotal - no documentation
+	OrderTotal float64 `json:"orderTotal,omitempty"`
 
 	// EmployeeId - no documentation
-	EmployeeId int `json:"employeeId"`
-
-	// OrderTotal - no documentation
-	OrderTotal float64 `json:"orderTotal"`
-
-	// AccountId - no documentation
-	AccountId int `json:"accountId"`
-
-	// GuestId - The unique internal id of the virtual server that an upgrade will be done
-	GuestId int `json:"guestId"`
-
-	// HardwareId - The unique internal id of the hardware that an upgrade will be done
-	HardwareId int `json:"hardwareId"`
+	EmployeeId int `json:"employeeId,omitempty"`
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
-	// UserId - The unique internal id of the customer who place the order
-	UserId int `json:"userId"`
+	// ProratedTotal - no documentation
+	ProratedTotal float64 `json:"proratedTotal,omitempty"`
+
+	// AccountId - no documentation
+	AccountId int `json:"accountId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// MaintenanceStartTimeUtc - The time that system admin starts working on the order item. This is used
 	// for upgrade orders.
-	MaintenanceStartTimeUtc *time.Time `json:"maintenanceStartTimeUtc"`
-
-	// StatusId - no documentation
-	StatusId int `json:"statusId"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate"`
+	MaintenanceStartTimeUtc *time.Time `json:"maintenanceStartTimeUtc,omitempty"`
 
 	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate"`
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
-	// OrderId - The unique internal id of the order that an upgrade request is related to
-	OrderId int `json:"orderId"`
+	// StatusId - no documentation
+	StatusId int `json:"statusId,omitempty"`
 
 	// TicketId - The unique internal id of the ticket related to an upgrade request
-	TicketId int `json:"ticketId"`
+	TicketId int `json:"ticketId,omitempty"`
+
+	// UserId - The unique internal id of the customer who place the order
+	UserId int `json:"userId,omitempty"`
+
+	// GuestId - The unique internal id of the virtual server that an upgrade will be done
+	GuestId int `json:"guestId,omitempty"`
+
+	// HardwareId - The unique internal id of the hardware that an upgrade will be done
+	HardwareId int `json:"hardwareId,omitempty"`
+
+	// OrderId - The unique internal id of the order that an upgrade request is related to
+	OrderId int `json:"orderId,omitempty"`
 }
 
 func (softlayer_product_upgrade_request *SoftLayer_Product_Upgrade_Request) String() string {
@@ -63,33 +63,33 @@ func (softlayer_product_upgrade_request *SoftLayer_Product_Upgrade_Request) Stri
 type SoftLayer_Product_Upgrade_Request_Extended struct {
 	SoftLayer_Product_Upgrade_Request
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account"`
-
 	// Ticket - The ticket that is used to coordinate the upgrade process.
-	Ticket *SoftLayer_Ticket `json:"ticket"`
-
-	// CompletedFlag - Indicates that the upgrade request has completed or has been cancelled.
-	CompletedFlag bool `json:"completedFlag"`
-
-	// Order - no documentation
-	Order *SoftLayer_Billing_Order `json:"order"`
-
-	// Server - A server object associated with the upgrade request if any.
-	Server *SoftLayer_Hardware `json:"server"`
-
-	// Status - no documentation
-	Status *SoftLayer_Product_Upgrade_Request_Status `json:"status"`
+	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
 
 	// User - no documentation
-	User *SoftLayer_User_Customer `json:"user"`
+	User *SoftLayer_User_Customer `json:"user,omitempty"`
+
+	// VirtualGuest - A virtual server object associated with the upgrade request if any.
+	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest,omitempty"`
 
 	// Invoice - This is the invoice associated with the upgrade request. For hourly servers or services,
 	// an invoice will not be available.
-	Invoice *SoftLayer_Billing_Invoice `json:"invoice"`
+	Invoice *SoftLayer_Billing_Invoice `json:"invoice,omitempty"`
 
-	// VirtualGuest - A virtual server object associated with the upgrade request if any.
-	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest"`
+	// Server - A server object associated with the upgrade request if any.
+	Server *SoftLayer_Hardware `json:"server,omitempty"`
+
+	// Order - no documentation
+	Order *SoftLayer_Billing_Order `json:"order,omitempty"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// CompletedFlag - Indicates that the upgrade request has completed or has been cancelled.
+	CompletedFlag bool `json:"completedFlag,omitempty"`
+
+	// Status - no documentation
+	Status *SoftLayer_Product_Upgrade_Request_Status `json:"status,omitempty"`
 }
 
 func (softlayer_product_upgrade_request *SoftLayer_Product_Upgrade_Request_Extended) String() string {

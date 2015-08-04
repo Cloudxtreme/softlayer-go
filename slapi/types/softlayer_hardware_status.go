@@ -12,11 +12,11 @@ package types
 type SoftLayer_Hardware_Status struct {
 
 	// Id - no documentation
-	Id int `json:"id"`
+	Id int `json:"id,omitempty"`
 
 	// Status - A hardware's status code. See the SoftLayer_Hardware_Status Overview for ''status'''
 	// possible values.
-	Status string `json:"status"`
+	Status string `json:"status,omitempty"`
 }
 
 func (softlayer_hardware_status *SoftLayer_Hardware_Status) String() string {

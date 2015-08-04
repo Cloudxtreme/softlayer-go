@@ -6,10 +6,10 @@ package types
 type SoftLayer_Hardware_Attribute_Type struct {
 
 	// Keyname - no documentation
-	Keyname string `json:"keyname"`
+	Keyname string `json:"keyname,omitempty"`
 
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_hardware_attribute_type *SoftLayer_Hardware_Attribute_Type) String() string {

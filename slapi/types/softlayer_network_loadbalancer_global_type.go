@@ -8,11 +8,11 @@ package types
 // balancers.
 type SoftLayer_Network_LoadBalancer_Global_Type struct {
 
-	// Id - no documentation
-	Id int `json:"id"`
-
 	// Name - no documentation
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_loadbalancer_global_type *SoftLayer_Network_LoadBalancer_Global_Type) String() string {

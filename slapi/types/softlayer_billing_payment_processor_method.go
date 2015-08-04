@@ -6,10 +6,10 @@ package types
 type SoftLayer_Billing_Payment_Processor_Method struct {
 
 	// MethodKey - <nil>
-	MethodKey string `json:"methodKey"`
+	MethodKey string `json:"methodKey,omitempty"`
 
 	// MultipleCurrencyFlag - <nil>
-	MultipleCurrencyFlag bool `json:"multipleCurrencyFlag"`
+	MultipleCurrencyFlag bool `json:"multipleCurrencyFlag,omitempty"`
 }
 
 func (softlayer_billing_payment_processor_method *SoftLayer_Billing_Payment_Processor_Method) String() string {
@@ -21,10 +21,10 @@ type SoftLayer_Billing_Payment_Processor_Method_Extended struct {
 	SoftLayer_Billing_Payment_Processor_Method
 
 	// PaymentProcessor - <nil>
-	PaymentProcessor *SoftLayer_Billing_Payment_Processor `json:"paymentProcessor"`
+	PaymentProcessor *SoftLayer_Billing_Payment_Processor `json:"paymentProcessor,omitempty"`
 
 	// PaymentType - <nil>
-	PaymentType *SoftLayer_Billing_Payment_Type `json:"paymentType"`
+	PaymentType *SoftLayer_Billing_Payment_Type `json:"paymentType,omitempty"`
 }
 
 func (softlayer_billing_payment_processor_method *SoftLayer_Billing_Payment_Processor_Method_Extended) String() string {

@@ -9,17 +9,17 @@ import (
 // SoftLayer_Notification_Occurrence_Update - <nil>
 type SoftLayer_Notification_Occurrence_Update struct {
 
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
 	// EndDate - <nil>
-	EndDate *time.Time `json:"endDate"`
+	EndDate *time.Time `json:"endDate,omitempty"`
 
 	// StartDate - <nil>
-	StartDate *time.Time `json:"startDate"`
+	StartDate *time.Time `json:"startDate,omitempty"`
 
 	// Contents - <nil>
-	Contents string `json:"contents"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate"`
+	Contents string `json:"contents,omitempty"`
 }
 
 func (softlayer_notification_occurrence_update *SoftLayer_Notification_Occurrence_Update) String() string {
@@ -30,11 +30,11 @@ func (softlayer_notification_occurrence_update *SoftLayer_Notification_Occurrenc
 type SoftLayer_Notification_Occurrence_Update_Extended struct {
 	SoftLayer_Notification_Occurrence_Update
 
-	// NotificationOccurrenceEvent - <nil>
-	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent"`
-
 	// Employee - <nil>
-	Employee *SoftLayer_User_Employee `json:"employee"`
+	Employee *SoftLayer_User_Employee `json:"employee,omitempty"`
+
+	// NotificationOccurrenceEvent - <nil>
+	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent,omitempty"`
 }
 
 func (softlayer_notification_occurrence_update *SoftLayer_Notification_Occurrence_Update_Extended) String() string {

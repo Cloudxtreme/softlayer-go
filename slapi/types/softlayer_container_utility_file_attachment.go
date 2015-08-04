@@ -8,10 +8,10 @@ package types
 type SoftLayer_Container_Utility_File_Attachment struct {
 
 	// Data - The contents of a file that is uploaded to the SoftLayer
-	Data string `json:"data"`
+	Data string `json:"data,omitempty"`
 
 	// Filename - The name of a file that is uploaded to the SoftLayer
-	Filename string `json:"filename"`
+	Filename string `json:"filename,omitempty"`
 }
 
 func (softlayer_container_utility_file_attachment *SoftLayer_Container_Utility_File_Attachment) String() string {

@@ -6,7 +6,7 @@ package types
 type SoftLayer_Virtual_Guest_Attribute struct {
 
 	// Value - no documentation
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_virtual_guest_attribute *SoftLayer_Virtual_Guest_Attribute) String() string {
@@ -18,10 +18,10 @@ type SoftLayer_Virtual_Guest_Attribute_Extended struct {
 	SoftLayer_Virtual_Guest_Attribute
 
 	// Guest - <nil>
-	Guest *SoftLayer_Virtual_Guest `json:"guest"`
+	Guest *SoftLayer_Virtual_Guest `json:"guest,omitempty"`
 
 	// Type - <nil>
-	Type *SoftLayer_Virtual_Guest_Attribute_Type `json:"type"`
+	Type *SoftLayer_Virtual_Guest_Attribute_Type `json:"type,omitempty"`
 }
 
 func (softlayer_virtual_guest_attribute *SoftLayer_Virtual_Guest_Attribute_Extended) String() string {
