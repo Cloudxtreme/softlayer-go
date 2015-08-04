@@ -10,15 +10,6 @@ type SoftLayer_Billing_Payment_Processor_Method struct {
 
 	// MultipleCurrencyFlag - <nil>
 	MultipleCurrencyFlag bool `json:"multipleCurrencyFlag,omitempty"`
-}
-
-func (softlayer_billing_payment_processor_method *SoftLayer_Billing_Payment_Processor_Method) String() string {
-	return "SoftLayer_Billing_Payment_Processor_Method"
-}
-
-// SoftLayer_Billing_Payment_Processor_Method_Extended is SoftLayer_Billing_Payment_Processor_Method with all maskable types.
-type SoftLayer_Billing_Payment_Processor_Method_Extended struct {
-	SoftLayer_Billing_Payment_Processor_Method
 
 	// PaymentProcessor - <nil>
 	PaymentProcessor *SoftLayer_Billing_Payment_Processor `json:"paymentProcessor,omitempty"`
@@ -27,6 +18,6 @@ type SoftLayer_Billing_Payment_Processor_Method_Extended struct {
 	PaymentType *SoftLayer_Billing_Payment_Type `json:"paymentType,omitempty"`
 }
 
-func (softlayer_billing_payment_processor_method *SoftLayer_Billing_Payment_Processor_Method_Extended) String() string {
+func (softlayer_billing_payment_processor_method *SoftLayer_Billing_Payment_Processor_Method) String() string {
 	return "SoftLayer_Billing_Payment_Processor_Method"
 }

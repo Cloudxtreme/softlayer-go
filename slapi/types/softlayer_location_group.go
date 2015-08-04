@@ -19,15 +19,6 @@ type SoftLayer_Location_Group struct {
 
 	// SecurityLevelId - <nil>
 	SecurityLevelId int `json:"securityLevelId,omitempty"`
-}
-
-func (softlayer_location_group *SoftLayer_Location_Group) String() string {
-	return "SoftLayer_Location_Group"
-}
-
-// SoftLayer_Location_Group_Extended is SoftLayer_Location_Group with all maskable types.
-type SoftLayer_Location_Group_Extended struct {
-	SoftLayer_Location_Group
 
 	// LocationCount - no documentation
 	LocationCount uint64 `json:"locationCount,omitempty"`
@@ -39,6 +30,6 @@ type SoftLayer_Location_Group_Extended struct {
 	Locations []*SoftLayer_Location `json:"locations,omitempty"`
 }
 
-func (softlayer_location_group *SoftLayer_Location_Group_Extended) String() string {
+func (softlayer_location_group *SoftLayer_Location_Group) String() string {
 	return "SoftLayer_Location_Group"
 }

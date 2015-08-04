@@ -11,15 +11,6 @@ type SoftLayer_Hardware_Component_RemoteManagement_User struct {
 
 	// Username - The username used for this remote management command.
 	Username string `json:"username,omitempty"`
-}
-
-func (softlayer_hardware_component_remotemanagement_user *SoftLayer_Hardware_Component_RemoteManagement_User) String() string {
-	return "SoftLayer_Hardware_Component_RemoteManagement_User"
-}
-
-// SoftLayer_Hardware_Component_RemoteManagement_User_Extended is SoftLayer_Hardware_Component_RemoteManagement_User with all maskable types.
-type SoftLayer_Hardware_Component_RemoteManagement_User_Extended struct {
-	SoftLayer_Hardware_Component_RemoteManagement_User
 
 	// Hardware - <nil>
 	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
@@ -28,6 +19,6 @@ type SoftLayer_Hardware_Component_RemoteManagement_User_Extended struct {
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent,omitempty"`
 }
 
-func (softlayer_hardware_component_remotemanagement_user *SoftLayer_Hardware_Component_RemoteManagement_User_Extended) String() string {
+func (softlayer_hardware_component_remotemanagement_user *SoftLayer_Hardware_Component_RemoteManagement_User) String() string {
 	return "SoftLayer_Hardware_Component_RemoteManagement_User"
 }

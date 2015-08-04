@@ -11,6 +11,10 @@ import (
 // relating to a single SoftLayer Template Partition.
 type SoftLayer_Hardware_Component_Partition_Template_Partition struct {
 
+	// PartitionTemplateId - A partition's associated
+	// [[SoftLayer_Hardware_Component_Partition_Template|Partition Template]] Id.
+	PartitionTemplateId int `json:"partitionTemplateId,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -24,19 +28,6 @@ type SoftLayer_Hardware_Component_Partition_Template_Partition struct {
 	// PartitionSize - no documentation
 	PartitionSize slapi.Float64 `json:"partitionSize,omitempty"`
 
-	// PartitionTemplateId - A partition's associated
-	// [[SoftLayer_Hardware_Component_Partition_Template|Partition Template]] Id.
-	PartitionTemplateId int `json:"partitionTemplateId,omitempty"`
-}
-
-func (softlayer_hardware_component_partition_template_partition *SoftLayer_Hardware_Component_Partition_Template_Partition) String() string {
-	return "SoftLayer_Hardware_Component_Partition_Template_Partition"
-}
-
-// SoftLayer_Hardware_Component_Partition_Template_Partition_Extended is SoftLayer_Hardware_Component_Partition_Template_Partition with all maskable types.
-type SoftLayer_Hardware_Component_Partition_Template_Partition_Extended struct {
-	SoftLayer_Hardware_Component_Partition_Template_Partition
-
 	// FilesystemType - no documentation
 	FilesystemType *SoftLayer_Configuration_Storage_Filesystem_Type `json:"filesystemType,omitempty"`
 
@@ -45,6 +36,6 @@ type SoftLayer_Hardware_Component_Partition_Template_Partition_Extended struct {
 	PartitionTemplate *SoftLayer_Hardware_Component_Partition_Template `json:"partitionTemplate,omitempty"`
 }
 
-func (softlayer_hardware_component_partition_template_partition *SoftLayer_Hardware_Component_Partition_Template_Partition_Extended) String() string {
+func (softlayer_hardware_component_partition_template_partition *SoftLayer_Hardware_Component_Partition_Template_Partition) String() string {
 	return "SoftLayer_Hardware_Component_Partition_Template_Partition"
 }

@@ -14,6 +14,9 @@ import (
 // ticket.
 type SoftLayer_Ticket_Attachment struct {
 
+	// AttachmentId - The internal identifier of an item that is attached to a ticket.
+	AttachmentId int `json:"attachmentId,omitempty"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -22,18 +25,6 @@ type SoftLayer_Ticket_Attachment struct {
 
 	// TicketId - The internal identifier of the ticket that an item is attached to.
 	TicketId int `json:"ticketId,omitempty"`
-
-	// AttachmentId - The internal identifier of an item that is attached to a ticket.
-	AttachmentId int `json:"attachmentId,omitempty"`
-}
-
-func (softlayer_ticket_attachment *SoftLayer_Ticket_Attachment) String() string {
-	return "SoftLayer_Ticket_Attachment"
-}
-
-// SoftLayer_Ticket_Attachment_Extended is SoftLayer_Ticket_Attachment with all maskable types.
-type SoftLayer_Ticket_Attachment_Extended struct {
-	SoftLayer_Ticket_Attachment
 
 	// AssignedAgent - <nil>
 	AssignedAgent *SoftLayer_User_Customer `json:"assignedAgent,omitempty"`
@@ -45,6 +36,6 @@ type SoftLayer_Ticket_Attachment_Extended struct {
 	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
 }
 
-func (softlayer_ticket_attachment *SoftLayer_Ticket_Attachment_Extended) String() string {
+func (softlayer_ticket_attachment *SoftLayer_Ticket_Attachment) String() string {
 	return "SoftLayer_Ticket_Attachment"
 }

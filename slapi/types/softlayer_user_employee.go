@@ -9,57 +9,42 @@ package types
 // employee is assigned to the account.
 type SoftLayer_User_Employee struct {
 
-	// FirstName - A SoftLayer employee's first name. First names are only visible to
-	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
-	FirstName string `json:"firstName,omitempty"`
+	// OfficePhone - <nil>
+	OfficePhone string `json:"officePhone,omitempty"`
+
+	// EmployeeDepartmentId - A SoftLayer employee's [[SoftLayer_User_Employee_Department|department]] id.
+	EmployeeDepartmentId int `json:"employeeDepartmentId,omitempty"`
 
 	// Username - A representation of a SoftLayer employee's username. In all cases this should simply
 	// state "Employee".
 	Username string `json:"username,omitempty"`
 
-	// LastName - A SoftLayer employee's last name. Last names are only visible to
-	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
-	LastName string `json:"lastName,omitempty"`
-
 	// DisplayName - <nil>
 	DisplayName string `json:"displayName,omitempty"`
-
-	// EmployeeDepartmentId - A SoftLayer employee's [[SoftLayer_User_Employee_Department|department]] id.
-	EmployeeDepartmentId int `json:"employeeDepartmentId,omitempty"`
-
-	// OfficePhone - <nil>
-	OfficePhone string `json:"officePhone,omitempty"`
 
 	// Email - A SoftLayer employee's email address. Email addresses are only visible to
 	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
 	Email string `json:"email,omitempty"`
-}
 
-func (softlayer_user_employee *SoftLayer_User_Employee) String() string {
-	return "SoftLayer_User_Employee"
-}
+	// FirstName - A SoftLayer employee's first name. First names are only visible to
+	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
+	FirstName string `json:"firstName,omitempty"`
 
-// SoftLayer_User_Employee_Extended is SoftLayer_User_Employee with all maskable types.
-type SoftLayer_User_Employee_Extended struct {
-	SoftLayer_User_Employee
+	// LastName - A SoftLayer employee's last name. Last names are only visible to
+	// [[SoftLayer_Account|SoftLayer Accounts]] that are assigned to an employee
+	LastName string `json:"lastName,omitempty"`
 
-	// EmployeeDepartment - The department that a SoftLayer employee belongs to.
-	EmployeeDepartment *SoftLayer_User_Employee_Department `json:"employeeDepartment,omitempty"`
+	// TicketAttachmentReferenceCount - no documentation
+	TicketAttachmentReferenceCount uint64 `json:"ticketAttachmentReferenceCount,omitempty"`
+
+	// TicketActivities - <nil>
+	TicketActivities []*SoftLayer_Ticket_Activity `json:"ticketActivities,omitempty"`
 
 	// Roles - <nil>
 	Roles []*SoftLayer_User_Permission_Role `json:"roles,omitempty"`
 
-	// RoleCount - no documentation
-	RoleCount uint64 `json:"roleCount,omitempty"`
-
-	// TicketActivityCount - no documentation
-	TicketActivityCount uint64 `json:"ticketActivityCount,omitempty"`
-
-	// Actions - <nil>
-	Actions []*SoftLayer_User_Permission_Action `json:"actions,omitempty"`
-
-	// ActionCount - no documentation
-	ActionCount uint64 `json:"actionCount,omitempty"`
+	// TicketAttachmentReferences - <nil>
+	TicketAttachmentReferences []*SoftLayer_Ticket_Attachment `json:"ticketAttachmentReferences,omitempty"`
 
 	// ChatTranscriptCount - no documentation
 	ChatTranscriptCount uint64 `json:"chatTranscriptCount,omitempty"`
@@ -70,22 +55,28 @@ type SoftLayer_User_Employee_Extended struct {
 	// LayoutProfiles - <nil>
 	LayoutProfiles []*SoftLayer_Layout_Profile `json:"layoutProfiles,omitempty"`
 
-	// MetricTrackingObject - <nil>
-	MetricTrackingObject *SoftLayer_Metric_Tracking_Object `json:"metricTrackingObject,omitempty"`
-
-	// TicketActivities - <nil>
-	TicketActivities []*SoftLayer_Ticket_Activity `json:"ticketActivities,omitempty"`
-
-	// TicketAttachmentReferences - <nil>
-	TicketAttachmentReferences []*SoftLayer_Ticket_Attachment `json:"ticketAttachmentReferences,omitempty"`
-
 	// ChatTranscript - <nil>
 	ChatTranscript []*SoftLayer_Ticket_Chat `json:"chatTranscript,omitempty"`
 
-	// TicketAttachmentReferenceCount - no documentation
-	TicketAttachmentReferenceCount uint64 `json:"ticketAttachmentReferenceCount,omitempty"`
+	// EmployeeDepartment - The department that a SoftLayer employee belongs to.
+	EmployeeDepartment *SoftLayer_User_Employee_Department `json:"employeeDepartment,omitempty"`
+
+	// MetricTrackingObject - <nil>
+	MetricTrackingObject *SoftLayer_Metric_Tracking_Object `json:"metricTrackingObject,omitempty"`
+
+	// ActionCount - no documentation
+	ActionCount uint64 `json:"actionCount,omitempty"`
+
+	// Actions - <nil>
+	Actions []*SoftLayer_User_Permission_Action `json:"actions,omitempty"`
+
+	// TicketActivityCount - no documentation
+	TicketActivityCount uint64 `json:"ticketActivityCount,omitempty"`
+
+	// RoleCount - no documentation
+	RoleCount uint64 `json:"roleCount,omitempty"`
 }
 
-func (softlayer_user_employee *SoftLayer_User_Employee_Extended) String() string {
+func (softlayer_user_employee *SoftLayer_User_Employee) String() string {
 	return "SoftLayer_User_Employee"
 }

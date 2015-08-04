@@ -26,20 +26,11 @@ type SoftLayer_Account_Network_Vlan_Span struct {
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-}
-
-func (softlayer_account_network_vlan_span *SoftLayer_Account_Network_Vlan_Span) String() string {
-	return "SoftLayer_Account_Network_Vlan_Span"
-}
-
-// SoftLayer_Account_Network_Vlan_Span_Extended is SoftLayer_Account_Network_Vlan_Span with all maskable types.
-type SoftLayer_Account_Network_Vlan_Span_Extended struct {
-	SoftLayer_Account_Network_Vlan_Span
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
-func (softlayer_account_network_vlan_span *SoftLayer_Account_Network_Vlan_Span_Extended) String() string {
+func (softlayer_account_network_vlan_span *SoftLayer_Account_Network_Vlan_Span) String() string {
 	return "SoftLayer_Account_Network_Vlan_Span"
 }

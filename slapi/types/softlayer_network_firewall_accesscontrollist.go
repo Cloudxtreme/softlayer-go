@@ -17,18 +17,6 @@ type SoftLayer_Network_Firewall_AccessControlList struct {
 
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
-}
-
-func (softlayer_network_firewall_accesscontrollist *SoftLayer_Network_Firewall_AccessControlList) String() string {
-	return "SoftLayer_Network_Firewall_AccessControlList"
-}
-
-// SoftLayer_Network_Firewall_AccessControlList_Extended is SoftLayer_Network_Firewall_AccessControlList with all maskable types.
-type SoftLayer_Network_Firewall_AccessControlList_Extended struct {
-	SoftLayer_Network_Firewall_AccessControlList
-
-	// Rules - The currently running rule set of this context access control list firewall.
-	Rules []*SoftLayer_Network_Vlan_Firewall_Rule `json:"rules,omitempty"`
 
 	// NetworkFirewallUpdateRequestCount - A count of the update requests made for this firewall.
 	NetworkFirewallUpdateRequestCount uint64 `json:"networkFirewallUpdateRequestCount,omitempty"`
@@ -41,8 +29,11 @@ type SoftLayer_Network_Firewall_AccessControlList_Extended struct {
 
 	// NetworkVlan - <nil>
 	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`
+
+	// Rules - The currently running rule set of this context access control list firewall.
+	Rules []*SoftLayer_Network_Vlan_Firewall_Rule `json:"rules,omitempty"`
 }
 
-func (softlayer_network_firewall_accesscontrollist *SoftLayer_Network_Firewall_AccessControlList_Extended) String() string {
+func (softlayer_network_firewall_accesscontrollist *SoftLayer_Network_Firewall_AccessControlList) String() string {
 	return "SoftLayer_Network_Firewall_AccessControlList"
 }

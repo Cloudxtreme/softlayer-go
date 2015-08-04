@@ -20,20 +20,11 @@ type SoftLayer_Scale_Group_Log struct {
 
 	// ScaleGroupId - no documentation
 	ScaleGroupId int `json:"scaleGroupId,omitempty"`
-}
-
-func (softlayer_scale_group_log *SoftLayer_Scale_Group_Log) String() string {
-	return "SoftLayer_Scale_Group_Log"
-}
-
-// SoftLayer_Scale_Group_Log_Extended is SoftLayer_Scale_Group_Log with all maskable types.
-type SoftLayer_Scale_Group_Log_Extended struct {
-	SoftLayer_Scale_Group_Log
 
 	// ScaleGroup - no documentation
 	ScaleGroup *SoftLayer_Scale_Group `json:"scaleGroup,omitempty"`
 }
 
-func (softlayer_scale_group_log *SoftLayer_Scale_Group_Log_Extended) String() string {
+func (softlayer_scale_group_log *SoftLayer_Scale_Group_Log) String() string {
 	return "SoftLayer_Scale_Group_Log"
 }

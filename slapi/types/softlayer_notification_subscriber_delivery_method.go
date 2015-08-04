@@ -24,15 +24,6 @@ type SoftLayer_Notification_Subscriber_Delivery_Method struct {
 
 	// NotificationSubscriberId - no documentation
 	NotificationSubscriberId int `json:"notificationSubscriberId,omitempty"`
-}
-
-func (softlayer_notification_subscriber_delivery_method *SoftLayer_Notification_Subscriber_Delivery_Method) String() string {
-	return "SoftLayer_Notification_Subscriber_Delivery_Method"
-}
-
-// SoftLayer_Notification_Subscriber_Delivery_Method_Extended is SoftLayer_Notification_Subscriber_Delivery_Method with all maskable types.
-type SoftLayer_Notification_Subscriber_Delivery_Method_Extended struct {
-	SoftLayer_Notification_Subscriber_Delivery_Method
 
 	// NotificationDeliveryMethod - <nil>
 	NotificationDeliveryMethod *SoftLayer_Notification_Delivery_Method `json:"notificationDeliveryMethod,omitempty"`
@@ -41,6 +32,6 @@ type SoftLayer_Notification_Subscriber_Delivery_Method_Extended struct {
 	NotificationSubscriber *SoftLayer_Notification_Subscriber `json:"notificationSubscriber,omitempty"`
 }
 
-func (softlayer_notification_subscriber_delivery_method *SoftLayer_Notification_Subscriber_Delivery_Method_Extended) String() string {
+func (softlayer_notification_subscriber_delivery_method *SoftLayer_Notification_Subscriber_Delivery_Method) String() string {
 	return "SoftLayer_Notification_Subscriber_Delivery_Method"
 }

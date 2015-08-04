@@ -26,15 +26,6 @@ type SoftLayer_Account_Password struct {
 
 	// Username - The username portion of a username/password combination.
 	Username string `json:"username,omitempty"`
-}
-
-func (softlayer_account_password *SoftLayer_Account_Password) String() string {
-	return "SoftLayer_Account_Password"
-}
-
-// SoftLayer_Account_Password_Extended is SoftLayer_Account_Password with all maskable types.
-type SoftLayer_Account_Password_Extended struct {
-	SoftLayer_Account_Password
 
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account,omitempty"`
@@ -43,6 +34,6 @@ type SoftLayer_Account_Password_Extended struct {
 	Type *SoftLayer_Account_Password_Type `json:"type,omitempty"`
 }
 
-func (softlayer_account_password *SoftLayer_Account_Password_Extended) String() string {
+func (softlayer_account_password *SoftLayer_Account_Password) String() string {
 	return "SoftLayer_Account_Password"
 }

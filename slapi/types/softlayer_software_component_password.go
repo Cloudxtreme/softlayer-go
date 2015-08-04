@@ -10,38 +10,29 @@ import (
 // contains a password for a specific software component instance.
 type SoftLayer_Software_Component_Password struct {
 
-	// ModifyDate - The date of the last modification to this username/password pair.
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// Password - no documentation
-	Password string `json:"password,omitempty"`
-
-	// SoftwareId - An id number for the software component this username/password pair is valid for.
-	SoftwareId int `json:"softwareId,omitempty"`
-
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// Id - An id number for this specific username/password pair.
-	Id int `json:"id,omitempty"`
-
-	// Notes - A note string stored for this username/password pair.
-	Notes string `json:"notes,omitempty"`
 
 	// Port - The application access port for the Software Component.
 	Port int `json:"port,omitempty"`
 
+	// SoftwareId - An id number for the software component this username/password pair is valid for.
+	SoftwareId int `json:"softwareId,omitempty"`
+
 	// Username - no documentation
 	Username string `json:"username,omitempty"`
-}
 
-func (softlayer_software_component_password *SoftLayer_Software_Component_Password) String() string {
-	return "SoftLayer_Software_Component_Password"
-}
+	// Id - An id number for this specific username/password pair.
+	Id int `json:"id,omitempty"`
 
-// SoftLayer_Software_Component_Password_Extended is SoftLayer_Software_Component_Password with all maskable types.
-type SoftLayer_Software_Component_Password_Extended struct {
-	SoftLayer_Software_Component_Password
+	// ModifyDate - The date of the last modification to this username/password pair.
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// Notes - A note string stored for this username/password pair.
+	Notes string `json:"notes,omitempty"`
+
+	// Password - no documentation
+	Password string `json:"password,omitempty"`
 
 	// Software - The SoftLayer_Software_Component instance that this username/password pair is valid for.
 	Software *SoftLayer_Software_Component `json:"software,omitempty"`
@@ -53,6 +44,6 @@ type SoftLayer_Software_Component_Password_Extended struct {
 	SshKeyCount uint64 `json:"sshKeyCount,omitempty"`
 }
 
-func (softlayer_software_component_password *SoftLayer_Software_Component_Password_Extended) String() string {
+func (softlayer_software_component_password *SoftLayer_Software_Component_Password) String() string {
 	return "SoftLayer_Software_Component_Password"
 }

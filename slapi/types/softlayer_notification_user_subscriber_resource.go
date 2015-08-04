@@ -17,20 +17,11 @@ type SoftLayer_Notification_User_Subscriber_Resource struct {
 	// Currently, the SoftLayer services that can be subscribed to notifications are: Storage EVault CDN
 	// Global Load Balancer
 	ResourceTableId int `json:"resourceTableId,omitempty"`
-}
-
-func (softlayer_notification_user_subscriber_resource *SoftLayer_Notification_User_Subscriber_Resource) String() string {
-	return "SoftLayer_Notification_User_Subscriber_Resource"
-}
-
-// SoftLayer_Notification_User_Subscriber_Resource_Extended is SoftLayer_Notification_User_Subscriber_Resource with all maskable types.
-type SoftLayer_Notification_User_Subscriber_Resource_Extended struct {
-	SoftLayer_Notification_User_Subscriber_Resource
 
 	// NotificationUserSubscriber - The Subscriber information tied to the resource service.
 	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber,omitempty"`
 }
 
-func (softlayer_notification_user_subscriber_resource *SoftLayer_Notification_User_Subscriber_Resource_Extended) String() string {
+func (softlayer_notification_user_subscriber_resource *SoftLayer_Notification_User_Subscriber_Resource) String() string {
 	return "SoftLayer_Notification_User_Subscriber_Resource"
 }

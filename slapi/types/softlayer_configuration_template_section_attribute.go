@@ -8,20 +8,11 @@ type SoftLayer_Configuration_Template_Section_Attribute struct {
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_configuration_template_section_attribute *SoftLayer_Configuration_Template_Section_Attribute) String() string {
-	return "SoftLayer_Configuration_Template_Section_Attribute"
-}
-
-// SoftLayer_Configuration_Template_Section_Attribute_Extended is SoftLayer_Configuration_Template_Section_Attribute with all maskable types.
-type SoftLayer_Configuration_Template_Section_Attribute_Extended struct {
-	SoftLayer_Configuration_Template_Section_Attribute
 
 	// ConfigurationSection - <nil>
 	ConfigurationSection *SoftLayer_Configuration_Template_Section `json:"configurationSection,omitempty"`
 }
 
-func (softlayer_configuration_template_section_attribute *SoftLayer_Configuration_Template_Section_Attribute_Extended) String() string {
+func (softlayer_configuration_template_section_attribute *SoftLayer_Configuration_Template_Section_Attribute) String() string {
 	return "SoftLayer_Configuration_Template_Section_Attribute"
 }

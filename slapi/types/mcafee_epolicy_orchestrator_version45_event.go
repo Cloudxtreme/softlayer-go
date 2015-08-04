@@ -11,38 +11,29 @@ import (
 // occurred, the virus or intrusion that is detected and the action that is taken.
 type McAfee_Epolicy_Orchestrator_Version45_Event struct {
 
-	// TargetFilename - The name of the file that was the target of the event.
-	TargetFilename string `json:"targetFilename,omitempty"`
+	// SourceIpv4 - The IP address of the source that generated an event.
+	SourceIpv4 string `json:"sourceIpv4,omitempty"`
+
+	// SourceProcessName - no documentation
+	SourceProcessName string `json:"sourceProcessName,omitempty"`
 
 	// ThreatName - no documentation
 	ThreatName string `json:"threatName,omitempty"`
+
+	// DetectedUtc - no documentation
+	DetectedUtc *time.Time `json:"detectedUtc,omitempty"`
+
+	// TargetFilename - The name of the file that was the target of the event.
+	TargetFilename string `json:"targetFilename,omitempty"`
+
+	// ThreatActionTaken - no documentation
+	ThreatActionTaken string `json:"threatActionTaken,omitempty"`
 
 	// ThreatSeverityLabel - no documentation
 	ThreatSeverityLabel string `json:"threatSeverityLabel,omitempty"`
 
 	// ThreatType - no documentation
 	ThreatType string `json:"threatType,omitempty"`
-
-	// SourceProcessName - no documentation
-	SourceProcessName string `json:"sourceProcessName,omitempty"`
-
-	// ThreatActionTaken - no documentation
-	ThreatActionTaken string `json:"threatActionTaken,omitempty"`
-
-	// DetectedUtc - no documentation
-	DetectedUtc *time.Time `json:"detectedUtc,omitempty"`
-
-	// SourceIpv4 - The IP address of the source that generated an event.
-	SourceIpv4 string `json:"sourceIpv4,omitempty"`
-}
-
-func (mcafee_epolicy_orchestrator_version45_event *McAfee_Epolicy_Orchestrator_Version45_Event) String() string {
-	return "McAfee_Epolicy_Orchestrator_Version45_Event"
-}
-
-// McAfee_Epolicy_Orchestrator_Version45_Event_Extended is McAfee_Epolicy_Orchestrator_Version45_Event with all maskable types.
-type McAfee_Epolicy_Orchestrator_Version45_Event_Extended struct {
-	McAfee_Epolicy_Orchestrator_Version45_Event
 
 	// AgentDetails - no documentation
 	AgentDetails *McAfee_Epolicy_Orchestrator_Version45_Agent_Details `json:"agentDetails,omitempty"`
@@ -51,6 +42,6 @@ type McAfee_Epolicy_Orchestrator_Version45_Event_Extended struct {
 	VirusActionTaken *McAfee_Epolicy_Orchestrator_Version45_Event_Filter_Description `json:"virusActionTaken,omitempty"`
 }
 
-func (mcafee_epolicy_orchestrator_version45_event *McAfee_Epolicy_Orchestrator_Version45_Event_Extended) String() string {
+func (mcafee_epolicy_orchestrator_version45_event *McAfee_Epolicy_Orchestrator_Version45_Event) String() string {
 	return "McAfee_Epolicy_Orchestrator_Version45_Event"
 }

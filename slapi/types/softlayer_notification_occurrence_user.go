@@ -17,15 +17,6 @@ type SoftLayer_Notification_Occurrence_User struct {
 
 	// UsrRecordId - <nil>
 	UsrRecordId int `json:"usrRecordId,omitempty"`
-}
-
-func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) String() string {
-	return "SoftLayer_Notification_Occurrence_User"
-}
-
-// SoftLayer_Notification_Occurrence_User_Extended is SoftLayer_Notification_Occurrence_User with all maskable types.
-type SoftLayer_Notification_Occurrence_User_Extended struct {
-	SoftLayer_Notification_Occurrence_User
 
 	// ImpactedResourceCount - A count of a collection of resources impacted by the associated event.
 	ImpactedResourceCount uint64 `json:"impactedResourceCount,omitempty"`
@@ -40,6 +31,6 @@ type SoftLayer_Notification_Occurrence_User_Extended struct {
 	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
-func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User_Extended) String() string {
+func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User) String() string {
 	return "SoftLayer_Notification_Occurrence_User"
 }

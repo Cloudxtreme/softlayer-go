@@ -11,20 +11,11 @@ type SoftLayer_Hardware_Component_Model_Generic_Attribute struct {
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_hardware_component_model_generic_attribute *SoftLayer_Hardware_Component_Model_Generic_Attribute) String() string {
-	return "SoftLayer_Hardware_Component_Model_Generic_Attribute"
-}
-
-// SoftLayer_Hardware_Component_Model_Generic_Attribute_Extended is SoftLayer_Hardware_Component_Model_Generic_Attribute with all maskable types.
-type SoftLayer_Hardware_Component_Model_Generic_Attribute_Extended struct {
-	SoftLayer_Hardware_Component_Model_Generic_Attribute
 
 	// HardwareGenericComponentModel - no documentation
 	HardwareGenericComponentModel *SoftLayer_Hardware_Component_Model_Generic `json:"hardwareGenericComponentModel,omitempty"`
 }
 
-func (softlayer_hardware_component_model_generic_attribute *SoftLayer_Hardware_Component_Model_Generic_Attribute_Extended) String() string {
+func (softlayer_hardware_component_model_generic_attribute *SoftLayer_Hardware_Component_Model_Generic_Attribute) String() string {
 	return "SoftLayer_Hardware_Component_Model_Generic_Attribute"
 }

@@ -9,9 +9,6 @@ import (
 // SoftLayer_Notification_Occurrence_Update - <nil>
 type SoftLayer_Notification_Occurrence_Update struct {
 
-	// Contents - <nil>
-	Contents string `json:"contents,omitempty"`
-
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -20,23 +17,17 @@ type SoftLayer_Notification_Occurrence_Update struct {
 
 	// StartDate - <nil>
 	StartDate *time.Time `json:"startDate,omitempty"`
-}
 
-func (softlayer_notification_occurrence_update *SoftLayer_Notification_Occurrence_Update) String() string {
-	return "SoftLayer_Notification_Occurrence_Update"
-}
-
-// SoftLayer_Notification_Occurrence_Update_Extended is SoftLayer_Notification_Occurrence_Update with all maskable types.
-type SoftLayer_Notification_Occurrence_Update_Extended struct {
-	SoftLayer_Notification_Occurrence_Update
-
-	// Employee - <nil>
-	Employee *SoftLayer_User_Employee `json:"employee,omitempty"`
+	// Contents - <nil>
+	Contents string `json:"contents,omitempty"`
 
 	// NotificationOccurrenceEvent - <nil>
 	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent,omitempty"`
+
+	// Employee - <nil>
+	Employee *SoftLayer_User_Employee `json:"employee,omitempty"`
 }
 
-func (softlayer_notification_occurrence_update *SoftLayer_Notification_Occurrence_Update_Extended) String() string {
+func (softlayer_notification_occurrence_update *SoftLayer_Notification_Occurrence_Update) String() string {
 	return "SoftLayer_Notification_Occurrence_Update"
 }

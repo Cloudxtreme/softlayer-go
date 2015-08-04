@@ -5,14 +5,11 @@ package types
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group - <nil>
 type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group struct {
 
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
+	// Name - <nil>
+	Name string `json:"name,omitempty"`
 
 	// Notes - <nil>
 	Notes string `json:"notes,omitempty"`
-
-	// Name - <nil>
-	Name string `json:"name,omitempty"`
 
 	// RoutingMethodId - <nil>
 	RoutingMethodId int `json:"routingMethodId,omitempty"`
@@ -21,43 +18,37 @@ type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Grou
 	// are only valid for service groups.
 	Timeout int `json:"timeout,omitempty"`
 
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
+
 	// RoutingTypeId - <nil>
 	RoutingTypeId int `json:"routingTypeId,omitempty"`
-}
-
-func (softlayer_network_application_delivery_controller_loadbalancer_service_group *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group) String() string {
-	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group"
-}
-
-// SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_Extended is SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group with all maskable types.
-type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_Extended struct {
-	SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group
-
-	// VirtualServerCount - no documentation
-	VirtualServerCount uint64 `json:"virtualServerCount,omitempty"`
-
-	// ServiceReferences - <nil>
-	ServiceReferences []*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference `json:"serviceReferences,omitempty"`
-
-	// RoutingMethod - <nil>
-	RoutingMethod *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Method `json:"routingMethod,omitempty"`
-
-	// ServiceCount - no documentation
-	ServiceCount uint64 `json:"serviceCount,omitempty"`
-
-	// RoutingType - <nil>
-	RoutingType *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type `json:"routingType,omitempty"`
 
 	// Services - <nil>
 	Services []*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service `json:"services,omitempty"`
 
+	// VirtualServerCount - no documentation
+	VirtualServerCount uint64 `json:"virtualServerCount,omitempty"`
+
+	// RoutingMethod - <nil>
+	RoutingMethod *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Method `json:"routingMethod,omitempty"`
+
+	// ServiceReferences - <nil>
+	ServiceReferences []*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference `json:"serviceReferences,omitempty"`
+
 	// ServiceReferenceCount - no documentation
 	ServiceReferenceCount uint64 `json:"serviceReferenceCount,omitempty"`
 
+	// RoutingType - <nil>
+	RoutingType *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type `json:"routingType,omitempty"`
+
 	// VirtualServers - <nil>
 	VirtualServers []*SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer `json:"virtualServers,omitempty"`
+
+	// ServiceCount - no documentation
+	ServiceCount uint64 `json:"serviceCount,omitempty"`
 }
 
-func (softlayer_network_application_delivery_controller_loadbalancer_service_group *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_Extended) String() string {
+func (softlayer_network_application_delivery_controller_loadbalancer_service_group *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group) String() string {
 	return "SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group"
 }

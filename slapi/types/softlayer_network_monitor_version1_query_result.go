@@ -26,20 +26,11 @@ type SoftLayer_Network_Monitor_Version1_Query_Result struct {
 
 	// ResponseTime - no documentation
 	ResponseTime slapi.Float64 `json:"responseTime,omitempty"`
-}
-
-func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result) String() string {
-	return "SoftLayer_Network_Monitor_Version1_Query_Result"
-}
-
-// SoftLayer_Network_Monitor_Version1_Query_Result_Extended is SoftLayer_Network_Monitor_Version1_Query_Result with all maskable types.
-type SoftLayer_Network_Monitor_Version1_Query_Result_Extended struct {
-	SoftLayer_Network_Monitor_Version1_Query_Result
 
 	// QueryHost - References the queryHost that this response relates to.
 	QueryHost *SoftLayer_Network_Monitor_Version1_Query_Host `json:"queryHost,omitempty"`
 }
 
-func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result_Extended) String() string {
+func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result) String() string {
 	return "SoftLayer_Network_Monitor_Version1_Query_Result"
 }

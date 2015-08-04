@@ -11,6 +11,15 @@ import (
 // mode and boot into bash.
 type SoftLayer_Virtual_Guest_Boot_Parameter_Type struct {
 
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
+	// Value - no documentation
+	Value string `json:"value,omitempty"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -22,15 +31,6 @@ type SoftLayer_Virtual_Guest_Boot_Parameter_Type struct {
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
-	// Value - no documentation
-	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_virtual_guest_boot_parameter_type *SoftLayer_Virtual_Guest_Boot_Parameter_Type) String() string {

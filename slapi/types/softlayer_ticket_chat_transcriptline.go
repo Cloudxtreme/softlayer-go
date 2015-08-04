@@ -4,20 +4,11 @@ package types
 
 // SoftLayer_Ticket_Chat_TranscriptLine - <nil>
 type SoftLayer_Ticket_Chat_TranscriptLine struct {
-}
-
-func (softlayer_ticket_chat_transcriptline *SoftLayer_Ticket_Chat_TranscriptLine) String() string {
-	return "SoftLayer_Ticket_Chat_TranscriptLine"
-}
-
-// SoftLayer_Ticket_Chat_TranscriptLine_Extended is SoftLayer_Ticket_Chat_TranscriptLine with all maskable types.
-type SoftLayer_Ticket_Chat_TranscriptLine_Extended struct {
-	SoftLayer_Ticket_Chat_TranscriptLine
 
 	// Speaker - <nil>
 	Speaker *SoftLayer_User_Interface `json:"speaker,omitempty"`
 }
 
-func (softlayer_ticket_chat_transcriptline *SoftLayer_Ticket_Chat_TranscriptLine_Extended) String() string {
+func (softlayer_ticket_chat_transcriptline *SoftLayer_Ticket_Chat_TranscriptLine) String() string {
 	return "SoftLayer_Ticket_Chat_TranscriptLine"
 }

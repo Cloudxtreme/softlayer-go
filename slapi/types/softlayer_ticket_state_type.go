@@ -5,9 +5,6 @@ package types
 // SoftLayer_Ticket_State_Type - <nil>
 type SoftLayer_Ticket_State_Type struct {
 
-	// Name - <nil>
-	Name string `json:"name,omitempty"`
-
 	// Description - <nil>
 	Description string `json:"description,omitempty"`
 
@@ -16,6 +13,9 @@ type SoftLayer_Ticket_State_Type struct {
 
 	// KeyName - <nil>
 	KeyName string `json:"keyName,omitempty"`
+
+	// Name - <nil>
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_ticket_state_type *SoftLayer_Ticket_State_Type) String() string {

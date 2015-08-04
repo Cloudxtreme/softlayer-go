@@ -6,32 +6,23 @@ package types
 // relating to a single SoftLayer survey question.
 type SoftLayer_Survey_Question struct {
 
-	// MultiAnswer - A flag indicating that a survey question can have multiple answers responded to.
-	MultiAnswer int `json:"multiAnswer,omitempty"`
-
-	// QuestionOrder - A value indicating the order in when a survey question will be asked.
-	QuestionOrder int `json:"questionOrder,omitempty"`
+	// SurveyId - A survey question's associated [[SoftLayer_Survey|Survey]] Id.
+	SurveyId int `json:"surveyId,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
-	// IsRequired - A flag indicating that a survey question requires a response.
-	IsRequired int `json:"isRequired,omitempty"`
-
 	// Question - no documentation
 	Question string `json:"question,omitempty"`
 
-	// SurveyId - A survey question's associated [[SoftLayer_Survey|Survey]] Id.
-	SurveyId int `json:"surveyId,omitempty"`
-}
+	// QuestionOrder - A value indicating the order in when a survey question will be asked.
+	QuestionOrder int `json:"questionOrder,omitempty"`
 
-func (softlayer_survey_question *SoftLayer_Survey_Question) String() string {
-	return "SoftLayer_Survey_Question"
-}
+	// IsRequired - A flag indicating that a survey question requires a response.
+	IsRequired int `json:"isRequired,omitempty"`
 
-// SoftLayer_Survey_Question_Extended is SoftLayer_Survey_Question with all maskable types.
-type SoftLayer_Survey_Question_Extended struct {
-	SoftLayer_Survey_Question
+	// MultiAnswer - A flag indicating that a survey question can have multiple answers responded to.
+	MultiAnswer int `json:"multiAnswer,omitempty"`
 
 	// AnswerCount - A count of the possible answers for a survey question.
 	AnswerCount uint64 `json:"answerCount,omitempty"`
@@ -43,6 +34,6 @@ type SoftLayer_Survey_Question_Extended struct {
 	Survey *SoftLayer_Survey `json:"survey,omitempty"`
 }
 
-func (softlayer_survey_question *SoftLayer_Survey_Question_Extended) String() string {
+func (softlayer_survey_question *SoftLayer_Survey_Question) String() string {
 	return "SoftLayer_Survey_Question"
 }

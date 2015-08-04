@@ -25,20 +25,11 @@ type SoftLayer_Marketplace_Partner_Attachment struct {
 
 	// SaveAsName - <nil>
 	SaveAsName string `json:"saveAsName,omitempty"`
-}
-
-func (softlayer_marketplace_partner_attachment *SoftLayer_Marketplace_Partner_Attachment) String() string {
-	return "SoftLayer_Marketplace_Partner_Attachment"
-}
-
-// SoftLayer_Marketplace_Partner_Attachment_Extended is SoftLayer_Marketplace_Partner_Attachment with all maskable types.
-type SoftLayer_Marketplace_Partner_Attachment_Extended struct {
-	SoftLayer_Marketplace_Partner_Attachment
 
 	// AttachmentType - <nil>
 	AttachmentType *SoftLayer_Marketplace_Partner_Attachment_Type `json:"attachmentType,omitempty"`
 }
 
-func (softlayer_marketplace_partner_attachment *SoftLayer_Marketplace_Partner_Attachment_Extended) String() string {
+func (softlayer_marketplace_partner_attachment *SoftLayer_Marketplace_Partner_Attachment) String() string {
 	return "SoftLayer_Marketplace_Partner_Attachment"
 }

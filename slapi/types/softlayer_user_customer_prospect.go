@@ -4,15 +4,6 @@ package types
 
 // SoftLayer_User_Customer_Prospect - <nil>
 type SoftLayer_User_Customer_Prospect struct {
-}
-
-func (softlayer_user_customer_prospect *SoftLayer_User_Customer_Prospect) String() string {
-	return "SoftLayer_User_Customer_Prospect"
-}
-
-// SoftLayer_User_Customer_Prospect_Extended is SoftLayer_User_Customer_Prospect with all maskable types.
-type SoftLayer_User_Customer_Prospect_Extended struct {
-	SoftLayer_User_Customer_Prospect
 
 	// AssignedEmployeeCount - no documentation
 	AssignedEmployeeCount uint64 `json:"assignedEmployeeCount,omitempty"`
@@ -33,6 +24,6 @@ type SoftLayer_User_Customer_Prospect_Extended struct {
 	Type *SoftLayer_User_Customer_Prospect_Type `json:"type,omitempty"`
 }
 
-func (softlayer_user_customer_prospect *SoftLayer_User_Customer_Prospect_Extended) String() string {
+func (softlayer_user_customer_prospect *SoftLayer_User_Customer_Prospect) String() string {
 	return "SoftLayer_User_Customer_Prospect"
 }

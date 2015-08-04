@@ -10,23 +10,20 @@ import (
 // information of an arbitrary resource.
 type SoftLayer_Configuration_Template struct {
 
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
-
-	// UserRecordId - Internal identifier of a user that last modified this configuration template
-	UserRecordId int `json:"userRecordId,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
+	// ItemId - Internal identifier of a product item that this configuration template is associated with
+	ItemId int `json:"itemId,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
 
-	// ParentId - Internal identifier of the parent configuration template
-	ParentId int `json:"parentId,omitempty"`
-
 	// AccountId - Internal identifier of a SoftLayer account that this configuration template belongs to
 	AccountId int `json:"accountId,omitempty"`
+
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
@@ -34,41 +31,29 @@ type SoftLayer_Configuration_Template struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
-	// ItemId - Internal identifier of a product item that this configuration template is associated with
-	ItemId int `json:"itemId,omitempty"`
-}
+	// ParentId - Internal identifier of the parent configuration template
+	ParentId int `json:"parentId,omitempty"`
 
-func (softlayer_configuration_template *SoftLayer_Configuration_Template) String() string {
-	return "SoftLayer_Configuration_Template"
-}
-
-// SoftLayer_Configuration_Template_Extended is SoftLayer_Configuration_Template with all maskable types.
-type SoftLayer_Configuration_Template_Extended struct {
-	SoftLayer_Configuration_Template
-
-	// DefaultValues - <nil>
-	DefaultValues []*SoftLayer_Configuration_Template_Section_Definition_Value `json:"defaultValues,omitempty"`
-
-	// LinkedSectionReferences - <nil>
-	LinkedSectionReferences *SoftLayer_Configuration_Template_Section_Reference `json:"linkedSectionReferences,omitempty"`
-
-	// ConfigurationSectionCount - no documentation
-	ConfigurationSectionCount uint64 `json:"configurationSectionCount,omitempty"`
-
-	// ConfigurationTemplateReference - <nil>
-	ConfigurationTemplateReference []*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference `json:"configurationTemplateReference,omitempty"`
+	// UserRecordId - Internal identifier of a user that last modified this configuration template
+	UserRecordId int `json:"userRecordId,omitempty"`
 
 	// Item - <nil>
 	Item *SoftLayer_Product_Item `json:"item,omitempty"`
 
-	// DefinitionCount - no documentation
-	DefinitionCount uint64 `json:"definitionCount,omitempty"`
-
 	// Parent - <nil>
 	Parent *SoftLayer_Configuration_Template `json:"parent,omitempty"`
 
+	// ConfigurationSectionCount - no documentation
+	ConfigurationSectionCount uint64 `json:"configurationSectionCount,omitempty"`
+
+	// DefinitionCount - no documentation
+	DefinitionCount uint64 `json:"definitionCount,omitempty"`
+
 	// DefaultValueCount - no documentation
 	DefaultValueCount uint64 `json:"defaultValueCount,omitempty"`
+
+	// ConfigurationTemplateReference - <nil>
+	ConfigurationTemplateReference []*SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference `json:"configurationTemplateReference,omitempty"`
 
 	// ConfigurationTemplateReferenceCount - no documentation
 	ConfigurationTemplateReferenceCount uint64 `json:"configurationTemplateReferenceCount,omitempty"`
@@ -76,8 +61,14 @@ type SoftLayer_Configuration_Template_Extended struct {
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account,omitempty"`
 
+	// LinkedSectionReferences - <nil>
+	LinkedSectionReferences *SoftLayer_Configuration_Template_Section_Reference `json:"linkedSectionReferences,omitempty"`
+
 	// ConfigurationSections - <nil>
 	ConfigurationSections []*SoftLayer_Configuration_Template_Section `json:"configurationSections,omitempty"`
+
+	// DefaultValues - <nil>
+	DefaultValues []*SoftLayer_Configuration_Template_Section_Definition_Value `json:"defaultValues,omitempty"`
 
 	// Definitions - <nil>
 	Definitions []*SoftLayer_Configuration_Template_Section_Definition `json:"definitions,omitempty"`
@@ -86,6 +77,6 @@ type SoftLayer_Configuration_Template_Extended struct {
 	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
-func (softlayer_configuration_template *SoftLayer_Configuration_Template_Extended) String() string {
+func (softlayer_configuration_template *SoftLayer_Configuration_Template) String() string {
 	return "SoftLayer_Configuration_Template"
 }

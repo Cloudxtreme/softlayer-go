@@ -8,17 +8,14 @@ package types
 // courier.
 type SoftLayer_Account_Shipment_Tracking_Data struct {
 
-	// CreateUserId - no documentation
-	CreateUserId int `json:"createUserId,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// ModifyUserId - no documentation
 	ModifyUserId int `json:"modifyUserId,omitempty"`
 
 	// PackageId - no documentation
 	PackageId int `json:"packageId,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// Sequence - no documentation
 	Sequence int `json:"sequence,omitempty"`
@@ -28,32 +25,26 @@ type SoftLayer_Account_Shipment_Tracking_Data struct {
 
 	// TrackingData - The tracking data (tracking number/reference number).
 	TrackingData string `json:"trackingData,omitempty"`
-}
 
-func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) String() string {
-	return "SoftLayer_Account_Shipment_Tracking_Data"
-}
-
-// SoftLayer_Account_Shipment_Tracking_Data_Extended is SoftLayer_Account_Shipment_Tracking_Data with all maskable types.
-type SoftLayer_Account_Shipment_Tracking_Data_Extended struct {
-	SoftLayer_Account_Shipment_Tracking_Data
-
-	// CreateUser - no documentation
-	CreateUser *SoftLayer_User_Customer `json:"createUser,omitempty"`
+	// CreateUserId - no documentation
+	CreateUserId int `json:"createUserId,omitempty"`
 
 	// ModifyUser - The customer user who last modified the tracking datum.
 	ModifyUser *SoftLayer_User_Customer `json:"modifyUser,omitempty"`
 
-	// CreateEmployee - no documentation
-	CreateEmployee *SoftLayer_User_Employee `json:"createEmployee,omitempty"`
+	// Shipment - no documentation
+	Shipment *SoftLayer_Account_Shipment `json:"shipment,omitempty"`
+
+	// CreateUser - no documentation
+	CreateUser *SoftLayer_User_Customer `json:"createUser,omitempty"`
 
 	// ModifyEmployee - no documentation
 	ModifyEmployee *SoftLayer_User_Employee `json:"modifyEmployee,omitempty"`
 
-	// Shipment - no documentation
-	Shipment *SoftLayer_Account_Shipment `json:"shipment,omitempty"`
+	// CreateEmployee - no documentation
+	CreateEmployee *SoftLayer_User_Employee `json:"createEmployee,omitempty"`
 }
 
-func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data_Extended) String() string {
+func (softlayer_account_shipment_tracking_data *SoftLayer_Account_Shipment_Tracking_Data) String() string {
 	return "SoftLayer_Account_Shipment_Tracking_Data"
 }

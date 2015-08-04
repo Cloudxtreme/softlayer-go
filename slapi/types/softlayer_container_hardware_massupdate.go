@@ -5,14 +5,14 @@ package types
 // SoftLayer_Container_Hardware_MassUpdate - <nil>
 type SoftLayer_Container_Hardware_MassUpdate struct {
 
+	// SuccessFlag - no documentation
+	SuccessFlag string `json:"successFlag,omitempty"`
+
 	// HardwareId - no documentation
 	HardwareId int `json:"hardwareId,omitempty"`
 
 	// Message - no documentation
 	Message string `json:"message,omitempty"`
-
-	// SuccessFlag - no documentation
-	SuccessFlag string `json:"successFlag,omitempty"`
 }
 
 func (softlayer_container_hardware_massupdate *SoftLayer_Container_Hardware_MassUpdate) String() string {

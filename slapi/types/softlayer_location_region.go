@@ -7,30 +7,21 @@ package types
 // details.
 type SoftLayer_Location_Region struct {
 
-	// SortOrder - An integer representing the order in which this element is displayed.
-	SortOrder int `json:"sortOrder,omitempty"`
-
 	// Description - a short description of a region's name. This description is seen on the order forms.
 	Description string `json:"description,omitempty"`
 
 	// Keyname - A unique key name for a region. Provided for easy debugging. This is to be sent in with an
 	// order.
 	Keyname string `json:"keyname,omitempty"`
-}
 
-func (softlayer_location_region *SoftLayer_Location_Region) String() string {
-	return "SoftLayer_Location_Region"
-}
-
-// SoftLayer_Location_Region_Extended is SoftLayer_Location_Region with all maskable types.
-type SoftLayer_Location_Region_Extended struct {
-	SoftLayer_Location_Region
+	// SortOrder - An integer representing the order in which this element is displayed.
+	SortOrder int `json:"sortOrder,omitempty"`
 
 	// Location - Each region can have many datacenter locations tied to it. However, this is the location
 	// we currently provision to for a region. This location is the current valid location for a region.
 	Location *SoftLayer_Location_Region_Location `json:"location,omitempty"`
 }
 
-func (softlayer_location_region *SoftLayer_Location_Region_Extended) String() string {
+func (softlayer_location_region *SoftLayer_Location_Region) String() string {
 	return "SoftLayer_Location_Region"
 }

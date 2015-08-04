@@ -13,6 +13,12 @@ import (
 // registration object.
 type SoftLayer_Network_Subnet_Registration_Details struct {
 
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// DetailId - Numeric ID of the related [[SoftLayer_Account_Regional_Registry_Detail]] object
+	DetailId int `json:"detailId,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -22,21 +28,6 @@ type SoftLayer_Network_Subnet_Registration_Details struct {
 	// RegistrationId - Numeric ID of the related [[SoftLayer_Network_Subnet_Registration]] object
 	RegistrationId int `json:"registrationId,omitempty"`
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// DetailId - Numeric ID of the related [[SoftLayer_Account_Regional_Registry_Detail]] object
-	DetailId int `json:"detailId,omitempty"`
-}
-
-func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) String() string {
-	return "SoftLayer_Network_Subnet_Registration_Details"
-}
-
-// SoftLayer_Network_Subnet_Registration_Details_Extended is SoftLayer_Network_Subnet_Registration_Details with all maskable types.
-type SoftLayer_Network_Subnet_Registration_Details_Extended struct {
-	SoftLayer_Network_Subnet_Registration_Details
-
 	// Detail - The related [[SoftLayer_Account_Regional_Registry_Detail|detail object]].
 	Detail *SoftLayer_Account_Regional_Registry_Detail `json:"detail,omitempty"`
 
@@ -44,6 +35,6 @@ type SoftLayer_Network_Subnet_Registration_Details_Extended struct {
 	Registration *SoftLayer_Network_Subnet_Registration `json:"registration,omitempty"`
 }
 
-func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details_Extended) String() string {
+func (softlayer_network_subnet_registration_details *SoftLayer_Network_Subnet_Registration_Details) String() string {
 	return "SoftLayer_Network_Subnet_Registration_Details"
 }

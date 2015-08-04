@@ -17,18 +17,21 @@ type SoftLayer_Resource_Group_Member_Software_Component_Password struct {
 
 	// Status - no documentation
 	Status string `json:"status,omitempty"`
-}
 
-func (softlayer_resource_group_member_software_component_password *SoftLayer_Resource_Group_Member_Software_Component_Password) String() string {
-	return "SoftLayer_Resource_Group_Member_Software_Component_Password"
-}
-
-// SoftLayer_Resource_Group_Member_Software_Component_Password_Extended is SoftLayer_Resource_Group_Member_Software_Component_Password with all maskable types.
-type SoftLayer_Resource_Group_Member_Software_Component_Password_Extended struct {
-	SoftLayer_Resource_Group_Member_Software_Component_Password
+	// Type - no documentation
+	Type *SoftLayer_Resource_Group_Member_Type `json:"type,omitempty"`
 
 	// RoleCount - A count of a resource group member's associated roles.
 	RoleCount uint64 `json:"roleCount,omitempty"`
+
+	// Group - no documentation
+	Group *SoftLayer_Resource_Group `json:"group,omitempty"`
+
+	// Resource - A resource group member's associated software component password.
+	Resource *SoftLayer_Software_Component_Password `json:"resource,omitempty"`
+
+	// Attributes - no documentation
+	Attributes []*SoftLayer_Resource_Group_Member_Attribute `json:"attributes,omitempty"`
 
 	// DescendantMembers - A resource group member's associated member descendants.
 	DescendantMembers []*SoftLayer_Resource_Group_Member `json:"descendantMembers,omitempty"`
@@ -36,25 +39,13 @@ type SoftLayer_Resource_Group_Member_Software_Component_Password_Extended struct
 	// Roles - no documentation
 	Roles []*SoftLayer_Resource_Group_Role `json:"roles,omitempty"`
 
-	// Resource - A resource group member's associated software component password.
-	Resource *SoftLayer_Software_Component_Password `json:"resource,omitempty"`
-
-	// Group - no documentation
-	Group *SoftLayer_Resource_Group `json:"group,omitempty"`
-
-	// DescendantMemberCount - A count of a resource group member's associated member descendants.
-	DescendantMemberCount uint64 `json:"descendantMemberCount,omitempty"`
-
-	// Type - no documentation
-	Type *SoftLayer_Resource_Group_Member_Type `json:"type,omitempty"`
-
 	// AttributeCount - A count of a resource group member's associated attributes.
 	AttributeCount uint64 `json:"attributeCount,omitempty"`
 
-	// Attributes - no documentation
-	Attributes []*SoftLayer_Resource_Group_Member_Attribute `json:"attributes,omitempty"`
+	// DescendantMemberCount - A count of a resource group member's associated member descendants.
+	DescendantMemberCount uint64 `json:"descendantMemberCount,omitempty"`
 }
 
-func (softlayer_resource_group_member_software_component_password *SoftLayer_Resource_Group_Member_Software_Component_Password_Extended) String() string {
+func (softlayer_resource_group_member_software_component_password *SoftLayer_Resource_Group_Member_Software_Component_Password) String() string {
 	return "SoftLayer_Resource_Group_Member_Software_Component_Password"
 }

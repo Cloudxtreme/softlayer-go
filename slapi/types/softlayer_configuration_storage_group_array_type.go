@@ -5,15 +5,6 @@ package types
 // SoftLayer_Configuration_Storage_Group_Array_Type - no documentation
 type SoftLayer_Configuration_Storage_Group_Array_Type struct {
 
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
-
-	// MaximumDrives - <nil>
-	MaximumDrives int `json:"maximumDrives,omitempty"`
-
-	// Description - <nil>
-	Description string `json:"description,omitempty"`
-
 	// DriveMultiplier - <nil>
 	DriveMultiplier int `json:"driveMultiplier,omitempty"`
 
@@ -23,28 +14,28 @@ type SoftLayer_Configuration_Storage_Group_Array_Type struct {
 	// KeyName - <nil>
 	KeyName string `json:"keyName,omitempty"`
 
+	// Name - <nil>
+	Name string `json:"name,omitempty"`
+
+	// Description - <nil>
+	Description string `json:"description,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
+
+	// MaximumDrives - <nil>
+	MaximumDrives int `json:"maximumDrives,omitempty"`
+
 	// MinimumDrives - <nil>
 	MinimumDrives int `json:"minimumDrives,omitempty"`
 
-	// Name - <nil>
-	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) String() string {
-	return "SoftLayer_Configuration_Storage_Group_Array_Type"
-}
-
-// SoftLayer_Configuration_Storage_Group_Array_Type_Extended is SoftLayer_Configuration_Storage_Group_Array_Type with all maskable types.
-type SoftLayer_Configuration_Storage_Group_Array_Type_Extended struct {
-	SoftLayer_Configuration_Storage_Group_Array_Type
+	// HardwareComponentModels - <nil>
+	HardwareComponentModels []*SoftLayer_Hardware_Component_Model `json:"hardwareComponentModels,omitempty"`
 
 	// HardwareComponentModelCount - no documentation
 	HardwareComponentModelCount uint64 `json:"hardwareComponentModelCount,omitempty"`
-
-	// HardwareComponentModels - <nil>
-	HardwareComponentModels []*SoftLayer_Hardware_Component_Model `json:"hardwareComponentModels,omitempty"`
 }
 
-func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type_Extended) String() string {
+func (softlayer_configuration_storage_group_array_type *SoftLayer_Configuration_Storage_Group_Array_Type) String() string {
 	return "SoftLayer_Configuration_Storage_Group_Array_Type"
 }

@@ -23,20 +23,11 @@ type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event struct {
 
 	// VirusName - no documentation
 	VirusName string `json:"virusName,omitempty"`
-}
-
-func (mcafee_epolicy_orchestrator_version36_antivirus_event *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event) String() string {
-	return "McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event"
-}
-
-// McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Extended is McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event with all maskable types.
-type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Extended struct {
-	McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event
 
 	// VirusActionTaken - no documentation
 	VirusActionTaken *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Filter_Description `json:"virusActionTaken,omitempty"`
 }
 
-func (mcafee_epolicy_orchestrator_version36_antivirus_event *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Extended) String() string {
+func (mcafee_epolicy_orchestrator_version36_antivirus_event *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event) String() string {
 	return "McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event"
 }

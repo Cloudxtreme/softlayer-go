@@ -8,17 +8,17 @@ package types
 // as optical media such as CD and DVD are currently supported.
 type SoftLayer_Account_Media_Type struct {
 
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
+
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_account_media_type *SoftLayer_Account_Media_Type) String() string {

@@ -11,20 +11,11 @@ type SoftLayer_User_External_Binding_Attribute struct {
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_user_external_binding_attribute *SoftLayer_User_External_Binding_Attribute) String() string {
-	return "SoftLayer_User_External_Binding_Attribute"
-}
-
-// SoftLayer_User_External_Binding_Attribute_Extended is SoftLayer_User_External_Binding_Attribute with all maskable types.
-type SoftLayer_User_External_Binding_Attribute_Extended struct {
-	SoftLayer_User_External_Binding_Attribute
 
 	// ExternalBinding - The external authentication binding an attribute belongs to.
 	ExternalBinding *SoftLayer_User_External_Binding `json:"externalBinding,omitempty"`
 }
 
-func (softlayer_user_external_binding_attribute *SoftLayer_User_External_Binding_Attribute_Extended) String() string {
+func (softlayer_user_external_binding_attribute *SoftLayer_User_External_Binding_Attribute) String() string {
 	return "SoftLayer_User_External_Binding_Attribute"
 }

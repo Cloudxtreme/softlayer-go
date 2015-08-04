@@ -19,15 +19,6 @@ type SoftLayer_Virtual_Guest_Network_Component_IpAddress struct {
 	// component's primary IP address and which represents the IP information for logging into a computing
 	// instance's console.
 	Type string `json:"type,omitempty"`
-}
-
-func (softlayer_virtual_guest_network_component_ipaddress *SoftLayer_Virtual_Guest_Network_Component_IpAddress) String() string {
-	return "SoftLayer_Virtual_Guest_Network_Component_IpAddress"
-}
-
-// SoftLayer_Virtual_Guest_Network_Component_IpAddress_Extended is SoftLayer_Virtual_Guest_Network_Component_IpAddress with all maskable types.
-type SoftLayer_Virtual_Guest_Network_Component_IpAddress_Extended struct {
-	SoftLayer_Virtual_Guest_Network_Component_IpAddress
 
 	// IpAddress - The IP address associated with this object's network component.
 	IpAddress *SoftLayer_Network_Subnet_IpAddress `json:"ipAddress,omitempty"`
@@ -36,6 +27,6 @@ type SoftLayer_Virtual_Guest_Network_Component_IpAddress_Extended struct {
 	NetworkComponent *SoftLayer_Virtual_Guest_Network_Component `json:"networkComponent,omitempty"`
 }
 
-func (softlayer_virtual_guest_network_component_ipaddress *SoftLayer_Virtual_Guest_Network_Component_IpAddress_Extended) String() string {
+func (softlayer_virtual_guest_network_component_ipaddress *SoftLayer_Virtual_Guest_Network_Component_IpAddress) String() string {
 	return "SoftLayer_Virtual_Guest_Network_Component_IpAddress"
 }

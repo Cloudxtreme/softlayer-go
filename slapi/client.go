@@ -28,7 +28,7 @@ type Client struct {
 	APIKey   string
 }
 
-// Do performs the API call. The result parameter will have the API response marshalled into it
+// Call performs the API call. The result parameter will have the API response marshalled into it
 func (client *Client) Call(req Request, result interface{}) error {
 	if req.Service == "" || req.Method == "" {
 		return errors.New("service and method is required to make an API call")

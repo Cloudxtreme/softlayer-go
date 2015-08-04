@@ -15,15 +15,6 @@ type SoftLayer_Provisioning_Maintenance_Classification struct {
 
 	// Type - The type or name of the maintenance classification.
 	Type string `json:"type,omitempty"`
-}
-
-func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) String() string {
-	return "SoftLayer_Provisioning_Maintenance_Classification"
-}
-
-// SoftLayer_Provisioning_Maintenance_Classification_Extended is SoftLayer_Provisioning_Maintenance_Classification with all maskable types.
-type SoftLayer_Provisioning_Maintenance_Classification_Extended struct {
-	SoftLayer_Provisioning_Maintenance_Classification
 
 	// ItemCategories - <nil>
 	ItemCategories []*SoftLayer_Provisioning_Maintenance_Classification_Item_Category `json:"itemCategories,omitempty"`
@@ -32,6 +23,6 @@ type SoftLayer_Provisioning_Maintenance_Classification_Extended struct {
 	ItemCategoryCount uint64 `json:"itemCategoryCount,omitempty"`
 }
 
-func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification_Extended) String() string {
+func (softlayer_provisioning_maintenance_classification *SoftLayer_Provisioning_Maintenance_Classification) String() string {
 	return "SoftLayer_Provisioning_Maintenance_Classification"
 }

@@ -18,26 +18,17 @@ type SoftLayer_Tag struct {
 
 	// Name - Name of the tag. The characters permitted are 0-9, whitespace, _ (underscore),
 	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_tag *SoftLayer_Tag) String() string {
-	return "SoftLayer_Tag"
-}
-
-// SoftLayer_Tag_Extended is SoftLayer_Tag with all maskable types.
-type SoftLayer_Tag_Extended struct {
-	SoftLayer_Tag
-
-	// References - no documentation
-	References []*SoftLayer_Tag_Reference `json:"references,omitempty"`
 
 	// ReferenceCount - no documentation
 	ReferenceCount uint64 `json:"referenceCount,omitempty"`
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// References - no documentation
+	References []*SoftLayer_Tag_Reference `json:"references,omitempty"`
 }
 
-func (softlayer_tag *SoftLayer_Tag_Extended) String() string {
+func (softlayer_tag *SoftLayer_Tag) String() string {
 	return "SoftLayer_Tag"
 }

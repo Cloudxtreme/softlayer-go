@@ -27,15 +27,6 @@ type SoftLayer_Configuration_Template_Section_Profile struct {
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
-}
-
-func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile) String() string {
-	return "SoftLayer_Configuration_Template_Section_Profile"
-}
-
-// SoftLayer_Configuration_Template_Section_Profile_Extended is SoftLayer_Configuration_Template_Section_Profile with all maskable types.
-type SoftLayer_Configuration_Template_Section_Profile_Extended struct {
-	SoftLayer_Configuration_Template_Section_Profile
 
 	// ConfigurationSection - <nil>
 	ConfigurationSection *SoftLayer_Configuration_Template_Section `json:"configurationSection,omitempty"`
@@ -44,6 +35,6 @@ type SoftLayer_Configuration_Template_Section_Profile_Extended struct {
 	MonitoringAgent *SoftLayer_Monitoring_Agent `json:"monitoringAgent,omitempty"`
 }
 
-func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile_Extended) String() string {
+func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile) String() string {
 	return "SoftLayer_Configuration_Template_Section_Profile"
 }

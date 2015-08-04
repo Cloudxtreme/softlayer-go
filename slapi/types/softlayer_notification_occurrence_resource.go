@@ -6,12 +6,6 @@ package types
 // hardware or services that may be impacted by a SoftLayer_Notification_Occurrence_Event.
 type SoftLayer_Notification_Occurrence_Resource struct {
 
-	// ResourceName - <nil>
-	ResourceName string `json:"resourceName,omitempty"`
-
-	// ResourceTableId - <<< EOT The unique identifier for the physical resource that is associated
-	ResourceTableId int `json:"resourceTableId,omitempty"`
-
 	// Active - <nil>
 	Active int `json:"active,omitempty"`
 
@@ -23,15 +17,12 @@ type SoftLayer_Notification_Occurrence_Resource struct {
 
 	// ResourceAccountId - <<< EOT The unique identifier for the [[SoftLayer_Account]] associated with
 	ResourceAccountId int `json:"resourceAccountId,omitempty"`
-}
 
-func (softlayer_notification_occurrence_resource *SoftLayer_Notification_Occurrence_Resource) String() string {
-	return "SoftLayer_Notification_Occurrence_Resource"
-}
+	// ResourceName - <nil>
+	ResourceName string `json:"resourceName,omitempty"`
 
-// SoftLayer_Notification_Occurrence_Resource_Extended is SoftLayer_Notification_Occurrence_Resource with all maskable types.
-type SoftLayer_Notification_Occurrence_Resource_Extended struct {
-	SoftLayer_Notification_Occurrence_Resource
+	// ResourceTableId - <<< EOT The unique identifier for the physical resource that is associated
+	ResourceTableId int `json:"resourceTableId,omitempty"`
 
 	// NotificationOccurrenceEvent - no documentation
 	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent,omitempty"`
@@ -40,6 +31,6 @@ type SoftLayer_Notification_Occurrence_Resource_Extended struct {
 	Resource *SoftLayer_Entity `json:"resource,omitempty"`
 }
 
-func (softlayer_notification_occurrence_resource *SoftLayer_Notification_Occurrence_Resource_Extended) String() string {
+func (softlayer_notification_occurrence_resource *SoftLayer_Notification_Occurrence_Resource) String() string {
 	return "SoftLayer_Notification_Occurrence_Resource"
 }

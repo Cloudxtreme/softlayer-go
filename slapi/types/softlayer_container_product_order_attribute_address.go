@@ -7,6 +7,12 @@ package types
 // SoftLayer_Container_Product_Order_Attribute_Address datatype contains the address information.
 type SoftLayer_Container_Product_Order_Attribute_Address struct {
 
+	// PostalCode - no documentation
+	PostalCode string `json:"postalCode,omitempty"`
+
+	// State - no documentation
+	State string `json:"state,omitempty"`
+
 	// AddressLine1 - no documentation
 	AddressLine1 string `json:"addressLine1,omitempty"`
 
@@ -21,12 +27,6 @@ type SoftLayer_Container_Product_Order_Attribute_Address struct {
 
 	// NonUsState - no documentation
 	NonUsState string `json:"nonUsState,omitempty"`
-
-	// PostalCode - no documentation
-	PostalCode string `json:"postalCode,omitempty"`
-
-	// State - no documentation
-	State string `json:"state,omitempty"`
 }
 
 func (softlayer_container_product_order_attribute_address *SoftLayer_Container_Product_Order_Attribute_Address) String() string {

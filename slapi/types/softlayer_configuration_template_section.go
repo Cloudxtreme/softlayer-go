@@ -15,68 +15,32 @@ type SoftLayer_Configuration_Template_Section struct {
 	// linked section.
 	LinkedTemplateId string `json:"linkedTemplateId,omitempty"`
 
-	// ParentId - Internal identifier of the parent configuration section
-	ParentId int `json:"parentId,omitempty"`
-
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// Sort - no documentation
-	Sort int `json:"sort,omitempty"`
-
-	// TypeId - Internal identifier of the configuration section type
-	TypeId int `json:"typeId,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// TemplateId - Internal identifier of a configuration template that this section belongs to
-	TemplateId string `json:"templateId,omitempty"`
-
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
 
+	// TypeId - Internal identifier of the configuration section type
+	TypeId int `json:"typeId,omitempty"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
-}
 
-func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section) String() string {
-	return "SoftLayer_Configuration_Template_Section"
-}
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
 
-// SoftLayer_Configuration_Template_Section_Extended is SoftLayer_Configuration_Template_Section with all maskable types.
-type SoftLayer_Configuration_Template_Section_Extended struct {
-	SoftLayer_Configuration_Template_Section
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
-	// LinkedTemplateReference - <nil>
-	LinkedTemplateReference *SoftLayer_Configuration_Template_Section_Reference `json:"linkedTemplateReference,omitempty"`
+	// ParentId - Internal identifier of the parent configuration section
+	ParentId int `json:"parentId,omitempty"`
 
-	// SectionType - <nil>
-	SectionType *SoftLayer_Configuration_Template_Section_Type `json:"sectionType,omitempty"`
+	// TemplateId - Internal identifier of a configuration template that this section belongs to
+	TemplateId string `json:"templateId,omitempty"`
 
-	// ProfileCount - no documentation
-	ProfileCount uint64 `json:"profileCount,omitempty"`
-
-	// LinkedTemplate - <nil>
-	LinkedTemplate *SoftLayer_Configuration_Template `json:"linkedTemplate,omitempty"`
-
-	// Profiles - <nil>
-	Profiles []*SoftLayer_Configuration_Template_Section_Profile `json:"profiles,omitempty"`
-
-	// SectionTypeName - <nil>
-	SectionTypeName string `json:"sectionTypeName,omitempty"`
-
-	// DisallowedDeletionFlag - <nil>
-	DisallowedDeletionFlag bool `json:"disallowedDeletionFlag,omitempty"`
-
-	// DefinitionCount - no documentation
-	DefinitionCount uint64 `json:"definitionCount,omitempty"`
-
-	// SubSectionCount - no documentation
-	SubSectionCount uint64 `json:"subSectionCount,omitempty"`
+	// Sort - no documentation
+	Sort int `json:"sort,omitempty"`
 
 	// Definitions - <nil>
 	Definitions []*SoftLayer_Configuration_Template_Section_Definition `json:"definitions,omitempty"`
@@ -86,8 +50,35 @@ type SoftLayer_Configuration_Template_Section_Extended struct {
 
 	// Template - <nil>
 	Template *SoftLayer_Configuration_Template `json:"template,omitempty"`
+
+	// LinkedTemplate - <nil>
+	LinkedTemplate *SoftLayer_Configuration_Template `json:"linkedTemplate,omitempty"`
+
+	// LinkedTemplateReference - <nil>
+	LinkedTemplateReference *SoftLayer_Configuration_Template_Section_Reference `json:"linkedTemplateReference,omitempty"`
+
+	// Profiles - <nil>
+	Profiles []*SoftLayer_Configuration_Template_Section_Profile `json:"profiles,omitempty"`
+
+	// DefinitionCount - no documentation
+	DefinitionCount uint64 `json:"definitionCount,omitempty"`
+
+	// SubSectionCount - no documentation
+	SubSectionCount uint64 `json:"subSectionCount,omitempty"`
+
+	// SectionType - <nil>
+	SectionType *SoftLayer_Configuration_Template_Section_Type `json:"sectionType,omitempty"`
+
+	// SectionTypeName - <nil>
+	SectionTypeName string `json:"sectionTypeName,omitempty"`
+
+	// DisallowedDeletionFlag - <nil>
+	DisallowedDeletionFlag bool `json:"disallowedDeletionFlag,omitempty"`
+
+	// ProfileCount - no documentation
+	ProfileCount uint64 `json:"profileCount,omitempty"`
 }
 
-func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section_Extended) String() string {
+func (softlayer_configuration_template_section *SoftLayer_Configuration_Template_Section) String() string {
 	return "SoftLayer_Configuration_Template_Section"
 }

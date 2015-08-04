@@ -14,82 +14,73 @@ import (
 // your system specific values.
 type SoftLayer_Configuration_Template_Section_Definition struct {
 
-	// EnumerationValues - no documentation
-	EnumerationValues string `json:"enumerationValues,omitempty"`
-
-	// GroupId - no documentation
-	GroupId string `json:"groupId,omitempty"`
-
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
-	// Sort - no documentation
-	Sort int `json:"sort,omitempty"`
-
-	// MinimumValue - no documentation
-	MinimumValue string `json:"minimumValue,omitempty"`
-
-	// RequireValueFlag - Indicates if a configuration value is required for this definition.
-	RequireValueFlag int `json:"requireValueFlag,omitempty"`
-
-	// TypeId - Internal identifier of a configuration definition type.
-	TypeId int `json:"typeId,omitempty"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// MaximumValue - no documentation
-	MaximumValue string `json:"maximumValue,omitempty"`
 
 	// Path - no documentation
 	Path string `json:"path,omitempty"`
 
-	// SectionId - no documentation
-	SectionId int `json:"sectionId,omitempty"`
+	// RequireValueFlag - Indicates if a configuration value is required for this definition.
+	RequireValueFlag int `json:"requireValueFlag,omitempty"`
 
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
 
+	// MaximumValue - no documentation
+	MaximumValue string `json:"maximumValue,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
+	// SectionId - no documentation
+	SectionId int `json:"sectionId,omitempty"`
+
 	// ShortName - no documentation
 	ShortName string `json:"shortName,omitempty"`
-}
 
-func (softlayer_configuration_template_section_definition *SoftLayer_Configuration_Template_Section_Definition) String() string {
-	return "SoftLayer_Configuration_Template_Section_Definition"
-}
+	// Sort - no documentation
+	Sort int `json:"sort,omitempty"`
 
-// SoftLayer_Configuration_Template_Section_Definition_Extended is SoftLayer_Configuration_Template_Section_Definition with all maskable types.
-type SoftLayer_Configuration_Template_Section_Definition_Extended struct {
-	SoftLayer_Configuration_Template_Section_Definition
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// EnumerationValues - no documentation
+	EnumerationValues string `json:"enumerationValues,omitempty"`
+
+	// MinimumValue - no documentation
+	MinimumValue string `json:"minimumValue,omitempty"`
+
+	// GroupId - no documentation
+	GroupId string `json:"groupId,omitempty"`
+
+	// TypeId - Internal identifier of a configuration definition type.
+	TypeId int `json:"typeId,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// Group - <nil>
 	Group *SoftLayer_Configuration_Template_Section_Definition_Group `json:"group,omitempty"`
 
-	// MonitoringDataFlag - <nil>
-	MonitoringDataFlag bool `json:"monitoringDataFlag,omitempty"`
+	// ValueType - <nil>
+	ValueType *SoftLayer_Configuration_Template_Section_Definition_Type `json:"valueType,omitempty"`
 
 	// Section - <nil>
 	Section *SoftLayer_Configuration_Template_Section `json:"section,omitempty"`
 
-	// AttributeCount - no documentation
-	AttributeCount uint64 `json:"attributeCount,omitempty"`
-
 	// Attributes - <nil>
 	Attributes []*SoftLayer_Configuration_Template_Section_Definition_Attribute `json:"attributes,omitempty"`
+
+	// MonitoringDataFlag - <nil>
+	MonitoringDataFlag bool `json:"monitoringDataFlag,omitempty"`
 
 	// DefaultValue - <nil>
 	DefaultValue *SoftLayer_Configuration_Template_Section_Definition_Value `json:"defaultValue,omitempty"`
 
-	// ValueType - <nil>
-	ValueType *SoftLayer_Configuration_Template_Section_Definition_Type `json:"valueType,omitempty"`
+	// AttributeCount - no documentation
+	AttributeCount uint64 `json:"attributeCount,omitempty"`
 }
 
-func (softlayer_configuration_template_section_definition *SoftLayer_Configuration_Template_Section_Definition_Extended) String() string {
+func (softlayer_configuration_template_section_definition *SoftLayer_Configuration_Template_Section_Definition) String() string {
 	return "SoftLayer_Configuration_Template_Section_Definition"
 }

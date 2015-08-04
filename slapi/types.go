@@ -8,8 +8,10 @@ import (
 	"strconv"
 )
 
+// Float64 is a float type that deals with some of the oddities when unmarshalling from the SLAPI
 type Float64 float64
 
+// UnmarshalJSON statisied the json.Unmarshaler interface
 func (f *Float64) UnmarshalJSON(data []byte) error {
 
 	// Attempt parsing the float normally

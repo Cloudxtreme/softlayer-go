@@ -12,23 +12,14 @@ import (
 // hardware transaction status.
 type SoftLayer_Provisioning_Version1_Transaction_Status struct {
 
-	// AverageDuration - no documentation
-	AverageDuration slapi.Float64 `json:"averageDuration,omitempty"`
-
 	// FriendlyName - no documentation
 	FriendlyName string `json:"friendlyName,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-}
 
-func (softlayer_provisioning_version1_transaction_status *SoftLayer_Provisioning_Version1_Transaction_Status) String() string {
-	return "SoftLayer_Provisioning_Version1_Transaction_Status"
-}
-
-// SoftLayer_Provisioning_Version1_Transaction_Status_Extended is SoftLayer_Provisioning_Version1_Transaction_Status with all maskable types.
-type SoftLayer_Provisioning_Version1_Transaction_Status_Extended struct {
-	SoftLayer_Provisioning_Version1_Transaction_Status
+	// AverageDuration - no documentation
+	AverageDuration slapi.Float64 `json:"averageDuration,omitempty"`
 
 	// NonCompletedTransactionCount - no documentation
 	NonCompletedTransactionCount uint64 `json:"nonCompletedTransactionCount,omitempty"`
@@ -37,6 +28,6 @@ type SoftLayer_Provisioning_Version1_Transaction_Status_Extended struct {
 	NonCompletedTransactions []*SoftLayer_Provisioning_Version1_Transaction `json:"nonCompletedTransactions,omitempty"`
 }
 
-func (softlayer_provisioning_version1_transaction_status *SoftLayer_Provisioning_Version1_Transaction_Status_Extended) String() string {
+func (softlayer_provisioning_version1_transaction_status *SoftLayer_Provisioning_Version1_Transaction_Status) String() string {
 	return "SoftLayer_Provisioning_Version1_Transaction_Status"
 }

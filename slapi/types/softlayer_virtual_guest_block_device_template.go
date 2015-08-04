@@ -11,13 +11,6 @@ import (
 // also known as a image template, represents the image of a virtual guest instance.
 type SoftLayer_Virtual_Guest_Block_Device_Template struct {
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// Units - The units that will be used with the disk space property to identify the amount of disk
-	// space used.
-	Units string `json:"units,omitempty"`
-
 	// Device - no documentation
 	Device string `json:"device,omitempty"`
 
@@ -31,15 +24,13 @@ type SoftLayer_Virtual_Guest_Block_Device_Template struct {
 	// GroupId - A block device template's [[SoftLayer_Virtual_Guest_Block_Device_Template_Group|group]]
 	// ID.
 	GroupId int `json:"groupId,omitempty"`
-}
 
-func (softlayer_virtual_guest_block_device_template *SoftLayer_Virtual_Guest_Block_Device_Template) String() string {
-	return "SoftLayer_Virtual_Guest_Block_Device_Template"
-}
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
-// SoftLayer_Virtual_Guest_Block_Device_Template_Extended is SoftLayer_Virtual_Guest_Block_Device_Template with all maskable types.
-type SoftLayer_Virtual_Guest_Block_Device_Template_Extended struct {
-	SoftLayer_Virtual_Guest_Block_Device_Template
+	// Units - The units that will be used with the disk space property to identify the amount of disk
+	// space used.
+	Units string `json:"units,omitempty"`
 
 	// DiskImage - no documentation
 	DiskImage *SoftLayer_Virtual_Disk_Image `json:"diskImage,omitempty"`
@@ -49,6 +40,6 @@ type SoftLayer_Virtual_Guest_Block_Device_Template_Extended struct {
 	Group *SoftLayer_Virtual_Guest_Block_Device_Template_Group `json:"group,omitempty"`
 }
 
-func (softlayer_virtual_guest_block_device_template *SoftLayer_Virtual_Guest_Block_Device_Template_Extended) String() string {
+func (softlayer_virtual_guest_block_device_template *SoftLayer_Virtual_Guest_Block_Device_Template) String() string {
 	return "SoftLayer_Virtual_Guest_Block_Device_Template"
 }

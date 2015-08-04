@@ -11,15 +11,6 @@ import (
 // SoftLayer_Container_Referral_Partner_Commission - <nil>
 type SoftLayer_Container_Referral_Partner_Commission struct {
 
-	// CommissionRate - <nil>
-	CommissionRate slapi.Float64 `json:"commissionRate,omitempty"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// ReferralAccountId - <nil>
-	ReferralAccountId int `json:"referralAccountId,omitempty"`
-
 	// ReferralCompanyName - <nil>
 	ReferralCompanyName string `json:"referralCompanyName,omitempty"`
 
@@ -31,6 +22,15 @@ type SoftLayer_Container_Referral_Partner_Commission struct {
 
 	// CommissionAmount - <nil>
 	CommissionAmount slapi.Float64 `json:"commissionAmount,omitempty"`
+
+	// CommissionRate - <nil>
+	CommissionRate slapi.Float64 `json:"commissionRate,omitempty"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// ReferralAccountId - <nil>
+	ReferralAccountId int `json:"referralAccountId,omitempty"`
 }
 
 func (softlayer_container_referral_partner_commission *SoftLayer_Container_Referral_Partner_Commission) String() string {

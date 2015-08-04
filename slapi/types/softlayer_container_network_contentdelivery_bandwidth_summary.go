@@ -13,9 +13,6 @@ import (
 // bandwidth usage and overages within a given date range.
 type SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary struct {
 
-	// MediaType - no documentation
-	MediaType string `json:"mediaType,omitempty"`
-
 	// StartDateTime - no documentation
 	StartDateTime *time.Time `json:"startDateTime,omitempty"`
 
@@ -33,6 +30,9 @@ type SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary struct {
 
 	// FileName - no documentation
 	FileName string `json:"fileName,omitempty"`
+
+	// MediaType - no documentation
+	MediaType string `json:"mediaType,omitempty"`
 }
 
 func (softlayer_container_network_contentdelivery_bandwidth_summary *SoftLayer_Container_Network_ContentDelivery_Bandwidth_Summary) String() string {

@@ -20,6 +20,13 @@ import (
 // 66.228.118.86/32
 type SoftLayer_User_Customer_Access_Authentication struct {
 
+	// UserId - The internal identifier of the user who attempted to log into the SoftLayer customer
+	// portal.
+	UserId int `json:"userId,omitempty"`
+
+	// Username - The username used when attempting to log into the SoftLayer customer portal
+	Username string `json:"username,omitempty"`
+
 	// CreateDate - The date of an attempt to log into the SoftLayer customer portal.
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -29,26 +36,10 @@ type SoftLayer_User_Customer_Access_Authentication struct {
 	// SuccessFlag - Whether an attempt to log into the SoftLayer customer portal was successful or not.
 	SuccessFlag bool `json:"successFlag,omitempty"`
 
-	// UserId - The internal identifier of the user who attempted to log into the SoftLayer customer
-	// portal.
-	UserId int `json:"userId,omitempty"`
-
-	// Username - The username used when attempting to log into the SoftLayer customer portal
-	Username string `json:"username,omitempty"`
-}
-
-func (softlayer_user_customer_access_authentication *SoftLayer_User_Customer_Access_Authentication) String() string {
-	return "SoftLayer_User_Customer_Access_Authentication"
-}
-
-// SoftLayer_User_Customer_Access_Authentication_Extended is SoftLayer_User_Customer_Access_Authentication with all maskable types.
-type SoftLayer_User_Customer_Access_Authentication_Extended struct {
-	SoftLayer_User_Customer_Access_Authentication
-
 	// User - The user who has attempted to log into the SoftLayer customer portal.
 	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
-func (softlayer_user_customer_access_authentication *SoftLayer_User_Customer_Access_Authentication_Extended) String() string {
+func (softlayer_user_customer_access_authentication *SoftLayer_User_Customer_Access_Authentication) String() string {
 	return "SoftLayer_User_Customer_Access_Authentication"
 }

@@ -13,6 +13,13 @@ type SoftLayer_Product_Package_Order_Configuration struct {
 	// PackageId - no documentation
 	PackageId int `json:"packageId,omitempty"`
 
+	// Sort - This is an integer used to show the order in which each item Category should be displayed.
+	// This is merely the suggested order.
+	Sort int `json:"sort,omitempty"`
+
+	// ItemCategoryId - no documentation
+	ItemCategoryId int `json:"itemCategoryId,omitempty"`
+
 	// ErrorMessage - The error message displayed if the submitted order does not contain this item
 	// category, if it is required.
 	ErrorMessage string `json:"errorMessage,omitempty"`
@@ -25,24 +32,8 @@ type SoftLayer_Product_Package_Order_Configuration struct {
 	// SoftLayer_Product_Item_Price with this category as part of the order.
 	IsRequired int `json:"isRequired,omitempty"`
 
-	// ItemCategoryId - no documentation
-	ItemCategoryId int `json:"itemCategoryId,omitempty"`
-
 	// OrderStepId - The order step ID for this particular option in the package.
 	OrderStepId int `json:"orderStepId,omitempty"`
-
-	// Sort - This is an integer used to show the order in which each item Category should be displayed.
-	// This is merely the suggested order.
-	Sort int `json:"sort,omitempty"`
-}
-
-func (softlayer_product_package_order_configuration *SoftLayer_Product_Package_Order_Configuration) String() string {
-	return "SoftLayer_Product_Package_Order_Configuration"
-}
-
-// SoftLayer_Product_Package_Order_Configuration_Extended is SoftLayer_Product_Package_Order_Configuration with all maskable types.
-type SoftLayer_Product_Package_Order_Configuration_Extended struct {
-	SoftLayer_Product_Package_Order_Configuration
 
 	// ItemCategory - no documentation
 	ItemCategory *SoftLayer_Product_Item_Category `json:"itemCategory,omitempty"`
@@ -54,6 +45,6 @@ type SoftLayer_Product_Package_Order_Configuration_Extended struct {
 	Step *SoftLayer_Product_Package_Order_Step `json:"step,omitempty"`
 }
 
-func (softlayer_product_package_order_configuration *SoftLayer_Product_Package_Order_Configuration_Extended) String() string {
+func (softlayer_product_package_order_configuration *SoftLayer_Product_Package_Order_Configuration) String() string {
 	return "SoftLayer_Product_Package_Order_Configuration"
 }

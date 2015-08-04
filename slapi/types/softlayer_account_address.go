@@ -9,8 +9,23 @@ type SoftLayer_Account_Address struct {
 	// AccountId - <nil>
 	AccountId int `json:"accountId,omitempty"`
 
-	// ContactName - no documentation
-	ContactName string `json:"contactName,omitempty"`
+	// Address2 - no documentation
+	Address2 string `json:"address2,omitempty"`
+
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// IsActive - no documentation
+	IsActive int `json:"isActive,omitempty"`
+
+	// City - no documentation
+	City string `json:"city,omitempty"`
+
+	// Address1 - Line 1 of the address (normally the street address).
+	Address1 string `json:"address1,omitempty"`
 
 	// Country - no documentation
 	Country string `json:"country,omitempty"`
@@ -21,41 +36,20 @@ type SoftLayer_Account_Address struct {
 	// PostalCode - no documentation
 	PostalCode string `json:"postalCode,omitempty"`
 
-	// City - no documentation
-	City string `json:"city,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// IsActive - no documentation
-	IsActive int `json:"isActive,omitempty"`
-
 	// State - no documentation
 	State string `json:"state,omitempty"`
 
-	// Address1 - Line 1 of the address (normally the street address).
-	Address1 string `json:"address1,omitempty"`
+	// ContactName - no documentation
+	ContactName string `json:"contactName,omitempty"`
 
-	// Address2 - no documentation
-	Address2 string `json:"address2,omitempty"`
+	// CreateUser - no documentation
+	CreateUser *SoftLayer_User_Customer `json:"createUser,omitempty"`
 
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
-}
-
-func (softlayer_account_address *SoftLayer_Account_Address) String() string {
-	return "SoftLayer_Account_Address"
-}
-
-// SoftLayer_Account_Address_Extended is SoftLayer_Account_Address with all maskable types.
-type SoftLayer_Account_Address_Extended struct {
-	SoftLayer_Account_Address
+	// ModifyUser - no documentation
+	ModifyUser *SoftLayer_User_Customer `json:"modifyUser,omitempty"`
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`
-
-	// Location - no documentation
-	Location *SoftLayer_Location `json:"location,omitempty"`
 
 	// ModifyEmployee - no documentation
 	ModifyEmployee *SoftLayer_User_Employee `json:"modifyEmployee,omitempty"`
@@ -63,13 +57,10 @@ type SoftLayer_Account_Address_Extended struct {
 	// Type - no documentation
 	Type *SoftLayer_Account_Address_Type `json:"type,omitempty"`
 
-	// CreateUser - no documentation
-	CreateUser *SoftLayer_User_Customer `json:"createUser,omitempty"`
-
-	// ModifyUser - no documentation
-	ModifyUser *SoftLayer_User_Customer `json:"modifyUser,omitempty"`
+	// Location - no documentation
+	Location *SoftLayer_Location `json:"location,omitempty"`
 }
 
-func (softlayer_account_address *SoftLayer_Account_Address_Extended) String() string {
+func (softlayer_account_address *SoftLayer_Account_Address) String() string {
 	return "SoftLayer_Account_Address"
 }

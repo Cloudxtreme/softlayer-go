@@ -12,21 +12,12 @@ type SoftLayer_Hardware_Component_Model_Generic_MarketingFeature struct {
 
 	// Price - no documentation
 	Price string `json:"price,omitempty"`
-}
-
-func (softlayer_hardware_component_model_generic_marketingfeature *SoftLayer_Hardware_Component_Model_Generic_MarketingFeature) String() string {
-	return "SoftLayer_Hardware_Component_Model_Generic_MarketingFeature"
-}
-
-// SoftLayer_Hardware_Component_Model_Generic_MarketingFeature_Extended is SoftLayer_Hardware_Component_Model_Generic_MarketingFeature with all maskable types.
-type SoftLayer_Hardware_Component_Model_Generic_MarketingFeature_Extended struct {
-	SoftLayer_Hardware_Component_Model_Generic_MarketingFeature
 
 	// HardwareGenericComponentModel - The generic component model for a list of advertising or marketing
 	// features
 	HardwareGenericComponentModel *SoftLayer_Hardware_Component_Model_Generic `json:"hardwareGenericComponentModel,omitempty"`
 }
 
-func (softlayer_hardware_component_model_generic_marketingfeature *SoftLayer_Hardware_Component_Model_Generic_MarketingFeature_Extended) String() string {
+func (softlayer_hardware_component_model_generic_marketingfeature *SoftLayer_Hardware_Component_Model_Generic_MarketingFeature) String() string {
 	return "SoftLayer_Hardware_Component_Model_Generic_MarketingFeature"
 }

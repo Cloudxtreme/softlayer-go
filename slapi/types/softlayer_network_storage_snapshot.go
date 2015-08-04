@@ -9,127 +9,140 @@ import (
 // SoftLayer_Network_Storage_Snapshot - <nil>
 type SoftLayer_Network_Storage_Snapshot struct {
 
-	// NasType - A Storage account's type. Valid examples are and
-	NasType string `json:"nasType,omitempty"`
-
-	// ServiceProviderId - no documentation
-	ServiceProviderId int `json:"serviceProviderId,omitempty"`
-
-	// CapacityGb - A Storage account's capacity, measured in gigabytes.
-	CapacityGb int `json:"capacityGb,omitempty"`
-
-	// HostId - The unique identification number of the host associated with a Storage volume.
-	HostId int `json:"hostId,omitempty"`
-
 	// AccountId - The internal identifier of the SoftLayer customer account that a Storage account belongs
 	// to.
 	AccountId int `json:"accountId,omitempty"`
 
-	// GuestId - The unique identification number of the guest associated with a Storage volume.
-	GuestId int `json:"guestId,omitempty"`
+	// HostId - The unique identification number of the host associated with a Storage volume.
+	HostId int `json:"hostId,omitempty"`
 
-	// Notes - no documentation
-	Notes string `json:"notes,omitempty"`
-
-	// UpgradableFlag - This flag indicates whether this storage type is upgradable or not.
-	UpgradableFlag bool `json:"upgradableFlag,omitempty"`
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// HardwareId - The server that is associated with a Storage service.
 	HardwareId int `json:"hardwareId,omitempty"`
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// CapacityGb - A Storage account's capacity, measured in gigabytes.
+	CapacityGb int `json:"capacityGb,omitempty"`
+
+	// Notes - no documentation
+	Notes string `json:"notes,omitempty"`
+
+	// ServiceProviderId - no documentation
+	ServiceProviderId int `json:"serviceProviderId,omitempty"`
+
+	// Username - The username used to access a non-EVault Storage volume. This username is used to
+	// register the EVault server agent with the vault backup system.
+	Username string `json:"username,omitempty"`
+
+	// NasType - A Storage account's type. Valid examples are and
+	NasType string `json:"nasType,omitempty"`
+
+	// GuestId - The unique identification number of the guest associated with a Storage volume.
+	GuestId int `json:"guestId,omitempty"`
+
+	// UpgradableFlag - This flag indicates whether this storage type is upgradable or not.
+	UpgradableFlag bool `json:"upgradableFlag,omitempty"`
 
 	// Password - The password used to access a non-EVault Storage volume. This password is used to
 	// register the EVault server agent with the vault backup system.
 	Password string `json:"password,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
+	// ReplicatingLunCount - A count of the iSCSI LUN volumes being replicated by this network storage
+	// volume.
+	ReplicatingLunCount uint64 `json:"replicatingLunCount,omitempty"`
 
-	// Username - The username used to access a non-EVault Storage volume. This username is used to
-	// register the EVault server agent with the vault backup system.
-	Username string `json:"username,omitempty"`
-}
+	// IscsiLuns - Relationship between a container volume and iSCSI LUNs.
+	IscsiLuns []*SoftLayer_Network_Storage `json:"iscsiLuns,omitempty"`
 
-func (softlayer_network_storage_snapshot *SoftLayer_Network_Storage_Snapshot) String() string {
-	return "SoftLayer_Network_Storage_Snapshot"
-}
+	// MetricTrackingObject - A network storage volume's metric tracking object. This object records all
+	// periodic polled data available to this volume.
+	MetricTrackingObject *SoftLayer_Metric_Tracking_Object `json:"metricTrackingObject,omitempty"`
 
-// SoftLayer_Network_Storage_Snapshot_Extended is SoftLayer_Network_Storage_Snapshot with all maskable types.
-type SoftLayer_Network_Storage_Snapshot_Extended struct {
-	SoftLayer_Network_Storage_Snapshot
-
-	// StorageGroups - The network storage groups this volume is attached to.
-	StorageGroups []*SoftLayer_Network_Storage_Group `json:"storageGroups,omitempty"`
-
-	// TotalBytesUsed - no documentation
-	TotalBytesUsed string `json:"totalBytesUsed,omitempty"`
-
-	// HourlySchedule - The Hourly Schedule which is associated with this network storage volume.
-	HourlySchedule *SoftLayer_Network_Storage_Schedule `json:"hourlySchedule,omitempty"`
-
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account,omitempty"`
-
-	// ActiveTransactions - The currently active transactions on a network storage volume.
-	ActiveTransactions []*SoftLayer_Provisioning_Version1_Transaction `json:"activeTransactions,omitempty"`
-
-	// ReplicationEvents - no documentation
-	ReplicationEvents []*SoftLayer_Network_Storage_Event `json:"replicationEvents,omitempty"`
-
-	// IscsiLunCount - A count of relationship between a container volume and iSCSI LUNs.
-	IscsiLunCount uint64 `json:"iscsiLunCount,omitempty"`
-
-	// SnapshotCapacityGb - no documentation
-	SnapshotCapacityGb string `json:"snapshotCapacityGb,omitempty"`
-
-	// AllowableVirtualGuests - The list of Virtual Guest that can be attached to this storage.
-	AllowableVirtualGuests []*SoftLayer_Virtual_Guest `json:"allowableVirtualGuests,omitempty"`
-
-	// VolumeHistory - The username and password history for a Storage service.
-	VolumeHistory []*SoftLayer_Network_Storage_History `json:"volumeHistory,omitempty"`
-
-	// StorageGroupCount - A count of the network storage groups this volume is attached to.
-	StorageGroupCount uint64 `json:"storageGroupCount,omitempty"`
-
-	// AllowedIpAddressCount - A count of the SoftLayer_Network_Subnet_IpAddress objects which are allowed
-	// access to this storage volume.
-	AllowedIpAddressCount uint64 `json:"allowedIpAddressCount,omitempty"`
-
-	// SnapshotDeletionThresholdPercentage - The percentage of used snapshot space after which to delete
-	// automated snapshots.
-	SnapshotDeletionThresholdPercentage string `json:"snapshotDeletionThresholdPercentage,omitempty"`
-
-	// AllowedReplicationVirtualGuests - The SoftLayer_Hardware objects which are allowed access to this
-	// storage volume's Replicant.
-	AllowedReplicationVirtualGuests []*SoftLayer_Virtual_Guest `json:"allowedReplicationVirtualGuests,omitempty"`
-
-	// Hardware - When applicable, the hardware associated with a Storage service.
-	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
-
-	// ServiceResourceName - no documentation
-	ServiceResourceName string `json:"serviceResourceName,omitempty"`
-
-	// Partnerships - The volumes or snapshots partnered with a network storage volume.
-	Partnerships []*SoftLayer_Network_Storage_Partnership `json:"partnerships,omitempty"`
-
-	// VolumeStatus - no documentation
-	VolumeStatus string `json:"volumeStatus,omitempty"`
-
-	// AllowedReplicationSubnets - The SoftLayer_Network_Subnet objects which are allowed access to this
-	// storage volume's Replicant.
-	AllowedReplicationSubnets []*SoftLayer_Network_Subnet `json:"allowedReplicationSubnets,omitempty"`
+	// AllowedVirtualGuestCount - A count of the SoftLayer_Virtual_Guest objects which are allowed access
+	// to this storage volume.
+	AllowedVirtualGuestCount uint64 `json:"allowedVirtualGuestCount,omitempty"`
 
 	// AllowedSubnets - The SoftLayer_Network_Subnet objects which are allowed access to this storage
 	// volume.
 	AllowedSubnets []*SoftLayer_Network_Subnet `json:"allowedSubnets,omitempty"`
 
-	// ActiveTransactionCount - A count of the currently active transactions on a network storage volume.
-	ActiveTransactionCount uint64 `json:"activeTransactionCount,omitempty"`
+	// ParentPartnerships - The volumes or snapshots partnered with a network storage volume in a parental
+	// role.
+	ParentPartnerships []*SoftLayer_Network_Storage_Partnership `json:"parentPartnerships,omitempty"`
 
-	// PermissionsGroups - no documentation
-	PermissionsGroups []*SoftLayer_Network_Storage_Group `json:"permissionsGroups,omitempty"`
+	// Snapshots - The snapshots associated with this SoftLayer_Network_Storage volume.
+	Snapshots []*SoftLayer_Network_Storage `json:"snapshots,omitempty"`
+
+	// PartnershipCount - A count of the volumes or snapshots partnered with a network storage volume.
+	PartnershipCount uint64 `json:"partnershipCount,omitempty"`
+
+	// CreationScheduleId - The schedule id which was executed to create a snapshot.
+	CreationScheduleId string `json:"creationScheduleId,omitempty"`
+
+	// AllowedReplicationIpAddresses - The SoftLayer_Network_Subnet_IpAddress objects which are allowed
+	// access to this storage volume's Replicant.
+	AllowedReplicationIpAddresses []*SoftLayer_Network_Subnet_IpAddress `json:"allowedReplicationIpAddresses,omitempty"`
+
+	// AllowedHardware - The SoftLayer_Hardware objects which are allowed access to this storage volume.
+	AllowedHardware []*SoftLayer_Hardware `json:"allowedHardware,omitempty"`
+
+	// OsType - A volume's configured SoftLayer_Network_Storage_Iscsi_OS_Type.
+	OsType *SoftLayer_Network_Storage_Iscsi_OS_Type `json:"osType,omitempty"`
+
+	// PropertyCount - A count of the properties used to provide additional details about a network storage
+	// volume.
+	PropertyCount uint64 `json:"propertyCount,omitempty"`
+
+	// ReplicationPartners - The network storage volumes configured to be replicants of a volume.
+	ReplicationPartners []*SoftLayer_Network_Storage `json:"replicationPartners,omitempty"`
+
+	// PermissionsGroupCount - A count of all permissions group(s) this volume is in.
+	PermissionsGroupCount uint64 `json:"permissionsGroupCount,omitempty"`
+
+	// AllowableHardwareCount - A count of the list of Hardware that can be attached to this storage.
+	AllowableHardwareCount uint64 `json:"allowableHardwareCount,omitempty"`
+
+	// BillingItem - no documentation
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
+
+	// ScheduleCount - A count of the schedules which are associated with a network storage volume.
+	ScheduleCount uint64 `json:"scheduleCount,omitempty"`
+
+	// IscsiLunCount - A count of relationship between a container volume and iSCSI LUNs.
+	IscsiLunCount uint64 `json:"iscsiLunCount,omitempty"`
+
+	// ServiceResourceBackendIpAddress - no documentation
+	ServiceResourceBackendIpAddress string `json:"serviceResourceBackendIpAddress,omitempty"`
+
+	// UsageNotification - no documentation
+	UsageNotification *SoftLayer_Notification `json:"usageNotification,omitempty"`
+
+	// Properties - The properties used to provide additional details about a network storage volume.
+	Properties []*SoftLayer_Network_Storage_Property `json:"properties,omitempty"`
+
+	// Schedules - The schedules which are associated with a network storage volume.
+	Schedules []*SoftLayer_Network_Storage_Schedule `json:"schedules,omitempty"`
+
+	// NotificationSubscribers - The subscribers that will be notified for usage amount warnings and
+	// overages.
+	NotificationSubscribers []*SoftLayer_Notification_User_Subscriber `json:"notificationSubscribers,omitempty"`
+
+	// ReplicationEvents - no documentation
+	ReplicationEvents []*SoftLayer_Network_Storage_Event `json:"replicationEvents,omitempty"`
+
+	// AllowedReplicationVirtualGuestCount - A count of the SoftLayer_Hardware objects which are allowed
+	// access to this storage volume's Replicant.
+	AllowedReplicationVirtualGuestCount uint64 `json:"allowedReplicationVirtualGuestCount,omitempty"`
+
+	// StorageGroups - The network storage groups this volume is attached to.
+	StorageGroups []*SoftLayer_Network_Storage_Group `json:"storageGroups,omitempty"`
+
+	// LunId - no documentation
+	LunId string `json:"lunId,omitempty"`
 
 	// AllowableVirtualGuestCount - A count of the list of Virtual Guest that can be attached to this
 	// storage.
@@ -139,219 +152,197 @@ type SoftLayer_Network_Storage_Snapshot_Extended struct {
 	// network storage volume.
 	TotalScheduleSnapshotRetentionCount uint `json:"totalScheduleSnapshotRetentionCount,omitempty"`
 
-	// Properties - The properties used to provide additional details about a network storage volume.
-	Properties []*SoftLayer_Network_Storage_Property `json:"properties,omitempty"`
+	// ReplicationPartnerCount - A count of the network storage volumes configured to be replicants of a
+	// volume.
+	ReplicationPartnerCount uint64 `json:"replicationPartnerCount,omitempty"`
 
-	// VirtualGuest - When applicable, the virtual guest associated with a Storage service.
-	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest,omitempty"`
-
-	// AllowableHardwareCount - A count of the list of Hardware that can be attached to this storage.
-	AllowableHardwareCount uint64 `json:"allowableHardwareCount,omitempty"`
-
-	// ReplicatingVolume - The network storage volume being replicated by a volume.
-	ReplicatingVolume *SoftLayer_Network_Storage `json:"replicatingVolume,omitempty"`
-
-	// BytesUsed - no documentation
-	BytesUsed string `json:"bytesUsed,omitempty"`
-
-	// VendorName - no documentation
-	VendorName string `json:"vendorName,omitempty"`
+	// BillingItemCategory - <nil>
+	BillingItemCategory *SoftLayer_Product_Item_Category `json:"billingItemCategory,omitempty"`
 
 	// AllowableHardware - The list of Hardware that can be attached to this storage.
 	AllowableHardware []*SoftLayer_Hardware `json:"allowableHardware,omitempty"`
 
-	// CredentialCount - no documentation
-	CredentialCount uint64 `json:"credentialCount,omitempty"`
+	// SnapshotSizeBytes - no documentation
+	SnapshotSizeBytes string `json:"snapshotSizeBytes,omitempty"`
 
-	// PropertyCount - A count of the properties used to provide additional details about a network storage
-	// volume.
-	PropertyCount uint64 `json:"propertyCount,omitempty"`
-
-	// Snapshots - The snapshots associated with this SoftLayer_Network_Storage volume.
-	Snapshots []*SoftLayer_Network_Storage `json:"snapshots,omitempty"`
-
-	// ReplicatingLunCount - A count of the iSCSI LUN volumes being replicated by this network storage
-	// volume.
-	ReplicatingLunCount uint64 `json:"replicatingLunCount,omitempty"`
-
-	// Schedules - The schedules which are associated with a network storage volume.
-	Schedules []*SoftLayer_Network_Storage_Schedule `json:"schedules,omitempty"`
+	// VolumeHistoryCount - A count of the username and password history for a Storage service.
+	VolumeHistoryCount uint64 `json:"volumeHistoryCount,omitempty"`
 
 	// DailySchedule - The Daily Schedule which is associated with this network storage volume.
 	DailySchedule *SoftLayer_Network_Storage_Schedule `json:"dailySchedule,omitempty"`
 
-	// AllowedVirtualGuestCount - A count of the SoftLayer_Virtual_Guest objects which are allowed access
-	// to this storage volume.
-	AllowedVirtualGuestCount uint64 `json:"allowedVirtualGuestCount,omitempty"`
+	// ReplicatingLuns - The iSCSI LUN volumes being replicated by this network storage volume.
+	ReplicatingLuns []*SoftLayer_Network_Storage `json:"replicatingLuns,omitempty"`
 
-	// PartnershipCount - A count of the volumes or snapshots partnered with a network storage volume.
-	PartnershipCount uint64 `json:"partnershipCount,omitempty"`
-
-	// MetricTrackingObject - A network storage volume's metric tracking object. This object records all
-	// periodic polled data available to this volume.
-	MetricTrackingObject *SoftLayer_Metric_Tracking_Object `json:"metricTrackingObject,omitempty"`
-
-	// AllowedReplicationSubnetCount - A count of the SoftLayer_Network_Subnet objects which are allowed
-	// access to this storage volume's Replicant.
-	AllowedReplicationSubnetCount uint64 `json:"allowedReplicationSubnetCount,omitempty"`
-
-	// SnapshotSpaceAvailable - no documentation
-	SnapshotSpaceAvailable string `json:"snapshotSpaceAvailable,omitempty"`
-
-	// SnapshotSizeBytes - no documentation
-	SnapshotSizeBytes string `json:"snapshotSizeBytes,omitempty"`
-
-	// MountableFlag - Whether or not a network storage volume may be mounted.
-	MountableFlag string `json:"mountableFlag,omitempty"`
-
-	// Credentials - <nil>
-	Credentials []*SoftLayer_Network_Storage_Credential `json:"credentials,omitempty"`
-
-	// WebccAccount - The account username and password for the EVault webCC interface.
-	WebccAccount *SoftLayer_Account_Password `json:"webccAccount,omitempty"`
-
-	// Iops - The maximum number of IOPs selected for this volume.
-	Iops string `json:"iops,omitempty"`
-
-	// ReplicationPartners - The network storage volumes configured to be replicants of a volume.
-	ReplicationPartners []*SoftLayer_Network_Storage `json:"replicationPartners,omitempty"`
-
-	// ScheduleCount - A count of the schedules which are associated with a network storage volume.
-	ScheduleCount uint64 `json:"scheduleCount,omitempty"`
-
-	// AllowedVirtualGuests - The SoftLayer_Virtual_Guest objects which are allowed access to this storage
-	// volume.
-	AllowedVirtualGuests []*SoftLayer_Virtual_Guest `json:"allowedVirtualGuests,omitempty"`
-
-	// ReplicationStatus - The current replication status of a network storage volume. Indicates Failover
-	// or Failback status.
-	ReplicationStatus string `json:"replicationStatus,omitempty"`
-
-	// NotificationSubscriberCount - A count of the subscribers that will be notified for usage amount
-	// warnings and overages.
-	NotificationSubscriberCount uint64 `json:"notificationSubscriberCount,omitempty"`
-
-	// LunId - no documentation
-	LunId string `json:"lunId,omitempty"`
-
-	// CreationSchedule - If applicable, the schedule which was executed to create a snapshot.
-	CreationSchedule *SoftLayer_Network_Storage_Schedule `json:"creationSchedule,omitempty"`
+	// CredentialCount - no documentation
+	CredentialCount uint64 `json:"credentialCount,omitempty"`
 
 	// ParentPartnershipCount - A count of the volumes or snapshots partnered with a network storage volume
 	// in a parental role.
 	ParentPartnershipCount uint64 `json:"parentPartnershipCount,omitempty"`
 
-	// AllowedReplicationHardwareCount - A count of the SoftLayer_Hardware objects which are allowed access
-	// to this storage volume's Replicant.
-	AllowedReplicationHardwareCount uint64 `json:"allowedReplicationHardwareCount,omitempty"`
+	// AccountPassword - Other usernames and passwords associated with a Storage volume.
+	AccountPassword *SoftLayer_Account_Password `json:"accountPassword,omitempty"`
 
-	// ReplicationEventCount - no documentation
-	ReplicationEventCount uint64 `json:"replicationEventCount,omitempty"`
+	// AllowableVirtualGuests - The list of Virtual Guest that can be attached to this storage.
+	AllowableVirtualGuests []*SoftLayer_Virtual_Guest `json:"allowableVirtualGuests,omitempty"`
 
-	// PermissionsGroupCount - A count of all permissions group(s) this volume is in.
-	PermissionsGroupCount uint64 `json:"permissionsGroupCount,omitempty"`
+	// ActiveTransactions - The currently active transactions on a network storage volume.
+	ActiveTransactions []*SoftLayer_Provisioning_Version1_Transaction `json:"activeTransactions,omitempty"`
 
-	// ParentVolume - The parent volume of a volume in a complex storage relationship.
-	ParentVolume *SoftLayer_Network_Storage `json:"parentVolume,omitempty"`
+	// ReplicatingVolume - The network storage volume being replicated by a volume.
+	ReplicatingVolume *SoftLayer_Network_Storage `json:"replicatingVolume,omitempty"`
 
-	// BillingItem - no documentation
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
+	// SnapshotCapacityGb - no documentation
+	SnapshotCapacityGb string `json:"snapshotCapacityGb,omitempty"`
 
-	// WeeklySchedule - The Weekly Schedule which is associated with this network storage volume.
-	WeeklySchedule *SoftLayer_Network_Storage_Schedule `json:"weeklySchedule,omitempty"`
+	// AllowedIpAddressCount - A count of the SoftLayer_Network_Subnet_IpAddress objects which are allowed
+	// access to this storage volume.
+	AllowedIpAddressCount uint64 `json:"allowedIpAddressCount,omitempty"`
 
-	// AllowedSubnetCount - A count of the SoftLayer_Network_Subnet objects which are allowed access to
-	// this storage volume.
-	AllowedSubnetCount uint64 `json:"allowedSubnetCount,omitempty"`
-
-	// SnapshotCount - A count of the snapshots associated with this SoftLayer_Network_Storage volume.
-	SnapshotCount uint64 `json:"snapshotCount,omitempty"`
-
-	// NotificationSubscribers - The subscribers that will be notified for usage amount warnings and
-	// overages.
-	NotificationSubscribers []*SoftLayer_Notification_User_Subscriber `json:"notificationSubscribers,omitempty"`
-
-	// OsType - A volume's configured SoftLayer_Network_Storage_Iscsi_OS_Type.
-	OsType *SoftLayer_Network_Storage_Iscsi_OS_Type `json:"osType,omitempty"`
-
-	// CreationScheduleId - The schedule id which was executed to create a snapshot.
-	CreationScheduleId string `json:"creationScheduleId,omitempty"`
-
-	// BillingItemCategory - <nil>
-	BillingItemCategory *SoftLayer_Product_Item_Category `json:"billingItemCategory,omitempty"`
-
-	// AllowedHardware - The SoftLayer_Hardware objects which are allowed access to this storage volume.
-	AllowedHardware []*SoftLayer_Hardware `json:"allowedHardware,omitempty"`
+	// PermissionsGroups - no documentation
+	PermissionsGroups []*SoftLayer_Network_Storage_Group `json:"permissionsGroups,omitempty"`
 
 	// VolumeName - no documentation
 	VolumeName string `json:"volumeName,omitempty"`
 
-	// SnapshotCreationTimestamp - The creation timestamp of the snapshot on the storage platform.
-	SnapshotCreationTimestamp string `json:"snapshotCreationTimestamp,omitempty"`
-
-	// AllowedReplicationIpAddressCount - A count of the SoftLayer_Network_Subnet_IpAddress objects which
-	// are allowed access to this storage volume's Replicant.
-	AllowedReplicationIpAddressCount uint64 `json:"allowedReplicationIpAddressCount,omitempty"`
-
-	// ReplicationPartnerCount - A count of the network storage volumes configured to be replicants of a
-	// volume.
-	ReplicationPartnerCount uint64 `json:"replicationPartnerCount,omitempty"`
-
-	// ParentPartnerships - The volumes or snapshots partnered with a network storage volume in a parental
-	// role.
-	ParentPartnerships []*SoftLayer_Network_Storage_Partnership `json:"parentPartnerships,omitempty"`
-
-	// EventCount - A count of the events which have taken place on a network storage volume.
-	EventCount uint64 `json:"eventCount,omitempty"`
-
-	// OsTypeId - A volume's configured SoftLayer_Network_Storage_Iscsi_OS_Type
-	OsTypeId string `json:"osTypeId,omitempty"`
-
-	// ReplicatingLuns - The iSCSI LUN volumes being replicated by this network storage volume.
-	ReplicatingLuns []*SoftLayer_Network_Storage `json:"replicatingLuns,omitempty"`
-
-	// AllowedHardwareCount - A count of the SoftLayer_Hardware objects which are allowed access to this
-	// storage volume.
-	AllowedHardwareCount uint64 `json:"allowedHardwareCount,omitempty"`
-
-	// AllowedReplicationVirtualGuestCount - A count of the SoftLayer_Hardware objects which are allowed
-	// access to this storage volume's Replicant.
-	AllowedReplicationVirtualGuestCount uint64 `json:"allowedReplicationVirtualGuestCount,omitempty"`
+	// ReplicationEventCount - no documentation
+	ReplicationEventCount uint64 `json:"replicationEventCount,omitempty"`
 
 	// AllowedReplicationHardware - The SoftLayer_Hardware objects which are allowed access to this storage
 	// volume's Replicant.
 	AllowedReplicationHardware []*SoftLayer_Hardware `json:"allowedReplicationHardware,omitempty"`
 
-	// VolumeHistoryCount - A count of the username and password history for a Storage service.
-	VolumeHistoryCount uint64 `json:"volumeHistoryCount,omitempty"`
+	// ReplicationStatus - The current replication status of a network storage volume. Indicates Failover
+	// or Failback status.
+	ReplicationStatus string `json:"replicationStatus,omitempty"`
+
+	// Partnerships - The volumes or snapshots partnered with a network storage volume.
+	Partnerships []*SoftLayer_Network_Storage_Partnership `json:"partnerships,omitempty"`
+
+	// ServiceResource - The network resource a Storage service is connected to.
+	ServiceResource *SoftLayer_Network_Service_Resource `json:"serviceResource,omitempty"`
+
+	// CreationSchedule - If applicable, the schedule which was executed to create a snapshot.
+	CreationSchedule *SoftLayer_Network_Storage_Schedule `json:"creationSchedule,omitempty"`
 
 	// AllowedIpAddresses - The SoftLayer_Network_Subnet_IpAddress objects which are allowed access to this
 	// storage volume.
 	AllowedIpAddresses []*SoftLayer_Network_Subnet_IpAddress `json:"allowedIpAddresses,omitempty"`
 
-	// UsageNotification - no documentation
-	UsageNotification *SoftLayer_Notification `json:"usageNotification,omitempty"`
+	// VendorName - no documentation
+	VendorName string `json:"vendorName,omitempty"`
+
+	// AllowedReplicationSubnets - The SoftLayer_Network_Subnet objects which are allowed access to this
+	// storage volume's Replicant.
+	AllowedReplicationSubnets []*SoftLayer_Network_Subnet `json:"allowedReplicationSubnets,omitempty"`
+
+	// AllowedReplicationHardwareCount - A count of the SoftLayer_Hardware objects which are allowed access
+	// to this storage volume's Replicant.
+	AllowedReplicationHardwareCount uint64 `json:"allowedReplicationHardwareCount,omitempty"`
+
+	// WebccAccount - The account username and password for the EVault webCC interface.
+	WebccAccount *SoftLayer_Account_Password `json:"webccAccount,omitempty"`
+
+	// VirtualGuest - When applicable, the virtual guest associated with a Storage service.
+	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest,omitempty"`
+
+	// MountableFlag - Whether or not a network storage volume may be mounted.
+	MountableFlag string `json:"mountableFlag,omitempty"`
+
+	// OsTypeId - A volume's configured SoftLayer_Network_Storage_Iscsi_OS_Type
+	OsTypeId string `json:"osTypeId,omitempty"`
+
+	// AllowedVirtualGuests - The SoftLayer_Virtual_Guest objects which are allowed access to this storage
+	// volume.
+	AllowedVirtualGuests []*SoftLayer_Virtual_Guest `json:"allowedVirtualGuests,omitempty"`
+
+	// Iops - The maximum number of IOPs selected for this volume.
+	Iops string `json:"iops,omitempty"`
+
+	// ActiveTransactionCount - A count of the currently active transactions on a network storage volume.
+	ActiveTransactionCount uint64 `json:"activeTransactionCount,omitempty"`
+
+	// TotalBytesUsed - no documentation
+	TotalBytesUsed string `json:"totalBytesUsed,omitempty"`
+
+	// AllowedReplicationSubnetCount - A count of the SoftLayer_Network_Subnet objects which are allowed
+	// access to this storage volume's Replicant.
+	AllowedReplicationSubnetCount uint64 `json:"allowedReplicationSubnetCount,omitempty"`
+
+	// ServiceResourceName - no documentation
+	ServiceResourceName string `json:"serviceResourceName,omitempty"`
+
+	// NotificationSubscriberCount - A count of the subscribers that will be notified for usage amount
+	// warnings and overages.
+	NotificationSubscriberCount uint64 `json:"notificationSubscriberCount,omitempty"`
+
+	// BytesUsed - no documentation
+	BytesUsed string `json:"bytesUsed,omitempty"`
+
+	// SnapshotCount - A count of the snapshots associated with this SoftLayer_Network_Storage volume.
+	SnapshotCount uint64 `json:"snapshotCount,omitempty"`
+
+	// VolumeStatus - no documentation
+	VolumeStatus string `json:"volumeStatus,omitempty"`
+
+	// VolumeHistory - The username and password history for a Storage service.
+	VolumeHistory []*SoftLayer_Network_Storage_History `json:"volumeHistory,omitempty"`
+
+	// SnapshotCreationTimestamp - The creation timestamp of the snapshot on the storage platform.
+	SnapshotCreationTimestamp string `json:"snapshotCreationTimestamp,omitempty"`
+
+	// Credentials - <nil>
+	Credentials []*SoftLayer_Network_Storage_Credential `json:"credentials,omitempty"`
+
+	// StorageGroupCount - A count of the network storage groups this volume is attached to.
+	StorageGroupCount uint64 `json:"storageGroupCount,omitempty"`
+
+	// SnapshotSpaceAvailable - no documentation
+	SnapshotSpaceAvailable string `json:"snapshotSpaceAvailable,omitempty"`
+
+	// AllowedHardwareCount - A count of the SoftLayer_Hardware objects which are allowed access to this
+	// storage volume.
+	AllowedHardwareCount uint64 `json:"allowedHardwareCount,omitempty"`
+
+	// WeeklySchedule - The Weekly Schedule which is associated with this network storage volume.
+	WeeklySchedule *SoftLayer_Network_Storage_Schedule `json:"weeklySchedule,omitempty"`
+
+	// EventCount - A count of the events which have taken place on a network storage volume.
+	EventCount uint64 `json:"eventCount,omitempty"`
+
+	// AllowedSubnetCount - A count of the SoftLayer_Network_Subnet objects which are allowed access to
+	// this storage volume.
+	AllowedSubnetCount uint64 `json:"allowedSubnetCount,omitempty"`
+
+	// Hardware - When applicable, the hardware associated with a Storage service.
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
+
+	// ParentVolume - The parent volume of a volume in a complex storage relationship.
+	ParentVolume *SoftLayer_Network_Storage `json:"parentVolume,omitempty"`
+
+	// AllowedReplicationVirtualGuests - The SoftLayer_Hardware objects which are allowed access to this
+	// storage volume's Replicant.
+	AllowedReplicationVirtualGuests []*SoftLayer_Virtual_Guest `json:"allowedReplicationVirtualGuests,omitempty"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// AllowedReplicationIpAddressCount - A count of the SoftLayer_Network_Subnet_IpAddress objects which
+	// are allowed access to this storage volume's Replicant.
+	AllowedReplicationIpAddressCount uint64 `json:"allowedReplicationIpAddressCount,omitempty"`
 
 	// Events - The events which have taken place on a network storage volume.
 	Events []*SoftLayer_Network_Storage_Event `json:"events,omitempty"`
 
-	// IscsiLuns - Relationship between a container volume and iSCSI LUNs.
-	IscsiLuns []*SoftLayer_Network_Storage `json:"iscsiLuns,omitempty"`
+	// HourlySchedule - The Hourly Schedule which is associated with this network storage volume.
+	HourlySchedule *SoftLayer_Network_Storage_Schedule `json:"hourlySchedule,omitempty"`
 
-	// ServiceResourceBackendIpAddress - no documentation
-	ServiceResourceBackendIpAddress string `json:"serviceResourceBackendIpAddress,omitempty"`
-
-	// ServiceResource - The network resource a Storage service is connected to.
-	ServiceResource *SoftLayer_Network_Service_Resource `json:"serviceResource,omitempty"`
-
-	// AccountPassword - Other usernames and passwords associated with a Storage volume.
-	AccountPassword *SoftLayer_Account_Password `json:"accountPassword,omitempty"`
-
-	// AllowedReplicationIpAddresses - The SoftLayer_Network_Subnet_IpAddress objects which are allowed
-	// access to this storage volume's Replicant.
-	AllowedReplicationIpAddresses []*SoftLayer_Network_Subnet_IpAddress `json:"allowedReplicationIpAddresses,omitempty"`
+	// SnapshotDeletionThresholdPercentage - The percentage of used snapshot space after which to delete
+	// automated snapshots.
+	SnapshotDeletionThresholdPercentage string `json:"snapshotDeletionThresholdPercentage,omitempty"`
 }
 
-func (softlayer_network_storage_snapshot *SoftLayer_Network_Storage_Snapshot_Extended) String() string {
+func (softlayer_network_storage_snapshot *SoftLayer_Network_Storage_Snapshot) String() string {
 	return "SoftLayer_Network_Storage_Snapshot"
 }

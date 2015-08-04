@@ -5,6 +5,9 @@ package types
 // SoftLayer_Resource_Group_Member_Attribute_Type - <nil>
 type SoftLayer_Resource_Group_Member_Attribute_Type struct {
 
+	// Description - <nil>
+	Description string `json:"description,omitempty"`
+
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
 
@@ -13,9 +16,6 @@ type SoftLayer_Resource_Group_Member_Attribute_Type struct {
 
 	// Name - <nil>
 	Name string `json:"name,omitempty"`
-
-	// Description - <nil>
-	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_resource_group_member_attribute_type *SoftLayer_Resource_Group_Member_Attribute_Type) String() string {

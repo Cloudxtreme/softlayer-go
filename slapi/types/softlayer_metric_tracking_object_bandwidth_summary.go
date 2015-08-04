@@ -10,6 +10,17 @@ import (
 // summary components for the current billing cycle.
 type SoftLayer_Metric_Tracking_Object_Bandwidth_Summary struct {
 
+	// AverageDailyUsage - The daily average amount of outbound bandwidth usage.
+	AverageDailyUsage slapi.Float64 `json:"averageDailyUsage,omitempty"`
+
+	// CurrentlyOverAllocationFlag - A flag that tells whether or not this tracking object's bandwidth
+	// usage is already over the allocation. 1 means yes, 0 means no.
+	CurrentlyOverAllocationFlag int `json:"currentlyOverAllocationFlag,omitempty"`
+
+	// OutboundBandwidthAmount - The amount of outbound bandwidth (measured in gigabytes) currently used
+	// this billing period
+	OutboundBandwidthAmount slapi.Float64 `json:"outboundBandwidthAmount,omitempty"`
+
 	// ProjectedOverAllocationFlag - A flag that tells whether or not this tracking object's bandwidth
 	// usage is projected to go over the allocation, based on daily average usage. 1 means yes, 0 means no.
 	ProjectedOverAllocationFlag int `json:"projectedOverAllocationFlag,omitempty"`
@@ -18,26 +29,15 @@ type SoftLayer_Metric_Tracking_Object_Bandwidth_Summary struct {
 	// tracking object.
 	AllocationAmount slapi.Float64 `json:"allocationAmount,omitempty"`
 
+	// AllocationId - <nil>
+	AllocationId int `json:"allocationId,omitempty"`
+
 	// AmountOut - The amount of outbound bandwidth (measured in gigabytes) currently used this billing
 	// period. Same as $outboundBandwidthAmount. Aliased for backward compatability.
 	AmountOut slapi.Float64 `json:"amountOut,omitempty"`
 
-	// AverageDailyUsage - The daily average amount of outbound bandwidth usage.
-	AverageDailyUsage slapi.Float64 `json:"averageDailyUsage,omitempty"`
-
-	// CurrentlyOverAllocationFlag - A flag that tells whether or not this tracking object's bandwidth
-	// usage is already over the allocation. 1 means yes, 0 means no.
-	CurrentlyOverAllocationFlag int `json:"currentlyOverAllocationFlag,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
-
-	// AllocationId - <nil>
-	AllocationId int `json:"allocationId,omitempty"`
-
-	// OutboundBandwidthAmount - The amount of outbound bandwidth (measured in gigabytes) currently used
-	// this billing period
-	OutboundBandwidthAmount slapi.Float64 `json:"outboundBandwidthAmount,omitempty"`
 
 	// ProjectedBandwidthUsage - The amount of bandwidth (measured in gigabytes) of projected usage, using
 	// a basic average calculation of daily usage.

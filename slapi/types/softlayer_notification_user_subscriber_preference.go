@@ -22,23 +22,14 @@ type SoftLayer_Notification_User_Subscriber_Preference struct {
 
 	// Value - The user supplied value to "override" the "default" preference's value.
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) String() string {
-	return "SoftLayer_Notification_User_Subscriber_Preference"
-}
-
-// SoftLayer_Notification_User_Subscriber_Preference_Extended is SoftLayer_Notification_User_Subscriber_Preference with all maskable types.
-type SoftLayer_Notification_User_Subscriber_Preference_Extended struct {
-	SoftLayer_Notification_User_Subscriber_Preference
-
-	// DefaultPreference - Details such name, keyname, minimum and maximum values for the preference.
-	DefaultPreference *SoftLayer_Notification_Preference `json:"defaultPreference,omitempty"`
 
 	// NotificationUserSubscriber - no documentation
 	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber,omitempty"`
+
+	// DefaultPreference - Details such name, keyname, minimum and maximum values for the preference.
+	DefaultPreference *SoftLayer_Notification_Preference `json:"defaultPreference,omitempty"`
 }
 
-func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference_Extended) String() string {
+func (softlayer_notification_user_subscriber_preference *SoftLayer_Notification_User_Subscriber_Preference) String() string {
 	return "SoftLayer_Notification_User_Subscriber_Preference"
 }

@@ -27,15 +27,6 @@ type SoftLayer_Hardware_Component_Partition struct {
 	// Name - A hardware component partition's name. On a server with windows this may be 'C' and on Linux
 	// this may be '/var'
 	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_hardware_component_partition *SoftLayer_Hardware_Component_Partition) String() string {
-	return "SoftLayer_Hardware_Component_Partition"
-}
-
-// SoftLayer_Hardware_Component_Partition_Extended is SoftLayer_Hardware_Component_Partition with all maskable types.
-type SoftLayer_Hardware_Component_Partition_Extended struct {
-	SoftLayer_Hardware_Component_Partition
 
 	// HardwareComponent - A hardware component partitions's associated
 	// [[SoftLayer_Hardware_Component|Hardware Component]]. Likely to be a
@@ -43,6 +34,6 @@ type SoftLayer_Hardware_Component_Partition_Extended struct {
 	HardwareComponent *SoftLayer_Hardware_Component `json:"hardwareComponent,omitempty"`
 }
 
-func (softlayer_hardware_component_partition *SoftLayer_Hardware_Component_Partition_Extended) String() string {
+func (softlayer_hardware_component_partition *SoftLayer_Hardware_Component_Partition) String() string {
 	return "SoftLayer_Hardware_Component_Partition"
 }

@@ -26,15 +26,6 @@ type SoftLayer_Configuration_Template_Section_Definition_Value struct {
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value) String() string {
-	return "SoftLayer_Configuration_Template_Section_Definition_Value"
-}
-
-// SoftLayer_Configuration_Template_Section_Definition_Value_Extended is SoftLayer_Configuration_Template_Section_Definition_Value with all maskable types.
-type SoftLayer_Configuration_Template_Section_Definition_Value_Extended struct {
-	SoftLayer_Configuration_Template_Section_Definition_Value
 
 	// Definition - <nil>
 	Definition *SoftLayer_Configuration_Template_Section_Definition `json:"definition,omitempty"`
@@ -43,6 +34,6 @@ type SoftLayer_Configuration_Template_Section_Definition_Value_Extended struct {
 	Template *SoftLayer_Configuration_Template `json:"template,omitempty"`
 }
 
-func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value_Extended) String() string {
+func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value) String() string {
 	return "SoftLayer_Configuration_Template_Section_Definition_Value"
 }

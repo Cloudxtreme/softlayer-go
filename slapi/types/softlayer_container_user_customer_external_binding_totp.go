@@ -5,6 +5,15 @@ package types
 // SoftLayer_Container_User_Customer_External_Binding_Totp - no documentation
 type SoftLayer_Container_User_Customer_External_Binding_Totp struct {
 
+	// SecurityCode - The security code used to validate a Totp credential.
+	SecurityCode string `json:"securityCode,omitempty"`
+
+	// Vendor - The name of the vendor that will be used for external authentication
+	Vendor string `json:"vendor,omitempty"`
+
+	// AuthenticationToken - The unique token that is created by an external authentication request.
+	AuthenticationToken string `json:"authenticationToken,omitempty"`
+
 	// Password - Your SoftLayer customer portal user's portal password.
 	Password string `json:"password,omitempty"`
 
@@ -18,15 +27,6 @@ type SoftLayer_Container_User_Customer_External_Binding_Totp struct {
 
 	// Username - The username you wish to authenticate to the SoftLayer customer portal with.
 	Username string `json:"username,omitempty"`
-
-	// Vendor - The name of the vendor that will be used for external authentication
-	Vendor string `json:"vendor,omitempty"`
-
-	// SecurityCode - The security code used to validate a Totp credential.
-	SecurityCode string `json:"securityCode,omitempty"`
-
-	// AuthenticationToken - The unique token that is created by an external authentication request.
-	AuthenticationToken string `json:"authenticationToken,omitempty"`
 }
 
 func (softlayer_container_user_customer_external_binding_totp *SoftLayer_Container_User_Customer_External_Binding_Totp) String() string {

@@ -12,14 +12,8 @@ import (
 // be created for each array.
 type SoftLayer_Configuration_Storage_Group_Order struct {
 
-	// ArraySize - <nil>
-	ArraySize slapi.Float64 `json:"arraySize,omitempty"`
-
 	// BillingOrderItemId - <nil>
 	BillingOrderItemId int `json:"billingOrderItemId,omitempty"`
-
-	// ArrayTypeId - <nil>
-	ArrayTypeId int `json:"arrayTypeId,omitempty"`
 
 	// HardDrives - <nil>
 	HardDrives []int `json:"hardDrives,omitempty"`
@@ -32,15 +26,12 @@ type SoftLayer_Configuration_Storage_Group_Order struct {
 
 	// ArrayNumber - <nil>
 	ArrayNumber int `json:"arrayNumber,omitempty"`
-}
 
-func (softlayer_configuration_storage_group_order *SoftLayer_Configuration_Storage_Group_Order) String() string {
-	return "SoftLayer_Configuration_Storage_Group_Order"
-}
+	// ArraySize - <nil>
+	ArraySize slapi.Float64 `json:"arraySize,omitempty"`
 
-// SoftLayer_Configuration_Storage_Group_Order_Extended is SoftLayer_Configuration_Storage_Group_Order with all maskable types.
-type SoftLayer_Configuration_Storage_Group_Order_Extended struct {
-	SoftLayer_Configuration_Storage_Group_Order
+	// ArrayTypeId - <nil>
+	ArrayTypeId int `json:"arrayTypeId,omitempty"`
 
 	// ArrayType - no documentation
 	ArrayType *SoftLayer_Configuration_Storage_Group_Array_Type `json:"arrayType,omitempty"`
@@ -49,6 +40,6 @@ type SoftLayer_Configuration_Storage_Group_Order_Extended struct {
 	BillingOrderItem *SoftLayer_Billing_Order_Item `json:"billingOrderItem,omitempty"`
 }
 
-func (softlayer_configuration_storage_group_order *SoftLayer_Configuration_Storage_Group_Order_Extended) String() string {
+func (softlayer_configuration_storage_group_order *SoftLayer_Configuration_Storage_Group_Order) String() string {
 	return "SoftLayer_Configuration_Storage_Group_Order"
 }

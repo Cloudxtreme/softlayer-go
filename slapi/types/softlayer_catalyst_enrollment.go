@@ -11,47 +11,35 @@ import (
 // SoftLayer_Catalyst_Enrollment - <nil>
 type SoftLayer_Catalyst_Enrollment struct {
 
-	// AccountId - <nil>
-	AccountId int `json:"accountId,omitempty"`
-
-	// AgreementCompleteFlag - <nil>
-	AgreementCompleteFlag int `json:"agreementCompleteFlag,omitempty"`
-
 	// MonthlyCreditAmount - <nil>
 	MonthlyCreditAmount slapi.Float64 `json:"monthlyCreditAmount,omitempty"`
 
-	// CompanyDescription - <nil>
-	CompanyDescription string `json:"companyDescription,omitempty"`
+	// RepresentativeEmployeeId - <nil>
+	RepresentativeEmployeeId int `json:"representativeEmployeeId,omitempty"`
 
-	// GraduationDate - <nil>
-	GraduationDate *time.Time `json:"graduationDate,omitempty"`
-
-	// CompanyTypeId - <nil>
-	CompanyTypeId int `json:"companyTypeId,omitempty"`
-
-	// EnrollmentDate - <nil>
-	EnrollmentDate *time.Time `json:"enrollmentDate,omitempty"`
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
 
 	// AffiliateId - <nil>
 	AffiliateId int `json:"affiliateId,omitempty"`
 
-	// RepresentativeEmployeeId - <nil>
-	RepresentativeEmployeeId int `json:"representativeEmployeeId,omitempty"`
-}
+	// CompanyDescription - <nil>
+	CompanyDescription string `json:"companyDescription,omitempty"`
 
-func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) String() string {
-	return "SoftLayer_Catalyst_Enrollment"
-}
+	// CompanyTypeId - <nil>
+	CompanyTypeId int `json:"companyTypeId,omitempty"`
 
-// SoftLayer_Catalyst_Enrollment_Extended is SoftLayer_Catalyst_Enrollment with all maskable types.
-type SoftLayer_Catalyst_Enrollment_Extended struct {
-	SoftLayer_Catalyst_Enrollment
+	// AgreementCompleteFlag - <nil>
+	AgreementCompleteFlag int `json:"agreementCompleteFlag,omitempty"`
 
-	// IsActiveFlag - <nil>
-	IsActiveFlag bool `json:"isActiveFlag,omitempty"`
+	// GraduationDate - <nil>
+	GraduationDate *time.Time `json:"graduationDate,omitempty"`
 
-	// Representative - <nil>
-	Representative *SoftLayer_User_Employee `json:"representative,omitempty"`
+	// EnrollmentDate - <nil>
+	EnrollmentDate *time.Time `json:"enrollmentDate,omitempty"`
+
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// Affiliate - <nil>
 	Affiliate *SoftLayer_Catalyst_Affiliate `json:"affiliate,omitempty"`
@@ -59,10 +47,13 @@ type SoftLayer_Catalyst_Enrollment_Extended struct {
 	// CompanyType - <nil>
 	CompanyType *SoftLayer_Catalyst_Company_Type `json:"companyType,omitempty"`
 
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account,omitempty"`
+	// IsActiveFlag - <nil>
+	IsActiveFlag bool `json:"isActiveFlag,omitempty"`
+
+	// Representative - <nil>
+	Representative *SoftLayer_User_Employee `json:"representative,omitempty"`
 }
 
-func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment_Extended) String() string {
+func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) String() string {
 	return "SoftLayer_Catalyst_Enrollment"
 }

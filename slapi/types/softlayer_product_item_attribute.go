@@ -16,26 +16,17 @@ type SoftLayer_Product_Item_Attribute struct {
 
 	// Value - <nil>
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_product_item_attribute *SoftLayer_Product_Item_Attribute) String() string {
-	return "SoftLayer_Product_Item_Attribute"
-}
-
-// SoftLayer_Product_Item_Attribute_Extended is SoftLayer_Product_Item_Attribute with all maskable types.
-type SoftLayer_Product_Item_Attribute_Extended struct {
-	SoftLayer_Product_Item_Attribute
-
-	// Item - <nil>
-	Item *SoftLayer_Product_Item `json:"item,omitempty"`
 
 	// AttributeType - <nil>
 	AttributeType *SoftLayer_Product_Item_Attribute_Type `json:"attributeType,omitempty"`
 
 	// AttributeTypeKeyName - <nil>
 	AttributeTypeKeyName string `json:"attributeTypeKeyName,omitempty"`
+
+	// Item - <nil>
+	Item *SoftLayer_Product_Item `json:"item,omitempty"`
 }
 
-func (softlayer_product_item_attribute *SoftLayer_Product_Item_Attribute_Extended) String() string {
+func (softlayer_product_item_attribute *SoftLayer_Product_Item_Attribute) String() string {
 	return "SoftLayer_Product_Item_Attribute"
 }

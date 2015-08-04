@@ -13,20 +13,11 @@ type SoftLayer_Survey_Response struct {
 	// SurveyAnswerId - The Id of the [[SoftLayer_Survey_Answer|Survey Answer]] that a response was made
 	// for.
 	SurveyAnswerId int `json:"surveyAnswerId,omitempty"`
-}
-
-func (softlayer_survey_response *SoftLayer_Survey_Response) String() string {
-	return "SoftLayer_Survey_Response"
-}
-
-// SoftLayer_Survey_Response_Extended is SoftLayer_Survey_Response with all maskable types.
-type SoftLayer_Survey_Response_Extended struct {
-	SoftLayer_Survey_Response
 
 	// SurveyAnswer - no documentation
 	SurveyAnswer *SoftLayer_Survey_Answer `json:"surveyAnswer,omitempty"`
 }
 
-func (softlayer_survey_response *SoftLayer_Survey_Response_Extended) String() string {
+func (softlayer_survey_response *SoftLayer_Survey_Response) String() string {
 	return "SoftLayer_Survey_Response"
 }

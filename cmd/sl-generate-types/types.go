@@ -25,13 +25,13 @@ func (t Type) GetGoType() *GoType {
 		return &GoType{Literal: "string", BuiltIn: true}
 	case "int":
 		return &GoType{Literal: "int", BuiltIn: true}
+	case "long":
+		return &GoType{Literal: "int64", BuiltIn: true}
 	case "nonNegativeInteger":
 		return &GoType{Literal: "uint", BuiltIn: true}
 	case "unsignedInt":
 		return &GoType{Literal: "uint", BuiltIn: true}
 	case "unsignedLong":
-		return &GoType{Literal: "uint64", BuiltIn: true}
-	case "long":
 		return &GoType{Literal: "uint64", BuiltIn: true}
 	case "boolean":
 		return &GoType{Literal: "bool", BuiltIn: true}

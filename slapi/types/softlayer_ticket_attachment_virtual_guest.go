@@ -14,6 +14,12 @@ import (
 // ticket.
 type SoftLayer_Ticket_Attachment_Virtual_Guest struct {
 
+	// AttachmentId - The internal identifier of an item that is attached to a ticket.
+	AttachmentId int `json:"attachmentId,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// VirtualGuestId - The internal identifier of the virtualized guest or CloudLayer Computing Instance
 	// that is attached to a ticket.
 	VirtualGuestId int `json:"virtualGuestId,omitempty"`
@@ -21,26 +27,14 @@ type SoftLayer_Ticket_Attachment_Virtual_Guest struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// TicketId - The internal identifier of the ticket that an item is attached to.
 	TicketId int `json:"ticketId,omitempty"`
 
-	// AttachmentId - The internal identifier of an item that is attached to a ticket.
-	AttachmentId int `json:"attachmentId,omitempty"`
-}
-
-func (softlayer_ticket_attachment_virtual_guest *SoftLayer_Ticket_Attachment_Virtual_Guest) String() string {
-	return "SoftLayer_Ticket_Attachment_Virtual_Guest"
-}
-
-// SoftLayer_Ticket_Attachment_Virtual_Guest_Extended is SoftLayer_Ticket_Attachment_Virtual_Guest with all maskable types.
-type SoftLayer_Ticket_Attachment_Virtual_Guest_Extended struct {
-	SoftLayer_Ticket_Attachment_Virtual_Guest
-
 	// AssignedAgent - <nil>
 	AssignedAgent *SoftLayer_User_Customer `json:"assignedAgent,omitempty"`
+
+	// ScheduledAction - <nil>
+	ScheduledAction *SoftLayer_Provisioning_Version1_Transaction `json:"scheduledAction,omitempty"`
 
 	// Resource - The virtualized guest or CloudLayer Computing Instance that is attached to a ticket.
 	Resource *SoftLayer_Virtual_Guest `json:"resource,omitempty"`
@@ -50,11 +44,8 @@ type SoftLayer_Ticket_Attachment_Virtual_Guest_Extended struct {
 
 	// Ticket - no documentation
 	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
-
-	// ScheduledAction - <nil>
-	ScheduledAction *SoftLayer_Provisioning_Version1_Transaction `json:"scheduledAction,omitempty"`
 }
 
-func (softlayer_ticket_attachment_virtual_guest *SoftLayer_Ticket_Attachment_Virtual_Guest_Extended) String() string {
+func (softlayer_ticket_attachment_virtual_guest *SoftLayer_Ticket_Attachment_Virtual_Guest) String() string {
 	return "SoftLayer_Ticket_Attachment_Virtual_Guest"
 }

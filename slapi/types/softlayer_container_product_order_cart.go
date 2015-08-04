@@ -5,6 +5,9 @@ package types
 // SoftLayer_Container_Product_Order_Cart - no documentation
 type SoftLayer_Container_Product_Order_Cart struct {
 
+	// SavedCartId - no documentation
+	SavedCartId int `json:"savedCartId,omitempty"`
+
 	// SavedCartKey - no documentation
 	SavedCartKey string `json:"savedCartKey,omitempty"`
 
@@ -19,9 +22,6 @@ type SoftLayer_Container_Product_Order_Cart struct {
 
 	// Receipt - The receipt generated from ordering the items in this cart
 	Receipt *SoftLayer_Container_Product_Order_Receipt `json:"receipt,omitempty"`
-
-	// SavedCartId - no documentation
-	SavedCartId int `json:"savedCartId,omitempty"`
 }
 
 func (softlayer_container_product_order_cart *SoftLayer_Container_Product_Order_Cart) String() string {

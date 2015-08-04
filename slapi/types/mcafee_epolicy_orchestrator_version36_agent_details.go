@@ -12,20 +12,11 @@ type McAfee_Epolicy_Orchestrator_Version36_Agent_Details struct {
 
 	// LastUpdate - The date of the last time the anti-virus agent checked in.
 	LastUpdate string `json:"lastUpdate,omitempty"`
-}
-
-func (mcafee_epolicy_orchestrator_version36_agent_details *McAfee_Epolicy_Orchestrator_Version36_Agent_Details) String() string {
-	return "McAfee_Epolicy_Orchestrator_Version36_Agent_Details"
-}
-
-// McAfee_Epolicy_Orchestrator_Version36_Agent_Details_Extended is McAfee_Epolicy_Orchestrator_Version36_Agent_Details with all maskable types.
-type McAfee_Epolicy_Orchestrator_Version36_Agent_Details_Extended struct {
-	McAfee_Epolicy_Orchestrator_Version36_Agent_Details
 
 	// CurrentPolicy - no documentation
 	CurrentPolicy *McAfee_Epolicy_Orchestrator_Version36_Agent_Parent_Details `json:"currentPolicy,omitempty"`
 }
 
-func (mcafee_epolicy_orchestrator_version36_agent_details *McAfee_Epolicy_Orchestrator_Version36_Agent_Details_Extended) String() string {
+func (mcafee_epolicy_orchestrator_version36_agent_details *McAfee_Epolicy_Orchestrator_Version36_Agent_Details) String() string {
 	return "McAfee_Epolicy_Orchestrator_Version36_Agent_Details"
 }

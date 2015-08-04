@@ -17,27 +17,24 @@ type SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone struct {
 
 	// Status - no documentation
 	Status string `json:"status,omitempty"`
-}
 
-func (softlayer_resource_group_member_cloudstack_version3_zone *SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone) String() string {
-	return "SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone"
-}
+	// DescendantMemberCount - A count of a resource group member's associated member descendants.
+	DescendantMemberCount uint64 `json:"descendantMemberCount,omitempty"`
 
-// SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone_Extended is SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone with all maskable types.
-type SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone_Extended struct {
-	SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone
-
-	// RoleCount - A count of a resource group member's associated roles.
-	RoleCount uint64 `json:"roleCount,omitempty"`
+	// Group - no documentation
+	Group *SoftLayer_Resource_Group `json:"group,omitempty"`
 
 	// Attributes - no documentation
 	Attributes []*SoftLayer_Resource_Group_Member_Attribute `json:"attributes,omitempty"`
 
-	// AttributeCount - A count of a resource group member's associated attributes.
-	AttributeCount uint64 `json:"attributeCount,omitempty"`
+	// Resource - no documentation
+	Resource *SoftLayer_Resource_Group `json:"resource,omitempty"`
 
-	// DescendantMemberCount - A count of a resource group member's associated member descendants.
-	DescendantMemberCount uint64 `json:"descendantMemberCount,omitempty"`
+	// Type - no documentation
+	Type *SoftLayer_Resource_Group_Member_Type `json:"type,omitempty"`
+
+	// RoleCount - A count of a resource group member's associated roles.
+	RoleCount uint64 `json:"roleCount,omitempty"`
 
 	// DescendantMembers - A resource group member's associated member descendants.
 	DescendantMembers []*SoftLayer_Resource_Group_Member `json:"descendantMembers,omitempty"`
@@ -45,16 +42,10 @@ type SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone_Extended struct {
 	// Roles - no documentation
 	Roles []*SoftLayer_Resource_Group_Role `json:"roles,omitempty"`
 
-	// Resource - no documentation
-	Resource *SoftLayer_Resource_Group `json:"resource,omitempty"`
-
-	// Group - no documentation
-	Group *SoftLayer_Resource_Group `json:"group,omitempty"`
-
-	// Type - no documentation
-	Type *SoftLayer_Resource_Group_Member_Type `json:"type,omitempty"`
+	// AttributeCount - A count of a resource group member's associated attributes.
+	AttributeCount uint64 `json:"attributeCount,omitempty"`
 }
 
-func (softlayer_resource_group_member_cloudstack_version3_zone *SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone_Extended) String() string {
+func (softlayer_resource_group_member_cloudstack_version3_zone *SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone) String() string {
 	return "SoftLayer_Resource_Group_Member_CloudStack_Version3_Zone"
 }

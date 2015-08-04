@@ -27,20 +27,18 @@ package types
 // [[SoftLayer_Dns_Domain_ResourceRecord::editObjects]].
 type SoftLayer_Dns_Domain_ResourceRecord_PtrType struct {
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// Expire - The amount of time in seconds that a secondary name server (or servers) will hold a zone
-	// before it is no longer considered authoritative.
-	Expire int `json:"expire,omitempty"`
-
-	// DomainId - An identifier belonging to the domain that a resource record is associated with.
-	DomainId int `json:"domainId,omitempty"`
-
 	// Ttl - The Time To Live value of a resource record, measured in seconds. TTL is used by a name server
 	// to determine how long to cache a resource record. An SOA record's TTL value defines the domain's
 	// overall
 	Ttl int `json:"ttl,omitempty"`
+
+	// DomainId - An identifier belonging to the domain that a resource record is associated with.
+	DomainId int `json:"domainId,omitempty"`
+
+	// Refresh - The amount of time in seconds that a secondary name server should wait to check for a new
+	// copy of a DNS zone from the domain's primary name server. If a zone file has changed then the
+	// secondary DNS server will update it's copy of the zone to match the primary DNS server's zone.
+	Refresh int `json:"refresh,omitempty"`
 
 	// Type - A domain resource record's type. A value of "a" denotes an A (address) record, "aaaa" denotes
 	// an (IPv6 address) record, "cname" denotes a (canonical name) record, "mx" denotes an MX (mail
@@ -55,6 +53,25 @@ type SoftLayer_Dns_Domain_ResourceRecord_PtrType struct {
 	// zone with that secondary name server again.
 	Retry int `json:"retry,omitempty"`
 
+	// Host - The host defined by a resource record. A value of "@" denotes a wildcard.
+	Host string `json:"host,omitempty"`
+
+	// ResponsiblePerson - The email address of the person responsible for a domain, with the "@" replaced
+	// with a For instance, if root@example.org is responsible for example.org, then example.org's SOA
+	// responsibility is "root.example.org.".
+	ResponsiblePerson string `json:"responsiblePerson,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// IsGatewayAddress - Whether the address associated with a PTR record is the gateway address of a
+	// subnet.
+	IsGatewayAddress bool `json:"isGatewayAddress,omitempty"`
+
+	// Data - The value of a domain's resource record. This can be an IP address or a hostname. Fully
+	// qualified host and domain name data must end with the "." character.
+	Data string `json:"data,omitempty"`
+
 	// Minimum - The amount of time in seconds that a domain's resource records are valid. This is also
 	// known as a minimum and can be overridden by an individual resource record's
 	Minimum int `json:"minimum,omitempty"`
@@ -65,40 +82,14 @@ type SoftLayer_Dns_Domain_ResourceRecord_PtrType struct {
 	// servers. Priority is defaulted to 10 upon resource record creation.
 	MxPriority int `json:"mxPriority,omitempty"`
 
-	// ResponsiblePerson - The email address of the person responsible for a domain, with the "@" replaced
-	// with a For instance, if root@example.org is responsible for example.org, then example.org's SOA
-	// responsibility is "root.example.org.".
-	ResponsiblePerson string `json:"responsiblePerson,omitempty"`
-
-	// Refresh - The amount of time in seconds that a secondary name server should wait to check for a new
-	// copy of a DNS zone from the domain's primary name server. If a zone file has changed then the
-	// secondary DNS server will update it's copy of the zone to match the primary DNS server's zone.
-	Refresh int `json:"refresh,omitempty"`
-
-	// IsGatewayAddress - Whether the address associated with a PTR record is the gateway address of a
-	// subnet.
-	IsGatewayAddress bool `json:"isGatewayAddress,omitempty"`
-
-	// Data - The value of a domain's resource record. This can be an IP address or a hostname. Fully
-	// qualified host and domain name data must end with the "." character.
-	Data string `json:"data,omitempty"`
-
-	// Host - The host defined by a resource record. A value of "@" denotes a wildcard.
-	Host string `json:"host,omitempty"`
-}
-
-func (softlayer_dns_domain_resourcerecord_ptrtype *SoftLayer_Dns_Domain_ResourceRecord_PtrType) String() string {
-	return "SoftLayer_Dns_Domain_ResourceRecord_PtrType"
-}
-
-// SoftLayer_Dns_Domain_ResourceRecord_PtrType_Extended is SoftLayer_Dns_Domain_ResourceRecord_PtrType with all maskable types.
-type SoftLayer_Dns_Domain_ResourceRecord_PtrType_Extended struct {
-	SoftLayer_Dns_Domain_ResourceRecord_PtrType
+	// Expire - The amount of time in seconds that a secondary name server (or servers) will hold a zone
+	// before it is no longer considered authoritative.
+	Expire int `json:"expire,omitempty"`
 
 	// Domain - no documentation
 	Domain *SoftLayer_Dns_Domain `json:"domain,omitempty"`
 }
 
-func (softlayer_dns_domain_resourcerecord_ptrtype *SoftLayer_Dns_Domain_ResourceRecord_PtrType_Extended) String() string {
+func (softlayer_dns_domain_resourcerecord_ptrtype *SoftLayer_Dns_Domain_ResourceRecord_PtrType) String() string {
 	return "SoftLayer_Dns_Domain_ResourceRecord_PtrType"
 }

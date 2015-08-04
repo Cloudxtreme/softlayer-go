@@ -6,6 +6,17 @@ package types
 // information relating to a single customer subnet (remote).
 type SoftLayer_Network_Customer_Subnet struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// Netmask - A bitmask in dotted-quad format that is used to separate a subnet's network address from
+	// it's host addresses. This performs the same function as the ''cidr'' property, but is expressed in a
+	// string format.
+	Netmask string `json:"netmask,omitempty"`
+
+	// NetworkIdentifier - A subnet's network identifier. This is the first IP address of a subnet.
+	NetworkIdentifier string `json:"networkIdentifier,omitempty"`
+
 	// TotalIpAddresses - no documentation
 	TotalIpAddresses int `json:"totalIpAddresses,omitempty"`
 
@@ -18,33 +29,13 @@ type SoftLayer_Network_Customer_Subnet struct {
 	// represented as an integer.
 	Cidr int `json:"cidr,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// Netmask - A bitmask in dotted-quad format that is used to separate a subnet's network address from
-	// it's host addresses. This performs the same function as the ''cidr'' property, but is expressed in a
-	// string format.
-	Netmask string `json:"netmask,omitempty"`
-
-	// NetworkIdentifier - A subnet's network identifier. This is the first IP address of a subnet.
-	NetworkIdentifier string `json:"networkIdentifier,omitempty"`
-}
-
-func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) String() string {
-	return "SoftLayer_Network_Customer_Subnet"
-}
-
-// SoftLayer_Network_Customer_Subnet_Extended is SoftLayer_Network_Customer_Subnet with all maskable types.
-type SoftLayer_Network_Customer_Subnet_Extended struct {
-	SoftLayer_Network_Customer_Subnet
+	// IpAddressCount - A count of all ip addresses associated with a subnet.
+	IpAddressCount uint64 `json:"ipAddressCount,omitempty"`
 
 	// IpAddresses - no documentation
 	IpAddresses []*SoftLayer_Network_Customer_Subnet_IpAddress `json:"ipAddresses,omitempty"`
-
-	// IpAddressCount - A count of all ip addresses associated with a subnet.
-	IpAddressCount uint64 `json:"ipAddressCount,omitempty"`
 }
 
-func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet_Extended) String() string {
+func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) String() string {
 	return "SoftLayer_Network_Customer_Subnet"
 }

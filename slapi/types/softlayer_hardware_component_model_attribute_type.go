@@ -19,23 +19,14 @@ type SoftLayer_Hardware_Component_Model_Attribute_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_hardware_component_model_attribute_type *SoftLayer_Hardware_Component_Model_Attribute_Type) String() string {
-	return "SoftLayer_Hardware_Component_Model_Attribute_Type"
-}
-
-// SoftLayer_Hardware_Component_Model_Attribute_Type_Extended is SoftLayer_Hardware_Component_Model_Attribute_Type with all maskable types.
-type SoftLayer_Hardware_Component_Model_Attribute_Type_Extended struct {
-	SoftLayer_Hardware_Component_Model_Attribute_Type
-
-	// ValidComponentTypes - <nil>
-	ValidComponentTypes []*SoftLayer_Hardware_Component_Type `json:"validComponentTypes,omitempty"`
 
 	// ValidComponentTypeCount - no documentation
 	ValidComponentTypeCount uint64 `json:"validComponentTypeCount,omitempty"`
+
+	// ValidComponentTypes - <nil>
+	ValidComponentTypes []*SoftLayer_Hardware_Component_Type `json:"validComponentTypes,omitempty"`
 }
 
-func (softlayer_hardware_component_model_attribute_type *SoftLayer_Hardware_Component_Model_Attribute_Type_Extended) String() string {
+func (softlayer_hardware_component_model_attribute_type *SoftLayer_Hardware_Component_Model_Attribute_Type) String() string {
 	return "SoftLayer_Hardware_Component_Model_Attribute_Type"
 }

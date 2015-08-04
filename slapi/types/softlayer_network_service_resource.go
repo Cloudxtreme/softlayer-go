@@ -7,32 +7,44 @@ package types
 // a given service, like Evault, etc.
 type SoftLayer_Network_Service_Resource struct {
 
+	// FrontendIpAddress - no documentation
+	FrontendIpAddress string `json:"frontendIpAddress,omitempty"`
+
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
 
 	// BackendIpAddress - no documentation
 	BackendIpAddress string `json:"backendIpAddress,omitempty"`
 
-	// FrontendIpAddress - no documentation
-	FrontendIpAddress string `json:"frontendIpAddress,omitempty"`
-
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_network_service_resource *SoftLayer_Network_Service_Resource) String() string {
-	return "SoftLayer_Network_Service_Resource"
-}
-
-// SoftLayer_Network_Service_Resource_Extended is SoftLayer_Network_Service_Resource with all maskable types.
-type SoftLayer_Network_Service_Resource_Extended struct {
-	SoftLayer_Network_Service_Resource
 
 	// ApiPassword - <nil>
 	ApiPassword string `json:"apiPassword,omitempty"`
 
+	// ApiPath - <nil>
+	ApiPath string `json:"apiPath,omitempty"`
+
 	// ApiPort - <nil>
 	ApiPort string `json:"apiPort,omitempty"`
+
+	// Attributes - <nil>
+	Attributes []*SoftLayer_Network_Service_Resource_Attribute `json:"attributes,omitempty"`
+
+	// Type - The network information associated with this resource.
+	Type *SoftLayer_Network_Service_Resource_Type `json:"type,omitempty"`
+
+	// SshUsername - <nil>
+	SshUsername string `json:"sshUsername,omitempty"`
+
+	// ApiProtocol - <nil>
+	ApiProtocol string `json:"apiProtocol,omitempty"`
+
+	// NetworkDevice - The hardware information associated with this resource.
+	NetworkDevice *SoftLayer_Hardware `json:"networkDevice,omitempty"`
+
+	// ApiHost - <nil>
+	ApiHost string `json:"apiHost,omitempty"`
 
 	// ApiUsername - <nil>
 	ApiUsername string `json:"apiUsername,omitempty"`
@@ -40,34 +52,13 @@ type SoftLayer_Network_Service_Resource_Extended struct {
 	// ApiVersion - <nil>
 	ApiVersion string `json:"apiVersion,omitempty"`
 
-	// ApiHost - <nil>
-	ApiHost string `json:"apiHost,omitempty"`
-
-	// ApiPath - <nil>
-	ApiPath string `json:"apiPath,omitempty"`
-
-	// ApiProtocol - <nil>
-	ApiProtocol string `json:"apiProtocol,omitempty"`
-
 	// Datacenter - <nil>
 	Datacenter *SoftLayer_Location `json:"datacenter,omitempty"`
 
-	// NetworkDevice - The hardware information associated with this resource.
-	NetworkDevice *SoftLayer_Hardware `json:"networkDevice,omitempty"`
-
 	// AttributeCount - no documentation
 	AttributeCount uint64 `json:"attributeCount,omitempty"`
-
-	// Attributes - <nil>
-	Attributes []*SoftLayer_Network_Service_Resource_Attribute `json:"attributes,omitempty"`
-
-	// SshUsername - <nil>
-	SshUsername string `json:"sshUsername,omitempty"`
-
-	// Type - The network information associated with this resource.
-	Type *SoftLayer_Network_Service_Resource_Type `json:"type,omitempty"`
 }
 
-func (softlayer_network_service_resource *SoftLayer_Network_Service_Resource_Extended) String() string {
+func (softlayer_network_service_resource *SoftLayer_Network_Service_Resource) String() string {
 	return "SoftLayer_Network_Service_Resource"
 }

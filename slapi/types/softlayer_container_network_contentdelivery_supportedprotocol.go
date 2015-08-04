@@ -10,10 +10,6 @@ package types
 // streaming, Windows Media streaming and protocols are supported: Flash streaming:
 type SoftLayer_Container_Network_ContentDelivery_SupportedProtocol struct {
 
-	// Host - The host name related to CDN supported media, and is represented in the hostname portion of a
-	// CDN
-	Host string `json:"host,omitempty"`
-
 	// MediaType - no documentation
 	MediaType string `json:"mediaType,omitempty"`
 
@@ -23,6 +19,10 @@ type SoftLayer_Container_Network_ContentDelivery_SupportedProtocol struct {
 	// Protocol - The media protocol supported by This represents the media portion of a CDN Currently
 	// supported protocols are: rtmp, mms and http
 	Protocol string `json:"protocol,omitempty"`
+
+	// Host - The host name related to CDN supported media, and is represented in the hostname portion of a
+	// CDN
+	Host string `json:"host,omitempty"`
 }
 
 func (softlayer_container_network_contentdelivery_supportedprotocol *SoftLayer_Container_Network_ContentDelivery_SupportedProtocol) String() string {

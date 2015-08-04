@@ -18,15 +18,6 @@ type SoftLayer_User_Customer_Notification_Hardware struct {
 	// UserId - The ID of the SoftLayer_User_Customer object that represents the user to be notified on
 	// monitoring failure.
 	UserId int `json:"userId,omitempty"`
-}
-
-func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) String() string {
-	return "SoftLayer_User_Customer_Notification_Hardware"
-}
-
-// SoftLayer_User_Customer_Notification_Hardware_Extended is SoftLayer_User_Customer_Notification_Hardware with all maskable types.
-type SoftLayer_User_Customer_Notification_Hardware_Extended struct {
-	SoftLayer_User_Customer_Notification_Hardware
 
 	// Hardware - no documentation
 	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
@@ -36,6 +27,6 @@ type SoftLayer_User_Customer_Notification_Hardware_Extended struct {
 	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
-func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware_Extended) String() string {
+func (softlayer_user_customer_notification_hardware *SoftLayer_User_Customer_Notification_Hardware) String() string {
 	return "SoftLayer_User_Customer_Notification_Hardware"
 }

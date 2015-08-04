@@ -11,6 +11,19 @@ package types
 // returns this data structure.
 type SoftLayer_Container_Virtual_Guest_Configuration struct {
 
+	// Datacenters - Available datacenter options. The datacenter.name value in the template represents
+	// which datacenter the computing instance will be provisioned in.
+	Datacenters []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"datacenters,omitempty"`
+
+	// Memory - Available memory options. The maxMemory value in the template represents the amount of
+	// memory, in megabytes, allocated to the computing instance.
+	Memory []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"memory,omitempty"`
+
+	// NetworkComponents - Available network component options. The networkComponent.maxSpeed value in the
+	// template represents the link speed, in megabits per second, of the network connections for a
+	// computing instance.
+	NetworkComponents []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"networkComponents,omitempty"`
+
 	// OperatingSystems - Available operating system options. The operatingSystemReferenceCode value in the
 	// template is an identifier for a particular operating system. When provided exactly as shown in the
 	// template, that operating system will be used. A reference code is structured as three tokens
@@ -42,19 +55,6 @@ type SoftLayer_Container_Virtual_Guest_Configuration struct {
 	// whether the option is a local or SAN based disk. Note: The block device number '1' is reserved for
 	// the disk attached to the computing instance.
 	BlockDevices []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"blockDevices,omitempty"`
-
-	// Datacenters - Available datacenter options. The datacenter.name value in the template represents
-	// which datacenter the computing instance will be provisioned in.
-	Datacenters []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"datacenters,omitempty"`
-
-	// Memory - Available memory options. The maxMemory value in the template represents the amount of
-	// memory, in megabytes, allocated to the computing instance.
-	Memory []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"memory,omitempty"`
-
-	// NetworkComponents - Available network component options. The networkComponent.maxSpeed value in the
-	// template represents the link speed, in megabits per second, of the network connections for a
-	// computing instance.
-	NetworkComponents []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"networkComponents,omitempty"`
 }
 
 func (softlayer_container_virtual_guest_configuration *SoftLayer_Container_Virtual_Guest_Configuration) String() string {

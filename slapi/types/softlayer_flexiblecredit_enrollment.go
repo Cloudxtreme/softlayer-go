@@ -14,8 +14,11 @@ type SoftLayer_FlexibleCredit_Enrollment struct {
 	// AccountId - no documentation
 	AccountId int `json:"accountId,omitempty"`
 
-	// GraduationDate - no documentation
-	GraduationDate *time.Time `json:"graduationDate,omitempty"`
+	// AgreementCompleteFlag - Indicates signing of Flexible Credit agreement (independent from
+	AgreementCompleteFlag int `json:"agreementCompleteFlag,omitempty"`
+
+	// CompanyTypeId - ID of the Flexible Credit Program Company classification for this enrollment
+	CompanyTypeId int `json:"companyTypeId,omitempty"`
 
 	// MonthlyCreditAmount - no documentation
 	MonthlyCreditAmount slapi.Float64 `json:"monthlyCreditAmount,omitempty"`
@@ -29,26 +32,14 @@ type SoftLayer_FlexibleCredit_Enrollment struct {
 	// CompanyDescription - no documentation
 	CompanyDescription string `json:"companyDescription,omitempty"`
 
-	// CompanyTypeId - ID of the Flexible Credit Program Company classification for this enrollment
-	CompanyTypeId int `json:"companyTypeId,omitempty"`
-
-	// AgreementCompleteFlag - Indicates signing of Flexible Credit agreement (independent from
-	AgreementCompleteFlag int `json:"agreementCompleteFlag,omitempty"`
-
 	// EnrollmentDate - Date when participation in the Flexible Credit program began
 	EnrollmentDate *time.Time `json:"enrollmentDate,omitempty"`
-}
 
-func (softlayer_flexiblecredit_enrollment *SoftLayer_FlexibleCredit_Enrollment) String() string {
-	return "SoftLayer_FlexibleCredit_Enrollment"
-}
+	// GraduationDate - no documentation
+	GraduationDate *time.Time `json:"graduationDate,omitempty"`
 
-// SoftLayer_FlexibleCredit_Enrollment_Extended is SoftLayer_FlexibleCredit_Enrollment with all maskable types.
-type SoftLayer_FlexibleCredit_Enrollment_Extended struct {
-	SoftLayer_FlexibleCredit_Enrollment
-
-	// FlexibleCreditProgram - no documentation
-	FlexibleCreditProgram *SoftLayer_FlexibleCredit_Program `json:"flexibleCreditProgram,omitempty"`
+	// Representative - no documentation
+	Representative *SoftLayer_User_Employee `json:"representative,omitempty"`
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`
@@ -56,16 +47,16 @@ type SoftLayer_FlexibleCredit_Enrollment_Extended struct {
 	// Affiliate - no documentation
 	Affiliate *SoftLayer_FlexibleCredit_Affiliate `json:"affiliate,omitempty"`
 
-	// CompanyType - no documentation
-	CompanyType *SoftLayer_FlexibleCredit_Company_Type `json:"companyType,omitempty"`
+	// FlexibleCreditProgram - no documentation
+	FlexibleCreditProgram *SoftLayer_FlexibleCredit_Program `json:"flexibleCreditProgram,omitempty"`
 
 	// IsActiveFlag - Flag indicating whether an enrollment is active (true) or inactive (false)
 	IsActiveFlag bool `json:"isActiveFlag,omitempty"`
 
-	// Representative - no documentation
-	Representative *SoftLayer_User_Employee `json:"representative,omitempty"`
+	// CompanyType - no documentation
+	CompanyType *SoftLayer_FlexibleCredit_Company_Type `json:"companyType,omitempty"`
 }
 
-func (softlayer_flexiblecredit_enrollment *SoftLayer_FlexibleCredit_Enrollment_Extended) String() string {
+func (softlayer_flexiblecredit_enrollment *SoftLayer_FlexibleCredit_Enrollment) String() string {
 	return "SoftLayer_FlexibleCredit_Enrollment"
 }

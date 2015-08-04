@@ -15,15 +15,6 @@ type SoftLayer_Notification_User_Subscriber_Delivery_Method struct {
 
 	// NotificationUserSubscriberId - Unique identifier of the subscriber tied to the delivery method.
 	NotificationUserSubscriberId int `json:"notificationUserSubscriberId,omitempty"`
-}
-
-func (softlayer_notification_user_subscriber_delivery_method *SoftLayer_Notification_User_Subscriber_Delivery_Method) String() string {
-	return "SoftLayer_Notification_User_Subscriber_Delivery_Method"
-}
-
-// SoftLayer_Notification_User_Subscriber_Delivery_Method_Extended is SoftLayer_Notification_User_Subscriber_Delivery_Method with all maskable types.
-type SoftLayer_Notification_User_Subscriber_Delivery_Method_Extended struct {
-	SoftLayer_Notification_User_Subscriber_Delivery_Method
 
 	// DeliveryMethod - Provides details for the method used to deliver the notification (email, sms,
 	// ticket).
@@ -33,6 +24,6 @@ type SoftLayer_Notification_User_Subscriber_Delivery_Method_Extended struct {
 	NotificationUserSubscriber *SoftLayer_Notification_User_Subscriber `json:"notificationUserSubscriber,omitempty"`
 }
 
-func (softlayer_notification_user_subscriber_delivery_method *SoftLayer_Notification_User_Subscriber_Delivery_Method_Extended) String() string {
+func (softlayer_notification_user_subscriber_delivery_method *SoftLayer_Notification_User_Subscriber_Delivery_Method) String() string {
 	return "SoftLayer_Notification_User_Subscriber_Delivery_Method"
 }

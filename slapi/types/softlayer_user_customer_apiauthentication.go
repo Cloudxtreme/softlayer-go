@@ -22,20 +22,11 @@ type SoftLayer_User_Customer_ApiAuthentication struct {
 
 	// UserId - no documentation
 	UserId int `json:"userId,omitempty"`
-}
-
-func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) String() string {
-	return "SoftLayer_User_Customer_ApiAuthentication"
-}
-
-// SoftLayer_User_Customer_ApiAuthentication_Extended is SoftLayer_User_Customer_ApiAuthentication with all maskable types.
-type SoftLayer_User_Customer_ApiAuthentication_Extended struct {
-	SoftLayer_User_Customer_ApiAuthentication
 
 	// User - no documentation
 	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
-func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication_Extended) String() string {
+func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) String() string {
 	return "SoftLayer_User_Customer_ApiAuthentication"
 }

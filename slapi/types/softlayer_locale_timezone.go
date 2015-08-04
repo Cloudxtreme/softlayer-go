@@ -5,6 +5,9 @@ package types
 // SoftLayer_Locale_Timezone - Each User is assigned a timezone allowing for a precise local timestamp.
 type SoftLayer_Locale_Timezone struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// LongName - A timezone's long name. For example, "(GMT-06:00) America/Dallas -
 	LongName string `json:"longName,omitempty"`
 
@@ -17,9 +20,6 @@ type SoftLayer_Locale_Timezone struct {
 
 	// ShortName - A timezone's common abbreviation. For example, Central Standard Time's abbreviation is
 	ShortName string `json:"shortName,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_locale_timezone *SoftLayer_Locale_Timezone) String() string {

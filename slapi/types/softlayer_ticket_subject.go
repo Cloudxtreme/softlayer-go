@@ -12,20 +12,11 @@ type SoftLayer_Ticket_Subject struct {
 
 	// Name - A ticket subject's name. This name is used for a standard support ticket's title.
 	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) String() string {
-	return "SoftLayer_Ticket_Subject"
-}
-
-// SoftLayer_Ticket_Subject_Extended is SoftLayer_Ticket_Subject with all maskable types.
-type SoftLayer_Ticket_Subject_Extended struct {
-	SoftLayer_Ticket_Subject
 
 	// Group - <nil>
 	Group *SoftLayer_Ticket_Group `json:"group,omitempty"`
 }
 
-func (softlayer_ticket_subject *SoftLayer_Ticket_Subject_Extended) String() string {
+func (softlayer_ticket_subject *SoftLayer_Ticket_Subject) String() string {
 	return "SoftLayer_Ticket_Subject"
 }

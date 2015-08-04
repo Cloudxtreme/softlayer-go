@@ -14,20 +14,11 @@ type SoftLayer_Layout_Preference struct {
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_layout_preference *SoftLayer_Layout_Preference) String() string {
-	return "SoftLayer_Layout_Preference"
-}
-
-// SoftLayer_Layout_Preference_Extended is SoftLayer_Layout_Preference with all maskable types.
-type SoftLayer_Layout_Preference_Extended struct {
-	SoftLayer_Layout_Preference
 
 	// LayoutPreferenceType - no documentation
 	LayoutPreferenceType *SoftLayer_Layout_Preference_Type `json:"layoutPreferenceType,omitempty"`
 }
 
-func (softlayer_layout_preference *SoftLayer_Layout_Preference_Extended) String() string {
+func (softlayer_layout_preference *SoftLayer_Layout_Preference) String() string {
 	return "SoftLayer_Layout_Preference"
 }

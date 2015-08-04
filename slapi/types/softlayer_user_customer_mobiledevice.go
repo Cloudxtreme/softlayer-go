@@ -12,24 +12,6 @@ import (
 // entities (Google, Apple,
 type SoftLayer_User_Customer_MobileDevice struct {
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// ModelNumber - no documentation
-	ModelNumber string `json:"modelNumber,omitempty"`
-
-	// PhoneNumber - no documentation
-	PhoneNumber string `json:"phoneNumber,omitempty"`
-
-	// SerialNumber - no documentation
-	SerialNumber string `json:"serialNumber,omitempty"`
-
-	// MobileDeviceTypeId - no documentation
-	MobileDeviceTypeId int `json:"mobileDeviceTypeId,omitempty"`
-
-	// MobileOperatingSystemId - no documentation
-	MobileOperatingSystemId int `json:"mobileOperatingSystemId,omitempty"`
-
 	// Token - no documentation
 	Token string `json:"token,omitempty"`
 
@@ -39,23 +21,38 @@ type SoftLayer_User_Customer_MobileDevice struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
-	// DisplayResolutionXxY - no documentation
-	DisplayResolutionXxY string `json:"displayResolutionXxY,omitempty"`
+	// MobileOperatingSystemId - no documentation
+	MobileOperatingSystemId int `json:"mobileOperatingSystemId,omitempty"`
+
+	// ModelNumber - no documentation
+	ModelNumber string `json:"modelNumber,omitempty"`
+
+	// PhoneNumber - no documentation
+	PhoneNumber string `json:"phoneNumber,omitempty"`
+
+	// MobileDeviceTypeId - no documentation
+	MobileDeviceTypeId int `json:"mobileDeviceTypeId,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-}
 
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) String() string {
-	return "SoftLayer_User_Customer_MobileDevice"
-}
+	// SerialNumber - no documentation
+	SerialNumber string `json:"serialNumber,omitempty"`
 
-// SoftLayer_User_Customer_MobileDevice_Extended is SoftLayer_User_Customer_MobileDevice with all maskable types.
-type SoftLayer_User_Customer_MobileDevice_Extended struct {
-	SoftLayer_User_Customer_MobileDevice
+	// DisplayResolutionXxY - no documentation
+	DisplayResolutionXxY string `json:"displayResolutionXxY,omitempty"`
 
-	// OperatingSystem - <nil>
-	OperatingSystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem `json:"operatingSystem,omitempty"`
+	// AvailablePushNotificationSubscriptions - Notification subscriptions available to a mobile device.
+	AvailablePushNotificationSubscriptions []*SoftLayer_Notification `json:"availablePushNotificationSubscriptions,omitempty"`
+
+	// Customer - <nil>
+	Customer *SoftLayer_User_Customer `json:"customer,omitempty"`
+
+	// PushNotificationSubscriptions - Notification subscriptions attached to a mobile device.
+	PushNotificationSubscriptions []*SoftLayer_Notification_User_Subscriber `json:"pushNotificationSubscriptions,omitempty"`
 
 	// Type - <nil>
 	Type *SoftLayer_User_Customer_MobileDevice_Type `json:"type,omitempty"`
@@ -64,20 +61,14 @@ type SoftLayer_User_Customer_MobileDevice_Extended struct {
 	// device.
 	PushNotificationSubscriptionCount uint64 `json:"pushNotificationSubscriptionCount,omitempty"`
 
-	// AvailablePushNotificationSubscriptions - Notification subscriptions available to a mobile device.
-	AvailablePushNotificationSubscriptions []*SoftLayer_Notification `json:"availablePushNotificationSubscriptions,omitempty"`
-
 	// AvailablePushNotificationSubscriptionCount - A count of notification subscriptions available to a
 	// mobile device.
 	AvailablePushNotificationSubscriptionCount uint64 `json:"availablePushNotificationSubscriptionCount,omitempty"`
 
-	// Customer - <nil>
-	Customer *SoftLayer_User_Customer `json:"customer,omitempty"`
-
-	// PushNotificationSubscriptions - Notification subscriptions attached to a mobile device.
-	PushNotificationSubscriptions []*SoftLayer_Notification_User_Subscriber `json:"pushNotificationSubscriptions,omitempty"`
+	// OperatingSystem - <nil>
+	OperatingSystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem `json:"operatingSystem,omitempty"`
 }
 
-func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice_Extended) String() string {
+func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) String() string {
 	return "SoftLayer_User_Customer_MobileDevice"
 }

@@ -11,6 +11,9 @@ import (
 // a push notification to the user.
 type SoftLayer_User_Customer_MobileDevice_OperatingSystem struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// MajorVersion - no documentation
 	MajorVersion int `json:"majorVersion,omitempty"`
 
@@ -31,9 +34,6 @@ type SoftLayer_User_Customer_MobileDevice_OperatingSystem struct {
 
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_user_customer_mobiledevice_operatingsystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem) String() string {

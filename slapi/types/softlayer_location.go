@@ -14,78 +14,11 @@ type SoftLayer_Location struct {
 	// LongName - no documentation
 	LongName string `json:"longName,omitempty"`
 
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
 	// StatusId - <nil>
 	StatusId int `json:"statusId,omitempty"`
-}
 
-func (softlayer_location *SoftLayer_Location) String() string {
-	return "SoftLayer_Location"
-}
-
-// SoftLayer_Location_Extended is SoftLayer_Location with all maskable types.
-type SoftLayer_Location_Extended struct {
-	SoftLayer_Location
-
-	// BackboneDependentCount - no documentation
-	BackboneDependentCount uint64 `json:"backboneDependentCount,omitempty"`
-
-	// PriceGroupCount - A count of a location can be a member of 1 or more Price Groups. This will show
-	// which groups to which a location belongs.
-	PriceGroupCount uint64 `json:"priceGroupCount,omitempty"`
-
-	// NetworkConfigurationAttribute - <nil>
-	NetworkConfigurationAttribute *SoftLayer_Hardware_Attribute `json:"networkConfigurationAttribute,omitempty"`
-
-	// Timezone - <nil>
-	Timezone *SoftLayer_Locale_Timezone `json:"timezone,omitempty"`
-
-	// LocationStatus - no documentation
-	LocationStatus *SoftLayer_Location_Status `json:"locationStatus,omitempty"`
-
-	// OnlinePptpVpnUserCount - The total number of users online using SoftLayer's VPN service for a
-	// location.
-	OnlinePptpVpnUserCount int `json:"onlinePptpVpnUserCount,omitempty"`
-
-	// PathString - <nil>
-	PathString string `json:"pathString,omitempty"`
-
-	// VdrGroup - A location can be a member of 1 Bandwidth Pooling Group. This will show which group to
-	// which a location belongs.
-	VdrGroup *SoftLayer_Location_Group_Location_CrossReference `json:"vdrGroup,omitempty"`
-
-	// Groups - A location can be a member of 1 or more groups. This will show which groups to which a
-	// location belongs.
-	Groups []*SoftLayer_Location_Group `json:"groups,omitempty"`
-
-	// HardwareFirewalls - <nil>
-	HardwareFirewalls []*SoftLayer_Hardware `json:"hardwareFirewalls,omitempty"`
-
-	// LocationReservationMember - no documentation
-	LocationReservationMember *SoftLayer_Location_Reservation_Rack_Member `json:"locationReservationMember,omitempty"`
-
-	// RegionCount - A count of a location can be a member of 1 or more regions. This will show which
-	// regions to which a location belongs.
-	RegionCount uint64 `json:"regionCount,omitempty"`
-
-	// LocationAddress - no documentation
-	LocationAddress *SoftLayer_Account_Address `json:"locationAddress,omitempty"`
-
-	// OnlineSslVpnUserCount - The total number of users online using SoftLayer's SSL VPN service for a
-	// location.
-	OnlineSslVpnUserCount int `json:"onlineSslVpnUserCount,omitempty"`
-
-	// HardwareFirewallCount - no documentation
-	HardwareFirewallCount uint64 `json:"hardwareFirewallCount,omitempty"`
-
-	// GroupCount - A count of a location can be a member of 1 or more groups. This will show which groups
-	// to which a location belongs.
-	GroupCount uint64 `json:"groupCount,omitempty"`
-
-	// BackboneDependents - <nil>
-	BackboneDependents []*SoftLayer_Network_Backbone_Location_Dependent `json:"backboneDependents,omitempty"`
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 
 	// PriceGroups - A location can be a member of 1 or more Price Groups. This will show which groups to
 	// which a location belongs.
@@ -94,8 +27,66 @@ type SoftLayer_Location_Extended struct {
 	// Regions - A location can be a member of 1 or more regions. This will show which regions to which a
 	// location belongs.
 	Regions []*SoftLayer_Location_Region `json:"regions,omitempty"`
+
+	// BackboneDependents - <nil>
+	BackboneDependents []*SoftLayer_Network_Backbone_Location_Dependent `json:"backboneDependents,omitempty"`
+
+	// Groups - A location can be a member of 1 or more groups. This will show which groups to which a
+	// location belongs.
+	Groups []*SoftLayer_Location_Group `json:"groups,omitempty"`
+
+	// OnlinePptpVpnUserCount - The total number of users online using SoftLayer's VPN service for a
+	// location.
+	OnlinePptpVpnUserCount int `json:"onlinePptpVpnUserCount,omitempty"`
+
+	// OnlineSslVpnUserCount - The total number of users online using SoftLayer's SSL VPN service for a
+	// location.
+	OnlineSslVpnUserCount int `json:"onlineSslVpnUserCount,omitempty"`
+
+	// HardwareFirewallCount - no documentation
+	HardwareFirewallCount uint64 `json:"hardwareFirewallCount,omitempty"`
+
+	// LocationReservationMember - no documentation
+	LocationReservationMember *SoftLayer_Location_Reservation_Rack_Member `json:"locationReservationMember,omitempty"`
+
+	// LocationStatus - no documentation
+	LocationStatus *SoftLayer_Location_Status `json:"locationStatus,omitempty"`
+
+	// PriceGroupCount - A count of a location can be a member of 1 or more Price Groups. This will show
+	// which groups to which a location belongs.
+	PriceGroupCount uint64 `json:"priceGroupCount,omitempty"`
+
+	// RegionCount - A count of a location can be a member of 1 or more regions. This will show which
+	// regions to which a location belongs.
+	RegionCount uint64 `json:"regionCount,omitempty"`
+
+	// PathString - <nil>
+	PathString string `json:"pathString,omitempty"`
+
+	// VdrGroup - A location can be a member of 1 Bandwidth Pooling Group. This will show which group to
+	// which a location belongs.
+	VdrGroup *SoftLayer_Location_Group_Location_CrossReference `json:"vdrGroup,omitempty"`
+
+	// BackboneDependentCount - no documentation
+	BackboneDependentCount uint64 `json:"backboneDependentCount,omitempty"`
+
+	// GroupCount - A count of a location can be a member of 1 or more groups. This will show which groups
+	// to which a location belongs.
+	GroupCount uint64 `json:"groupCount,omitempty"`
+
+	// HardwareFirewalls - <nil>
+	HardwareFirewalls []*SoftLayer_Hardware `json:"hardwareFirewalls,omitempty"`
+
+	// LocationAddress - no documentation
+	LocationAddress *SoftLayer_Account_Address `json:"locationAddress,omitempty"`
+
+	// NetworkConfigurationAttribute - <nil>
+	NetworkConfigurationAttribute *SoftLayer_Hardware_Attribute `json:"networkConfigurationAttribute,omitempty"`
+
+	// Timezone - <nil>
+	Timezone *SoftLayer_Locale_Timezone `json:"timezone,omitempty"`
 }
 
-func (softlayer_location *SoftLayer_Location_Extended) String() string {
+func (softlayer_location *SoftLayer_Location) String() string {
 	return "SoftLayer_Location"
 }

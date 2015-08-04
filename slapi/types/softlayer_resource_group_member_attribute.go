@@ -17,15 +17,6 @@ type SoftLayer_Resource_Group_Member_Attribute struct {
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_resource_group_member_attribute *SoftLayer_Resource_Group_Member_Attribute) String() string {
-	return "SoftLayer_Resource_Group_Member_Attribute"
-}
-
-// SoftLayer_Resource_Group_Member_Attribute_Extended is SoftLayer_Resource_Group_Member_Attribute with all maskable types.
-type SoftLayer_Resource_Group_Member_Attribute_Extended struct {
-	SoftLayer_Resource_Group_Member_Attribute
 
 	// Member - A resource group member attribute's resource group member.
 	Member *SoftLayer_Resource_Group_Member `json:"member,omitempty"`
@@ -34,6 +25,6 @@ type SoftLayer_Resource_Group_Member_Attribute_Extended struct {
 	Type *SoftLayer_Resource_Group_Member_Attribute_Type `json:"type,omitempty"`
 }
 
-func (softlayer_resource_group_member_attribute *SoftLayer_Resource_Group_Member_Attribute_Extended) String() string {
+func (softlayer_resource_group_member_attribute *SoftLayer_Resource_Group_Member_Attribute) String() string {
 	return "SoftLayer_Resource_Group_Member_Attribute"
 }

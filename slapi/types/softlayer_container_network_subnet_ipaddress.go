@@ -8,9 +8,6 @@ package types
 // identifier nor the gateway nor the broadcast addresses are usable by SoftLayer servers.
 type SoftLayer_Container_Network_Subnet_IpAddress struct {
 
-	// IsBroadcastAddress - Whether an IP address is its subnet's broadcast address.
-	IsBroadcastAddress bool `json:"isBroadcastAddress,omitempty"`
-
 	// IsGatewayAddress - Whether an IP address is its subnet's gateway address. Gateway addresses exist on
 	// SoftLayer's routers and many not be assigned to servers.
 	IsGatewayAddress bool `json:"isGatewayAddress,omitempty"`
@@ -23,6 +20,9 @@ type SoftLayer_Container_Network_Subnet_IpAddress struct {
 
 	// IpAddress - no documentation
 	IpAddress string `json:"ipAddress,omitempty"`
+
+	// IsBroadcastAddress - Whether an IP address is its subnet's broadcast address.
+	IsBroadcastAddress bool `json:"isBroadcastAddress,omitempty"`
 }
 
 func (softlayer_container_network_subnet_ipaddress *SoftLayer_Container_Network_Subnet_IpAddress) String() string {

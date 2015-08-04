@@ -10,23 +10,8 @@ type SoftLayer_Notification_Occurrence_Resource_Virtual struct {
 	// Active - <nil>
 	Active int `json:"active,omitempty"`
 
-	// NotificationOccurrenceEventId - no documentation
-	NotificationOccurrenceEventId int `json:"notificationOccurrenceEventId,omitempty"`
-
-	// ResourceName - <nil>
-	ResourceName string `json:"resourceName,omitempty"`
-
-	// Hostname - <nil>
-	Hostname string `json:"hostname,omitempty"`
-
-	// PrivateIp - <nil>
-	PrivateIp string `json:"privateIp,omitempty"`
-
-	// ResourceTableId - <<< EOT The unique identifier for the physical resource that is associated
-	ResourceTableId int `json:"resourceTableId,omitempty"`
-
-	// ResourceAccountId - <<< EOT The unique identifier for the [[SoftLayer_Account]] associated with
-	ResourceAccountId int `json:"resourceAccountId,omitempty"`
+	// FilterLabel - <<< EOT A label which gives some background as to what piece of
+	FilterLabel string `json:"filterLabel,omitempty"`
 
 	// PublicIp - <nil>
 	PublicIp string `json:"publicIp,omitempty"`
@@ -34,17 +19,23 @@ type SoftLayer_Notification_Occurrence_Resource_Virtual struct {
 	// ResourceType - <nil>
 	ResourceType string `json:"resourceType,omitempty"`
 
-	// FilterLabel - <<< EOT A label which gives some background as to what piece of
-	FilterLabel string `json:"filterLabel,omitempty"`
-}
+	// ResourceName - <nil>
+	ResourceName string `json:"resourceName,omitempty"`
 
-func (softlayer_notification_occurrence_resource_virtual *SoftLayer_Notification_Occurrence_Resource_Virtual) String() string {
-	return "SoftLayer_Notification_Occurrence_Resource_Virtual"
-}
+	// ResourceTableId - <<< EOT The unique identifier for the physical resource that is associated
+	ResourceTableId int `json:"resourceTableId,omitempty"`
 
-// SoftLayer_Notification_Occurrence_Resource_Virtual_Extended is SoftLayer_Notification_Occurrence_Resource_Virtual with all maskable types.
-type SoftLayer_Notification_Occurrence_Resource_Virtual_Extended struct {
-	SoftLayer_Notification_Occurrence_Resource_Virtual
+	// Hostname - <nil>
+	Hostname string `json:"hostname,omitempty"`
+
+	// PrivateIp - <nil>
+	PrivateIp string `json:"privateIp,omitempty"`
+
+	// NotificationOccurrenceEventId - no documentation
+	NotificationOccurrenceEventId int `json:"notificationOccurrenceEventId,omitempty"`
+
+	// ResourceAccountId - <<< EOT The unique identifier for the [[SoftLayer_Account]] associated with
+	ResourceAccountId int `json:"resourceAccountId,omitempty"`
 
 	// NotificationOccurrenceEvent - no documentation
 	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent,omitempty"`
@@ -53,6 +44,6 @@ type SoftLayer_Notification_Occurrence_Resource_Virtual_Extended struct {
 	Resource *SoftLayer_Entity `json:"resource,omitempty"`
 }
 
-func (softlayer_notification_occurrence_resource_virtual *SoftLayer_Notification_Occurrence_Resource_Virtual_Extended) String() string {
+func (softlayer_notification_occurrence_resource_virtual *SoftLayer_Notification_Occurrence_Resource_Virtual) String() string {
 	return "SoftLayer_Notification_Occurrence_Resource_Virtual"
 }

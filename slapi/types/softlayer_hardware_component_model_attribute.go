@@ -18,23 +18,14 @@ type SoftLayer_Hardware_Component_Model_Attribute struct {
 	// Value - A hardware component model attribute's value. A value can have many different values
 	// depending on the attributes [[SoftLayer_Hardware_Component_Model_Attribute_Type|type]].
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_hardware_component_model_attribute *SoftLayer_Hardware_Component_Model_Attribute) String() string {
-	return "SoftLayer_Hardware_Component_Model_Attribute"
-}
-
-// SoftLayer_Hardware_Component_Model_Attribute_Extended is SoftLayer_Hardware_Component_Model_Attribute with all maskable types.
-type SoftLayer_Hardware_Component_Model_Attribute_Extended struct {
-	SoftLayer_Hardware_Component_Model_Attribute
-
-	// HardwareComponentAttributeType - <nil>
-	HardwareComponentAttributeType *SoftLayer_Hardware_Component_Model_Attribute_Type `json:"hardwareComponentAttributeType,omitempty"`
 
 	// HardwareComponent - <nil>
 	HardwareComponent *SoftLayer_Hardware_Component_Model `json:"hardwareComponent,omitempty"`
+
+	// HardwareComponentAttributeType - <nil>
+	HardwareComponentAttributeType *SoftLayer_Hardware_Component_Model_Attribute_Type `json:"hardwareComponentAttributeType,omitempty"`
 }
 
-func (softlayer_hardware_component_model_attribute *SoftLayer_Hardware_Component_Model_Attribute_Extended) String() string {
+func (softlayer_hardware_component_model_attribute *SoftLayer_Hardware_Component_Model_Attribute) String() string {
 	return "SoftLayer_Hardware_Component_Model_Attribute"
 }

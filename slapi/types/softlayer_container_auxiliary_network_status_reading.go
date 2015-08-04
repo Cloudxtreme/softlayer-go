@@ -14,26 +14,8 @@ import (
 // of our edge routers from multiple locations around the world.
 type SoftLayer_Container_Auxiliary_Network_Status_Reading struct {
 
-	// AveragePing - no documentation
-	AveragePing slapi.Float64 `json:"averagePing,omitempty"`
-
-	// LastCheckDate - no documentation
-	LastCheckDate *time.Time `json:"lastCheckDate,omitempty"`
-
 	// Latency - The total response time in seconds calculated during the last check.
 	Latency slapi.Float64 `json:"latency,omitempty"`
-
-	// StatusCode - no documentation
-	StatusCode string `json:"statusCode,omitempty"`
-
-	// StatusMessage - no documentation
-	StatusMessage string `json:"statusMessage,omitempty"`
-
-	// Frequency - no documentation
-	Frequency int `json:"frequency,omitempty"`
-
-	// LastDownDate - no documentation
-	LastDownDate *time.Time `json:"lastDownDate,omitempty"`
 
 	// MaximumPing - no documentation
 	MaximumPing slapi.Float64 `json:"maximumPing,omitempty"`
@@ -41,23 +23,41 @@ type SoftLayer_Container_Auxiliary_Network_Status_Reading struct {
 	// PingLoss - no documentation
 	PingLoss slapi.Float64 `json:"pingLoss,omitempty"`
 
-	// Target - no documentation
-	Target string `json:"target,omitempty"`
+	// StatusCode - no documentation
+	StatusCode string `json:"statusCode,omitempty"`
+
+	// AveragePing - no documentation
+	AveragePing slapi.Float64 `json:"averagePing,omitempty"`
 
 	// Fails - Number of failures since the target was last detected to be working properly.
 	Fails int `json:"fails,omitempty"`
 
-	// Label - no documentation
-	Label string `json:"label,omitempty"`
+	// Frequency - no documentation
+	Frequency int `json:"frequency,omitempty"`
 
 	// Location - no documentation
 	Location string `json:"location,omitempty"`
 
-	// StartDate - no documentation
-	StartDate *time.Time `json:"startDate,omitempty"`
+	// Label - no documentation
+	Label string `json:"label,omitempty"`
+
+	// LastCheckDate - no documentation
+	LastCheckDate *time.Time `json:"lastCheckDate,omitempty"`
 
 	// MinimumPing - no documentation
 	MinimumPing slapi.Float64 `json:"minimumPing,omitempty"`
+
+	// StatusMessage - no documentation
+	StatusMessage string `json:"statusMessage,omitempty"`
+
+	// LastDownDate - no documentation
+	LastDownDate *time.Time `json:"lastDownDate,omitempty"`
+
+	// StartDate - no documentation
+	StartDate *time.Time `json:"startDate,omitempty"`
+
+	// Target - no documentation
+	Target string `json:"target,omitempty"`
 
 	// TargetType - no documentation
 	TargetType string `json:"targetType,omitempty"`

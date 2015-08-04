@@ -21,15 +21,6 @@ type SoftLayer_Scale_Asset_Virtual_Guest struct {
 
 	// ScaleGroupId - no documentation
 	ScaleGroupId int `json:"scaleGroupId,omitempty"`
-}
-
-func (softlayer_scale_asset_virtual_guest *SoftLayer_Scale_Asset_Virtual_Guest) String() string {
-	return "SoftLayer_Scale_Asset_Virtual_Guest"
-}
-
-// SoftLayer_Scale_Asset_Virtual_Guest_Extended is SoftLayer_Scale_Asset_Virtual_Guest with all maskable types.
-type SoftLayer_Scale_Asset_Virtual_Guest_Extended struct {
-	SoftLayer_Scale_Asset_Virtual_Guest
 
 	// VirtualGuest - no documentation
 	VirtualGuest *SoftLayer_Virtual_Guest `json:"virtualGuest,omitempty"`
@@ -41,6 +32,6 @@ type SoftLayer_Scale_Asset_Virtual_Guest_Extended struct {
 	ScaleGroup *SoftLayer_Scale_Group `json:"scaleGroup,omitempty"`
 }
 
-func (softlayer_scale_asset_virtual_guest *SoftLayer_Scale_Asset_Virtual_Guest_Extended) String() string {
+func (softlayer_scale_asset_virtual_guest *SoftLayer_Scale_Asset_Virtual_Guest) String() string {
 	return "SoftLayer_Scale_Asset_Virtual_Guest"
 }

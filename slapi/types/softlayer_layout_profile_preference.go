@@ -10,8 +10,14 @@ import (
 // for layout preferences
 type SoftLayer_Layout_Profile_Preference struct {
 
+	// LayoutPreferenceId - The internal identifier of the overridden [[SoftLayer_Layout_Preference]]
+	LayoutPreferenceId int `json:"layoutPreferenceId,omitempty"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// LayoutContainerId - The id of the related [[SoftLayer_Layout_Container]]
+	LayoutContainerId int `json:"layoutContainerId,omitempty"`
 
 	// LayoutItemId - no documentation
 	LayoutItemId int `json:"layoutItemId,omitempty"`
@@ -19,29 +25,14 @@ type SoftLayer_Layout_Profile_Preference struct {
 	// LayoutProfileId - The internal identifier of the related [[SoftLayer_Layout_Profile]]
 	LayoutProfileId int `json:"layoutProfileId,omitempty"`
 
-	// DefaultValueFlag - no documentation
-	DefaultValueFlag int `json:"defaultValueFlag,omitempty"`
-
-	// LayoutContainerId - The id of the related [[SoftLayer_Layout_Container]]
-	LayoutContainerId int `json:"layoutContainerId,omitempty"`
-
-	// LayoutPreferenceId - The internal identifier of the overridden [[SoftLayer_Layout_Preference]]
-	LayoutPreferenceId int `json:"layoutPreferenceId,omitempty"`
-
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
-}
 
-func (softlayer_layout_profile_preference *SoftLayer_Layout_Profile_Preference) String() string {
-	return "SoftLayer_Layout_Profile_Preference"
-}
-
-// SoftLayer_Layout_Profile_Preference_Extended is SoftLayer_Layout_Profile_Preference with all maskable types.
-type SoftLayer_Layout_Profile_Preference_Extended struct {
-	SoftLayer_Layout_Profile_Preference
+	// DefaultValueFlag - no documentation
+	DefaultValueFlag int `json:"defaultValueFlag,omitempty"`
 
 	// LayoutProfile - <nil>
 	LayoutProfile *SoftLayer_Layout_Profile `json:"layoutProfile,omitempty"`
@@ -49,13 +40,13 @@ type SoftLayer_Layout_Profile_Preference_Extended struct {
 	// LayoutContainer - <nil>
 	LayoutContainer *SoftLayer_Layout_Container `json:"layoutContainer,omitempty"`
 
-	// LayoutItem - <nil>
-	LayoutItem *SoftLayer_Layout_Item `json:"layoutItem,omitempty"`
-
 	// LayoutPreference - <nil>
 	LayoutPreference *SoftLayer_Layout_Preference `json:"layoutPreference,omitempty"`
+
+	// LayoutItem - <nil>
+	LayoutItem *SoftLayer_Layout_Item `json:"layoutItem,omitempty"`
 }
 
-func (softlayer_layout_profile_preference *SoftLayer_Layout_Profile_Preference_Extended) String() string {
+func (softlayer_layout_profile_preference *SoftLayer_Layout_Profile_Preference) String() string {
 	return "SoftLayer_Layout_Profile_Preference"
 }

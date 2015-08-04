@@ -8,15 +8,6 @@ package types
 // location. When a server is ordered and a region is selected, this is the location within that region
 // where the server will actually exist and have software/services installed.
 type SoftLayer_Location_Region_Location struct {
-}
-
-func (softlayer_location_region_location *SoftLayer_Location_Region_Location) String() string {
-	return "SoftLayer_Location_Region_Location"
-}
-
-// SoftLayer_Location_Region_Location_Extended is SoftLayer_Location_Region_Location with all maskable types.
-type SoftLayer_Location_Region_Location_Extended struct {
-	SoftLayer_Location_Region_Location
 
 	// Location - The SoftLayer_Location tied to a region's location. This provides more information about
 	// the location, including specific datacenter information.
@@ -36,6 +27,6 @@ type SoftLayer_Location_Region_Location_Extended struct {
 	LocationPackageDetailCount uint64 `json:"locationPackageDetailCount,omitempty"`
 }
 
-func (softlayer_location_region_location *SoftLayer_Location_Region_Location_Extended) String() string {
+func (softlayer_location_region_location *SoftLayer_Location_Region_Location) String() string {
 	return "SoftLayer_Location_Region_Location"
 }

@@ -26,21 +26,6 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command_Request struct {
 
 	// Processed - Execution status of the remote management command. True is successful. False is failure.
 	Processed bool `json:"processed,omitempty"`
-}
-
-func (softlayer_hardware_component_remotemanagement_command_request *SoftLayer_Hardware_Component_RemoteManagement_Command_Request) String() string {
-	return "SoftLayer_Hardware_Component_RemoteManagement_Command_Request"
-}
-
-// SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended is SoftLayer_Hardware_Component_RemoteManagement_Command_Request with all maskable types.
-type SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended struct {
-	SoftLayer_Hardware_Component_RemoteManagement_Command_Request
-
-	// RemoteManagementCommand - no documentation
-	RemoteManagementCommand *SoftLayer_Hardware_Component_RemoteManagement_Command `json:"remoteManagementCommand,omitempty"`
-
-	// User - Information regarding the user who issued the remote management command.
-	User *SoftLayer_User_Customer `json:"user,omitempty"`
 
 	// Hardware - The id of the hardware to perform the remote management or powerstrip command on.
 	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
@@ -48,8 +33,14 @@ type SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended stru
 	// NetworkComponent - A hardware's network components. Network components are hardware components such
 	// as cards or Ethernet cards.
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent,omitempty"`
+
+	// RemoteManagementCommand - no documentation
+	RemoteManagementCommand *SoftLayer_Hardware_Component_RemoteManagement_Command `json:"remoteManagementCommand,omitempty"`
+
+	// User - Information regarding the user who issued the remote management command.
+	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
-func (softlayer_hardware_component_remotemanagement_command_request *SoftLayer_Hardware_Component_RemoteManagement_Command_Request_Extended) String() string {
+func (softlayer_hardware_component_remotemanagement_command_request *SoftLayer_Hardware_Component_RemoteManagement_Command_Request) String() string {
 	return "SoftLayer_Hardware_Component_RemoteManagement_Command_Request"
 }

@@ -16,23 +16,14 @@ type SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference struct {
 
 	// TemplateGroupId - Internal identifier of a monitoring agent configuration group
 	TemplateGroupId int `json:"templateGroupId,omitempty"`
-}
-
-func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) String() string {
-	return "SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference"
-}
-
-// SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference_Extended is SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference with all maskable types.
-type SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference_Extended struct {
-	SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference
-
-	// TemplateGroup - <nil>
-	TemplateGroup *SoftLayer_Monitoring_Agent_Configuration_Template_Group `json:"templateGroup,omitempty"`
 
 	// ConfigurationTemplate - <nil>
 	ConfigurationTemplate *SoftLayer_Configuration_Template `json:"configurationTemplate,omitempty"`
+
+	// TemplateGroup - <nil>
+	TemplateGroup *SoftLayer_Monitoring_Agent_Configuration_Template_Group `json:"templateGroup,omitempty"`
 }
 
-func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference_Extended) String() string {
+func (softlayer_monitoring_agent_configuration_template_group_reference *SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference) String() string {
 	return "SoftLayer_Monitoring_Agent_Configuration_Template_Group_Reference"
 }

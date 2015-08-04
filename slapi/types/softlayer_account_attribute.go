@@ -8,28 +8,19 @@ package types
 // information relating to a single SoftLayer_Account attribute.
 type SoftLayer_Account_Attribute struct {
 
-	// Value - no documentation
-	Value string `json:"value,omitempty"`
-
-	// AccountAttributeTypeId - The internal identifier of the type of attribute that a SoftLayer customer
-	// account attribute belongs to.
-	AccountAttributeTypeId int `json:"accountAttributeTypeId,omitempty"`
-
 	// AccountId - The internal identifier of the SoftLayer customer account that is assigned an account
 	// attribute.
 	AccountId int `json:"accountId,omitempty"`
 
 	// Id - A SoftLayer customer account attribute's internal identifier.
 	Id int `json:"id,omitempty"`
-}
 
-func (softlayer_account_attribute *SoftLayer_Account_Attribute) String() string {
-	return "SoftLayer_Account_Attribute"
-}
+	// Value - no documentation
+	Value string `json:"value,omitempty"`
 
-// SoftLayer_Account_Attribute_Extended is SoftLayer_Account_Attribute with all maskable types.
-type SoftLayer_Account_Attribute_Extended struct {
-	SoftLayer_Account_Attribute
+	// AccountAttributeTypeId - The internal identifier of the type of attribute that a SoftLayer customer
+	// account attribute belongs to.
+	AccountAttributeTypeId int `json:"accountAttributeTypeId,omitempty"`
 
 	// Account - The SoftLayer customer account that has an attribute.
 	Account *SoftLayer_Account `json:"account,omitempty"`
@@ -38,6 +29,6 @@ type SoftLayer_Account_Attribute_Extended struct {
 	AccountAttributeType *SoftLayer_Account_Attribute_Type `json:"accountAttributeType,omitempty"`
 }
 
-func (softlayer_account_attribute *SoftLayer_Account_Attribute_Extended) String() string {
+func (softlayer_account_attribute *SoftLayer_Account_Attribute) String() string {
 	return "SoftLayer_Account_Attribute"
 }

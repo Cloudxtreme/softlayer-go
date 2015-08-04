@@ -16,7 +16,6 @@ func main() {
 	}
 
 	makeBasicAPICall(client)
-	makeExtendedAPICall(client)
 	makeCustomAPICall(client)
 }
 
@@ -37,25 +36,6 @@ func makeBasicAPICall(client slapi.Client) {
 	log.Println("Basic:")
 	log.Println(basicAccount.Id)
 	log.Println(basicAccount.CompanyName)
-}
-
-// makeExtendedAPICall demonstrates using the extended type
-func makeExtendedAPICall(client slapi.Client) {
-	req := slapi.Request{
-		Service: "SoftLayer_Account",
-		Method:  "getObject",
-		Mask:    `mask[id,virtualGuests]`,
-	}
-
-	// Make API call with extended account type
-	extendedAccount := &types.SoftLayer_Account_Extended{}
-	err := client.Call(req, extendedAccount)
-	if err != nil {
-		log.Fatal(err)
-	}
-	log.Println("Extended:")
-	log.Println(extendedAccount.Id)
-	log.Println(extendedAccount.VirtualGuests)
 }
 
 type CustomAccount struct {

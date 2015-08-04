@@ -9,12 +9,6 @@ import (
 // SoftLayer_User_Permission_Group_Type - <nil>
 type SoftLayer_User_Permission_Group_Type struct {
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
-
 	// KeyName - <nil>
 	KeyName string `json:"keyName,omitempty"`
 
@@ -23,15 +17,12 @@ type SoftLayer_User_Permission_Group_Type struct {
 
 	// Name - <nil>
 	Name string `json:"name,omitempty"`
-}
 
-func (softlayer_user_permission_group_type *SoftLayer_User_Permission_Group_Type) String() string {
-	return "SoftLayer_User_Permission_Group_Type"
-}
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
-// SoftLayer_User_Permission_Group_Type_Extended is SoftLayer_User_Permission_Group_Type with all maskable types.
-type SoftLayer_User_Permission_Group_Type_Extended struct {
-	SoftLayer_User_Permission_Group_Type
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 
 	// GroupCount - no documentation
 	GroupCount uint64 `json:"groupCount,omitempty"`
@@ -40,6 +31,6 @@ type SoftLayer_User_Permission_Group_Type_Extended struct {
 	Groups []*SoftLayer_User_Permission_Group `json:"groups,omitempty"`
 }
 
-func (softlayer_user_permission_group_type *SoftLayer_User_Permission_Group_Type_Extended) String() string {
+func (softlayer_user_permission_group_type *SoftLayer_User_Permission_Group_Type) String() string {
 	return "SoftLayer_User_Permission_Group_Type"
 }

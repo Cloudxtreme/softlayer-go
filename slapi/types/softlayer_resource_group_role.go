@@ -13,15 +13,6 @@ type SoftLayer_Resource_Group_Role struct {
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
-}
-
-func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role) String() string {
-	return "SoftLayer_Resource_Group_Role"
-}
-
-// SoftLayer_Resource_Group_Role_Extended is SoftLayer_Resource_Group_Role with all maskable types.
-type SoftLayer_Resource_Group_Role_Extended struct {
-	SoftLayer_Resource_Group_Role
 
 	// MemberLinks - no documentation
 	MemberLinks []*SoftLayer_Resource_Group_Member_Role_Link `json:"memberLinks,omitempty"`
@@ -30,6 +21,6 @@ type SoftLayer_Resource_Group_Role_Extended struct {
 	MemberLinkCount uint64 `json:"memberLinkCount,omitempty"`
 }
 
-func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role_Extended) String() string {
+func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role) String() string {
 	return "SoftLayer_Resource_Group_Role"
 }

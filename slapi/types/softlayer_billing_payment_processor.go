@@ -10,21 +10,6 @@ type SoftLayer_Billing_Payment_Processor struct {
 
 	// Name - <nil>
 	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_billing_payment_processor *SoftLayer_Billing_Payment_Processor) String() string {
-	return "SoftLayer_Billing_Payment_Processor"
-}
-
-// SoftLayer_Billing_Payment_Processor_Extended is SoftLayer_Billing_Payment_Processor with all maskable types.
-type SoftLayer_Billing_Payment_Processor_Extended struct {
-	SoftLayer_Billing_Payment_Processor
-
-	// PaymentMethods - <nil>
-	PaymentMethods []*SoftLayer_Billing_Payment_Processor_Method `json:"paymentMethods,omitempty"`
-
-	// Type - <nil>
-	Type *SoftLayer_Billing_Payment_Processor_Type `json:"type,omitempty"`
 
 	// BrandAssignmentCount - no documentation
 	BrandAssignmentCount uint64 `json:"brandAssignmentCount,omitempty"`
@@ -37,8 +22,14 @@ type SoftLayer_Billing_Payment_Processor_Extended struct {
 
 	// OwnerAccount - <nil>
 	OwnerAccount *SoftLayer_Account `json:"ownerAccount,omitempty"`
+
+	// PaymentMethods - <nil>
+	PaymentMethods []*SoftLayer_Billing_Payment_Processor_Method `json:"paymentMethods,omitempty"`
+
+	// Type - <nil>
+	Type *SoftLayer_Billing_Payment_Processor_Type `json:"type,omitempty"`
 }
 
-func (softlayer_billing_payment_processor *SoftLayer_Billing_Payment_Processor_Extended) String() string {
+func (softlayer_billing_payment_processor *SoftLayer_Billing_Payment_Processor) String() string {
 	return "SoftLayer_Billing_Payment_Processor"
 }

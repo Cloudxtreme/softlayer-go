@@ -21,15 +21,6 @@ type SoftLayer_Network_Media_Transcode_Account struct {
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-}
-
-func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) String() string {
-	return "SoftLayer_Network_Media_Transcode_Account"
-}
-
-// SoftLayer_Network_Media_Transcode_Account_Extended is SoftLayer_Network_Media_Transcode_Account with all maskable types.
-type SoftLayer_Network_Media_Transcode_Account_Extended struct {
-	SoftLayer_Network_Media_Transcode_Account
 
 	// TranscodeJobCount - no documentation
 	TranscodeJobCount uint64 `json:"transcodeJobCount,omitempty"`
@@ -41,6 +32,6 @@ type SoftLayer_Network_Media_Transcode_Account_Extended struct {
 	TranscodeJobs []*SoftLayer_Network_Media_Transcode_Job `json:"transcodeJobs,omitempty"`
 }
 
-func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account_Extended) String() string {
+func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) String() string {
 	return "SoftLayer_Network_Media_Transcode_Account"
 }

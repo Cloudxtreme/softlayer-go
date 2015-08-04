@@ -15,20 +15,11 @@ type SoftLayer_Hardware_Attribute struct {
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_hardware_attribute *SoftLayer_Hardware_Attribute) String() string {
-	return "SoftLayer_Hardware_Attribute"
-}
-
-// SoftLayer_Hardware_Attribute_Extended is SoftLayer_Hardware_Attribute with all maskable types.
-type SoftLayer_Hardware_Attribute_Extended struct {
-	SoftLayer_Hardware_Attribute
 
 	// HardwareAttributeType - The type of hardware attribute that this represents.
 	HardwareAttributeType *SoftLayer_Hardware_Attribute_Type `json:"hardwareAttributeType,omitempty"`
 }
 
-func (softlayer_hardware_attribute *SoftLayer_Hardware_Attribute_Extended) String() string {
+func (softlayer_hardware_attribute *SoftLayer_Hardware_Attribute) String() string {
 	return "SoftLayer_Hardware_Attribute"
 }

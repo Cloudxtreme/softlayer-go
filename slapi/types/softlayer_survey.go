@@ -27,18 +27,6 @@ type SoftLayer_Survey struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_survey *SoftLayer_Survey) String() string {
-	return "SoftLayer_Survey"
-}
-
-// SoftLayer_Survey_Extended is SoftLayer_Survey with all maskable types.
-type SoftLayer_Survey_Extended struct {
-	SoftLayer_Survey
-
-	// Questions - no documentation
-	Questions []*SoftLayer_Survey_Question `json:"questions,omitempty"`
 
 	// Status - no documentation
 	Status *SoftLayer_Survey_Status `json:"status,omitempty"`
@@ -46,10 +34,13 @@ type SoftLayer_Survey_Extended struct {
 	// Type - no documentation
 	Type *SoftLayer_Survey_Type `json:"type,omitempty"`
 
+	// Questions - no documentation
+	Questions []*SoftLayer_Survey_Question `json:"questions,omitempty"`
+
 	// QuestionCount - no documentation
 	QuestionCount uint64 `json:"questionCount,omitempty"`
 }
 
-func (softlayer_survey *SoftLayer_Survey_Extended) String() string {
+func (softlayer_survey *SoftLayer_Survey) String() string {
 	return "SoftLayer_Survey"
 }

@@ -25,15 +25,6 @@ type SoftLayer_Configuration_Template_Section_Reference struct {
 
 	// TemplateId - no documentation
 	TemplateId int `json:"templateId,omitempty"`
-}
-
-func (softlayer_configuration_template_section_reference *SoftLayer_Configuration_Template_Section_Reference) String() string {
-	return "SoftLayer_Configuration_Template_Section_Reference"
-}
-
-// SoftLayer_Configuration_Template_Section_Reference_Extended is SoftLayer_Configuration_Template_Section_Reference with all maskable types.
-type SoftLayer_Configuration_Template_Section_Reference_Extended struct {
-	SoftLayer_Configuration_Template_Section_Reference
 
 	// Section - <nil>
 	Section *SoftLayer_Configuration_Template_Section `json:"section,omitempty"`
@@ -42,6 +33,6 @@ type SoftLayer_Configuration_Template_Section_Reference_Extended struct {
 	Template *SoftLayer_Configuration_Template `json:"template,omitempty"`
 }
 
-func (softlayer_configuration_template_section_reference *SoftLayer_Configuration_Template_Section_Reference_Extended) String() string {
+func (softlayer_configuration_template_section_reference *SoftLayer_Configuration_Template_Section_Reference) String() string {
 	return "SoftLayer_Configuration_Template_Section_Reference"
 }

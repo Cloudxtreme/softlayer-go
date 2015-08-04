@@ -5,9 +5,6 @@ package types
 // SoftLayer_Network_Message_Delivery_Type - <nil>
 type SoftLayer_Network_Message_Delivery_Type struct {
 
-	// KeyName - <nil>
-	KeyName string `json:"keyName,omitempty"`
-
 	// Name - <nil>
 	Name string `json:"name,omitempty"`
 
@@ -16,6 +13,9 @@ type SoftLayer_Network_Message_Delivery_Type struct {
 
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
+
+	// KeyName - <nil>
+	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_network_message_delivery_type *SoftLayer_Network_Message_Delivery_Type) String() string {

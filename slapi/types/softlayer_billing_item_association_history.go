@@ -29,15 +29,6 @@ type SoftLayer_Billing_Item_Association_History struct {
 
 	// Id - A billing item association history's internal identifier.
 	Id int `json:"id,omitempty"`
-}
-
-func (softlayer_billing_item_association_history *SoftLayer_Billing_Item_Association_History) String() string {
-	return "SoftLayer_Billing_Item_Association_History"
-}
-
-// SoftLayer_Billing_Item_Association_History_Extended is SoftLayer_Billing_Item_Association_History with all maskable types.
-type SoftLayer_Billing_Item_Association_History_Extended struct {
-	SoftLayer_Billing_Item_Association_History
 
 	// AssociatedBillingItem - The server billing item that an orphaned billing item was associated with.
 	AssociatedBillingItem *SoftLayer_Billing_Item `json:"associatedBillingItem,omitempty"`
@@ -46,6 +37,6 @@ type SoftLayer_Billing_Item_Association_History_Extended struct {
 	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
 }
 
-func (softlayer_billing_item_association_history *SoftLayer_Billing_Item_Association_History_Extended) String() string {
+func (softlayer_billing_item_association_history *SoftLayer_Billing_Item_Association_History) String() string {
 	return "SoftLayer_Billing_Item_Association_History"
 }

@@ -8,15 +8,6 @@ package types
 // (SoftLayer_Network_Connection), so you shouldn't have to delete or insert records into this table,
 // ever.
 type SoftLayer_Network_Component_Uplink_Hardware struct {
-}
-
-func (softlayer_network_component_uplink_hardware *SoftLayer_Network_Component_Uplink_Hardware) String() string {
-	return "SoftLayer_Network_Component_Uplink_Hardware"
-}
-
-// SoftLayer_Network_Component_Uplink_Hardware_Extended is SoftLayer_Network_Component_Uplink_Hardware with all maskable types.
-type SoftLayer_Network_Component_Uplink_Hardware_Extended struct {
-	SoftLayer_Network_Component_Uplink_Hardware
 
 	// Hardware - A network component uplink's connected [[SoftLayer_Hardware|Hardware]].
 	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
@@ -26,6 +17,6 @@ type SoftLayer_Network_Component_Uplink_Hardware_Extended struct {
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent,omitempty"`
 }
 
-func (softlayer_network_component_uplink_hardware *SoftLayer_Network_Component_Uplink_Hardware_Extended) String() string {
+func (softlayer_network_component_uplink_hardware *SoftLayer_Network_Component_Uplink_Hardware) String() string {
 	return "SoftLayer_Network_Component_Uplink_Hardware"
 }

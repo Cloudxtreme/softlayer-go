@@ -15,15 +15,6 @@ type SoftLayer_Product_Item_Bundles struct {
 
 	// ItemPriceId - no documentation
 	ItemPriceId int `json:"itemPriceId,omitempty"`
-}
-
-func (softlayer_product_item_bundles *SoftLayer_Product_Item_Bundles) String() string {
-	return "SoftLayer_Product_Item_Bundles"
-}
-
-// SoftLayer_Product_Item_Bundles_Extended is SoftLayer_Product_Item_Bundles with all maskable types.
-type SoftLayer_Product_Item_Bundles_Extended struct {
-	SoftLayer_Product_Item_Bundles
 
 	// Category - no documentation
 	Category *SoftLayer_Product_Item_Category `json:"category,omitempty"`
@@ -35,6 +26,6 @@ type SoftLayer_Product_Item_Bundles_Extended struct {
 	BundleItem *SoftLayer_Product_Item `json:"bundleItem,omitempty"`
 }
 
-func (softlayer_product_item_bundles *SoftLayer_Product_Item_Bundles_Extended) String() string {
+func (softlayer_product_item_bundles *SoftLayer_Product_Item_Bundles) String() string {
 	return "SoftLayer_Product_Item_Bundles"
 }

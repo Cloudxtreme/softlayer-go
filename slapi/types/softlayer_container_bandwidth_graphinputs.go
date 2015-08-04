@@ -10,9 +10,6 @@ import (
 // single inbound object for a given bandwidth graph.
 type SoftLayer_Container_Bandwidth_GraphInputs struct {
 
-	// Pod - <nil>
-	Pod int `json:"pod,omitempty"`
-
 	// ServerName - This is a human readable name for the server or rack being graphed.
 	ServerName string `json:"serverName,omitempty"`
 
@@ -24,6 +21,9 @@ type SoftLayer_Container_Bandwidth_GraphInputs struct {
 
 	// NetworkInterfaceId - The front-end or back-end network uplink interface associated with this server.
 	NetworkInterfaceId int `json:"networkInterfaceId,omitempty"`
+
+	// Pod - <nil>
+	Pod int `json:"pod,omitempty"`
 }
 
 func (softlayer_container_bandwidth_graphinputs *SoftLayer_Container_Bandwidth_GraphInputs) String() string {

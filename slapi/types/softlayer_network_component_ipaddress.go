@@ -6,15 +6,6 @@ package types
 // general information relating to the binding of a single network component to a single SoftLayer IP
 // address.
 type SoftLayer_Network_Component_IpAddress struct {
-}
-
-func (softlayer_network_component_ipaddress *SoftLayer_Network_Component_IpAddress) String() string {
-	return "SoftLayer_Network_Component_IpAddress"
-}
-
-// SoftLayer_Network_Component_IpAddress_Extended is SoftLayer_Network_Component_IpAddress with all maskable types.
-type SoftLayer_Network_Component_IpAddress_Extended struct {
-	SoftLayer_Network_Component_IpAddress
 
 	// IpAddress - The IP address associated with this object's network component.
 	IpAddress *SoftLayer_Network_Subnet_IpAddress `json:"ipAddress,omitempty"`
@@ -23,6 +14,6 @@ type SoftLayer_Network_Component_IpAddress_Extended struct {
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent,omitempty"`
 }
 
-func (softlayer_network_component_ipaddress *SoftLayer_Network_Component_IpAddress_Extended) String() string {
+func (softlayer_network_component_ipaddress *SoftLayer_Network_Component_IpAddress) String() string {
 	return "SoftLayer_Network_Component_IpAddress"
 }

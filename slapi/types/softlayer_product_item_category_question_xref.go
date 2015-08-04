@@ -8,6 +8,12 @@ package types
 // category.
 type SoftLayer_Product_Item_Category_Question_Xref struct {
 
+	// QuestionId - no documentation
+	QuestionId int `json:"questionId,omitempty"`
+
+	// Required - Flag to indicate whether an answer is required for the question..
+	Required bool `json:"required,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -17,21 +23,6 @@ type SoftLayer_Product_Item_Category_Question_Xref struct {
 	// LocationId - no documentation
 	LocationId int `json:"locationId,omitempty"`
 
-	// QuestionId - no documentation
-	QuestionId int `json:"questionId,omitempty"`
-
-	// Required - Flag to indicate whether an answer is required for the question..
-	Required bool `json:"required,omitempty"`
-}
-
-func (softlayer_product_item_category_question_xref *SoftLayer_Product_Item_Category_Question_Xref) String() string {
-	return "SoftLayer_Product_Item_Category_Question_Xref"
-}
-
-// SoftLayer_Product_Item_Category_Question_Xref_Extended is SoftLayer_Product_Item_Category_Question_Xref with all maskable types.
-type SoftLayer_Product_Item_Category_Question_Xref_Extended struct {
-	SoftLayer_Product_Item_Category_Question_Xref
-
 	// ItemCategory - The product item category that this reference points to.
 	ItemCategory *SoftLayer_Product_Item_Category `json:"itemCategory,omitempty"`
 
@@ -39,6 +30,6 @@ type SoftLayer_Product_Item_Category_Question_Xref_Extended struct {
 	Question *SoftLayer_Product_Item_Category_Question `json:"question,omitempty"`
 }
 
-func (softlayer_product_item_category_question_xref *SoftLayer_Product_Item_Category_Question_Xref_Extended) String() string {
+func (softlayer_product_item_category_question_xref *SoftLayer_Product_Item_Category_Question_Xref) String() string {
 	return "SoftLayer_Product_Item_Category_Question_Xref"
 }

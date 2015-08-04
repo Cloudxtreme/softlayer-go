@@ -9,6 +9,12 @@ import (
 // SoftLayer_Product_Item_Price_Premium - <nil>
 type SoftLayer_Product_Item_Price_Premium struct {
 
+	// HourlyModifier - <nil>
+	HourlyModifier slapi.Float64 `json:"hourlyModifier,omitempty"`
+
+	// ItemPriceId - <nil>
+	ItemPriceId int `json:"itemPriceId,omitempty"`
+
 	// LocationId - <nil>
 	LocationId int `json:"locationId,omitempty"`
 
@@ -17,21 +23,6 @@ type SoftLayer_Product_Item_Price_Premium struct {
 
 	// PackageId - <nil>
 	PackageId int `json:"packageId,omitempty"`
-
-	// HourlyModifier - <nil>
-	HourlyModifier slapi.Float64 `json:"hourlyModifier,omitempty"`
-
-	// ItemPriceId - <nil>
-	ItemPriceId int `json:"itemPriceId,omitempty"`
-}
-
-func (softlayer_product_item_price_premium *SoftLayer_Product_Item_Price_Premium) String() string {
-	return "SoftLayer_Product_Item_Price_Premium"
-}
-
-// SoftLayer_Product_Item_Price_Premium_Extended is SoftLayer_Product_Item_Price_Premium with all maskable types.
-type SoftLayer_Product_Item_Price_Premium_Extended struct {
-	SoftLayer_Product_Item_Price_Premium
 
 	// ItemPrice - <nil>
 	ItemPrice *SoftLayer_Product_Item_Price `json:"itemPrice,omitempty"`
@@ -43,6 +34,6 @@ type SoftLayer_Product_Item_Price_Premium_Extended struct {
 	Package *SoftLayer_Product_Package `json:"package,omitempty"`
 }
 
-func (softlayer_product_item_price_premium *SoftLayer_Product_Item_Price_Premium_Extended) String() string {
+func (softlayer_product_item_price_premium *SoftLayer_Product_Item_Price_Premium) String() string {
 	return "SoftLayer_Product_Item_Price_Premium"
 }

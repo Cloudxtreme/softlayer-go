@@ -12,49 +12,40 @@ import (
 // detected and the action that is taken.
 type McAfee_Epolicy_Orchestrator_Version45_Event_Version7 struct {
 
+	// DetectedUtc - no documentation
+	DetectedUtc *time.Time `json:"detectedUtc,omitempty"`
+
+	// TargetFilename - The name of the file that was the target of the event.
+	TargetFilename string `json:"targetFilename,omitempty"`
+
+	// ThreatSeverityLabel - no documentation
+	ThreatSeverityLabel string `json:"threatSeverityLabel,omitempty"`
+
 	// SourceIpv4 - The IP address of the source that generated an event.
 	SourceIpv4 string `json:"sourceIpv4,omitempty"`
 
 	// SourceProcessName - no documentation
 	SourceProcessName string `json:"sourceProcessName,omitempty"`
 
-	// TargetFilename - The name of the file that was the target of the event.
-	TargetFilename string `json:"targetFilename,omitempty"`
-
-	// ThreatName - no documentation
-	ThreatName string `json:"threatName,omitempty"`
-
-	// ThreatSeverityLabel - no documentation
-	ThreatSeverityLabel string `json:"threatSeverityLabel,omitempty"`
-
-	// DetectedUtc - no documentation
-	DetectedUtc *time.Time `json:"detectedUtc,omitempty"`
-
 	// ThreatActionTaken - no documentation
 	ThreatActionTaken string `json:"threatActionTaken,omitempty"`
 
 	// ThreatType - no documentation
 	ThreatType string `json:"threatType,omitempty"`
-}
 
-func (mcafee_epolicy_orchestrator_version45_event_version7 *McAfee_Epolicy_Orchestrator_Version45_Event_Version7) String() string {
-	return "McAfee_Epolicy_Orchestrator_Version45_Event_Version7"
-}
-
-// McAfee_Epolicy_Orchestrator_Version45_Event_Version7_Extended is McAfee_Epolicy_Orchestrator_Version45_Event_Version7 with all maskable types.
-type McAfee_Epolicy_Orchestrator_Version45_Event_Version7_Extended struct {
-	McAfee_Epolicy_Orchestrator_Version45_Event_Version7
-
-	// VirusActionTaken - no documentation
-	VirusActionTaken *McAfee_Epolicy_Orchestrator_Version45_Event_Filter_Description `json:"virusActionTaken,omitempty"`
+	// ThreatName - no documentation
+	ThreatName string `json:"threatName,omitempty"`
 
 	// AgentDetails - no documentation
 	AgentDetails *McAfee_Epolicy_Orchestrator_Version45_Agent_Details `json:"agentDetails,omitempty"`
+
+	// VirusActionTaken - no documentation
+	VirusActionTaken *McAfee_Epolicy_Orchestrator_Version45_Event_Filter_Description `json:"virusActionTaken,omitempty"`
 
 	// Signature - no documentation
 	Signature *McAfee_Epolicy_Orchestrator_Version45_Hips_Event_Signature_Version7 `json:"signature,omitempty"`
 }
 
-func (mcafee_epolicy_orchestrator_version45_event_version7 *McAfee_Epolicy_Orchestrator_Version45_Event_Version7_Extended) String() string {
+func (mcafee_epolicy_orchestrator_version45_event_version7 *McAfee_Epolicy_Orchestrator_Version45_Event_Version7) String() string {
 	return "McAfee_Epolicy_Orchestrator_Version45_Event_Version7"
 }

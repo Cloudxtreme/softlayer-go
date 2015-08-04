@@ -6,12 +6,6 @@ package types
 // CDN content authentication service.
 type SoftLayer_Container_Network_ContentDelivery_Authentication_Parameter struct {
 
-	// CdnAccountName - no documentation
-	CdnAccountName string `json:"cdnAccountName,omitempty"`
-
-	// ClientIp - no documentation
-	ClientIp string `json:"clientIp,omitempty"`
-
 	// Referrer - no documentation
 	Referrer string `json:"referrer,omitempty"`
 
@@ -20,6 +14,12 @@ type SoftLayer_Container_Network_ContentDelivery_Authentication_Parameter struct
 
 	// Token - no documentation
 	Token string `json:"token,omitempty"`
+
+	// CdnAccountName - no documentation
+	CdnAccountName string `json:"cdnAccountName,omitempty"`
+
+	// ClientIp - no documentation
+	ClientIp string `json:"clientIp,omitempty"`
 }
 
 func (softlayer_container_network_contentdelivery_authentication_parameter *SoftLayer_Container_Network_ContentDelivery_Authentication_Parameter) String() string {

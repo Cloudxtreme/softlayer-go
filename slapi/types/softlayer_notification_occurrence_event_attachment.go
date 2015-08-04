@@ -13,6 +13,9 @@ import (
 // event.
 type SoftLayer_Notification_Occurrence_Event_Attachment struct {
 
+	// FileName - no documentation
+	FileName string `json:"fileName,omitempty"`
+
 	// FileSize - no documentation
 	FileSize string `json:"fileSize,omitempty"`
 
@@ -25,22 +28,10 @@ type SoftLayer_Notification_Occurrence_Event_Attachment struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
-	// FileName - no documentation
-	FileName string `json:"fileName,omitempty"`
-}
-
-func (softlayer_notification_occurrence_event_attachment *SoftLayer_Notification_Occurrence_Event_Attachment) String() string {
-	return "SoftLayer_Notification_Occurrence_Event_Attachment"
-}
-
-// SoftLayer_Notification_Occurrence_Event_Attachment_Extended is SoftLayer_Notification_Occurrence_Event_Attachment with all maskable types.
-type SoftLayer_Notification_Occurrence_Event_Attachment_Extended struct {
-	SoftLayer_Notification_Occurrence_Event_Attachment
-
 	// NotificationOccurrenceEvent - <nil>
 	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent,omitempty"`
 }
 
-func (softlayer_notification_occurrence_event_attachment *SoftLayer_Notification_Occurrence_Event_Attachment_Extended) String() string {
+func (softlayer_notification_occurrence_event_attachment *SoftLayer_Notification_Occurrence_Event_Attachment) String() string {
 	return "SoftLayer_Notification_Occurrence_Event_Attachment"
 }

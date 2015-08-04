@@ -5,14 +5,14 @@ package types
 // SoftLayer_Scale_Policy_Action_Type - <nil>
 type SoftLayer_Scale_Policy_Action_Type struct {
 
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_scale_policy_action_type *SoftLayer_Scale_Policy_Action_Type) String() string {

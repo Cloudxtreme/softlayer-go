@@ -9,9 +9,6 @@ import (
 // SoftLayer_Ticket_Chat - <nil>
 type SoftLayer_Ticket_Chat struct {
 
-	// CustomerId - <nil>
-	CustomerId int `json:"customerId,omitempty"`
-
 	// EndDate - <nil>
 	EndDate *time.Time `json:"endDate,omitempty"`
 
@@ -20,15 +17,9 @@ type SoftLayer_Ticket_Chat struct {
 
 	// Transcript - <nil>
 	Transcript string `json:"transcript,omitempty"`
-}
 
-func (softlayer_ticket_chat *SoftLayer_Ticket_Chat) String() string {
-	return "SoftLayer_Ticket_Chat"
-}
-
-// SoftLayer_Ticket_Chat_Extended is SoftLayer_Ticket_Chat with all maskable types.
-type SoftLayer_Ticket_Chat_Extended struct {
-	SoftLayer_Ticket_Chat
+	// CustomerId - <nil>
+	CustomerId int `json:"customerId,omitempty"`
 
 	// Agent - <nil>
 	Agent *SoftLayer_User_Employee `json:"agent,omitempty"`
@@ -40,6 +31,6 @@ type SoftLayer_Ticket_Chat_Extended struct {
 	TicketUpdate *SoftLayer_Ticket_Update_Chat `json:"ticketUpdate,omitempty"`
 }
 
-func (softlayer_ticket_chat *SoftLayer_Ticket_Chat_Extended) String() string {
+func (softlayer_ticket_chat *SoftLayer_Ticket_Chat) String() string {
 	return "SoftLayer_Ticket_Chat"
 }

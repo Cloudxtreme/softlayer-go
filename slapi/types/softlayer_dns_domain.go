@@ -16,31 +16,18 @@ type SoftLayer_Dns_Domain struct {
 	// Name - A domain's name including top-level domain, for example "example.com".
 	Name string `json:"name,omitempty"`
 
+	// UpdateDate - no documentation
+	UpdateDate *time.Time `json:"updateDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// Serial - A unique number denoting the latest revision of a domain. Whenever a domain is changed its
 	// corresponding serial number is also changed. Serial numbers typically follow the format yyyymmdd##
 	// where yyyy is the current year, mm is the current month, dd is the current day of the month, and ##
 	// is the number of the revision for that day. A domain's serial number is automatically updated when
 	// edited via the
 	Serial int `json:"serial,omitempty"`
-
-	// UpdateDate - no documentation
-	UpdateDate *time.Time `json:"updateDate,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-}
-
-func (softlayer_dns_domain *SoftLayer_Dns_Domain) String() string {
-	return "SoftLayer_Dns_Domain"
-}
-
-// SoftLayer_Dns_Domain_Extended is SoftLayer_Dns_Domain with all maskable types.
-type SoftLayer_Dns_Domain_Extended struct {
-	SoftLayer_Dns_Domain
-
-	// ResourceRecordCount - A count of the individual records contained within a domain record. These
-	// include but are not limited to A, MX, SPF and TXT records.
-	ResourceRecordCount uint64 `json:"resourceRecordCount,omitempty"`
 
 	// ResourceRecords - The individual records contained within a domain record. These include but are not
 	// limited to A, MX, SPF and TXT records.
@@ -50,6 +37,10 @@ type SoftLayer_Dns_Domain_Extended struct {
 	// transfers.
 	Secondary *SoftLayer_Dns_Secondary `json:"secondary,omitempty"`
 
+	// ResourceRecordCount - A count of the individual records contained within a domain record. These
+	// include but are not limited to A, MX, SPF and TXT records.
+	ResourceRecordCount uint64 `json:"resourceRecordCount,omitempty"`
+
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`
 
@@ -57,6 +48,6 @@ type SoftLayer_Dns_Domain_Extended struct {
 	ManagedResourceFlag bool `json:"managedResourceFlag,omitempty"`
 }
 
-func (softlayer_dns_domain *SoftLayer_Dns_Domain_Extended) String() string {
+func (softlayer_dns_domain *SoftLayer_Dns_Domain) String() string {
 	return "SoftLayer_Dns_Domain"
 }

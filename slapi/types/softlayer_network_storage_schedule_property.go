@@ -24,23 +24,14 @@ type SoftLayer_Network_Storage_Schedule_Property struct {
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
-}
-
-func (softlayer_network_storage_schedule_property *SoftLayer_Network_Storage_Schedule_Property) String() string {
-	return "SoftLayer_Network_Storage_Schedule_Property"
-}
-
-// SoftLayer_Network_Storage_Schedule_Property_Extended is SoftLayer_Network_Storage_Schedule_Property with all maskable types.
-type SoftLayer_Network_Storage_Schedule_Property_Extended struct {
-	SoftLayer_Network_Storage_Schedule_Property
-
-	// Schedule - no documentation
-	Schedule *SoftLayer_Network_Storage_Schedule `json:"schedule,omitempty"`
 
 	// Type - The type provides a standardized definition for a property.
 	Type *SoftLayer_Network_Storage_Schedule_Property_Type `json:"type,omitempty"`
+
+	// Schedule - no documentation
+	Schedule *SoftLayer_Network_Storage_Schedule `json:"schedule,omitempty"`
 }
 
-func (softlayer_network_storage_schedule_property *SoftLayer_Network_Storage_Schedule_Property_Extended) String() string {
+func (softlayer_network_storage_schedule_property *SoftLayer_Network_Storage_Schedule_Property) String() string {
 	return "SoftLayer_Network_Storage_Schedule_Property"
 }

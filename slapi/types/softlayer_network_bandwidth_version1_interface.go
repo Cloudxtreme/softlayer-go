@@ -13,15 +13,6 @@ type SoftLayer_Network_Bandwidth_Version1_Interface struct {
 
 	// NetworkComponentId - no documentation
 	NetworkComponentId int `json:"networkComponentId,omitempty"`
-}
-
-func (softlayer_network_bandwidth_version1_interface *SoftLayer_Network_Bandwidth_Version1_Interface) String() string {
-	return "SoftLayer_Network_Bandwidth_Version1_Interface"
-}
-
-// SoftLayer_Network_Bandwidth_Version1_Interface_Extended is SoftLayer_Network_Bandwidth_Version1_Interface with all maskable types.
-type SoftLayer_Network_Bandwidth_Version1_Interface_Extended struct {
-	SoftLayer_Network_Bandwidth_Version1_Interface
 
 	// Host - The host for an interface. This is not to be confused with a SoftLayer hardware
 	Host *SoftLayer_Network_Bandwidth_Version1_Host `json:"host,omitempty"`
@@ -30,6 +21,6 @@ type SoftLayer_Network_Bandwidth_Version1_Interface_Extended struct {
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent,omitempty"`
 }
 
-func (softlayer_network_bandwidth_version1_interface *SoftLayer_Network_Bandwidth_Version1_Interface_Extended) String() string {
+func (softlayer_network_bandwidth_version1_interface *SoftLayer_Network_Bandwidth_Version1_Interface) String() string {
 	return "SoftLayer_Network_Bandwidth_Version1_Interface"
 }

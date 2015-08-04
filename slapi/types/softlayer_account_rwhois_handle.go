@@ -12,12 +12,6 @@ import (
 // identify a customer or organization when a subnet is registered.
 type SoftLayer_Account_Rwhois_Handle struct {
 
-	// Handle - The handle object's unique identifier as assigned by the
-	Handle string `json:"handle,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
@@ -26,20 +20,17 @@ type SoftLayer_Account_Rwhois_Handle struct {
 
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
-}
 
-func (softlayer_account_rwhois_handle *SoftLayer_Account_Rwhois_Handle) String() string {
-	return "SoftLayer_Account_Rwhois_Handle"
-}
+	// Handle - The handle object's unique identifier as assigned by the
+	Handle string `json:"handle,omitempty"`
 
-// SoftLayer_Account_Rwhois_Handle_Extended is SoftLayer_Account_Rwhois_Handle with all maskable types.
-type SoftLayer_Account_Rwhois_Handle_Extended struct {
-	SoftLayer_Account_Rwhois_Handle
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
-func (softlayer_account_rwhois_handle *SoftLayer_Account_Rwhois_Handle_Extended) String() string {
+func (softlayer_account_rwhois_handle *SoftLayer_Account_Rwhois_Handle) String() string {
 	return "SoftLayer_Account_Rwhois_Handle"
 }

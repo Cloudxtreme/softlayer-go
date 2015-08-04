@@ -6,23 +6,14 @@ package types
 // tax categories that are associated with products.
 type SoftLayer_Product_Item_Tax_Category struct {
 
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
 	// StatusFlag - no documentation
 	StatusFlag int `json:"statusFlag,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
-
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_product_item_tax_category *SoftLayer_Product_Item_Tax_Category) String() string {
-	return "SoftLayer_Product_Item_Tax_Category"
-}
-
-// SoftLayer_Product_Item_Tax_Category_Extended is SoftLayer_Product_Item_Tax_Category with all maskable types.
-type SoftLayer_Product_Item_Tax_Category_Extended struct {
-	SoftLayer_Product_Item_Tax_Category
 
 	// ItemCount - no documentation
 	ItemCount uint64 `json:"itemCount,omitempty"`
@@ -31,6 +22,6 @@ type SoftLayer_Product_Item_Tax_Category_Extended struct {
 	Items []*SoftLayer_Product_Item `json:"items,omitempty"`
 }
 
-func (softlayer_product_item_tax_category *SoftLayer_Product_Item_Tax_Category_Extended) String() string {
+func (softlayer_product_item_tax_category *SoftLayer_Product_Item_Tax_Category) String() string {
 	return "SoftLayer_Product_Item_Tax_Category"
 }

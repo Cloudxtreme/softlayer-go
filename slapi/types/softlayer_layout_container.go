@@ -17,26 +17,17 @@ type SoftLayer_Layout_Container struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_layout_container *SoftLayer_Layout_Container) String() string {
-	return "SoftLayer_Layout_Container"
-}
-
-// SoftLayer_Layout_Container_Extended is SoftLayer_Layout_Container with all maskable types.
-type SoftLayer_Layout_Container_Extended struct {
-	SoftLayer_Layout_Container
-
-	// LayoutItems - no documentation
-	LayoutItems []*SoftLayer_Layout_Item `json:"layoutItems,omitempty"`
 
 	// LayoutItemCount - A count of the layout items assigned to this layout container
 	LayoutItemCount uint64 `json:"layoutItemCount,omitempty"`
 
 	// LayoutContainerType - no documentation
 	LayoutContainerType *SoftLayer_Layout_Container_Type `json:"layoutContainerType,omitempty"`
+
+	// LayoutItems - no documentation
+	LayoutItems []*SoftLayer_Layout_Item `json:"layoutItems,omitempty"`
 }
 
-func (softlayer_layout_container *SoftLayer_Layout_Container_Extended) String() string {
+func (softlayer_layout_container *SoftLayer_Layout_Container) String() string {
 	return "SoftLayer_Layout_Container"
 }

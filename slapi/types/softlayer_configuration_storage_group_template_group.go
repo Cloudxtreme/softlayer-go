@@ -11,9 +11,6 @@ import (
 // single array to be configured.
 type SoftLayer_Configuration_Storage_Group_Template_Group struct {
 
-	// Size - Size of array. Must be within limitations of the smallest drive and raid mode
-	Size slapi.Float64 `json:"size,omitempty"`
-
 	// Grow - no documentation
 	Grow bool `json:"grow,omitempty"`
 
@@ -23,20 +20,14 @@ type SoftLayer_Configuration_Storage_Group_Template_Group struct {
 
 	// OrderIndex - no documentation
 	OrderIndex int `json:"orderIndex,omitempty"`
-}
 
-func (softlayer_configuration_storage_group_template_group *SoftLayer_Configuration_Storage_Group_Template_Group) String() string {
-	return "SoftLayer_Configuration_Storage_Group_Template_Group"
-}
-
-// SoftLayer_Configuration_Storage_Group_Template_Group_Extended is SoftLayer_Configuration_Storage_Group_Template_Group with all maskable types.
-type SoftLayer_Configuration_Storage_Group_Template_Group_Extended struct {
-	SoftLayer_Configuration_Storage_Group_Template_Group
+	// Size - Size of array. Must be within limitations of the smallest drive and raid mode
+	Size slapi.Float64 `json:"size,omitempty"`
 
 	// Type - <nil>
 	Type *SoftLayer_Configuration_Storage_Group_Array_Type `json:"type,omitempty"`
 }
 
-func (softlayer_configuration_storage_group_template_group *SoftLayer_Configuration_Storage_Group_Template_Group_Extended) String() string {
+func (softlayer_configuration_storage_group_template_group *SoftLayer_Configuration_Storage_Group_Template_Group) String() string {
 	return "SoftLayer_Configuration_Storage_Group_Template_Group"
 }

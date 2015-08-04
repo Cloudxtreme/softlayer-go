@@ -20,15 +20,6 @@ type SoftLayer_Network_Message_Queue_Node struct {
 
 	// Notes - no documentation
 	Notes string `json:"notes,omitempty"`
-}
-
-func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) String() string {
-	return "SoftLayer_Network_Message_Queue_Node"
-}
-
-// SoftLayer_Network_Message_Queue_Node_Extended is SoftLayer_Network_Message_Queue_Node with all maskable types.
-type SoftLayer_Network_Message_Queue_Node_Extended struct {
-	SoftLayer_Network_Message_Queue_Node
 
 	// MessageQueue - no documentation
 	MessageQueue *SoftLayer_Network_Message_Queue `json:"messageQueue,omitempty"`
@@ -41,6 +32,6 @@ type SoftLayer_Network_Message_Queue_Node_Extended struct {
 	ServiceResource *SoftLayer_Network_Service_Resource `json:"serviceResource,omitempty"`
 }
 
-func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node_Extended) String() string {
+func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) String() string {
 	return "SoftLayer_Network_Message_Queue_Node"
 }

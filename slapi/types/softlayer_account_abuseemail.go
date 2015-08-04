@@ -12,20 +12,11 @@ type SoftLayer_Account_AbuseEmail struct {
 
 	// Email - no documentation
 	Email string `json:"email,omitempty"`
-}
-
-func (softlayer_account_abuseemail *SoftLayer_Account_AbuseEmail) String() string {
-	return "SoftLayer_Account_AbuseEmail"
-}
-
-// SoftLayer_Account_AbuseEmail_Extended is SoftLayer_Account_AbuseEmail with all maskable types.
-type SoftLayer_Account_AbuseEmail_Extended struct {
-	SoftLayer_Account_AbuseEmail
 
 	// Account - The account associated with an abuse email address.
 	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
-func (softlayer_account_abuseemail *SoftLayer_Account_AbuseEmail_Extended) String() string {
+func (softlayer_account_abuseemail *SoftLayer_Account_AbuseEmail) String() string {
 	return "SoftLayer_Account_AbuseEmail"
 }

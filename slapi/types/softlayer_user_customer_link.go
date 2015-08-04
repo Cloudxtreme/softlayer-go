@@ -9,12 +9,6 @@ import (
 // SoftLayer_User_Customer_Link - <nil>
 type SoftLayer_User_Customer_Link struct {
 
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
-
-	// ServiceProviderId - <nil>
-	ServiceProviderId int `json:"serviceProviderId,omitempty"`
-
 	// UserId - <nil>
 	UserId int `json:"userId,omitempty"`
 
@@ -26,23 +20,20 @@ type SoftLayer_User_Customer_Link struct {
 
 	// DestinationUserId - <nil>
 	DestinationUserId int `json:"destinationUserId,omitempty"`
-}
 
-func (softlayer_user_customer_link *SoftLayer_User_Customer_Link) String() string {
-	return "SoftLayer_User_Customer_Link"
-}
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 
-// SoftLayer_User_Customer_Link_Extended is SoftLayer_User_Customer_Link with all maskable types.
-type SoftLayer_User_Customer_Link_Extended struct {
-	SoftLayer_User_Customer_Link
-
-	// ServiceProvider - <nil>
-	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`
+	// ServiceProviderId - <nil>
+	ServiceProviderId int `json:"serviceProviderId,omitempty"`
 
 	// User - <nil>
 	User *SoftLayer_User_Customer `json:"user,omitempty"`
+
+	// ServiceProvider - <nil>
+	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`
 }
 
-func (softlayer_user_customer_link *SoftLayer_User_Customer_Link_Extended) String() string {
+func (softlayer_user_customer_link *SoftLayer_User_Customer_Link) String() string {
 	return "SoftLayer_User_Customer_Link"
 }

@@ -18,15 +18,6 @@ type SoftLayer_User_Customer_Notification_Virtual_Guest struct {
 	// UserId - The ID of the SoftLayer_User_Customer object that represents the user to be notified on
 	// monitoring failure.
 	UserId int `json:"userId,omitempty"`
-}
-
-func (softlayer_user_customer_notification_virtual_guest *SoftLayer_User_Customer_Notification_Virtual_Guest) String() string {
-	return "SoftLayer_User_Customer_Notification_Virtual_Guest"
-}
-
-// SoftLayer_User_Customer_Notification_Virtual_Guest_Extended is SoftLayer_User_Customer_Notification_Virtual_Guest with all maskable types.
-type SoftLayer_User_Customer_Notification_Virtual_Guest_Extended struct {
-	SoftLayer_User_Customer_Notification_Virtual_Guest
 
 	// Guest - no documentation
 	Guest *SoftLayer_Virtual_Guest `json:"guest,omitempty"`
@@ -36,6 +27,6 @@ type SoftLayer_User_Customer_Notification_Virtual_Guest_Extended struct {
 	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
-func (softlayer_user_customer_notification_virtual_guest *SoftLayer_User_Customer_Notification_Virtual_Guest_Extended) String() string {
+func (softlayer_user_customer_notification_virtual_guest *SoftLayer_User_Customer_Notification_Virtual_Guest) String() string {
 	return "SoftLayer_User_Customer_Notification_Virtual_Guest"
 }

@@ -11,9 +11,6 @@ import (
 // the secondary DNS transfer process.
 type SoftLayer_Dns_Message struct {
 
-	// Priority - The priority level for a DNS message. The possible levels are 'notice' and 'error'.
-	Priority string `json:"priority,omitempty"`
-
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -22,15 +19,9 @@ type SoftLayer_Dns_Message struct {
 
 	// Message - no documentation
 	Message string `json:"message,omitempty"`
-}
 
-func (softlayer_dns_message *SoftLayer_Dns_Message) String() string {
-	return "SoftLayer_Dns_Message"
-}
-
-// SoftLayer_Dns_Message_Extended is SoftLayer_Dns_Message with all maskable types.
-type SoftLayer_Dns_Message_Extended struct {
-	SoftLayer_Dns_Message
+	// Priority - The priority level for a DNS message. The possible levels are 'notice' and 'error'.
+	Priority string `json:"priority,omitempty"`
 
 	// ResourceRecord - The resource record that is associated with a message.
 	ResourceRecord *SoftLayer_Dns_Domain_ResourceRecord `json:"resourceRecord,omitempty"`
@@ -42,6 +33,6 @@ type SoftLayer_Dns_Message_Extended struct {
 	Domain *SoftLayer_Dns_Domain `json:"domain,omitempty"`
 }
 
-func (softlayer_dns_message *SoftLayer_Dns_Message_Extended) String() string {
+func (softlayer_dns_message *SoftLayer_Dns_Message) String() string {
 	return "SoftLayer_Dns_Message"
 }

@@ -17,15 +17,6 @@ type SoftLayer_Network_Firewall_Template struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-}
-
-func (softlayer_network_firewall_template *SoftLayer_Network_Firewall_Template) String() string {
-	return "SoftLayer_Network_Firewall_Template"
-}
-
-// SoftLayer_Network_Firewall_Template_Extended is SoftLayer_Network_Firewall_Template with all maskable types.
-type SoftLayer_Network_Firewall_Template_Extended struct {
-	SoftLayer_Network_Firewall_Template
 
 	// Rules - The rule set that belongs to this firewall rules template.
 	Rules []*SoftLayer_Network_Firewall_Template_Rule `json:"rules,omitempty"`
@@ -34,6 +25,6 @@ type SoftLayer_Network_Firewall_Template_Extended struct {
 	RuleCount uint64 `json:"ruleCount,omitempty"`
 }
 
-func (softlayer_network_firewall_template *SoftLayer_Network_Firewall_Template_Extended) String() string {
+func (softlayer_network_firewall_template *SoftLayer_Network_Firewall_Template) String() string {
 	return "SoftLayer_Network_Firewall_Template"
 }
