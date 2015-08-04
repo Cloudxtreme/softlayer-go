@@ -6,14 +6,14 @@ package types
 // which a guest's power state will be presented in the SoftLayer
 type SoftLayer_Virtual_Guest_Power_State struct {
 
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
+
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_virtual_guest_power_state *SoftLayer_Virtual_Guest_Power_State) String() string {

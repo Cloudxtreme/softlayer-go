@@ -37,11 +37,11 @@ func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action) String() str
 type SoftLayer_Scale_Policy_Action_Extended struct {
 	SoftLayer_Scale_Policy_Action
 
-	// Type - no documentation
-	Type *SoftLayer_Scale_Policy_Action_Type `json:"type,omitempty"`
-
 	// ScalePolicy - no documentation
 	ScalePolicy *SoftLayer_Scale_Policy `json:"scalePolicy,omitempty"`
+
+	// Type - no documentation
+	Type *SoftLayer_Scale_Policy_Action_Type `json:"type,omitempty"`
 }
 
 func (softlayer_scale_policy_action *SoftLayer_Scale_Policy_Action_Extended) String() string {

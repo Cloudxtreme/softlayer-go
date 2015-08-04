@@ -5,11 +5,11 @@ package types
 // SoftLayer_Hardware_Power_Component - <nil>
 type SoftLayer_Hardware_Power_Component struct {
 
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
-
 	// HardwareId - <nil>
 	HardwareId int `json:"hardwareId,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_hardware_power_component *SoftLayer_Hardware_Power_Component) String() string {

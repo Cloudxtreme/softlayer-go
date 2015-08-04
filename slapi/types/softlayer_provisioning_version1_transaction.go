@@ -11,26 +11,26 @@ import (
 // customers are unable to change their hardware transactions.
 type SoftLayer_Provisioning_Version1_Transaction struct {
 
-	// GuestId - A transaction's associated guest identification number.
-	GuestId int `json:"guestId,omitempty"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
-	// ElapsedSeconds - The amount of seconds that have elapsed since the transaction was last modified.
-	ElapsedSeconds int `json:"elapsedSeconds,omitempty"`
-
 	// HardwareId - A transaction's associated hardware identification number.
 	HardwareId int `json:"hardwareId,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
+	// StatusChangeDate - no documentation
+	StatusChangeDate *time.Time `json:"statusChangeDate,omitempty"`
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
-	// StatusChangeDate - no documentation
-	StatusChangeDate *time.Time `json:"statusChangeDate,omitempty"`
+	// ElapsedSeconds - The amount of seconds that have elapsed since the transaction was last modified.
+	ElapsedSeconds int `json:"elapsedSeconds,omitempty"`
+
+	// GuestId - A transaction's associated guest identification number.
+	GuestId int `json:"guestId,omitempty"`
 }
 
 func (softlayer_provisioning_version1_transaction *SoftLayer_Provisioning_Version1_Transaction) String() string {
@@ -41,28 +41,8 @@ func (softlayer_provisioning_version1_transaction *SoftLayer_Provisioning_Versio
 type SoftLayer_Provisioning_Version1_Transaction_Extended struct {
 	SoftLayer_Provisioning_Version1_Transaction
 
-	// LoopbackCount - no documentation
-	LoopbackCount uint64 `json:"loopbackCount,omitempty"`
-
-	// PendingTransactionCount - no documentation
-	PendingTransactionCount uint64 `json:"pendingTransactionCount,omitempty"`
-
-	// Hardware - no documentation
-	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
-
 	// Loopback - <nil>
 	Loopback []*SoftLayer_Provisioning_Version1_Transaction `json:"loopback,omitempty"`
-
-	// TransactionStatus - A transaction's status. This status object determines the state it is in the
-	// transaction group.
-	TransactionStatus *SoftLayer_Provisioning_Version1_Transaction_Status `json:"transactionStatus,omitempty"`
-
-	// PendingTransactions - <nil>
-	PendingTransactions []*SoftLayer_Provisioning_Version1_Transaction `json:"pendingTransactions,omitempty"`
-
-	// TransactionGroup - A transaction's group. This group object determines what type of service is being
-	// done on the hardware.
-	TransactionGroup *SoftLayer_Provisioning_Version1_Transaction_Group `json:"transactionGroup,omitempty"`
 
 	// TicketScheduledActionReferenceCount - no documentation
 	TicketScheduledActionReferenceCount uint64 `json:"ticketScheduledActionReferenceCount,omitempty"`
@@ -73,8 +53,28 @@ type SoftLayer_Provisioning_Version1_Transaction_Extended struct {
 	// Guest - no documentation
 	Guest *SoftLayer_Virtual_Guest `json:"guest,omitempty"`
 
+	// Hardware - no documentation
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
+
+	// PendingTransactionCount - no documentation
+	PendingTransactionCount uint64 `json:"pendingTransactionCount,omitempty"`
+
+	// PendingTransactions - <nil>
+	PendingTransactions []*SoftLayer_Provisioning_Version1_Transaction `json:"pendingTransactions,omitempty"`
+
+	// TransactionStatus - A transaction's status. This status object determines the state it is in the
+	// transaction group.
+	TransactionStatus *SoftLayer_Provisioning_Version1_Transaction_Status `json:"transactionStatus,omitempty"`
+
+	// LoopbackCount - no documentation
+	LoopbackCount uint64 `json:"loopbackCount,omitempty"`
+
 	// TicketScheduledActionReference - <nil>
 	TicketScheduledActionReference []*SoftLayer_Ticket_Attachment `json:"ticketScheduledActionReference,omitempty"`
+
+	// TransactionGroup - A transaction's group. This group object determines what type of service is being
+	// done on the hardware.
+	TransactionGroup *SoftLayer_Provisioning_Version1_Transaction_Group `json:"transactionGroup,omitempty"`
 }
 
 func (softlayer_provisioning_version1_transaction *SoftLayer_Provisioning_Version1_Transaction_Extended) String() string {

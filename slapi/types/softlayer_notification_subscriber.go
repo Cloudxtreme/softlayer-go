@@ -9,26 +9,26 @@ import (
 // SoftLayer_Notification_Subscriber - <nil>
 type SoftLayer_Notification_Subscriber struct {
 
+	// Active - <nil>
+	Active int `json:"active,omitempty"`
+
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// NotificationSubscriberTypeId - <nil>
 	NotificationSubscriberTypeId int `json:"notificationSubscriberTypeId,omitempty"`
 
-	// NotificationId - <nil>
-	NotificationId int `json:"notificationId,omitempty"`
-
 	// NotificationSubscriberTypeResourceId - <nil>
 	NotificationSubscriberTypeResourceId int `json:"notificationSubscriberTypeResourceId,omitempty"`
-
-	// Active - <nil>
-	Active int `json:"active,omitempty"`
 
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
 
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// NotificationId - <nil>
+	NotificationId int `json:"notificationId,omitempty"`
 }
 
 func (softlayer_notification_subscriber *SoftLayer_Notification_Subscriber) String() string {

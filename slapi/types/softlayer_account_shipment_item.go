@@ -11,26 +11,26 @@ import (
 // tracking information for as shipment is accessible with this data type.
 type SoftLayer_Account_Shipment_Item struct {
 
+	// ShipmentItemId - no documentation
+	ShipmentItemId int `json:"shipmentItemId,omitempty"`
+
+	// ShipmentItemTypeId - no documentation
+	ShipmentItemTypeId int `json:"shipmentItemTypeId,omitempty"`
+
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
 
 	// PackageId - no documentation
 	PackageId int `json:"packageId,omitempty"`
 
-	// ShipmentItemId - no documentation
-	ShipmentItemId int `json:"shipmentItemId,omitempty"`
-
-	// ShipmentId - no documentation
-	ShipmentId int `json:"shipmentId,omitempty"`
-
-	// ShipmentItemTypeId - no documentation
-	ShipmentItemTypeId int `json:"shipmentItemTypeId,omitempty"`
-
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
+
+	// ShipmentId - no documentation
+	ShipmentId int `json:"shipmentId,omitempty"`
 }
 
 func (softlayer_account_shipment_item *SoftLayer_Account_Shipment_Item) String() string {

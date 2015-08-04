@@ -6,10 +6,6 @@ package types
 // information for a package preset.
 type SoftLayer_Product_Package_Preset_Attribute struct {
 
-	// AttributeTypeId - The internal identifier of the type of attribute that a pacakge preset attribute
-	// belongs to.
-	AttributeTypeId int `json:"attributeTypeId,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -18,6 +14,10 @@ type SoftLayer_Product_Package_Preset_Attribute struct {
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
+
+	// AttributeTypeId - The internal identifier of the type of attribute that a pacakge preset attribute
+	// belongs to.
+	AttributeTypeId int `json:"attributeTypeId,omitempty"`
 }
 
 func (softlayer_product_package_preset_attribute *SoftLayer_Product_Package_Preset_Attribute) String() string {

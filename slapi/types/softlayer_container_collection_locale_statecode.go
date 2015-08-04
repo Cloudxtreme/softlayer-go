@@ -6,11 +6,11 @@ package types
 // regarding a state or province.
 type SoftLayer_Container_Collection_Locale_StateCode struct {
 
-	// ShortName - <nil>
-	ShortName string `json:"shortName,omitempty"`
-
 	// LongName - <nil>
 	LongName string `json:"longName,omitempty"`
+
+	// ShortName - <nil>
+	ShortName string `json:"shortName,omitempty"`
 }
 
 func (softlayer_container_collection_locale_statecode *SoftLayer_Container_Collection_Locale_StateCode) String() string {

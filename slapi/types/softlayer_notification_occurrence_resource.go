@@ -6,6 +6,9 @@ package types
 // hardware or services that may be impacted by a SoftLayer_Notification_Occurrence_Event.
 type SoftLayer_Notification_Occurrence_Resource struct {
 
+	// ResourceName - <nil>
+	ResourceName string `json:"resourceName,omitempty"`
+
 	// ResourceTableId - <<< EOT The unique identifier for the physical resource that is associated
 	ResourceTableId int `json:"resourceTableId,omitempty"`
 
@@ -20,9 +23,6 @@ type SoftLayer_Notification_Occurrence_Resource struct {
 
 	// ResourceAccountId - <<< EOT The unique identifier for the [[SoftLayer_Account]] associated with
 	ResourceAccountId int `json:"resourceAccountId,omitempty"`
-
-	// ResourceName - <nil>
-	ResourceName string `json:"resourceName,omitempty"`
 }
 
 func (softlayer_notification_occurrence_resource *SoftLayer_Notification_Occurrence_Resource) String() string {

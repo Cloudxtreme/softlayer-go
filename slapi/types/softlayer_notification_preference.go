@@ -8,15 +8,6 @@ package types
 // preferences correctly.
 type SoftLayer_Notification_Preference struct {
 
-	// MinimumValue - no documentation
-	MinimumValue string `json:"minimumValue,omitempty"`
-
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
-	// Units - The unit of measure used for the preference's value, minimum and maximum as well.
-	Units string `json:"units,omitempty"`
-
 	// Value - Default value used when setting up preferences for a new subscriber.
 	Value string `json:"value,omitempty"`
 
@@ -31,6 +22,15 @@ type SoftLayer_Notification_Preference struct {
 
 	// MaximumValue - no documentation
 	MaximumValue string `json:"maximumValue,omitempty"`
+
+	// MinimumValue - no documentation
+	MinimumValue string `json:"minimumValue,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
+	// Units - The unit of measure used for the preference's value, minimum and maximum as well.
+	Units string `json:"units,omitempty"`
 }
 
 func (softlayer_notification_preference *SoftLayer_Notification_Preference) String() string {

@@ -3,6 +3,8 @@ package types
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+
 	time "time"
 )
 
@@ -10,12 +12,6 @@ import (
 // SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details This container details a virtual
 // host's metric data.
 type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details struct {
-
-	// MeanMemoryUsage - The mean amount of memory utilized by this platform for the given day.
-	MeanMemoryUsage float32 `json:"meanMemoryUsage,omitempty"`
-
-	// MinInstances - The minimum number of guests hosted by this platform for the given day.
-	MinInstances int `json:"minInstances,omitempty"`
 
 	// MinMemoryUsage - The minimum amount of memory utilized by this platform for the given day.
 	MinMemoryUsage int `json:"minMemoryUsage,omitempty"`
@@ -33,7 +29,13 @@ type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details struct {
 	MaxMemoryUsage int `json:"maxMemoryUsage,omitempty"`
 
 	// MeanInstances - The mean number of guests hosted by this platform for the given day.
-	MeanInstances float32 `json:"meanInstances,omitempty"`
+	MeanInstances slapi.Float64 `json:"meanInstances,omitempty"`
+
+	// MeanMemoryUsage - The mean amount of memory utilized by this platform for the given day.
+	MeanMemoryUsage slapi.Float64 `json:"meanMemoryUsage,omitempty"`
+
+	// MinInstances - The minimum number of guests hosted by this platform for the given day.
+	MinInstances int `json:"minInstances,omitempty"`
 }
 
 func (softlayer_container_metric_tracking_object_virtual_host_details *SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details) String() string {

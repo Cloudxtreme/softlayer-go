@@ -7,9 +7,6 @@ package types
 // cancellation request.
 type SoftLayer_Billing_Item_Cancellation_Request_Status struct {
 
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
 	// Description - The short description of a cancellation request status
 	Description string `json:"description,omitempty"`
 
@@ -18,6 +15,9 @@ type SoftLayer_Billing_Item_Cancellation_Request_Status struct {
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_billing_item_cancellation_request_status *SoftLayer_Billing_Item_Cancellation_Request_Status) String() string {

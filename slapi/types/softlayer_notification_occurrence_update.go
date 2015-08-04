@@ -9,6 +9,9 @@ import (
 // SoftLayer_Notification_Occurrence_Update - <nil>
 type SoftLayer_Notification_Occurrence_Update struct {
 
+	// Contents - <nil>
+	Contents string `json:"contents,omitempty"`
+
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -17,9 +20,6 @@ type SoftLayer_Notification_Occurrence_Update struct {
 
 	// StartDate - <nil>
 	StartDate *time.Time `json:"startDate,omitempty"`
-
-	// Contents - <nil>
-	Contents string `json:"contents,omitempty"`
 }
 
 func (softlayer_notification_occurrence_update *SoftLayer_Notification_Occurrence_Update) String() string {

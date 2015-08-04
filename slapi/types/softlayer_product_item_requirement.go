@@ -7,6 +7,9 @@ package types
 // property is the item id that is required.
 type SoftLayer_Product_Item_Requirement struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// ItemId - This is the id of the item affected by the requirement.
 	ItemId int `json:"itemId,omitempty"`
 
@@ -15,9 +18,6 @@ type SoftLayer_Product_Item_Requirement struct {
 
 	// RequiredItemId - no documentation
 	RequiredItemId int `json:"requiredItemId,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_product_item_requirement *SoftLayer_Product_Item_Requirement) String() string {

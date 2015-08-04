@@ -5,8 +5,14 @@ package types
 // SoftLayer_Container_Graph - <nil>
 type SoftLayer_Container_Graph struct {
 
-	// Width - no documentation
-	Width int `json:"width,omitempty"`
+	// EndDatetime - no documentation
+	EndDatetime string `json:"endDatetime,omitempty"`
+
+	// Interval - no documentation
+	Interval int `json:"interval,omitempty"`
+
+	// Plots - no documentation
+	Plots []*SoftLayer_Container_Graph_Plot `json:"plots,omitempty"`
 
 	// ReturnImage - no documentation
 	ReturnImage bool `json:"returnImage,omitempty"`
@@ -14,11 +20,20 @@ type SoftLayer_Container_Graph struct {
 	// Title - no documentation
 	Title string `json:"title,omitempty"`
 
-	// EndDatetime - no documentation
-	EndDatetime string `json:"endDatetime,omitempty"`
+	// Image - no documentation
+	Image string `json:"image,omitempty"`
 
-	// Plots - no documentation
-	Plots []*SoftLayer_Container_Graph_Plot `json:"plots,omitempty"`
+	// Width - no documentation
+	Width int `json:"width,omitempty"`
+
+	// Height - no documentation
+	Height int `json:"height,omitempty"`
+
+	// StartDatetime - no documentation
+	StartDatetime string `json:"startDatetime,omitempty"`
+
+	// BaseUnit - no documentation
+	BaseUnit string `json:"baseUnit,omitempty"`
 
 	// Metrics - no documentation
 	Metrics []*SoftLayer_Container_Metric_Data_Type `json:"metrics,omitempty"`
@@ -29,23 +44,8 @@ type SoftLayer_Container_Graph struct {
 	// Options - no documentation
 	Options []*SoftLayer_Container_Graph_Option `json:"options,omitempty"`
 
-	// StartDatetime - no documentation
-	StartDatetime string `json:"startDatetime,omitempty"`
-
 	// Template - no documentation
 	Template string `json:"template,omitempty"`
-
-	// Height - no documentation
-	Height int `json:"height,omitempty"`
-
-	// Interval - no documentation
-	Interval int `json:"interval,omitempty"`
-
-	// BaseUnit - no documentation
-	BaseUnit string `json:"baseUnit,omitempty"`
-
-	// Image - no documentation
-	Image string `json:"image,omitempty"`
 }
 
 func (softlayer_container_graph *SoftLayer_Container_Graph) String() string {

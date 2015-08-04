@@ -2,6 +2,10 @@ package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
+import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+)
+
 // SoftLayer_Configuration_Storage_Group_Order - Single storage group(array) used for a hardware server
 // order. If a raid configuration is required this object will describe a single array that will be
 // configured on the server. If the server requires more than one array, a storage group will need to
@@ -9,7 +13,10 @@ package types
 type SoftLayer_Configuration_Storage_Group_Order struct {
 
 	// ArraySize - <nil>
-	ArraySize float64 `json:"arraySize,omitempty"`
+	ArraySize slapi.Float64 `json:"arraySize,omitempty"`
+
+	// BillingOrderItemId - <nil>
+	BillingOrderItemId int `json:"billingOrderItemId,omitempty"`
 
 	// ArrayTypeId - <nil>
 	ArrayTypeId int `json:"arrayTypeId,omitempty"`
@@ -17,17 +24,14 @@ type SoftLayer_Configuration_Storage_Group_Order struct {
 	// HardDrives - <nil>
 	HardDrives []int `json:"hardDrives,omitempty"`
 
-	// ArrayNumber - <nil>
-	ArrayNumber int `json:"arrayNumber,omitempty"`
-
-	// BillingOrderItemId - <nil>
-	BillingOrderItemId int `json:"billingOrderItemId,omitempty"`
-
 	// HotSpareDrives - <nil>
 	HotSpareDrives []int `json:"hotSpareDrives,omitempty"`
 
 	// PartitionData - <nil>
 	PartitionData string `json:"partitionData,omitempty"`
+
+	// ArrayNumber - <nil>
+	ArrayNumber int `json:"arrayNumber,omitempty"`
 }
 
 func (softlayer_configuration_storage_group_order *SoftLayer_Configuration_Storage_Group_Order) String() string {

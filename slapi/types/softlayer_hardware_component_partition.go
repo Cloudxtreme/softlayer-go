@@ -2,6 +2,10 @@ package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
+import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+)
+
 // SoftLayer_Hardware_Component_Partition - The SoftLayer_Hardware_Component_Partition data type
 // contains general information relating to a single hard drive partition.
 type SoftLayer_Hardware_Component_Partition struct {
@@ -18,7 +22,7 @@ type SoftLayer_Hardware_Component_Partition struct {
 	HardwareComponentId int `json:"hardwareComponentId,omitempty"`
 
 	// MinimumSize - no documentation
-	MinimumSize float64 `json:"minimumSize,omitempty"`
+	MinimumSize slapi.Float64 `json:"minimumSize,omitempty"`
 
 	// Name - A hardware component partition's name. On a server with windows this may be 'C' and on Linux
 	// this may be '/var'

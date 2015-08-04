@@ -26,11 +26,11 @@ func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Co
 type SoftLayer_Auxiliary_Shipping_Courier_Type_Extended struct {
 	SoftLayer_Auxiliary_Shipping_Courier_Type
 
-	// CourierCount - no documentation
-	CourierCount uint64 `json:"courierCount,omitempty"`
-
 	// Courier - <nil>
 	Courier []*SoftLayer_Auxiliary_Shipping_Courier `json:"courier,omitempty"`
+
+	// CourierCount - no documentation
+	CourierCount uint64 `json:"courierCount,omitempty"`
 }
 
 func (softlayer_auxiliary_shipping_courier_type *SoftLayer_Auxiliary_Shipping_Courier_Type_Extended) String() string {

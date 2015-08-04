@@ -9,12 +9,6 @@ import (
 // SoftLayer_Metric_Tracking_Object_Virtual_Storage_Repository - <nil>
 type SoftLayer_Metric_Tracking_Object_Virtual_Storage_Repository struct {
 
-	// Data - no documentation
-	Data []*SoftLayer_Metric_Tracking_Object_Data `json:"data,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// Label - no documentation
 	Label string `json:"label,omitempty"`
 
@@ -23,6 +17,12 @@ type SoftLayer_Metric_Tracking_Object_Virtual_Storage_Repository struct {
 
 	// StartDate - The date this tracker began tracking this particular resource.
 	StartDate *time.Time `json:"startDate,omitempty"`
+
+	// Data - no documentation
+	Data []*SoftLayer_Metric_Tracking_Object_Data `json:"data,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_metric_tracking_object_virtual_storage_repository *SoftLayer_Metric_Tracking_Object_Virtual_Storage_Repository) String() string {

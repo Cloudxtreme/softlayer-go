@@ -2,6 +2,10 @@ package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
+import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+)
+
 // SoftLayer_Container_Search_Result - The SoftLayer_Container_Search_Result data type represents a
 // result row from an execution of Search service.
 type SoftLayer_Container_Search_Result struct {
@@ -10,7 +14,7 @@ type SoftLayer_Container_Search_Result struct {
 	MatchedTerms []string `json:"matchedTerms,omitempty"`
 
 	// RelevanceScore - The score ratio of the result for relevance to the search criteria.
-	RelevanceScore float64 `json:"relevanceScore,omitempty"`
+	RelevanceScore slapi.Float64 `json:"relevanceScore,omitempty"`
 
 	// Resource - A search results resource object that matched search criteria.
 	Resource *SoftLayer_Entity `json:"resource,omitempty"`

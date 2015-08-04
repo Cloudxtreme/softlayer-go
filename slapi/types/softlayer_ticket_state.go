@@ -5,14 +5,14 @@ package types
 // SoftLayer_Ticket_State - <nil>
 type SoftLayer_Ticket_State struct {
 
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
-
 	// StateTypeId - <nil>
 	StateTypeId int `json:"stateTypeId,omitempty"`
 
 	// TicketId - <nil>
 	TicketId int `json:"ticketId,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_ticket_state *SoftLayer_Ticket_State) String() string {

@@ -10,18 +10,6 @@ import (
 // visitors.
 type SoftLayer_User_Access_Facility_Log struct {
 
-	// Description - This is a short description of why the person is at the location.
-	Description string `json:"description,omitempty"`
-
-	// HardwareId - <nil>
-	HardwareId int `json:"hardwareId,omitempty"`
-
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
-
-	// LocationId - <nil>
-	LocationId int `json:"locationId,omitempty"`
-
 	// TimeOut - <nil>
 	TimeOut *time.Time `json:"timeOut,omitempty"`
 
@@ -30,8 +18,20 @@ type SoftLayer_User_Access_Facility_Log struct {
 	// customer's cabinet or colocation cage, this is the customer's account.
 	AccountId int `json:"accountId,omitempty"`
 
+	// Description - This is a short description of why the person is at the location.
+	Description string `json:"description,omitempty"`
+
+	// HardwareId - <nil>
+	HardwareId int `json:"hardwareId,omitempty"`
+
+	// LocationId - <nil>
+	LocationId int `json:"locationId,omitempty"`
+
 	// TimeIn - no documentation
 	TimeIn *time.Time `json:"timeIn,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_user_access_facility_log *SoftLayer_User_Access_Facility_Log) String() string {
@@ -42,8 +42,10 @@ func (softlayer_user_access_facility_log *SoftLayer_User_Access_Facility_Log) St
 type SoftLayer_User_Access_Facility_Log_Extended struct {
 	SoftLayer_User_Access_Facility_Log
 
-	// Datacenter - no documentation
-	Datacenter *SoftLayer_Location `json:"datacenter,omitempty"`
+	// Account - This is the account associated with the log entry. For users under a customer's account,
+	// it is the customer's account. For contractors and others visiting a colocation area, it is the
+	// account associated with the area they visited.
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// Hardware - no documentation
 	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
@@ -51,13 +53,11 @@ type SoftLayer_User_Access_Facility_Log_Extended struct {
 	// LogType - no documentation
 	LogType *SoftLayer_User_Access_Facility_Log_Type `json:"logType,omitempty"`
 
-	// Account - This is the account associated with the log entry. For users under a customer's account,
-	// it is the customer's account. For contractors and others visiting a colocation area, it is the
-	// account associated with the area they visited.
-	Account *SoftLayer_Account `json:"account,omitempty"`
-
 	// Visitor - <nil>
 	Visitor *SoftLayer_Entity `json:"visitor,omitempty"`
+
+	// Datacenter - no documentation
+	Datacenter *SoftLayer_Location `json:"datacenter,omitempty"`
 }
 
 func (softlayer_user_access_facility_log *SoftLayer_User_Access_Facility_Log_Extended) String() string {

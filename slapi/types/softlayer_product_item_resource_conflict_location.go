@@ -5,9 +5,6 @@ package types
 // SoftLayer_Product_Item_Resource_Conflict_Location - <nil>
 type SoftLayer_Product_Item_Resource_Conflict_Location struct {
 
-	// ResourceTableId - no documentation
-	ResourceTableId int `json:"resourceTableId,omitempty"`
-
 	// ItemId - The unique identifier of the item that contains the conflict.
 	ItemId int `json:"itemId,omitempty"`
 
@@ -16,6 +13,9 @@ type SoftLayer_Product_Item_Resource_Conflict_Location struct {
 
 	// PackageId - The unique identifier of the service offering that is associated with the conflict.
 	PackageId int `json:"packageId,omitempty"`
+
+	// ResourceTableId - no documentation
+	ResourceTableId int `json:"resourceTableId,omitempty"`
 }
 
 func (softlayer_product_item_resource_conflict_location *SoftLayer_Product_Item_Resource_Conflict_Location) String() string {

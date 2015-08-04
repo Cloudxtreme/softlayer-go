@@ -9,9 +9,6 @@ import (
 // SoftLayer_User_Customer_Prospect_Type - <nil>
 type SoftLayer_User_Customer_Prospect_Type struct {
 
-	// Name - <nil>
-	Name string `json:"name,omitempty"`
-
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -26,6 +23,9 @@ type SoftLayer_User_Customer_Prospect_Type struct {
 
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// Name - <nil>
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_user_customer_prospect_type *SoftLayer_User_Customer_Prospect_Type) String() string {

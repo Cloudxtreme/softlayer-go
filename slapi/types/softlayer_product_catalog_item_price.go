@@ -10,9 +10,6 @@ import (
 // Price to a Catalog. This relation defines the composition of Item Prices in a Catalog.
 type SoftLayer_Product_Catalog_Item_Price struct {
 
-	// PriceId - The id of the Item Price that is part of the Catalog.
-	PriceId int `json:"priceId,omitempty"`
-
 	// CatalogId - no documentation
 	CatalogId int `json:"catalogId,omitempty"`
 
@@ -21,6 +18,9 @@ type SoftLayer_Product_Catalog_Item_Price struct {
 
 	// ModifyDate - The time the Item Price was changed for the Catalog
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// PriceId - The id of the Item Price that is part of the Catalog.
+	PriceId int `json:"priceId,omitempty"`
 }
 
 func (softlayer_product_catalog_item_price *SoftLayer_Product_Catalog_Item_Price) String() string {

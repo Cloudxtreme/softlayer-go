@@ -14,19 +14,15 @@ import (
 // SoftLayer outlet website.
 type SoftLayer_Product_Package_Inventory struct {
 
+	// AvailableInventoryCount - The number of units available for purchase in SoftLayer's inventory for a
+	// single item in a single datacenter.
+	AvailableInventoryCount int `json:"availableInventoryCount,omitempty"`
+
 	// LocationId - The unique identifier of the datacenter that an inventory record is located in.
 	LocationId int `json:"locationId,omitempty"`
 
 	// ModifyDate - The date that an inventory record was last updated.
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// PackageId - The unique identifier of the product package that an inventory record is associated
-	// with.
-	PackageId int `json:"packageId,omitempty"`
-
-	// AvailableInventoryCount - The number of units available for purchase in SoftLayer's inventory for a
-	// single item in a single datacenter.
-	AvailableInventoryCount int `json:"availableInventoryCount,omitempty"`
 
 	// ItemId - The unique identifier of the product item that an inventory record is associated with.
 	ItemId int `json:"itemId,omitempty"`
@@ -34,6 +30,10 @@ type SoftLayer_Product_Package_Inventory struct {
 	// OverstockFlag - Whether an inventory record is marked as "overstock". Overstock records appear at
 	// the top portion of the SoftLayer outlet website.
 	OverstockFlag int `json:"overstockFlag,omitempty"`
+
+	// PackageId - The unique identifier of the product package that an inventory record is associated
+	// with.
+	PackageId int `json:"packageId,omitempty"`
 }
 
 func (softlayer_product_package_inventory *SoftLayer_Product_Package_Inventory) String() string {
@@ -44,14 +44,14 @@ func (softlayer_product_package_inventory *SoftLayer_Product_Package_Inventory) 
 type SoftLayer_Product_Package_Inventory_Extended struct {
 	SoftLayer_Product_Package_Inventory
 
-	// Location - The datacenter that an inventory record is located in.
-	Location *SoftLayer_Location `json:"location,omitempty"`
+	// Item - The product package item that is associated with an inventory record.
+	Item *SoftLayer_Product_Item `json:"item,omitempty"`
 
 	// Package - The product package that is associated with an inventory record.
 	Package *SoftLayer_Product_Package `json:"package,omitempty"`
 
-	// Item - The product package item that is associated with an inventory record.
-	Item *SoftLayer_Product_Item `json:"item,omitempty"`
+	// Location - The datacenter that an inventory record is located in.
+	Location *SoftLayer_Location `json:"location,omitempty"`
 }
 
 func (softlayer_product_package_inventory *SoftLayer_Product_Package_Inventory_Extended) String() string {

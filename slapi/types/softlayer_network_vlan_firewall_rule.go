@@ -8,12 +8,16 @@ package types
 // Network Firewall Template]] service to pull SoftLayer recommended rule set templates.
 type SoftLayer_Network_Vlan_Firewall_Rule struct {
 
-	// Action - The action that the rule is to take [permit or deny].
-	Action string `json:"action,omitempty"`
+	// DestinationIpCidr - The is used for determining rule application. This value will
+	DestinationIpCidr int `json:"destinationIpCidr,omitempty"`
 
 	// DestinationIpSubnetMask - The destination IP subnet mask considered for determining rule
 	// application.
 	DestinationIpSubnetMask string `json:"destinationIpSubnetMask,omitempty"`
+
+	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
+	// determining rule application.
+	DestinationPortRangeStart int `json:"destinationPortRangeStart,omitempty"`
 
 	// Notes - no documentation
 	Notes string `json:"notes,omitempty"`
@@ -21,40 +25,36 @@ type SoftLayer_Network_Vlan_Firewall_Rule struct {
 	// Protocol - The protocol considered for determining rule application.
 	Protocol string `json:"protocol,omitempty"`
 
+	// SourceIpCidr - The is used for determining rule application. This value will
+	SourceIpCidr int `json:"sourceIpCidr,omitempty"`
+
 	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
 	SourceIpSubnetMask string `json:"sourceIpSubnetMask,omitempty"`
 
-	// DestinationIpCidr - The is used for determining rule application. This value will
-	DestinationIpCidr int `json:"destinationIpCidr,omitempty"`
+	// DestinationIpAddress - The destination IP address considered for determining rule application.
+	DestinationIpAddress string `json:"destinationIpAddress,omitempty"`
 
 	// OrderValue - The numeric value describing the order in which the rule should be applied.
 	OrderValue int `json:"orderValue,omitempty"`
-
-	// SourceIpAddress - The source IP address considered for determining rule application.
-	SourceIpAddress string `json:"sourceIpAddress,omitempty"`
-
-	// Version - Whether this rule is an IPv4 rule or an IPv6 rule. If
-	Version int `json:"version,omitempty"`
 
 	// DestinationPortRangeEnd - The ending (upper end of range) destination port considered for
 	// determining rule application.
 	DestinationPortRangeEnd int `json:"destinationPortRangeEnd,omitempty"`
 
-	// DestinationIpAddress - The destination IP address considered for determining rule application.
-	DestinationIpAddress string `json:"destinationIpAddress,omitempty"`
-
-	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
-	// determining rule application.
-	DestinationPortRangeStart int `json:"destinationPortRangeStart,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
-	// SourceIpCidr - The is used for determining rule application. This value will
-	SourceIpCidr int `json:"sourceIpCidr,omitempty"`
+	// SourceIpAddress - The source IP address considered for determining rule application.
+	SourceIpAddress string `json:"sourceIpAddress,omitempty"`
 
 	// Status - no documentation
 	Status string `json:"status,omitempty"`
+
+	// Version - Whether this rule is an IPv4 rule or an IPv6 rule. If
+	Version int `json:"version,omitempty"`
+
+	// Action - The action that the rule is to take [permit or deny].
+	Action string `json:"action,omitempty"`
 }
 
 func (softlayer_network_vlan_firewall_rule *SoftLayer_Network_Vlan_Firewall_Rule) String() string {

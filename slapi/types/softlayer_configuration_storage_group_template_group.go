@@ -2,10 +2,17 @@ package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
+import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+)
+
 // SoftLayer_Configuration_Storage_Group_Template_Group - Single storage group(array) used in a storage
 // group template. If a server configuration requires a raid configuration this object will describe a
 // single array to be configured.
 type SoftLayer_Configuration_Storage_Group_Template_Group struct {
+
+	// Size - Size of array. Must be within limitations of the smallest drive and raid mode
+	Size slapi.Float64 `json:"size,omitempty"`
 
 	// Grow - no documentation
 	Grow bool `json:"grow,omitempty"`
@@ -16,9 +23,6 @@ type SoftLayer_Configuration_Storage_Group_Template_Group struct {
 
 	// OrderIndex - no documentation
 	OrderIndex int `json:"orderIndex,omitempty"`
-
-	// Size - Size of array. Must be within limitations of the smallest drive and raid mode
-	Size float64 `json:"size,omitempty"`
 }
 
 func (softlayer_configuration_storage_group_template_group *SoftLayer_Configuration_Storage_Group_Template_Group) String() string {

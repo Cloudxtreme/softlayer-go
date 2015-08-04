@@ -27,6 +27,9 @@ func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_
 type SoftLayer_Notification_Occurrence_User_Extended struct {
 	SoftLayer_Notification_Occurrence_User
 
+	// ImpactedResourceCount - A count of a collection of resources impacted by the associated event.
+	ImpactedResourceCount uint64 `json:"impactedResourceCount,omitempty"`
+
 	// ImpactedResources - A collection of resources impacted by the associated event.
 	ImpactedResources []*SoftLayer_Notification_Occurrence_Resource `json:"impactedResources,omitempty"`
 
@@ -35,9 +38,6 @@ type SoftLayer_Notification_Occurrence_User_Extended struct {
 
 	// User - no documentation
 	User *SoftLayer_User_Customer `json:"user,omitempty"`
-
-	// ImpactedResourceCount - A count of a collection of resources impacted by the associated event.
-	ImpactedResourceCount uint64 `json:"impactedResourceCount,omitempty"`
 }
 
 func (softlayer_notification_occurrence_user *SoftLayer_Notification_Occurrence_User_Extended) String() string {

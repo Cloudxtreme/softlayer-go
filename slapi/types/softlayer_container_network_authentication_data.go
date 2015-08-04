@@ -5,6 +5,9 @@ package types
 // SoftLayer_Container_Network_Authentication_Data - This object holds authentication data to a server.
 type SoftLayer_Container_Network_Authentication_Data struct {
 
+	// Host - no documentation
+	Host string `json:"host,omitempty"`
+
 	// Password - no documentation
 	Password string `json:"password,omitempty"`
 
@@ -16,9 +19,6 @@ type SoftLayer_Container_Network_Authentication_Data struct {
 
 	// Username - no documentation
 	Username string `json:"username,omitempty"`
-
-	// Host - no documentation
-	Host string `json:"host,omitempty"`
 }
 
 func (softlayer_container_network_authentication_data *SoftLayer_Container_Network_Authentication_Data) String() string {

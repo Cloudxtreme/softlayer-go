@@ -9,12 +9,6 @@ import (
 // SoftLayer_Security_Certificate_Entry - <nil>
 type SoftLayer_Security_Certificate_Entry struct {
 
-	// CertificateId - no documentation
-	CertificateId int `json:"certificateId,omitempty"`
-
-	// CommonName - The common name (usually a domain name) encoded within the certificate.
-	CommonName string `json:"commonName,omitempty"`
-
 	// KeySize - The size (number of bits) of the public key represented by the certificate.
 	KeySize int `json:"keySize,omitempty"`
 
@@ -29,6 +23,12 @@ type SoftLayer_Security_Certificate_Entry struct {
 
 	// ValidityEnd - The UTC timestamp representing the end of the certificate's validity period.
 	ValidityEnd *time.Time `json:"validityEnd,omitempty"`
+
+	// CertificateId - no documentation
+	CertificateId int `json:"certificateId,omitempty"`
+
+	// CommonName - The common name (usually a domain name) encoded within the certificate.
+	CommonName string `json:"commonName,omitempty"`
 }
 
 func (softlayer_security_certificate_entry *SoftLayer_Security_Certificate_Entry) String() string {

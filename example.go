@@ -12,7 +12,7 @@ func main() {
 	client := slapi.Client{
 		Endpoint: "https://api.softlayer.com/rest/v3.1/",
 		Username: "INSERT_USERNAME",
-		APIKey: "INSERT_API_KEY",
+		APIKey:   "INSERT_API_KEY",
 	}
 
 	makeBasicAPICall(client)
@@ -24,8 +24,8 @@ func main() {
 func makeBasicAPICall(client slapi.Client) {
 	req := slapi.Request{
 		Service: "SoftLayer_Account",
-		Method: "getObject",
-		Mask: `mask[id,companyName]`,
+		Method:  "getObject",
+		Mask:    `mask[id,companyName]`,
 	}
 
 	// Make API call with basic account type
@@ -43,8 +43,8 @@ func makeBasicAPICall(client slapi.Client) {
 func makeExtendedAPICall(client slapi.Client) {
 	req := slapi.Request{
 		Service: "SoftLayer_Account",
-		Method: "getObject",
-		Mask: `mask[id,virtualGuests]`,
+		Method:  "getObject",
+		Mask:    `mask[id,virtualGuests]`,
 	}
 
 	// Make API call with extended account type
@@ -69,8 +69,8 @@ func makeCustomAPICall(client slapi.Client) {
 
 	req := slapi.Request{
 		Service: "SoftLayer_Account",
-		Method: "getObject",
-		Mask: `mask[id,virtualGuests,companyName]`,
+		Method:  "getObject",
+		Mask:    `mask[id,virtualGuests,companyName]`,
 	}
 
 	// Make API call with custom type based on the basic account type

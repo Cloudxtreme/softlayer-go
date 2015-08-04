@@ -10,6 +10,12 @@ import (
 // for a host resource uptime
 type SoftLayer_Container_Account_Historical_Summary_Detail_Uptime struct {
 
+	// ConfigurationValue - no documentation
+	ConfigurationValue *SoftLayer_Monitoring_Agent_Configuration_Value `json:"configurationValue,omitempty"`
+
+	// Data - no documentation
+	Data []*SoftLayer_Metric_Tracking_Object_Data `json:"data,omitempty"`
+
 	// Hardware - no documentation
 	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 
@@ -21,12 +27,6 @@ type SoftLayer_Container_Account_Historical_Summary_Detail_Uptime struct {
 
 	// CloudComputingInstance - no documentation
 	CloudComputingInstance *SoftLayer_Virtual_Guest `json:"cloudComputingInstance,omitempty"`
-
-	// ConfigurationValue - no documentation
-	ConfigurationValue *SoftLayer_Monitoring_Agent_Configuration_Value `json:"configurationValue,omitempty"`
-
-	// Data - no documentation
-	Data []*SoftLayer_Metric_Tracking_Object_Data `json:"data,omitempty"`
 }
 
 func (softlayer_container_account_historical_summary_detail_uptime *SoftLayer_Container_Account_Historical_Summary_Detail_Uptime) String() string {

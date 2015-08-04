@@ -12,6 +12,9 @@ import (
 // generated it, the severity of the event, and the action taken.
 type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent struct {
 
+	// ProcessName - no documentation
+	ProcessName string `json:"processName,omitempty"`
+
 	// ReactionText - no documentation
 	ReactionText string `json:"reactionText,omitempty"`
 
@@ -23,9 +26,6 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent struct {
 
 	// IncidentTime - no documentation
 	IncidentTime *time.Time `json:"incidentTime,omitempty"`
-
-	// ProcessName - no documentation
-	ProcessName string `json:"processName,omitempty"`
 }
 
 func (mcafee_epolicy_orchestrator_version36_hips_version6_ipsevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent) String() string {

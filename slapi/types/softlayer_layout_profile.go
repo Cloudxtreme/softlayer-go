@@ -10,23 +10,23 @@ import (
 // profile
 type SoftLayer_Layout_Profile struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// ModifyDate - Timestamp of when the layout profile was last updated
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
 
-	// UserRecordId - The [[SoftLayer_User_Customer]] owning this layout profile
-	UserRecordId int `json:"userRecordId,omitempty"`
-
 	// ActiveFlag - no documentation
 	ActiveFlag int `json:"activeFlag,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// UserRecordId - The [[SoftLayer_User_Customer]] owning this layout profile
+	UserRecordId int `json:"userRecordId,omitempty"`
 }
 
 func (softlayer_layout_profile *SoftLayer_Layout_Profile) String() string {

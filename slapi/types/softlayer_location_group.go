@@ -5,6 +5,9 @@ package types
 // SoftLayer_Location_Group - <nil>
 type SoftLayer_Location_Group struct {
 
+	// Description - <nil>
+	Description string `json:"description,omitempty"`
+
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
 
@@ -16,9 +19,6 @@ type SoftLayer_Location_Group struct {
 
 	// SecurityLevelId - <nil>
 	SecurityLevelId int `json:"securityLevelId,omitempty"`
-
-	// Description - <nil>
-	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_location_group *SoftLayer_Location_Group) String() string {

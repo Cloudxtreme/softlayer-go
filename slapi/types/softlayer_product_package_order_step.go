@@ -23,6 +23,16 @@ func (softlayer_product_package_order_step *SoftLayer_Product_Package_Order_Step
 type SoftLayer_Product_Package_Order_Step_Extended struct {
 	SoftLayer_Product_Package_Order_Step
 
+	// PreviousStepCount - no documentation
+	PreviousStepCount uint64 `json:"previousStepCount,omitempty"`
+
+	// InclusivePreviousSteps - The next steps in the ordering process for the package tied to this object,
+	// including this step.
+	InclusivePreviousSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"inclusivePreviousSteps,omitempty"`
+
+	// NextSteps - The next steps in the ordering process for the package tied to this object.
+	NextSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"nextSteps,omitempty"`
+
 	// PreviousSteps - no documentation
 	PreviousSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"previousSteps,omitempty"`
 
@@ -33,16 +43,6 @@ type SoftLayer_Product_Package_Order_Step_Extended struct {
 	// NextStepCount - A count of the next steps in the ordering process for the package tied to this
 	// object.
 	NextStepCount uint64 `json:"nextStepCount,omitempty"`
-
-	// PreviousStepCount - no documentation
-	PreviousStepCount uint64 `json:"previousStepCount,omitempty"`
-
-	// InclusivePreviousSteps - The next steps in the ordering process for the package tied to this object,
-	// including this step.
-	InclusivePreviousSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"inclusivePreviousSteps,omitempty"`
-
-	// NextSteps - The next steps in the ordering process for the package tied to this object.
-	NextSteps []*SoftLayer_Product_Package_Order_Step_Next `json:"nextSteps,omitempty"`
 }
 
 func (softlayer_product_package_order_step *SoftLayer_Product_Package_Order_Step_Extended) String() string {

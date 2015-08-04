@@ -5,6 +5,9 @@ package types
 // SoftLayer_Network_Vlan_Type - <nil>
 type SoftLayer_Network_Vlan_Type struct {
 
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -13,9 +16,6 @@ type SoftLayer_Network_Vlan_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_network_vlan_type *SoftLayer_Network_Vlan_Type) String() string {

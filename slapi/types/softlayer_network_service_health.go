@@ -14,17 +14,17 @@ import (
 // their health status.
 type SoftLayer_Network_Service_Health struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// LocationId - no documentation
-	LocationId int `json:"locationId,omitempty"`
-
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// StatusId - no documentation
 	StatusId int `json:"statusId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// LocationId - no documentation
+	LocationId int `json:"locationId,omitempty"`
 }
 
 func (softlayer_network_service_health *SoftLayer_Network_Service_Health) String() string {

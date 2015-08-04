@@ -23,17 +23,17 @@ func (softlayer_auxiliary_press_release_media_partner_press_release *SoftLayer_A
 type SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release_Extended struct {
 	SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release
 
-	// MediaPartnerCount - no documentation
-	MediaPartnerCount uint64 `json:"mediaPartnerCount,omitempty"`
-
-	// PressReleaseCount - no documentation
-	PressReleaseCount uint64 `json:"pressReleaseCount,omitempty"`
-
 	// MediaPartners - <nil>
 	MediaPartners []*SoftLayer_Auxiliary_Press_Release_Media_Partner `json:"mediaPartners,omitempty"`
 
 	// PressReleases - <nil>
 	PressReleases []*SoftLayer_Auxiliary_Press_Release `json:"pressReleases,omitempty"`
+
+	// MediaPartnerCount - no documentation
+	MediaPartnerCount uint64 `json:"mediaPartnerCount,omitempty"`
+
+	// PressReleaseCount - no documentation
+	PressReleaseCount uint64 `json:"pressReleaseCount,omitempty"`
 }
 
 func (softlayer_auxiliary_press_release_media_partner_press_release *SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release_Extended) String() string {

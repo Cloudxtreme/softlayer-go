@@ -10,6 +10,9 @@ import (
 // information regarding a transcode account.
 type SoftLayer_Network_Media_Transcode_Account struct {
 
+	// AccountId - no documentation
+	AccountId int `json:"accountId,omitempty"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -18,9 +21,6 @@ type SoftLayer_Network_Media_Transcode_Account struct {
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// AccountId - no documentation
-	AccountId int `json:"accountId,omitempty"`
 }
 
 func (softlayer_network_media_transcode_account *SoftLayer_Network_Media_Transcode_Account) String() string {

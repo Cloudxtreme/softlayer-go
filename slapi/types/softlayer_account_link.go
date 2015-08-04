@@ -9,6 +9,9 @@ import (
 // SoftLayer_Account_Link - <nil>
 type SoftLayer_Account_Link struct {
 
+	// DestinationAccountAlphanumericId - <nil>
+	DestinationAccountAlphanumericId string `json:"destinationAccountAlphanumericId,omitempty"`
+
 	// DestinationAccountId - <nil>
 	DestinationAccountId int `json:"destinationAccountId,omitempty"`
 
@@ -23,9 +26,6 @@ type SoftLayer_Account_Link struct {
 
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// DestinationAccountAlphanumericId - <nil>
-	DestinationAccountAlphanumericId string `json:"destinationAccountAlphanumericId,omitempty"`
 }
 
 func (softlayer_account_link *SoftLayer_Account_Link) String() string {

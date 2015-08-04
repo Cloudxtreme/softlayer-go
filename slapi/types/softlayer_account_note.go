@@ -9,11 +9,11 @@ import (
 // SoftLayer_Account_Note - <nil>
 type SoftLayer_Account_Note struct {
 
-	// NoteTypeId - <nil>
-	NoteTypeId int `json:"noteTypeId,omitempty"`
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
 
-	// UserId - <nil>
-	UserId int `json:"userId,omitempty"`
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
@@ -21,14 +21,14 @@ type SoftLayer_Account_Note struct {
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
+	// UserId - <nil>
+	UserId int `json:"userId,omitempty"`
+
 	// Note - <nil>
 	Note string `json:"note,omitempty"`
 
-	// AccountId - <nil>
-	AccountId int `json:"accountId,omitempty"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
+	// NoteTypeId - <nil>
+	NoteTypeId int `json:"noteTypeId,omitempty"`
 }
 
 func (softlayer_account_note *SoftLayer_Account_Note) String() string {
@@ -39,20 +39,20 @@ func (softlayer_account_note *SoftLayer_Account_Note) String() string {
 type SoftLayer_Account_Note_Extended struct {
 	SoftLayer_Account_Note
 
-	// Customer - <nil>
-	Customer *SoftLayer_User_Customer `json:"customer,omitempty"`
-
-	// NoteHistoryCount - no documentation
-	NoteHistoryCount uint64 `json:"noteHistoryCount,omitempty"`
-
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// Customer - <nil>
+	Customer *SoftLayer_User_Customer `json:"customer,omitempty"`
 
 	// NoteHistory - <nil>
 	NoteHistory []*SoftLayer_Account_Note_History `json:"noteHistory,omitempty"`
 
 	// NoteType - <nil>
 	NoteType *SoftLayer_Account_Note_Type `json:"noteType,omitempty"`
+
+	// NoteHistoryCount - no documentation
+	NoteHistoryCount uint64 `json:"noteHistoryCount,omitempty"`
 }
 
 func (softlayer_account_note *SoftLayer_Account_Note_Extended) String() string {

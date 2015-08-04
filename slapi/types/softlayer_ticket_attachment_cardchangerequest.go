@@ -31,14 +31,14 @@ func (softlayer_ticket_attachment_cardchangerequest *SoftLayer_Ticket_Attachment
 type SoftLayer_Ticket_Attachment_CardChangeRequest_Extended struct {
 	SoftLayer_Ticket_Attachment_CardChangeRequest
 
+	// Ticket - no documentation
+	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
+
 	// AssignedAgent - <nil>
 	AssignedAgent *SoftLayer_User_Customer `json:"assignedAgent,omitempty"`
 
 	// ScheduledAction - <nil>
 	ScheduledAction *SoftLayer_Provisioning_Version1_Transaction `json:"scheduledAction,omitempty"`
-
-	// Ticket - no documentation
-	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
 
 	// Resource - The card change request that is attached to a ticket.
 	Resource *SoftLayer_Billing_Payment_Card_ChangeRequest `json:"resource,omitempty"`

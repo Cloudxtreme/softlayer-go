@@ -11,16 +11,15 @@ import (
 // a unique identifier and password that is used to authenticate against the 3rd party service.
 type SoftLayer_User_External_Binding struct {
 
+	// ExternalId - The identifier used to identify this binding to an external authentication source.
+	ExternalId string `json:"externalId,omitempty"`
+
 	// Id - An external authentication binding's internal identifier.
 	Id int `json:"id,omitempty"`
 
-	// UserId - An external authentication binding's associated [[SoftLayer_User_Customer|user account]]
-	// id.
-	UserId int `json:"userId,omitempty"`
-
-	// VendorId - The [[SoftLayer_User_External_Binding_Vendor|vendor]] identifier of an external
-	// authentication binding.
-	VendorId int `json:"vendorId,omitempty"`
+	// TypeId - The [[SoftLayer_User_External_Binding_Type|type]] identifier of an external authentication
+	// binding.
+	TypeId int `json:"typeId,omitempty"`
 
 	// CreateDate - The date that the external authentication binding was created.
 	CreateDate *time.Time `json:"createDate,omitempty"`
@@ -32,12 +31,13 @@ type SoftLayer_User_External_Binding struct {
 	// Password - The password used to authenticate the external id at an external authentication source.
 	Password string `json:"password,omitempty"`
 
-	// TypeId - The [[SoftLayer_User_External_Binding_Type|type]] identifier of an external authentication
-	// binding.
-	TypeId int `json:"typeId,omitempty"`
+	// UserId - An external authentication binding's associated [[SoftLayer_User_Customer|user account]]
+	// id.
+	UserId int `json:"userId,omitempty"`
 
-	// ExternalId - The identifier used to identify this binding to an external authentication source.
-	ExternalId string `json:"externalId,omitempty"`
+	// VendorId - The [[SoftLayer_User_External_Binding_Vendor|vendor]] identifier of an external
+	// authentication binding.
+	VendorId int `json:"vendorId,omitempty"`
 }
 
 func (softlayer_user_external_binding *SoftLayer_User_External_Binding) String() string {
@@ -54,11 +54,11 @@ type SoftLayer_User_External_Binding_Extended struct {
 	// Note - An optional note for identifying the external binding.
 	Note string `json:"note,omitempty"`
 
-	// AttributeCount - A count of attributes of an external authentication binding.
-	AttributeCount uint64 `json:"attributeCount,omitempty"`
-
 	// Vendor - no documentation
 	Vendor *SoftLayer_User_External_Binding_Vendor `json:"vendor,omitempty"`
+
+	// AttributeCount - A count of attributes of an external authentication binding.
+	AttributeCount uint64 `json:"attributeCount,omitempty"`
 
 	// BillingItem - Information regarding the billing item for external authentication.
 	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`

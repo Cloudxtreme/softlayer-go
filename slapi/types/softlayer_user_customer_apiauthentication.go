@@ -6,9 +6,6 @@ package types
 // contains user's authentication key(s).
 type SoftLayer_User_Customer_ApiAuthentication struct {
 
-	// UserId - no documentation
-	UserId int `json:"userId,omitempty"`
-
 	// AuthenticationKey - no documentation
 	AuthenticationKey string `json:"authenticationKey,omitempty"`
 
@@ -22,6 +19,9 @@ type SoftLayer_User_Customer_ApiAuthentication struct {
 
 	// TimestampKey - no documentation
 	TimestampKey int `json:"timestampKey,omitempty"`
+
+	// UserId - no documentation
+	UserId int `json:"userId,omitempty"`
 }
 
 func (softlayer_user_customer_apiauthentication *SoftLayer_User_Customer_ApiAuthentication) String() string {

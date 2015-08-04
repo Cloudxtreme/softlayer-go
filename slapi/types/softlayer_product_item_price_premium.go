@@ -2,23 +2,27 @@ package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
+import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+)
+
 // SoftLayer_Product_Item_Price_Premium - <nil>
 type SoftLayer_Product_Item_Price_Premium struct {
-
-	// ItemPriceId - <nil>
-	ItemPriceId int `json:"itemPriceId,omitempty"`
 
 	// LocationId - <nil>
 	LocationId int `json:"locationId,omitempty"`
 
 	// MonthlyModifier - <nil>
-	MonthlyModifier float64 `json:"monthlyModifier,omitempty"`
+	MonthlyModifier slapi.Float64 `json:"monthlyModifier,omitempty"`
 
 	// PackageId - <nil>
 	PackageId int `json:"packageId,omitempty"`
 
 	// HourlyModifier - <nil>
-	HourlyModifier float64 `json:"hourlyModifier,omitempty"`
+	HourlyModifier slapi.Float64 `json:"hourlyModifier,omitempty"`
+
+	// ItemPriceId - <nil>
+	ItemPriceId int `json:"itemPriceId,omitempty"`
 }
 
 func (softlayer_product_item_price_premium *SoftLayer_Product_Item_Price_Premium) String() string {

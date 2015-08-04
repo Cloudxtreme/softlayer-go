@@ -6,14 +6,14 @@ package types
 // tax categories that are associated with products.
 type SoftLayer_Product_Item_Tax_Category struct {
 
+	// StatusFlag - no documentation
+	StatusFlag int `json:"statusFlag,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-
-	// StatusFlag - no documentation
-	StatusFlag int `json:"statusFlag,omitempty"`
 }
 
 func (softlayer_product_item_tax_category *SoftLayer_Product_Item_Tax_Category) String() string {

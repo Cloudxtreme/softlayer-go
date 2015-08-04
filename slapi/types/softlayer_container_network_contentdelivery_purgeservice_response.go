@@ -8,11 +8,11 @@ package types
 // customer. is returned in case there was an internal error.
 type SoftLayer_Container_Network_ContentDelivery_PurgeService_Response struct {
 
-	// StatusCode - A status code indicates whether your request was successful or not
-	StatusCode string `json:"statusCode,omitempty"`
-
 	// Url - no documentation
 	Url string `json:"url,omitempty"`
+
+	// StatusCode - A status code indicates whether your request was successful or not
+	StatusCode string `json:"statusCode,omitempty"`
 }
 
 func (softlayer_container_network_contentdelivery_purgeservice_response *SoftLayer_Container_Network_ContentDelivery_PurgeService_Response) String() string {

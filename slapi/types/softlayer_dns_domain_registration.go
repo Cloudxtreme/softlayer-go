@@ -10,11 +10,11 @@ import (
 // domain registration record.
 type SoftLayer_Dns_Domain_Registration struct {
 
-	// ServiceProviderId - <nil>
-	ServiceProviderId int `json:"serviceProviderId,omitempty"`
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
+	// DomainRegistrationStatusId - <nil>
+	DomainRegistrationStatusId int `json:"domainRegistrationStatusId,omitempty"`
 
 	// LockedFlag - no documentation
 	LockedFlag int `json:"lockedFlag,omitempty"`
@@ -22,20 +22,20 @@ type SoftLayer_Dns_Domain_Registration struct {
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
+	// ServiceProviderId - <nil>
+	ServiceProviderId int `json:"serviceProviderId,omitempty"`
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// DomainRegistrationStatusId - <nil>
-	DomainRegistrationStatusId int `json:"domainRegistrationStatusId,omitempty"`
+	// RegistrantVerificationStatusId - <nil>
+	RegistrantVerificationStatusId int `json:"registrantVerificationStatusId,omitempty"`
 
 	// ExpireDate - no documentation
 	ExpireDate *time.Time `json:"expireDate,omitempty"`
 
-	// RegistrantVerificationStatusId - <nil>
-	RegistrantVerificationStatusId int `json:"registrantVerificationStatusId,omitempty"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_dns_domain_registration *SoftLayer_Dns_Domain_Registration) String() string {
@@ -46,14 +46,14 @@ func (softlayer_dns_domain_registration *SoftLayer_Dns_Domain_Registration) Stri
 type SoftLayer_Dns_Domain_Registration_Extended struct {
 	SoftLayer_Dns_Domain_Registration
 
-	// DomainRegistrationStatus - no documentation
-	DomainRegistrationStatus *SoftLayer_Dns_Domain_Registration_Status `json:"domainRegistrationStatus,omitempty"`
+	// RegistrantVerificationStatus - no documentation
+	RegistrantVerificationStatus *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status `json:"registrantVerificationStatus,omitempty"`
 
 	// Account - The SoftLayer customer account that the domain is registered to.
 	Account *SoftLayer_Account `json:"account,omitempty"`
 
-	// RegistrantVerificationStatus - no documentation
-	RegistrantVerificationStatus *SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status `json:"registrantVerificationStatus,omitempty"`
+	// DomainRegistrationStatus - no documentation
+	DomainRegistrationStatus *SoftLayer_Dns_Domain_Registration_Status `json:"domainRegistrationStatus,omitempty"`
 
 	// ServiceProvider - <nil>
 	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`

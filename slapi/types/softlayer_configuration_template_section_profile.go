@@ -13,6 +13,9 @@ import (
 // profiles.
 type SoftLayer_Configuration_Template_Section_Profile struct {
 
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
 	// SectionId - Internal identifier of a configuration section that this profile belongs to.
 	SectionId int `json:"sectionId,omitempty"`
 
@@ -24,9 +27,6 @@ type SoftLayer_Configuration_Template_Section_Profile struct {
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
-
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_configuration_template_section_profile *SoftLayer_Configuration_Template_Section_Profile) String() string {

@@ -3,6 +3,8 @@ package types
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+
 	time "time"
 )
 
@@ -11,14 +13,14 @@ import (
 // to bandwidth utilization at a specific point in time on a given network interface.
 type SoftLayer_Network_Bandwidth_Version1_Usage_Detail struct {
 
-	// Day - Day and time this bandwidth utilization event was recorded.
-	Day *time.Time `json:"day,omitempty"`
-
 	// AmountIn - no documentation
-	AmountIn float64 `json:"amountIn,omitempty"`
+	AmountIn slapi.Float64 `json:"amountIn,omitempty"`
 
 	// AmountOut - no documentation
-	AmountOut float64 `json:"amountOut,omitempty"`
+	AmountOut slapi.Float64 `json:"amountOut,omitempty"`
+
+	// Day - Day and time this bandwidth utilization event was recorded.
+	Day *time.Time `json:"day,omitempty"`
 }
 
 func (softlayer_network_bandwidth_version1_usage_detail *SoftLayer_Network_Bandwidth_Version1_Usage_Detail) String() string {
@@ -29,12 +31,12 @@ func (softlayer_network_bandwidth_version1_usage_detail *SoftLayer_Network_Bandw
 type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Extended struct {
 	SoftLayer_Network_Bandwidth_Version1_Usage_Detail
 
+	// BandwidthUsage - In and out bandwidth utilization for a specified time stamp.
+	BandwidthUsage *SoftLayer_Network_Bandwidth_Version1_Usage `json:"bandwidthUsage,omitempty"`
+
 	// BandwidthUsageDetailType - Describes this bandwidth utilization record as on the public or private
 	// network interface.
 	BandwidthUsageDetailType *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type `json:"bandwidthUsageDetailType,omitempty"`
-
-	// BandwidthUsage - In and out bandwidth utilization for a specified time stamp.
-	BandwidthUsage *SoftLayer_Network_Bandwidth_Version1_Usage `json:"bandwidthUsage,omitempty"`
 }
 
 func (softlayer_network_bandwidth_version1_usage_detail *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Extended) String() string {

@@ -14,9 +14,6 @@ import (
 // ticket.
 type SoftLayer_Ticket_Attachment struct {
 
-	// AttachmentId - The internal identifier of an item that is attached to a ticket.
-	AttachmentId int `json:"attachmentId,omitempty"`
-
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -25,6 +22,9 @@ type SoftLayer_Ticket_Attachment struct {
 
 	// TicketId - The internal identifier of the ticket that an item is attached to.
 	TicketId int `json:"ticketId,omitempty"`
+
+	// AttachmentId - The internal identifier of an item that is attached to a ticket.
+	AttachmentId int `json:"attachmentId,omitempty"`
 }
 
 func (softlayer_ticket_attachment *SoftLayer_Ticket_Attachment) String() string {

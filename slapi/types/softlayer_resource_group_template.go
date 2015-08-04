@@ -5,14 +5,14 @@ package types
 // SoftLayer_Resource_Group_Template - <nil>
 type SoftLayer_Resource_Group_Template struct {
 
+	// KeyName - no documentation
+	KeyName string `json:"keyName,omitempty"`
+
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
 
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
-
-	// KeyName - no documentation
-	KeyName string `json:"keyName,omitempty"`
 }
 
 func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) String() string {

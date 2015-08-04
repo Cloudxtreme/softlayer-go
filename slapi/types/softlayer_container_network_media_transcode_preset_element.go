@@ -5,11 +5,14 @@ package types
 // SoftLayer_Container_Network_Media_Transcode_Preset_Element - no documentation
 type SoftLayer_Container_Network_Media_Transcode_Preset_Element struct {
 
-	// DefaultValue - no documentation
-	DefaultValue string `json:"defaultValue,omitempty"`
+	// AdditionalElements - no documentation
+	AdditionalElements []*SoftLayer_Container_Network_Media_Transcode_Preset_Element_Option `json:"additionalElements,omitempty"`
 
-	// MaximumValue - no documentation
-	MaximumValue int `json:"maximumValue,omitempty"`
+	// Hidden - The flag that indicates whether an element is hidden or not
+	Hidden bool `json:"hidden,omitempty"`
+
+	// MinimumValue - no documentation
+	MinimumValue int `json:"minimumValue,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
@@ -17,11 +20,8 @@ type SoftLayer_Container_Network_Media_Transcode_Preset_Element struct {
 	// ParentName - no documentation
 	ParentName string `json:"parentName,omitempty"`
 
-	// Type - no documentation
-	Type string `json:"type,omitempty"`
-
-	// AdditionalElements - no documentation
-	AdditionalElements []*SoftLayer_Container_Network_Media_Transcode_Preset_Element_Option `json:"additionalElements,omitempty"`
+	// DefaultValue - no documentation
+	DefaultValue string `json:"defaultValue,omitempty"`
 
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
@@ -32,11 +32,11 @@ type SoftLayer_Container_Network_Media_Transcode_Preset_Element struct {
 	// ExtendedDescription - no documentation
 	ExtendedDescription string `json:"extendedDescription,omitempty"`
 
-	// Hidden - The flag that indicates whether an element is hidden or not
-	Hidden bool `json:"hidden,omitempty"`
+	// MaximumValue - no documentation
+	MaximumValue int `json:"maximumValue,omitempty"`
 
-	// MinimumValue - no documentation
-	MinimumValue int `json:"minimumValue,omitempty"`
+	// Type - no documentation
+	Type string `json:"type,omitempty"`
 }
 
 func (softlayer_container_network_media_transcode_preset_element *SoftLayer_Container_Network_Media_Transcode_Preset_Element) String() string {

@@ -6,44 +6,44 @@ package types
 // such as Corporate or Support contact information
 type SoftLayer_Brand_Contact struct {
 
-	// Address1 - no documentation
-	Address1 string `json:"address1,omitempty"`
-
-	// AlternatePhone - no documentation
-	AlternatePhone string `json:"alternatePhone,omitempty"`
-
-	// Email - no documentation
-	Email string `json:"email,omitempty"`
-
-	// FirstName - no documentation
-	FirstName string `json:"firstName,omitempty"`
-
-	// LastName - no documentation
-	LastName string `json:"lastName,omitempty"`
-
 	// BrandContactTypeId - no documentation
 	BrandContactTypeId int `json:"brandContactTypeId,omitempty"`
-
-	// State - no documentation
-	State string `json:"state,omitempty"`
 
 	// Country - no documentation
 	Country string `json:"country,omitempty"`
 
-	// FaxPhone - no documentation
-	FaxPhone string `json:"faxPhone,omitempty"`
+	// FirstName - no documentation
+	FirstName string `json:"firstName,omitempty"`
 
 	// OfficePhone - no documentation
 	OfficePhone string `json:"officePhone,omitempty"`
 
-	// PostalCode - no documentation
-	PostalCode string `json:"postalCode,omitempty"`
+	// State - no documentation
+	State string `json:"state,omitempty"`
 
 	// Address2 - no documentation
 	Address2 string `json:"address2,omitempty"`
 
+	// AlternatePhone - no documentation
+	AlternatePhone string `json:"alternatePhone,omitempty"`
+
 	// City - no documentation
 	City string `json:"city,omitempty"`
+
+	// Email - no documentation
+	Email string `json:"email,omitempty"`
+
+	// Address1 - no documentation
+	Address1 string `json:"address1,omitempty"`
+
+	// FaxPhone - no documentation
+	FaxPhone string `json:"faxPhone,omitempty"`
+
+	// LastName - no documentation
+	LastName string `json:"lastName,omitempty"`
+
+	// PostalCode - no documentation
+	PostalCode string `json:"postalCode,omitempty"`
 }
 
 func (softlayer_brand_contact *SoftLayer_Brand_Contact) String() string {

@@ -6,6 +6,9 @@ package types
 // contains detailed information relating to an hardware or software upgrade request.
 type SoftLayer_Product_Upgrade_Request_Status struct {
 
+	// StatusCode - no documentation
+	StatusCode string `json:"statusCode,omitempty"`
+
 	// Description - The detailed description of an upgrade request status.
 	Description string `json:"description,omitempty"`
 
@@ -14,9 +17,6 @@ type SoftLayer_Product_Upgrade_Request_Status struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-
-	// StatusCode - no documentation
-	StatusCode string `json:"statusCode,omitempty"`
 }
 
 func (softlayer_product_upgrade_request_status *SoftLayer_Product_Upgrade_Request_Status) String() string {

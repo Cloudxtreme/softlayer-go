@@ -27,14 +27,14 @@ func (softlayer_layout_container *SoftLayer_Layout_Container) String() string {
 type SoftLayer_Layout_Container_Extended struct {
 	SoftLayer_Layout_Container
 
-	// LayoutContainerType - no documentation
-	LayoutContainerType *SoftLayer_Layout_Container_Type `json:"layoutContainerType,omitempty"`
-
 	// LayoutItems - no documentation
 	LayoutItems []*SoftLayer_Layout_Item `json:"layoutItems,omitempty"`
 
 	// LayoutItemCount - A count of the layout items assigned to this layout container
 	LayoutItemCount uint64 `json:"layoutItemCount,omitempty"`
+
+	// LayoutContainerType - no documentation
+	LayoutContainerType *SoftLayer_Layout_Container_Type `json:"layoutContainerType,omitempty"`
 }
 
 func (softlayer_layout_container *SoftLayer_Layout_Container_Extended) String() string {

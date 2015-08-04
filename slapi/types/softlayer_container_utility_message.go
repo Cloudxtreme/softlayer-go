@@ -9,6 +9,9 @@ import (
 // SoftLayer_Container_Utility_Message - <nil>
 type SoftLayer_Container_Utility_Message struct {
 
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
 
@@ -20,9 +23,6 @@ type SoftLayer_Container_Utility_Message struct {
 
 	// Summary - <nil>
 	Summary string `json:"summary,omitempty"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_container_utility_message *SoftLayer_Container_Utility_Message) String() string {

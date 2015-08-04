@@ -10,9 +10,6 @@ import (
 // models an individual bandwidth graph image and certain details about that graph image.
 type SoftLayer_Container_Bandwidth_GraphOutputsExtended struct {
 
-	// GraphTitle - no documentation
-	GraphTitle string `json:"graphTitle,omitempty"`
-
 	// InBoundTotalBytes - The amount of inbound traffic reported on a bandwidth graph image.
 	InBoundTotalBytes uint64 `json:"inBoundTotalBytes,omitempty"`
 
@@ -27,6 +24,9 @@ type SoftLayer_Container_Bandwidth_GraphOutputsExtended struct {
 
 	// GraphImage - The raw PNG binary data of a bandwidth graph image.
 	GraphImage string `json:"graphImage,omitempty"`
+
+	// GraphTitle - no documentation
+	GraphTitle string `json:"graphTitle,omitempty"`
 }
 
 func (softlayer_container_bandwidth_graphoutputsextended *SoftLayer_Container_Bandwidth_GraphOutputsExtended) String() string {

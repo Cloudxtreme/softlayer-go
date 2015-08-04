@@ -2,6 +2,10 @@ package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
+import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+)
+
 // SoftLayer_Hardware_Component_Partition_Template_Partition - The
 // SoftLayer_Hardware_Component_Partition_Template_Partition data type contains general information
 // relating to a single SoftLayer Template Partition.
@@ -18,7 +22,7 @@ type SoftLayer_Hardware_Component_Partition_Template_Partition struct {
 	PartitionName string `json:"partitionName,omitempty"`
 
 	// PartitionSize - no documentation
-	PartitionSize float64 `json:"partitionSize,omitempty"`
+	PartitionSize slapi.Float64 `json:"partitionSize,omitempty"`
 
 	// PartitionTemplateId - A partition's associated
 	// [[SoftLayer_Hardware_Component_Partition_Template|Partition Template]] Id.

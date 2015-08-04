@@ -14,12 +14,15 @@ package types
 // item.
 type SoftLayer_Product_Package_Preset struct {
 
-	// Id - A preset's internal identifier. Everything regarding a SoftLayer_Product_Package_Preset is tied
-	// back to this id.
-	Id int `json:"id,omitempty"`
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
 
 	// IsActive - no documentation
 	IsActive string `json:"isActive,omitempty"`
+
+	// Id - A preset's internal identifier. Everything regarding a SoftLayer_Product_Package_Preset is tied
+	// back to this id.
+	Id int `json:"id,omitempty"`
 
 	// KeyName - The key name of the package preset. For the base configuration of a package the preset key
 	// name is
@@ -30,9 +33,6 @@ type SoftLayer_Product_Package_Preset struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset) String() string {
@@ -43,32 +43,30 @@ func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset) String
 type SoftLayer_Product_Package_Preset_Extended struct {
 	SoftLayer_Product_Package_Preset
 
-	// StorageGroupTemplateArrayCount - A count of describes how all disks in this preset will be
-	// configured.
-	StorageGroupTemplateArrayCount uint64 `json:"storageGroupTemplateArrayCount,omitempty"`
+	// CategoryCount - A count of the item categories that are included in this package preset
+	// configuration.
+	CategoryCount uint64 `json:"categoryCount,omitempty"`
 
-	// Prices - The item prices that are included in this package preset configuration.
-	Prices []*SoftLayer_Product_Item_Price `json:"prices,omitempty"`
-
-	// ConfigurationCount - A count of the preset configuration (category and price).
-	ConfigurationCount uint64 `json:"configurationCount,omitempty"`
-
-	// LowestPresetServerPrice - The lowest server prices related to this package preset.
-	LowestPresetServerPrice *SoftLayer_Product_Item_Price `json:"lowestPresetServerPrice,omitempty"`
+	// Categories - The item categories that are included in this package preset configuration.
+	Categories []*SoftLayer_Product_Item_Category `json:"categories,omitempty"`
 
 	// Package - no documentation
 	Package *SoftLayer_Product_Package `json:"package,omitempty"`
 
-	// PackageConfigurationCount - A count of the item categories associated with a package preset,
-	// including information detailing which item categories are required as part of a SoftLayer product
-	// order.
-	PackageConfigurationCount uint64 `json:"packageConfigurationCount,omitempty"`
+	// StorageGroupTemplateArrays - Describes how all disks in this preset will be configured.
+	StorageGroupTemplateArrays []*SoftLayer_Configuration_Storage_Group_Template_Group `json:"storageGroupTemplateArrays,omitempty"`
 
-	// PriceCount - A count of the item prices that are included in this package preset configuration.
-	PriceCount uint64 `json:"priceCount,omitempty"`
+	// AvailableStorageUnits - <nil>
+	AvailableStorageUnits uint `json:"availableStorageUnits,omitempty"`
 
 	// Configuration - no documentation
 	Configuration []*SoftLayer_Product_Package_Preset_Configuration `json:"configuration,omitempty"`
+
+	// LowestPresetServerPrice - The lowest server prices related to this package preset.
+	LowestPresetServerPrice *SoftLayer_Product_Item_Price `json:"lowestPresetServerPrice,omitempty"`
+
+	// ConfigurationCount - A count of the preset configuration (category and price).
+	ConfigurationCount uint64 `json:"configurationCount,omitempty"`
 
 	// FixedConfigurationFlag - A package preset with this flag set will not allow the price's defined in
 	// the preset configuration to be overriden during order placement.
@@ -78,26 +76,28 @@ type SoftLayer_Product_Package_Preset_Extended struct {
 	// detailing which item categories are required as part of a SoftLayer product order.
 	PackageConfiguration []*SoftLayer_Product_Package_Order_Configuration `json:"packageConfiguration,omitempty"`
 
+	// TotalMinimumRecurringFee - The starting monthly price for this configuration. Additional options not
+	// defined in the preset may increase the cost.
+	TotalMinimumRecurringFee uint `json:"totalMinimumRecurringFee,omitempty"`
+
+	// PackageConfigurationCount - A count of the item categories associated with a package preset,
+	// including information detailing which item categories are required as part of a SoftLayer product
+	// order.
+	PackageConfigurationCount uint64 `json:"packageConfigurationCount,omitempty"`
+
+	// PriceCount - A count of the item prices that are included in this package preset configuration.
+	PriceCount uint64 `json:"priceCount,omitempty"`
+
+	// Prices - The item prices that are included in this package preset configuration.
+	Prices []*SoftLayer_Product_Item_Price `json:"prices,omitempty"`
+
 	// TotalMinimumHourlyFee - The starting hourly price for this configuration. Additional options not
 	// defined in the preset may increase the cost.
 	TotalMinimumHourlyFee uint `json:"totalMinimumHourlyFee,omitempty"`
 
-	// CategoryCount - A count of the item categories that are included in this package preset
-	// configuration.
-	CategoryCount uint64 `json:"categoryCount,omitempty"`
-
-	// AvailableStorageUnits - <nil>
-	AvailableStorageUnits uint `json:"availableStorageUnits,omitempty"`
-
-	// Categories - The item categories that are included in this package preset configuration.
-	Categories []*SoftLayer_Product_Item_Category `json:"categories,omitempty"`
-
-	// StorageGroupTemplateArrays - Describes how all disks in this preset will be configured.
-	StorageGroupTemplateArrays []*SoftLayer_Configuration_Storage_Group_Template_Group `json:"storageGroupTemplateArrays,omitempty"`
-
-	// TotalMinimumRecurringFee - The starting monthly price for this configuration. Additional options not
-	// defined in the preset may increase the cost.
-	TotalMinimumRecurringFee uint `json:"totalMinimumRecurringFee,omitempty"`
+	// StorageGroupTemplateArrayCount - A count of describes how all disks in this preset will be
+	// configured.
+	StorageGroupTemplateArrayCount uint64 `json:"storageGroupTemplateArrayCount,omitempty"`
 }
 
 func (softlayer_product_package_preset *SoftLayer_Product_Package_Preset_Extended) String() string {

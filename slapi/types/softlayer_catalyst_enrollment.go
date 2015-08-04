@@ -3,38 +3,40 @@ package types
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+
 	time "time"
 )
 
 // SoftLayer_Catalyst_Enrollment - <nil>
 type SoftLayer_Catalyst_Enrollment struct {
 
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
+
 	// AgreementCompleteFlag - <nil>
 	AgreementCompleteFlag int `json:"agreementCompleteFlag,omitempty"`
 
 	// MonthlyCreditAmount - <nil>
-	MonthlyCreditAmount float64 `json:"monthlyCreditAmount,omitempty"`
-
-	// RepresentativeEmployeeId - <nil>
-	RepresentativeEmployeeId int `json:"representativeEmployeeId,omitempty"`
+	MonthlyCreditAmount slapi.Float64 `json:"monthlyCreditAmount,omitempty"`
 
 	// CompanyDescription - <nil>
 	CompanyDescription string `json:"companyDescription,omitempty"`
 
+	// GraduationDate - <nil>
+	GraduationDate *time.Time `json:"graduationDate,omitempty"`
+
 	// CompanyTypeId - <nil>
 	CompanyTypeId int `json:"companyTypeId,omitempty"`
 
-	// AccountId - <nil>
-	AccountId int `json:"accountId,omitempty"`
-
-	// GraduationDate - <nil>
-	GraduationDate *time.Time `json:"graduationDate,omitempty"`
+	// EnrollmentDate - <nil>
+	EnrollmentDate *time.Time `json:"enrollmentDate,omitempty"`
 
 	// AffiliateId - <nil>
 	AffiliateId int `json:"affiliateId,omitempty"`
 
-	// EnrollmentDate - <nil>
-	EnrollmentDate *time.Time `json:"enrollmentDate,omitempty"`
+	// RepresentativeEmployeeId - <nil>
+	RepresentativeEmployeeId int `json:"representativeEmployeeId,omitempty"`
 }
 
 func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) String() string {
@@ -45,11 +47,11 @@ func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment) String() str
 type SoftLayer_Catalyst_Enrollment_Extended struct {
 	SoftLayer_Catalyst_Enrollment
 
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account,omitempty"`
-
 	// IsActiveFlag - <nil>
 	IsActiveFlag bool `json:"isActiveFlag,omitempty"`
+
+	// Representative - <nil>
+	Representative *SoftLayer_User_Employee `json:"representative,omitempty"`
 
 	// Affiliate - <nil>
 	Affiliate *SoftLayer_Catalyst_Affiliate `json:"affiliate,omitempty"`
@@ -57,8 +59,8 @@ type SoftLayer_Catalyst_Enrollment_Extended struct {
 	// CompanyType - <nil>
 	CompanyType *SoftLayer_Catalyst_Company_Type `json:"companyType,omitempty"`
 
-	// Representative - <nil>
-	Representative *SoftLayer_User_Employee `json:"representative,omitempty"`
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
 func (softlayer_catalyst_enrollment *SoftLayer_Catalyst_Enrollment_Extended) String() string {

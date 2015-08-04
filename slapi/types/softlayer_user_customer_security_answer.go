@@ -27,11 +27,11 @@ func (softlayer_user_customer_security_answer *SoftLayer_User_Customer_Security_
 type SoftLayer_User_Customer_Security_Answer_Extended struct {
 	SoftLayer_User_Customer_Security_Answer
 
-	// Question - The question the security answer is associated with.
-	Question *SoftLayer_User_Security_Question `json:"question,omitempty"`
-
 	// User - no documentation
 	User *SoftLayer_User_Customer `json:"user,omitempty"`
+
+	// Question - The question the security answer is associated with.
+	Question *SoftLayer_User_Security_Question `json:"question,omitempty"`
 }
 
 func (softlayer_user_customer_security_answer *SoftLayer_User_Customer_Security_Answer_Extended) String() string {

@@ -31,14 +31,14 @@ func (softlayer_scale_asset_hardware *SoftLayer_Scale_Asset_Hardware) String() s
 type SoftLayer_Scale_Asset_Hardware_Extended struct {
 	SoftLayer_Scale_Asset_Hardware
 
-	// Hardware - no documentation
-	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
-
 	// HardwareId - no documentation
 	HardwareId int `json:"hardwareId,omitempty"`
 
 	// ScaleGroup - no documentation
 	ScaleGroup *SoftLayer_Scale_Group `json:"scaleGroup,omitempty"`
+
+	// Hardware - no documentation
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 }
 
 func (softlayer_scale_asset_hardware *SoftLayer_Scale_Asset_Hardware_Extended) String() string {

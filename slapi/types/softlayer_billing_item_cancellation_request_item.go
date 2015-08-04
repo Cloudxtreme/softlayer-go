@@ -11,12 +11,6 @@ import (
 // to the associated service.
 type SoftLayer_Billing_Item_Cancellation_Request_Item struct {
 
-	// BillingItemId - no documentation
-	BillingItemId int `json:"billingItemId,omitempty"`
-
-	// CancellationRequestId - no documentation
-	CancellationRequestId int `json:"cancellationRequestId,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -29,6 +23,12 @@ type SoftLayer_Billing_Item_Cancellation_Request_Item struct {
 
 	// ServiceReclaimStatusCode - no documentation
 	ServiceReclaimStatusCode string `json:"serviceReclaimStatusCode,omitempty"`
+
+	// BillingItemId - no documentation
+	BillingItemId int `json:"billingItemId,omitempty"`
+
+	// CancellationRequestId - no documentation
+	CancellationRequestId int `json:"cancellationRequestId,omitempty"`
 }
 
 func (softlayer_billing_item_cancellation_request_item *SoftLayer_Billing_Item_Cancellation_Request_Item) String() string {

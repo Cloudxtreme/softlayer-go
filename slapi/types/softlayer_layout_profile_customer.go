@@ -9,23 +9,23 @@ import (
 // SoftLayer_Layout_Profile_Customer - <nil>
 type SoftLayer_Layout_Profile_Customer struct {
 
-	// ActiveFlag - no documentation
-	ActiveFlag int `json:"activeFlag,omitempty"`
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
-	// ModifyDate - Timestamp of when the layout profile was last updated
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+	// UserRecordId - The [[SoftLayer_User_Customer]] owning this layout profile
+	UserRecordId int `json:"userRecordId,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
+	// ActiveFlag - no documentation
+	ActiveFlag int `json:"activeFlag,omitempty"`
 
-	// UserRecordId - The [[SoftLayer_User_Customer]] owning this layout profile
-	UserRecordId int `json:"userRecordId,omitempty"`
+	// ModifyDate - Timestamp of when the layout profile was last updated
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 }
 
 func (softlayer_layout_profile_customer *SoftLayer_Layout_Profile_Customer) String() string {
@@ -36,17 +36,17 @@ func (softlayer_layout_profile_customer *SoftLayer_Layout_Profile_Customer) Stri
 type SoftLayer_Layout_Profile_Customer_Extended struct {
 	SoftLayer_Layout_Profile_Customer
 
-	// LayoutPreferenceCount - no documentation
-	LayoutPreferenceCount uint64 `json:"layoutPreferenceCount,omitempty"`
-
 	// LayoutContainerCount - no documentation
 	LayoutContainerCount uint64 `json:"layoutContainerCount,omitempty"`
 
-	// LayoutContainers - <nil>
-	LayoutContainers []*SoftLayer_Layout_Container `json:"layoutContainers,omitempty"`
+	// LayoutPreferenceCount - no documentation
+	LayoutPreferenceCount uint64 `json:"layoutPreferenceCount,omitempty"`
 
 	// UserRecord - <nil>
 	UserRecord *SoftLayer_User_Customer `json:"userRecord,omitempty"`
+
+	// LayoutContainers - <nil>
+	LayoutContainers []*SoftLayer_Layout_Container `json:"layoutContainers,omitempty"`
 
 	// LayoutPreferences - <nil>
 	LayoutPreferences []*SoftLayer_Layout_Profile_Preference `json:"layoutPreferences,omitempty"`

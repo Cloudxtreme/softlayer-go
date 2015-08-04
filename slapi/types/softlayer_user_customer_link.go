@@ -9,6 +9,9 @@ import (
 // SoftLayer_User_Customer_Link - <nil>
 type SoftLayer_User_Customer_Link struct {
 
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
+
 	// ServiceProviderId - <nil>
 	ServiceProviderId int `json:"serviceProviderId,omitempty"`
 
@@ -23,9 +26,6 @@ type SoftLayer_User_Customer_Link struct {
 
 	// DestinationUserId - <nil>
 	DestinationUserId int `json:"destinationUserId,omitempty"`
-
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_user_customer_link *SoftLayer_User_Customer_Link) String() string {

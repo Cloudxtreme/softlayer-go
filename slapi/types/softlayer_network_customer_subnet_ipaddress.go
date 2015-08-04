@@ -27,14 +27,14 @@ func (softlayer_network_customer_subnet_ipaddress *SoftLayer_Network_Customer_Su
 type SoftLayer_Network_Customer_Subnet_IpAddress_Extended struct {
 	SoftLayer_Network_Customer_Subnet_IpAddress
 
-	// Translations - All the address translations that are tied to an IP address.
-	Translations []*SoftLayer_Network_Tunnel_Module_Context_Address_Translation `json:"translations,omitempty"`
-
 	// TranslationCount - A count of all the address translations that are tied to an IP address.
 	TranslationCount uint64 `json:"translationCount,omitempty"`
 
 	// Subnet - The customer subnet (remote) that the ip address belongs to.
 	Subnet *SoftLayer_Network_Customer_Subnet `json:"subnet,omitempty"`
+
+	// Translations - All the address translations that are tied to an IP address.
+	Translations []*SoftLayer_Network_Tunnel_Module_Context_Address_Translation `json:"translations,omitempty"`
 }
 
 func (softlayer_network_customer_subnet_ipaddress *SoftLayer_Network_Customer_Subnet_IpAddress_Extended) String() string {

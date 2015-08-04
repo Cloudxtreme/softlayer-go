@@ -7,15 +7,15 @@ package types
 // details.
 type SoftLayer_Location_Region struct {
 
+	// SortOrder - An integer representing the order in which this element is displayed.
+	SortOrder int `json:"sortOrder,omitempty"`
+
 	// Description - a short description of a region's name. This description is seen on the order forms.
 	Description string `json:"description,omitempty"`
 
 	// Keyname - A unique key name for a region. Provided for easy debugging. This is to be sent in with an
 	// order.
 	Keyname string `json:"keyname,omitempty"`
-
-	// SortOrder - An integer representing the order in which this element is displayed.
-	SortOrder int `json:"sortOrder,omitempty"`
 }
 
 func (softlayer_location_region *SoftLayer_Location_Region) String() string {

@@ -3,20 +3,16 @@ package types
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+
 	time "time"
 )
 
 // SoftLayer_Container_Referral_Partner_Commission - <nil>
 type SoftLayer_Container_Referral_Partner_Commission struct {
 
-	// ReferralRevenue - <nil>
-	ReferralRevenue float64 `json:"referralRevenue,omitempty"`
-
-	// CommissionAmount - <nil>
-	CommissionAmount float64 `json:"commissionAmount,omitempty"`
-
 	// CommissionRate - <nil>
-	CommissionRate float64 `json:"commissionRate,omitempty"`
+	CommissionRate slapi.Float64 `json:"commissionRate,omitempty"`
 
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
@@ -29,6 +25,12 @@ type SoftLayer_Container_Referral_Partner_Commission struct {
 
 	// ReferralPartnerAccountId - <nil>
 	ReferralPartnerAccountId int `json:"referralPartnerAccountId,omitempty"`
+
+	// ReferralRevenue - <nil>
+	ReferralRevenue slapi.Float64 `json:"referralRevenue,omitempty"`
+
+	// CommissionAmount - <nil>
+	CommissionAmount slapi.Float64 `json:"commissionAmount,omitempty"`
 }
 
 func (softlayer_container_referral_partner_commission *SoftLayer_Container_Referral_Partner_Commission) String() string {

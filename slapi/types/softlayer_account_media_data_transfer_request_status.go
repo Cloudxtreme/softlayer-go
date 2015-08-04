@@ -7,17 +7,17 @@ package types
 // to the statuses to which a Data Transfer Request may be set.
 type SoftLayer_Account_Media_Data_Transfer_Request_Status struct {
 
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
+
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_account_media_data_transfer_request_status *SoftLayer_Account_Media_Data_Transfer_Request_Status) String() string {

@@ -6,6 +6,9 @@ package types
 // information relating to a single customer subnet (remote).
 type SoftLayer_Network_Customer_Subnet struct {
 
+	// TotalIpAddresses - no documentation
+	TotalIpAddresses int `json:"totalIpAddresses,omitempty"`
+
 	// AccountId - no documentation
 	AccountId int `json:"accountId,omitempty"`
 
@@ -25,9 +28,6 @@ type SoftLayer_Network_Customer_Subnet struct {
 
 	// NetworkIdentifier - A subnet's network identifier. This is the first IP address of a subnet.
 	NetworkIdentifier string `json:"networkIdentifier,omitempty"`
-
-	// TotalIpAddresses - no documentation
-	TotalIpAddresses int `json:"totalIpAddresses,omitempty"`
 }
 
 func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) String() string {
@@ -38,11 +38,11 @@ func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet) Stri
 type SoftLayer_Network_Customer_Subnet_Extended struct {
 	SoftLayer_Network_Customer_Subnet
 
-	// IpAddressCount - A count of all ip addresses associated with a subnet.
-	IpAddressCount uint64 `json:"ipAddressCount,omitempty"`
-
 	// IpAddresses - no documentation
 	IpAddresses []*SoftLayer_Network_Customer_Subnet_IpAddress `json:"ipAddresses,omitempty"`
+
+	// IpAddressCount - A count of all ip addresses associated with a subnet.
+	IpAddressCount uint64 `json:"ipAddressCount,omitempty"`
 }
 
 func (softlayer_network_customer_subnet *SoftLayer_Network_Customer_Subnet_Extended) String() string {

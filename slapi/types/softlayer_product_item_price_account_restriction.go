@@ -8,14 +8,14 @@ package types
 // details.
 type SoftLayer_Product_Item_Price_Account_Restriction struct {
 
+	// ItemPriceId - The item price id for the item price account restriction.
+	ItemPriceId int `json:"itemPriceId,omitempty"`
+
 	// AccountId - The account id for the item price account restriction.
 	AccountId int `json:"accountId,omitempty"`
 
 	// Id - The unique identifier for the item price account restriction.
 	Id int `json:"id,omitempty"`
-
-	// ItemPriceId - The item price id for the item price account restriction.
-	ItemPriceId int `json:"itemPriceId,omitempty"`
 }
 
 func (softlayer_product_item_price_account_restriction *SoftLayer_Product_Item_Price_Account_Restriction) String() string {

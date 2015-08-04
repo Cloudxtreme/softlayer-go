@@ -11,6 +11,9 @@ import (
 // passwords, notes and the date of the password change may be retrieved.
 type SoftLayer_Network_Storage_History struct {
 
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
 	// Notes - no documentation
 	Notes string `json:"notes,omitempty"`
 
@@ -19,9 +22,6 @@ type SoftLayer_Network_Storage_History struct {
 
 	// Username - no documentation
 	Username string `json:"username,omitempty"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_network_storage_history *SoftLayer_Network_Storage_History) String() string {
@@ -32,11 +32,11 @@ func (softlayer_network_storage_history *SoftLayer_Network_Storage_History) Stri
 type SoftLayer_Network_Storage_History_Extended struct {
 	SoftLayer_Network_Storage_History
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account,omitempty"`
-
 	// NasVolume - The Storage service that the password history belongs to.
 	NasVolume *SoftLayer_Network_Storage `json:"nasVolume,omitempty"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
 func (softlayer_network_storage_history *SoftLayer_Network_Storage_History_Extended) String() string {

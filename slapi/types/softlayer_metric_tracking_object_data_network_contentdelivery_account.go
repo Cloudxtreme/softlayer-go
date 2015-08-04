@@ -3,6 +3,8 @@ package types
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+
 	time "time"
 )
 
@@ -17,14 +19,14 @@ type SoftLayer_Metric_Tracking_Object_Data_Network_ContentDelivery_Account struc
 	// PopId - The internal identifier of a CDN POP (Points of Presence).
 	PopId int `json:"popId,omitempty"`
 
-	// Counter - no documentation
-	Counter float32 `json:"counter,omitempty"`
-
 	// DateTime - no documentation
 	DateTime *time.Time `json:"dateTime,omitempty"`
 
 	// Type - no documentation
 	Type string `json:"type,omitempty"`
+
+	// Counter - no documentation
+	Counter slapi.Float64 `json:"counter,omitempty"`
 }
 
 func (softlayer_metric_tracking_object_data_network_contentdelivery_account *SoftLayer_Metric_Tracking_Object_Data_Network_ContentDelivery_Account) String() string {

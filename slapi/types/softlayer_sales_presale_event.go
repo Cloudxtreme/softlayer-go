@@ -14,6 +14,9 @@ import (
 // or services purchased will be available once approved and provisioned.
 type SoftLayer_Sales_Presale_Event struct {
 
+	// EndDate - End date of the presale event. Orders can be approved and provisioned after this date.
+	EndDate *time.Time `json:"endDate,omitempty"`
+
 	// LocationId - no documentation
 	LocationId int `json:"locationId,omitempty"`
 
@@ -22,9 +25,6 @@ type SoftLayer_Sales_Presale_Event struct {
 
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
-
-	// EndDate - End date of the presale event. Orders can be approved and provisioned after this date.
-	EndDate *time.Time `json:"endDate,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
@@ -41,27 +41,27 @@ func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) String() str
 type SoftLayer_Sales_Presale_Event_Extended struct {
 	SoftLayer_Sales_Presale_Event
 
-	// Orders - The orders ([[SoftLayer_Billing_Order]]) associated with this presale event that were
-	// created for the customer's account.
-	Orders []*SoftLayer_Billing_Order `json:"orders,omitempty"`
-
 	// ExpiredFlag - A flag to indicate that the presale event is expired. A presale event is expired if
 	// the current time is after the end date.
 	ExpiredFlag bool `json:"expiredFlag,omitempty"`
 
+	// Item - The [[SoftLayer_Product_Item]] associated with the presale event.
+	Item *SoftLayer_Product_Item `json:"item,omitempty"`
+
 	// Location - The [[SoftLayer_Location]] associated with the presale event.
 	Location *SoftLayer_Location `json:"location,omitempty"`
+
+	// OrderCount - A count of the orders ([[SoftLayer_Billing_Order]]) associated with this presale event
+	// that were created for the customer's account.
+	OrderCount uint64 `json:"orderCount,omitempty"`
 
 	// ActiveFlag - A flag to indicate that the presale event is currently active. A presale event is
 	// active if the current time is between the start and end dates.
 	ActiveFlag bool `json:"activeFlag,omitempty"`
 
-	// Item - The [[SoftLayer_Product_Item]] associated with the presale event.
-	Item *SoftLayer_Product_Item `json:"item,omitempty"`
-
-	// OrderCount - A count of the orders ([[SoftLayer_Billing_Order]]) associated with this presale event
-	// that were created for the customer's account.
-	OrderCount uint64 `json:"orderCount,omitempty"`
+	// Orders - The orders ([[SoftLayer_Billing_Order]]) associated with this presale event that were
+	// created for the customer's account.
+	Orders []*SoftLayer_Billing_Order `json:"orders,omitempty"`
 }
 
 func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event_Extended) String() string {

@@ -13,12 +13,6 @@ import (
 // [[SoftLayer_Metric_Tracking_Object]] service to retrieve raw and graph data from a tracking object.
 type SoftLayer_Metric_Tracking_Object struct {
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// Label - no documentation
-	Label string `json:"label,omitempty"`
-
 	// ResourceTableId - The identifier of the existing resource this object is attempting to track.
 	ResourceTableId int `json:"resourceTableId,omitempty"`
 
@@ -27,6 +21,12 @@ type SoftLayer_Metric_Tracking_Object struct {
 
 	// Data - no documentation
 	Data []*SoftLayer_Metric_Tracking_Object_Data `json:"data,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// Label - no documentation
+	Label string `json:"label,omitempty"`
 }
 
 func (softlayer_metric_tracking_object *SoftLayer_Metric_Tracking_Object) String() string {

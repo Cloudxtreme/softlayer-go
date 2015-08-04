@@ -2,14 +2,14 @@ package types
 
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
+import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+)
+
 // SoftLayer_Virtual_Guest_Block_Device_Template - The virtual block device template data type presents
 // the structure in which all archived image templates are presented. A virtual block device template,
 // also known as a image template, represents the image of a virtual guest instance.
 type SoftLayer_Virtual_Guest_Block_Device_Template struct {
-
-	// GroupId - A block device template's [[SoftLayer_Virtual_Guest_Block_Device_Template_Group|group]]
-	// ID.
-	GroupId int `json:"groupId,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
@@ -26,7 +26,11 @@ type SoftLayer_Virtual_Guest_Block_Device_Template struct {
 
 	// DiskSpace - The amount of disk space that a block device template is using. Use this number along
 	// with the units property to obtain the correct space used.
-	DiskSpace float32 `json:"diskSpace,omitempty"`
+	DiskSpace slapi.Float64 `json:"diskSpace,omitempty"`
+
+	// GroupId - A block device template's [[SoftLayer_Virtual_Guest_Block_Device_Template_Group|group]]
+	// ID.
+	GroupId int `json:"groupId,omitempty"`
 }
 
 func (softlayer_virtual_guest_block_device_template *SoftLayer_Virtual_Guest_Block_Device_Template) String() string {

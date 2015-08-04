@@ -14,11 +14,8 @@ import (
 // account or portal users' contact information.
 type SoftLayer_Network_Subnet_Rwhois_Data struct {
 
-	// AccountId - An account's data's associated account identifier.
-	AccountId int `json:"accountId,omitempty"`
-
-	// Address1 - The first line of the mailing address associated with an account's data.
-	Address1 string `json:"address1,omitempty"`
+	// PostalCode - The postal code of the mailing address associated with an account's data.
+	PostalCode string `json:"postalCode,omitempty"`
 
 	// State - A two-letter abbreviation of the state of the mailing address associated with an account's
 	// data. If an account does not reside in a province then this is typically blank.
@@ -28,14 +25,8 @@ type SoftLayer_Network_Subnet_Rwhois_Data struct {
 	// to network abuse queries about malicious traffic coming from your servers' IP addresses.
 	AbuseEmail string `json:"abuseEmail,omitempty"`
 
-	// LastName - no documentation
-	LastName string `json:"lastName,omitempty"`
-
-	// PrivateResidenceFlag - Whether an account's data refers to a private residence or not.
-	PrivateResidenceFlag bool `json:"privateResidenceFlag,omitempty"`
-
-	// Address2 - The second line of the mailing address associated with an account's data.
-	Address2 string `json:"address2,omitempty"`
+	// Address1 - The first line of the mailing address associated with an account's data.
+	Address1 string `json:"address1,omitempty"`
 
 	// City - The city of the mailing address associated with an account's data.
 	City string `json:"city,omitempty"`
@@ -44,23 +35,32 @@ type SoftLayer_Network_Subnet_Rwhois_Data struct {
 	// account's data.
 	Country string `json:"country,omitempty"`
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// FirstName - no documentation
-	FirstName string `json:"firstName,omitempty"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// CompanyName - The company name associated with an account's data.
 	CompanyName string `json:"companyName,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
+	// FirstName - no documentation
+	FirstName string `json:"firstName,omitempty"`
+
+	// LastName - no documentation
+	LastName string `json:"lastName,omitempty"`
+
+	// Address2 - The second line of the mailing address associated with an account's data.
+	Address2 string `json:"address2,omitempty"`
+
+	// PrivateResidenceFlag - Whether an account's data refers to a private residence or not.
+	PrivateResidenceFlag bool `json:"privateResidenceFlag,omitempty"`
+
+	// AccountId - An account's data's associated account identifier.
+	AccountId int `json:"accountId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// PostalCode - The postal code of the mailing address associated with an account's data.
-	PostalCode string `json:"postalCode,omitempty"`
 }
 
 func (softlayer_network_subnet_rwhois_data *SoftLayer_Network_Subnet_Rwhois_Data) String() string {

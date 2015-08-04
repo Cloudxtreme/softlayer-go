@@ -3,6 +3,8 @@ package types
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+
 	time "time"
 )
 
@@ -11,14 +13,14 @@ import (
 // was polled at, and the counter value that was measured at polling time.
 type SoftLayer_Metric_Tracking_Object_Data struct {
 
-	// DateTime - no documentation
-	DateTime *time.Time `json:"dateTime,omitempty"`
-
 	// Type - no documentation
 	Type string `json:"type,omitempty"`
 
 	// Counter - no documentation
-	Counter float32 `json:"counter,omitempty"`
+	Counter slapi.Float64 `json:"counter,omitempty"`
+
+	// DateTime - no documentation
+	DateTime *time.Time `json:"dateTime,omitempty"`
 }
 
 func (softlayer_metric_tracking_object_data *SoftLayer_Metric_Tracking_Object_Data) String() string {

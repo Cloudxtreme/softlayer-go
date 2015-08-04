@@ -14,41 +14,6 @@ import (
 // balancer services, explained more fully in the SoftLayer_Network_LoadBalancer_Service documentation.
 type SoftLayer_Network_LoadBalancer_VirtualIpAddress struct {
 
-	// ConnectionLimit - Connection limit on this Can be upgraded through the upgradeConnectionLimit()
-	// function
-	ConnectionLimit int `json:"connectionLimit,omitempty"`
-
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
-	// SecurityCertificateId - The unique identifier of the Security Certificate to be utilized when SSL
-	// support is enabled.
-	SecurityCertificateId int `json:"securityCertificateId,omitempty"`
-
-	// Type - The connection type of this Valid values are and
-	Type string `json:"type,omitempty"`
-
-	// Id - Unique ID for this object, used for the getObject method, and must be set if you are editing
-	// this object.
-	Id int `json:"id,omitempty"`
-
-	// LoadBalancingMethodFullName - A human readable version of loadBalancingMethod, intended mainly for
-	// API users.
-	LoadBalancingMethodFullName string `json:"loadBalancingMethodFullName,omitempty"`
-
-	// VirtualIpAddress - The virtual, public-facing IP address for your load balancer. This is the address
-	// of all incoming traffic
-	VirtualIpAddress string `json:"virtualIpAddress,omitempty"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// Notes - no documentation
-	Notes string `json:"notes,omitempty"`
-
-	// SourcePort - no documentation
-	SourcePort int `json:"sourcePort,omitempty"`
-
 	// LoadBalancingMethod - The load balancing method that determines which server is used "next" by the
 	// load balancer. The method is stored in an abbreviated form, represented in parentheses after the
 	// full name. Methods include: Round Robin (Value "rr"): Each server is used sequentially in a circular
@@ -66,6 +31,41 @@ type SoftLayer_Network_LoadBalancer_VirtualIpAddress struct {
 	// - Least Connections (Value "ic-lc"): Inserts a cookie into the stream that will tie that client to a
 	// particular balanced server. Servers are chosen through least connections.
 	LoadBalancingMethod string `json:"loadBalancingMethod,omitempty"`
+
+	// SourcePort - no documentation
+	SourcePort int `json:"sourcePort,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
+	// SecurityCertificateId - The unique identifier of the Security Certificate to be utilized when SSL
+	// support is enabled.
+	SecurityCertificateId int `json:"securityCertificateId,omitempty"`
+
+	// Type - The connection type of this Valid values are and
+	Type string `json:"type,omitempty"`
+
+	// LoadBalancingMethodFullName - A human readable version of loadBalancingMethod, intended mainly for
+	// API users.
+	LoadBalancingMethodFullName string `json:"loadBalancingMethodFullName,omitempty"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// VirtualIpAddress - The virtual, public-facing IP address for your load balancer. This is the address
+	// of all incoming traffic
+	VirtualIpAddress string `json:"virtualIpAddress,omitempty"`
+
+	// ConnectionLimit - Connection limit on this Can be upgraded through the upgradeConnectionLimit()
+	// function
+	ConnectionLimit int `json:"connectionLimit,omitempty"`
+
+	// Id - Unique ID for this object, used for the getObject method, and must be set if you are editing
+	// this object.
+	Id int `json:"id,omitempty"`
+
+	// Notes - no documentation
+	Notes string `json:"notes,omitempty"`
 }
 
 func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress) String() string {
@@ -76,24 +76,24 @@ func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBal
 type SoftLayer_Network_LoadBalancer_VirtualIpAddress_Extended struct {
 	SoftLayer_Network_LoadBalancer_VirtualIpAddress
 
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
 	// CustomerManagedFlag - If false, this VIP and associated services may be edited via the portal or the
 	// If true, you must configure this VIP manually on the device.
 	CustomerManagedFlag int `json:"customerManagedFlag,omitempty"`
 
-	// ServiceCount - no documentation
-	ServiceCount uint64 `json:"serviceCount,omitempty"`
-
-	// BillingItem - no documentation
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
+	// ManagedResourceFlag - A flag indicating that the load balancer is a managed resource.
+	ManagedResourceFlag bool `json:"managedResourceFlag,omitempty"`
 
 	// Services - no documentation
 	Services []*SoftLayer_Network_LoadBalancer_Service `json:"services,omitempty"`
 
-	// ManagedResourceFlag - A flag indicating that the load balancer is a managed resource.
-	ManagedResourceFlag bool `json:"managedResourceFlag,omitempty"`
+	// BillingItem - no documentation
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account,omitempty"`
+	// ServiceCount - no documentation
+	ServiceCount uint64 `json:"serviceCount,omitempty"`
 }
 
 func (softlayer_network_loadbalancer_virtualipaddress *SoftLayer_Network_LoadBalancer_VirtualIpAddress_Extended) String() string {

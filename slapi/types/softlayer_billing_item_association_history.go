@@ -16,6 +16,10 @@ import (
 // are set.
 type SoftLayer_Billing_Item_Association_History struct {
 
+	// AssociatedBillingItemId - The internal identifier of the server billing item that an orphaned
+	// billing item was associated with.
+	AssociatedBillingItemId int `json:"associatedBillingItemId,omitempty"`
+
 	// BillingItemId - The internal identifier of the billing item that was associated with a server
 	// billing item.
 	BillingItemId int `json:"billingItemId,omitempty"`
@@ -25,10 +29,6 @@ type SoftLayer_Billing_Item_Association_History struct {
 
 	// Id - A billing item association history's internal identifier.
 	Id int `json:"id,omitempty"`
-
-	// AssociatedBillingItemId - The internal identifier of the server billing item that an orphaned
-	// billing item was associated with.
-	AssociatedBillingItemId int `json:"associatedBillingItemId,omitempty"`
 }
 
 func (softlayer_billing_item_association_history *SoftLayer_Billing_Item_Association_History) String() string {
@@ -39,11 +39,11 @@ func (softlayer_billing_item_association_history *SoftLayer_Billing_Item_Associa
 type SoftLayer_Billing_Item_Association_History_Extended struct {
 	SoftLayer_Billing_Item_Association_History
 
-	// BillingItem - The billing item that was associated with a server billing item.
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
-
 	// AssociatedBillingItem - The server billing item that an orphaned billing item was associated with.
 	AssociatedBillingItem *SoftLayer_Billing_Item `json:"associatedBillingItem,omitempty"`
+
+	// BillingItem - The billing item that was associated with a server billing item.
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
 }
 
 func (softlayer_billing_item_association_history *SoftLayer_Billing_Item_Association_History_Extended) String() string {

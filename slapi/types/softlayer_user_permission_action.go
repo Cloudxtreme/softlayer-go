@@ -9,12 +9,6 @@ import (
 // SoftLayer_User_Permission_Action - <nil>
 type SoftLayer_User_Permission_Action struct {
 
-	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// Name - <nil>
-	Name string `json:"name,omitempty"`
-
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -26,6 +20,12 @@ type SoftLayer_User_Permission_Action struct {
 
 	// KeyName - <nil>
 	KeyName string `json:"keyName,omitempty"`
+
+	// ModifyDate - <nil>
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// Name - <nil>
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_user_permission_action *SoftLayer_User_Permission_Action) String() string {

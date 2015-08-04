@@ -10,9 +10,6 @@ import (
 // existing customer account.
 type SoftLayer_Account_Affiliation struct {
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// ModifyDate - The date an account affiliation was last modified.
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
@@ -24,6 +21,9 @@ type SoftLayer_Account_Affiliation struct {
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_account_affiliation *SoftLayer_Account_Affiliation) String() string {

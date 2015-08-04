@@ -24,11 +24,11 @@ func (softlayer_network_component_firewall_subnets *SoftLayer_Network_Component_
 type SoftLayer_Network_Component_Firewall_Subnets_Extended struct {
 	SoftLayer_Network_Component_Firewall_Subnets
 
-	// Subnet - The subnet that this link binds to the network component firewall.
-	Subnet *SoftLayer_Network_Subnet `json:"subnet,omitempty"`
-
 	// NetworkComponentFirewall - The network component firewall that write rules for this subnet.
 	NetworkComponentFirewall *SoftLayer_Network_Component_Firewall `json:"networkComponentFirewall,omitempty"`
+
+	// Subnet - The subnet that this link binds to the network component firewall.
+	Subnet *SoftLayer_Network_Subnet `json:"subnet,omitempty"`
 }
 
 func (softlayer_network_component_firewall_subnets *SoftLayer_Network_Component_Firewall_Subnets_Extended) String() string {

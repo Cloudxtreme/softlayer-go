@@ -16,6 +16,12 @@ func (softlayer_product_catalog *SoftLayer_Product_Catalog) String() string {
 type SoftLayer_Product_Catalog_Extended struct {
 	SoftLayer_Product_Catalog
 
+	// PackageCount - no documentation
+	PackageCount uint64 `json:"packageCount,omitempty"`
+
+	// PriceCount - no documentation
+	PriceCount uint64 `json:"priceCount,omitempty"`
+
 	// ProductCount - no documentation
 	ProductCount uint64 `json:"productCount,omitempty"`
 
@@ -33,12 +39,6 @@ type SoftLayer_Product_Catalog_Extended struct {
 
 	// BrandCount - no documentation
 	BrandCount uint64 `json:"brandCount,omitempty"`
-
-	// PackageCount - no documentation
-	PackageCount uint64 `json:"packageCount,omitempty"`
-
-	// PriceCount - no documentation
-	PriceCount uint64 `json:"priceCount,omitempty"`
 }
 
 func (softlayer_product_catalog *SoftLayer_Product_Catalog_Extended) String() string {

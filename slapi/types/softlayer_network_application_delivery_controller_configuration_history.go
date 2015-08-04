@@ -13,14 +13,14 @@ import (
 // configuration state in order to restore them later if needed.
 type SoftLayer_Network_Application_Delivery_Controller_Configuration_History struct {
 
+	// Notes - Editable notes used to describe a configuration history record
+	Notes string `json:"notes,omitempty"`
+
 	// CreateDate - The date a configuration history record was created.
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Id - An configuration history record's unique identifier
 	Id int `json:"id,omitempty"`
-
-	// Notes - Editable notes used to describe a configuration history record
-	Notes string `json:"notes,omitempty"`
 }
 
 func (softlayer_network_application_delivery_controller_configuration_history *SoftLayer_Network_Application_Delivery_Controller_Configuration_History) String() string {

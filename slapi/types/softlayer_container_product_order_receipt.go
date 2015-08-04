@@ -17,9 +17,6 @@ import (
 // credit card, a receipt means the order has gone to sales and is awaiting approval.
 type SoftLayer_Container_Product_Order_Receipt struct {
 
-	// OrderDate - no documentation
-	OrderDate *time.Time `json:"orderDate,omitempty"`
-
 	// OrderDetails - This is a copy of the order container (SoftLayer_Container_Product_Order) which holds
 	// all the data related to an order. This will only return when an order is processed successfully. It
 	// will contain all the items in an order as well as the order totals.
@@ -47,6 +44,9 @@ type SoftLayer_Container_Product_Order_Receipt struct {
 	// Quote - This is a copy of the quote container (SoftLayer_Billing_Order_Quote) which holds all the
 	// data related to a quote. This will only return when a quote is processed successfully.
 	Quote *SoftLayer_Billing_Order_Quote `json:"quote,omitempty"`
+
+	// OrderDate - no documentation
+	OrderDate *time.Time `json:"orderDate,omitempty"`
 }
 
 func (softlayer_container_product_order_receipt *SoftLayer_Container_Product_Order_Receipt) String() string {

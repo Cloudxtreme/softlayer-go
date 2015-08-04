@@ -8,17 +8,22 @@ package types
 // Firewall Update Request]] service to submit a firewall update request.
 type SoftLayer_Network_Firewall_Template_Rule struct {
 
-	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
-	SourceIpSubnetMask string `json:"sourceIpSubnetMask,omitempty"`
-
 	// Action - The action that this template rule is to take [permit or deny].
 	Action string `json:"action,omitempty"`
 
+	// DestinationIpSubnetMask - The destination IP subnet mask considered for determining rule
+	// application.
+	DestinationIpSubnetMask string `json:"destinationIpSubnetMask,omitempty"`
+
+	// DestinationPortRangeEnd - The ending (upper end of range) destination port considered for
+	// determining rule application.
+	DestinationPortRangeEnd int `json:"destinationPortRangeEnd,omitempty"`
+
+	// Protocol - The protocol considered for determining rule application.
+	Protocol string `json:"protocol,omitempty"`
+
 	// DestinationIpAddress - The destination IP address considered for determining rule application.
 	DestinationIpAddress string `json:"destinationIpAddress,omitempty"`
-
-	// SourceIpAddress - The source IP address considered for determining rule application.
-	SourceIpAddress string `json:"sourceIpAddress,omitempty"`
 
 	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
 	// determining rule application.
@@ -37,16 +42,11 @@ type SoftLayer_Network_Firewall_Template_Rule struct {
 	// OrderValue - The numeric value describing the order in which the rule set should be applied.
 	OrderValue int `json:"orderValue,omitempty"`
 
-	// DestinationIpSubnetMask - The destination IP subnet mask considered for determining rule
-	// application.
-	DestinationIpSubnetMask string `json:"destinationIpSubnetMask,omitempty"`
+	// SourceIpAddress - The source IP address considered for determining rule application.
+	SourceIpAddress string `json:"sourceIpAddress,omitempty"`
 
-	// DestinationPortRangeEnd - The ending (upper end of range) destination port considered for
-	// determining rule application.
-	DestinationPortRangeEnd int `json:"destinationPortRangeEnd,omitempty"`
-
-	// Protocol - The protocol considered for determining rule application.
-	Protocol string `json:"protocol,omitempty"`
+	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
+	SourceIpSubnetMask string `json:"sourceIpSubnetMask,omitempty"`
 }
 
 func (softlayer_network_firewall_template_rule *SoftLayer_Network_Firewall_Template_Rule) String() string {

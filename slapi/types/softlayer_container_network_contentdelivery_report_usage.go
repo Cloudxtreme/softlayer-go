@@ -3,53 +3,55 @@ package types
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+
 	time "time"
 )
 
 // SoftLayer_Container_Network_ContentDelivery_Report_Usage - <nil>
 type SoftLayer_Container_Network_ContentDelivery_Report_Usage struct {
 
-	// ApplicationDeliveryNetworkSsl - <nil>
-	ApplicationDeliveryNetworkSsl float32 `json:"applicationDeliveryNetworkSsl,omitempty"`
+	// DiskSpace - <nil>
+	DiskSpace slapi.Float64 `json:"diskSpace,omitempty"`
 
-	// Flash - <nil>
-	Flash float32 `json:"flash,omitempty"`
-
-	// HttpsSmall - <nil>
-	HttpsSmall float32 `json:"httpsSmall,omitempty"`
+	// HttpSmall - <nil>
+	HttpSmall slapi.Float64 `json:"httpSmall,omitempty"`
 
 	// Region - <nil>
 	Region string `json:"region,omitempty"`
 
-	// SslTotal - <nil>
-	SslTotal float32 `json:"sslTotal,omitempty"`
-
-	// ApplicationDeliveryNetwork - <nil>
-	ApplicationDeliveryNetwork float32 `json:"applicationDeliveryNetwork,omitempty"`
-
-	// WindowsMedia - <nil>
-	WindowsMedia float32 `json:"windowsMedia,omitempty"`
+	// StandardTotal - <nil>
+	StandardTotal slapi.Float64 `json:"standardTotal,omitempty"`
 
 	// Http - <nil>
-	Http float32 `json:"http,omitempty"`
+	Http slapi.Float64 `json:"http,omitempty"`
 
-	// HttpSmall - <nil>
-	HttpSmall float32 `json:"httpSmall,omitempty"`
+	// HttpsSmall - <nil>
+	HttpsSmall slapi.Float64 `json:"httpsSmall,omitempty"`
+
+	// SslTotal - <nil>
+	SslTotal slapi.Float64 `json:"sslTotal,omitempty"`
+
+	// ApplicationDeliveryNetwork - <nil>
+	ApplicationDeliveryNetwork slapi.Float64 `json:"applicationDeliveryNetwork,omitempty"`
+
+	// EndDate - <nil>
+	EndDate *time.Time `json:"endDate,omitempty"`
+
+	// Https - <nil>
+	Https slapi.Float64 `json:"https,omitempty"`
 
 	// StartDate - <nil>
 	StartDate *time.Time `json:"startDate,omitempty"`
 
-	// DiskSpace - <nil>
-	DiskSpace float32 `json:"diskSpace,omitempty"`
+	// ApplicationDeliveryNetworkSsl - <nil>
+	ApplicationDeliveryNetworkSsl slapi.Float64 `json:"applicationDeliveryNetworkSsl,omitempty"`
 
-	// Https - <nil>
-	Https float32 `json:"https,omitempty"`
+	// Flash - <nil>
+	Flash slapi.Float64 `json:"flash,omitempty"`
 
-	// StandardTotal - <nil>
-	StandardTotal float32 `json:"standardTotal,omitempty"`
-
-	// EndDate - <nil>
-	EndDate *time.Time `json:"endDate,omitempty"`
+	// WindowsMedia - <nil>
+	WindowsMedia slapi.Float64 `json:"windowsMedia,omitempty"`
 }
 
 func (softlayer_container_network_contentdelivery_report_usage *SoftLayer_Container_Network_ContentDelivery_Report_Usage) String() string {

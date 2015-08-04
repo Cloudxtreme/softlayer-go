@@ -8,12 +8,6 @@ package types
 // category.
 type SoftLayer_Product_Item_Category_Question_Xref struct {
 
-	// QuestionId - no documentation
-	QuestionId int `json:"questionId,omitempty"`
-
-	// Required - Flag to indicate whether an answer is required for the question..
-	Required bool `json:"required,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -22,6 +16,12 @@ type SoftLayer_Product_Item_Category_Question_Xref struct {
 
 	// LocationId - no documentation
 	LocationId int `json:"locationId,omitempty"`
+
+	// QuestionId - no documentation
+	QuestionId int `json:"questionId,omitempty"`
+
+	// Required - Flag to indicate whether an answer is required for the question..
+	Required bool `json:"required,omitempty"`
 }
 
 func (softlayer_product_item_category_question_xref *SoftLayer_Product_Item_Category_Question_Xref) String() string {

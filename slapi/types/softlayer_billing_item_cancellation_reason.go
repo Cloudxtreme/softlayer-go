@@ -27,18 +27,18 @@ func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancell
 type SoftLayer_Billing_Item_Cancellation_Reason_Extended struct {
 	SoftLayer_Billing_Item_Cancellation_Reason
 
-	// BillingItems - The corresponding billing items having the specific cancellation reason.
-	BillingItems []*SoftLayer_Billing_Item `json:"billingItems,omitempty"`
-
-	// TranslatedReason - <nil>
-	TranslatedReason string `json:"translatedReason,omitempty"`
-
 	// BillingItemCount - A count of the corresponding billing items having the specific cancellation
 	// reason.
 	BillingItemCount uint64 `json:"billingItemCount,omitempty"`
 
 	// BillingCancellationReasonCategory - no documentation
 	BillingCancellationReasonCategory *SoftLayer_Billing_Item_Cancellation_Reason_Category `json:"billingCancellationReasonCategory,omitempty"`
+
+	// BillingItems - The corresponding billing items having the specific cancellation reason.
+	BillingItems []*SoftLayer_Billing_Item `json:"billingItems,omitempty"`
+
+	// TranslatedReason - <nil>
+	TranslatedReason string `json:"translatedReason,omitempty"`
 }
 
 func (softlayer_billing_item_cancellation_reason *SoftLayer_Billing_Item_Cancellation_Reason_Extended) String() string {

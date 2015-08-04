@@ -14,12 +14,6 @@ import (
 // ticket.
 type SoftLayer_Ticket_Attachment_Hardware struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// TicketId - The internal identifier of the ticket that an item is attached to.
 	TicketId int `json:"ticketId,omitempty"`
 
@@ -28,6 +22,12 @@ type SoftLayer_Ticket_Attachment_Hardware struct {
 
 	// AttachmentId - The internal identifier of an item that is attached to a ticket.
 	AttachmentId int `json:"attachmentId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_ticket_attachment_hardware *SoftLayer_Ticket_Attachment_Hardware) String() string {
@@ -37,9 +37,6 @@ func (softlayer_ticket_attachment_hardware *SoftLayer_Ticket_Attachment_Hardware
 // SoftLayer_Ticket_Attachment_Hardware_Extended is SoftLayer_Ticket_Attachment_Hardware with all maskable types.
 type SoftLayer_Ticket_Attachment_Hardware_Extended struct {
 	SoftLayer_Ticket_Attachment_Hardware
-
-	// Hardware - no documentation
-	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 
 	// Resource - no documentation
 	Resource *SoftLayer_Hardware `json:"resource,omitempty"`
@@ -52,6 +49,9 @@ type SoftLayer_Ticket_Attachment_Hardware_Extended struct {
 
 	// Ticket - no documentation
 	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
+
+	// Hardware - no documentation
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 }
 
 func (softlayer_ticket_attachment_hardware *SoftLayer_Ticket_Attachment_Hardware_Extended) String() string {

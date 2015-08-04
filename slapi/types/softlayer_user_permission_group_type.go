@@ -9,9 +9,6 @@ import (
 // SoftLayer_User_Permission_Group_Type - <nil>
 type SoftLayer_User_Permission_Group_Type struct {
 
-	// Name - <nil>
-	Name string `json:"name,omitempty"`
-
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -23,6 +20,9 @@ type SoftLayer_User_Permission_Group_Type struct {
 
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// Name - <nil>
+	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_user_permission_group_type *SoftLayer_User_Permission_Group_Type) String() string {

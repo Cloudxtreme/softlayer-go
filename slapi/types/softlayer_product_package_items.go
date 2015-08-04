@@ -25,11 +25,11 @@ func (softlayer_product_package_items *SoftLayer_Product_Package_Items) String()
 type SoftLayer_Product_Package_Items_Extended struct {
 	SoftLayer_Product_Package_Items
 
-	// Item - no documentation
-	Item *SoftLayer_Product_Item `json:"item,omitempty"`
-
 	// Package - no documentation
 	Package *SoftLayer_Product_Package `json:"package,omitempty"`
+
+	// Item - no documentation
+	Item *SoftLayer_Product_Item `json:"item,omitempty"`
 }
 
 func (softlayer_product_package_items *SoftLayer_Product_Package_Items_Extended) String() string {

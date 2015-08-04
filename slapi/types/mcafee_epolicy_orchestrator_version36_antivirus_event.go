@@ -12,9 +12,6 @@ import (
 // detected and the action that is taken.
 type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event struct {
 
-	// VirusName - no documentation
-	VirusName string `json:"virusName,omitempty"`
-
 	// VirusType - no documentation
 	VirusType string `json:"virusType,omitempty"`
 
@@ -23,6 +20,9 @@ type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event struct {
 
 	// Filename - no documentation
 	Filename string `json:"filename,omitempty"`
+
+	// VirusName - no documentation
+	VirusName string `json:"virusName,omitempty"`
 }
 
 func (mcafee_epolicy_orchestrator_version36_antivirus_event *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event) String() string {

@@ -13,11 +13,8 @@ type SoftLayer_Network_Message_Queue struct {
 	// AccountId - A message queue's associated [[SoftLayer_Account|account]] id.
 	AccountId int `json:"accountId,omitempty"`
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
+	// Notes - no documentation
+	Notes string `json:"notes,omitempty"`
 
 	// MessageQueueStatusId - no documentation
 	MessageQueueStatusId int `json:"messageQueueStatusId,omitempty"`
@@ -25,8 +22,11 @@ type SoftLayer_Network_Message_Queue struct {
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
 
-	// Notes - no documentation
-	Notes string `json:"notes,omitempty"`
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_message_queue *SoftLayer_Network_Message_Queue) String() string {
@@ -37,17 +37,17 @@ func (softlayer_network_message_queue *SoftLayer_Network_Message_Queue) String()
 type SoftLayer_Network_Message_Queue_Extended struct {
 	SoftLayer_Network_Message_Queue
 
+	// BillingItem - The current billing item for this message queue account.
+	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
+
+	// Status - no documentation
+	Status *SoftLayer_Network_Message_Queue_Status `json:"status,omitempty"`
+
 	// NodeCount - no documentation
 	NodeCount uint64 `json:"nodeCount,omitempty"`
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`
-
-	// Status - no documentation
-	Status *SoftLayer_Network_Message_Queue_Status `json:"status,omitempty"`
-
-	// BillingItem - The current billing item for this message queue account.
-	BillingItem *SoftLayer_Billing_Item `json:"billingItem,omitempty"`
 
 	// Nodes - no documentation
 	Nodes []*SoftLayer_Network_Message_Queue_Node `json:"nodes,omitempty"`

@@ -6,9 +6,6 @@ package types
 // authentication information
 type SoftLayer_Container_User_Customer_External_Binding struct {
 
-	// Vendor - The name of the vendor that will be used for external authentication
-	Vendor string `json:"vendor,omitempty"`
-
 	// AuthenticationToken - The unique token that is created by an external authentication request.
 	AuthenticationToken string `json:"authenticationToken,omitempty"`
 
@@ -25,6 +22,9 @@ type SoftLayer_Container_User_Customer_External_Binding struct {
 
 	// Username - The username you wish to authenticate to the SoftLayer customer portal with.
 	Username string `json:"username,omitempty"`
+
+	// Vendor - The name of the vendor that will be used for external authentication
+	Vendor string `json:"vendor,omitempty"`
 }
 
 func (softlayer_container_user_customer_external_binding *SoftLayer_Container_User_Customer_External_Binding) String() string {

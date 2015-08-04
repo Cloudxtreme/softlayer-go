@@ -5,14 +5,23 @@ package types
 // SoftLayer_Account_Authentication_Saml - <nil>
 type SoftLayer_Account_Authentication_Saml struct {
 
-	// ServiceProviderCertificate - <nil>
-	ServiceProviderCertificate string `json:"serviceProviderCertificate,omitempty"`
+	// Certificate - <nil>
+	Certificate string `json:"certificate,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
 
 	// ServiceProviderSingleLogoutEncoding - <nil>
 	ServiceProviderSingleLogoutEncoding string `json:"serviceProviderSingleLogoutEncoding,omitempty"`
 
-	// ServiceProviderSingleLogoutUrl - <nil>
-	ServiceProviderSingleLogoutUrl string `json:"serviceProviderSingleLogoutUrl,omitempty"`
+	// SingleSignOnUrl - <nil>
+	SingleSignOnUrl string `json:"singleSignOnUrl,omitempty"`
+
+	// AccountId - <nil>
+	AccountId string `json:"accountId,omitempty"`
+
+	// ServiceProviderPublicKey - <nil>
+	ServiceProviderPublicKey string `json:"serviceProviderPublicKey,omitempty"`
 
 	// SingleLogoutUrl - <nil>
 	SingleLogoutUrl string `json:"singleLogoutUrl,omitempty"`
@@ -20,38 +29,29 @@ type SoftLayer_Account_Authentication_Saml struct {
 	// SingleSignOnEncoding - <nil>
 	SingleSignOnEncoding string `json:"singleSignOnEncoding,omitempty"`
 
-	// AccountId - <nil>
-	AccountId string `json:"accountId,omitempty"`
-
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
-
-	// Certificate - <nil>
-	Certificate string `json:"certificate,omitempty"`
-
-	// ServiceProviderPublicKey - <nil>
-	ServiceProviderPublicKey string `json:"serviceProviderPublicKey,omitempty"`
-
-	// SingleLogoutEncoding - <nil>
-	SingleLogoutEncoding string `json:"singleLogoutEncoding,omitempty"`
+	// EntityId - <nil>
+	EntityId string `json:"entityId,omitempty"`
 
 	// ServiceProviderEntityId - <nil>
 	ServiceProviderEntityId string `json:"serviceProviderEntityId,omitempty"`
 
-	// ServiceProviderSingleSignOnEncoding - <nil>
-	ServiceProviderSingleSignOnEncoding string `json:"serviceProviderSingleSignOnEncoding,omitempty"`
-
 	// ServiceProviderSingleSignOnUrl - <nil>
 	ServiceProviderSingleSignOnUrl string `json:"serviceProviderSingleSignOnUrl,omitempty"`
 
-	// SingleSignOnUrl - <nil>
-	SingleSignOnUrl string `json:"singleSignOnUrl,omitempty"`
+	// ServiceProviderSingleSignOnEncoding - <nil>
+	ServiceProviderSingleSignOnEncoding string `json:"serviceProviderSingleSignOnEncoding,omitempty"`
+
+	// SingleLogoutEncoding - <nil>
+	SingleLogoutEncoding string `json:"singleLogoutEncoding,omitempty"`
 
 	// CertificateFingerprint - <nil>
 	CertificateFingerprint string `json:"certificateFingerprint,omitempty"`
 
-	// EntityId - <nil>
-	EntityId string `json:"entityId,omitempty"`
+	// ServiceProviderCertificate - <nil>
+	ServiceProviderCertificate string `json:"serviceProviderCertificate,omitempty"`
+
+	// ServiceProviderSingleLogoutUrl - <nil>
+	ServiceProviderSingleLogoutUrl string `json:"serviceProviderSingleLogoutUrl,omitempty"`
 }
 
 func (softlayer_account_authentication_saml *SoftLayer_Account_Authentication_Saml) String() string {

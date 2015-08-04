@@ -5,6 +5,9 @@ package types
 // SoftLayer_Container_Network_Media_Transcode_Job_Watermark - <nil>
 type SoftLayer_Container_Network_Media_Transcode_Job_Watermark struct {
 
+	// TransparencyPercentage - no documentation
+	TransparencyPercentage int `json:"transparencyPercentage,omitempty"`
+
 	// EndTime - no documentation
 	EndTime int `json:"endTime,omitempty"`
 
@@ -19,9 +22,6 @@ type SoftLayer_Container_Network_Media_Transcode_Job_Watermark struct {
 
 	// Text - no documentation
 	Text string `json:"text,omitempty"`
-
-	// TransparencyPercentage - no documentation
-	TransparencyPercentage int `json:"transparencyPercentage,omitempty"`
 }
 
 func (softlayer_container_network_media_transcode_job_watermark *SoftLayer_Container_Network_Media_Transcode_Job_Watermark) String() string {

@@ -11,17 +11,17 @@ import (
 // to their associated storage volume.
 type SoftLayer_Network_Storage_Partnership struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
 	// PartnerVolumeId - The child volume id which a partnership is associated with.
 	PartnerVolumeId int `json:"partnerVolumeId,omitempty"`
 
 	// VolumeId - The volume id which a partnership is associated with.
 	VolumeId int `json:"volumeId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 }
 
 func (softlayer_network_storage_partnership *SoftLayer_Network_Storage_Partnership) String() string {

@@ -27,12 +27,6 @@ func (softlayer_network_firewall_accesscontrollist *SoftLayer_Network_Firewall_A
 type SoftLayer_Network_Firewall_AccessControlList_Extended struct {
 	SoftLayer_Network_Firewall_AccessControlList
 
-	// NetworkFirewallUpdateRequests - no documentation
-	NetworkFirewallUpdateRequests []*SoftLayer_Network_Firewall_Update_Request `json:"networkFirewallUpdateRequests,omitempty"`
-
-	// NetworkVlan - <nil>
-	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`
-
 	// Rules - The currently running rule set of this context access control list firewall.
 	Rules []*SoftLayer_Network_Vlan_Firewall_Rule `json:"rules,omitempty"`
 
@@ -41,6 +35,12 @@ type SoftLayer_Network_Firewall_AccessControlList_Extended struct {
 
 	// RuleCount - A count of the currently running rule set of this context access control list firewall.
 	RuleCount uint64 `json:"ruleCount,omitempty"`
+
+	// NetworkFirewallUpdateRequests - no documentation
+	NetworkFirewallUpdateRequests []*SoftLayer_Network_Firewall_Update_Request `json:"networkFirewallUpdateRequests,omitempty"`
+
+	// NetworkVlan - <nil>
+	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`
 }
 
 func (softlayer_network_firewall_accesscontrollist *SoftLayer_Network_Firewall_AccessControlList_Extended) String() string {

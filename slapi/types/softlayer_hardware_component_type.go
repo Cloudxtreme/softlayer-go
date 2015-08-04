@@ -6,17 +6,17 @@ package types
 // on the type of component requested
 type SoftLayer_Hardware_Component_Type struct {
 
-	// Type - no documentation
-	Type string `json:"type,omitempty"`
-
-	// TypeParentId - no documentation
-	TypeParentId int `json:"typeParentId,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
+
+	// Type - no documentation
+	Type string `json:"type,omitempty"`
+
+	// TypeParentId - no documentation
+	TypeParentId int `json:"typeParentId,omitempty"`
 }
 
 func (softlayer_hardware_component_type *SoftLayer_Hardware_Component_Type) String() string {
@@ -27,9 +27,6 @@ func (softlayer_hardware_component_type *SoftLayer_Hardware_Component_Type) Stri
 type SoftLayer_Hardware_Component_Type_Extended struct {
 	SoftLayer_Hardware_Component_Type
 
-	// TypeParent - The parent generic component model object for this generic component model object.
-	TypeParent *SoftLayer_Hardware_Component_Type `json:"typeParent,omitempty"`
-
 	// HardwareGenericComponentModelCount - A count of the generic component model description for this
 	// component type object.
 	HardwareGenericComponentModelCount uint64 `json:"hardwareGenericComponentModelCount,omitempty"`
@@ -37,6 +34,9 @@ type SoftLayer_Hardware_Component_Type_Extended struct {
 	// HardwareGenericComponentModels - The generic component model description for this component type
 	// object.
 	HardwareGenericComponentModels []*SoftLayer_Hardware_Component_Model_Generic `json:"hardwareGenericComponentModels,omitempty"`
+
+	// TypeParent - The parent generic component model object for this generic component model object.
+	TypeParent *SoftLayer_Hardware_Component_Type `json:"typeParent,omitempty"`
 }
 
 func (softlayer_hardware_component_type *SoftLayer_Hardware_Component_Type_Extended) String() string {

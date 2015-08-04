@@ -3,6 +3,8 @@ package types
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+
 	time "time"
 )
 
@@ -23,7 +25,7 @@ type SoftLayer_Network_Monitor_Version1_Query_Result struct {
 	ResponseStatus int `json:"responseStatus,omitempty"`
 
 	// ResponseTime - no documentation
-	ResponseTime float32 `json:"responseTime,omitempty"`
+	ResponseTime slapi.Float64 `json:"responseTime,omitempty"`
 }
 
 func (softlayer_network_monitor_version1_query_result *SoftLayer_Network_Monitor_Version1_Query_Result) String() string {

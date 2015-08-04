@@ -11,29 +11,29 @@ import (
 // provide information regarding outages or current known issues.
 type SoftLayer_Auxiliary_Notification_Emergency struct {
 
-	// Device - no documentation
-	Device string `json:"device,omitempty"`
-
-	// Duration - no documentation
-	Duration string `json:"duration,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// ServicesAffected - no documentation
-	ServicesAffected string `json:"servicesAffected,omitempty"`
-
 	// StatusId - no documentation
 	StatusId int `json:"statusId,omitempty"`
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
+	// Duration - no documentation
+	Duration string `json:"duration,omitempty"`
 
 	// Location - no documentation
 	Location string `json:"location,omitempty"`
 
 	// Message - no documentation
 	Message string `json:"message,omitempty"`
+
+	// ServicesAffected - no documentation
+	ServicesAffected string `json:"servicesAffected,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Device - no documentation
+	Device string `json:"device,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`

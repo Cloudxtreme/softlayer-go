@@ -20,14 +20,14 @@ type SoftLayer_Network_Bandwidth_Version1_Allotment_Detail struct {
 	// EffectiveDate - Beginning this date the bandwidth allotment is active.
 	EffectiveDate *time.Time `json:"effectiveDate,omitempty"`
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// EndEffectiveDate - From this date the bandwidth allotment is no longer active.
 	EndEffectiveDate *time.Time `json:"endEffectiveDate,omitempty"`
 
 	// ServiceProviderId - no documentation
 	ServiceProviderId int `json:"serviceProviderId,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_bandwidth_version1_allotment_detail *SoftLayer_Network_Bandwidth_Version1_Allotment_Detail) String() string {
@@ -38,17 +38,17 @@ func (softlayer_network_bandwidth_version1_allotment_detail *SoftLayer_Network_B
 type SoftLayer_Network_Bandwidth_Version1_Allotment_Detail_Extended struct {
 	SoftLayer_Network_Bandwidth_Version1_Allotment_Detail
 
-	// BandwidthUsageCount - no documentation
-	BandwidthUsageCount uint64 `json:"bandwidthUsageCount,omitempty"`
-
 	// BandwidthAllotment - no documentation
 	BandwidthAllotment *SoftLayer_Network_Bandwidth_Version1_Allotment `json:"bandwidthAllotment,omitempty"`
+
+	// BandwidthUsage - no documentation
+	BandwidthUsage []*SoftLayer_Network_Bandwidth_Version1_Usage `json:"bandwidthUsage,omitempty"`
 
 	// Allocation - no documentation
 	Allocation *SoftLayer_Network_Bandwidth_Version1_Allocation `json:"allocation,omitempty"`
 
-	// BandwidthUsage - no documentation
-	BandwidthUsage []*SoftLayer_Network_Bandwidth_Version1_Usage `json:"bandwidthUsage,omitempty"`
+	// BandwidthUsageCount - no documentation
+	BandwidthUsageCount uint64 `json:"bandwidthUsageCount,omitempty"`
 }
 
 func (softlayer_network_bandwidth_version1_allotment_detail *SoftLayer_Network_Bandwidth_Version1_Allotment_Detail_Extended) String() string {

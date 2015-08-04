@@ -6,6 +6,9 @@ package types
 // questions.
 type SoftLayer_User_Security_Question struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// Question - no documentation
 	Question string `json:"question,omitempty"`
 
@@ -14,9 +17,6 @@ type SoftLayer_User_Security_Question struct {
 
 	// DisplayOrder - no documentation
 	DisplayOrder int `json:"displayOrder,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_user_security_question *SoftLayer_User_Security_Question) String() string {

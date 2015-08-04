@@ -20,6 +20,9 @@ func (softlayer_billing_payment_processor *SoftLayer_Billing_Payment_Processor) 
 type SoftLayer_Billing_Payment_Processor_Extended struct {
 	SoftLayer_Billing_Payment_Processor
 
+	// PaymentMethods - <nil>
+	PaymentMethods []*SoftLayer_Billing_Payment_Processor_Method `json:"paymentMethods,omitempty"`
+
 	// Type - <nil>
 	Type *SoftLayer_Billing_Payment_Processor_Type `json:"type,omitempty"`
 
@@ -34,9 +37,6 @@ type SoftLayer_Billing_Payment_Processor_Extended struct {
 
 	// OwnerAccount - <nil>
 	OwnerAccount *SoftLayer_Account `json:"ownerAccount,omitempty"`
-
-	// PaymentMethods - <nil>
-	PaymentMethods []*SoftLayer_Billing_Payment_Processor_Method `json:"paymentMethods,omitempty"`
 }
 
 func (softlayer_billing_payment_processor *SoftLayer_Billing_Payment_Processor_Extended) String() string {

@@ -26,11 +26,11 @@ func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) String() s
 type SoftLayer_Network_Gateway_Vlan_Extended struct {
 	SoftLayer_Network_Gateway_Vlan
 
-	// NetworkGateway - no documentation
-	NetworkGateway *SoftLayer_Network_Gateway `json:"networkGateway,omitempty"`
-
 	// NetworkVlan - no documentation
 	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`
+
+	// NetworkGateway - no documentation
+	NetworkGateway *SoftLayer_Network_Gateway `json:"networkGateway,omitempty"`
 }
 
 func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan_Extended) String() string {

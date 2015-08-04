@@ -5,9 +5,6 @@ package types
 // SoftLayer_Auxiliary_Press_Release_Contact_Press_Release - <nil>
 type SoftLayer_Auxiliary_Press_Release_Contact_Press_Release struct {
 
-	// SortOrder - no documentation
-	SortOrder int `json:"sortOrder,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -16,6 +13,9 @@ type SoftLayer_Auxiliary_Press_Release_Contact_Press_Release struct {
 
 	// PressReleaseId - no documentation
 	PressReleaseId int `json:"pressReleaseId,omitempty"`
+
+	// SortOrder - no documentation
+	SortOrder int `json:"sortOrder,omitempty"`
 }
 
 func (softlayer_auxiliary_press_release_contact_press_release *SoftLayer_Auxiliary_Press_Release_Contact_Press_Release) String() string {

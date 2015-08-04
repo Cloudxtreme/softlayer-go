@@ -8,12 +8,6 @@ package types
 // identifier nor the gateway nor the broadcast addresses are usable by SoftLayer servers.
 type SoftLayer_Container_Network_Subnet_IpAddress struct {
 
-	// Hardware - The hardware that an IP address is associated with.
-	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
-
-	// IpAddress - no documentation
-	IpAddress string `json:"ipAddress,omitempty"`
-
 	// IsBroadcastAddress - Whether an IP address is its subnet's broadcast address.
 	IsBroadcastAddress bool `json:"isBroadcastAddress,omitempty"`
 
@@ -23,6 +17,12 @@ type SoftLayer_Container_Network_Subnet_IpAddress struct {
 
 	// IsNetworkAddress - Whether an IP address is its subnet's network identifier address.
 	IsNetworkAddress bool `json:"isNetworkAddress,omitempty"`
+
+	// Hardware - The hardware that an IP address is associated with.
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
+
+	// IpAddress - no documentation
+	IpAddress string `json:"ipAddress,omitempty"`
 }
 
 func (softlayer_container_network_subnet_ipaddress *SoftLayer_Container_Network_Subnet_IpAddress) String() string {

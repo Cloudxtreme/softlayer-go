@@ -10,17 +10,17 @@ import (
 // it is assigned to. This information can range from "Mountable" flags to utilized snapshot space.
 type SoftLayer_Network_Storage_Property struct {
 
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// Value - no documentation
-	Value string `json:"value,omitempty"`
-
 	// VolumeId - no documentation
 	VolumeId int `json:"volumeId,omitempty"`
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// Value - no documentation
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_network_storage_property *SoftLayer_Network_Storage_Property) String() string {

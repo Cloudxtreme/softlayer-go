@@ -9,6 +9,9 @@ import (
 // SoftLayer_Ticket_Attachment_Assigned_Agent - <nil>
 type SoftLayer_Ticket_Attachment_Assigned_Agent struct {
 
+	// TicketId - The internal identifier of the ticket that an item is attached to.
+	TicketId int `json:"ticketId,omitempty"`
+
 	// AttachmentId - The internal identifier of an item that is attached to a ticket.
 	AttachmentId int `json:"attachmentId,omitempty"`
 
@@ -20,9 +23,6 @@ type SoftLayer_Ticket_Attachment_Assigned_Agent struct {
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
-
-	// TicketId - The internal identifier of the ticket that an item is attached to.
-	TicketId int `json:"ticketId,omitempty"`
 }
 
 func (softlayer_ticket_attachment_assigned_agent *SoftLayer_Ticket_Attachment_Assigned_Agent) String() string {
@@ -33,11 +33,11 @@ func (softlayer_ticket_attachment_assigned_agent *SoftLayer_Ticket_Attachment_As
 type SoftLayer_Ticket_Attachment_Assigned_Agent_Extended struct {
 	SoftLayer_Ticket_Attachment_Assigned_Agent
 
-	// AssignedAgent - <nil>
-	AssignedAgent *SoftLayer_User_Customer `json:"assignedAgent,omitempty"`
-
 	// Resource - <nil>
 	Resource *SoftLayer_User_Customer `json:"resource,omitempty"`
+
+	// AssignedAgent - <nil>
+	AssignedAgent *SoftLayer_User_Customer `json:"assignedAgent,omitempty"`
 
 	// ScheduledAction - <nil>
 	ScheduledAction *SoftLayer_Provisioning_Version1_Transaction `json:"scheduledAction,omitempty"`

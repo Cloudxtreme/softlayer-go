@@ -9,29 +9,14 @@ import (
 // SoftLayer_Billing_Info_Ach - <nil>
 type SoftLayer_Billing_Info_Ach struct {
 
-	// AccountType - <nil>
-	AccountType string `json:"accountType,omitempty"`
-
 	// FirstName - <nil>
 	FirstName string `json:"firstName,omitempty"`
-
-	// Country - <nil>
-	Country string `json:"country,omitempty"`
-
-	// LastName - <nil>
-	LastName string `json:"lastName,omitempty"`
-
-	// PhoneNumber - <nil>
-	PhoneNumber string `json:"phoneNumber,omitempty"`
-
-	// Street1 - <nil>
-	Street1 string `json:"street1,omitempty"`
 
 	// Street2 - <nil>
 	Street2 string `json:"street2,omitempty"`
 
-	// AccountId - <nil>
-	AccountId int `json:"accountId,omitempty"`
+	// AccountNumber - <nil>
+	AccountNumber string `json:"accountNumber,omitempty"`
 
 	// BankTransitNumber - <nil>
 	BankTransitNumber string `json:"bankTransitNumber,omitempty"`
@@ -39,23 +24,38 @@ type SoftLayer_Billing_Info_Ach struct {
 	// City - <nil>
 	City string `json:"city,omitempty"`
 
-	// Postalcode - <nil>
-	Postalcode string `json:"postalcode,omitempty"`
-
-	// State - <nil>
-	State string `json:"state,omitempty"`
-
 	// VerifiedDate - <nil>
 	VerifiedDate *time.Time `json:"verifiedDate,omitempty"`
 
-	// AccountNumber - <nil>
-	AccountNumber string `json:"accountNumber,omitempty"`
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
 
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
 
+	// PhoneNumber - <nil>
+	PhoneNumber string `json:"phoneNumber,omitempty"`
+
 	// Status - <nil>
 	Status string `json:"status,omitempty"`
+
+	// Country - <nil>
+	Country string `json:"country,omitempty"`
+
+	// LastName - <nil>
+	LastName string `json:"lastName,omitempty"`
+
+	// State - <nil>
+	State string `json:"state,omitempty"`
+
+	// Street1 - <nil>
+	Street1 string `json:"street1,omitempty"`
+
+	// AccountType - <nil>
+	AccountType string `json:"accountType,omitempty"`
+
+	// Postalcode - <nil>
+	Postalcode string `json:"postalcode,omitempty"`
 }
 
 func (softlayer_billing_info_ach *SoftLayer_Billing_Info_Ach) String() string {

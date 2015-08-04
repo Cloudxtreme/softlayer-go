@@ -36,9 +36,9 @@ func (t Type) GetGoType() *GoType {
 	case "boolean":
 		return &GoType{Literal: "bool", BuiltIn: true}
 	case "decimal":
-		return &GoType{Literal: "float64", BuiltIn: true}
+		return &GoType{Literal: "Float64", BuiltIn: false, Import: "github.com/sudorandom/softlayer-go/slapi", Alias: "slapi"}
 	case "float":
-		return &GoType{Literal: "float32", BuiltIn: true}
+		return &GoType{Literal: "Float64", BuiltIn: false, Import: "github.com/sudorandom/softlayer-go/slapi", Alias: "slapi"}
 	case "dateTime":
 		return &GoType{Literal: "Time", BuiltIn: false, Import: "time", Alias: "time", Pointer: true}
 	case "base64Binary":
@@ -50,7 +50,7 @@ func (t Type) GetGoType() *GoType {
 	case "void":
 		return nil
 	default:
-		return &GoType{Literal: t.StructName(), BuiltIn: true, Import: "go-softlayer/" + t.DirectoryPath(), Alias: t.Alias(), Pointer: true}
+		return &GoType{Literal: t.StructName(), BuiltIn: true, Import: "github.com/sudorandom/softlayer-go/slapi/types" + t.DirectoryPath(), Alias: t.Alias(), Pointer: true}
 	}
 }
 

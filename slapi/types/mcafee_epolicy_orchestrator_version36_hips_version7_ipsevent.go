@@ -12,9 +12,6 @@ import (
 // generated it, the severity of the event, and the action taken.
 type McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent struct {
 
-	// ReactionText - no documentation
-	ReactionText string `json:"reactionText,omitempty"`
-
 	// RemoteIpAddress - no documentation
 	RemoteIpAddress string `json:"remoteIpAddress,omitempty"`
 
@@ -26,6 +23,9 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent struct {
 
 	// ProcessName - no documentation
 	ProcessName string `json:"processName,omitempty"`
+
+	// ReactionText - no documentation
+	ReactionText string `json:"reactionText,omitempty"`
 }
 
 func (mcafee_epolicy_orchestrator_version36_hips_version7_ipsevent *McAfee_Epolicy_Orchestrator_Version36_Hips_Version7_IPSEvent) String() string {

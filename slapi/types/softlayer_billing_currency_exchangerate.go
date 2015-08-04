@@ -3,14 +3,13 @@ package types
 // DO NOT EDIT. THIS FILE WAS AUTOMATICALLY GENERATED
 
 import (
+	slapi "github.com/sudorandom/softlayer-go/slapi"
+
 	time "time"
 )
 
 // SoftLayer_Billing_Currency_ExchangeRate - <nil>
 type SoftLayer_Billing_Currency_ExchangeRate struct {
-
-	// EffectiveDate - <nil>
-	EffectiveDate *time.Time `json:"effectiveDate,omitempty"`
 
 	// ExpirationDate - <nil>
 	ExpirationDate *time.Time `json:"expirationDate,omitempty"`
@@ -19,7 +18,10 @@ type SoftLayer_Billing_Currency_ExchangeRate struct {
 	Id int `json:"id,omitempty"`
 
 	// Rate - <nil>
-	Rate float64 `json:"rate,omitempty"`
+	Rate slapi.Float64 `json:"rate,omitempty"`
+
+	// EffectiveDate - <nil>
+	EffectiveDate *time.Time `json:"effectiveDate,omitempty"`
 }
 
 func (softlayer_billing_currency_exchangerate *SoftLayer_Billing_Currency_ExchangeRate) String() string {

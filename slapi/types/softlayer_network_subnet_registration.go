@@ -12,8 +12,20 @@ import (
 // [[SoftLayer_Network_Subnet_Registration_Event|events]].
 type SoftLayer_Network_Subnet_Registration struct {
 
+	// NetworkIdentifier - no documentation
+	NetworkIdentifier string `json:"networkIdentifier,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// NetworkHandle - The RIR-specific handle or name of the registered subnet. This field is read-only.
+	NetworkHandle string `json:"networkHandle,omitempty"`
+
 	// AccountId - The registration object's associated [[SoftLayer_Account|account]] id
 	AccountId int `json:"accountId,omitempty"`
+
+	// Cidr - no documentation
+	Cidr int `json:"cidr,omitempty"`
 
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
@@ -22,17 +34,8 @@ type SoftLayer_Network_Subnet_Registration struct {
 	// [[SoftLayer_Network_Subnet_Registration_Status|status]] id
 	StatusId int `json:"statusId,omitempty"`
 
-	// Cidr - no documentation
-	Cidr int `json:"cidr,omitempty"`
-
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// NetworkHandle - The RIR-specific handle or name of the registered subnet. This field is read-only.
-	NetworkHandle string `json:"networkHandle,omitempty"`
-
-	// NetworkIdentifier - no documentation
-	NetworkIdentifier string `json:"networkIdentifier,omitempty"`
 
 	// RegionalInternetRegistryHandleId - The registration object's associated
 	// [[SoftLayer_Account_Rwhois_Handle|RIR handle]] id
@@ -41,9 +44,6 @@ type SoftLayer_Network_Subnet_Registration struct {
 	// RegionalInternetRegistryId - The registration object's associated
 	// [[SoftLayer_Network_Regional_Internet_Registry|RIR]] id
 	RegionalInternetRegistryId int `json:"regionalInternetRegistryId,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration) String() string {
@@ -54,31 +54,31 @@ func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registrati
 type SoftLayer_Network_Subnet_Registration_Extended struct {
 	SoftLayer_Network_Subnet_Registration
 
-	// PersonDetail - no documentation
-	PersonDetail *SoftLayer_Account_Regional_Registry_Detail `json:"personDetail,omitempty"`
+	// EventCount - no documentation
+	EventCount uint64 `json:"eventCount,omitempty"`
+
+	// RegionalInternetRegistry - no documentation
+	RegionalInternetRegistry *SoftLayer_Network_Regional_Internet_Registry `json:"regionalInternetRegistry,omitempty"`
 
 	// Status - no documentation
 	Status *SoftLayer_Network_Subnet_Registration_Status `json:"status,omitempty"`
 
-	// EventCount - no documentation
-	EventCount uint64 `json:"eventCount,omitempty"`
-
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account,omitempty"`
-
-	// Events - no documentation
-	Events []*SoftLayer_Network_Subnet_Registration_Event `json:"events,omitempty"`
-
-	// RegionalInternetRegistry - no documentation
-	RegionalInternetRegistry *SoftLayer_Network_Regional_Internet_Registry `json:"regionalInternetRegistry,omitempty"`
+	// Subnet - no documentation
+	Subnet *SoftLayer_Network_Subnet `json:"subnet,omitempty"`
 
 	// DetailReferenceCount - A count of the cross-reference records that tie the
 	// [[SoftLayer_Account_Regional_Registry_Detail]] objects to the registration object.
 	DetailReferenceCount uint64 `json:"detailReferenceCount,omitempty"`
 
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
 	// DetailReferences - The cross-reference records that tie the
 	// [[SoftLayer_Account_Regional_Registry_Detail]] objects to the registration object.
 	DetailReferences []*SoftLayer_Network_Subnet_Registration_Details `json:"detailReferences,omitempty"`
+
+	// Events - no documentation
+	Events []*SoftLayer_Network_Subnet_Registration_Event `json:"events,omitempty"`
 
 	// NetworkDetail - no documentation
 	NetworkDetail *SoftLayer_Account_Regional_Registry_Detail `json:"networkDetail,omitempty"`
@@ -87,8 +87,8 @@ type SoftLayer_Network_Subnet_Registration_Extended struct {
 	// may not be populated until the registration is complete.
 	RegionalInternetRegistryHandle *SoftLayer_Account_Rwhois_Handle `json:"regionalInternetRegistryHandle,omitempty"`
 
-	// Subnet - no documentation
-	Subnet *SoftLayer_Network_Subnet `json:"subnet,omitempty"`
+	// PersonDetail - no documentation
+	PersonDetail *SoftLayer_Account_Regional_Registry_Detail `json:"personDetail,omitempty"`
 }
 
 func (softlayer_network_subnet_registration *SoftLayer_Network_Subnet_Registration_Extended) String() string {

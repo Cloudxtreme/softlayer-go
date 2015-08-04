@@ -5,6 +5,9 @@ package types
 // SoftLayer_Container_Metric_Data_Type - <nil>
 type SoftLayer_Container_Metric_Data_Type struct {
 
+	// SummaryType - <nil>
+	SummaryType string `json:"summaryType,omitempty"`
+
 	// Unit - <nil>
 	Unit string `json:"unit,omitempty"`
 
@@ -13,9 +16,6 @@ type SoftLayer_Container_Metric_Data_Type struct {
 
 	// Name - <nil>
 	Name string `json:"name,omitempty"`
-
-	// SummaryType - <nil>
-	SummaryType string `json:"summaryType,omitempty"`
 }
 
 func (softlayer_container_metric_data_type *SoftLayer_Container_Metric_Data_Type) String() string {

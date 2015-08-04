@@ -9,26 +9,26 @@ import (
 // SoftLayer_Account_Link_OpenStack - <nil>
 type SoftLayer_Account_Link_OpenStack struct {
 
-	// DomainId - no documentation
-	DomainId string `json:"domainId,omitempty"`
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
 
 	// DestinationAccountAlphanumericId - <nil>
 	DestinationAccountAlphanumericId string `json:"destinationAccountAlphanumericId,omitempty"`
-
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
-
-	// ServiceProviderId - <nil>
-	ServiceProviderId int `json:"serviceProviderId,omitempty"`
-
-	// AccountId - <nil>
-	AccountId int `json:"accountId,omitempty"`
 
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// DestinationAccountId - <nil>
 	DestinationAccountId int `json:"destinationAccountId,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
+
+	// DomainId - no documentation
+	DomainId string `json:"domainId,omitempty"`
+
+	// ServiceProviderId - <nil>
+	ServiceProviderId int `json:"serviceProviderId,omitempty"`
 }
 
 func (softlayer_account_link_openstack *SoftLayer_Account_Link_OpenStack) String() string {
@@ -39,11 +39,11 @@ func (softlayer_account_link_openstack *SoftLayer_Account_Link_OpenStack) String
 type SoftLayer_Account_Link_OpenStack_Extended struct {
 	SoftLayer_Account_Link_OpenStack
 
-	// ServiceProvider - <nil>
-	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`
-
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// ServiceProvider - <nil>
+	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`
 }
 
 func (softlayer_account_link_openstack *SoftLayer_Account_Link_OpenStack_Extended) String() string {

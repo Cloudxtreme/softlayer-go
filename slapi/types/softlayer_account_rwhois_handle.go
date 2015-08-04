@@ -12,12 +12,6 @@ import (
 // identify a customer or organization when a subnet is registered.
 type SoftLayer_Account_Rwhois_Handle struct {
 
-	// AccountId - The handle object's associated [[SoftLayer_Account|account]] id
-	AccountId int `json:"accountId,omitempty"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
 	// Handle - The handle object's unique identifier as assigned by the
 	Handle string `json:"handle,omitempty"`
 
@@ -26,6 +20,12 @@ type SoftLayer_Account_Rwhois_Handle struct {
 
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// AccountId - The handle object's associated [[SoftLayer_Account|account]] id
+	AccountId int `json:"accountId,omitempty"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_account_rwhois_handle *SoftLayer_Account_Rwhois_Handle) String() string {

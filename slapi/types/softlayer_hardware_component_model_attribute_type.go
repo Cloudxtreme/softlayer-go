@@ -29,11 +29,11 @@ func (softlayer_hardware_component_model_attribute_type *SoftLayer_Hardware_Comp
 type SoftLayer_Hardware_Component_Model_Attribute_Type_Extended struct {
 	SoftLayer_Hardware_Component_Model_Attribute_Type
 
-	// ValidComponentTypeCount - no documentation
-	ValidComponentTypeCount uint64 `json:"validComponentTypeCount,omitempty"`
-
 	// ValidComponentTypes - <nil>
 	ValidComponentTypes []*SoftLayer_Hardware_Component_Type `json:"validComponentTypes,omitempty"`
+
+	// ValidComponentTypeCount - no documentation
+	ValidComponentTypeCount uint64 `json:"validComponentTypeCount,omitempty"`
 }
 
 func (softlayer_hardware_component_model_attribute_type *SoftLayer_Hardware_Component_Model_Attribute_Type_Extended) String() string {

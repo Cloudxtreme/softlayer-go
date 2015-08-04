@@ -10,13 +10,6 @@ import (
 // used to set the value for a configuration definition
 type SoftLayer_Configuration_Template_Section_Definition_Value struct {
 
-	// TemplateId - Internal identifier of a configuration template that this configuration value belongs
-	// to
-	TemplateId int `json:"templateId,omitempty"`
-
-	// Value - no documentation
-	Value string `json:"value,omitempty"`
-
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -26,6 +19,13 @@ type SoftLayer_Configuration_Template_Section_Definition_Value struct {
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// TemplateId - Internal identifier of a configuration template that this configuration value belongs
+	// to
+	TemplateId int `json:"templateId,omitempty"`
+
+	// Value - no documentation
+	Value string `json:"value,omitempty"`
 }
 
 func (softlayer_configuration_template_section_definition_value *SoftLayer_Configuration_Template_Section_Definition_Value) String() string {

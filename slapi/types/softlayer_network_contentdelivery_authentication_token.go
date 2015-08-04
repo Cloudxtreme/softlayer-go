@@ -11,6 +11,12 @@ import (
 // that CDN allow or deny access from.
 type SoftLayer_Network_ContentDelivery_Authentication_Token struct {
 
+	// Referrer - no documentation
+	Referrer string `json:"referrer,omitempty"`
+
+	// Token - no documentation
+	Token string `json:"token,omitempty"`
+
 	// CdnAccountId - no documentation
 	CdnAccountId int `json:"cdnAccountId,omitempty"`
 
@@ -22,12 +28,6 @@ type SoftLayer_Network_ContentDelivery_Authentication_Token struct {
 
 	// Name - The customer id. You can use this optional value to tie a user id to an authentication token.
 	Name string `json:"name,omitempty"`
-
-	// Referrer - no documentation
-	Referrer string `json:"referrer,omitempty"`
-
-	// Token - no documentation
-	Token string `json:"token,omitempty"`
 }
 
 func (softlayer_network_contentdelivery_authentication_token *SoftLayer_Network_ContentDelivery_Authentication_Token) String() string {

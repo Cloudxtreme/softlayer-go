@@ -6,11 +6,11 @@ package types
 // status.
 type SoftLayer_Container_Billing_Order_Status struct {
 
-	// Status - no documentation
-	Status string `json:"status,omitempty"`
-
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
+
+	// Status - no documentation
+	Status string `json:"status,omitempty"`
 }
 
 func (softlayer_container_billing_order_status *SoftLayer_Container_Billing_Order_Status) String() string {

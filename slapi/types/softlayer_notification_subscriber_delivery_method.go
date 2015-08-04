@@ -10,6 +10,9 @@ import (
 // methods.
 type SoftLayer_Notification_Subscriber_Delivery_Method struct {
 
+	// Active - Indicates the subscriber's delivery method availability for notifications.
+	Active int `json:"active,omitempty"`
+
 	// CreateDate - Date the subscriber's delivery method was created.
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -21,9 +24,6 @@ type SoftLayer_Notification_Subscriber_Delivery_Method struct {
 
 	// NotificationSubscriberId - no documentation
 	NotificationSubscriberId int `json:"notificationSubscriberId,omitempty"`
-
-	// Active - Indicates the subscriber's delivery method availability for notifications.
-	Active int `json:"active,omitempty"`
 }
 
 func (softlayer_notification_subscriber_delivery_method *SoftLayer_Notification_Subscriber_Delivery_Method) String() string {

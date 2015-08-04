@@ -9,14 +9,14 @@ import (
 // SoftLayer_Scale_Member_Virtual_Guest - <nil>
 type SoftLayer_Scale_Member_Virtual_Guest struct {
 
+	// ScaleGroupId - The identifier of the group this member belongs to.
+	ScaleGroupId int `json:"scaleGroupId,omitempty"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
-
-	// ScaleGroupId - The identifier of the group this member belongs to.
-	ScaleGroupId int `json:"scaleGroupId,omitempty"`
 }
 
 func (softlayer_scale_member_virtual_guest *SoftLayer_Scale_Member_Virtual_Guest) String() string {

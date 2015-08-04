@@ -10,6 +10,9 @@ import (
 // password changes for a specific SoftLayer_Software Component
 type SoftLayer_Software_Component_Password_History struct {
 
+	// Username - The username part of this specific password history instance.
+	Username string `json:"username,omitempty"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -21,9 +24,6 @@ type SoftLayer_Software_Component_Password_History struct {
 
 	// SoftwareComponentId - The id number for the Software Component this username/password pair is for.
 	SoftwareComponentId int `json:"softwareComponentId,omitempty"`
-
-	// Username - The username part of this specific password history instance.
-	Username string `json:"username,omitempty"`
 }
 
 func (softlayer_software_component_password_history *SoftLayer_Software_Component_Password_History) String() string {

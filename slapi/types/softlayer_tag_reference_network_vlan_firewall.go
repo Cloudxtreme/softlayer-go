@@ -5,23 +5,23 @@ package types
 // SoftLayer_Tag_Reference_Network_Vlan_Firewall - <nil>
 type SoftLayer_Tag_Reference_Network_Vlan_Firewall struct {
 
-	// EmpRecordId - <nil>
-	EmpRecordId int `json:"empRecordId,omitempty"`
+	// TagId - <nil>
+	TagId int `json:"tagId,omitempty"`
 
 	// TagTypeId - <nil>
 	TagTypeId int `json:"tagTypeId,omitempty"`
 
-	// TagId - <nil>
-	TagId int `json:"tagId,omitempty"`
+	// EmpRecordId - <nil>
+	EmpRecordId int `json:"empRecordId,omitempty"`
 
 	// ResourceTableId - <nil>
 	ResourceTableId int `json:"resourceTableId,omitempty"`
 
-	// UsrRecordId - <nil>
-	UsrRecordId int `json:"usrRecordId,omitempty"`
-
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
+
+	// UsrRecordId - <nil>
+	UsrRecordId int `json:"usrRecordId,omitempty"`
 }
 
 func (softlayer_tag_reference_network_vlan_firewall *SoftLayer_Tag_Reference_Network_Vlan_Firewall) String() string {
@@ -31,9 +31,6 @@ func (softlayer_tag_reference_network_vlan_firewall *SoftLayer_Tag_Reference_Net
 // SoftLayer_Tag_Reference_Network_Vlan_Firewall_Extended is SoftLayer_Tag_Reference_Network_Vlan_Firewall with all maskable types.
 type SoftLayer_Tag_Reference_Network_Vlan_Firewall_Extended struct {
 	SoftLayer_Tag_Reference_Network_Vlan_Firewall
-
-	// Tag - <nil>
-	Tag *SoftLayer_Tag `json:"tag,omitempty"`
 
 	// Employee - <nil>
 	Employee *SoftLayer_User_Employee `json:"employee,omitempty"`
@@ -46,6 +43,9 @@ type SoftLayer_Tag_Reference_Network_Vlan_Firewall_Extended struct {
 
 	// Customer - <nil>
 	Customer *SoftLayer_User_Customer `json:"customer,omitempty"`
+
+	// Tag - <nil>
+	Tag *SoftLayer_Tag `json:"tag,omitempty"`
 }
 
 func (softlayer_tag_reference_network_vlan_firewall *SoftLayer_Tag_Reference_Network_Vlan_Firewall_Extended) String() string {

@@ -6,6 +6,9 @@ package types
 // token
 type SoftLayer_Container_User_Customer_Portal_MobileToken struct {
 
+	// HasExternalBinding - True if this user login required an external binding.
+	HasExternalBinding bool `json:"hasExternalBinding,omitempty"`
+
 	// Hash - no documentation
 	Hash string `json:"hash,omitempty"`
 
@@ -14,9 +17,6 @@ type SoftLayer_Container_User_Customer_Portal_MobileToken struct {
 
 	// UserId - no documentation
 	UserId int `json:"userId,omitempty"`
-
-	// HasExternalBinding - True if this user login required an external binding.
-	HasExternalBinding bool `json:"hasExternalBinding,omitempty"`
 }
 
 func (softlayer_container_user_customer_portal_mobiletoken *SoftLayer_Container_User_Customer_Portal_MobileToken) String() string {

@@ -26,11 +26,11 @@ func (softlayer_product_item_resource_conflict *SoftLayer_Product_Item_Resource_
 type SoftLayer_Product_Item_Resource_Conflict_Extended struct {
 	SoftLayer_Product_Item_Resource_Conflict
 
-	// Item - <nil>
-	Item *SoftLayer_Product_Item `json:"item,omitempty"`
-
 	// Package - <nil>
 	Package *SoftLayer_Product_Package `json:"package,omitempty"`
+
+	// Item - <nil>
+	Item *SoftLayer_Product_Item `json:"item,omitempty"`
 }
 
 func (softlayer_product_item_resource_conflict *SoftLayer_Product_Item_Resource_Conflict_Extended) String() string {

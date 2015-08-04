@@ -10,18 +10,18 @@ package types
 // answer that should be provided.
 type SoftLayer_Product_Item_Category_Question struct {
 
-	// ValueExample - An example and/or explanation of what the answer for the question is expected to look
-	// like.
-	ValueExample string `json:"valueExample,omitempty"`
+	// AnswerValueExpression - no documentation
+	AnswerValueExpression string `json:"answerValueExpression,omitempty"`
 
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
 
+	// ValueExample - An example and/or explanation of what the answer for the question is expected to look
+	// like.
+	ValueExample string `json:"valueExample,omitempty"`
+
 	// FieldTypeId - no documentation
 	FieldTypeId int `json:"fieldTypeId,omitempty"`
-
-	// AnswerValueExpression - no documentation
-	AnswerValueExpression string `json:"answerValueExpression,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`

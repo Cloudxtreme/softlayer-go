@@ -12,11 +12,14 @@ import (
 // entities (Google, Apple,
 type SoftLayer_User_Customer_MobileDevice struct {
 
-	// MobileOperatingSystemId - no documentation
-	MobileOperatingSystemId int `json:"mobileOperatingSystemId,omitempty"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
-	// UserId - no documentation
-	UserId int `json:"userId,omitempty"`
+	// ModelNumber - no documentation
+	ModelNumber string `json:"modelNumber,omitempty"`
+
+	// PhoneNumber - no documentation
+	PhoneNumber string `json:"phoneNumber,omitempty"`
 
 	// SerialNumber - no documentation
 	SerialNumber string `json:"serialNumber,omitempty"`
@@ -24,17 +27,14 @@ type SoftLayer_User_Customer_MobileDevice struct {
 	// MobileDeviceTypeId - no documentation
 	MobileDeviceTypeId int `json:"mobileDeviceTypeId,omitempty"`
 
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// PhoneNumber - no documentation
-	PhoneNumber string `json:"phoneNumber,omitempty"`
-
-	// ModelNumber - no documentation
-	ModelNumber string `json:"modelNumber,omitempty"`
+	// MobileOperatingSystemId - no documentation
+	MobileOperatingSystemId int `json:"mobileOperatingSystemId,omitempty"`
 
 	// Token - no documentation
 	Token string `json:"token,omitempty"`
+
+	// UserId - no documentation
+	UserId int `json:"userId,omitempty"`
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
@@ -42,8 +42,8 @@ type SoftLayer_User_Customer_MobileDevice struct {
 	// DisplayResolutionXxY - no documentation
 	DisplayResolutionXxY string `json:"displayResolutionXxY,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 }
 
 func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice) String() string {
@@ -54,28 +54,28 @@ func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice
 type SoftLayer_User_Customer_MobileDevice_Extended struct {
 	SoftLayer_User_Customer_MobileDevice
 
-	// PushNotificationSubscriptions - Notification subscriptions attached to a mobile device.
-	PushNotificationSubscriptions []*SoftLayer_Notification_User_Subscriber `json:"pushNotificationSubscriptions,omitempty"`
+	// OperatingSystem - <nil>
+	OperatingSystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem `json:"operatingSystem,omitempty"`
 
-	// AvailablePushNotificationSubscriptionCount - A count of notification subscriptions available to a
-	// mobile device.
-	AvailablePushNotificationSubscriptionCount uint64 `json:"availablePushNotificationSubscriptionCount,omitempty"`
+	// Type - <nil>
+	Type *SoftLayer_User_Customer_MobileDevice_Type `json:"type,omitempty"`
 
 	// PushNotificationSubscriptionCount - A count of notification subscriptions attached to a mobile
 	// device.
 	PushNotificationSubscriptionCount uint64 `json:"pushNotificationSubscriptionCount,omitempty"`
 
-	// Customer - <nil>
-	Customer *SoftLayer_User_Customer `json:"customer,omitempty"`
-
-	// Type - <nil>
-	Type *SoftLayer_User_Customer_MobileDevice_Type `json:"type,omitempty"`
-
 	// AvailablePushNotificationSubscriptions - Notification subscriptions available to a mobile device.
 	AvailablePushNotificationSubscriptions []*SoftLayer_Notification `json:"availablePushNotificationSubscriptions,omitempty"`
 
-	// OperatingSystem - <nil>
-	OperatingSystem *SoftLayer_User_Customer_MobileDevice_OperatingSystem `json:"operatingSystem,omitempty"`
+	// AvailablePushNotificationSubscriptionCount - A count of notification subscriptions available to a
+	// mobile device.
+	AvailablePushNotificationSubscriptionCount uint64 `json:"availablePushNotificationSubscriptionCount,omitempty"`
+
+	// Customer - <nil>
+	Customer *SoftLayer_User_Customer `json:"customer,omitempty"`
+
+	// PushNotificationSubscriptions - Notification subscriptions attached to a mobile device.
+	PushNotificationSubscriptions []*SoftLayer_Notification_User_Subscriber `json:"pushNotificationSubscriptions,omitempty"`
 }
 
 func (softlayer_user_customer_mobiledevice *SoftLayer_User_Customer_MobileDevice_Extended) String() string {

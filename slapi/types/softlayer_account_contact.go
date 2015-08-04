@@ -9,38 +9,50 @@ import (
 // SoftLayer_Account_Contact - <nil>
 type SoftLayer_Account_Contact struct {
 
-	// PostalCode - <nil>
-	PostalCode string `json:"postalCode,omitempty"`
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
 
-	// City - <nil>
-	City string `json:"city,omitempty"`
-
-	// Email - <nil>
-	Email string `json:"email,omitempty"`
+	// Address1 - <nil>
+	Address1 string `json:"address1,omitempty"`
 
 	// FaxPhone - <nil>
 	FaxPhone string `json:"faxPhone,omitempty"`
 
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
-
-	// OfficePhone - <nil>
-	OfficePhone string `json:"officePhone,omitempty"`
-
-	// FirstName - <nil>
-	FirstName string `json:"firstName,omitempty"`
-
-	// State - <nil>
-	State string `json:"state,omitempty"`
+	// LastName - <nil>
+	LastName string `json:"lastName,omitempty"`
 
 	// TypeId - <nil>
 	TypeId int `json:"typeId,omitempty"`
 
+	// Url - <nil>
+	Url string `json:"url,omitempty"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// OfficePhone - <nil>
+	OfficePhone string `json:"officePhone,omitempty"`
+
+	// City - <nil>
+	City string `json:"city,omitempty"`
+
 	// Address2 - <nil>
 	Address2 string `json:"address2,omitempty"`
 
-	// AlternatePhone - <nil>
-	AlternatePhone string `json:"alternatePhone,omitempty"`
+	// FirstName - <nil>
+	FirstName string `json:"firstName,omitempty"`
+
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
+
+	// JobTitle - <nil>
+	JobTitle string `json:"jobTitle,omitempty"`
+
+	// ModifyDate - <nil>
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// ProfileName - <nil>
+	ProfileName string `json:"profileName,omitempty"`
 
 	// CompanyName - <nil>
 	CompanyName string `json:"companyName,omitempty"`
@@ -48,29 +60,17 @@ type SoftLayer_Account_Contact struct {
 	// Country - <nil>
 	Country string `json:"country,omitempty"`
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
+	// Email - <nil>
+	Email string `json:"email,omitempty"`
 
-	// AccountId - <nil>
-	AccountId int `json:"accountId,omitempty"`
+	// PostalCode - <nil>
+	PostalCode string `json:"postalCode,omitempty"`
 
-	// Url - <nil>
-	Url string `json:"url,omitempty"`
+	// State - <nil>
+	State string `json:"state,omitempty"`
 
-	// ProfileName - <nil>
-	ProfileName string `json:"profileName,omitempty"`
-
-	// Address1 - <nil>
-	Address1 string `json:"address1,omitempty"`
-
-	// JobTitle - <nil>
-	JobTitle string `json:"jobTitle,omitempty"`
-
-	// LastName - <nil>
-	LastName string `json:"lastName,omitempty"`
-
-	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+	// AlternatePhone - <nil>
+	AlternatePhone string `json:"alternatePhone,omitempty"`
 }
 
 func (softlayer_account_contact *SoftLayer_Account_Contact) String() string {
