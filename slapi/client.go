@@ -6,7 +6,6 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
 )
 
@@ -89,14 +88,10 @@ func (client *Client) Call(req Request, result interface{}) error {
 		if err != nil {
 			return err
 		}
-		log.Println(string(bodyBytes))
 		httpReq.Body = ioutil.NopCloser(bytes.NewReader(bodyBytes))
 	}
 
 	httpReq.URL.RawQuery = values.Encode()
-
-	// TODO: Remove this log (add debug option?)
-	log.Println(httpReq.URL.String())
 
 	// Make the API Request
 	res, err := httpClient.Do(httpReq)
@@ -122,8 +117,6 @@ func (client *Client) Call(req Request, result interface{}) error {
 		}
 		return slError
 	}
-
-	log.Println("RESPONSE", string(respBody))
 
 	// Unmarshal Result
 	err = json.Unmarshal(respBody, &result)
