@@ -7,10 +7,6 @@ package types
 // Storage service.
 type SoftLayer_Account_Password struct {
 
-	// AccountId - The SoftLayer customer account id that a username/password combination is associated
-	// with.
-	AccountId int `json:"accountId,omitempty"`
-
 	// Id - A username/password combination's internal identifier.
 	Id int `json:"id,omitempty"`
 
@@ -26,6 +22,10 @@ type SoftLayer_Account_Password struct {
 
 	// Username - The username portion of a username/password combination.
 	Username string `json:"username,omitempty"`
+
+	// AccountId - The SoftLayer customer account id that a username/password combination is associated
+	// with.
+	AccountId int `json:"accountId,omitempty"`
 
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account,omitempty"`

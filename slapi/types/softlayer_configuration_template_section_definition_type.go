@@ -7,14 +7,14 @@ package types
 // configuration definition.
 type SoftLayer_Configuration_Template_Section_Definition_Type struct {
 
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
+
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_configuration_template_section_definition_type *SoftLayer_Configuration_Template_Section_Definition_Type) String() string {

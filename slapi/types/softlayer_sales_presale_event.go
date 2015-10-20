@@ -17,26 +17,31 @@ type SoftLayer_Sales_Presale_Event struct {
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// LocationId - no documentation
 	LocationId int `json:"locationId,omitempty"`
-
-	// EndDate - End date of the presale event. Orders can be approved and provisioned after this date.
-	EndDate *time.Time `json:"endDate,omitempty"`
-
-	// ItemId - [[SoftLayer_Product_Item]] id associated with the presale event.
-	ItemId int `json:"itemId,omitempty"`
 
 	// StartDate - Start date of the presale event. Orders cannot be approved before this date.
 	StartDate *time.Time `json:"startDate,omitempty"`
 
-	// Item - The [[SoftLayer_Product_Item]] associated with the presale event.
-	Item *SoftLayer_Product_Item `json:"item,omitempty"`
+	// EndDate - End date of the presale event. Orders can be approved and provisioned after this date.
+	EndDate *time.Time `json:"endDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// ItemId - [[SoftLayer_Product_Item]] id associated with the presale event.
+	ItemId int `json:"itemId,omitempty"`
+
+	// ExpiredFlag - A flag to indicate that the presale event is expired. A presale event is expired if
+	// the current time is after the end date.
+	ExpiredFlag bool `json:"expiredFlag,omitempty"`
 
 	// Location - The [[SoftLayer_Location]] associated with the presale event.
 	Location *SoftLayer_Location `json:"location,omitempty"`
+
+	// Orders - The orders ([[SoftLayer_Billing_Order]]) associated with this presale event that were
+	// created for the customer's account.
+	Orders []*SoftLayer_Billing_Order `json:"orders,omitempty"`
 
 	// OrderCount - A count of the orders ([[SoftLayer_Billing_Order]]) associated with this presale event
 	// that were created for the customer's account.
@@ -46,13 +51,8 @@ type SoftLayer_Sales_Presale_Event struct {
 	// active if the current time is between the start and end dates.
 	ActiveFlag bool `json:"activeFlag,omitempty"`
 
-	// Orders - The orders ([[SoftLayer_Billing_Order]]) associated with this presale event that were
-	// created for the customer's account.
-	Orders []*SoftLayer_Billing_Order `json:"orders,omitempty"`
-
-	// ExpiredFlag - A flag to indicate that the presale event is expired. A presale event is expired if
-	// the current time is after the end date.
-	ExpiredFlag bool `json:"expiredFlag,omitempty"`
+	// Item - The [[SoftLayer_Product_Item]] associated with the presale event.
+	Item *SoftLayer_Product_Item `json:"item,omitempty"`
 }
 
 func (softlayer_sales_presale_event *SoftLayer_Sales_Presale_Event) String() string {

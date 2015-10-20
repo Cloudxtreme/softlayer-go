@@ -9,15 +9,15 @@ package types
 // notified on failure.
 type SoftLayer_User_Customer_Notification_Hardware struct {
 
+	// UserId - The ID of the SoftLayer_User_Customer object that represents the user to be notified on
+	// monitoring failure.
+	UserId int `json:"userId,omitempty"`
+
 	// HardwareId - The ID of the Hardware object that is to be monitored.
 	HardwareId int `json:"hardwareId,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
-
-	// UserId - The ID of the SoftLayer_User_Customer object that represents the user to be notified on
-	// monitoring failure.
-	UserId int `json:"userId,omitempty"`
 
 	// Hardware - no documentation
 	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`

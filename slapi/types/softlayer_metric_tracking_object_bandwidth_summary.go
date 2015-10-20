@@ -10,6 +10,20 @@ import (
 // summary components for the current billing cycle.
 type SoftLayer_Metric_Tracking_Object_Bandwidth_Summary struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// ProjectedBandwidthUsage - The amount of bandwidth (measured in gigabytes) of projected usage, using
+	// a basic average calculation of daily usage.
+	ProjectedBandwidthUsage slapi.Float64 `json:"projectedBandwidthUsage,omitempty"`
+
+	// AllocationId - <nil>
+	AllocationId int `json:"allocationId,omitempty"`
+
+	// AmountOut - The amount of outbound bandwidth (measured in gigabytes) currently used this billing
+	// period. Same as $outboundBandwidthAmount. Aliased for backward compatability.
+	AmountOut slapi.Float64 `json:"amountOut,omitempty"`
+
 	// AverageDailyUsage - The daily average amount of outbound bandwidth usage.
 	AverageDailyUsage slapi.Float64 `json:"averageDailyUsage,omitempty"`
 
@@ -28,20 +42,6 @@ type SoftLayer_Metric_Tracking_Object_Bandwidth_Summary struct {
 	// AllocationAmount - This is the amount of bandwidth (measured in gigabytes) allocated for this
 	// tracking object.
 	AllocationAmount slapi.Float64 `json:"allocationAmount,omitempty"`
-
-	// AllocationId - <nil>
-	AllocationId int `json:"allocationId,omitempty"`
-
-	// AmountOut - The amount of outbound bandwidth (measured in gigabytes) currently used this billing
-	// period. Same as $outboundBandwidthAmount. Aliased for backward compatability.
-	AmountOut slapi.Float64 `json:"amountOut,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// ProjectedBandwidthUsage - The amount of bandwidth (measured in gigabytes) of projected usage, using
-	// a basic average calculation of daily usage.
-	ProjectedBandwidthUsage slapi.Float64 `json:"projectedBandwidthUsage,omitempty"`
 }
 
 func (softlayer_metric_tracking_object_bandwidth_summary *SoftLayer_Metric_Tracking_Object_Bandwidth_Summary) String() string {

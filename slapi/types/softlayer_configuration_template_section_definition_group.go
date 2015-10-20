@@ -10,9 +10,6 @@ import (
 // details of the definition and allows extra functionality.
 type SoftLayer_Configuration_Template_Section_Definition_Group struct {
 
-	// SortOrder - no documentation
-	SortOrder int `json:"sortOrder,omitempty"`
-
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -24,6 +21,9 @@ type SoftLayer_Configuration_Template_Section_Definition_Group struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
+
+	// SortOrder - no documentation
+	SortOrder int `json:"sortOrder,omitempty"`
 
 	// Parent - <nil>
 	Parent *SoftLayer_Configuration_Template_Section_Definition_Group `json:"parent,omitempty"`

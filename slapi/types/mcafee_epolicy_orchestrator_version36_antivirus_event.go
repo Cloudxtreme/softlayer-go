@@ -12,9 +12,6 @@ import (
 // detected and the action that is taken.
 type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event struct {
 
-	// VirusType - no documentation
-	VirusType string `json:"virusType,omitempty"`
-
 	// EventLocalDateTime - no documentation
 	EventLocalDateTime *time.Time `json:"eventLocalDateTime,omitempty"`
 
@@ -23,6 +20,9 @@ type McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event struct {
 
 	// VirusName - no documentation
 	VirusName string `json:"virusName,omitempty"`
+
+	// VirusType - no documentation
+	VirusType string `json:"virusType,omitempty"`
 
 	// VirusActionTaken - no documentation
 	VirusActionTaken *McAfee_Epolicy_Orchestrator_Version36_Antivirus_Event_Filter_Description `json:"virusActionTaken,omitempty"`

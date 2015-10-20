@@ -11,13 +11,6 @@ import (
 // account.
 type SoftLayer_Account_Network_Vlan_Span struct {
 
-	// EnabledFlag - Flag indicating whether the customer wishes to have all private network VLANs
-	// associated with account automatically joined [0 or 1]
-	EnabledFlag bool `json:"enabledFlag,omitempty"`
-
-	// Id - The unique internal identifier of the SoftLayer_Account_Network_Vlan_Span object.
-	Id int `json:"id,omitempty"`
-
 	// LastAppliedDate - Timestamp of the last time the ACL for this account was applied.
 	LastAppliedDate *time.Time `json:"lastAppliedDate,omitempty"`
 
@@ -26,6 +19,13 @@ type SoftLayer_Account_Network_Vlan_Span struct {
 
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// EnabledFlag - Flag indicating whether the customer wishes to have all private network VLANs
+	// associated with account automatically joined [0 or 1]
+	EnabledFlag bool `json:"enabledFlag,omitempty"`
+
+	// Id - The unique internal identifier of the SoftLayer_Account_Network_Vlan_Span object.
+	Id int `json:"id,omitempty"`
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`

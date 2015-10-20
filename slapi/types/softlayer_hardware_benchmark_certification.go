@@ -11,16 +11,16 @@ import (
 // document.
 type SoftLayer_Hardware_Benchmark_Certification struct {
 
-	// AccountId - The internal identifier of the SoftLayer customer account associated with a benchmark
-	// certification result.
-	AccountId int `json:"accountId,omitempty"`
-
 	// CreateDate - The date that a benchmark certification result was generated.
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// HardwareId - A benchmark certification results's associated hardware's internal identification
 	// number.
 	HardwareId int `json:"hardwareId,omitempty"`
+
+	// AccountId - The internal identifier of the SoftLayer customer account associated with a benchmark
+	// certification result.
+	AccountId int `json:"accountId,omitempty"`
 
 	// Account - Information regarding a benchmark certification result's associated SoftLayer customer
 	// account.

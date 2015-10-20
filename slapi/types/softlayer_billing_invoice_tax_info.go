@@ -15,11 +15,8 @@ type SoftLayer_Billing_Invoice_Tax_Info struct {
 	// CreateDate - The date and time this tax information was recorded.
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
-	// ModifyDate - The date and time this tax information was updated.
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
 	// ReportedFlag - A flag to indicate whether the invoice will be auditable.
-	ReportedFlag int `json:"reportedFlag,omitempty"`
+	ReportedFlag bool `json:"reportedFlag,omitempty"`
 
 	// CurrencyId - The currency code that the invoice should be recorded in.
 	CurrencyId int `json:"currencyId,omitempty"`
@@ -30,14 +27,8 @@ type SoftLayer_Billing_Invoice_Tax_Info struct {
 	// InvoiceId - no documentation
 	InvoiceId int `json:"invoiceId,omitempty"`
 
-	// Invoice - This is the related invoice for this tax-related information.
-	Invoice *SoftLayer_Billing_Invoice `json:"invoice,omitempty"`
-
-	// ItemWithCurrencyInfo - This tax information on the invoice item that includes currency details.
-	ItemWithCurrencyInfo *SoftLayer_Billing_Invoice_Item_Tax_Info `json:"itemWithCurrencyInfo,omitempty"`
-
-	// Items - This is the collection of tax information for each of the related invoice items.
-	Items []*SoftLayer_Billing_Invoice_Item_Tax_Info `json:"items,omitempty"`
+	// ModifyDate - The date and time this tax information was updated.
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// Currency - no documentation
 	Currency *SoftLayer_Billing_Currency `json:"currency,omitempty"`
@@ -52,6 +43,15 @@ type SoftLayer_Billing_Invoice_Tax_Info struct {
 	// ItemCount - A count of this is the collection of tax information for each of the related invoice
 	// items.
 	ItemCount uint64 `json:"itemCount,omitempty"`
+
+	// Invoice - This is the related invoice for this tax-related information.
+	Invoice *SoftLayer_Billing_Invoice `json:"invoice,omitempty"`
+
+	// ItemWithCurrencyInfo - This tax information on the invoice item that includes currency details.
+	ItemWithCurrencyInfo *SoftLayer_Billing_Invoice_Item_Tax_Info `json:"itemWithCurrencyInfo,omitempty"`
+
+	// Items - This is the collection of tax information for each of the related invoice items.
+	Items []*SoftLayer_Billing_Invoice_Item_Tax_Info `json:"items,omitempty"`
 }
 
 func (softlayer_billing_invoice_tax_info *SoftLayer_Billing_Invoice_Tax_Info) String() string {

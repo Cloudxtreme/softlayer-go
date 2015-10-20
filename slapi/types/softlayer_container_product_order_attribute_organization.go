@@ -8,6 +8,9 @@ package types
 // information.
 type SoftLayer_Container_Product_Order_Attribute_Organization struct {
 
+	// PhoneNumber - no documentation
+	PhoneNumber string `json:"phoneNumber,omitempty"`
+
 	// Address - no documentation
 	Address *SoftLayer_Container_Product_Order_Attribute_Address `json:"address,omitempty"`
 
@@ -16,9 +19,6 @@ type SoftLayer_Container_Product_Order_Attribute_Organization struct {
 
 	// OrganizationName - no documentation
 	OrganizationName string `json:"organizationName,omitempty"`
-
-	// PhoneNumber - no documentation
-	PhoneNumber string `json:"phoneNumber,omitempty"`
 }
 
 func (softlayer_container_product_order_attribute_organization *SoftLayer_Container_Product_Order_Attribute_Organization) String() string {

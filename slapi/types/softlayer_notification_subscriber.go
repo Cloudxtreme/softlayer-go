@@ -9,17 +9,11 @@ import (
 // SoftLayer_Notification_Subscriber - <nil>
 type SoftLayer_Notification_Subscriber struct {
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// NotificationSubscriberTypeId - <nil>
-	NotificationSubscriberTypeId int `json:"notificationSubscriberTypeId,omitempty"`
-
 	// Active - <nil>
 	Active int `json:"active,omitempty"`
 
-	// Id - <nil>
-	Id int `json:"id,omitempty"`
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
@@ -30,11 +24,17 @@ type SoftLayer_Notification_Subscriber struct {
 	// NotificationSubscriberTypeResourceId - <nil>
 	NotificationSubscriberTypeResourceId int `json:"notificationSubscriberTypeResourceId,omitempty"`
 
-	// DeliveryMethodCount - no documentation
-	DeliveryMethodCount uint64 `json:"deliveryMethodCount,omitempty"`
+	// Id - <nil>
+	Id int `json:"id,omitempty"`
+
+	// NotificationSubscriberTypeId - <nil>
+	NotificationSubscriberTypeId int `json:"notificationSubscriberTypeId,omitempty"`
 
 	// Notification - <nil>
 	Notification *SoftLayer_Notification `json:"notification,omitempty"`
+
+	// DeliveryMethodCount - no documentation
+	DeliveryMethodCount uint64 `json:"deliveryMethodCount,omitempty"`
 
 	// DeliveryMethods - <nil>
 	DeliveryMethods []*SoftLayer_Notification_Subscriber_Delivery_Method `json:"deliveryMethods,omitempty"`

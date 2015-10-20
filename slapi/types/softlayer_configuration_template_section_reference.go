@@ -11,9 +11,6 @@ import (
 // section and its associated configuration template.
 type SoftLayer_Configuration_Template_Section_Reference struct {
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
 	// Id - Internal identifier of a configuration section reference.
 	Id int `json:"id,omitempty"`
 
@@ -26,11 +23,14 @@ type SoftLayer_Configuration_Template_Section_Reference struct {
 	// TemplateId - no documentation
 	TemplateId int `json:"templateId,omitempty"`
 
-	// Section - <nil>
-	Section *SoftLayer_Configuration_Template_Section `json:"section,omitempty"`
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Template - <nil>
 	Template *SoftLayer_Configuration_Template `json:"template,omitempty"`
+
+	// Section - <nil>
+	Section *SoftLayer_Configuration_Template_Section `json:"section,omitempty"`
 }
 
 func (softlayer_configuration_template_section_reference *SoftLayer_Configuration_Template_Section_Reference) String() string {

@@ -6,14 +6,14 @@ package types
 // the link between two volumes.
 type SoftLayer_Network_Storage_Partnership_Type struct {
 
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
 	// Description - A type's description, for example snapshot partnership'.
 	Description string `json:"description,omitempty"`
 
 	// Keyname - no documentation
 	Keyname string `json:"keyname,omitempty"`
-
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
 }
 
 func (softlayer_network_storage_partnership_type *SoftLayer_Network_Storage_Partnership_Type) String() string {

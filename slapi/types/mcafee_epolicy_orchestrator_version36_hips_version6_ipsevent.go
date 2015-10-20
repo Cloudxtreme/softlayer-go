@@ -12,9 +12,6 @@ import (
 // generated it, the severity of the event, and the action taken.
 type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent struct {
 
-	// SeverityText - no documentation
-	SeverityText string `json:"severityText,omitempty"`
-
 	// IncidentTime - no documentation
 	IncidentTime *time.Time `json:"incidentTime,omitempty"`
 
@@ -26,6 +23,9 @@ type McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_IPSEvent struct {
 
 	// RemoteIpAddress - no documentation
 	RemoteIpAddress string `json:"remoteIpAddress,omitempty"`
+
+	// SeverityText - no documentation
+	SeverityText string `json:"severityText,omitempty"`
 
 	// Signature - no documentation
 	Signature *McAfee_Epolicy_Orchestrator_Version36_Hips_Version6_Event_Signature `json:"signature,omitempty"`

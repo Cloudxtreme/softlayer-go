@@ -11,19 +11,6 @@ import (
 // discount that is related to a specific product item.
 type SoftLayer_Container_Product_Item_Discount_Program struct {
 
-	// ProratedOneTimeAmount - The sum of the one time fees (one time, setup and labor) of the prices of
-	// this container multiplied by the applicable quantity of this container with the proration factor
-	// applied.
-	ProratedOneTimeAmount slapi.Float64 `json:"proratedOneTimeAmount,omitempty"`
-
-	// ProratedRecurringTax - The tax amount on the recurring fees of the prices of this container
-	// mulitiplied by the applicable quantity of this container with the proration factor applied.
-	ProratedRecurringTax slapi.Float64 `json:"proratedRecurringTax,omitempty"`
-
-	// RecurringAmount - The sum of the recurring fees of the prices of this container multiplied by the
-	// applicable quantity of this container.
-	RecurringAmount slapi.Float64 `json:"recurringAmount,omitempty"`
-
 	// OneTimeTax - The tax amount on the one time fees (one time, setup and labor) of the prices of this
 	// container mulitiplied by the applicable quantity of this container.
 	OneTimeTax slapi.Float64 `json:"oneTimeTax,omitempty"`
@@ -32,14 +19,18 @@ type SoftLayer_Container_Product_Item_Discount_Program struct {
 	// may be one or more prices.
 	Prices []*SoftLayer_Product_Item_Price `json:"prices,omitempty"`
 
-	// ProratedOneTimeTax - The tax amount on the one time fees (one time, setup and labor) of the prices
-	// of this container mulitiplied by the applicable quantity of this container with the proration factor
+	// ProratedOneTimeAmount - The sum of the one time fees (one time, setup and labor) of the prices of
+	// this container multiplied by the applicable quantity of this container with the proration factor
 	// applied.
-	ProratedOneTimeTax slapi.Float64 `json:"proratedOneTimeTax,omitempty"`
+	ProratedOneTimeAmount slapi.Float64 `json:"proratedOneTimeAmount,omitempty"`
 
 	// ProratedRecurringAmount - The sum of the recurring fees of the prices of this container multiplied
 	// by the applicable quantity of this container with the proration factor applied.
 	ProratedRecurringAmount slapi.Float64 `json:"proratedRecurringAmount,omitempty"`
+
+	// ProratedRecurringTax - The tax amount on the recurring fees of the prices of this container
+	// mulitiplied by the applicable quantity of this container with the proration factor applied.
+	ProratedRecurringTax slapi.Float64 `json:"proratedRecurringTax,omitempty"`
 
 	// RecurringTax - The tax amount on the recurring fees of the prices of this container mulitiplied by
 	// the applicable quantity of this container.
@@ -56,6 +47,15 @@ type SoftLayer_Container_Product_Item_Discount_Program struct {
 	// OneTimeAmount - The sum of the one time fees (one time, setup and labor) of the prices of this
 	// container multiplied by the applicable quantity of this container.
 	OneTimeAmount slapi.Float64 `json:"oneTimeAmount,omitempty"`
+
+	// ProratedOneTimeTax - The tax amount on the one time fees (one time, setup and labor) of the prices
+	// of this container mulitiplied by the applicable quantity of this container with the proration factor
+	// applied.
+	ProratedOneTimeTax slapi.Float64 `json:"proratedOneTimeTax,omitempty"`
+
+	// RecurringAmount - The sum of the recurring fees of the prices of this container multiplied by the
+	// applicable quantity of this container.
+	RecurringAmount slapi.Float64 `json:"recurringAmount,omitempty"`
 }
 
 func (softlayer_container_product_item_discount_program *SoftLayer_Container_Product_Item_Discount_Program) String() string {

@@ -6,6 +6,9 @@ package types
 // general information relating to Message Queue node
 type SoftLayer_Network_Message_Queue_Node struct {
 
+	// Notes - no documentation
+	Notes string `json:"notes,omitempty"`
+
 	// AccountName - no documentation
 	AccountName string `json:"accountName,omitempty"`
 
@@ -18,18 +21,15 @@ type SoftLayer_Network_Message_Queue_Node struct {
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
 
-	// Notes - no documentation
-	Notes string `json:"notes,omitempty"`
-
-	// MessageQueue - no documentation
-	MessageQueue *SoftLayer_Network_Message_Queue `json:"messageQueue,omitempty"`
-
 	// MetricTrackingObject - A message queue node's metric tracking object. This object records all
 	// request and notification count data for this message queue node.
 	MetricTrackingObject *SoftLayer_Metric_Tracking_Object `json:"metricTrackingObject,omitempty"`
 
 	// ServiceResource - <nil>
 	ServiceResource *SoftLayer_Network_Service_Resource `json:"serviceResource,omitempty"`
+
+	// MessageQueue - no documentation
+	MessageQueue *SoftLayer_Network_Message_Queue `json:"messageQueue,omitempty"`
 }
 
 func (softlayer_network_message_queue_node *SoftLayer_Network_Message_Queue_Node) String() string {

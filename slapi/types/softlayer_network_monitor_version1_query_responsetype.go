@@ -9,15 +9,15 @@ package types
 // available ResponseTypes with the getAllObjects method on this service.
 type SoftLayer_Network_Monitor_Version1_Query_ResponseType struct {
 
+	// ActionDescription - The description of the action the monitoring system will take on failure
+	ActionDescription string `json:"actionDescription,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
 	// Level - The level of this response. The level the customer has access to is determined by values in
 	// SoftLayer_Network_Monitor_Version1_Query_Host_Stratum
 	Level int `json:"level,omitempty"`
-
-	// ActionDescription - The description of the action the monitoring system will take on failure
-	ActionDescription string `json:"actionDescription,omitempty"`
 }
 
 func (softlayer_network_monitor_version1_query_responsetype *SoftLayer_Network_Monitor_Version1_Query_ResponseType) String() string {

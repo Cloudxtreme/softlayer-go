@@ -13,9 +13,6 @@ import (
 // event.
 type SoftLayer_Notification_Occurrence_Event_Attachment struct {
 
-	// FileName - no documentation
-	FileName string `json:"fileName,omitempty"`
-
 	// FileSize - no documentation
 	FileSize string `json:"fileSize,omitempty"`
 
@@ -27,6 +24,9 @@ type SoftLayer_Notification_Occurrence_Event_Attachment struct {
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// FileName - no documentation
+	FileName string `json:"fileName,omitempty"`
 
 	// NotificationOccurrenceEvent - <nil>
 	NotificationOccurrenceEvent *SoftLayer_Notification_Occurrence_Event `json:"notificationOccurrenceEvent,omitempty"`

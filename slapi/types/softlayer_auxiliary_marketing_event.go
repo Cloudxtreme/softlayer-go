@@ -9,18 +9,6 @@ import (
 // SoftLayer_Auxiliary_Marketing_Event - <nil>
 type SoftLayer_Auxiliary_Marketing_Event struct {
 
-	// EndDate - <nil>
-	EndDate *time.Time `json:"endDate,omitempty"`
-
-	// Location - <nil>
-	Location string `json:"location,omitempty"`
-
-	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// StartDate - <nil>
-	StartDate *time.Time `json:"startDate,omitempty"`
-
 	// Title - <nil>
 	Title string `json:"title,omitempty"`
 
@@ -32,6 +20,18 @@ type SoftLayer_Auxiliary_Marketing_Event struct {
 
 	// EnabledFlag - <nil>
 	EnabledFlag int `json:"enabledFlag,omitempty"`
+
+	// EndDate - <nil>
+	EndDate *time.Time `json:"endDate,omitempty"`
+
+	// Location - <nil>
+	Location string `json:"location,omitempty"`
+
+	// ModifyDate - <nil>
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// StartDate - <nil>
+	StartDate *time.Time `json:"startDate,omitempty"`
 }
 
 func (softlayer_auxiliary_marketing_event *SoftLayer_Auxiliary_Marketing_Event) String() string {

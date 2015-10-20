@@ -13,12 +13,6 @@ import (
 // host's metric data.
 type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details struct {
 
-	// Day - no documentation
-	Day *time.Time `json:"day,omitempty"`
-
-	// MaxInstances - The maximum number of guests hosted by this platform for the given day.
-	MaxInstances int `json:"maxInstances,omitempty"`
-
 	// MaxMemoryUsage - The maximum amount of memory utilized by this platform for the given day.
 	MaxMemoryUsage int `json:"maxMemoryUsage,omitempty"`
 
@@ -36,6 +30,12 @@ type SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details struct {
 
 	// MetricName - The name that best describes the metric being collected.
 	MetricName string `json:"metricName,omitempty"`
+
+	// Day - no documentation
+	Day *time.Time `json:"day,omitempty"`
+
+	// MaxInstances - The maximum number of guests hosted by this platform for the given day.
+	MaxInstances int `json:"maxInstances,omitempty"`
 }
 
 func (softlayer_container_metric_tracking_object_virtual_host_details *SoftLayer_Container_Metric_Tracking_Object_Virtual_Host_Details) String() string {

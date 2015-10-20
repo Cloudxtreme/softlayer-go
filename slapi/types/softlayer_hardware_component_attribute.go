@@ -8,10 +8,6 @@ package types
 // configuration of RAID-1 will have a single attribute for this setting.
 type SoftLayer_Hardware_Component_Attribute struct {
 
-	// HardwareComponentAttributeTypeId - A hardware component attribute's associated
-	// [[SoftLayer_Hardware_Component_Attribute_Type|type]] Id.
-	HardwareComponentAttributeTypeId int `json:"hardwareComponentAttributeTypeId,omitempty"`
-
 	// HardwareComponentId - A hardware component attribute's associated
 	// [[SoftLayer_Hardware_Component|hardware component]] Id.
 	HardwareComponentId int `json:"hardwareComponentId,omitempty"`
@@ -19,6 +15,10 @@ type SoftLayer_Hardware_Component_Attribute struct {
 	// Value - A hardware component attribute's value. A value can have many different values depending on
 	// the attributes [[SoftLayer_Hardware_Component_Attribute_Type|type]].
 	Value string `json:"value,omitempty"`
+
+	// HardwareComponentAttributeTypeId - A hardware component attribute's associated
+	// [[SoftLayer_Hardware_Component_Attribute_Type|type]] Id.
+	HardwareComponentAttributeTypeId int `json:"hardwareComponentAttributeTypeId,omitempty"`
 
 	// HardwareComponent - A hardware component attribute's associated
 	// [[SoftLayer_Hardware_Component|Hardware Component]].

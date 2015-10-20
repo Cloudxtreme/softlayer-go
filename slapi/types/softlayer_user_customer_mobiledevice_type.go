@@ -11,9 +11,6 @@ import (
 // prominent examples being mobile phones and tablets.
 type SoftLayer_User_Customer_MobileDevice_Type struct {
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
@@ -25,6 +22,9 @@ type SoftLayer_User_Customer_MobileDevice_Type struct {
 
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_user_customer_mobiledevice_type *SoftLayer_User_Customer_MobileDevice_Type) String() string {

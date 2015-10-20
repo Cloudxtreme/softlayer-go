@@ -10,6 +10,12 @@ import (
 // inbound object for a given ticket graph.
 type SoftLayer_Container_Ticket_GraphInputs struct {
 
+	// StartDate - This is a unix timestamp that represents the begin date/time for a graph.
+	StartDate *time.Time `json:"startDate,omitempty"`
+
+	// EndDate - This is a unix timestamp that represents the stop date/time for a graph.
+	EndDate *time.Time `json:"endDate,omitempty"`
+
 	// NetworkInterfaceId - The front-end or back-end network uplink interface associated with this server.
 	NetworkInterfaceId int `json:"networkInterfaceId,omitempty"`
 
@@ -18,12 +24,6 @@ type SoftLayer_Container_Ticket_GraphInputs struct {
 
 	// ServerName - This is a human readable name for the server or rack being graphed.
 	ServerName string `json:"serverName,omitempty"`
-
-	// StartDate - This is a unix timestamp that represents the begin date/time for a graph.
-	StartDate *time.Time `json:"startDate,omitempty"`
-
-	// EndDate - This is a unix timestamp that represents the stop date/time for a graph.
-	EndDate *time.Time `json:"endDate,omitempty"`
 }
 
 func (softlayer_container_ticket_graphinputs *SoftLayer_Container_Ticket_GraphInputs) String() string {

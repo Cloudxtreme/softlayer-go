@@ -23,14 +23,14 @@ type SoftLayer_Dns_Message struct {
 	// Priority - The priority level for a DNS message. The possible levels are 'notice' and 'error'.
 	Priority string `json:"priority,omitempty"`
 
+	// Domain - no documentation
+	Domain *SoftLayer_Dns_Domain `json:"domain,omitempty"`
+
 	// ResourceRecord - The resource record that is associated with a message.
 	ResourceRecord *SoftLayer_Dns_Domain_ResourceRecord `json:"resourceRecord,omitempty"`
 
 	// Secondary - The secondary DNS record that a message belongs to.
 	Secondary *SoftLayer_Dns_Secondary `json:"secondary,omitempty"`
-
-	// Domain - no documentation
-	Domain *SoftLayer_Dns_Domain `json:"domain,omitempty"`
 }
 
 func (softlayer_dns_message *SoftLayer_Dns_Message) String() string {

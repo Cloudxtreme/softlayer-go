@@ -15,11 +15,8 @@ type SoftLayer_Hardware_Note struct {
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
-	// Note - <nil>
-	Note string `json:"note,omitempty"`
-
-	// UserRecordId - <nil>
-	UserRecordId int `json:"userRecordId,omitempty"`
+	// TypeId - <nil>
+	TypeId int `json:"typeId,omitempty"`
 
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
@@ -27,8 +24,14 @@ type SoftLayer_Hardware_Note struct {
 	// HardwareId - <nil>
 	HardwareId int `json:"hardwareId,omitempty"`
 
-	// TypeId - <nil>
-	TypeId int `json:"typeId,omitempty"`
+	// Note - <nil>
+	Note string `json:"note,omitempty"`
+
+	// UserRecordId - <nil>
+	UserRecordId int `json:"userRecordId,omitempty"`
+
+	// Hardware - <nil>
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 
 	// Type - <nil>
 	Type *SoftLayer_Hardware_Note_Type `json:"type,omitempty"`
@@ -38,9 +41,6 @@ type SoftLayer_Hardware_Note struct {
 
 	// Employee - <nil>
 	Employee *SoftLayer_User_Employee `json:"employee,omitempty"`
-
-	// Hardware - <nil>
-	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 }
 
 func (softlayer_hardware_note *SoftLayer_Hardware_Note) String() string {

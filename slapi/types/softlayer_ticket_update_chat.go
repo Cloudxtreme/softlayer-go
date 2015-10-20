@@ -10,14 +10,14 @@ import (
 // customer service representative relating to a ticket.
 type SoftLayer_Ticket_Update_Chat struct {
 
+	// Entry - no documentation
+	Entry string `json:"entry,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
 	// TicketId - The internal identifier of the ticket that a ticket update belongs to.
 	TicketId int `json:"ticketId,omitempty"`
-
-	// Entry - no documentation
-	Entry string `json:"entry,omitempty"`
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
@@ -31,26 +31,26 @@ type SoftLayer_Ticket_Update_Chat struct {
 	// This is only used if a ticket update's ''editorType'' property is
 	EditorId int `json:"editorId,omitempty"`
 
-	// FileAttachment - no documentation
-	FileAttachment []*SoftLayer_Ticket_Attachment_File `json:"fileAttachment,omitempty"`
-
-	// Ticket - no documentation
-	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
-
-	// FileAttachmentCount - no documentation
-	FileAttachmentCount uint64 `json:"fileAttachmentCount,omitempty"`
-
-	// ChangeOwnerActivity - <nil>
-	ChangeOwnerActivity string `json:"changeOwnerActivity,omitempty"`
-
 	// Editor - The user or SoftLayer employee who created a ticket update.
 	Editor *SoftLayer_User_Interface `json:"editor,omitempty"`
+
+	// Chat - no documentation
+	Chat *SoftLayer_Ticket_Chat_Liveperson `json:"chat,omitempty"`
+
+	// FileAttachment - no documentation
+	FileAttachment []*SoftLayer_Ticket_Attachment_File `json:"fileAttachment,omitempty"`
 
 	// Type - no documentation
 	Type *SoftLayer_Ticket_Update_Type `json:"type,omitempty"`
 
-	// Chat - no documentation
-	Chat *SoftLayer_Ticket_Chat_Liveperson `json:"chat,omitempty"`
+	// ChangeOwnerActivity - <nil>
+	ChangeOwnerActivity string `json:"changeOwnerActivity,omitempty"`
+
+	// FileAttachmentCount - no documentation
+	FileAttachmentCount uint64 `json:"fileAttachmentCount,omitempty"`
+
+	// Ticket - no documentation
+	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
 }
 
 func (softlayer_ticket_update_chat *SoftLayer_Ticket_Update_Chat) String() string {

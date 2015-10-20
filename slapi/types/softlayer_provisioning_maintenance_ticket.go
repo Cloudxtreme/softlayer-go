@@ -9,9 +9,6 @@ import (
 // SoftLayer_Provisioning_Maintenance_Ticket - <nil>
 type SoftLayer_Provisioning_Maintenance_Ticket struct {
 
-	// MaintClassId - <nil>
-	MaintClassId int `json:"maintClassId,omitempty"`
-
 	// MaintWindowId - <nil>
 	MaintWindowId int `json:"maintWindowId,omitempty"`
 
@@ -20,6 +17,9 @@ type SoftLayer_Provisioning_Maintenance_Ticket struct {
 
 	// TicketId - <nil>
 	TicketId int `json:"ticketId,omitempty"`
+
+	// MaintClassId - <nil>
+	MaintClassId int `json:"maintClassId,omitempty"`
 
 	// AvailableSlots - <nil>
 	AvailableSlots *SoftLayer_Provisioning_Maintenance_Slots `json:"availableSlots,omitempty"`

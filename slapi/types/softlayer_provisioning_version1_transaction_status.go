@@ -12,14 +12,14 @@ import (
 // hardware transaction status.
 type SoftLayer_Provisioning_Version1_Transaction_Status struct {
 
+	// AverageDuration - no documentation
+	AverageDuration slapi.Float64 `json:"averageDuration,omitempty"`
+
 	// FriendlyName - no documentation
 	FriendlyName string `json:"friendlyName,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
-
-	// AverageDuration - no documentation
-	AverageDuration slapi.Float64 `json:"averageDuration,omitempty"`
 
 	// NonCompletedTransactionCount - no documentation
 	NonCompletedTransactionCount uint64 `json:"nonCompletedTransactionCount,omitempty"`

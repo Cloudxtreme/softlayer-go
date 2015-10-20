@@ -6,6 +6,12 @@ package types
 // contains user's authentication key(s).
 type SoftLayer_User_Customer_ApiAuthentication struct {
 
+	// TimestampKey - no documentation
+	TimestampKey int `json:"timestampKey,omitempty"`
+
+	// UserId - no documentation
+	UserId int `json:"userId,omitempty"`
+
 	// AuthenticationKey - no documentation
 	AuthenticationKey string `json:"authenticationKey,omitempty"`
 
@@ -16,12 +22,6 @@ type SoftLayer_User_Customer_ApiAuthentication struct {
 	// Specify subnets in format and separate multiple addresses and subnets by commas. You may combine
 	// IPv4 and IPv6 addresses and subnets, for example: 192.168.0.0/16,fe80:021b::0/64.
 	IpAddressRestriction string `json:"ipAddressRestriction,omitempty"`
-
-	// TimestampKey - no documentation
-	TimestampKey int `json:"timestampKey,omitempty"`
-
-	// UserId - no documentation
-	UserId int `json:"userId,omitempty"`
 
 	// User - no documentation
 	User *SoftLayer_User_Customer `json:"user,omitempty"`

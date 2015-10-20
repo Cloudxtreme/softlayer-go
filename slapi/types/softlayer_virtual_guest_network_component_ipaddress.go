@@ -20,11 +20,11 @@ type SoftLayer_Virtual_Guest_Network_Component_IpAddress struct {
 	// instance's console.
 	Type string `json:"type,omitempty"`
 
-	// IpAddress - The IP address associated with this object's network component.
-	IpAddress *SoftLayer_Network_Subnet_IpAddress `json:"ipAddress,omitempty"`
-
 	// NetworkComponent - The network component associated with this object's IP address.
 	NetworkComponent *SoftLayer_Virtual_Guest_Network_Component `json:"networkComponent,omitempty"`
+
+	// IpAddress - The IP address associated with this object's network component.
+	IpAddress *SoftLayer_Network_Subnet_IpAddress `json:"ipAddress,omitempty"`
 }
 
 func (softlayer_virtual_guest_network_component_ipaddress *SoftLayer_Virtual_Guest_Network_Component_IpAddress) String() string {

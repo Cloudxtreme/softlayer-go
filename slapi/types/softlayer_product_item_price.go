@@ -12,37 +12,24 @@ import (
 // floating point values measured in US Dollars
 type SoftLayer_Product_Item_Price struct {
 
-	// CurrentPriceFlag - This flag is used by the [[SoftLayer_Hardware::getUpgradeItems|getUpgradeItems]]
-	// method to indicate if a product price is used for the current billing item.
-	CurrentPriceFlag bool `json:"currentPriceFlag,omitempty"`
+	// SetupFee - The setup fee associated with a product item price.
+	SetupFee slapi.Float64 `json:"setupFee,omitempty"`
 
-	// OneTimeFeeTax - A price's total tax amount of the one time fees (oneTimeFee, laborFee, and
-	// setupFee). This is only populated after the order is verified via
-	// SoftLayer_Product_Order::verifyOrder()
-	OneTimeFeeTax slapi.Float64 `json:"oneTimeFeeTax,omitempty"`
+	// UsageRate - no documentation
+	UsageRate slapi.Float64 `json:"usageRate,omitempty"`
+
+	// RecurringFeeTax - A price's tax amount of the recurring fee. This is only populated after the order
+	// is verified via SoftLayer_Product_Order::verifyOrder()
+	RecurringFeeTax slapi.Float64 `json:"recurringFeeTax,omitempty"`
+
+	// OneTimeFee - no documentation
+	OneTimeFee slapi.Float64 `json:"oneTimeFee,omitempty"`
 
 	// OrderOptions - Order options for the category that this price is associated with.
 	OrderOptions []*SoftLayer_Product_Item_Category_Order_Option_Type `json:"orderOptions,omitempty"`
 
 	// Quantity - <nil>
 	Quantity int `json:"quantity,omitempty"`
-
-	// UsageRate - no documentation
-	UsageRate slapi.Float64 `json:"usageRate,omitempty"`
-
-	// HourlyRecurringFee - The hourly price for this item, should this item be part of an hourly pricing
-	// package.
-	HourlyRecurringFee slapi.Float64 `json:"hourlyRecurringFee,omitempty"`
-
-	// OnSaleFlag - no documentation
-	OnSaleFlag bool `json:"onSaleFlag,omitempty"`
-
-	// SetupFee - The setup fee associated with a product item price.
-	SetupFee slapi.Float64 `json:"setupFee,omitempty"`
-
-	// ProratedRecurringFeeTax - A price's tax amount of the recurring fee. This is only populated after
-	// the order is verified via SoftLayer_Product_Order::verifyOrder()
-	ProratedRecurringFeeTax slapi.Float64 `json:"proratedRecurringFeeTax,omitempty"`
 
 	// LaborFee - no documentation
 	LaborFee slapi.Float64 `json:"laborFee,omitempty"`
@@ -56,19 +43,20 @@ type SoftLayer_Product_Item_Price struct {
 	// ordered in order for this to happen.
 	LocationGroupId int `json:"locationGroupId,omitempty"`
 
+	// ProratedRecurringFeeTax - A price's tax amount of the recurring fee. This is only populated after
+	// the order is verified via SoftLayer_Product_Order::verifyOrder()
+	ProratedRecurringFeeTax slapi.Float64 `json:"proratedRecurringFeeTax,omitempty"`
+
+	// OnSaleFlag - no documentation
+	OnSaleFlag bool `json:"onSaleFlag,omitempty"`
+
+	// RecurringFee - A recurring fee is a fee that happens every billing period. This fee is represented
+	// as a floating point decimal in US dollars
+	RecurringFee slapi.Float64 `json:"recurringFee,omitempty"`
+
 	// ProratedRecurringFee - A recurring fee is a fee that happens every billing period. This fee is
 	// represented as a floating point decimal in US dollars
 	ProratedRecurringFee slapi.Float64 `json:"proratedRecurringFee,omitempty"`
-
-	// RecurringFeeTax - A price's tax amount of the recurring fee. This is only populated after the order
-	// is verified via SoftLayer_Product_Order::verifyOrder()
-	RecurringFeeTax slapi.Float64 `json:"recurringFeeTax,omitempty"`
-
-	// Sort - no documentation
-	Sort int `json:"sort,omitempty"`
-
-	// OneTimeFee - no documentation
-	OneTimeFee slapi.Float64 `json:"oneTimeFee,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
@@ -76,71 +64,45 @@ type SoftLayer_Product_Item_Price struct {
 	// ItemId - no documentation
 	ItemId int `json:"itemId,omitempty"`
 
-	// RecurringFee - A recurring fee is a fee that happens every billing period. This fee is represented
-	// as a floating point decimal in US dollars
-	RecurringFee slapi.Float64 `json:"recurringFee,omitempty"`
+	// HourlyRecurringFee - The hourly price for this item, should this item be part of an hourly pricing
+	// package.
+	HourlyRecurringFee slapi.Float64 `json:"hourlyRecurringFee,omitempty"`
 
-	// RequiredCoreCount - The number of server cores required to order this item.
-	RequiredCoreCount string `json:"requiredCoreCount,omitempty"`
+	// CurrentPriceFlag - This flag is used by the [[SoftLayer_Hardware::getUpgradeItems|getUpgradeItems]]
+	// method to indicate if a product price is used for the current billing item.
+	CurrentPriceFlag bool `json:"currentPriceFlag,omitempty"`
+
+	// OneTimeFeeTax - A price's total tax amount of the one time fees (oneTimeFee, laborFee, and
+	// setupFee). This is only populated after the order is verified via
+	// SoftLayer_Product_Order::verifyOrder()
+	OneTimeFeeTax slapi.Float64 `json:"oneTimeFeeTax,omitempty"`
+
+	// Sort - no documentation
+	Sort int `json:"sort,omitempty"`
 
 	// PresetConfigurations - A list of preset configurations this price is used in.'
 	PresetConfigurations []*SoftLayer_Product_Package_Preset_Configuration `json:"presetConfigurations,omitempty"`
 
-	// CapacityRestrictionType - The type of capacity restriction by which this price must abide.
-	CapacityRestrictionType string `json:"capacityRestrictionType,omitempty"`
-
-	// OrderPremiums - <nil>
-	OrderPremiums []*SoftLayer_Product_Item_Price_Premium `json:"orderPremiums,omitempty"`
-
-	// Packages - no documentation
-	Packages []*SoftLayer_Product_Package `json:"packages,omitempty"`
-
 	// InventoryCount - A count of an item price's inventory status per datacenter.
 	InventoryCount uint64 `json:"inventoryCount,omitempty"`
-
-	// AccountRestrictions - no documentation
-	AccountRestrictions []*SoftLayer_Product_Item_Price_Account_Restriction `json:"accountRestrictions,omitempty"`
-
-	// OrderPremiumCount - no documentation
-	OrderPremiumCount uint64 `json:"orderPremiumCount,omitempty"`
-
-	// PackageReferenceCount - no documentation
-	PackageReferenceCount uint64 `json:"packageReferenceCount,omitempty"`
-
-	// DefinedSoftwareLicenseFlag - Whether this price defines a software license for its product item.
-	DefinedSoftwareLicenseFlag bool `json:"definedSoftwareLicenseFlag,omitempty"`
-
-	// BundleReferences - no documentation
-	BundleReferences []*SoftLayer_Product_Item_Bundles `json:"bundleReferences,omitempty"`
 
 	// Inventory - no documentation
 	Inventory []*SoftLayer_Product_Package_Inventory `json:"inventory,omitempty"`
 
+	// PackageReferences - no documentation
+	PackageReferences []*SoftLayer_Product_Package_Item_Prices `json:"packageReferences,omitempty"`
+
+	// Packages - no documentation
+	Packages []*SoftLayer_Product_Package `json:"packages,omitempty"`
+
+	// BigDataOsJournalDiskFlag - Whether the price is for Big Data OS/Journal disks only. (Deprecated)
+	BigDataOsJournalDiskFlag bool `json:"bigDataOsJournalDiskFlag,omitempty"`
+
 	// Item - no documentation
 	Item *SoftLayer_Product_Item `json:"item,omitempty"`
 
-	// PackageCount - A count of a price's packages under which this item is sold.
-	PackageCount uint64 `json:"packageCount,omitempty"`
-
-	// Attributes - <nil>
-	Attributes []*SoftLayer_Product_Item_Price_Attribute `json:"attributes,omitempty"`
-
-	// CapacityRestrictionMaximum - The maximum capacity value for which this price is suitable.
-	CapacityRestrictionMaximum string `json:"capacityRestrictionMaximum,omitempty"`
-
-	// Categories - no documentation
-	Categories []*SoftLayer_Product_Item_Category `json:"categories,omitempty"`
-
-	// PricingLocationGroup - The pricing location group that this price is applicable for. Prices that
-	// have a pricing location group will only be available for ordering with the locations specified on
-	// the location group.
-	PricingLocationGroup *SoftLayer_Location_Group_Pricing `json:"pricingLocationGroup,omitempty"`
-
-	// AccountRestrictionCount - A count of the account that the item price is restricted to.
-	AccountRestrictionCount uint64 `json:"accountRestrictionCount,omitempty"`
-
-	// AttributeCount - no documentation
-	AttributeCount uint64 `json:"attributeCount,omitempty"`
+	// CapacityRestrictionType - The type of capacity restriction by which this price must abide.
+	CapacityRestrictionType string `json:"capacityRestrictionType,omitempty"`
 
 	// BundleReferenceCount - no documentation
 	BundleReferenceCount uint64 `json:"bundleReferenceCount,omitempty"`
@@ -148,17 +110,55 @@ type SoftLayer_Product_Item_Price struct {
 	// PresetConfigurationCount - A count of a list of preset configurations this price is used in.'
 	PresetConfigurationCount uint64 `json:"presetConfigurationCount,omitempty"`
 
-	// BigDataOsJournalDiskFlag - Whether the price is for Big Data OS/Journal disks only. (Deprecated)
-	BigDataOsJournalDiskFlag bool `json:"bigDataOsJournalDiskFlag,omitempty"`
+	// Attributes - <nil>
+	Attributes []*SoftLayer_Product_Item_Price_Attribute `json:"attributes,omitempty"`
 
-	// PackageReferences - no documentation
-	PackageReferences []*SoftLayer_Product_Package_Item_Prices `json:"packageReferences,omitempty"`
+	// CapacityRestrictionMaximum - The maximum capacity value for which this price is suitable.
+	CapacityRestrictionMaximum string `json:"capacityRestrictionMaximum,omitempty"`
+
+	// BundleReferences - no documentation
+	BundleReferences []*SoftLayer_Product_Item_Bundles `json:"bundleReferences,omitempty"`
+
+	// AccountRestrictionCount - A count of the account that the item price is restricted to.
+	AccountRestrictionCount uint64 `json:"accountRestrictionCount,omitempty"`
+
+	// AttributeCount - no documentation
+	AttributeCount uint64 `json:"attributeCount,omitempty"`
+
+	// PackageCount - A count of a price's packages under which this item is sold.
+	PackageCount uint64 `json:"packageCount,omitempty"`
+
+	// AccountRestrictions - no documentation
+	AccountRestrictions []*SoftLayer_Product_Item_Price_Account_Restriction `json:"accountRestrictions,omitempty"`
+
+	// OrderPremiums - <nil>
+	OrderPremiums []*SoftLayer_Product_Item_Price_Premium `json:"orderPremiums,omitempty"`
+
+	// PricingLocationGroup - The pricing location group that this price is applicable for. Prices that
+	// have a pricing location group will only be available for ordering with the locations specified on
+	// the location group.
+	PricingLocationGroup *SoftLayer_Location_Group_Pricing `json:"pricingLocationGroup,omitempty"`
+
+	// PackageReferenceCount - no documentation
+	PackageReferenceCount uint64 `json:"packageReferenceCount,omitempty"`
 
 	// CapacityRestrictionMinimum - The minimum capacity value for which this price is suitable.
 	CapacityRestrictionMinimum string `json:"capacityRestrictionMinimum,omitempty"`
 
+	// DefinedSoftwareLicenseFlag - Whether this price defines a software license for its product item.
+	DefinedSoftwareLicenseFlag bool `json:"definedSoftwareLicenseFlag,omitempty"`
+
+	// Categories - no documentation
+	Categories []*SoftLayer_Product_Item_Category `json:"categories,omitempty"`
+
 	// CategoryCount - A count of all categories which this item is a member.
 	CategoryCount uint64 `json:"categoryCount,omitempty"`
+
+	// OrderPremiumCount - no documentation
+	OrderPremiumCount uint64 `json:"orderPremiumCount,omitempty"`
+
+	// RequiredCoreCount - The number of server cores required to order this item.
+	RequiredCoreCount string `json:"requiredCoreCount,omitempty"`
 }
 
 func (softlayer_product_item_price *SoftLayer_Product_Item_Price) String() string {

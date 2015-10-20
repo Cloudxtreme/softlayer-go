@@ -10,8 +10,14 @@ package types
 // answer that should be provided.
 type SoftLayer_Product_Item_Category_Question struct {
 
+	// AnswerValueExpression - no documentation
+	AnswerValueExpression string `json:"answerValueExpression,omitempty"`
+
 	// FieldTypeId - no documentation
 	FieldTypeId int `json:"fieldTypeId,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
@@ -23,24 +29,18 @@ type SoftLayer_Product_Item_Category_Question struct {
 	// like.
 	ValueExample string `json:"valueExample,omitempty"`
 
-	// AnswerValueExpression - no documentation
-	AnswerValueExpression string `json:"answerValueExpression,omitempty"`
-
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 
 	// FieldType - The type of field that should be used in an form to accept an answer from an end user.
 	FieldType *SoftLayer_Product_Item_Category_Question_Field_Type `json:"fieldType,omitempty"`
 
+	// ItemCategoryReferences - The link between an item category and an item category question.
+	ItemCategoryReferences []*SoftLayer_Product_Item_Category_Question_Xref `json:"itemCategoryReferences,omitempty"`
+
 	// ItemCategoryReferenceCount - A count of the link between an item category and an item category
 	// question.
 	ItemCategoryReferenceCount uint64 `json:"itemCategoryReferenceCount,omitempty"`
-
-	// ItemCategoryReferences - The link between an item category and an item category question.
-	ItemCategoryReferences []*SoftLayer_Product_Item_Category_Question_Xref `json:"itemCategoryReferences,omitempty"`
 }
 
 func (softlayer_product_item_category_question *SoftLayer_Product_Item_Category_Question) String() string {

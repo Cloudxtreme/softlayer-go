@@ -8,8 +8,9 @@ package types
 // that can be used to predefined how a hard drives partitions will be configured.
 type SoftLayer_Hardware_Component_Partition_Template struct {
 
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
+	// AccountId - A partition template's owner. The [[SoftLayer_Account|Account]] that a template was
+	// created by.
+	AccountId int `json:"accountId,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
@@ -18,6 +19,9 @@ type SoftLayer_Hardware_Component_Partition_Template struct {
 	// [[SoftLayer_Hardware_Component_Partition_OperatingSystem|Operating System]] Id.
 	PartitionOperatingSystemId int `json:"partitionOperatingSystemId,omitempty"`
 
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
+
 	// StatusCode - no documentation
 	StatusCode string `json:"statusCode,omitempty"`
 
@@ -25,33 +29,29 @@ type SoftLayer_Hardware_Component_Partition_Template struct {
 	// by SoftLayer customers.
 	TemplateType string `json:"templateType,omitempty"`
 
-	// AccountId - A partition template's owner. The [[SoftLayer_Account|Account]] that a template was
-	// created by.
-	AccountId int `json:"accountId,omitempty"`
+	// DataCount - A count of an individual partition for a partition template. This is identical to
+	// 'partitionTemplatePartition' except this will sort unix partitions.
+	DataCount uint64 `json:"dataCount,omitempty"`
 
 	// Account - A partition template's associated [[SoftLayer_Account|Account]].
 	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// ExpireDate - <nil>
+	ExpireDate string `json:"expireDate,omitempty"`
+
+	// PartitionTemplatePartitionCount - A count of an individual partition for a partition template.
+	PartitionTemplatePartitionCount uint64 `json:"partitionTemplatePartitionCount,omitempty"`
 
 	// Data - An individual partition for a partition template. This is identical to
 	// 'partitionTemplatePartition' except this will sort unix partitions.
 	Data []*SoftLayer_Hardware_Component_Partition_Template_Partition `json:"data,omitempty"`
 
-	// ExpireDate - <nil>
-	ExpireDate string `json:"expireDate,omitempty"`
-
 	// PartitionOperatingSystem - A partition template's associated
 	// [[SoftLayer_Hardware_Component_Partition_OperatingSystem|Operating System]].
 	PartitionOperatingSystem *SoftLayer_Hardware_Component_Partition_OperatingSystem `json:"partitionOperatingSystem,omitempty"`
 
-	// DataCount - A count of an individual partition for a partition template. This is identical to
-	// 'partitionTemplatePartition' except this will sort unix partitions.
-	DataCount uint64 `json:"dataCount,omitempty"`
-
 	// PartitionTemplatePartition - no documentation
 	PartitionTemplatePartition []*SoftLayer_Hardware_Component_Partition_Template_Partition `json:"partitionTemplatePartition,omitempty"`
-
-	// PartitionTemplatePartitionCount - A count of an individual partition for a partition template.
-	PartitionTemplatePartitionCount uint64 `json:"partitionTemplatePartitionCount,omitempty"`
 }
 
 func (softlayer_hardware_component_partition_template *SoftLayer_Hardware_Component_Partition_Template) String() string {

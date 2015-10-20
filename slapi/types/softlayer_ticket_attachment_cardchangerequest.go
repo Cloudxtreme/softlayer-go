@@ -10,17 +10,17 @@ import (
 // change request
 type SoftLayer_Ticket_Attachment_CardChangeRequest struct {
 
-	// AttachmentId - The internal identifier of an item that is attached to a ticket.
-	AttachmentId int `json:"attachmentId,omitempty"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
 	// TicketId - The internal identifier of the ticket that an item is attached to.
 	TicketId int `json:"ticketId,omitempty"`
+
+	// AttachmentId - The internal identifier of an item that is attached to a ticket.
+	AttachmentId int `json:"attachmentId,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Resource - The card change request that is attached to a ticket.
 	Resource *SoftLayer_Billing_Payment_Card_ChangeRequest `json:"resource,omitempty"`

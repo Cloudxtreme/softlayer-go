@@ -16,14 +16,14 @@ type SoftLayer_Product_Item_Bundles struct {
 	// ItemPriceId - no documentation
 	ItemPriceId int `json:"itemPriceId,omitempty"`
 
+	// BundleItem - no documentation
+	BundleItem *SoftLayer_Product_Item `json:"bundleItem,omitempty"`
+
 	// Category - no documentation
 	Category *SoftLayer_Product_Item_Category `json:"category,omitempty"`
 
 	// ItemPrice - no documentation
 	ItemPrice *SoftLayer_Product_Item_Price `json:"itemPrice,omitempty"`
-
-	// BundleItem - no documentation
-	BundleItem *SoftLayer_Product_Item `json:"bundleItem,omitempty"`
 }
 
 func (softlayer_product_item_bundles *SoftLayer_Product_Item_Bundles) String() string {

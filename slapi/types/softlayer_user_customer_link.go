@@ -9,9 +9,6 @@ import (
 // SoftLayer_User_Customer_Link - <nil>
 type SoftLayer_User_Customer_Link struct {
 
-	// UserId - <nil>
-	UserId int `json:"userId,omitempty"`
-
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -27,11 +24,14 @@ type SoftLayer_User_Customer_Link struct {
 	// ServiceProviderId - <nil>
 	ServiceProviderId int `json:"serviceProviderId,omitempty"`
 
-	// User - <nil>
-	User *SoftLayer_User_Customer `json:"user,omitempty"`
+	// UserId - <nil>
+	UserId int `json:"userId,omitempty"`
 
 	// ServiceProvider - <nil>
 	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`
+
+	// User - <nil>
+	User *SoftLayer_User_Customer `json:"user,omitempty"`
 }
 
 func (softlayer_user_customer_link *SoftLayer_User_Customer_Link) String() string {

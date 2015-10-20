@@ -10,6 +10,9 @@ import (
 // password changes for a specific SoftLayer_Software Component
 type SoftLayer_Software_Component_Password_History struct {
 
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
 	// Notes - A note string stored for this username/password pair.
 	Notes string `json:"notes,omitempty"`
 
@@ -21,9 +24,6 @@ type SoftLayer_Software_Component_Password_History struct {
 
 	// Username - The username part of this specific password history instance.
 	Username string `json:"username,omitempty"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// SoftwareComponent - An installed and licensed instance of a piece of software
 	SoftwareComponent *SoftLayer_Software_Component `json:"softwareComponent,omitempty"`

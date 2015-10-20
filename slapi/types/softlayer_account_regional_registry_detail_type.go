@@ -14,9 +14,6 @@ import (
 // a customer with the
 type SoftLayer_Account_Regional_Registry_Detail_Type struct {
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -28,6 +25,9 @@ type SoftLayer_Account_Regional_Registry_Detail_Type struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
 }
 
 func (softlayer_account_regional_registry_detail_type *SoftLayer_Account_Regional_Registry_Detail_Type) String() string {

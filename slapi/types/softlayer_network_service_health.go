@@ -26,11 +26,11 @@ type SoftLayer_Network_Service_Health struct {
 	// StatusId - no documentation
 	StatusId int `json:"statusId,omitempty"`
 
-	// Status - The status portion of a service/status relationship.
-	Status *SoftLayer_Network_Service_Health_Status `json:"status,omitempty"`
-
 	// Location - no documentation
 	Location *SoftLayer_Location `json:"location,omitempty"`
+
+	// Status - The status portion of a service/status relationship.
+	Status *SoftLayer_Network_Service_Health_Status `json:"status,omitempty"`
 }
 
 func (softlayer_network_service_health *SoftLayer_Network_Service_Health) String() string {

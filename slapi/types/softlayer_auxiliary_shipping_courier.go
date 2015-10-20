@@ -6,9 +6,6 @@ package types
 // general information relating the different (major) couriers that SoftLayer may use for shipping.
 type SoftLayer_Auxiliary_Shipping_Courier struct {
 
-	// Url - no documentation
-	Url string `json:"url,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -17,6 +14,9 @@ type SoftLayer_Auxiliary_Shipping_Courier struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
+
+	// Url - no documentation
+	Url string `json:"url,omitempty"`
 }
 
 func (softlayer_auxiliary_shipping_courier *SoftLayer_Auxiliary_Shipping_Courier) String() string {

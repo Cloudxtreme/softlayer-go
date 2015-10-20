@@ -7,6 +7,9 @@ package types
 // services that SoftLayer offers.
 type SoftLayer_Product_Catalog struct {
 
+	// Prices - no documentation
+	Prices []*SoftLayer_Product_Item_Price `json:"prices,omitempty"`
+
 	// Products - no documentation
 	Products []*SoftLayer_Product_Item `json:"products,omitempty"`
 
@@ -27,9 +30,6 @@ type SoftLayer_Product_Catalog struct {
 
 	// Packages - no documentation
 	Packages []*SoftLayer_Product_Package `json:"packages,omitempty"`
-
-	// Prices - no documentation
-	Prices []*SoftLayer_Product_Item_Price `json:"prices,omitempty"`
 }
 
 func (softlayer_product_catalog *SoftLayer_Product_Catalog) String() string {

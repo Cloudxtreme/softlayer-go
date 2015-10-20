@@ -13,6 +13,12 @@ type SoftLayer_Survey struct {
 	// Active - no documentation
 	Active int `json:"active,omitempty"`
 
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -22,20 +28,14 @@ type SoftLayer_Survey struct {
 	// TypeId - no documentation
 	TypeId int `json:"typeId,omitempty"`
 
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
-	// Status - no documentation
-	Status *SoftLayer_Survey_Status `json:"status,omitempty"`
+	// Questions - no documentation
+	Questions []*SoftLayer_Survey_Question `json:"questions,omitempty"`
 
 	// Type - no documentation
 	Type *SoftLayer_Survey_Type `json:"type,omitempty"`
 
-	// Questions - no documentation
-	Questions []*SoftLayer_Survey_Question `json:"questions,omitempty"`
+	// Status - no documentation
+	Status *SoftLayer_Survey_Status `json:"status,omitempty"`
 
 	// QuestionCount - no documentation
 	QuestionCount uint64 `json:"questionCount,omitempty"`

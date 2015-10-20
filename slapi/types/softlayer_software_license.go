@@ -13,14 +13,14 @@ type SoftLayer_Software_License struct {
 	// for.
 	SoftwareDescriptionId int `json:"softwareDescriptionId,omitempty"`
 
-	// SoftwareDescription - A Description of the software that this license instance is valid for.
-	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription,omitempty"`
-
 	// Account - The account that owns this specific License instance.
 	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// Owner - The account that owns this specific License instance.
 	Owner *SoftLayer_Account `json:"owner,omitempty"`
+
+	// SoftwareDescription - A Description of the software that this license instance is valid for.
+	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription,omitempty"`
 }
 
 func (softlayer_software_license *SoftLayer_Software_License) String() string {

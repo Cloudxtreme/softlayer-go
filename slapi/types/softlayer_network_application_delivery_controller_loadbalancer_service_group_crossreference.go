@@ -5,14 +5,14 @@ package types
 // SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference - <nil>
 type SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference struct {
 
+	// Weight - <nil>
+	Weight int `json:"weight,omitempty"`
+
 	// ServiceGroupId - <nil>
 	ServiceGroupId int `json:"serviceGroupId,omitempty"`
 
 	// ServiceId - <nil>
 	ServiceId int `json:"serviceId,omitempty"`
-
-	// Weight - <nil>
-	Weight int `json:"weight,omitempty"`
 
 	// Service - <nil>
 	Service *SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service `json:"service,omitempty"`

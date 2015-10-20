@@ -5,6 +5,9 @@ package types
 // SoftLayer_Location_Group - <nil>
 type SoftLayer_Location_Group struct {
 
+	// SecurityLevelId - <nil>
+	SecurityLevelId int `json:"securityLevelId,omitempty"`
+
 	// Description - <nil>
 	Description string `json:"description,omitempty"`
 
@@ -16,9 +19,6 @@ type SoftLayer_Location_Group struct {
 
 	// Name - <nil>
 	Name string `json:"name,omitempty"`
-
-	// SecurityLevelId - <nil>
-	SecurityLevelId int `json:"securityLevelId,omitempty"`
 
 	// LocationCount - no documentation
 	LocationCount uint64 `json:"locationCount,omitempty"`

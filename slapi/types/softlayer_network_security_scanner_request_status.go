@@ -9,11 +9,11 @@ package types
 // course of a scan's execution.
 type SoftLayer_Network_Security_Scanner_Request_Status struct {
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_security_scanner_request_status *SoftLayer_Network_Security_Scanner_Request_Status) String() string {

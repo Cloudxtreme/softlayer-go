@@ -5,9 +5,6 @@ package types
 // SoftLayer_Service_Provider - <nil>
 type SoftLayer_Service_Provider struct {
 
-	// Description - <nil>
-	Description string `json:"description,omitempty"`
-
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
 
@@ -16,6 +13,9 @@ type SoftLayer_Service_Provider struct {
 
 	// Name - <nil>
 	Name string `json:"name,omitempty"`
+
+	// Description - <nil>
+	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_service_provider *SoftLayer_Service_Provider) String() string {

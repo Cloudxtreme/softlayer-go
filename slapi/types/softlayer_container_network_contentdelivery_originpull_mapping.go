@@ -7,6 +7,9 @@ package types
 // currently supports origin pull method for content.
 type SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping struct {
 
+	// OriginUrl - The URL of a origin server. A URL can contain a directory path.
+	OriginUrl string `json:"originUrl,omitempty"`
+
 	// Cname - no documentation
 	Cname string `json:"cname,omitempty"`
 
@@ -18,9 +21,6 @@ type SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping struct {
 
 	// MediaType - The type of a media supported by Supported media types are: and
 	MediaType string `json:"mediaType,omitempty"`
-
-	// OriginUrl - The URL of a origin server. A URL can contain a directory path.
-	OriginUrl string `json:"originUrl,omitempty"`
 }
 
 func (softlayer_container_network_contentdelivery_originpull_mapping *SoftLayer_Container_Network_ContentDelivery_OriginPull_Mapping) String() string {

@@ -9,12 +9,12 @@ package types
 // ever.
 type SoftLayer_Network_Component_Uplink_Hardware struct {
 
-	// Hardware - A network component uplink's connected [[SoftLayer_Hardware|Hardware]].
-	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
-
 	// NetworkComponent - The [[SoftLayer_Network_Component|Network Component]] that a uplink connection
 	// belongs to..
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent,omitempty"`
+
+	// Hardware - A network component uplink's connected [[SoftLayer_Hardware|Hardware]].
+	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
 }
 
 func (softlayer_network_component_uplink_hardware *SoftLayer_Network_Component_Uplink_Hardware) String() string {

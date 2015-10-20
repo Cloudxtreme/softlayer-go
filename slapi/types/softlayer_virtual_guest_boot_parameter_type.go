@@ -11,7 +11,7 @@ import (
 // mode and boot into bash.
 type SoftLayer_Virtual_Guest_Boot_Parameter_Type struct {
 
-	// ModifyDate - no documentation
+	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// Name - no documentation
@@ -20,7 +20,10 @@ type SoftLayer_Virtual_Guest_Boot_Parameter_Type struct {
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
 
-	// CreateDate - no documentation
+	// BootOption - no documentation
+	BootOption string `json:"bootOption,omitempty"`
+
+	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Description - no documentation

@@ -5,6 +5,12 @@ package types
 // SoftLayer_Container_Network_Authentication_Data - This object holds authentication data to a server.
 type SoftLayer_Container_Network_Authentication_Data struct {
 
+	// Type - The type of network protocol. This can be ftp, ssh and so on.
+	Type string `json:"type,omitempty"`
+
+	// Username - no documentation
+	Username string `json:"username,omitempty"`
+
 	// Host - no documentation
 	Host string `json:"host,omitempty"`
 
@@ -13,12 +19,6 @@ type SoftLayer_Container_Network_Authentication_Data struct {
 
 	// Port - no documentation
 	Port int `json:"port,omitempty"`
-
-	// Type - The type of network protocol. This can be ftp, ssh and so on.
-	Type string `json:"type,omitempty"`
-
-	// Username - no documentation
-	Username string `json:"username,omitempty"`
 }
 
 func (softlayer_container_network_authentication_data *SoftLayer_Container_Network_Authentication_Data) String() string {

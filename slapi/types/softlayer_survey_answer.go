@@ -6,9 +6,6 @@ package types
 // relating to a single SoftLayer survey answer.
 type SoftLayer_Survey_Answer struct {
 
-	// SurveyQuestionId - A survey answer's associated [[SoftLayer_Survey_Question|Survey Question]] Id.
-	SurveyQuestionId int `json:"surveyQuestionId,omitempty"`
-
 	// Answer - A survey answer's answer that a user can response too.
 	Answer string `json:"answer,omitempty"`
 
@@ -17,6 +14,9 @@ type SoftLayer_Survey_Answer struct {
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
+
+	// SurveyQuestionId - A survey answer's associated [[SoftLayer_Survey_Question|Survey Question]] Id.
+	SurveyQuestionId int `json:"surveyQuestionId,omitempty"`
 
 	// SurveyQuestion - no documentation
 	SurveyQuestion *SoftLayer_Survey_Question `json:"surveyQuestion,omitempty"`

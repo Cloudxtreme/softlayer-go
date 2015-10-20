@@ -11,97 +11,18 @@ import (
 // to place a global load balancer order with SoftLayer.
 type SoftLayer_Container_Product_Order_Network_LoadBalancer_Global struct {
 
-	// Hardware - For orders that contain servers (bare metal, virtual server, big data, etc.), the
-	// hardware property is required. This property is an array of [[SoftLayer_Hardware]] objects. The
-	// hostname and domain properties are required for each hardware object. Note that virtual server
-	// ([[SoftLayer_Container_Product_Order_Virtual_Guest]]) orders may populate this field instead of the
-	// virtualGuests property.
-	Hardware []*SoftLayer_Hardware `json:"hardware,omitempty"`
-
-	// ProratedOrderTotal - This is the same as the proratedInitialCharge, except the balance on the
-	// account is ignored. This is the prorated total amount of the order.
-	ProratedOrderTotal slapi.Float64 `json:"proratedOrderTotal,omitempty"`
-
-	// SourceVirtualGuestId - An optional computing instance identifier to be used as an installation base
-	// for a computing instance order
-	SourceVirtualGuestId int `json:"sourceVirtualGuestId,omitempty"`
-
-	// PresaleEvent - If there are any presale events available for an order, this value will be populated.
-	// It is set internally and is not required for end users when placing an order. See
-	// [[SoftLayer_Sales_Presale_Event]] for more info.
-	PresaleEvent *SoftLayer_Sales_Presale_Event `json:"presaleEvent,omitempty"`
-
-	// PackageId - The [[SoftLayer_Product_Package]] id for an order container. This is required to place
-	// an order.
-	PackageId int `json:"packageId,omitempty"`
-
 	// BillingOrderItemId - This is the ID of the [[SoftLayer_Billing_Order_Item]] of this
 	// configuration/container. It is used for rebuilding an order container from a quote and is set
 	// automatically.
 	BillingOrderItemId int `json:"billingOrderItemId,omitempty"`
 
-	// DeviceFingerprintId - no documentation
-	DeviceFingerprintId string `json:"deviceFingerprintId,omitempty"`
+	// CancelUrl - The URL to which PayPal redirects browser after checkout has been canceled before
+	// completion of a payment.
+	CancelUrl string `json:"cancelUrl,omitempty"`
 
-	// SshKeys - The containers which hold SoftLayer_Security_Ssh_Key IDs to add to their respective
-	// servers. The order of containers passed in needs to match the order they are assigned to either
-	// hardware or virtualGuests. SSH Keys will not be assigned for servers with Microsoft Windows.
-	SshKeys []*SoftLayer_Container_Product_Order_SshKeys `json:"sshKeys,omitempty"`
-
-	// ResourceGroupName - This variable specifies the name of the resource group the server configuration
-	// belongs to. For MongoDB Replica sets, it would be the replica set name.
-	ResourceGroupName string `json:"resourceGroupName,omitempty"`
-
-	// CurrencyShortName - no documentation
-	CurrencyShortName string `json:"currencyShortName,omitempty"`
-
-	// StepId - An optional parameter for step-based order processing.
-	StepId int `json:"stepId,omitempty"`
-
-	// PaymentType - The Payment Type is Optional. If nothing is sent in, then the normal method of payment
-	// will be used. For paypal customers, this means a paypalToken will be returned in the receipt. This
-	// token is to be used on the paypal website to complete the order. For Credit Card customers, the card
-	// on file in our system will be used to make an initial authorization. To force the order to use a
-	// payment type, use one of the following: or
-	PaymentType string `json:"paymentType,omitempty"`
-
-	// IsManagedOrder - Flag to identify a "managed" order. This value is set internally.
-	IsManagedOrder int `json:"isManagedOrder,omitempty"`
-
-	// Hostname - no documentation
-	Hostname string `json:"hostname,omitempty"`
-
-	// PrivateCloudOrderType - Type of Virtual Server (Private Node) order. Potential values:
-	PrivateCloudOrderType string `json:"privateCloudOrderType,omitempty"`
-
-	// UseHourlyPricing - An optional flag to use hourly pricing instead of standard monthly pricing.
-	UseHourlyPricing bool `json:"useHourlyPricing,omitempty"`
-
-	// StorageGroups - For orders that want to add storage groups such as across multiple disks, simply add
-	// [[SoftLayer_Container_Product_Order_Storage_Group]] objects to this array. Storage groups will only
-	// be used if the disk controller price is selected. Any other disk controller types will ignore the
-	// storage groups set here. The first storage group in this array will be considered the primary
-	// storage group, which is used for the OS. Any other storage groups will act as data storage.
-	StorageGroups []*SoftLayer_Container_Product_Order_Storage_Group `json:"storageGroups,omitempty"`
-
-	// FlexibleCreditProgramPrice - The [[SoftLayer_Product_Item_Price]] for the Flexible Credit Program
-	// discount. The oneTimeFee field contains the calculated discount being applied to the order.
-	FlexibleCreditProgramPrice *SoftLayer_Product_Item_Price `json:"flexibleCreditProgramPrice,omitempty"`
-
-	// PreTaxSetup - no documentation
-	PreTaxSetup slapi.Float64 `json:"preTaxSetup,omitempty"`
-
-	// Location - The [[SoftLayer_Location_Region]] keyname or specific [[SoftLayer_Location_Datacenter]]
-	// id where the order should be provisioned. If this value is provided and the regionalGroup property
-	// is also specified, an exception will be thrown indicating that only 1 is allowed.
-	Location string `json:"location,omitempty"`
-
-	// ServerCoreCount - The number of cores for the server being ordered. This value is set internally.
-	ServerCoreCount int `json:"serverCoreCount,omitempty"`
-
-	// TechIncubatorItemPrice - The SoftLayer_Product_Item_Price for the Tech Incubator discount. The
-	// oneTimeFee field contain the calculated discount being applied to the order.
-	TechIncubatorItemPrice *SoftLayer_Product_Item_Price `json:"techIncubatorItemPrice,omitempty"`
+	// PostTaxRecurring - The post-tax recurring charge for the order. This is the sum of preTaxRecurring +
+	// totalRecurringTax.
+	PostTaxRecurring slapi.Float64 `json:"postTaxRecurring,omitempty"`
 
 	// RegionalGroup - Specifying a regional group name allows you to not worry about placing your server
 	// or service at a specific datacenter, but to any datacenter within that regional group. See
@@ -113,18 +34,119 @@ type SoftLayer_Container_Product_Order_Network_LoadBalancer_Global struct {
 	// datacenter on the regional group object.
 	RegionalGroup string `json:"regionalGroup,omitempty"`
 
+	// PostTaxRecurringHourly - The post-tax recurring hourly charge for the order. Since taxes are not
+	// calculated for hourly orders, this value will be the same as preTaxRecurringHourly.
+	PostTaxRecurringHourly slapi.Float64 `json:"postTaxRecurringHourly,omitempty"`
+
+	// ResourceGroupName - This variable specifies the name of the resource group the server configuration
+	// belongs to. For MongoDB Replica sets, it would be the replica set name.
+	ResourceGroupName string `json:"resourceGroupName,omitempty"`
+
 	// PromotionCode - no documentation
 	PromotionCode string `json:"promotionCode,omitempty"`
+
+	// PaymentType - The Payment Type is Optional. If nothing is sent in, then the normal method of payment
+	// will be used. For paypal customers, this means a paypalToken will be returned in the receipt. This
+	// token is to be used on the paypal website to complete the order. For Credit Card customers, the card
+	// on file in our system will be used to make an initial authorization. To force the order to use a
+	// payment type, use one of the following: or
+	PaymentType string `json:"paymentType,omitempty"`
 
 	// PresetId - A preset configuration id for the package. Is required if not submitting any prices.
 	PresetId int `json:"presetId,omitempty"`
 
-	// ResourceGroupTemplateId - An optional resource group template identifier to be used as a deployment
-	// base for a Virtual Server (Private Node) order.
-	ResourceGroupTemplateId int `json:"resourceGroupTemplateId,omitempty"`
+	// ImageTemplateId - An optional virtual disk image template identifier to be used as an installation
+	// base for a computing instance order
+	ImageTemplateId int `json:"imageTemplateId,omitempty"`
 
-	// Domain - no documentation
-	Domain string `json:"domain,omitempty"`
+	// ProratedOrderTotal - This is the same as the proratedInitialCharge, except the balance on the
+	// account is ignored. This is the prorated total amount of the order.
+	ProratedOrderTotal slapi.Float64 `json:"proratedOrderTotal,omitempty"`
+
+	// OrderVerificationExceptions - Collection of exceptions resulting from the verification of the order.
+	// This value is set internally and is not required for end users when placing an order. When placing
+	// API orders, users can use this value to determine the container-specific exception that was thrown.
+	OrderVerificationExceptions []*SoftLayer_Container_Exception `json:"orderVerificationExceptions,omitempty"`
+
+	// IsManagedOrder - Flag to identify a "managed" order. This value is set internally.
+	IsManagedOrder int `json:"isManagedOrder,omitempty"`
+
+	// ReturnUrl - The URL to which PayPal redirects browser after a payment is completed.
+	ReturnUrl string `json:"returnUrl,omitempty"`
+
+	// PrimaryDiskPartitionId - The id of a [[SoftLayer_Hardware_Component_Partition_Template]]. This
+	// property is optional. If no partition template is provided, a default will be used according to the
+	// operating system chosen with the order. Using the
+	// [[SoftLayer_Hardware_Component_Partition_OperatingSystem]] service, getPartitionTemplates will
+	// return those available for the particular operating system.
+	PrimaryDiskPartitionId int `json:"primaryDiskPartitionId,omitempty"`
+
+	// PrivateCloudOrderFlag - Flag for identifying a container as Virtual Server (Private Node).
+	PrivateCloudOrderFlag bool `json:"privateCloudOrderFlag,omitempty"`
+
+	// Priorities - no documentation
+	Priorities []string `json:"priorities,omitempty"`
+
+	// ItemCategoryQuestionAnswers - The collection of
+	// [[SoftLayer_Container_Product_Item_Category_Question_Answer]] for any product category that has
+	// additional questions requiring user input.
+	ItemCategoryQuestionAnswers []*SoftLayer_Container_Product_Item_Category_Question_Answer `json:"itemCategoryQuestionAnswers,omitempty"`
+
+	// ContainerIdentifier - User-specified description to identify a particular order container. This is
+	// useful if you have a multi-configuration order (multiple orderContainers ) and you want to be able
+	// to easily determine one from another. Populating this value may be helpful if an exception is thrown
+	// when placing an order and it's tied to a specific order container.
+	ContainerIdentifier string `json:"containerIdentifier,omitempty"`
+
+	// ContainerSplHash - This hash is internally-generated and is used to for tracking order containers.
+	ContainerSplHash string `json:"containerSplHash,omitempty"`
+
+	// CurrencyShortName - no documentation
+	CurrencyShortName string `json:"currencyShortName,omitempty"`
+
+	// StepId - An optional parameter for step-based order processing.
+	StepId int `json:"stepId,omitempty"`
+
+	// PackageId - The [[SoftLayer_Product_Package]] id for an order container. This is required to place
+	// an order.
+	PackageId int `json:"packageId,omitempty"`
+
+	// QuoteName - no documentation
+	QuoteName string `json:"quoteName,omitempty"`
+
+	// UseHourlyPricing - An optional flag to use hourly pricing instead of standard monthly pricing.
+	UseHourlyPricing bool `json:"useHourlyPricing,omitempty"`
+
+	// BigDataOrderFlag - Flag for identifying an order for Big Data Deployment.
+	BigDataOrderFlag bool `json:"bigDataOrderFlag,omitempty"`
+
+	// VirtualGuests - For virtual guest (virtual server) orders, this property is required if you did not
+	// specify data in the hardware property. This is an array of [[SoftLayer_Virtual_Guest]] objects. The
+	// hostname and domain properties are required for each virtual guest object. There is no need to
+	// specify data in this property and the hardware property - only one is required for virtual server
+	// orders.
+	VirtualGuests []*SoftLayer_Virtual_Guest `json:"virtualGuests,omitempty"`
+
+	// DisplayLayerSessionId - This is the configuration identifier for tracking orders on the order forms.
+	DisplayLayerSessionId string `json:"displayLayerSessionId,omitempty"`
+
+	// PostTaxRecurringMonthly - The post-tax recurring monthly charge for the order. This is the sum of
+	// preTaxRecurringMonthly + totalRecurringTax.
+	PostTaxRecurringMonthly slapi.Float64 `json:"postTaxRecurringMonthly,omitempty"`
+
+	// TotalRecurringTax - no documentation
+	TotalRecurringTax slapi.Float64 `json:"totalRecurringTax,omitempty"`
+
+	// Message - A generic message about the order. Does not need to be sent in with any orders.
+	Message string `json:"message,omitempty"`
+
+	// SendQuoteEmailFlag - This flag indicates that the quote should be sent to the email address
+	// associated with the account or order.
+	SendQuoteEmailFlag bool `json:"sendQuoteEmailFlag,omitempty"`
+
+	// PreTaxRecurringHourly - The pre-tax hourly recurring total of the order. If there are only monthly
+	// prices on the order, this value will be 0.
+	PreTaxRecurringHourly slapi.Float64 `json:"preTaxRecurringHourly,omitempty"`
 
 	// OrderContainers - Orders may contain an array of configurations. Populating this property allows you
 	// to purchase multiple configurations within a single order. Each order container will have its own
@@ -135,31 +157,6 @@ type SoftLayer_Container_Product_Order_Network_LoadBalancer_Global struct {
 	// container, but since the billingInformation is a property that's not specific to a single order
 	// container (but the order as a whole) it must be populated on the base container.
 	OrderContainers []*SoftLayer_Container_Product_Order `json:"orderContainers,omitempty"`
-
-	// PrimaryDiskPartitionId - The id of a [[SoftLayer_Hardware_Component_Partition_Template]]. This
-	// property is optional. If no partition template is provided, a default will be used according to the
-	// operating system chosen with the order. Using the
-	// [[SoftLayer_Hardware_Component_Partition_OperatingSystem]] service, getPartitionTemplates will
-	// return those available for the particular operating system.
-	PrimaryDiskPartitionId int `json:"primaryDiskPartitionId,omitempty"`
-
-	// BigDataOrderFlag - Flag for identifying an order for Big Data Deployment.
-	BigDataOrderFlag bool `json:"bigDataOrderFlag,omitempty"`
-
-	// ImageTemplateId - An optional virtual disk image template identifier to be used as an installation
-	// base for a computing instance order
-	ImageTemplateId int `json:"imageTemplateId,omitempty"`
-
-	// ExtendedHardwareTesting - <nil>
-	ExtendedHardwareTesting bool `json:"extendedHardwareTesting,omitempty"`
-
-	// PostTaxRecurringHourly - The post-tax recurring hourly charge for the order. Since taxes are not
-	// calculated for hourly orders, this value will be the same as preTaxRecurringHourly.
-	PostTaxRecurringHourly slapi.Float64 `json:"postTaxRecurringHourly,omitempty"`
-
-	// PreTaxRecurring - The pre-tax recurring total of the order. If there are mixed monthly and hourly
-	// prices on the order, this will be the sum of preTaxRecurringHourly and preTaxRecurringMonthly.
-	PreTaxRecurring slapi.Float64 `json:"preTaxRecurring,omitempty"`
 
 	// Properties - no documentation
 	Properties []*SoftLayer_Container_Product_Order_Property `json:"properties,omitempty"`
@@ -178,119 +175,21 @@ type SoftLayer_Container_Product_Order_Network_LoadBalancer_Global struct {
 	// credit balance, or worse, both orders being charged the order amount + the balance on the account.
 	ProratedInitialCharge slapi.Float64 `json:"proratedInitialCharge,omitempty"`
 
-	// BillingInformation - Billing Information associated with an order. For existing customers this
-	// information is completely ignored. Do not send this information for existing customers.
-	BillingInformation *SoftLayer_Container_Product_Order_Billing_Information `json:"billingInformation,omitempty"`
-
-	// Message - A generic message about the order. Does not need to be sent in with any orders.
-	Message string `json:"message,omitempty"`
-
-	// VirtualGuests - For virtual guest (virtual server) orders, this property is required if you did not
-	// specify data in the hardware property. This is an array of [[SoftLayer_Virtual_Guest]] objects. The
-	// hostname and domain properties are required for each virtual guest object. There is no need to
-	// specify data in this property and the hardware property - only one is required for virtual server
-	// orders.
-	VirtualGuests []*SoftLayer_Virtual_Guest `json:"virtualGuests,omitempty"`
+	// PrivateCloudOrderType - Type of Virtual Server (Private Node) order. Potential values:
+	PrivateCloudOrderType string `json:"privateCloudOrderType,omitempty"`
 
 	// PreTaxRecurringMonthly - The pre-tax monthly recurring total of the order. If there are only hourly
 	// prices on the order, this value will be 0.
 	PreTaxRecurringMonthly slapi.Float64 `json:"preTaxRecurringMonthly,omitempty"`
-
-	// OrderHostnames - no documentation
-	OrderHostnames []string `json:"orderHostnames,omitempty"`
-
-	// PrivateCloudOrderFlag - Flag for identifying a container as Virtual Server (Private Node).
-	PrivateCloudOrderFlag bool `json:"privateCloudOrderFlag,omitempty"`
-
-	// PostTaxRecurring - The post-tax recurring charge for the order. This is the sum of preTaxRecurring +
-	// totalRecurringTax.
-	PostTaxRecurring slapi.Float64 `json:"postTaxRecurring,omitempty"`
-
-	// ContainerSplHash - This hash is internally-generated and is used to for tracking order containers.
-	ContainerSplHash string `json:"containerSplHash,omitempty"`
-
-	// TaxCompletedFlag - Flag to indicate if the order container has the final tax rates for the order.
-	// Some tax rates are calculated in the background because they take longer, and they might not be
-	// finished when the container is returned from [[SoftLayer_Product_Order/verifyOrder|verifyOrder]].
-	TaxCompletedFlag bool `json:"taxCompletedFlag,omitempty"`
-
-	// ProvisionScripts - The URLs for scripts to execute on their respective servers after they have been
-	// provisioned. Provision scripts are not available for Microsoft Windows servers.
-	ProvisionScripts []string `json:"provisionScripts,omitempty"`
-
-	// PostTaxSetup - The post-tax setup fees of the order. This is the sum of preTaxSetup + totalSetupTax;
-	PostTaxSetup slapi.Float64 `json:"postTaxSetup,omitempty"`
-
-	// Quantity - no documentation
-	Quantity int `json:"quantity,omitempty"`
-
-	// ItemCategoryQuestionAnswers - The collection of
-	// [[SoftLayer_Container_Product_Item_Category_Question_Answer]] for any product category that has
-	// additional questions requiring user input.
-	ItemCategoryQuestionAnswers []*SoftLayer_Container_Product_Item_Category_Question_Answer `json:"itemCategoryQuestionAnswers,omitempty"`
-
-	// PostTaxRecurringMonthly - The post-tax recurring monthly charge for the order. This is the sum of
-	// preTaxRecurringMonthly + totalRecurringTax.
-	PostTaxRecurringMonthly slapi.Float64 `json:"postTaxRecurringMonthly,omitempty"`
-
-	// ReturnUrl - The URL to which PayPal redirects browser after a payment is completed.
-	ReturnUrl string `json:"returnUrl,omitempty"`
-
-	// Priorities - no documentation
-	Priorities []string `json:"priorities,omitempty"`
-
-	// SendQuoteEmailFlag - This flag indicates that the quote should be sent to the email address
-	// associated with the account or order.
-	SendQuoteEmailFlag bool `json:"sendQuoteEmailFlag,omitempty"`
-
-	// TaxCacheHash - The order container may not contain the final tax rates when it is returned from
-	// [[SoftLayer_Product_Order/verifyOrder|verifyOrder]]. This hash will facilitate checking if the tax
-	// rates have finished being calculated and retrieving the accurate tax rate values.
-	TaxCacheHash string `json:"taxCacheHash,omitempty"`
-
-	// QuoteName - no documentation
-	QuoteName string `json:"quoteName,omitempty"`
 
 	// LocationObject - This [[SoftLayer_Location]] object will be determined from the location property
 	// and will be returned in the order verification or placement response. Any value specified here will
 	// get overwritten by the verification process.
 	LocationObject *SoftLayer_Location `json:"locationObject,omitempty"`
 
-	// PreTaxRecurringHourly - The pre-tax hourly recurring total of the order. If there are only monthly
-	// prices on the order, this value will be 0.
-	PreTaxRecurringHourly slapi.Float64 `json:"preTaxRecurringHourly,omitempty"`
-
-	// OrderVerificationExceptions - Collection of exceptions resulting from the verification of the order.
-	// This value is set internally and is not required for end users when placing an order. When placing
-	// API orders, users can use this value to determine the container-specific exception that was thrown.
-	OrderVerificationExceptions []*SoftLayer_Container_Exception `json:"orderVerificationExceptions,omitempty"`
-
-	// ContainerIdentifier - User-specified description to identify a particular order container. This is
-	// useful if you have a multi-configuration order (multiple orderContainers ) and you want to be able
-	// to easily determine one from another. Populating this value may be helpful if an exception is thrown
-	// when placing an order and it's tied to a specific order container.
-	ContainerIdentifier string `json:"containerIdentifier,omitempty"`
-
-	// CancelUrl - The URL to which PayPal redirects browser after checkout has been canceled before
-	// completion of a payment.
-	CancelUrl string `json:"cancelUrl,omitempty"`
-
-	// TotalSetupTax - no documentation
-	TotalSetupTax slapi.Float64 `json:"totalSetupTax,omitempty"`
-
-	// ResourceGroupId - An optional resource group identifier specifying the resource group to attach the
-	// order to
-	ResourceGroupId int `json:"resourceGroupId,omitempty"`
-
-	// ImageTemplateGlobalIdentifier - An optional virtual disk image template identifier to be used as an
-	// installation base for a computing instance order
-	ImageTemplateGlobalIdentifier string `json:"imageTemplateGlobalIdentifier,omitempty"`
-
-	// DisplayLayerSessionId - This is the configuration identifier for tracking orders on the order forms.
-	DisplayLayerSessionId string `json:"displayLayerSessionId,omitempty"`
-
-	// TotalRecurringTax - no documentation
-	TotalRecurringTax slapi.Float64 `json:"totalRecurringTax,omitempty"`
+	// ResourceGroupTemplateId - An optional resource group template identifier to be used as a deployment
+	// base for a Virtual Server (Private Node) order.
+	ResourceGroupTemplateId int `json:"resourceGroupTemplateId,omitempty"`
 
 	// Prices - This is a collection of [[SoftLayer_Product_Item_Price]] objects. The only required
 	// property to populate for an item price object when ordering is its id - all other supplied
@@ -298,6 +197,107 @@ type SoftLayer_Container_Product_Order_Network_LoadBalancer_Global struct {
 	// [[SoftLayer_Product_Package]] associated with the order allows for preset prices, this property is
 	// required to place an order.
 	Prices []*SoftLayer_Product_Item_Price `json:"prices,omitempty"`
+
+	// Domain - no documentation
+	Domain string `json:"domain,omitempty"`
+
+	// Hostname - no documentation
+	Hostname string `json:"hostname,omitempty"`
+
+	// FlexibleCreditProgramPrice - The [[SoftLayer_Product_Item_Price]] for the Flexible Credit Program
+	// discount. The oneTimeFee field contains the calculated discount being applied to the order.
+	FlexibleCreditProgramPrice *SoftLayer_Product_Item_Price `json:"flexibleCreditProgramPrice,omitempty"`
+
+	// ProvisionScripts - The URLs for scripts to execute on their respective servers after they have been
+	// provisioned. Provision scripts are not available for Microsoft Windows servers.
+	ProvisionScripts []string `json:"provisionScripts,omitempty"`
+
+	// StorageGroups - For orders that want to add storage groups such as across multiple disks, simply add
+	// [[SoftLayer_Container_Product_Order_Storage_Group]] objects to this array. Storage groups will only
+	// be used if the disk controller price is selected. Any other disk controller types will ignore the
+	// storage groups set here. The first storage group in this array will be considered the primary
+	// storage group, which is used for the OS. Any other storage groups will act as data storage.
+	StorageGroups []*SoftLayer_Container_Product_Order_Storage_Group `json:"storageGroups,omitempty"`
+
+	// BillingInformation - Billing Information associated with an order. For existing customers this
+	// information is completely ignored. Do not send this information for existing customers.
+	BillingInformation *SoftLayer_Container_Product_Order_Billing_Information `json:"billingInformation,omitempty"`
+
+	// DeviceFingerprintId - no documentation
+	DeviceFingerprintId string `json:"deviceFingerprintId,omitempty"`
+
+	// TotalSetupTax - no documentation
+	TotalSetupTax slapi.Float64 `json:"totalSetupTax,omitempty"`
+
+	// PostTaxSetup - The post-tax setup fees of the order. This is the sum of preTaxSetup + totalSetupTax;
+	PostTaxSetup slapi.Float64 `json:"postTaxSetup,omitempty"`
+
+	// TaxCompletedFlag - Flag to indicate if the order container has the final tax rates for the order.
+	// Some tax rates are calculated in the background because they take longer, and they might not be
+	// finished when the container is returned from [[SoftLayer_Product_Order/verifyOrder|verifyOrder]].
+	TaxCompletedFlag bool `json:"taxCompletedFlag,omitempty"`
+
+	// ResourceGroupId - An optional resource group identifier specifying the resource group to attach the
+	// order to
+	ResourceGroupId int `json:"resourceGroupId,omitempty"`
+
+	// Quantity - no documentation
+	Quantity int `json:"quantity,omitempty"`
+
+	// SshKeys - The containers which hold SoftLayer_Security_Ssh_Key IDs to add to their respective
+	// servers. The order of containers passed in needs to match the order they are assigned to either
+	// hardware or virtualGuests. SSH Keys will not be assigned for servers with Microsoft Windows.
+	SshKeys []*SoftLayer_Container_Product_Order_SshKeys `json:"sshKeys,omitempty"`
+
+	// ServerCoreCount - The number of cores for the server being ordered. This value is set internally.
+	ServerCoreCount int `json:"serverCoreCount,omitempty"`
+
+	// Location - The [[SoftLayer_Location_Region]] keyname or specific [[SoftLayer_Location_Datacenter]]
+	// id where the order should be provisioned. If this value is provided and the regionalGroup property
+	// is also specified, an exception will be thrown indicating that only 1 is allowed.
+	Location string `json:"location,omitempty"`
+
+	// PreTaxRecurring - The pre-tax recurring total of the order. If there are mixed monthly and hourly
+	// prices on the order, this will be the sum of preTaxRecurringHourly and preTaxRecurringMonthly.
+	PreTaxRecurring slapi.Float64 `json:"preTaxRecurring,omitempty"`
+
+	// PresaleEvent - If there are any presale events available for an order, this value will be populated.
+	// It is set internally and is not required for end users when placing an order. See
+	// [[SoftLayer_Sales_Presale_Event]] for more info.
+	PresaleEvent *SoftLayer_Sales_Presale_Event `json:"presaleEvent,omitempty"`
+
+	// OrderHostnames - no documentation
+	OrderHostnames []string `json:"orderHostnames,omitempty"`
+
+	// ExtendedHardwareTesting - <nil>
+	ExtendedHardwareTesting bool `json:"extendedHardwareTesting,omitempty"`
+
+	// PreTaxSetup - no documentation
+	PreTaxSetup slapi.Float64 `json:"preTaxSetup,omitempty"`
+
+	// TaxCacheHash - The order container may not contain the final tax rates when it is returned from
+	// [[SoftLayer_Product_Order/verifyOrder|verifyOrder]]. This hash will facilitate checking if the tax
+	// rates have finished being calculated and retrieving the accurate tax rate values.
+	TaxCacheHash string `json:"taxCacheHash,omitempty"`
+
+	// TechIncubatorItemPrice - The SoftLayer_Product_Item_Price for the Tech Incubator discount. The
+	// oneTimeFee field contain the calculated discount being applied to the order.
+	TechIncubatorItemPrice *SoftLayer_Product_Item_Price `json:"techIncubatorItemPrice,omitempty"`
+
+	// ImageTemplateGlobalIdentifier - An optional virtual disk image template identifier to be used as an
+	// installation base for a computing instance order
+	ImageTemplateGlobalIdentifier string `json:"imageTemplateGlobalIdentifier,omitempty"`
+
+	// SourceVirtualGuestId - An optional computing instance identifier to be used as an installation base
+	// for a computing instance order
+	SourceVirtualGuestId int `json:"sourceVirtualGuestId,omitempty"`
+
+	// Hardware - For orders that contain servers (bare metal, virtual server, big data, etc.), the
+	// hardware property is required. This property is an array of [[SoftLayer_Hardware]] objects. The
+	// hostname and domain properties are required for each hardware object. Note that virtual server
+	// ([[SoftLayer_Container_Product_Order_Virtual_Guest]]) orders may populate this field instead of the
+	// virtualGuests property.
+	Hardware []*SoftLayer_Hardware `json:"hardware,omitempty"`
 }
 
 func (softlayer_container_product_order_network_loadbalancer_global *SoftLayer_Container_Product_Order_Network_LoadBalancer_Global) String() string {

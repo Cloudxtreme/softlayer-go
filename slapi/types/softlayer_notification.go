@@ -8,18 +8,14 @@ package types
 // Notification system. The name property can used more for display purposes.
 type SoftLayer_Notification struct {
 
+	// KeyName - Name that can be used by external systems to refer to a notification.
+	KeyName string `json:"keyName,omitempty"`
+
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
-
-	// KeyName - Name that can be used by external systems to refer to a notification.
-	KeyName string `json:"keyName,omitempty"`
-
-	// Preferences - The preferences related to the notification. These are preferences are configurable
-	// and optional for subscribers to use.
-	Preferences []*SoftLayer_Notification_Preference `json:"preferences,omitempty"`
 
 	// RequiredPreferences - The required preferences related to the notification. While configurable, the
 	// subscriber does not have the option whether to use the preference.
@@ -32,6 +28,10 @@ type SoftLayer_Notification struct {
 	// RequiredPreferenceCount - A count of the required preferences related to the notification. While
 	// configurable, the subscriber does not have the option whether to use the preference.
 	RequiredPreferenceCount uint64 `json:"requiredPreferenceCount,omitempty"`
+
+	// Preferences - The preferences related to the notification. These are preferences are configurable
+	// and optional for subscribers to use.
+	Preferences []*SoftLayer_Notification_Preference `json:"preferences,omitempty"`
 }
 
 func (softlayer_notification *SoftLayer_Notification) String() string {

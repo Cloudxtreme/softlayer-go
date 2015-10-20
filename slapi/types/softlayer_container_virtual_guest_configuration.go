@@ -11,6 +11,14 @@ package types
 // returns this data structure.
 type SoftLayer_Container_Virtual_Guest_Configuration struct {
 
+	// BlockDevices - Available block device options. A computing instance will have at least one block
+	// device represented by a device number of '0' . The blockDevices.device value in the template
+	// represents which device the option is for. The blockDevices.diskImage.capacity value in the template
+	// represents the size, in gigabytes, of the disk. The localDiskFlag value in the template represents
+	// whether the option is a local or SAN based disk. Note: The block device number '1' is reserved for
+	// the disk attached to the computing instance.
+	BlockDevices []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"blockDevices,omitempty"`
+
 	// Datacenters - Available datacenter options. The datacenter.name value in the template represents
 	// which datacenter the computing instance will be provisioned in.
 	Datacenters []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"datacenters,omitempty"`
@@ -47,14 +55,6 @@ type SoftLayer_Container_Virtual_Guest_Configuration struct {
 	// of cores allocated to the computing instance. The dedicatedAccountHostOnlyFlag value in the template
 	// represents whether the instance will run on hosts with instances belonging to other accounts.
 	Processors []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"processors,omitempty"`
-
-	// BlockDevices - Available block device options. A computing instance will have at least one block
-	// device represented by a device number of '0' . The blockDevices.device value in the template
-	// represents which device the option is for. The blockDevices.diskImage.capacity value in the template
-	// represents the size, in gigabytes, of the disk. The localDiskFlag value in the template represents
-	// whether the option is a local or SAN based disk. Note: The block device number '1' is reserved for
-	// the disk attached to the computing instance.
-	BlockDevices []*SoftLayer_Container_Virtual_Guest_Configuration_Option `json:"blockDevices,omitempty"`
 }
 
 func (softlayer_container_virtual_guest_configuration *SoftLayer_Container_Virtual_Guest_Configuration) String() string {

@@ -12,6 +12,15 @@ import (
 // responses and error cases. *
 type SoftLayer_Network_Subnet_Registration_Event struct {
 
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// Message - A string message indicating what took place during this event
+	Message string `json:"message,omitempty"`
+
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
@@ -21,15 +30,6 @@ type SoftLayer_Network_Subnet_Registration_Event struct {
 	// TypeId - The numeric ID of the associated [[SoftLayer_Network_Subnet_Registration_Event_Type|event
 	// type]] object
 	TypeId int `json:"typeId,omitempty"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// Message - A string message indicating what took place during this event
-	Message string `json:"message,omitempty"`
 
 	// Registration - no documentation
 	Registration *SoftLayer_Network_Subnet_Registration `json:"registration,omitempty"`

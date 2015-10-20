@@ -5,9 +5,6 @@ package types
 // SoftLayer_Network_Storage_Allowed_Host_IpAddress - <nil>
 type SoftLayer_Network_Storage_Allowed_Host_IpAddress struct {
 
-	// ResourceTableName - <nil>
-	ResourceTableName string `json:"resourceTableName,omitempty"`
-
 	// ResourceTableId - <nil>
 	ResourceTableId int `json:"resourceTableId,omitempty"`
 
@@ -20,9 +17,31 @@ type SoftLayer_Network_Storage_Allowed_Host_IpAddress struct {
 	// CredentialId - no documentation
 	CredentialId int `json:"credentialId,omitempty"`
 
+	// ResourceTableName - <nil>
+	ResourceTableName string `json:"resourceTableName,omitempty"`
+
+	// AssignedReplicationVolumes - The SoftLayer_Network_Storage primary volumes whose replicas are
+	// allowed access.
+	AssignedReplicationVolumes []*SoftLayer_Network_Storage `json:"assignedReplicationVolumes,omitempty"`
+
 	// AssignedVolumes - The SoftLayer_Network_Storage volumes to which this
 	// SoftLayer_Network_Storage_Allowed_Host is allowed access.
 	AssignedVolumes []*SoftLayer_Network_Storage `json:"assignedVolumes,omitempty"`
+
+	// AssignedGroupCount - A count of the SoftLayer_Network_Storage_Group objects this
+	// SoftLayer_Network_Storage_Allowed_Host is present in.
+	AssignedGroupCount uint64 `json:"assignedGroupCount,omitempty"`
+
+	// AssignedVolumeCount - A count of the SoftLayer_Network_Storage volumes to which this
+	// SoftLayer_Network_Storage_Allowed_Host is allowed access.
+	AssignedVolumeCount uint64 `json:"assignedVolumeCount,omitempty"`
+
+	// Credential - The SoftLayer_Network_Storage_Credential this allowed host uses.
+	Credential *SoftLayer_Network_Storage_Credential `json:"credential,omitempty"`
+
+	// AssignedReplicationVolumeCount - A count of the SoftLayer_Network_Storage primary volumes whose
+	// replicas are allowed access.
+	AssignedReplicationVolumeCount uint64 `json:"assignedReplicationVolumeCount,omitempty"`
 
 	// Resource - The SoftLayer_Network_Subnet_IpAddress object which this
 	// SoftLayer_Network_Storage_Allowed_Host is referencing.
@@ -31,25 +50,6 @@ type SoftLayer_Network_Storage_Allowed_Host_IpAddress struct {
 	// AssignedGroups - The SoftLayer_Network_Storage_Group objects this
 	// SoftLayer_Network_Storage_Allowed_Host is present in.
 	AssignedGroups []*SoftLayer_Network_Storage_Group `json:"assignedGroups,omitempty"`
-
-	// Credential - The SoftLayer_Network_Storage_Credential this allowed host uses.
-	Credential *SoftLayer_Network_Storage_Credential `json:"credential,omitempty"`
-
-	// AssignedGroupCount - A count of the SoftLayer_Network_Storage_Group objects this
-	// SoftLayer_Network_Storage_Allowed_Host is present in.
-	AssignedGroupCount uint64 `json:"assignedGroupCount,omitempty"`
-
-	// AssignedReplicationVolumeCount - A count of the SoftLayer_Network_Storage primary volumes whose
-	// replicas are allowed access.
-	AssignedReplicationVolumeCount uint64 `json:"assignedReplicationVolumeCount,omitempty"`
-
-	// AssignedVolumeCount - A count of the SoftLayer_Network_Storage volumes to which this
-	// SoftLayer_Network_Storage_Allowed_Host is allowed access.
-	AssignedVolumeCount uint64 `json:"assignedVolumeCount,omitempty"`
-
-	// AssignedReplicationVolumes - The SoftLayer_Network_Storage primary volumes whose replicas are
-	// allowed access.
-	AssignedReplicationVolumes []*SoftLayer_Network_Storage `json:"assignedReplicationVolumes,omitempty"`
 }
 
 func (softlayer_network_storage_allowed_host_ipaddress *SoftLayer_Network_Storage_Allowed_Host_IpAddress) String() string {

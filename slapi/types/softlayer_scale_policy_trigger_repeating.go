@@ -9,8 +9,11 @@ import (
 // SoftLayer_Scale_Policy_Trigger_Repeating - <nil>
 type SoftLayer_Scale_Policy_Trigger_Repeating struct {
 
-	// Schedule - The cron-formatted schedule. This is run in the UTC timezone.
-	Schedule string `json:"schedule,omitempty"`
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// ScalePolicyId - no documentation
+	ScalePolicyId int `json:"scalePolicyId,omitempty"`
 
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
@@ -19,17 +22,14 @@ type SoftLayer_Scale_Policy_Trigger_Repeating struct {
 	// directly or setting as a child while editing a parent object, will end up being a deletion.
 	DeleteFlag bool `json:"deleteFlag,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// ScalePolicyId - no documentation
-	ScalePolicyId int `json:"scalePolicyId,omitempty"`
+	// Schedule - The cron-formatted schedule. This is run in the UTC timezone.
+	Schedule string `json:"schedule,omitempty"`
 
 	// TypeId - no documentation
 	TypeId int `json:"typeId,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// ScalePolicy - no documentation
 	ScalePolicy *SoftLayer_Scale_Policy `json:"scalePolicy,omitempty"`

@@ -7,16 +7,16 @@ package types
 // items and prices in a particular bundle.
 type SoftLayer_Product_Package_Item_Prices struct {
 
+	// Id - The unique identifier for SoftLayer_Product_Package_Item_Price. This is only needed as a
+	// reference. The important data is the itemPriceId property.
+	Id int `json:"id,omitempty"`
+
 	// ItemPriceId - The SoftLayer_Product_Item_Price id. This value is to be used when placing orders. To
 	// get more information about this item price, go from the item price to the item description
 	ItemPriceId int `json:"itemPriceId,omitempty"`
 
 	// PackageId - The Package ID to which this price reference belongs
 	PackageId int `json:"packageId,omitempty"`
-
-	// Id - The unique identifier for SoftLayer_Product_Package_Item_Price. This is only needed as a
-	// reference. The important data is the itemPriceId property.
-	Id int `json:"id,omitempty"`
 
 	// ItemPrice - The item price to which this object belongs. The item price has details regarding cost
 	// for the item it belongs to.

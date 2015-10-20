@@ -5,35 +5,26 @@ package types
 // SoftLayer_Container_Referral_Partner_Prospect - <nil>
 type SoftLayer_Container_Referral_Partner_Prospect struct {
 
-	// LastName - <nil>
-	LastName string `json:"lastName,omitempty"`
-
-	// State - <nil>
-	State string `json:"state,omitempty"`
-
-	// Country - <nil>
-	Country string `json:"country,omitempty"`
+	// City - <nil>
+	City string `json:"city,omitempty"`
 
 	// CompanyName - <nil>
 	CompanyName string `json:"companyName,omitempty"`
 
-	// Email - <nil>
-	Email string `json:"email,omitempty"`
+	// LastName - <nil>
+	LastName string `json:"lastName,omitempty"`
 
 	// PostalCode - <nil>
 	PostalCode string `json:"postalCode,omitempty"`
 
+	// Email - <nil>
+	Email string `json:"email,omitempty"`
+
 	// Responses - <nil>
 	Responses []*SoftLayer_Survey_Response `json:"responses,omitempty"`
 
-	// SurveyId - <nil>
-	SurveyId string `json:"surveyId,omitempty"`
-
-	// City - <nil>
-	City string `json:"city,omitempty"`
-
-	// OfficePhone - <nil>
-	OfficePhone string `json:"officePhone,omitempty"`
+	// Address1 - <nil>
+	Address1 string `json:"address1,omitempty"`
 
 	// Address2 - <nil>
 	Address2 string `json:"address2,omitempty"`
@@ -44,8 +35,17 @@ type SoftLayer_Container_Referral_Partner_Prospect struct {
 	// Questions - <nil>
 	Questions []string `json:"questions,omitempty"`
 
-	// Address1 - <nil>
-	Address1 string `json:"address1,omitempty"`
+	// Country - <nil>
+	Country string `json:"country,omitempty"`
+
+	// OfficePhone - <nil>
+	OfficePhone string `json:"officePhone,omitempty"`
+
+	// State - <nil>
+	State string `json:"state,omitempty"`
+
+	// SurveyId - <nil>
+	SurveyId string `json:"surveyId,omitempty"`
 }
 
 func (softlayer_container_referral_partner_prospect *SoftLayer_Container_Referral_Partner_Prospect) String() string {

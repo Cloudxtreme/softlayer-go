@@ -11,23 +11,23 @@ import (
 // bandwidth utilization at a specific point in time on a given network interface.
 type SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total struct {
 
-	// BandwidthUsageDetailTypeId - ID of the bandwidth usage detail type for this record.
-	BandwidthUsageDetailTypeId slapi.Float64 `json:"bandwidthUsageDetailTypeId,omitempty"`
-
 	// AmountIn - no documentation
 	AmountIn slapi.Float64 `json:"amountIn,omitempty"`
 
 	// AmountOut - no documentation
 	AmountOut slapi.Float64 `json:"amountOut,omitempty"`
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account,omitempty"`
+	// BandwidthUsageDetailTypeId - ID of the bandwidth usage detail type for this record.
+	BandwidthUsageDetailTypeId slapi.Float64 `json:"bandwidthUsageDetailTypeId,omitempty"`
 
 	// TrackingObject - The tracking object this bandwidth usage record describes.
 	TrackingObject *SoftLayer_Metric_Tracking_Object `json:"trackingObject,omitempty"`
 
 	// Type - In and out bandwidth utilization for a specified time stamp.
 	Type *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Type `json:"type,omitempty"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
 func (softlayer_network_bandwidth_version1_usage_detail_total *SoftLayer_Network_Bandwidth_Version1_Usage_Detail_Total) String() string {

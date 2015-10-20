@@ -13,12 +13,6 @@ import (
 // profiles.
 type SoftLayer_Configuration_Template_Section_Profile struct {
 
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
-	// SectionId - Internal identifier of a configuration section that this profile belongs to.
-	SectionId int `json:"sectionId,omitempty"`
-
 	// AgentId - Internal identifier of a monitoring agent this profile belongs to.
 	AgentId int `json:"agentId,omitempty"`
 
@@ -27,6 +21,12 @@ type SoftLayer_Configuration_Template_Section_Profile struct {
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
+	// SectionId - Internal identifier of a configuration section that this profile belongs to.
+	SectionId int `json:"sectionId,omitempty"`
 
 	// ConfigurationSection - <nil>
 	ConfigurationSection *SoftLayer_Configuration_Template_Section `json:"configurationSection,omitempty"`

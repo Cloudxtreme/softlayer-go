@@ -6,26 +6,17 @@ package types
 // address associated with a SoftLayer account.
 type SoftLayer_Account_Address struct {
 
-	// AccountId - <nil>
-	AccountId int `json:"accountId,omitempty"`
-
-	// Address2 - no documentation
-	Address2 string `json:"address2,omitempty"`
-
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// IsActive - no documentation
-	IsActive int `json:"isActive,omitempty"`
-
-	// City - no documentation
-	City string `json:"city,omitempty"`
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
 
 	// Address1 - Line 1 of the address (normally the street address).
 	Address1 string `json:"address1,omitempty"`
+
+	// Address2 - no documentation
+	Address2 string `json:"address2,omitempty"`
 
 	// Country - no documentation
 	Country string `json:"country,omitempty"`
@@ -33,29 +24,38 @@ type SoftLayer_Account_Address struct {
 	// LocationId - no documentation
 	LocationId int `json:"locationId,omitempty"`
 
+	// IsActive - no documentation
+	IsActive int `json:"isActive,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// PostalCode - no documentation
 	PostalCode string `json:"postalCode,omitempty"`
 
-	// State - no documentation
-	State string `json:"state,omitempty"`
+	// City - no documentation
+	City string `json:"city,omitempty"`
 
 	// ContactName - no documentation
 	ContactName string `json:"contactName,omitempty"`
 
-	// CreateUser - no documentation
-	CreateUser *SoftLayer_User_Customer `json:"createUser,omitempty"`
-
-	// ModifyUser - no documentation
-	ModifyUser *SoftLayer_User_Customer `json:"modifyUser,omitempty"`
-
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account,omitempty"`
+	// State - no documentation
+	State string `json:"state,omitempty"`
 
 	// ModifyEmployee - no documentation
 	ModifyEmployee *SoftLayer_User_Employee `json:"modifyEmployee,omitempty"`
 
+	// ModifyUser - no documentation
+	ModifyUser *SoftLayer_User_Customer `json:"modifyUser,omitempty"`
+
 	// Type - no documentation
 	Type *SoftLayer_Account_Address_Type `json:"type,omitempty"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// CreateUser - no documentation
+	CreateUser *SoftLayer_User_Customer `json:"createUser,omitempty"`
 
 	// Location - no documentation
 	Location *SoftLayer_Location `json:"location,omitempty"`

@@ -8,6 +8,9 @@ package types
 // purchased with Microsoft Windows retrieve updates from SoftLayer's servers by default.
 type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem struct {
 
+	// Description - no documentation
+	Description string `json:"description,omitempty"`
+
 	// Failed - Flag indicating that this patch failed to properly install
 	Failed bool `json:"failed,omitempty"`
 
@@ -20,9 +23,6 @@ type SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem str
 
 	// RequiresReboot - Flag indicating that a reboot is needed for this update to be fully applied
 	RequiresReboot bool `json:"requiresReboot,omitempty"`
-
-	// Description - no documentation
-	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_container_utility_microsoft_windows_updateservices_updateitem *SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_UpdateItem) String() string {

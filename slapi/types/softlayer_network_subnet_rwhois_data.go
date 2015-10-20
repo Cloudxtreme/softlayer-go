@@ -14,53 +14,53 @@ import (
 // account or portal users' contact information.
 type SoftLayer_Network_Subnet_Rwhois_Data struct {
 
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+	// PrivateResidenceFlag - Whether an account's data refers to a private residence or not.
+	PrivateResidenceFlag bool `json:"privateResidenceFlag,omitempty"`
+
+	// FirstName - no documentation
+	FirstName string `json:"firstName,omitempty"`
+
+	// PostalCode - The postal code of the mailing address associated with an account's data.
+	PostalCode string `json:"postalCode,omitempty"`
+
+	// LastName - no documentation
+	LastName string `json:"lastName,omitempty"`
 
 	// State - A two-letter abbreviation of the state of the mailing address associated with an account's
 	// data. If an account does not reside in a province then this is typically blank.
 	State string `json:"state,omitempty"`
 
-	// City - The city of the mailing address associated with an account's data.
-	City string `json:"city,omitempty"`
+	// Address2 - The second line of the mailing address associated with an account's data.
+	Address2 string `json:"address2,omitempty"`
 
 	// CompanyName - The company name associated with an account's data.
 	CompanyName string `json:"companyName,omitempty"`
 
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
 	// AccountId - An account's data's associated account identifier.
 	AccountId int `json:"accountId,omitempty"`
 
-	// PrivateResidenceFlag - Whether an account's data refers to a private residence or not.
-	PrivateResidenceFlag bool `json:"privateResidenceFlag,omitempty"`
+	// Address1 - The first line of the mailing address associated with an account's data.
+	Address1 string `json:"address1,omitempty"`
 
-	// AbuseEmail - An email address associated with an account's data that is responsible for responding
-	// to network abuse queries about malicious traffic coming from your servers' IP addresses.
-	AbuseEmail string `json:"abuseEmail,omitempty"`
-
-	// PostalCode - The postal code of the mailing address associated with an account's data.
-	PostalCode string `json:"postalCode,omitempty"`
+	// City - The city of the mailing address associated with an account's data.
+	City string `json:"city,omitempty"`
 
 	// Country - A two-letter abbreviation of the country of the mailing address associated with an
 	// account's data.
 	Country string `json:"country,omitempty"`
 
-	// FirstName - no documentation
-	FirstName string `json:"firstName,omitempty"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
-	// LastName - no documentation
-	LastName string `json:"lastName,omitempty"`
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
-	// Address1 - The first line of the mailing address associated with an account's data.
-	Address1 string `json:"address1,omitempty"`
-
-	// Address2 - The second line of the mailing address associated with an account's data.
-	Address2 string `json:"address2,omitempty"`
+	// AbuseEmail - An email address associated with an account's data that is responsible for responding
+	// to network abuse queries about malicious traffic coming from your servers' IP addresses.
+	AbuseEmail string `json:"abuseEmail,omitempty"`
 
 	// Account - The SoftLayer customer account associated with this reverse data.
 	Account *SoftLayer_Account `json:"account,omitempty"`

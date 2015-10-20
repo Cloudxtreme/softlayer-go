@@ -5,11 +5,11 @@ package types
 // SoftLayer_Ticket_Update_Type - <nil>
 type SoftLayer_Ticket_Update_Type struct {
 
-	// Description - <nil>
-	Description string `json:"description,omitempty"`
-
 	// KeyName - <nil>
 	KeyName string `json:"keyName,omitempty"`
+
+	// Description - <nil>
+	Description string `json:"description,omitempty"`
 
 	// Ticket - <nil>
 	Ticket *SoftLayer_Ticket_Update `json:"ticket,omitempty"`

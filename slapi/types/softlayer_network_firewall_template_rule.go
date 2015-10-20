@@ -8,36 +8,36 @@ package types
 // Firewall Update Request]] service to submit a firewall update request.
 type SoftLayer_Network_Firewall_Template_Rule struct {
 
-	// DestinationIpAddress - The destination IP address considered for determining rule application.
-	DestinationIpAddress string `json:"destinationIpAddress,omitempty"`
+	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
+	SourceIpSubnetMask string `json:"sourceIpSubnetMask,omitempty"`
+
+	// Action - The action that this template rule is to take [permit or deny].
+	Action string `json:"action,omitempty"`
 
 	// DestinationIpSubnetMask - The destination IP subnet mask considered for determining rule
 	// application.
 	DestinationIpSubnetMask string `json:"destinationIpSubnetMask,omitempty"`
 
-	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
-	// determining rule application.
-	DestinationPortRangeStart int `json:"destinationPortRangeStart,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// Protocol - The protocol considered for determining rule application.
-	Protocol string `json:"protocol,omitempty"`
-
-	// SourceIpAddress - The source IP address considered for determining rule application.
-	SourceIpAddress string `json:"sourceIpAddress,omitempty"`
-
-	// Action - The action that this template rule is to take [permit or deny].
-	Action string `json:"action,omitempty"`
-
 	// DestinationPortRangeEnd - The ending (upper end of range) destination port considered for
 	// determining rule application.
 	DestinationPortRangeEnd int `json:"destinationPortRangeEnd,omitempty"`
 
+	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
+	// determining rule application.
+	DestinationPortRangeStart int `json:"destinationPortRangeStart,omitempty"`
+
+	// Protocol - The protocol considered for determining rule application.
+	Protocol string `json:"protocol,omitempty"`
+
+	// DestinationIpAddress - The destination IP address considered for determining rule application.
+	DestinationIpAddress string `json:"destinationIpAddress,omitempty"`
+
 	// FirewallTemplateId - The unique identifier of the firewall template that a firewall template rule is
 	// associated with.
 	FirewallTemplateId int `json:"firewallTemplateId,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// Notes - no documentation
 	Notes string `json:"notes,omitempty"`
@@ -45,8 +45,8 @@ type SoftLayer_Network_Firewall_Template_Rule struct {
 	// OrderValue - The numeric value describing the order in which the rule set should be applied.
 	OrderValue int `json:"orderValue,omitempty"`
 
-	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
-	SourceIpSubnetMask string `json:"sourceIpSubnetMask,omitempty"`
+	// SourceIpAddress - The source IP address considered for determining rule application.
+	SourceIpAddress string `json:"sourceIpAddress,omitempty"`
 
 	// FirewallTemplate - The firewall template that this rule is attached to.
 	FirewallTemplate *SoftLayer_Network_Firewall_Template `json:"firewallTemplate,omitempty"`

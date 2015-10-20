@@ -20,6 +20,9 @@ import (
 // 66.228.118.86/32
 type SoftLayer_User_Customer_Access_Authentication struct {
 
+	// SuccessFlag - Whether an attempt to log into the SoftLayer customer portal was successful or not.
+	SuccessFlag bool `json:"successFlag,omitempty"`
+
 	// UserId - The internal identifier of the user who attempted to log into the SoftLayer customer
 	// portal.
 	UserId int `json:"userId,omitempty"`
@@ -32,9 +35,6 @@ type SoftLayer_User_Customer_Access_Authentication struct {
 
 	// IpAddress - The IP address of the user who attempted to log into the SoftLayer customer portal.
 	IpAddress string `json:"ipAddress,omitempty"`
-
-	// SuccessFlag - Whether an attempt to log into the SoftLayer customer portal was successful or not.
-	SuccessFlag bool `json:"successFlag,omitempty"`
 
 	// User - The user who has attempted to log into the SoftLayer customer portal.
 	User *SoftLayer_User_Customer `json:"user,omitempty"`

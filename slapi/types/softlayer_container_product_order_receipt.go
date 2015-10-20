@@ -17,10 +17,6 @@ import (
 // credit card, a receipt means the order has gone to sales and is awaiting approval.
 type SoftLayer_Container_Product_Order_Receipt struct {
 
-	// PaypalToken - The paypal Token, if this order was processed via PayPal. The paypalCheckoutUrl should
-	// also be populated. This will tell you where to go next to continue the order process.
-	PaypalToken string `json:"paypalToken,omitempty"`
-
 	// PlacedOrder - This is a copy of the order that was successfully placed (SoftLayer_Billing_Order).
 	// This will only return when an order is processed successfully.
 	PlacedOrder *SoftLayer_Billing_Order `json:"placedOrder,omitempty"`
@@ -47,6 +43,10 @@ type SoftLayer_Container_Product_Order_Receipt struct {
 	// in our system. When this happens, it will be immediately provisioned and the server will be online
 	// shortly!
 	PaypalCheckoutUrl string `json:"paypalCheckoutUrl,omitempty"`
+
+	// PaypalToken - The paypal Token, if this order was processed via PayPal. The paypalCheckoutUrl should
+	// also be populated. This will tell you where to go next to continue the order process.
+	PaypalToken string `json:"paypalToken,omitempty"`
 }
 
 func (softlayer_container_product_order_receipt *SoftLayer_Container_Product_Order_Receipt) String() string {

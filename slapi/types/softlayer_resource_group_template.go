@@ -14,6 +14,9 @@ type SoftLayer_Resource_Group_Template struct {
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
 
+	// MemberCount - no documentation
+	MemberCount uint64 `json:"memberCount,omitempty"`
+
 	// Children - <nil>
 	Children []*SoftLayer_Resource_Group_Template `json:"children,omitempty"`
 
@@ -25,9 +28,6 @@ type SoftLayer_Resource_Group_Template struct {
 
 	// ChildrenCount - no documentation
 	ChildrenCount uint64 `json:"childrenCount,omitempty"`
-
-	// MemberCount - no documentation
-	MemberCount uint64 `json:"memberCount,omitempty"`
 }
 
 func (softlayer_resource_group_template *SoftLayer_Resource_Group_Template) String() string {

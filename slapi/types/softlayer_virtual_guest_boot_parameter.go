@@ -9,6 +9,9 @@ import (
 // SoftLayer_Virtual_Guest_Boot_Parameter - <nil>
 type SoftLayer_Virtual_Guest_Boot_Parameter struct {
 
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
 	// GuestBootParameterTypeId - <nil>
 	GuestBootParameterTypeId int `json:"guestBootParameterTypeId,omitempty"`
 
@@ -20,9 +23,6 @@ type SoftLayer_Virtual_Guest_Boot_Parameter struct {
 
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Guest - <nil>
 	Guest *SoftLayer_Virtual_Guest `json:"guest,omitempty"`

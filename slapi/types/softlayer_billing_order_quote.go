@@ -13,6 +13,9 @@ import (
 // customer.
 type SoftLayer_Billing_Order_Quote struct {
 
+	// CompletedPurchaseDataId - Identification Number of the order record tied to the quote.
+	CompletedPurchaseDataId int `json:"completedPurchaseDataId,omitempty"`
+
 	// ExpirationDate - This property holds the date of expiration of a quote, after that date the quote
 	// would be deem expired
 	ExpirationDate *time.Time `json:"expirationDate,omitempty"`
@@ -24,14 +27,11 @@ type SoftLayer_Billing_Order_Quote struct {
 	// Status - This property Holds the current status of a Quote: pending,expired, saved or deleted
 	Status string `json:"status,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// CompletedPurchaseDataId - Identification Number of the order record tied to the quote.
-	CompletedPurchaseDataId int `json:"completedPurchaseDataId,omitempty"`
-
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
@@ -45,17 +45,17 @@ type SoftLayer_Billing_Order_Quote struct {
 	// QuoteKey - no documentation
 	QuoteKey string `json:"quoteKey,omitempty"`
 
-	// OrdersFromQuoteCount - no documentation
-	OrdersFromQuoteCount uint64 `json:"ordersFromQuoteCount,omitempty"`
-
-	// Order - no documentation
-	Order *SoftLayer_Billing_Order `json:"order,omitempty"`
+	// OrdersFromQuote - no documentation
+	OrdersFromQuote []*SoftLayer_Billing_Order `json:"ordersFromQuote,omitempty"`
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`
 
-	// OrdersFromQuote - no documentation
-	OrdersFromQuote []*SoftLayer_Billing_Order `json:"ordersFromQuote,omitempty"`
+	// Order - no documentation
+	Order *SoftLayer_Billing_Order `json:"order,omitempty"`
+
+	// OrdersFromQuoteCount - no documentation
+	OrdersFromQuoteCount uint64 `json:"ordersFromQuoteCount,omitempty"`
 }
 
 func (softlayer_billing_order_quote *SoftLayer_Billing_Order_Quote) String() string {

@@ -17,14 +17,14 @@ type SoftLayer_Product_Item_Attribute struct {
 	// Value - <nil>
 	Value string `json:"value,omitempty"`
 
-	// AttributeType - <nil>
-	AttributeType *SoftLayer_Product_Item_Attribute_Type `json:"attributeType,omitempty"`
-
 	// AttributeTypeKeyName - <nil>
 	AttributeTypeKeyName string `json:"attributeTypeKeyName,omitempty"`
 
 	// Item - <nil>
 	Item *SoftLayer_Product_Item `json:"item,omitempty"`
+
+	// AttributeType - <nil>
+	AttributeType *SoftLayer_Product_Item_Attribute_Type `json:"attributeType,omitempty"`
 }
 
 func (softlayer_product_item_attribute *SoftLayer_Product_Item_Attribute) String() string {

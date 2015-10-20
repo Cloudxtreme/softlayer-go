@@ -12,6 +12,9 @@ import (
 // identify a customer or organization when a subnet is registered.
 type SoftLayer_Account_Rwhois_Handle struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
@@ -23,9 +26,6 @@ type SoftLayer_Account_Rwhois_Handle struct {
 
 	// Handle - The handle object's unique identifier as assigned by the
 	Handle string `json:"handle,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`

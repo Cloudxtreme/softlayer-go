@@ -9,6 +9,12 @@ import (
 // SoftLayer_Layout_Profile_Containers - <nil>
 type SoftLayer_Layout_Profile_Containers struct {
 
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -18,17 +24,11 @@ type SoftLayer_Layout_Profile_Containers struct {
 	// LayoutProfileId - The id of the referenced [[SoftLayer_Layout_Profile]]
 	LayoutProfileId int `json:"layoutProfileId,omitempty"`
 
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
+	// LayoutContainerType - no documentation
+	LayoutContainerType *SoftLayer_Layout_Container `json:"layoutContainerType,omitempty"`
 
 	// LayoutProfile - no documentation
 	LayoutProfile *SoftLayer_Layout_Profile `json:"layoutProfile,omitempty"`
-
-	// LayoutContainerType - no documentation
-	LayoutContainerType *SoftLayer_Layout_Container `json:"layoutContainerType,omitempty"`
 }
 
 func (softlayer_layout_profile_containers *SoftLayer_Layout_Profile_Containers) String() string {

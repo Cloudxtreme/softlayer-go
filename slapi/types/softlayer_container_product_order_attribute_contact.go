@@ -7,6 +7,15 @@ package types
 // SoftLayer_Container_Product_Order_Attribute_Contact datatype contains the contact information.
 type SoftLayer_Container_Product_Order_Attribute_Contact struct {
 
+	// LastName - no documentation
+	LastName string `json:"lastName,omitempty"`
+
+	// OrganizationName - no documentation
+	OrganizationName string `json:"organizationName,omitempty"`
+
+	// PhoneNumber - no documentation
+	PhoneNumber string `json:"phoneNumber,omitempty"`
+
 	// Title - no documentation
 	Title string `json:"title,omitempty"`
 
@@ -21,15 +30,6 @@ type SoftLayer_Container_Product_Order_Attribute_Contact struct {
 
 	// FirstName - no documentation
 	FirstName string `json:"firstName,omitempty"`
-
-	// LastName - no documentation
-	LastName string `json:"lastName,omitempty"`
-
-	// OrganizationName - no documentation
-	OrganizationName string `json:"organizationName,omitempty"`
-
-	// PhoneNumber - no documentation
-	PhoneNumber string `json:"phoneNumber,omitempty"`
 }
 
 func (softlayer_container_product_order_attribute_contact *SoftLayer_Container_Product_Order_Attribute_Contact) String() string {

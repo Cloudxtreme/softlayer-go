@@ -7,10 +7,6 @@ package types
 // component model.
 type SoftLayer_Hardware_Component_Model_Attribute struct {
 
-	// AttributeTypeId - A hardware component model attribute's associated
-	// [[SoftLayer_Hardware_Component_Model_Attribute_Type|type]] Id.
-	AttributeTypeId int `json:"attributeTypeId,omitempty"`
-
 	// HardwareComponentModelId - A hardware component model attribute's associated
 	// [[SoftLayer_Hardware_Component_Model|hardware component model]] Id.
 	HardwareComponentModelId int `json:"hardwareComponentModelId,omitempty"`
@@ -19,11 +15,15 @@ type SoftLayer_Hardware_Component_Model_Attribute struct {
 	// depending on the attributes [[SoftLayer_Hardware_Component_Model_Attribute_Type|type]].
 	Value string `json:"value,omitempty"`
 
-	// HardwareComponent - <nil>
-	HardwareComponent *SoftLayer_Hardware_Component_Model `json:"hardwareComponent,omitempty"`
+	// AttributeTypeId - A hardware component model attribute's associated
+	// [[SoftLayer_Hardware_Component_Model_Attribute_Type|type]] Id.
+	AttributeTypeId int `json:"attributeTypeId,omitempty"`
 
 	// HardwareComponentAttributeType - <nil>
 	HardwareComponentAttributeType *SoftLayer_Hardware_Component_Model_Attribute_Type `json:"hardwareComponentAttributeType,omitempty"`
+
+	// HardwareComponent - <nil>
+	HardwareComponent *SoftLayer_Hardware_Component_Model `json:"hardwareComponent,omitempty"`
 }
 
 func (softlayer_hardware_component_model_attribute *SoftLayer_Hardware_Component_Model_Attribute) String() string {

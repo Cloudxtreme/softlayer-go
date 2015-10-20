@@ -13,6 +13,9 @@ import (
 // downloading your CDN hosted content.
 type SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summary struct {
 
+	// Bandwidth - no documentation
+	Bandwidth uint64 `json:"bandwidth,omitempty"`
+
 	// EndDateTime - no documentation
 	EndDateTime *time.Time `json:"endDateTime,omitempty"`
 
@@ -27,9 +30,6 @@ type SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summ
 
 	// ViewCount - no documentation
 	ViewCount uint64 `json:"viewCount,omitempty"`
-
-	// Bandwidth - no documentation
-	Bandwidth uint64 `json:"bandwidth,omitempty"`
 }
 
 func (softlayer_container_network_contentdelivery_bandwidth_pointsofpresence_summary *SoftLayer_Container_Network_ContentDelivery_Bandwidth_PointsOfPresence_Summary) String() string {

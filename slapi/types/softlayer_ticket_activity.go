@@ -9,6 +9,9 @@ import (
 // SoftLayer_Ticket_Activity - <nil>
 type SoftLayer_Ticket_Activity struct {
 
+	// Value - <nil>
+	Value string `json:"value,omitempty"`
+
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -17,9 +20,6 @@ type SoftLayer_Ticket_Activity struct {
 
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
-
-	// Value - <nil>
-	Value string `json:"value,omitempty"`
 
 	// Editor - <nil>
 	Editor *SoftLayer_User_Interface `json:"editor,omitempty"`

@@ -9,9 +9,6 @@ import (
 // SoftLayer_Account_Link_OpenStack - <nil>
 type SoftLayer_Account_Link_OpenStack struct {
 
-	// AccountId - <nil>
-	AccountId int `json:"accountId,omitempty"`
-
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -29,6 +26,9 @@ type SoftLayer_Account_Link_OpenStack struct {
 
 	// ServiceProviderId - <nil>
 	ServiceProviderId int `json:"serviceProviderId,omitempty"`
+
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
 
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account,omitempty"`

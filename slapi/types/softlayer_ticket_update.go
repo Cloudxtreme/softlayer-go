@@ -13,6 +13,9 @@ type SoftLayer_Ticket_Update struct {
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
+	// Entry - no documentation
+	Entry string `json:"entry,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -28,20 +31,17 @@ type SoftLayer_Ticket_Update struct {
 	// was generated automatically by SoftLayer's backend systems.
 	EditorType string `json:"editorType,omitempty"`
 
-	// Entry - no documentation
-	Entry string `json:"entry,omitempty"`
+	// FileAttachment - no documentation
+	FileAttachment []*SoftLayer_Ticket_Attachment_File `json:"fileAttachment,omitempty"`
+
+	// Type - no documentation
+	Type *SoftLayer_Ticket_Update_Type `json:"type,omitempty"`
 
 	// ChangeOwnerActivity - <nil>
 	ChangeOwnerActivity string `json:"changeOwnerActivity,omitempty"`
 
 	// Editor - The user or SoftLayer employee who created a ticket update.
 	Editor *SoftLayer_User_Interface `json:"editor,omitempty"`
-
-	// FileAttachment - no documentation
-	FileAttachment []*SoftLayer_Ticket_Attachment_File `json:"fileAttachment,omitempty"`
-
-	// Type - no documentation
-	Type *SoftLayer_Ticket_Update_Type `json:"type,omitempty"`
 
 	// Ticket - no documentation
 	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`

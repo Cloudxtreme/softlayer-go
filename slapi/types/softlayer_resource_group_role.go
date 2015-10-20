@@ -14,11 +14,11 @@ type SoftLayer_Resource_Group_Role struct {
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
 
-	// MemberLinks - no documentation
-	MemberLinks []*SoftLayer_Resource_Group_Member_Role_Link `json:"memberLinks,omitempty"`
-
 	// MemberLinkCount - no documentation
 	MemberLinkCount uint64 `json:"memberLinkCount,omitempty"`
+
+	// MemberLinks - no documentation
+	MemberLinks []*SoftLayer_Resource_Group_Member_Role_Link `json:"memberLinks,omitempty"`
 }
 
 func (softlayer_resource_group_role *SoftLayer_Resource_Group_Role) String() string {

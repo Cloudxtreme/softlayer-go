@@ -14,8 +14,14 @@ import (
 // ticket.
 type SoftLayer_Ticket_Attachment_Hardware struct {
 
+	// AttachmentId - The internal identifier of an item that is attached to a ticket.
+	AttachmentId int `json:"attachmentId,omitempty"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// TicketId - The internal identifier of the ticket that an item is attached to.
 	TicketId int `json:"ticketId,omitempty"`
@@ -23,26 +29,20 @@ type SoftLayer_Ticket_Attachment_Hardware struct {
 	// HardwareId - The internal identifier of a piece of hardware that is attached to a ticket.
 	HardwareId int `json:"hardwareId,omitempty"`
 
-	// AttachmentId - The internal identifier of an item that is attached to a ticket.
-	AttachmentId int `json:"attachmentId,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// Hardware - no documentation
 	Hardware *SoftLayer_Hardware `json:"hardware,omitempty"`
-
-	// Resource - no documentation
-	Resource *SoftLayer_Hardware `json:"resource,omitempty"`
 
 	// AssignedAgent - <nil>
 	AssignedAgent *SoftLayer_User_Customer `json:"assignedAgent,omitempty"`
 
-	// ScheduledAction - <nil>
-	ScheduledAction *SoftLayer_Provisioning_Version1_Transaction `json:"scheduledAction,omitempty"`
-
 	// Ticket - no documentation
 	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`
+
+	// Resource - no documentation
+	Resource *SoftLayer_Hardware `json:"resource,omitempty"`
+
+	// ScheduledAction - <nil>
+	ScheduledAction *SoftLayer_Provisioning_Version1_Transaction `json:"scheduledAction,omitempty"`
 }
 
 func (softlayer_ticket_attachment_hardware *SoftLayer_Ticket_Attachment_Hardware) String() string {

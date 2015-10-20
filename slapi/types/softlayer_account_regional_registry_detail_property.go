@@ -12,11 +12,18 @@ import (
 // objects, which describe the available value formats.
 type SoftLayer_Account_Regional_Registry_Detail_Property struct {
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
+
+	// ModifyDate - <nil>
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// SequencePosition - When multiple properties exist for a property type, defines the position in the
+	// sequence of those properties
+	SequencePosition int `json:"sequencePosition,omitempty"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// PropertyTypeId - The numeric ID of the related
 	// [[SoftLayer_Account_Regional_Registry_Detail_Property_Type|property type object]]
@@ -26,15 +33,8 @@ type SoftLayer_Account_Regional_Registry_Detail_Property struct {
 	// [[SoftLayer_Account_Regional_Registry_Detail|detail object]]
 	RegistrationDetailId int `json:"registrationDetailId,omitempty"`
 
-	// SequencePosition - When multiple properties exist for a property type, defines the position in the
-	// sequence of those properties
-	SequencePosition int `json:"sequencePosition,omitempty"`
-
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
-
-	// ModifyDate - <nil>
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// Detail - The [[SoftLayer_Account_Regional_Registry_Detail]] object this property belongs to
 	Detail *SoftLayer_Account_Regional_Registry_Detail `json:"detail,omitempty"`

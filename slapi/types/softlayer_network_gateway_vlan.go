@@ -17,11 +17,11 @@ type SoftLayer_Network_Gateway_Vlan struct {
 	// NetworkVlanId - no documentation
 	NetworkVlanId int `json:"networkVlanId,omitempty"`
 
-	// NetworkGateway - no documentation
-	NetworkGateway *SoftLayer_Network_Gateway `json:"networkGateway,omitempty"`
-
 	// NetworkVlan - no documentation
 	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`
+
+	// NetworkGateway - no documentation
+	NetworkGateway *SoftLayer_Network_Gateway `json:"networkGateway,omitempty"`
 }
 
 func (softlayer_network_gateway_vlan *SoftLayer_Network_Gateway_Vlan) String() string {

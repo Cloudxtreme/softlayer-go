@@ -12,15 +12,11 @@ import (
 // SoftLayer_Ticket_Attachment_File data type models a single file attached to a ticket.
 type SoftLayer_Ticket_Attachment_File struct {
 
-	// TicketId - The internal identifier of the ticket that a file is attached to.
-	TicketId int `json:"ticketId,omitempty"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
-	// UpdateId - The internal identifier of the ticket update the attached file is associated with.
-	UpdateId int `json:"updateId,omitempty"`
-
-	// UploaderType - The type of user that attached a file to a ticket. This is either if the file was
-	// uploaded by a portal or API user or if the file was uploaded by a SoftLayer employee.
-	UploaderType string `json:"uploaderType,omitempty"`
+	// ModifyDate - The date that a file attachment record was last modified.
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// CreateDate - The date a file was originally attached to a ticket.
 	CreateDate *time.Time `json:"createDate,omitempty"`
@@ -31,15 +27,19 @@ type SoftLayer_Ticket_Attachment_File struct {
 	// FileSize - The size of a file attached to a ticket, measured in bytes.
 	FileSize string `json:"fileSize,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
+	// TicketId - The internal identifier of the ticket that a file is attached to.
+	TicketId int `json:"ticketId,omitempty"`
 
-	// ModifyDate - The date that a file attachment record was last modified.
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+	// UpdateId - The internal identifier of the ticket update the attached file is associated with.
+	UpdateId int `json:"updateId,omitempty"`
 
 	// UploaderId - The internal identifier of the user that uploaded a ticket file attachment. This is
 	// only used when A file attachment's ''uploaderType'' is set to
 	UploaderId string `json:"uploaderId,omitempty"`
+
+	// UploaderType - The type of user that attached a file to a ticket. This is either if the file was
+	// uploaded by a portal or API user or if the file was uploaded by a SoftLayer employee.
+	UploaderType string `json:"uploaderType,omitempty"`
 
 	// Ticket - <nil>
 	Ticket *SoftLayer_Ticket `json:"ticket,omitempty"`

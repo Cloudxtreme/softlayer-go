@@ -5,19 +5,6 @@ package types
 // SoftLayer_Monitoring_Agent_Configuration_Value - no documentation
 type SoftLayer_Monitoring_Agent_Configuration_Value struct {
 
-	// AgentId - Internal identifier of a monitoring agent that this configuration value belongs to
-	AgentId int `json:"agentId,omitempty"`
-
-	// ConfigurationDefinitionId - Internal identifier of a monitoring configuration definition by which
-	// this value is defined
-	ConfigurationDefinitionId int `json:"configurationDefinitionId,omitempty"`
-
-	// Description - User-friendly description of a configuration value.
-	Description string `json:"description,omitempty"`
-
-	// Id - Internal identifier of a monitoring configuration value
-	Id int `json:"id,omitempty"`
-
 	// ProfileId - Internal identifier of a configuration profile. Configuration profile is associated with
 	// a configuration section type of "Template section" A "Template section" defines skeleton
 	// configuration definitions. For instance, if you want to monitor additional hard disks with
@@ -26,6 +13,19 @@ type SoftLayer_Monitoring_Agent_Configuration_Value struct {
 
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
+
+	// Description - User-friendly description of a configuration value.
+	Description string `json:"description,omitempty"`
+
+	// ConfigurationDefinitionId - Internal identifier of a monitoring configuration definition by which
+	// this value is defined
+	ConfigurationDefinitionId int `json:"configurationDefinitionId,omitempty"`
+
+	// Id - Internal identifier of a monitoring configuration value
+	Id int `json:"id,omitempty"`
+
+	// AgentId - Internal identifier of a monitoring agent that this configuration value belongs to
+	AgentId int `json:"agentId,omitempty"`
 
 	// Definition - <nil>
 	Definition *SoftLayer_Configuration_Template_Section_Definition `json:"definition,omitempty"`

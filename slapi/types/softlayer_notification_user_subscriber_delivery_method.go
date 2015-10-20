@@ -7,14 +7,14 @@ package types
 // method ids used to delivery the notification.
 type SoftLayer_Notification_User_Subscriber_Delivery_Method struct {
 
-	// Active - Determines if the delivery method is active for the user.
-	Active int `json:"active,omitempty"`
-
 	// NotificationMethodId - Unique identifier of the method used to deliver notification.
 	NotificationMethodId int `json:"notificationMethodId,omitempty"`
 
 	// NotificationUserSubscriberId - Unique identifier of the subscriber tied to the delivery method.
 	NotificationUserSubscriberId int `json:"notificationUserSubscriberId,omitempty"`
+
+	// Active - Determines if the delivery method is active for the user.
+	Active int `json:"active,omitempty"`
 
 	// DeliveryMethod - Provides details for the method used to deliver the notification (email, sms,
 	// ticket).

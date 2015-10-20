@@ -12,39 +12,25 @@ type SoftLayer_Network_Firewall_Update_Request_Rule struct {
 	// Action - The action that this update request rule is to take [permit or deny].
 	Action string `json:"action,omitempty"`
 
-	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
-	// determining rule application.
-	DestinationPortRangeStart int `json:"destinationPortRangeStart,omitempty"`
-
 	// DestinationIpSubnetMask - The destination IP subnet mask considered for determining rule
 	// application.
 	DestinationIpSubnetMask string `json:"destinationIpSubnetMask,omitempty"`
 
-	// SourceIpCidr - The is used for determining rule application. This value will
-	SourceIpCidr int `json:"sourceIpCidr,omitempty"`
+	// SourceIpAddress - The source IP address considered for determining rule application.
+	SourceIpAddress string `json:"sourceIpAddress,omitempty"`
 
 	// SourceIpSubnetMask - The source IP subnet mask considered for determining rule application.
 	SourceIpSubnetMask string `json:"sourceIpSubnetMask,omitempty"`
-
-	// Version - Whether this rule is an IPv4 rule or an IPv6 rule. If
-	Version int `json:"version,omitempty"`
 
 	// DestinationPortRangeEnd - The ending (upper end of range) destination port considered for
 	// determining rule application.
 	DestinationPortRangeEnd int `json:"destinationPortRangeEnd,omitempty"`
 
-	// FirewallUpdateRequestId - The unique identifier of the firewall update request that a firewall
-	// update request rule is associated with.
-	FirewallUpdateRequestId int `json:"firewallUpdateRequestId,omitempty"`
-
 	// Notes - The notes field for the firewall update request rule.
 	Notes string `json:"notes,omitempty"`
 
-	// OrderValue - The numeric value describing the order in which the rule should be applied.
-	OrderValue int `json:"orderValue,omitempty"`
-
-	// Protocol - The protocol considered for determining rule application.
-	Protocol string `json:"protocol,omitempty"`
+	// SourceIpCidr - The is used for determining rule application. This value will
+	SourceIpCidr int `json:"sourceIpCidr,omitempty"`
 
 	// DestinationIpAddress - The destination IP address considered for determining rule application.
 	DestinationIpAddress string `json:"destinationIpAddress,omitempty"`
@@ -52,11 +38,25 @@ type SoftLayer_Network_Firewall_Update_Request_Rule struct {
 	// DestinationIpCidr - The is used for determining rule application. This value will
 	DestinationIpCidr int `json:"destinationIpCidr,omitempty"`
 
+	// DestinationPortRangeStart - The starting (lower end of range) destination port considered for
+	// determining rule application.
+	DestinationPortRangeStart int `json:"destinationPortRangeStart,omitempty"`
+
 	// Id - A Firewall update request rule's internal identifier.
 	Id int `json:"id,omitempty"`
 
-	// SourceIpAddress - The source IP address considered for determining rule application.
-	SourceIpAddress string `json:"sourceIpAddress,omitempty"`
+	// OrderValue - The numeric value describing the order in which the rule should be applied.
+	OrderValue int `json:"orderValue,omitempty"`
+
+	// FirewallUpdateRequestId - The unique identifier of the firewall update request that a firewall
+	// update request rule is associated with.
+	FirewallUpdateRequestId int `json:"firewallUpdateRequestId,omitempty"`
+
+	// Protocol - The protocol considered for determining rule application.
+	Protocol string `json:"protocol,omitempty"`
+
+	// Version - Whether this rule is an IPv4 rule or an IPv6 rule. If
+	Version int `json:"version,omitempty"`
 
 	// FirewallUpdateRequest - no documentation
 	FirewallUpdateRequest *SoftLayer_Network_Firewall_Update_Request `json:"firewallUpdateRequest,omitempty"`

@@ -16,14 +16,14 @@ type SoftLayer_Metric_Tracking_Object_Data_Network_ContentDelivery_Account struc
 	// DateTime - no documentation
 	DateTime *time.Time `json:"dateTime,omitempty"`
 
-	// Type - no documentation
-	Type string `json:"type,omitempty"`
-
 	// FileName - The name of a file. This value is only populated in file-based bandwidth reports.
 	FileName string `json:"fileName,omitempty"`
 
 	// PopId - The internal identifier of a CDN POP (Points of Presence).
 	PopId int `json:"popId,omitempty"`
+
+	// Type - no documentation
+	Type string `json:"type,omitempty"`
 
 	// Counter - no documentation
 	Counter slapi.Float64 `json:"counter,omitempty"`

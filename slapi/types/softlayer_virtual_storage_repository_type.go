@@ -14,13 +14,13 @@ type SoftLayer_Virtual_Storage_Repository_Type struct {
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
 
-	// StorageRepositories - The storage repositories on a SoftLayer customer account that belong to this
-	// type.
-	StorageRepositories []*SoftLayer_Virtual_Storage_Repository `json:"storageRepositories,omitempty"`
-
 	// StorageRepositoryCount - A count of the storage repositories on a SoftLayer customer account that
 	// belong to this type.
 	StorageRepositoryCount uint64 `json:"storageRepositoryCount,omitempty"`
+
+	// StorageRepositories - The storage repositories on a SoftLayer customer account that belong to this
+	// type.
+	StorageRepositories []*SoftLayer_Virtual_Storage_Repository `json:"storageRepositories,omitempty"`
 }
 
 func (softlayer_virtual_storage_repository_type *SoftLayer_Virtual_Storage_Repository_Type) String() string {

@@ -6,18 +6,18 @@ package types
 // describes that availability for each package.
 type SoftLayer_Product_Package_Locations struct {
 
+	// LocationId - no documentation
+	LocationId int `json:"locationId,omitempty"`
+
+	// PackageId - The SoftLayer_Product_Package ID tied to this object.
+	PackageId int `json:"packageId,omitempty"`
+
 	// DeliveryTimeInformation - This describes the availability of the package tied to this location.
 	DeliveryTimeInformation string `json:"deliveryTimeInformation,omitempty"`
 
 	// IsAvailable - A simple flag which describes whether or not this location is available for this
 	// package.
 	IsAvailable int `json:"isAvailable,omitempty"`
-
-	// LocationId - no documentation
-	LocationId int `json:"locationId,omitempty"`
-
-	// PackageId - The SoftLayer_Product_Package ID tied to this object.
-	PackageId int `json:"packageId,omitempty"`
 
 	// Location - no documentation
 	Location *SoftLayer_Location `json:"location,omitempty"`

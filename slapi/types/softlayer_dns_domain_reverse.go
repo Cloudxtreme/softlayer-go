@@ -10,17 +10,8 @@ import (
 // address record.
 type SoftLayer_Dns_Domain_Reverse struct {
 
-	// NetworkAddress - no documentation
-	NetworkAddress string `json:"networkAddress,omitempty"`
-
 	// Name - A domain's name including top-level domain, for example "example.com".
 	Name string `json:"name,omitempty"`
-
-	// UpdateDate - no documentation
-	UpdateDate *time.Time `json:"updateDate,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 
 	// Serial - A unique number denoting the latest revision of a domain. Whenever a domain is changed its
 	// corresponding serial number is also changed. Serial numbers typically follow the format yyyymmdd##
@@ -29,8 +20,14 @@ type SoftLayer_Dns_Domain_Reverse struct {
 	// edited via the
 	Serial int `json:"serial,omitempty"`
 
-	// ManagedResourceFlag - A flag indicating that the dns domain record is a managed resource.
-	ManagedResourceFlag bool `json:"managedResourceFlag,omitempty"`
+	// NetworkAddress - no documentation
+	NetworkAddress string `json:"networkAddress,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// UpdateDate - no documentation
+	UpdateDate *time.Time `json:"updateDate,omitempty"`
 
 	// Account - no documentation
 	Account *SoftLayer_Account `json:"account,omitempty"`
@@ -39,13 +36,16 @@ type SoftLayer_Dns_Domain_Reverse struct {
 	// transfers.
 	Secondary *SoftLayer_Dns_Secondary `json:"secondary,omitempty"`
 
-	// ResourceRecords - The individual records contained within a domain record. These include but are not
-	// limited to A, MX, SPF and TXT records.
-	ResourceRecords []*SoftLayer_Dns_Domain_ResourceRecord `json:"resourceRecords,omitempty"`
-
 	// ResourceRecordCount - A count of the individual records contained within a domain record. These
 	// include but are not limited to A, MX, SPF and TXT records.
 	ResourceRecordCount uint64 `json:"resourceRecordCount,omitempty"`
+
+	// ManagedResourceFlag - A flag indicating that the dns domain record is a managed resource.
+	ManagedResourceFlag bool `json:"managedResourceFlag,omitempty"`
+
+	// ResourceRecords - The individual records contained within a domain record. These include but are not
+	// limited to A, MX, SPF and TXT records.
+	ResourceRecords []*SoftLayer_Dns_Domain_ResourceRecord `json:"resourceRecords,omitempty"`
 }
 
 func (softlayer_dns_domain_reverse *SoftLayer_Dns_Domain_Reverse) String() string {

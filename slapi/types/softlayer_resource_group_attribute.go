@@ -9,14 +9,14 @@ import (
 // SoftLayer_Resource_Group_Attribute - <nil>
 type SoftLayer_Resource_Group_Attribute struct {
 
+	// Value - no documentation
+	Value string `json:"value,omitempty"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
-
-	// Value - no documentation
-	Value string `json:"value,omitempty"`
 
 	// Group - no documentation
 	Group *SoftLayer_Resource_Group `json:"group,omitempty"`

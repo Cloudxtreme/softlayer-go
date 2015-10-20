@@ -9,6 +9,13 @@ import (
 // SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch - <nil>
 type SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch struct {
 
+	// Algorithm - The algorithm to use when aggregating and comparing. Currently, the only value that is
+	// accepted is (Exponential Weighted Moving Average). is the default value if no value is given.
+	Algorithm string `json:"algorithm,omitempty"`
+
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -19,6 +26,9 @@ type SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch struct {
 	// the interface of either the frontend or backend network.
 	Metric string `json:"metric,omitempty"`
 
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
 	// Operator - The operator to use for comparison. The only two valid values are ">" and
 	Operator string `json:"operator,omitempty"`
 
@@ -26,22 +36,12 @@ type SoftLayer_Scale_Policy_Trigger_ResourceUse_Watch struct {
 	// not retrieved steadily and consecutively for the length of this period, nothing is compared.
 	Period int `json:"period,omitempty"`
 
-	// ScalePolicyTriggerId - no documentation
-	ScalePolicyTriggerId int `json:"scalePolicyTriggerId,omitempty"`
-
-	// Algorithm - The algorithm to use when aggregating and comparing. Currently, the only value that is
-	// accepted is (Exponential Weighted Moving Average). is the default value if no value is given.
-	Algorithm string `json:"algorithm,omitempty"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
 	// DeleteFlag - When set and true any edit that happens on this object, be it calling edit on this
 	// directly or setting as a child while editing a parent object, will end up being a deletion.
 	DeleteFlag bool `json:"deleteFlag,omitempty"`
 
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+	// ScalePolicyTriggerId - no documentation
+	ScalePolicyTriggerId int `json:"scalePolicyTriggerId,omitempty"`
 
 	// Value - The value to compare against. Although the value is a string, validation will be done on the
 	// value for restrictions (such as numeric-only) based on the metric.

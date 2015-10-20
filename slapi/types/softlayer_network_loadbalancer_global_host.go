@@ -18,11 +18,18 @@ import (
 // round robin' load balance method.
 type SoftLayer_Network_LoadBalancer_Global_Host struct {
 
-	// Enabled - Whether the host is enabled or not. The value can be '0' for disabled, or '1' for enabled.
-	Enabled int `json:"enabled,omitempty"`
+	// DestinationIp - The IP address of the host that will be returned by the global load balancers in
+	// response to a dns request.
+	DestinationIp string `json:"destinationIp,omitempty"`
 
 	// Hits - The number of times the host was selected by the load balance method.
 	Hits slapi.Float64 `json:"hits,omitempty"`
+
+	// Enabled - Whether the host is enabled or not. The value can be '0' for disabled, or '1' for enabled.
+	Enabled int `json:"enabled,omitempty"`
+
+	// HealthCheck - The health check type of a host. Valid values include 'none', 'http', and 'tcp'.
+	HealthCheck string `json:"healthCheck,omitempty"`
 
 	// Id - The unique identifier of a global load balancer host.
 	Id int `json:"id,omitempty"`
@@ -31,20 +38,6 @@ type SoftLayer_Network_LoadBalancer_Global_Host struct {
 	// the load balance method is set to failover.
 	LoadBalanceOrder int `json:"loadBalanceOrder,omitempty"`
 
-	// Weight - The load balance weight of a host. The total weight of all hosts in the load balancing pool
-	// must not exceed 100.
-	Weight int `json:"weight,omitempty"`
-
-	// DestinationIp - The IP address of the host that will be returned by the global load balancers in
-	// response to a dns request.
-	DestinationIp string `json:"destinationIp,omitempty"`
-
-	// DestinationPort - The port of the host that will be used for health checks.
-	DestinationPort int `json:"destinationPort,omitempty"`
-
-	// HealthCheck - The health check type of a host. Valid values include 'none', 'http', and 'tcp'.
-	HealthCheck string `json:"healthCheck,omitempty"`
-
 	// Location - The location of a host in a datacenter.serverRoom format.
 	Location string `json:"location,omitempty"`
 
@@ -52,6 +45,13 @@ type SoftLayer_Network_LoadBalancer_Global_Host struct {
 	// health check type is set to 'none' or an update to the ip, port, or health check type was recently
 	// done and the host is waiting for the new status.
 	Status string `json:"status,omitempty"`
+
+	// DestinationPort - The port of the host that will be used for health checks.
+	DestinationPort int `json:"destinationPort,omitempty"`
+
+	// Weight - The load balance weight of a host. The total weight of all hosts in the load balancing pool
+	// must not exceed 100.
+	Weight int `json:"weight,omitempty"`
 
 	// LoadBalancerAccount - The global load balancer account a host belongs to.
 	LoadBalancerAccount *SoftLayer_Network_LoadBalancer_Global_Account `json:"loadBalancerAccount,omitempty"`

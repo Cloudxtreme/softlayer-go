@@ -19,12 +19,12 @@ type SoftLayer_User_Customer_Notification_Virtual_Guest struct {
 	// monitoring failure.
 	UserId int `json:"userId,omitempty"`
 
-	// Guest - no documentation
-	Guest *SoftLayer_Virtual_Guest `json:"guest,omitempty"`
-
 	// User - The user that will be notified when the associated virtual guest object fails a monitoring
 	// instance.
 	User *SoftLayer_User_Customer `json:"user,omitempty"`
+
+	// Guest - no documentation
+	Guest *SoftLayer_Virtual_Guest `json:"guest,omitempty"`
 }
 
 func (softlayer_user_customer_notification_virtual_guest *SoftLayer_User_Customer_Notification_Virtual_Guest) String() string {

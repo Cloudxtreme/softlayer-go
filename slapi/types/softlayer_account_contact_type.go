@@ -9,6 +9,9 @@ import (
 // SoftLayer_Account_Contact_Type - <nil>
 type SoftLayer_Account_Contact_Type struct {
 
+	// Description - <nil>
+	Description string `json:"description,omitempty"`
+
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
 
@@ -23,9 +26,6 @@ type SoftLayer_Account_Contact_Type struct {
 
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// Description - <nil>
-	Description string `json:"description,omitempty"`
 }
 
 func (softlayer_account_contact_type *SoftLayer_Account_Contact_Type) String() string {

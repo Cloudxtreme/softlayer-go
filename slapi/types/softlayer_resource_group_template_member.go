@@ -5,6 +5,9 @@ package types
 // SoftLayer_Resource_Group_Template_Member - <nil>
 type SoftLayer_Resource_Group_Template_Member struct {
 
+	// TemplateId - <nil>
+	TemplateId int `json:"templateId,omitempty"`
+
 	// MaxQuantity - <nil>
 	MaxQuantity int `json:"maxQuantity,omitempty"`
 
@@ -13,9 +16,6 @@ type SoftLayer_Resource_Group_Template_Member struct {
 
 	// RoleId - <nil>
 	RoleId int `json:"roleId,omitempty"`
-
-	// TemplateId - <nil>
-	TemplateId int `json:"templateId,omitempty"`
 
 	// Role - <nil>
 	Role *SoftLayer_Resource_Group_Role `json:"role,omitempty"`

@@ -11,12 +11,23 @@ import (
 // SoftLayer_Hardware_LoadBalancer - <nil>
 type SoftLayer_Hardware_LoadBalancer struct {
 
-	// PostInstallScriptUri - URI of the script to be downloaded and executed after installation is
-	// complete.
-	PostInstallScriptUri string `json:"postInstallScriptUri,omitempty"`
+	// Domain - no documentation
+	Domain string `json:"domain,omitempty"`
 
-	// SerialNumber - A hardware's serial number that is supplied by SoftLayer.
-	SerialNumber string `json:"serialNumber,omitempty"`
+	// BareMetalInstanceFlag - When true, this flag specifies that a hardware is Bare Metal Server. Bare
+	// Metal Servers are physical bare metal servers that are billed with the same options as Virtual
+	// Servers, with monthly and hourly rates. Bare Metal instances are ordered based on processor core
+	// count and ram amount.
+	BareMetalInstanceFlag int `json:"bareMetalInstanceFlag,omitempty"`
+
+	// ManufacturerSerialNumber - A hardware's serial number that is supplied by the manufacturer.
+	ManufacturerSerialNumber string `json:"manufacturerSerialNumber,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
+	// AccountId - A hardware's associated [[SoftLayer_Account|account]] id.
+	AccountId int `json:"accountId,omitempty"`
 
 	// Hostname - no documentation
 	Hostname string `json:"hostname,omitempty"`
@@ -29,573 +40,24 @@ type SoftLayer_Hardware_LoadBalancer struct {
 	// should not be edited directly.
 	FullyQualifiedDomainName string `json:"fullyQualifiedDomainName,omitempty"`
 
-	// AccountId - A hardware's associated [[SoftLayer_Account|account]] id.
-	AccountId int `json:"accountId,omitempty"`
+	// ServiceProviderId - <nil>
+	ServiceProviderId int `json:"serviceProviderId,omitempty"`
 
-	// ManufacturerSerialNumber - A hardware's serial number that is supplied by the manufacturer.
-	ManufacturerSerialNumber string `json:"manufacturerSerialNumber,omitempty"`
+	// SerialNumber - A hardware's serial number that is supplied by SoftLayer.
+	SerialNumber string `json:"serialNumber,omitempty"`
 
 	// ProvisionDate - <nil>
 	ProvisionDate *time.Time `json:"provisionDate,omitempty"`
 
-	// Notes - A small note about a piece of hardware to use at your discretion.
-	Notes string `json:"notes,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// ServiceProviderResourceId - A hardware's internal identification number at its service provider
 	ServiceProviderResourceId int `json:"serviceProviderResourceId,omitempty"`
 
-	// ServiceProviderId - <nil>
-	ServiceProviderId int `json:"serviceProviderId,omitempty"`
-
-	// Domain - no documentation
-	Domain string `json:"domain,omitempty"`
-
-	// BareMetalInstanceFlag - When true, this flag specifies that a hardware is Bare Metal Server. Bare
-	// Metal Servers are physical bare metal servers that are billed with the same options as Virtual
-	// Servers, with monthly and hourly rates. Bare Metal instances are ordered based on processor core
-	// count and ram amount.
-	BareMetalInstanceFlag int `json:"bareMetalInstanceFlag,omitempty"`
-
-	// BenchmarkCertificationCount - A count of information regarding a piece of hardware's benchmark
-	// certifications.
-	BenchmarkCertificationCount uint64 `json:"benchmarkCertificationCount,omitempty"`
-
-	// ResourceGroupMemberReferenceCount - no documentation
-	ResourceGroupMemberReferenceCount uint64 `json:"resourceGroupMemberReferenceCount,omitempty"`
-
-	// ServerRoom - Information regarding the server room in which the hardware is located.
-	ServerRoom *SoftLayer_Location `json:"serverRoom,omitempty"`
-
-	// VirtualChassisSiblings - Information regarding the virtual chassis siblings for a piece of hardware.
-	VirtualChassisSiblings []*SoftLayer_Hardware `json:"virtualChassisSiblings,omitempty"`
-
-	// FixedConfigurationPreset - Defines the fixed components in a fixed configuration bare metal server.
-	FixedConfigurationPreset *SoftLayer_Product_Package_Preset `json:"fixedConfigurationPreset,omitempty"`
-
-	// BlockCancelBecauseDisconnectedFlag - Determines whether the hardware is ineligible for cancellation
-	// because it is disconnected.
-	BlockCancelBecauseDisconnectedFlag bool `json:"blockCancelBecauseDisconnectedFlag,omitempty"`
-
-	// DownlinkVirtualGuests - Information regarding all virtual guests attached to a piece of network
-	// hardware.
-	DownlinkVirtualGuests []*SoftLayer_Virtual_Guest `json:"downlinkVirtualGuests,omitempty"`
-
-	// NetworkVlanCount - A count of the network virtual LANs (VLANs) associated with a piece of hardware's
-	// network components.
-	NetworkVlanCount uint64 `json:"networkVlanCount,omitempty"`
-
-	// NetworkGatewayMember - The gateway member if this device is part of a network gateway.
-	NetworkGatewayMember *SoftLayer_Network_Gateway_Member `json:"networkGatewayMember,omitempty"`
-
-	// ActiveNetworkMonitorIncidentCount - A count of a piece of hardware's active network monitoring
-	// incidents.
-	ActiveNetworkMonitorIncidentCount uint64 `json:"activeNetworkMonitorIncidentCount,omitempty"`
-
-	// RemoteManagementAccountCount - A count of user credentials to issue commands and/or interact with
-	// the server's remote management card.
-	RemoteManagementAccountCount uint64 `json:"remoteManagementAccountCount,omitempty"`
-
-	// UserDataCount - A count of a string containing custom user data for a hardware order.
-	UserDataCount uint64 `json:"userDataCount,omitempty"`
-
-	// ResourceGroupCount - A count of the resource groups in which this hardware is a member.
-	ResourceGroupCount uint64 `json:"resourceGroupCount,omitempty"`
-
-	// ResourceGroupRoles - <nil>
-	ResourceGroupRoles []*SoftLayer_Resource_Group_Role `json:"resourceGroupRoles,omitempty"`
-
-	// NetworkMonitorAttachedDownVirtualGuests - Virtual guests that are attached downstream to a hardware
-	// that have failed monitoring
-	NetworkMonitorAttachedDownVirtualGuests []*SoftLayer_Virtual_Guest `json:"networkMonitorAttachedDownVirtualGuests,omitempty"`
-
-	// MonitoringServiceComponent - Information regarding a piece of hardware's network monitoring
-	// services.
-	MonitoringServiceComponent *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum `json:"monitoringServiceComponent,omitempty"`
-
-	// VirtualHost - no documentation
-	VirtualHost *SoftLayer_Virtual_Host `json:"virtualHost,omitempty"`
-
-	// EvaultNetworkStorage - Information regarding a piece of hardware's associated EVault network storage
-	// service account.
-	EvaultNetworkStorage []*SoftLayer_Network_Storage `json:"evaultNetworkStorage,omitempty"`
-
-	// NetworkCardCount - A count of information regarding a piece of hardware's network cards.
-	NetworkCardCount uint64 `json:"networkCardCount,omitempty"`
-
-	// PointOfPresenceLocation - Information regarding the Point of Presence (PoP) location in which a
-	// piece of hardware resides.
-	PointOfPresenceLocation *SoftLayer_Location `json:"pointOfPresenceLocation,omitempty"`
-
-	// DownlinkNetworkHardwareCount - A count of all hardware that has uplink network connections to a
-	// piece of hardware.
-	DownlinkNetworkHardwareCount uint64 `json:"downlinkNetworkHardwareCount,omitempty"`
-
-	// BillingItemFlag - no documentation
-	BillingItemFlag bool `json:"billingItemFlag,omitempty"`
-
-	// InboundBandwidthUsage - The sum of all the inbound network traffic data for the last 30 days.
-	InboundBandwidthUsage slapi.Float64 `json:"inboundBandwidthUsage,omitempty"`
-
-	// MetricTrackingObject - no documentation
-	MetricTrackingObject *SoftLayer_Metric_Tracking_Object_HardwareServer `json:"metricTrackingObject,omitempty"`
-
-	// MonitoringAgentCount - A count of information regarding the monitoring agents associated with a
-	// piece of hardware.
-	MonitoringAgentCount uint64 `json:"monitoringAgentCount,omitempty"`
-
-	// CurrentBillableBandwidthUsage - The current billable public outbound bandwidth for this hardware for
-	// the current billing cycle.
-	CurrentBillableBandwidthUsage slapi.Float64 `json:"currentBillableBandwidthUsage,omitempty"`
-
-	// BackendRouterCount - no documentation
-	BackendRouterCount uint64 `json:"backendRouterCount,omitempty"`
-
-	// AverageDailyPublicBandwidthUsage - The average daily public bandwidth usage for the current billing
-	// cycle.
-	AverageDailyPublicBandwidthUsage slapi.Float64 `json:"averageDailyPublicBandwidthUsage,omitempty"`
-
-	// AllowedNetworkStorageReplicaCount - A count of the SoftLayer_Network_Storage objects whose Replica
-	// that this SoftLayer_Hardware has access to.
-	AllowedNetworkStorageReplicaCount uint64 `json:"allowedNetworkStorageReplicaCount,omitempty"`
-
-	// ScaleAssetCount - A count of collection of scale assets this hardware corresponds to.
-	ScaleAssetCount uint64 `json:"scaleAssetCount,omitempty"`
-
-	// ActiveComponentCount - A count of a piece of hardware's active physical components.
-	ActiveComponentCount uint64 `json:"activeComponentCount,omitempty"`
-
-	// UpgradeRequest - An account's associated upgrade request object, if any.
-	UpgradeRequest *SoftLayer_Product_Upgrade_Request `json:"upgradeRequest,omitempty"`
-
-	// PrimaryIpAddress - no documentation
-	PrimaryIpAddress string `json:"primaryIpAddress,omitempty"`
-
-	// UplinkNetworkComponentCount - A count of information regarding the network component that is one
-	// level higher than a piece of hardware on the network infrastructure.
-	UplinkNetworkComponentCount uint64 `json:"uplinkNetworkComponentCount,omitempty"`
-
-	// SshKeys - SSH keys to be installed on the server during provisioning or an OS reload.
-	SshKeys []*SoftLayer_Security_Ssh_Key `json:"sshKeys,omitempty"`
-
-	// NotesHistoryCount - no documentation
-	NotesHistoryCount uint64 `json:"notesHistoryCount,omitempty"`
-
-	// DownstreamNetworkHardwareWithIncidents - All network hardware with monitoring warnings or errors
-	// that are downstream from the selected piece of hardware.
-	DownstreamNetworkHardwareWithIncidents []*SoftLayer_Hardware `json:"downstreamNetworkHardwareWithIncidents,omitempty"`
-
-	// UserData - A string containing custom user data for a hardware order.
-	UserData []*SoftLayer_Hardware_Attribute `json:"userData,omitempty"`
-
-	// PowerSupply - Information regarding a piece of hardware's power supply.
-	PowerSupply []*SoftLayer_Hardware_Component `json:"powerSupply,omitempty"`
-
-	// RaidControllers - The controllers contained within a piece of hardware.
-	RaidControllers []*SoftLayer_Hardware_Component `json:"raidControllers,omitempty"`
-
-	// DatacenterName - The name of the datacenter in which a piece of hardware resides.
-	DatacenterName string `json:"datacenterName,omitempty"`
-
-	// Processors - Information regarding a piece of hardware's processors.
-	Processors []*SoftLayer_Hardware_Component `json:"processors,omitempty"`
-
-	// Location - Where a piece of hardware is located within SoftLayer's location hierarchy.
-	Location *SoftLayer_Location `json:"location,omitempty"`
-
-	// Components - no documentation
-	Components []*SoftLayer_Hardware_Component `json:"components,omitempty"`
-
-	// Rack - <nil>
-	Rack *SoftLayer_Location `json:"rack,omitempty"`
-
-	// DownstreamNetworkHardwareCount - A count of all network hardware downstream from the selected piece
-	// of hardware.
-	DownstreamNetworkHardwareCount uint64 `json:"downstreamNetworkHardwareCount,omitempty"`
-
-	// AllowedNetworkStorage - The SoftLayer_Network_Storage objects that this SoftLayer_Hardware has
-	// access to.
-	AllowedNetworkStorage []*SoftLayer_Network_Storage `json:"allowedNetworkStorage,omitempty"`
-
-	// ManagedResourceFlag - A flag indicating that the hardware is a managed resource.
-	ManagedResourceFlag bool `json:"managedResourceFlag,omitempty"`
-
-	// NetworkStatusAttribute - no documentation
-	NetworkStatusAttribute *SoftLayer_Hardware_Attribute `json:"networkStatusAttribute,omitempty"`
-
-	// RaidControllerCount - A count of the controllers contained within a piece of hardware.
-	RaidControllerCount uint64 `json:"raidControllerCount,omitempty"`
-
-	// AllowedNetworkStorageCount - A count of the SoftLayer_Network_Storage objects that this
-	// SoftLayer_Hardware has access to.
-	AllowedNetworkStorageCount uint64 `json:"allowedNetworkStorageCount,omitempty"`
-
-	// DownlinkHardwareCount - A count of all hardware that has uplink network connections to a piece of
-	// hardware.
-	DownlinkHardwareCount uint64 `json:"downlinkHardwareCount,omitempty"`
-
-	// NetworkMonitors - Information regarding a piece of hardware's network monitors.
-	NetworkMonitors []*SoftLayer_Network_Monitor_Version1_Query_Host `json:"networkMonitors,omitempty"`
-
-	// NetworkMonitorIncidents - The status of all of a piece of hardware's network monitoring incidents.
-	NetworkMonitorIncidents []*SoftLayer_Network_Monitor_Version1_Incident `json:"networkMonitorIncidents,omitempty"`
-
-	// AntivirusSpywareSoftwareComponent - Information regarding an antivirus/spyware software component
-	// object.
-	AntivirusSpywareSoftwareComponent *SoftLayer_Software_Component `json:"antivirusSpywareSoftwareComponent,omitempty"`
-
-	// PowerComponents - no documentation
-	PowerComponents []*SoftLayer_Hardware_Power_Component `json:"powerComponents,omitempty"`
-
-	// SecurityScanRequests - Information regarding a piece of hardware's vulnerability scan requests.
-	SecurityScanRequests []*SoftLayer_Network_Security_Scanner_Request `json:"securityScanRequests,omitempty"`
-
-	// OperatingSystem - Information regarding a piece of hardware's operating system.
-	OperatingSystem *SoftLayer_Software_Component_OperatingSystem `json:"operatingSystem,omitempty"`
-
-	// PrivateNetworkOnlyFlag - Whether the hardware only has access to the private network.
-	PrivateNetworkOnlyFlag bool `json:"privateNetworkOnlyFlag,omitempty"`
-
-	// NetworkComponents - no documentation
-	NetworkComponents []*SoftLayer_Network_Component `json:"networkComponents,omitempty"`
-
-	// Datacenter - Information regarding the datacenter in which a piece of hardware resides.
-	Datacenter *SoftLayer_Location `json:"datacenter,omitempty"`
-
-	// ProcessorCoreAmount - The total number of processor cores, summed from all processors that are
-	// attached to a piece of hardware
-	ProcessorCoreAmount uint `json:"processorCoreAmount,omitempty"`
-
-	// ServiceProvider - Information regarding the piece of hardware's service provider.
-	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`
-
-	// DownlinkServers - Information regarding all servers attached to a piece of network hardware.
-	DownlinkServers []*SoftLayer_Hardware `json:"downlinkServers,omitempty"`
-
-	// NextBillingCycleBandwidthAllocation - A hardware's allotted bandwidth for the next billing cycle
-	// (measured in
-	NextBillingCycleBandwidthAllocation slapi.Float64 `json:"nextBillingCycleBandwidthAllocation,omitempty"`
-
-	// PrimaryBackendNetworkComponent - Information regarding the hardware's primary back-end network
-	// component.
-	PrimaryBackendNetworkComponent *SoftLayer_Network_Component `json:"primaryBackendNetworkComponent,omitempty"`
-
-	// DownlinkNetworkHardware - All hardware that has uplink network connections to a piece of hardware.
-	DownlinkNetworkHardware []*SoftLayer_Hardware `json:"downlinkNetworkHardware,omitempty"`
-
-	// LocationPathString - <nil>
-	LocationPathString string `json:"locationPathString,omitempty"`
-
-	// DownlinkVirtualGuestCount - A count of information regarding all virtual guests attached to a piece
-	// of network hardware.
-	DownlinkVirtualGuestCount uint64 `json:"downlinkVirtualGuestCount,omitempty"`
-
-	// InboundPublicBandwidthUsage - The total public inbound bandwidth for this hardware for the current
-	// billing cycle.
-	InboundPublicBandwidthUsage slapi.Float64 `json:"inboundPublicBandwidthUsage,omitempty"`
-
-	// UserCount - A count of a list of users that have access to this hardware load balancer.
-	UserCount uint64 `json:"userCount,omitempty"`
-
-	// NotesHistory - <nil>
-	NotesHistory []*SoftLayer_Hardware_Note `json:"notesHistory,omitempty"`
-
-	// NetworkMonitorCount - A count of information regarding a piece of hardware's network monitors.
-	NetworkMonitorCount uint64 `json:"networkMonitorCount,omitempty"`
-
-	// DownstreamNetworkHardwareWithIncidentCount - A count of all network hardware with monitoring
-	// warnings or errors that are downstream from the selected piece of hardware.
-	DownstreamNetworkHardwareWithIncidentCount uint64 `json:"downstreamNetworkHardwareWithIncidentCount,omitempty"`
-
-	// NetworkMonitorAttachedDownHardwareCount - A count of all servers with failed monitoring that are
-	// attached downstream to a piece of hardware.
-	NetworkMonitorAttachedDownHardwareCount uint64 `json:"networkMonitorAttachedDownHardwareCount,omitempty"`
-
-	// BandwidthAllotmentDetail - A hardware's allotted detail record. Allotment details link bandwidth
-	// allocation with allotments.
-	BandwidthAllotmentDetail *SoftLayer_Network_Bandwidth_Version1_Allotment_Detail `json:"bandwidthAllotmentDetail,omitempty"`
-
-	// BackendNetworkComponents - A piece of hardware's back-end or private network components.
-	BackendNetworkComponents []*SoftLayer_Network_Component `json:"backendNetworkComponents,omitempty"`
-
-	// TopLevelLocation - <nil>
-	TopLevelLocation *SoftLayer_Location `json:"topLevelLocation,omitempty"`
-
-	// Memory - Information regarding a piece of hardware's memory.
-	Memory []*SoftLayer_Hardware_Component `json:"memory,omitempty"`
-
-	// EvaultNetworkStorageCount - A count of information regarding a piece of hardware's associated EVault
-	// network storage service account.
-	EvaultNetworkStorageCount uint64 `json:"evaultNetworkStorageCount,omitempty"`
-
-	// TagReferenceCount - no documentation
-	TagReferenceCount uint64 `json:"tagReferenceCount,omitempty"`
-
-	// AllPowerComponentCount - no documentation
-	AllPowerComponentCount uint64 `json:"allPowerComponentCount,omitempty"`
-
-	// BillingItem - Information regarding the billing item for a server.
-	BillingItem *SoftLayer_Billing_Item_Hardware `json:"billingItem,omitempty"`
-
-	// RecentEventCount - A count of recent events that impact this hardware.
-	RecentEventCount uint64 `json:"recentEventCount,omitempty"`
-
-	// VirtualLicenseCount - A count of information regarding a piece of hardware's virtual software
-	// licenses.
-	VirtualLicenseCount uint64 `json:"virtualLicenseCount,omitempty"`
-
-	// PrimaryNetworkComponent - Information regarding the hardware's primary public network component.
-	PrimaryNetworkComponent *SoftLayer_Network_Component `json:"primaryNetworkComponent,omitempty"`
-
-	// BenchmarkCertifications - Information regarding a piece of hardware's benchmark certifications.
-	BenchmarkCertifications []*SoftLayer_Hardware_Benchmark_Certification `json:"benchmarkCertifications,omitempty"`
-
-	// OutboundBandwidthUsage - The sum of all the outbound network traffic data for the last 30 days.
-	OutboundBandwidthUsage slapi.Float64 `json:"outboundBandwidthUsage,omitempty"`
-
-	// MonitoringAgents - Information regarding the monitoring agents associated with a piece of hardware.
-	MonitoringAgents []*SoftLayer_Monitoring_Agent `json:"monitoringAgents,omitempty"`
-
-	// ActiveComponents - no documentation
-	ActiveComponents []*SoftLayer_Hardware_Component `json:"activeComponents,omitempty"`
-
-	// VirtualizationPlatform - A piece of hardware's virtualization platform software.
-	VirtualizationPlatform *SoftLayer_Software_Component `json:"virtualizationPlatform,omitempty"`
-
-	// VirtualRack - Information regarding the bandwidth allotment to which a piece of hardware belongs.
-	VirtualRack *SoftLayer_Network_Bandwidth_Version1_Allotment `json:"virtualRack,omitempty"`
-
-	// PowerComponentCount - A count of the power components for a hardware object.
-	PowerComponentCount uint64 `json:"powerComponentCount,omitempty"`
-
-	// NetworkManagementIpAddress - A piece of hardware's network management IP address.
-	NetworkManagementIpAddress string `json:"networkManagementIpAddress,omitempty"`
-
-	// VirtualLicenses - Information regarding a piece of hardware's virtual software licenses.
-	VirtualLicenses []*SoftLayer_Software_VirtualLicense `json:"virtualLicenses,omitempty"`
-
-	// DownstreamVirtualGuests - Information regarding all virtual guests attached to a piece of network
-	// hardware.
-	DownstreamVirtualGuests []*SoftLayer_Virtual_Guest `json:"downstreamVirtualGuests,omitempty"`
-
-	// DownstreamServerCount - A count of information regarding all servers attached downstream to a piece
-	// of network hardware.
-	DownstreamServerCount uint64 `json:"downstreamServerCount,omitempty"`
-
-	// RemoteManagementAccounts - User credentials to issue commands and/or interact with the server's
-	// remote management card.
-	RemoteManagementAccounts []*SoftLayer_Hardware_Component_RemoteManagement_User `json:"remoteManagementAccounts,omitempty"`
-
-	// Users - A list of users that have access to this hardware load balancer.
-	Users []*SoftLayer_User_Customer `json:"users,omitempty"`
-
-	// VirtualChassisSiblingCount - A count of information regarding the virtual chassis siblings for a
-	// piece of hardware.
-	VirtualChassisSiblingCount uint64 `json:"virtualChassisSiblingCount,omitempty"`
-
-	// BusinessContinuanceInsuranceFlag - Status indicating whether or not a piece of hardware has business
-	// continuance insurance.
-	BusinessContinuanceInsuranceFlag bool `json:"businessContinuanceInsuranceFlag,omitempty"`
-
-	// MonitoringServiceFlag - no documentation
-	MonitoringServiceFlag bool `json:"monitoringServiceFlag,omitempty"`
-
-	// VirtualChassis - Information regarding the virtual chassis for a piece of hardware.
-	VirtualChassis *SoftLayer_Hardware_Group `json:"virtualChassis,omitempty"`
-
-	// NetworkComponentCount - A count of returns a hardware's network components.
-	NetworkComponentCount uint64 `json:"networkComponentCount,omitempty"`
-
-	// BandwidthAllocation - no documentation
-	BandwidthAllocation slapi.Float64 `json:"bandwidthAllocation,omitempty"`
-
-	// PrimaryBackendIpAddress - no documentation
-	PrimaryBackendIpAddress string `json:"primaryBackendIpAddress,omitempty"`
-
-	// HardwareChassis - no documentation
-	HardwareChassis *SoftLayer_Hardware_Chassis `json:"hardwareChassis,omitempty"`
-
-	// UplinkNetworkComponents - Information regarding the network component that is one level higher than
-	// a piece of hardware on the network infrastructure.
-	UplinkNetworkComponents []*SoftLayer_Network_Component `json:"uplinkNetworkComponents,omitempty"`
-
-	// NetworkMonitorIncidentCount - A count of the status of all of a piece of hardware's network
-	// monitoring incidents.
-	NetworkMonitorIncidentCount uint64 `json:"networkMonitorIncidentCount,omitempty"`
-
-	// StorageNetworkComponents - <nil>
-	StorageNetworkComponents []*SoftLayer_Network_Component `json:"storageNetworkComponents,omitempty"`
-
-	// DriveControllerCount - A count of the drive controllers contained within a piece of hardware.
-	DriveControllerCount uint64 `json:"driveControllerCount,omitempty"`
-
-	// ComponentCount - no documentation
-	ComponentCount uint64 `json:"componentCount,omitempty"`
-
-	// GlobalIdentifier - no documentation
-	GlobalIdentifier string `json:"globalIdentifier,omitempty"`
-
-	// BackendNetworkComponentCount - A count of a piece of hardware's back-end or private network
-	// components.
-	BackendNetworkComponentCount uint64 `json:"backendNetworkComponentCount,omitempty"`
-
-	// ResourceGroupRoleCount - no documentation
-	ResourceGroupRoleCount uint64 `json:"resourceGroupRoleCount,omitempty"`
-
-	// BackendRouters - no documentation
-	BackendRouters []*SoftLayer_Hardware `json:"backendRouters,omitempty"`
-
-	// HardDriveCount - A count of the hard drives contained within a piece of hardware.
-	HardDriveCount uint64 `json:"hardDriveCount,omitempty"`
-
-	// RecentEvents - no documentation
-	RecentEvents []*SoftLayer_Notification_Occurrence_Event `json:"recentEvents,omitempty"`
-
-	// DriveControllers - The drive controllers contained within a piece of hardware.
-	DriveControllers []*SoftLayer_Hardware_Component `json:"driveControllers,omitempty"`
-
-	// LatestNetworkMonitorIncident - A piece of hardware's latest network monitoring incident.
-	LatestNetworkMonitorIncident *SoftLayer_Network_Monitor_Version1_Incident `json:"latestNetworkMonitorIncident,omitempty"`
-
-	// ResourceGroupMemberReferences - <nil>
-	ResourceGroupMemberReferences []*SoftLayer_Resource_Group_Member `json:"resourceGroupMemberReferences,omitempty"`
-
-	// NetworkStatus - The value of a hardware's network status attribute.
-	NetworkStatus string `json:"networkStatus,omitempty"`
-
-	// NetworkCards - Information regarding a piece of hardware's network cards.
-	NetworkCards []*SoftLayer_Hardware_Component `json:"networkCards,omitempty"`
-
-	// SecurityScanRequestCount - A count of information regarding a piece of hardware's vulnerability scan
-	// requests.
-	SecurityScanRequestCount uint64 `json:"securityScanRequestCount,omitempty"`
-
-	// NetworkStorage - Information regarding a piece of hardware's associated network storage service
-	// account.
-	NetworkStorage []*SoftLayer_Network_Storage `json:"networkStorage,omitempty"`
-
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account,omitempty"`
-
-	// ModelFamily - <nil>
-	ModelFamily string `json:"modelFamily,omitempty"`
-
-	// AllPowerComponents - <nil>
-	AllPowerComponents []*SoftLayer_Hardware_Power_Component `json:"allPowerComponents,omitempty"`
-
-	// HardDrives - The hard drives contained within a piece of hardware.
-	HardDrives []*SoftLayer_Hardware_Component `json:"hardDrives,omitempty"`
-
-	// HasTrustedPlatformModuleBillingItemFlag - no documentation
-	HasTrustedPlatformModuleBillingItemFlag bool `json:"hasTrustedPlatformModuleBillingItemFlag,omitempty"`
-
-	// SoftwareComponentCount - A count of information regarding a piece of hardware's installed software.
-	SoftwareComponentCount uint64 `json:"softwareComponentCount,omitempty"`
-
-	// RemoteManagementComponent - A hardware's associated remote management component. This is normally
-	RemoteManagementComponent *SoftLayer_Network_Component `json:"remoteManagementComponent,omitempty"`
-
-	// DownstreamVirtualGuestCount - A count of information regarding all virtual guests attached to a
-	// piece of network hardware.
-	DownstreamVirtualGuestCount uint64 `json:"downstreamVirtualGuestCount,omitempty"`
-
-	// SshKeyCount - A count of sSH keys to be installed on the server during provisioning or an OS reload.
-	SshKeyCount uint64 `json:"sshKeyCount,omitempty"`
-
-	// ActiveNetworkMonitorIncident - A piece of hardware's active network monitoring incidents.
-	ActiveNetworkMonitorIncident []*SoftLayer_Network_Monitor_Version1_Incident `json:"activeNetworkMonitorIncident,omitempty"`
-
-	// HostIpsSoftwareComponent - Information regarding a host IPS software component object.
-	HostIpsSoftwareComponent *SoftLayer_Software_Component `json:"hostIpsSoftwareComponent,omitempty"`
-
-	// HourlyBillingFlag - no documentation
-	HourlyBillingFlag bool `json:"hourlyBillingFlag,omitempty"`
-
-	// LastTransaction - Information regarding the last transaction a server performed.
-	LastTransaction *SoftLayer_Provisioning_Version1_Transaction `json:"lastTransaction,omitempty"`
-
-	// NetworkStorageCount - A count of information regarding a piece of hardware's associated network
-	// storage service account.
-	NetworkStorageCount uint64 `json:"networkStorageCount,omitempty"`
-
-	// AttributeCount - A count of information regarding a piece of hardware's specific attributes.
-	AttributeCount uint64 `json:"attributeCount,omitempty"`
-
-	// MemoryCount - A count of information regarding a piece of hardware's memory.
-	MemoryCount uint64 `json:"memoryCount,omitempty"`
-
-	// DownlinkServerCount - A count of information regarding all servers attached to a piece of network
-	// hardware.
-	DownlinkServerCount uint64 `json:"downlinkServerCount,omitempty"`
-
-	// ProcessorPhysicalCoreAmount - The total number of physical processor cores, summed from all
-	// processors that are attached to a piece of hardware
-	ProcessorPhysicalCoreAmount uint `json:"processorPhysicalCoreAmount,omitempty"`
-
-	// MonitoringServiceEligibilityFlag - The monitoring service flag eligibility status for a piece of
-	// hardware.
-	MonitoringServiceEligibilityFlag bool `json:"monitoringServiceEligibilityFlag,omitempty"`
-
-	// FrontendRouterCount - no documentation
-	FrontendRouterCount uint64 `json:"frontendRouterCount,omitempty"`
-
-	// PowerSupplyCount - A count of information regarding a piece of hardware's power supply.
-	PowerSupplyCount uint64 `json:"powerSupplyCount,omitempty"`
-
-	// Routers - no documentation
-	Routers []*SoftLayer_Hardware `json:"routers,omitempty"`
-
-	// StorageNetworkComponentCount - no documentation
-	StorageNetworkComponentCount uint64 `json:"storageNetworkComponentCount,omitempty"`
-
-	// DownlinkHardware - All hardware that has uplink network connections to a piece of hardware.
-	DownlinkHardware []*SoftLayer_Hardware `json:"downlinkHardware,omitempty"`
-
-	// DownstreamServers - Information regarding all servers attached downstream to a piece of network
-	// hardware.
-	DownstreamServers []*SoftLayer_Hardware `json:"downstreamServers,omitempty"`
-
-	// OperatingSystemReferenceCode - A hardware's operating system software description.
-	OperatingSystemReferenceCode string `json:"operatingSystemReferenceCode,omitempty"`
-
-	// HardwareFunction - no documentation
-	HardwareFunction *SoftLayer_Hardware_Function `json:"hardwareFunction,omitempty"`
-
-	// DownstreamHardwareBindingCount - A count of all hardware downstream from a network device.
-	DownstreamHardwareBindingCount uint64 `json:"downstreamHardwareBindingCount,omitempty"`
-
-	// VirtualRackId - The name of the bandwidth allotment belonging to a piece of hardware.
-	VirtualRackId int `json:"virtualRackId,omitempty"`
-
-	// FirewallServiceComponent - Information regarding a piece of hardware's firewall services.
-	FirewallServiceComponent *SoftLayer_Network_Component_Firewall `json:"firewallServiceComponent,omitempty"`
-
-	// FrontendRouters - no documentation
-	FrontendRouters []*SoftLayer_Hardware `json:"frontendRouters,omitempty"`
-
-	// DownstreamHardwareBindings - no documentation
-	DownstreamHardwareBindings []*SoftLayer_Network_Component_Uplink_Hardware `json:"downstreamHardwareBindings,omitempty"`
-
-	// TagReferences - <nil>
-	TagReferences []*SoftLayer_Tag_Reference `json:"tagReferences,omitempty"`
-
-	// MemoryCapacity - The amount of memory a piece of hardware has, measured in gigabytes.
-	MemoryCapacity uint `json:"memoryCapacity,omitempty"`
-
-	// Motherboard - Information regarding a piece of hardware's motherboard.
-	Motherboard *SoftLayer_Hardware_Component `json:"motherboard,omitempty"`
-
-	// HardwareStatus - no documentation
-	HardwareStatus *SoftLayer_Hardware_Status `json:"hardwareStatus,omitempty"`
-
-	// AllowedNetworkStorageReplicas - The SoftLayer_Network_Storage objects whose Replica that this
-	// SoftLayer_Hardware has access to.
-	AllowedNetworkStorageReplicas []*SoftLayer_Network_Storage `json:"allowedNetworkStorageReplicas,omitempty"`
-
-	// NetworkGatewayMemberFlag - Whether or not this device is part of a network gateway.
-	NetworkGatewayMemberFlag bool `json:"networkGatewayMemberFlag,omitempty"`
+	// Notes - A small note about a piece of hardware to use at your discretion.
+	Notes string `json:"notes,omitempty"`
+
+	// PostInstallScriptUri - URI of the script to be downloaded and executed after installation is
+	// complete.
+	PostInstallScriptUri string `json:"postInstallScriptUri,omitempty"`
 
 	// MonitoringRobot - Information regarding the hardware's monitoring robot.
 	MonitoringRobot *SoftLayer_Monitoring_Robot `json:"monitoringRobot,omitempty"`
@@ -604,68 +66,606 @@ type SoftLayer_Hardware_LoadBalancer struct {
 	// to a hardware that have failed monitoring
 	NetworkMonitorAttachedDownVirtualGuestCount uint64 `json:"networkMonitorAttachedDownVirtualGuestCount,omitempty"`
 
-	// SoftwareComponents - Information regarding a piece of hardware's installed software.
-	SoftwareComponents []*SoftLayer_Software_Component `json:"softwareComponents,omitempty"`
+	// DownstreamHardwareBindings - no documentation
+	DownstreamHardwareBindings []*SoftLayer_Network_Component_Uplink_Hardware `json:"downstreamHardwareBindings,omitempty"`
 
-	// ContinuousDataProtectionSoftwareComponent - A continuous data protection/server backup software
-	// component object.
-	ContinuousDataProtectionSoftwareComponent *SoftLayer_Software_Component `json:"continuousDataProtectionSoftwareComponent,omitempty"`
+	// RaidControllers - The controllers contained within a piece of hardware.
+	RaidControllers []*SoftLayer_Hardware_Component `json:"raidControllers,omitempty"`
 
-	// NetworkVlans - The network virtual LANs (VLANs) associated with a piece of hardware's network
-	// components.
-	NetworkVlans []*SoftLayer_Network_Vlan `json:"networkVlans,omitempty"`
+	// VirtualRackId - The name of the bandwidth allotment belonging to a piece of hardware.
+	VirtualRackId int `json:"virtualRackId,omitempty"`
 
-	// AllowedHost - The SoftLayer_Network_Storage_Allowed_Host information to connect this server to
-	// Network Storage volumes that require access control lists.
-	AllowedHost *SoftLayer_Network_Storage_Allowed_Host `json:"allowedHost,omitempty"`
+	// PrimaryBackendIpAddress - no documentation
+	PrimaryBackendIpAddress string `json:"primaryBackendIpAddress,omitempty"`
 
-	// HardwareFunctionDescription - no documentation
-	HardwareFunctionDescription string `json:"hardwareFunctionDescription,omitempty"`
+	// ServiceProvider - Information regarding the piece of hardware's service provider.
+	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`
 
-	// SparePoolBillingItem - Information regarding the billing item for a spare pool server.
-	SparePoolBillingItem *SoftLayer_Billing_Item_Hardware `json:"sparePoolBillingItem,omitempty"`
+	// InboundBandwidthUsage - The sum of all the inbound network traffic data for the last 30 days.
+	InboundBandwidthUsage slapi.Float64 `json:"inboundBandwidthUsage,omitempty"`
 
-	// VirtualRackName - The name of the bandwidth allotment belonging to a piece of hardware.
-	VirtualRackName string `json:"virtualRackName,omitempty"`
+	// Rack - <nil>
+	Rack *SoftLayer_Location `json:"rack,omitempty"`
 
-	// RouterCount - no documentation
-	RouterCount uint64 `json:"routerCount,omitempty"`
+	// VirtualChassisSiblings - Information regarding the virtual chassis siblings for a piece of hardware.
+	VirtualChassisSiblings []*SoftLayer_Hardware `json:"virtualChassisSiblings,omitempty"`
+
+	// ProcessorCount - A count of information regarding a piece of hardware's processors.
+	ProcessorCount uint64 `json:"processorCount,omitempty"`
+
+	// NetworkMonitors - Information regarding a piece of hardware's network monitors.
+	NetworkMonitors []*SoftLayer_Network_Monitor_Version1_Query_Host `json:"networkMonitors,omitempty"`
+
+	// ActiveNetworkMonitorIncidentCount - A count of a piece of hardware's active network monitoring
+	// incidents.
+	ActiveNetworkMonitorIncidentCount uint64 `json:"activeNetworkMonitorIncidentCount,omitempty"`
+
+	// ProcessorPhysicalCoreAmount - The total number of physical processor cores, summed from all
+	// processors that are attached to a piece of hardware
+	ProcessorPhysicalCoreAmount uint `json:"processorPhysicalCoreAmount,omitempty"`
+
+	// DownlinkServers - Information regarding all servers attached to a piece of network hardware.
+	DownlinkServers []*SoftLayer_Hardware `json:"downlinkServers,omitempty"`
+
+	// BackendRouterCount - no documentation
+	BackendRouterCount uint64 `json:"backendRouterCount,omitempty"`
+
+	// OperatingSystem - Information regarding a piece of hardware's operating system.
+	OperatingSystem *SoftLayer_Software_Component_OperatingSystem `json:"operatingSystem,omitempty"`
+
+	// BandwidthAllocation - no documentation
+	BandwidthAllocation slapi.Float64 `json:"bandwidthAllocation,omitempty"`
 
 	// NetworkMonitorAttachedDownHardware - All servers with failed monitoring that are attached downstream
 	// to a piece of hardware.
 	NetworkMonitorAttachedDownHardware []*SoftLayer_Hardware `json:"networkMonitorAttachedDownHardware,omitempty"`
 
-	// OutboundPublicBandwidthUsage - The total public outbound bandwidth for this hardware for the current
-	// billing cycle.
-	OutboundPublicBandwidthUsage slapi.Float64 `json:"outboundPublicBandwidthUsage,omitempty"`
+	// PrivateNetworkOnlyFlag - Whether the hardware only has access to the private network.
+	PrivateNetworkOnlyFlag bool `json:"privateNetworkOnlyFlag,omitempty"`
 
-	// ProcessorCount - A count of information regarding a piece of hardware's processors.
-	ProcessorCount uint64 `json:"processorCount,omitempty"`
+	// ResourceGroupRoles - <nil>
+	ResourceGroupRoles []*SoftLayer_Resource_Group_Role `json:"resourceGroupRoles,omitempty"`
+
+	// TopLevelLocation - <nil>
+	TopLevelLocation *SoftLayer_Location `json:"topLevelLocation,omitempty"`
+
+	// HardDrives - The hard drives contained within a piece of hardware.
+	HardDrives []*SoftLayer_Hardware_Component `json:"hardDrives,omitempty"`
+
+	// DownlinkHardware - All hardware that has uplink network connections to a piece of hardware.
+	DownlinkHardware []*SoftLayer_Hardware `json:"downlinkHardware,omitempty"`
+
+	// ActiveComponentCount - A count of a piece of hardware's active physical components.
+	ActiveComponentCount uint64 `json:"activeComponentCount,omitempty"`
+
+	// ResourceGroupMemberReferenceCount - no documentation
+	ResourceGroupMemberReferenceCount uint64 `json:"resourceGroupMemberReferenceCount,omitempty"`
+
+	// NetworkMonitorCount - A count of information regarding a piece of hardware's network monitors.
+	NetworkMonitorCount uint64 `json:"networkMonitorCount,omitempty"`
+
+	// NetworkCardCount - A count of information regarding a piece of hardware's network cards.
+	NetworkCardCount uint64 `json:"networkCardCount,omitempty"`
+
+	// Memory - Information regarding a piece of hardware's memory.
+	Memory []*SoftLayer_Hardware_Component `json:"memory,omitempty"`
+
+	// SecurityScanRequestCount - A count of information regarding a piece of hardware's vulnerability scan
+	// requests.
+	SecurityScanRequestCount uint64 `json:"securityScanRequestCount,omitempty"`
+
+	// VirtualChassisSiblingCount - A count of information regarding the virtual chassis siblings for a
+	// piece of hardware.
+	VirtualChassisSiblingCount uint64 `json:"virtualChassisSiblingCount,omitempty"`
+
+	// StorageNetworkComponentCount - no documentation
+	StorageNetworkComponentCount uint64 `json:"storageNetworkComponentCount,omitempty"`
+
+	// Components - no documentation
+	Components []*SoftLayer_Hardware_Component `json:"components,omitempty"`
+
+	// ResourceGroupCount - A count of the resource groups in which this hardware is a member.
+	ResourceGroupCount uint64 `json:"resourceGroupCount,omitempty"`
+
+	// DownstreamHardwareBindingCount - A count of all hardware downstream from a network device.
+	DownstreamHardwareBindingCount uint64 `json:"downstreamHardwareBindingCount,omitempty"`
+
+	// UplinkNetworkComponentCount - A count of information regarding the network component that is one
+	// level higher than a piece of hardware on the network infrastructure.
+	UplinkNetworkComponentCount uint64 `json:"uplinkNetworkComponentCount,omitempty"`
+
+	// NotesHistory - <nil>
+	NotesHistory []*SoftLayer_Hardware_Note `json:"notesHistory,omitempty"`
+
+	// ComponentCount - no documentation
+	ComponentCount uint64 `json:"componentCount,omitempty"`
+
+	// VirtualizationPlatform - A piece of hardware's virtualization platform software.
+	VirtualizationPlatform *SoftLayer_Software_Component `json:"virtualizationPlatform,omitempty"`
+
+	// RecentEventCount - A count of recent events that impact this hardware.
+	RecentEventCount uint64 `json:"recentEventCount,omitempty"`
+
+	// PowerComponentCount - A count of the power components for a hardware object.
+	PowerComponentCount uint64 `json:"powerComponentCount,omitempty"`
+
+	// SoftwareComponents - Information regarding a piece of hardware's installed software.
+	SoftwareComponents []*SoftLayer_Software_Component `json:"softwareComponents,omitempty"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// Processors - Information regarding a piece of hardware's processors.
+	Processors []*SoftLayer_Hardware_Component `json:"processors,omitempty"`
+
+	// AntivirusSpywareSoftwareComponent - Information regarding an antivirus/spyware software component
+	// object.
+	AntivirusSpywareSoftwareComponent *SoftLayer_Software_Component `json:"antivirusSpywareSoftwareComponent,omitempty"`
+
+	// NetworkCards - Information regarding a piece of hardware's network cards.
+	NetworkCards []*SoftLayer_Hardware_Component `json:"networkCards,omitempty"`
+
+	// NetworkStatusAttribute - no documentation
+	NetworkStatusAttribute *SoftLayer_Hardware_Attribute `json:"networkStatusAttribute,omitempty"`
+
+	// HourlyBillingFlag - no documentation
+	HourlyBillingFlag bool `json:"hourlyBillingFlag,omitempty"`
 
 	// ScaleAssets - Collection of scale assets this hardware corresponds to.
 	ScaleAssets []*SoftLayer_Scale_Asset `json:"scaleAssets,omitempty"`
 
-	// FrontendNetworkComponents - A piece of hardware's front-end or public network components.
-	FrontendNetworkComponents []*SoftLayer_Network_Component `json:"frontendNetworkComponents,omitempty"`
+	// LocationPathString - <nil>
+	LocationPathString string `json:"locationPathString,omitempty"`
+
+	// MonitoringServiceFlag - no documentation
+	MonitoringServiceFlag bool `json:"monitoringServiceFlag,omitempty"`
+
+	// VirtualLicenses - Information regarding a piece of hardware's virtual software licenses.
+	VirtualLicenses []*SoftLayer_Software_VirtualLicense `json:"virtualLicenses,omitempty"`
+
+	// Motherboard - Information regarding a piece of hardware's motherboard.
+	Motherboard *SoftLayer_Hardware_Component `json:"motherboard,omitempty"`
+
+	// GlobalIdentifier - no documentation
+	GlobalIdentifier string `json:"globalIdentifier,omitempty"`
+
+	// NetworkStatus - The value of a hardware's network status attribute.
+	NetworkStatus string `json:"networkStatus,omitempty"`
+
+	// ScaleAssetCount - A count of collection of scale assets this hardware corresponds to.
+	ScaleAssetCount uint64 `json:"scaleAssetCount,omitempty"`
+
+	// BillingItemFlag - no documentation
+	BillingItemFlag bool `json:"billingItemFlag,omitempty"`
+
+	// NetworkMonitorAttachedDownVirtualGuests - Virtual guests that are attached downstream to a hardware
+	// that have failed monitoring
+	NetworkMonitorAttachedDownVirtualGuests []*SoftLayer_Virtual_Guest `json:"networkMonitorAttachedDownVirtualGuests,omitempty"`
+
+	// OperatingSystemReferenceCode - A hardware's operating system software description.
+	OperatingSystemReferenceCode string `json:"operatingSystemReferenceCode,omitempty"`
+
+	// DriveControllerCount - A count of the drive controllers contained within a piece of hardware.
+	DriveControllerCount uint64 `json:"driveControllerCount,omitempty"`
+
+	// EvaultNetworkStorageCount - A count of information regarding a piece of hardware's associated EVault
+	// network storage service account.
+	EvaultNetworkStorageCount uint64 `json:"evaultNetworkStorageCount,omitempty"`
+
+	// ProcessorCoreAmount - The total number of processor cores, summed from all processors that are
+	// attached to a piece of hardware
+	ProcessorCoreAmount uint `json:"processorCoreAmount,omitempty"`
+
+	// FrontendRouters - no documentation
+	FrontendRouters []*SoftLayer_Hardware `json:"frontendRouters,omitempty"`
+
+	// RemoteManagementComponent - A hardware's associated remote management component. This is normally
+	RemoteManagementComponent *SoftLayer_Network_Component `json:"remoteManagementComponent,omitempty"`
+
+	// MonitoringAgentCount - A count of information regarding the monitoring agents associated with a
+	// piece of hardware.
+	MonitoringAgentCount uint64 `json:"monitoringAgentCount,omitempty"`
+
+	// NetworkComponents - no documentation
+	NetworkComponents []*SoftLayer_Network_Component `json:"networkComponents,omitempty"`
+
+	// HardwareStatus - no documentation
+	HardwareStatus *SoftLayer_Hardware_Status `json:"hardwareStatus,omitempty"`
+
+	// RaidControllerCount - A count of the controllers contained within a piece of hardware.
+	RaidControllerCount uint64 `json:"raidControllerCount,omitempty"`
+
+	// NetworkVlans - The network virtual LANs (VLANs) associated with a piece of hardware's network
+	// components.
+	NetworkVlans []*SoftLayer_Network_Vlan `json:"networkVlans,omitempty"`
+
+	// SshKeyCount - A count of sSH keys to be installed on the server during provisioning or an OS reload.
+	SshKeyCount uint64 `json:"sshKeyCount,omitempty"`
+
+	// AllowedHost - The SoftLayer_Network_Storage_Allowed_Host information to connect this server to
+	// Network Storage volumes that require access control lists.
+	AllowedHost *SoftLayer_Network_Storage_Allowed_Host `json:"allowedHost,omitempty"`
+
+	// BackendNetworkComponents - A piece of hardware's back-end or private network components.
+	BackendNetworkComponents []*SoftLayer_Network_Component `json:"backendNetworkComponents,omitempty"`
+
+	// CurrentBillableBandwidthUsage - The current billable public outbound bandwidth for this hardware for
+	// the current billing cycle.
+	CurrentBillableBandwidthUsage slapi.Float64 `json:"currentBillableBandwidthUsage,omitempty"`
+
+	// MonitoringServiceEligibilityFlag - The monitoring service flag eligibility status for a piece of
+	// hardware.
+	MonitoringServiceEligibilityFlag bool `json:"monitoringServiceEligibilityFlag,omitempty"`
+
+	// UserCount - A count of a list of users that have access to this hardware load balancer.
+	UserCount uint64 `json:"userCount,omitempty"`
+
+	// BillingItem - Information regarding the billing item for a server.
+	BillingItem *SoftLayer_Billing_Item_Hardware `json:"billingItem,omitempty"`
+
+	// FirewallServiceComponent - Information regarding a piece of hardware's firewall services.
+	FirewallServiceComponent *SoftLayer_Network_Component_Firewall `json:"firewallServiceComponent,omitempty"`
+
+	// PointOfPresenceLocation - Information regarding the Point of Presence (PoP) location in which a
+	// piece of hardware resides.
+	PointOfPresenceLocation *SoftLayer_Location `json:"pointOfPresenceLocation,omitempty"`
+
+	// LockboxNetworkStorage - Information regarding a lockbox account associated with a server.
+	LockboxNetworkStorage *SoftLayer_Network_Storage `json:"lockboxNetworkStorage,omitempty"`
+
+	// MemoryCapacity - The amount of memory a piece of hardware has, measured in gigabytes.
+	MemoryCapacity uint `json:"memoryCapacity,omitempty"`
+
+	// Users - A list of users that have access to this hardware load balancer.
+	Users []*SoftLayer_User_Customer `json:"users,omitempty"`
+
+	// VirtualLicenseCount - A count of information regarding a piece of hardware's virtual software
+	// licenses.
+	VirtualLicenseCount uint64 `json:"virtualLicenseCount,omitempty"`
+
+	// DownlinkVirtualGuests - Information regarding all virtual guests attached to a piece of network
+	// hardware.
+	DownlinkVirtualGuests []*SoftLayer_Virtual_Guest `json:"downlinkVirtualGuests,omitempty"`
+
+	// DownstreamNetworkHardwareWithIncidentCount - A count of all network hardware with monitoring
+	// warnings or errors that are downstream from the selected piece of hardware.
+	DownstreamNetworkHardwareWithIncidentCount uint64 `json:"downstreamNetworkHardwareWithIncidentCount,omitempty"`
 
 	// DownstreamNetworkHardware - All network hardware downstream from the selected piece of hardware.
 	DownstreamNetworkHardware []*SoftLayer_Hardware `json:"downstreamNetworkHardware,omitempty"`
 
-	// LockboxNetworkStorage - Information regarding a lockbox account associated with a server.
-	LockboxNetworkStorage *SoftLayer_Network_Storage `json:"lockboxNetworkStorage,omitempty"`
+	// VirtualRackName - The name of the bandwidth allotment belonging to a piece of hardware.
+	VirtualRackName string `json:"virtualRackName,omitempty"`
+
+	// NetworkManagementIpAddress - A piece of hardware's network management IP address.
+	NetworkManagementIpAddress string `json:"networkManagementIpAddress,omitempty"`
+
+	// DownlinkHardwareCount - A count of all hardware that has uplink network connections to a piece of
+	// hardware.
+	DownlinkHardwareCount uint64 `json:"downlinkHardwareCount,omitempty"`
+
+	// Attributes - Information regarding a piece of hardware's specific attributes.
+	Attributes []*SoftLayer_Hardware_Attribute `json:"attributes,omitempty"`
+
+	// AllowedNetworkStorageReplicaCount - A count of the SoftLayer_Network_Storage objects whose Replica
+	// that this SoftLayer_Hardware has access to.
+	AllowedNetworkStorageReplicaCount uint64 `json:"allowedNetworkStorageReplicaCount,omitempty"`
+
+	// AllowedNetworkStorageReplicas - The SoftLayer_Network_Storage objects whose Replica that this
+	// SoftLayer_Hardware has access to.
+	AllowedNetworkStorageReplicas []*SoftLayer_Network_Storage `json:"allowedNetworkStorageReplicas,omitempty"`
+
+	// MetricTrackingObject - no documentation
+	MetricTrackingObject *SoftLayer_Metric_Tracking_Object_HardwareServer `json:"metricTrackingObject,omitempty"`
+
+	// ModelFamily - <nil>
+	ModelFamily string `json:"modelFamily,omitempty"`
+
+	// BackendRouters - no documentation
+	BackendRouters []*SoftLayer_Hardware `json:"backendRouters,omitempty"`
+
+	// HostIpsSoftwareComponent - Information regarding a host IPS software component object.
+	HostIpsSoftwareComponent *SoftLayer_Software_Component `json:"hostIpsSoftwareComponent,omitempty"`
+
+	// FrontendRouterCount - no documentation
+	FrontendRouterCount uint64 `json:"frontendRouterCount,omitempty"`
+
+	// EvaultNetworkStorage - Information regarding a piece of hardware's associated EVault network storage
+	// service account.
+	EvaultNetworkStorage []*SoftLayer_Network_Storage `json:"evaultNetworkStorage,omitempty"`
+
+	// AllowedNetworkStorage - The SoftLayer_Network_Storage objects that this SoftLayer_Hardware has
+	// access to.
+	AllowedNetworkStorage []*SoftLayer_Network_Storage `json:"allowedNetworkStorage,omitempty"`
+
+	// DatacenterName - The name of the datacenter in which a piece of hardware resides.
+	DatacenterName string `json:"datacenterName,omitempty"`
+
+	// Routers - no documentation
+	Routers []*SoftLayer_Hardware `json:"routers,omitempty"`
+
+	// NotesHistoryCount - no documentation
+	NotesHistoryCount uint64 `json:"notesHistoryCount,omitempty"`
+
+	// MonitoringServiceComponent - Information regarding a piece of hardware's network monitoring
+	// services.
+	MonitoringServiceComponent *SoftLayer_Network_Monitor_Version1_Query_Host_Stratum `json:"monitoringServiceComponent,omitempty"`
+
+	// ActiveComponents - no documentation
+	ActiveComponents []*SoftLayer_Hardware_Component `json:"activeComponents,omitempty"`
+
+	// LatestNetworkMonitorIncident - A piece of hardware's latest network monitoring incident.
+	LatestNetworkMonitorIncident *SoftLayer_Network_Monitor_Version1_Incident `json:"latestNetworkMonitorIncident,omitempty"`
+
+	// VirtualHost - no documentation
+	VirtualHost *SoftLayer_Virtual_Host `json:"virtualHost,omitempty"`
+
+	// DownlinkNetworkHardware - All hardware that has uplink network connections to a piece of hardware.
+	DownlinkNetworkHardware []*SoftLayer_Hardware `json:"downlinkNetworkHardware,omitempty"`
+
+	// FrontendNetworkComponents - A piece of hardware's front-end or public network components.
+	FrontendNetworkComponents []*SoftLayer_Network_Component `json:"frontendNetworkComponents,omitempty"`
+
+	// MonitoringAgents - Information regarding the monitoring agents associated with a piece of hardware.
+	MonitoringAgents []*SoftLayer_Monitoring_Agent `json:"monitoringAgents,omitempty"`
+
+	// SecurityScanRequests - Information regarding a piece of hardware's vulnerability scan requests.
+	SecurityScanRequests []*SoftLayer_Network_Security_Scanner_Request `json:"securityScanRequests,omitempty"`
+
+	// NetworkMonitorIncidents - The status of all of a piece of hardware's network monitoring incidents.
+	NetworkMonitorIncidents []*SoftLayer_Network_Monitor_Version1_Incident `json:"networkMonitorIncidents,omitempty"`
+
+	// DownlinkVirtualGuestCount - A count of information regarding all virtual guests attached to a piece
+	// of network hardware.
+	DownlinkVirtualGuestCount uint64 `json:"downlinkVirtualGuestCount,omitempty"`
+
+	// DownstreamServerCount - A count of information regarding all servers attached downstream to a piece
+	// of network hardware.
+	DownstreamServerCount uint64 `json:"downstreamServerCount,omitempty"`
+
+	// TagReferences - <nil>
+	TagReferences []*SoftLayer_Tag_Reference `json:"tagReferences,omitempty"`
 
 	// FrontendNetworkComponentCount - A count of a piece of hardware's front-end or public network
 	// components.
 	FrontendNetworkComponentCount uint64 `json:"frontendNetworkComponentCount,omitempty"`
 
-	// ResourceGroups - The resource groups in which this hardware is a member.
-	ResourceGroups []*SoftLayer_Resource_Group `json:"resourceGroups,omitempty"`
+	// DownstreamServers - Information regarding all servers attached downstream to a piece of network
+	// hardware.
+	DownstreamServers []*SoftLayer_Hardware `json:"downstreamServers,omitempty"`
 
-	// Attributes - Information regarding a piece of hardware's specific attributes.
-	Attributes []*SoftLayer_Hardware_Attribute `json:"attributes,omitempty"`
+	// BenchmarkCertifications - Information regarding a piece of hardware's benchmark certifications.
+	BenchmarkCertifications []*SoftLayer_Hardware_Benchmark_Certification `json:"benchmarkCertifications,omitempty"`
+
+	// AverageDailyPublicBandwidthUsage - The average daily public bandwidth usage for the current billing
+	// cycle.
+	AverageDailyPublicBandwidthUsage slapi.Float64 `json:"averageDailyPublicBandwidthUsage,omitempty"`
+
+	// NetworkMonitorAttachedDownHardwareCount - A count of all servers with failed monitoring that are
+	// attached downstream to a piece of hardware.
+	NetworkMonitorAttachedDownHardwareCount uint64 `json:"networkMonitorAttachedDownHardwareCount,omitempty"`
+
+	// DownstreamNetworkHardwareWithIncidents - All network hardware with monitoring warnings or errors
+	// that are downstream from the selected piece of hardware.
+	DownstreamNetworkHardwareWithIncidents []*SoftLayer_Hardware `json:"downstreamNetworkHardwareWithIncidents,omitempty"`
+
+	// VirtualRack - Information regarding the bandwidth allotment to which a piece of hardware belongs.
+	VirtualRack *SoftLayer_Network_Bandwidth_Version1_Allotment `json:"virtualRack,omitempty"`
+
+	// RemoteManagementAccountCount - A count of user credentials to issue commands and/or interact with
+	// the server's remote management card.
+	RemoteManagementAccountCount uint64 `json:"remoteManagementAccountCount,omitempty"`
+
+	// OutboundPublicBandwidthUsage - The total public outbound bandwidth for this hardware for the current
+	// billing cycle.
+	OutboundPublicBandwidthUsage slapi.Float64 `json:"outboundPublicBandwidthUsage,omitempty"`
+
+	// Location - Where a piece of hardware is located within SoftLayer's location hierarchy.
+	Location *SoftLayer_Location `json:"location,omitempty"`
+
+	// NextBillingCycleBandwidthAllocation - A hardware's allotted bandwidth for the next billing cycle
+	// (measured in
+	NextBillingCycleBandwidthAllocation slapi.Float64 `json:"nextBillingCycleBandwidthAllocation,omitempty"`
+
+	// ResourceGroupRoleCount - no documentation
+	ResourceGroupRoleCount uint64 `json:"resourceGroupRoleCount,omitempty"`
+
+	// PrimaryBackendNetworkComponent - Information regarding the hardware's primary back-end network
+	// component.
+	PrimaryBackendNetworkComponent *SoftLayer_Network_Component `json:"primaryBackendNetworkComponent,omitempty"`
+
+	// ResourceGroupMemberReferences - <nil>
+	ResourceGroupMemberReferences []*SoftLayer_Resource_Group_Member `json:"resourceGroupMemberReferences,omitempty"`
+
+	// BackendNetworkComponentCount - A count of a piece of hardware's back-end or private network
+	// components.
+	BackendNetworkComponentCount uint64 `json:"backendNetworkComponentCount,omitempty"`
+
+	// NetworkGatewayMemberFlag - Whether or not this device is part of a network gateway.
+	NetworkGatewayMemberFlag bool `json:"networkGatewayMemberFlag,omitempty"`
+
+	// BusinessContinuanceInsuranceFlag - Status indicating whether or not a piece of hardware has business
+	// continuance insurance.
+	BusinessContinuanceInsuranceFlag bool `json:"businessContinuanceInsuranceFlag,omitempty"`
+
+	// UpgradeRequest - An account's associated upgrade request object, if any.
+	UpgradeRequest *SoftLayer_Product_Upgrade_Request `json:"upgradeRequest,omitempty"`
+
+	// SoftwareComponentCount - A count of information regarding a piece of hardware's installed software.
+	SoftwareComponentCount uint64 `json:"softwareComponentCount,omitempty"`
+
+	// ManagedResourceFlag - A flag indicating that the hardware is a managed resource.
+	ManagedResourceFlag bool `json:"managedResourceFlag,omitempty"`
+
+	// HardDriveCount - A count of the hard drives contained within a piece of hardware.
+	HardDriveCount uint64 `json:"hardDriveCount,omitempty"`
+
+	// RouterCount - no documentation
+	RouterCount uint64 `json:"routerCount,omitempty"`
+
+	// SshKeys - SSH keys to be installed on the server during provisioning or an OS reload.
+	SshKeys []*SoftLayer_Security_Ssh_Key `json:"sshKeys,omitempty"`
+
+	// UserDataCount - A count of a string containing custom user data for a hardware order.
+	UserDataCount uint64 `json:"userDataCount,omitempty"`
+
+	// BandwidthAllotmentDetail - A hardware's allotted detail record. Allotment details link bandwidth
+	// allocation with allotments.
+	BandwidthAllotmentDetail *SoftLayer_Network_Bandwidth_Version1_Allotment_Detail `json:"bandwidthAllotmentDetail,omitempty"`
+
+	// NetworkGatewayMember - The gateway member if this device is part of a network gateway.
+	NetworkGatewayMember *SoftLayer_Network_Gateway_Member `json:"networkGatewayMember,omitempty"`
+
+	// SparePoolBillingItem - Information regarding the billing item for a spare pool server.
+	SparePoolBillingItem *SoftLayer_Billing_Item_Hardware `json:"sparePoolBillingItem,omitempty"`
+
+	// FixedConfigurationPreset - Defines the fixed components in a fixed configuration bare metal server.
+	FixedConfigurationPreset *SoftLayer_Product_Package_Preset `json:"fixedConfigurationPreset,omitempty"`
+
+	// DriveControllers - The drive controllers contained within a piece of hardware.
+	DriveControllers []*SoftLayer_Hardware_Component `json:"driveControllers,omitempty"`
+
+	// StorageNetworkComponents - <nil>
+	StorageNetworkComponents []*SoftLayer_Network_Component `json:"storageNetworkComponents,omitempty"`
+
+	// ServerRoom - Information regarding the server room in which the hardware is located.
+	ServerRoom *SoftLayer_Location `json:"serverRoom,omitempty"`
+
+	// NetworkVlanCount - A count of the network virtual LANs (VLANs) associated with a piece of hardware's
+	// network components.
+	NetworkVlanCount uint64 `json:"networkVlanCount,omitempty"`
+
+	// HardwareChassis - no documentation
+	HardwareChassis *SoftLayer_Hardware_Chassis `json:"hardwareChassis,omitempty"`
+
+	// AllPowerComponentCount - no documentation
+	AllPowerComponentCount uint64 `json:"allPowerComponentCount,omitempty"`
+
+	// NetworkMonitorIncidentCount - A count of the status of all of a piece of hardware's network
+	// monitoring incidents.
+	NetworkMonitorIncidentCount uint64 `json:"networkMonitorIncidentCount,omitempty"`
+
+	// BenchmarkCertificationCount - A count of information regarding a piece of hardware's benchmark
+	// certifications.
+	BenchmarkCertificationCount uint64 `json:"benchmarkCertificationCount,omitempty"`
+
+	// HardwareFunction - no documentation
+	HardwareFunction *SoftLayer_Hardware_Function `json:"hardwareFunction,omitempty"`
+
+	// NetworkComponentCount - A count of returns a hardware's network components.
+	NetworkComponentCount uint64 `json:"networkComponentCount,omitempty"`
+
+	// OutboundBandwidthUsage - The sum of all the outbound network traffic data for the last 30 days.
+	OutboundBandwidthUsage slapi.Float64 `json:"outboundBandwidthUsage,omitempty"`
+
+	// RemoteManagementAccounts - User credentials to issue commands and/or interact with the server's
+	// remote management card.
+	RemoteManagementAccounts []*SoftLayer_Hardware_Component_RemoteManagement_User `json:"remoteManagementAccounts,omitempty"`
+
+	// AttributeCount - A count of information regarding a piece of hardware's specific attributes.
+	AttributeCount uint64 `json:"attributeCount,omitempty"`
 
 	// UplinkHardware - The network device connected to a piece of hardware.
 	UplinkHardware *SoftLayer_Hardware `json:"uplinkHardware,omitempty"`
+
+	// DownstreamVirtualGuests - Information regarding all virtual guests attached to a piece of network
+	// hardware.
+	DownstreamVirtualGuests []*SoftLayer_Virtual_Guest `json:"downstreamVirtualGuests,omitempty"`
+
+	// DownstreamVirtualGuestCount - A count of information regarding all virtual guests attached to a
+	// piece of network hardware.
+	DownstreamVirtualGuestCount uint64 `json:"downstreamVirtualGuestCount,omitempty"`
+
+	// TagReferenceCount - no documentation
+	TagReferenceCount uint64 `json:"tagReferenceCount,omitempty"`
+
+	// DownlinkServerCount - A count of information regarding all servers attached to a piece of network
+	// hardware.
+	DownlinkServerCount uint64 `json:"downlinkServerCount,omitempty"`
+
+	// DownstreamNetworkHardwareCount - A count of all network hardware downstream from the selected piece
+	// of hardware.
+	DownstreamNetworkHardwareCount uint64 `json:"downstreamNetworkHardwareCount,omitempty"`
+
+	// PowerSupply - Information regarding a piece of hardware's power supply.
+	PowerSupply []*SoftLayer_Hardware_Component `json:"powerSupply,omitempty"`
+
+	// PowerComponents - no documentation
+	PowerComponents []*SoftLayer_Hardware_Power_Component `json:"powerComponents,omitempty"`
+
+	// MemoryCount - A count of information regarding a piece of hardware's memory.
+	MemoryCount uint64 `json:"memoryCount,omitempty"`
+
+	// RecentEvents - no documentation
+	RecentEvents []*SoftLayer_Notification_Occurrence_Event `json:"recentEvents,omitempty"`
+
+	// NetworkStorageCount - A count of information regarding a piece of hardware's associated network
+	// storage service account.
+	NetworkStorageCount uint64 `json:"networkStorageCount,omitempty"`
+
+	// PowerSupplyCount - A count of information regarding a piece of hardware's power supply.
+	PowerSupplyCount uint64 `json:"powerSupplyCount,omitempty"`
+
+	// VirtualChassis - Information regarding the virtual chassis for a piece of hardware.
+	VirtualChassis *SoftLayer_Hardware_Group `json:"virtualChassis,omitempty"`
+
+	// AllPowerComponents - <nil>
+	AllPowerComponents []*SoftLayer_Hardware_Power_Component `json:"allPowerComponents,omitempty"`
+
+	// NetworkStorage - Information regarding a piece of hardware's associated network storage service
+	// account.
+	NetworkStorage []*SoftLayer_Network_Storage `json:"networkStorage,omitempty"`
+
+	// Datacenter - Information regarding the datacenter in which a piece of hardware resides.
+	Datacenter *SoftLayer_Location `json:"datacenter,omitempty"`
+
+	// PrimaryIpAddress - no documentation
+	PrimaryIpAddress string `json:"primaryIpAddress,omitempty"`
+
+	// AllowedNetworkStorageCount - A count of the SoftLayer_Network_Storage objects that this
+	// SoftLayer_Hardware has access to.
+	AllowedNetworkStorageCount uint64 `json:"allowedNetworkStorageCount,omitempty"`
+
+	// LastTransaction - Information regarding the last transaction a server performed.
+	LastTransaction *SoftLayer_Provisioning_Version1_Transaction `json:"lastTransaction,omitempty"`
+
+	// PrimaryNetworkComponent - Information regarding the hardware's primary public network component.
+	PrimaryNetworkComponent *SoftLayer_Network_Component `json:"primaryNetworkComponent,omitempty"`
+
+	// UplinkNetworkComponents - Information regarding the network component that is one level higher than
+	// a piece of hardware on the network infrastructure.
+	UplinkNetworkComponents []*SoftLayer_Network_Component `json:"uplinkNetworkComponents,omitempty"`
+
+	// ResourceGroups - The resource groups in which this hardware is a member.
+	ResourceGroups []*SoftLayer_Resource_Group `json:"resourceGroups,omitempty"`
+
+	// HasTrustedPlatformModuleBillingItemFlag - no documentation
+	HasTrustedPlatformModuleBillingItemFlag bool `json:"hasTrustedPlatformModuleBillingItemFlag,omitempty"`
+
+	// DownlinkNetworkHardwareCount - A count of all hardware that has uplink network connections to a
+	// piece of hardware.
+	DownlinkNetworkHardwareCount uint64 `json:"downlinkNetworkHardwareCount,omitempty"`
+
+	// BlockCancelBecauseDisconnectedFlag - Determines whether the hardware is ineligible for cancellation
+	// because it is disconnected.
+	BlockCancelBecauseDisconnectedFlag bool `json:"blockCancelBecauseDisconnectedFlag,omitempty"`
+
+	// InboundPublicBandwidthUsage - The total public inbound bandwidth for this hardware for the current
+	// billing cycle.
+	InboundPublicBandwidthUsage slapi.Float64 `json:"inboundPublicBandwidthUsage,omitempty"`
+
+	// HardwareFunctionDescription - no documentation
+	HardwareFunctionDescription string `json:"hardwareFunctionDescription,omitempty"`
+
+	// UserData - A string containing custom user data for a hardware order.
+	UserData []*SoftLayer_Hardware_Attribute `json:"userData,omitempty"`
+
+	// ActiveNetworkMonitorIncident - A piece of hardware's active network monitoring incidents.
+	ActiveNetworkMonitorIncident []*SoftLayer_Network_Monitor_Version1_Incident `json:"activeNetworkMonitorIncident,omitempty"`
+
+	// ContinuousDataProtectionSoftwareComponent - A continuous data protection/server backup software
+	// component object.
+	ContinuousDataProtectionSoftwareComponent *SoftLayer_Software_Component `json:"continuousDataProtectionSoftwareComponent,omitempty"`
 }
 
 func (softlayer_hardware_loadbalancer *SoftLayer_Hardware_LoadBalancer) String() string {

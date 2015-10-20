@@ -12,9 +12,11 @@ import (
 // general information relating to a single SoftLayer billing item for guests.
 type SoftLayer_Billing_Item_Virtual_Guest struct {
 
-	// CategoryCode - The category code of this billing item. It is used to tell us the difference between
-	// a primary disk and a secondary disk, for instance.
-	CategoryCode string `json:"categoryCode,omitempty"`
+	// SetupFee - no documentation
+	SetupFee slapi.Float64 `json:"setupFee,omitempty"`
+
+	// CreateDate - The date the billing item was created. You can see this date on the invoice.
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// CancellationDate - A billing item's cancellation date. A billing item with a cancellation date in
 	// the past is not charged on your SoftLayer invoice. Cancellation dates in the future indicate the
@@ -23,71 +25,81 @@ type SoftLayer_Billing_Item_Virtual_Guest struct {
 	// every billing cycle.
 	CancellationDate *time.Time `json:"cancellationDate,omitempty"`
 
-	// SetupFee - no documentation
-	SetupFee slapi.Float64 `json:"setupFee,omitempty"`
-
-	// OneTimeFee - The amount of money charged as a one-time charge for a billing item, if applicable.
-	// oneTimeFee is measured in US Dollars
-	OneTimeFee slapi.Float64 `json:"oneTimeFee,omitempty"`
-
-	// RecurringMonths - The number of months in which the recurring fees will be incurred.
-	RecurringMonths int `json:"recurringMonths,omitempty"`
-
-	// ServiceProviderId - This is the service provider for this billing item.
-	ServiceProviderId int `json:"serviceProviderId,omitempty"`
-
-	// OrderItemId - the SoftLayer_Billing_Order_Item ID. This is a reference to the original order item
-	// from which this billing item was originally created.
-	OrderItemId int `json:"orderItemId,omitempty"`
-
-	// CreateDate - The date the billing item was created. You can see this date on the invoice.
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// LaborFeeTaxRate - The rate at which labor fees are taxed if you are a taxable customer.
-	LaborFeeTaxRate slapi.Float64 `json:"laborFeeTaxRate,omitempty"`
-
-	// AllowCancellationFlag - Flag to check if a billing item can be cancelled. 1 = yes. 0 = no.
-	AllowCancellationFlag int `json:"allowCancellationFlag,omitempty"`
-
-	// CurrentHourlyCharge - This is the total charge for the billing item for this billing item. It is
-	// calculated based on the hourlyRecurringFee * hoursUsed.
-	CurrentHourlyCharge string `json:"currentHourlyCharge,omitempty"`
-
-	// OneTimeFeeTaxRate - The rate at which one time fees are taxed if you are a taxable customer.
-	OneTimeFeeTaxRate slapi.Float64 `json:"oneTimeFeeTaxRate,omitempty"`
-
-	// HoursUsed - This is the number of hours the hourly billing item has been in use this billing period.
-	// For virtual servers, this means running, paused or stopped.
-	HoursUsed string `json:"hoursUsed,omitempty"`
-
 	// Notes - Extra information provided to help you identify this billing item. This is often a username
 	// or something to help identify items that customers have more than one of.
 	Notes string `json:"notes,omitempty"`
 
-	// DomainName - The domain name is provided for server billing items.
-	DomainName string `json:"domainName,omitempty"`
-
 	// LastBillDate - no documentation
 	LastBillDate *time.Time `json:"lastBillDate,omitempty"`
-
-	// ParentId - The unique identifier of the parent of this billing item.
-	ParentId int `json:"parentId,omitempty"`
 
 	// HourlyRecurringFee - The amount of money charged per hour for a billing item, if applicable.
 	// hourlyRecurringFee is measured in US Dollars
 	HourlyRecurringFee slapi.Float64 `json:"hourlyRecurringFee,omitempty"`
 
-	// CycleStartDate - no documentation
-	CycleStartDate *time.Time `json:"cycleStartDate,omitempty"`
+	// ParentId - The unique identifier of the parent of this billing item.
+	ParentId int `json:"parentId,omitempty"`
 
-	// RecurringFeeTaxRate - The rate at which recurring fees are taxed if you are a taxable customer.
-	RecurringFeeTaxRate slapi.Float64 `json:"recurringFeeTaxRate,omitempty"`
+	// ServiceProviderId - This is the service provider for this billing item.
+	ServiceProviderId int `json:"serviceProviderId,omitempty"`
 
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
 
+	// DomainName - The domain name is provided for server billing items.
+	DomainName string `json:"domainName,omitempty"`
+
+	// OneTimeFee - The amount of money charged as a one-time charge for a billing item, if applicable.
+	// oneTimeFee is measured in US Dollars
+	OneTimeFee slapi.Float64 `json:"oneTimeFee,omitempty"`
+
+	// CurrentHourlyCharge - This is the total charge for the billing item for this billing item. It is
+	// calculated based on the hourlyRecurringFee * hoursUsed.
+	CurrentHourlyCharge string `json:"currentHourlyCharge,omitempty"`
+
+	// RecurringMonths - The number of months in which the recurring fees will be incurred.
+	RecurringMonths int `json:"recurringMonths,omitempty"`
+
+	// SetupFeeTaxRate - The rate at which setup fees are taxed if you are a taxable customer.
+	SetupFeeTaxRate slapi.Float64 `json:"setupFeeTaxRate,omitempty"`
+
+	// CategoryCode - The category code of this billing item. It is used to tell us the difference between
+	// a primary disk and a secondary disk, for instance.
+	CategoryCode string `json:"categoryCode,omitempty"`
+
+	// OrderItemId - the SoftLayer_Billing_Order_Item ID. This is a reference to the original order item
+	// from which this billing item was originally created.
+	OrderItemId int `json:"orderItemId,omitempty"`
+
 	// LaborFee - no documentation
 	LaborFee slapi.Float64 `json:"laborFee,omitempty"`
+
+	// AllowCancellationFlag - Flag to check if a billing item can be cancelled. 1 = yes. 0 = no.
+	AllowCancellationFlag int `json:"allowCancellationFlag,omitempty"`
+
+	// HostName - no documentation
+	HostName string `json:"hostName,omitempty"`
+
+	// RecurringFeeTaxRate - The rate at which recurring fees are taxed if you are a taxable customer.
+	RecurringFeeTaxRate slapi.Float64 `json:"recurringFeeTaxRate,omitempty"`
+
+	// CycleStartDate - no documentation
+	CycleStartDate *time.Time `json:"cycleStartDate,omitempty"`
+
+	// RecurringFee - The amount of money charged per month for a billing item, if applicable. recurringFee
+	// is measured in US Dollars
+	RecurringFee slapi.Float64 `json:"recurringFee,omitempty"`
+
+	// ResourceTableId - The resource (unique identifier) for a server billing item.
+	ResourceTableId int `json:"resourceTableId,omitempty"`
+
+	// OneTimeFeeTaxRate - The rate at which one time fees are taxed if you are a taxable customer.
+	OneTimeFeeTaxRate slapi.Float64 `json:"oneTimeFeeTaxRate,omitempty"`
+
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+
+	// NextBillDate - The date on which your account will be charged for this billing item.
+	NextBillDate *time.Time `json:"nextBillDate,omitempty"`
 
 	// AssociatedBillingItemId - This is sometimes populated for orphan billing items that are not attached
 	// to servers. Billing items like secondary portable IP addresses fit into this category. A user may
@@ -96,163 +108,300 @@ type SoftLayer_Billing_Item_Virtual_Guest struct {
 	// attach orphaned billing items to server billing items without cancellation dates set.
 	AssociatedBillingItemId string `json:"associatedBillingItemId,omitempty"`
 
+	// LaborFeeTaxRate - The rate at which labor fees are taxed if you are a taxable customer.
+	LaborFeeTaxRate slapi.Float64 `json:"laborFeeTaxRate,omitempty"`
+
+	// HoursUsed - This is the number of hours the hourly billing item has been in use this billing period.
+	// For virtual servers, this means running, paused or stopped.
+	HoursUsed string `json:"hoursUsed,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
-	// RecurringFee - The amount of money charged per month for a billing item, if applicable. recurringFee
-	// is measured in US Dollars
-	RecurringFee slapi.Float64 `json:"recurringFee,omitempty"`
+	// MonitoringBillingItemCount - no documentation
+	MonitoringBillingItemCount uint64 `json:"monitoringBillingItemCount,omitempty"`
 
-	// NextBillDate - The date on which your account will be charged for this billing item.
-	NextBillDate *time.Time `json:"nextBillDate,omitempty"`
+	// ChildrenCount - no documentation
+	ChildrenCount uint64 `json:"childrenCount,omitempty"`
 
-	// HostName - no documentation
-	HostName string `json:"hostName,omitempty"`
+	// ActiveAssociatedGuestDiskBillingItemCount - no documentation
+	ActiveAssociatedGuestDiskBillingItemCount uint64 `json:"activeAssociatedGuestDiskBillingItemCount,omitempty"`
 
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
+	// AssociatedParentCount - A count of a billing item's associated parent billing item. This object will
+	// be the same as the parent billing item if parentId is set.
+	AssociatedParentCount uint64 `json:"associatedParentCount,omitempty"`
 
-	// ResourceTableId - The resource (unique identifier) for a server billing item.
-	ResourceTableId int `json:"resourceTableId,omitempty"`
+	// Children - no documentation
+	Children []*SoftLayer_Billing_Item `json:"children,omitempty"`
 
-	// SetupFeeTaxRate - The rate at which setup fees are taxed if you are a taxable customer.
-	SetupFeeTaxRate slapi.Float64 `json:"setupFeeTaxRate,omitempty"`
-
-	// BillingCyclePublicBandwidthUsage - The raw public bandwidth usage data for the current billing
-	// cycle.
-	BillingCyclePublicBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCyclePublicBandwidthUsage,omitempty"`
-
-	// NextInvoiceChildren - A Billing Item's child billing items and associated items'
-	NextInvoiceChildren []*SoftLayer_Billing_Item `json:"nextInvoiceChildren,omitempty"`
+	// OriginalLocation - The original physical location for this billing item--may differ from current.
+	OriginalLocation *SoftLayer_Location `json:"originalLocation,omitempty"`
 
 	// InvoiceItemCount - A count of all invoice items associated with the billing item
 	InvoiceItemCount uint64 `json:"invoiceItemCount,omitempty"`
 
-	// DowngradeItemCount - A count of for product items which have a downgrade path defined, this will
-	// return those product items.
-	DowngradeItemCount uint64 `json:"downgradeItemCount,omitempty"`
+	// BillingCycleBandwidthUsageCount - A count of the raw bandwidth usage data for the current billing
+	// cycle. One object will be returned for each network this server is attached to.
+	BillingCycleBandwidthUsageCount uint64 `json:"billingCycleBandwidthUsageCount,omitempty"`
 
-	// BillingCycleBandwidthUsage - The raw bandwidth usage data for the current billing cycle. One object
-	// will be returned for each network this server is attached to.
-	BillingCycleBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCycleBandwidthUsage,omitempty"`
-
-	// AssociatedBillingItemHistoryCount - A count of a history of billing items which a billing item has
-	// been associated with.
-	AssociatedBillingItemHistoryCount uint64 `json:"associatedBillingItemHistoryCount,omitempty"`
-
-	// ActiveSparePoolAssociatedGuestDiskBillingItemCount - no documentation
-	ActiveSparePoolAssociatedGuestDiskBillingItemCount uint64 `json:"activeSparePoolAssociatedGuestDiskBillingItemCount,omitempty"`
-
-	// AssociatedBillingItemHistory - A history of billing items which a billing item has been associated
-	// with.
-	AssociatedBillingItemHistory []*SoftLayer_Billing_Item_Association_History `json:"associatedBillingItemHistory,omitempty"`
-
-	// BundledItems - no documentation
-	BundledItems []*SoftLayer_Billing_Item `json:"bundledItems,omitempty"`
-
-	// ActiveAgreementFlag - A flag indicating that the billing item is under an active agreement.
-	ActiveAgreementFlag *SoftLayer_Account_Agreement `json:"activeAgreementFlag,omitempty"`
-
-	// BillingCyclePrivateUsageIn - The total private inbound bandwidth for this virtual server for the
-	// current billing cycle.
-	BillingCyclePrivateUsageIn slapi.Float64 `json:"billingCyclePrivateUsageIn,omitempty"`
-
-	// BillableChildren - A billing item's recurring child items that have once been billed and are
-	// scheduled to be billed in the future.
-	BillableChildren []*SoftLayer_Billing_Item `json:"billableChildren,omitempty"`
-
-	// Category - The item category to which the billing item's item belongs.
-	Category *SoftLayer_Product_Item_Category `json:"category,omitempty"`
-
-	// NextInvoiceChildrenCount - A count of a Billing Item's child billing items and associated items'
-	NextInvoiceChildrenCount uint64 `json:"nextInvoiceChildrenCount,omitempty"`
-
-	// DowngradeItems - For product items which have a downgrade path defined, this will return those
-	// product items.
-	DowngradeItems []*SoftLayer_Product_Item `json:"downgradeItems,omitempty"`
-
-	// Item - The entry in the SoftLayer product catalog that a billing item is based upon.
-	Item *SoftLayer_Product_Item `json:"item,omitempty"`
+	// ActiveBundledItems - no documentation
+	ActiveBundledItems []*SoftLayer_Billing_Item `json:"activeBundledItems,omitempty"`
 
 	// NextInvoiceTotalOneTimeTaxAmount - A Billing Item's total, including any child billing items if they
 	// exist.'
 	NextInvoiceTotalOneTimeTaxAmount slapi.Float64 `json:"nextInvoiceTotalOneTimeTaxAmount,omitempty"`
 
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// InvoiceItem - no documentation
+	InvoiceItem *SoftLayer_Billing_Invoice_Item `json:"invoiceItem,omitempty"`
+
 	// BundleItemCount - no documentation
 	BundleItemCount uint64 `json:"bundleItemCount,omitempty"`
 
-	// BillingCyclePrivateUsageOut - The total private outbound bandwidth for this virtual server for the
-	// current billing cycle.
-	BillingCyclePrivateUsageOut slapi.Float64 `json:"billingCyclePrivateUsageOut,omitempty"`
+	// UpgradeItems - Billing items whose product item has an upgrade path defined in our system will
+	// return all the product items in the upgrade path.
+	UpgradeItems []*SoftLayer_Product_Item `json:"upgradeItems,omitempty"`
 
-	// CancellationRequests - This will return any cancellation requests that are associated with this
-	// billing item.
-	CancellationRequests []*SoftLayer_Billing_Item_Cancellation_Request `json:"cancellationRequests,omitempty"`
+	// BundledItems - no documentation
+	BundledItems []*SoftLayer_Billing_Item `json:"bundledItems,omitempty"`
 
-	// NextInvoiceTotalOneTimeAmount - A Billing Item's total, including any child billing items if they
-	// exist.'
-	NextInvoiceTotalOneTimeAmount slapi.Float64 `json:"nextInvoiceTotalOneTimeAmount,omitempty"`
+	// ActiveAssociatedChildren - A billing item's active associated child billing items. This includes
+	// "floating" items that are not necessarily child items of this billing item.
+	ActiveAssociatedChildren []*SoftLayer_Billing_Item `json:"activeAssociatedChildren,omitempty"`
 
-	// NextInvoiceTotalRecurringAmount - A Billing Item's total, including any child billing items and
-	// associated billing items if they exist.'
-	NextInvoiceTotalRecurringAmount slapi.Float64 `json:"nextInvoiceTotalRecurringAmount,omitempty"`
+	// BillableChildren - A billing item's recurring child items that have once been billed and are
+	// scheduled to be billed in the future.
+	BillableChildren []*SoftLayer_Billing_Item `json:"billableChildren,omitempty"`
 
-	// ChildrenWithActiveAgreement - no documentation
-	ChildrenWithActiveAgreement []*SoftLayer_Billing_Item `json:"childrenWithActiveAgreement,omitempty"`
+	// DowngradeItems - For product items which have a downgrade path defined, this will return those
+	// product items.
+	DowngradeItems []*SoftLayer_Product_Item `json:"downgradeItems,omitempty"`
 
-	// FilteredNextInvoiceChildrenCount - A count of a Billing Item's associated child billing items,
-	// excluding some items with a $0.00 recurring fee.
-	FilteredNextInvoiceChildrenCount uint64 `json:"filteredNextInvoiceChildrenCount,omitempty"`
+	// Resource - no documentation
+	Resource *SoftLayer_Virtual_Guest `json:"resource,omitempty"`
+
+	// AssociatedBillingItemHistoryCount - A count of a history of billing items which a billing item has
+	// been associated with.
+	AssociatedBillingItemHistoryCount uint64 `json:"associatedBillingItemHistoryCount,omitempty"`
 
 	// AssociatedChildren - A Billing Item's associated child billing items. This includes "floating" items
 	// that are not necessarily child billing items of this billing item.
 	AssociatedChildren []*SoftLayer_Billing_Item `json:"associatedChildren,omitempty"`
 
-	// BillingCyclePublicUsageIn - The total public inbound bandwidth for this virtual server for the
+	// Item - The entry in the SoftLayer product catalog that a billing item is based upon.
+	Item *SoftLayer_Product_Item `json:"item,omitempty"`
+
+	// BillingCyclePublicBandwidthUsageCount - A count of the raw public bandwidth usage data for the
 	// current billing cycle.
-	BillingCyclePublicUsageIn slapi.Float64 `json:"billingCyclePublicUsageIn,omitempty"`
+	BillingCyclePublicBandwidthUsageCount uint64 `json:"billingCyclePublicBandwidthUsageCount,omitempty"`
 
-	// BillableChildrenCount - A count of a billing item's recurring child items that have once been billed
-	// and are scheduled to be billed in the future.
-	BillableChildrenCount uint64 `json:"billableChildrenCount,omitempty"`
+	// CancellationRequestCount - A count of this will return any cancellation requests that are associated
+	// with this billing item.
+	CancellationRequestCount uint64 `json:"cancellationRequestCount,omitempty"`
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account,omitempty"`
+	// NextInvoiceChildren - A Billing Item's child billing items and associated items'
+	NextInvoiceChildren []*SoftLayer_Billing_Item `json:"nextInvoiceChildren,omitempty"`
 
-	// BillingCyclePublicUsageOut - The total public outbound bandwidth for this virtual server for the
-	// current billing cycle.
-	BillingCyclePublicUsageOut slapi.Float64 `json:"billingCyclePublicUsageOut,omitempty"`
+	// UpgradeItem - Billing items whose product item has an upgrade path defined in our system will return
+	// the next product item in the upgrade path.
+	UpgradeItem *SoftLayer_Product_Item `json:"upgradeItem,omitempty"`
 
-	// FilteredNextInvoiceChildren - A Billing Item's associated child billing items, excluding some items
-	// with a $0.00 recurring fee.
-	FilteredNextInvoiceChildren []*SoftLayer_Billing_Item `json:"filteredNextInvoiceChildren,omitempty"`
+	// Location - The location of the billing item. Some billing items have physical properties such as the
+	// server itself. For items such as these, we provide location information.
+	Location *SoftLayer_Location `json:"location,omitempty"`
 
-	// ActiveSparePoolBundledItemCount - A count of a Billing Item's spare pool bundled billing items.
-	ActiveSparePoolBundledItemCount uint64 `json:"activeSparePoolBundledItemCount,omitempty"`
+	// ActiveSparePoolBundledItems - no documentation
+	ActiveSparePoolBundledItems []*SoftLayer_Billing_Item `json:"activeSparePoolBundledItems,omitempty"`
 
-	// NextInvoiceTotalRecurringTaxAmount - This is deprecated and will always be zero. Because tax is
-	// calculated in real-time, previewing the next recurring invoice is pre-tax only.
-	NextInvoiceTotalRecurringTaxAmount slapi.Float64 `json:"nextInvoiceTotalRecurringTaxAmount,omitempty"`
+	// BandwidthAllocation - no documentation
+	BandwidthAllocation *SoftLayer_Network_Bandwidth_Version1_Allocation `json:"bandwidthAllocation,omitempty"`
 
-	// BundledItemCount - no documentation
-	BundledItemCount uint64 `json:"bundledItemCount,omitempty"`
+	// CancellationRequests - This will return any cancellation requests that are associated with this
+	// billing item.
+	CancellationRequests []*SoftLayer_Billing_Item_Cancellation_Request `json:"cancellationRequests,omitempty"`
 
-	// CancellationReason - no documentation
-	CancellationReason *SoftLayer_Billing_Item_Cancellation_Reason `json:"cancellationReason,omitempty"`
+	// ParentVirtualGuestBillingItem - A billing item's parent item. If a billing item has no parent item
+	// then this value is null.
+	ParentVirtualGuestBillingItem *SoftLayer_Billing_Item_Virtual_Guest `json:"parentVirtualGuestBillingItem,omitempty"`
 
-	// ActiveAssociatedGuestDiskBillingItems - <nil>
-	ActiveAssociatedGuestDiskBillingItems []*SoftLayer_Billing_Item `json:"activeAssociatedGuestDiskBillingItems,omitempty"`
+	// ChildrenWithActiveAgreementCount - A count of a Billing Item's active child billing items.
+	ChildrenWithActiveAgreementCount uint64 `json:"childrenWithActiveAgreementCount,omitempty"`
 
-	// AssociatedParent - A billing item's associated parent billing item. This object will be the same as
-	// the parent billing item if parentId is set.
-	AssociatedParent []*SoftLayer_Billing_Item `json:"associatedParent,omitempty"`
+	// NextInvoiceChildrenCount - A count of a Billing Item's child billing items and associated items'
+	NextInvoiceChildrenCount uint64 `json:"nextInvoiceChildrenCount,omitempty"`
+
+	// ActiveBundledItemCount - A count of a Billing Item's active bundled billing items.
+	ActiveBundledItemCount uint64 `json:"activeBundledItemCount,omitempty"`
+
+	// OrderItem - A billing item's original order item. Simply a reference to the original order from
+	// which this billing item was created.
+	OrderItem *SoftLayer_Billing_Order_Item `json:"orderItem,omitempty"`
+
+	// UpgradeItemCount - A count of billing items whose product item has an upgrade path defined in our
+	// system will return all the product items in the upgrade path.
+	UpgradeItemCount uint64 `json:"upgradeItemCount,omitempty"`
+
+	// HourlyFlag - A flag that will reflect whether this billing item is billed on an hourly basis or not.
+	HourlyFlag bool `json:"hourlyFlag,omitempty"`
+
+	// DowngradeItemCount - A count of for product items which have a downgrade path defined, this will
+	// return those product items.
+	DowngradeItemCount uint64 `json:"downgradeItemCount,omitempty"`
+
+	// BundleItems - no documentation
+	BundleItems []*SoftLayer_Product_Item_Bundles `json:"bundleItems,omitempty"`
+
+	// MonitoringBillingItems - <nil>
+	MonitoringBillingItems []*SoftLayer_Billing_Item `json:"monitoringBillingItems,omitempty"`
 
 	// NonZeroNextInvoiceChildren - A Billing Item's associated child billing items, excluding ALL items
 	// with a $0.00 recurring fee.
 	NonZeroNextInvoiceChildren []*SoftLayer_Billing_Item `json:"nonZeroNextInvoiceChildren,omitempty"`
 
-	// HourlyFlag - A flag that will reflect whether this billing item is billed on an hourly basis or not.
-	HourlyFlag bool `json:"hourlyFlag,omitempty"`
+	// ActiveAgreement - <nil>
+	ActiveAgreement *SoftLayer_Account_Agreement `json:"activeAgreement,omitempty"`
+
+	// SoftwareDescription - no documentation
+	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription,omitempty"`
+
+	// ActiveCancellationItem - A service cancellation request item that corresponds to the billing item.
+	ActiveCancellationItem *SoftLayer_Billing_Item_Cancellation_Request_Item `json:"activeCancellationItem,omitempty"`
+
+	// BillingCyclePrivateUsageTotal - The total private bandwidth for this virtual server for the current
+	// billing cycle.
+	BillingCyclePrivateUsageTotal uint `json:"billingCyclePrivateUsageTotal,omitempty"`
+
+	// ActiveFlag - <nil>
+	ActiveFlag bool `json:"activeFlag,omitempty"`
+
+	// ActiveSparePoolAssociatedGuestDiskBillingItems - <nil>
+	ActiveSparePoolAssociatedGuestDiskBillingItems []*SoftLayer_Billing_Item `json:"activeSparePoolAssociatedGuestDiskBillingItems,omitempty"`
+
+	// NextInvoiceTotalRecurringTaxAmount - This is deprecated and will always be zero. Because tax is
+	// calculated in real-time, previewing the next recurring invoice is pre-tax only.
+	NextInvoiceTotalRecurringTaxAmount slapi.Float64 `json:"nextInvoiceTotalRecurringTaxAmount,omitempty"`
+
+	// FilteredNextInvoiceChildren - A Billing Item's associated child billing items, excluding some items
+	// with a $0.00 recurring fee.
+	FilteredNextInvoiceChildren []*SoftLayer_Billing_Item `json:"filteredNextInvoiceChildren,omitempty"`
+
+	// BillingCyclePrivateUsageIn - The total private inbound bandwidth for this virtual server for the
+	// current billing cycle.
+	BillingCyclePrivateUsageIn slapi.Float64 `json:"billingCyclePrivateUsageIn,omitempty"`
+
+	// BillingCyclePublicBandwidthUsage - The raw public bandwidth usage data for the current billing
+	// cycle.
+	BillingCyclePublicBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCyclePublicBandwidthUsage,omitempty"`
+
+	// Parent - A billing item's parent item. If a billing item has no parent item then this value is null.
+	Parent *SoftLayer_Billing_Item `json:"parent,omitempty"`
+
+	// FilteredNextInvoiceChildrenCount - A count of a Billing Item's associated child billing items,
+	// excluding some items with a $0.00 recurring fee.
+	FilteredNextInvoiceChildrenCount uint64 `json:"filteredNextInvoiceChildrenCount,omitempty"`
+
+	// BillingCyclePublicUsageOut - The total public outbound bandwidth for this virtual server for the
+	// current billing cycle.
+	BillingCyclePublicUsageOut slapi.Float64 `json:"billingCyclePublicUsageOut,omitempty"`
+
+	// BillingCyclePrivateUsageOut - The total private outbound bandwidth for this virtual server for the
+	// current billing cycle.
+	BillingCyclePrivateUsageOut slapi.Float64 `json:"billingCyclePrivateUsageOut,omitempty"`
+
+	// NonZeroNextInvoiceChildrenCount - A count of a Billing Item's associated child billing items,
+	// excluding ALL items with a $0.00 recurring fee.
+	NonZeroNextInvoiceChildrenCount uint64 `json:"nonZeroNextInvoiceChildrenCount,omitempty"`
+
+	// ActiveAssociatedChildrenCount - A count of a billing item's active associated child billing items.
+	// This includes "floating" items that are not necessarily child items of this billing item.
+	ActiveAssociatedChildrenCount uint64 `json:"activeAssociatedChildrenCount,omitempty"`
+
+	// CanceledChildrenCount - A count of a Billing Item's active child billing items.
+	CanceledChildrenCount uint64 `json:"canceledChildrenCount,omitempty"`
+
+	// ActiveSparePoolBundledItemCount - A count of a Billing Item's spare pool bundled billing items.
+	ActiveSparePoolBundledItemCount uint64 `json:"activeSparePoolBundledItemCount,omitempty"`
+
+	// CanceledChildren - no documentation
+	CanceledChildren []*SoftLayer_Billing_Item `json:"canceledChildren,omitempty"`
+
+	// AssociatedBillingItemHistory - A history of billing items which a billing item has been associated
+	// with.
+	AssociatedBillingItemHistory []*SoftLayer_Billing_Item_Association_History `json:"associatedBillingItemHistory,omitempty"`
+
+	// PendingOrderItem - The new order item that will replace this billing item.
+	PendingOrderItem *SoftLayer_Billing_Order_Item `json:"pendingOrderItem,omitempty"`
+
+	// ActiveAssociatedGuestDiskBillingItems - <nil>
+	ActiveAssociatedGuestDiskBillingItems []*SoftLayer_Billing_Item `json:"activeAssociatedGuestDiskBillingItems,omitempty"`
+
+	// BillingCyclePrivateBandwidthUsage - The raw private bandwidth usage data for the current billing
+	// cycle.
+	BillingCyclePrivateBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCyclePrivateBandwidthUsage,omitempty"`
+
+	// ActiveChildren - no documentation
+	ActiveChildren []*SoftLayer_Billing_Item `json:"activeChildren,omitempty"`
+
+	// ActiveSparePoolAssociatedGuestDiskBillingItemCount - no documentation
+	ActiveSparePoolAssociatedGuestDiskBillingItemCount uint64 `json:"activeSparePoolAssociatedGuestDiskBillingItemCount,omitempty"`
+
+	// AvailableMatchingVlanCount - no documentation
+	AvailableMatchingVlanCount uint64 `json:"availableMatchingVlanCount,omitempty"`
+
+	// Category - The item category to which the billing item's item belongs.
+	Category *SoftLayer_Product_Item_Category `json:"category,omitempty"`
+
+	// NextInvoiceTotalRecurringAmount - A Billing Item's total, including any child billing items and
+	// associated billing items if they exist.'
+	NextInvoiceTotalRecurringAmount slapi.Float64 `json:"nextInvoiceTotalRecurringAmount,omitempty"`
+
+	// BundledItemCount - no documentation
+	BundledItemCount uint64 `json:"bundledItemCount,omitempty"`
+
+	// InvoiceItems - no documentation
+	InvoiceItems []*SoftLayer_Billing_Invoice_Item `json:"invoiceItems,omitempty"`
+
+	// BillingCyclePublicUsageTotal - The total public bandwidth for this virtual server for the current
+	// billing cycle.
+	BillingCyclePublicUsageTotal uint `json:"billingCyclePublicUsageTotal,omitempty"`
+
+	// ActiveChildrenCount - A count of a Billing Item's active child billing items.
+	ActiveChildrenCount uint64 `json:"activeChildrenCount,omitempty"`
+
+	// NextInvoiceTotalOneTimeAmount - A Billing Item's total, including any child billing items if they
+	// exist.'
+	NextInvoiceTotalOneTimeAmount slapi.Float64 `json:"nextInvoiceTotalOneTimeAmount,omitempty"`
+
+	// Package - The package under which this billing item was sold. A Package is the general grouping of
+	// products as seen on our order forms.
+	Package *SoftLayer_Product_Package `json:"package,omitempty"`
+
+	// AssociatedChildrenCount - A count of a Billing Item's associated child billing items. This includes
+	// "floating" items that are not necessarily child billing items of this billing item.
+	AssociatedChildrenCount uint64 `json:"associatedChildrenCount,omitempty"`
+
+	// ChildrenWithActiveAgreement - no documentation
+	ChildrenWithActiveAgreement []*SoftLayer_Billing_Item `json:"childrenWithActiveAgreement,omitempty"`
+
+	// AvailableMatchingVlans - <nil>
+	AvailableMatchingVlans []*SoftLayer_Network_Vlan `json:"availableMatchingVlans,omitempty"`
+
+	// AssociatedParent - A billing item's associated parent billing item. This object will be the same as
+	// the parent billing item if parentId is set.
+	AssociatedParent []*SoftLayer_Billing_Item `json:"associatedParent,omitempty"`
+
+	// ProvisionTransaction - no documentation
+	ProvisionTransaction *SoftLayer_Provisioning_Version1_Transaction `json:"provisionTransaction,omitempty"`
+
+	// BillingCycleBandwidthUsage - The raw bandwidth usage data for the current billing cycle. One object
+	// will be returned for each network this server is attached to.
+	BillingCycleBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCycleBandwidthUsage,omitempty"`
+
+	// BillingCyclePrivateBandwidthUsageCount - A count of the raw private bandwidth usage data for the
+	// current billing cycle.
+	BillingCyclePrivateBandwidthUsageCount uint64 `json:"billingCyclePrivateBandwidthUsageCount,omitempty"`
 
 	// AssociatedBillingItem - A billing item's associated parent. This is to be used for billing items
 	// that are "floating", and therefore are not child items of any parent billing item. If it is desired
@@ -260,172 +409,23 @@ type SoftLayer_Billing_Item_Virtual_Guest struct {
 	// parent item.
 	AssociatedBillingItem *SoftLayer_Billing_Item `json:"associatedBillingItem,omitempty"`
 
-	// InvoiceItem - no documentation
-	InvoiceItem *SoftLayer_Billing_Invoice_Item `json:"invoiceItem,omitempty"`
+	// CancellationReason - no documentation
+	CancellationReason *SoftLayer_Billing_Item_Cancellation_Reason `json:"cancellationReason,omitempty"`
 
-	// ActiveBundledItems - no documentation
-	ActiveBundledItems []*SoftLayer_Billing_Item `json:"activeBundledItems,omitempty"`
+	// ActiveAgreementFlag - A flag indicating that the billing item is under an active agreement.
+	ActiveAgreementFlag *SoftLayer_Account_Agreement `json:"activeAgreementFlag,omitempty"`
 
-	// ChildrenCount - no documentation
-	ChildrenCount uint64 `json:"childrenCount,omitempty"`
-
-	// BundleItems - no documentation
-	BundleItems []*SoftLayer_Product_Item_Bundles `json:"bundleItems,omitempty"`
-
-	// BillingCycleBandwidthUsageCount - A count of the raw bandwidth usage data for the current billing
-	// cycle. One object will be returned for each network this server is attached to.
-	BillingCycleBandwidthUsageCount uint64 `json:"billingCycleBandwidthUsageCount,omitempty"`
-
-	// ActiveChildren - no documentation
-	ActiveChildren []*SoftLayer_Billing_Item `json:"activeChildren,omitempty"`
-
-	// NonZeroNextInvoiceChildrenCount - A count of a Billing Item's associated child billing items,
-	// excluding ALL items with a $0.00 recurring fee.
-	NonZeroNextInvoiceChildrenCount uint64 `json:"nonZeroNextInvoiceChildrenCount,omitempty"`
-
-	// AssociatedParentCount - A count of a billing item's associated parent billing item. This object will
-	// be the same as the parent billing item if parentId is set.
-	AssociatedParentCount uint64 `json:"associatedParentCount,omitempty"`
-
-	// ActiveAssociatedChildren - A billing item's active associated child billing items. This includes
-	// "floating" items that are not necessarily child items of this billing item.
-	ActiveAssociatedChildren []*SoftLayer_Billing_Item `json:"activeAssociatedChildren,omitempty"`
-
-	// MonitoringBillingItems - <nil>
-	MonitoringBillingItems []*SoftLayer_Billing_Item `json:"monitoringBillingItems,omitempty"`
-
-	// ActiveCancellationItem - A service cancellation request item that corresponds to the billing item.
-	ActiveCancellationItem *SoftLayer_Billing_Item_Cancellation_Request_Item `json:"activeCancellationItem,omitempty"`
-
-	// OrderItem - A billing item's original order item. Simply a reference to the original order from
-	// which this billing item was created.
-	OrderItem *SoftLayer_Billing_Order_Item `json:"orderItem,omitempty"`
-
-	// OriginalLocation - The original physical location for this billing item--may differ from current.
-	OriginalLocation *SoftLayer_Location `json:"originalLocation,omitempty"`
-
-	// ParentVirtualGuestBillingItem - A billing item's parent item. If a billing item has no parent item
-	// then this value is null.
-	ParentVirtualGuestBillingItem *SoftLayer_Billing_Item_Virtual_Guest `json:"parentVirtualGuestBillingItem,omitempty"`
+	// BillingCyclePublicUsageIn - The total public inbound bandwidth for this virtual server for the
+	// current billing cycle.
+	BillingCyclePublicUsageIn slapi.Float64 `json:"billingCyclePublicUsageIn,omitempty"`
 
 	// PendingCancellationFlag - This flag indicates whether a billing item is scheduled to be canceled or
 	// not.
 	PendingCancellationFlag bool `json:"pendingCancellationFlag,omitempty"`
 
-	// PendingOrderItem - The new order item that will replace this billing item.
-	PendingOrderItem *SoftLayer_Billing_Order_Item `json:"pendingOrderItem,omitempty"`
-
-	// ActiveSparePoolAssociatedGuestDiskBillingItems - <nil>
-	ActiveSparePoolAssociatedGuestDiskBillingItems []*SoftLayer_Billing_Item `json:"activeSparePoolAssociatedGuestDiskBillingItems,omitempty"`
-
-	// ActiveFlag - <nil>
-	ActiveFlag bool `json:"activeFlag,omitempty"`
-
-	// ProvisionTransaction - no documentation
-	ProvisionTransaction *SoftLayer_Provisioning_Version1_Transaction `json:"provisionTransaction,omitempty"`
-
-	// ActiveSparePoolBundledItems - no documentation
-	ActiveSparePoolBundledItems []*SoftLayer_Billing_Item `json:"activeSparePoolBundledItems,omitempty"`
-
-	// CanceledChildren - no documentation
-	CanceledChildren []*SoftLayer_Billing_Item `json:"canceledChildren,omitempty"`
-
-	// Package - The package under which this billing item was sold. A Package is the general grouping of
-	// products as seen on our order forms.
-	Package *SoftLayer_Product_Package `json:"package,omitempty"`
-
-	// Location - The location of the billing item. Some billing items have physical properties such as the
-	// server itself. For items such as these, we provide location information.
-	Location *SoftLayer_Location `json:"location,omitempty"`
-
-	// ChildrenWithActiveAgreementCount - A count of a Billing Item's active child billing items.
-	ChildrenWithActiveAgreementCount uint64 `json:"childrenWithActiveAgreementCount,omitempty"`
-
-	// Children - no documentation
-	Children []*SoftLayer_Billing_Item `json:"children,omitempty"`
-
-	// UpgradeItem - Billing items whose product item has an upgrade path defined in our system will return
-	// the next product item in the upgrade path.
-	UpgradeItem *SoftLayer_Product_Item `json:"upgradeItem,omitempty"`
-
-	// ActiveAssociatedChildrenCount - A count of a billing item's active associated child billing items.
-	// This includes "floating" items that are not necessarily child items of this billing item.
-	ActiveAssociatedChildrenCount uint64 `json:"activeAssociatedChildrenCount,omitempty"`
-
-	// BillingCyclePrivateBandwidthUsageCount - A count of the raw private bandwidth usage data for the
-	// current billing cycle.
-	BillingCyclePrivateBandwidthUsageCount uint64 `json:"billingCyclePrivateBandwidthUsageCount,omitempty"`
-
-	// AvailableMatchingVlans - <nil>
-	AvailableMatchingVlans []*SoftLayer_Network_Vlan `json:"availableMatchingVlans,omitempty"`
-
-	// UpgradeItemCount - A count of billing items whose product item has an upgrade path defined in our
-	// system will return all the product items in the upgrade path.
-	UpgradeItemCount uint64 `json:"upgradeItemCount,omitempty"`
-
-	// CancellationRequestCount - A count of this will return any cancellation requests that are associated
-	// with this billing item.
-	CancellationRequestCount uint64 `json:"cancellationRequestCount,omitempty"`
-
-	// SoftwareDescription - no documentation
-	SoftwareDescription *SoftLayer_Software_Description `json:"softwareDescription,omitempty"`
-
-	// AssociatedChildrenCount - A count of a Billing Item's associated child billing items. This includes
-	// "floating" items that are not necessarily child billing items of this billing item.
-	AssociatedChildrenCount uint64 `json:"associatedChildrenCount,omitempty"`
-
-	// ActiveChildrenCount - A count of a Billing Item's active child billing items.
-	ActiveChildrenCount uint64 `json:"activeChildrenCount,omitempty"`
-
-	// Parent - A billing item's parent item. If a billing item has no parent item then this value is null.
-	Parent *SoftLayer_Billing_Item `json:"parent,omitempty"`
-
-	// BillingCyclePublicUsageTotal - The total public bandwidth for this virtual server for the current
-	// billing cycle.
-	BillingCyclePublicUsageTotal uint `json:"billingCyclePublicUsageTotal,omitempty"`
-
-	// MonitoringBillingItemCount - no documentation
-	MonitoringBillingItemCount uint64 `json:"monitoringBillingItemCount,omitempty"`
-
-	// BillingCyclePublicBandwidthUsageCount - A count of the raw public bandwidth usage data for the
-	// current billing cycle.
-	BillingCyclePublicBandwidthUsageCount uint64 `json:"billingCyclePublicBandwidthUsageCount,omitempty"`
-
-	// BandwidthAllocation - no documentation
-	BandwidthAllocation *SoftLayer_Network_Bandwidth_Version1_Allocation `json:"bandwidthAllocation,omitempty"`
-
-	// UpgradeItems - Billing items whose product item has an upgrade path defined in our system will
-	// return all the product items in the upgrade path.
-	UpgradeItems []*SoftLayer_Product_Item `json:"upgradeItems,omitempty"`
-
-	// AvailableMatchingVlanCount - no documentation
-	AvailableMatchingVlanCount uint64 `json:"availableMatchingVlanCount,omitempty"`
-
-	// Resource - no documentation
-	Resource *SoftLayer_Virtual_Guest `json:"resource,omitempty"`
-
-	// ActiveAgreement - <nil>
-	ActiveAgreement *SoftLayer_Account_Agreement `json:"activeAgreement,omitempty"`
-
-	// BillingCyclePrivateUsageTotal - The total private bandwidth for this virtual server for the current
-	// billing cycle.
-	BillingCyclePrivateUsageTotal uint `json:"billingCyclePrivateUsageTotal,omitempty"`
-
-	// InvoiceItems - no documentation
-	InvoiceItems []*SoftLayer_Billing_Invoice_Item `json:"invoiceItems,omitempty"`
-
-	// BillingCyclePrivateBandwidthUsage - The raw private bandwidth usage data for the current billing
-	// cycle.
-	BillingCyclePrivateBandwidthUsage []*SoftLayer_Network_Bandwidth_Usage `json:"billingCyclePrivateBandwidthUsage,omitempty"`
-
-	// ActiveAssociatedGuestDiskBillingItemCount - no documentation
-	ActiveAssociatedGuestDiskBillingItemCount uint64 `json:"activeAssociatedGuestDiskBillingItemCount,omitempty"`
-
-	// CanceledChildrenCount - A count of a Billing Item's active child billing items.
-	CanceledChildrenCount uint64 `json:"canceledChildrenCount,omitempty"`
-
-	// ActiveBundledItemCount - A count of a Billing Item's active bundled billing items.
-	ActiveBundledItemCount uint64 `json:"activeBundledItemCount,omitempty"`
+	// BillableChildrenCount - A count of a billing item's recurring child items that have once been billed
+	// and are scheduled to be billed in the future.
+	BillableChildrenCount uint64 `json:"billableChildrenCount,omitempty"`
 }
 
 func (softlayer_billing_item_virtual_guest *SoftLayer_Billing_Item_Virtual_Guest) String() string {

@@ -11,14 +11,14 @@ type SoftLayer_Network_Firewall_Module_Context_Interface struct {
 	// Name - <nil>
 	Name string `json:"name,omitempty"`
 
-	// FirewallContextAccessControlListCount - no documentation
-	FirewallContextAccessControlListCount uint64 `json:"firewallContextAccessControlListCount,omitempty"`
-
 	// FirewallContextAccessControlLists - <nil>
 	FirewallContextAccessControlLists []*SoftLayer_Network_Firewall_AccessControlList `json:"firewallContextAccessControlLists,omitempty"`
 
 	// NetworkVlan - <nil>
 	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`
+
+	// FirewallContextAccessControlListCount - no documentation
+	FirewallContextAccessControlListCount uint64 `json:"firewallContextAccessControlListCount,omitempty"`
 }
 
 func (softlayer_network_firewall_module_context_interface *SoftLayer_Network_Firewall_Module_Context_Interface) String() string {

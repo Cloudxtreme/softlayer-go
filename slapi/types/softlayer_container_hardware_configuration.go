@@ -11,6 +11,10 @@ package types
 // structure.
 type SoftLayer_Container_Hardware_Configuration struct {
 
+	// Datacenters - Available datacenter options. The datacenter.name value in the template represents
+	// which datacenter the server will be provisioned in.
+	Datacenters []*SoftLayer_Container_Hardware_Configuration_Option `json:"datacenters,omitempty"`
+
 	// FixedConfigurationPresets - Available fixed configuration preset options. The
 	// fixedConfigurationPreset.keyName value in the template is an identifier for a particular fixed
 	// configuration. When provided exactly as shown in the template, that fixed configuration will be
@@ -46,10 +50,6 @@ type SoftLayer_Container_Hardware_Configuration struct {
 	// the number of cores allocated to the server. The memoryCapacity value in the template represents the
 	// amount of memory, in gigabytes, allocated to the server.
 	Processors []*SoftLayer_Container_Hardware_Configuration_Option `json:"processors,omitempty"`
-
-	// Datacenters - Available datacenter options. The datacenter.name value in the template represents
-	// which datacenter the server will be provisioned in.
-	Datacenters []*SoftLayer_Container_Hardware_Configuration_Option `json:"datacenters,omitempty"`
 }
 
 func (softlayer_container_hardware_configuration *SoftLayer_Container_Hardware_Configuration) String() string {

@@ -5,26 +5,26 @@ package types
 // SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release - <nil>
 type SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release struct {
 
-	// PressReleaseId - no documentation
-	PressReleaseId int `json:"pressReleaseId,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
 	// MediaPartnerId - no documentation
 	MediaPartnerId int `json:"mediaPartnerId,omitempty"`
 
-	// MediaPartners - <nil>
-	MediaPartners []*SoftLayer_Auxiliary_Press_Release_Media_Partner `json:"mediaPartners,omitempty"`
-
-	// PressReleases - <nil>
-	PressReleases []*SoftLayer_Auxiliary_Press_Release `json:"pressReleases,omitempty"`
+	// PressReleaseId - no documentation
+	PressReleaseId int `json:"pressReleaseId,omitempty"`
 
 	// MediaPartnerCount - no documentation
 	MediaPartnerCount uint64 `json:"mediaPartnerCount,omitempty"`
 
 	// PressReleaseCount - no documentation
 	PressReleaseCount uint64 `json:"pressReleaseCount,omitempty"`
+
+	// MediaPartners - <nil>
+	MediaPartners []*SoftLayer_Auxiliary_Press_Release_Media_Partner `json:"mediaPartners,omitempty"`
+
+	// PressReleases - <nil>
+	PressReleases []*SoftLayer_Auxiliary_Press_Release `json:"pressReleases,omitempty"`
 }
 
 func (softlayer_auxiliary_press_release_media_partner_press_release *SoftLayer_Auxiliary_Press_Release_Media_Partner_Press_Release) String() string {

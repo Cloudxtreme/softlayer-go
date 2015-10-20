@@ -11,8 +11,11 @@ type SoftLayer_Locale_Country struct {
 	// ShortName - <nil>
 	ShortName string `json:"shortName,omitempty"`
 
-	// States - <nil>
+	// States - no documentation
 	States []*SoftLayer_Locale_StateProvince `json:"states,omitempty"`
+
+	// StateCount - no documentation
+	StateCount uint64 `json:"stateCount,omitempty"`
 }
 
 func (softlayer_locale_country *SoftLayer_Locale_Country) String() string {

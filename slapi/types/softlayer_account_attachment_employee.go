@@ -9,10 +9,6 @@ type SoftLayer_Account_Attachment_Employee struct {
 	// RoleId - no documentation
 	RoleId int `json:"roleId,omitempty"`
 
-	// Account - A [[SoftLayer_Account|account]] that is assigned to a
-	// [[SoftLayer_User_Employee|employee]].
-	Account *SoftLayer_Account `json:"account,omitempty"`
-
 	// Employee - A [[SoftLayer_User_Employee|employee]] that is assigned to a
 	// [[SoftLayer_Account|account]].
 	Employee *SoftLayer_User_Employee `json:"employee,omitempty"`
@@ -20,6 +16,10 @@ type SoftLayer_Account_Attachment_Employee struct {
 	// EmployeeRole - A [[SoftLayer_User_Employee|employee]] that is assigned to a
 	// [[SoftLayer_Account|account]].
 	EmployeeRole *SoftLayer_Account_Attachment_Employee_Role `json:"employeeRole,omitempty"`
+
+	// Account - A [[SoftLayer_Account|account]] that is assigned to a
+	// [[SoftLayer_User_Employee|employee]].
+	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
 func (softlayer_account_attachment_employee *SoftLayer_Account_Attachment_Employee) String() string {

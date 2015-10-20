@@ -9,12 +9,6 @@ import (
 // SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Options - <nil>
 type SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Options struct {
 
-	// Days - <nil>
-	Days int `json:"days,omitempty"`
-
-	// EndDate - <nil>
-	EndDate *time.Time `json:"endDate,omitempty"`
-
 	// SelectedStatistics - <nil>
 	SelectedStatistics []string `json:"selectedStatistics,omitempty"`
 
@@ -26,6 +20,12 @@ type SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Opti
 
 	// Category - <nil>
 	Category string `json:"category,omitempty"`
+
+	// Days - <nil>
+	Days int `json:"days,omitempty"`
+
+	// EndDate - <nil>
+	EndDate *time.Time `json:"endDate,omitempty"`
 }
 
 func (softlayer_container_network_message_delivery_email_sendgrid_statistics_options *SoftLayer_Container_Network_Message_Delivery_Email_Sendgrid_Statistics_Options) String() string {

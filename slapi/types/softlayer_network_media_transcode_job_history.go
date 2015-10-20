@@ -9,14 +9,14 @@ import (
 // SoftLayer_Network_Media_Transcode_Job_History - <nil>
 type SoftLayer_Network_Media_Transcode_Job_History struct {
 
+	// TranscodeJobId - no documentation
+	TranscodeJobId int `json:"transcodeJobId,omitempty"`
+
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// PublicNotes - no documentation
 	PublicNotes string `json:"publicNotes,omitempty"`
-
-	// TranscodeJobId - no documentation
-	TranscodeJobId int `json:"transcodeJobId,omitempty"`
 
 	// TranscodeStatusName - no documentation
 	TranscodeStatusName string `json:"transcodeStatusName,omitempty"`

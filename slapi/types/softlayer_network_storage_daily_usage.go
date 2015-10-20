@@ -9,6 +9,9 @@ import (
 // SoftLayer_Network_Storage_Daily_Usage - <nil>
 type SoftLayer_Network_Storage_Daily_Usage struct {
 
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
 	// NasVolumeId - <nil>
 	NasVolumeId int `json:"nasVolumeId,omitempty"`
 
@@ -20,9 +23,6 @@ type SoftLayer_Network_Storage_Daily_Usage struct {
 
 	// CdnHttpBandwidth - <nil>
 	CdnHttpBandwidth uint64 `json:"cdnHttpBandwidth,omitempty"`
-
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// NasVolume - <nil>
 	NasVolume *SoftLayer_Network_Storage `json:"nasVolume,omitempty"`

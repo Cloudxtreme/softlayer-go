@@ -5,9 +5,6 @@ package types
 // SoftLayer_Configuration_Storage_Group_Array_Type - no documentation
 type SoftLayer_Configuration_Storage_Group_Array_Type struct {
 
-	// DriveMultiplier - <nil>
-	DriveMultiplier int `json:"driveMultiplier,omitempty"`
-
 	// HotspareAllow - <nil>
 	HotspareAllow bool `json:"hotspareAllow,omitempty"`
 
@@ -19,6 +16,9 @@ type SoftLayer_Configuration_Storage_Group_Array_Type struct {
 
 	// Description - <nil>
 	Description string `json:"description,omitempty"`
+
+	// DriveMultiplier - <nil>
+	DriveMultiplier int `json:"driveMultiplier,omitempty"`
 
 	// Id - <nil>
 	Id int `json:"id,omitempty"`

@@ -14,12 +14,6 @@ import (
 // longer valid - Indicates that the registration object has been abruptly removed is no longer valid
 type SoftLayer_Network_Subnet_Registration_Status struct {
 
-	// CreateDate - <nil>
-	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// KeyName - no documentation
 	KeyName string `json:"keyName,omitempty"`
 
@@ -28,6 +22,12 @@ type SoftLayer_Network_Subnet_Registration_Status struct {
 
 	// Name - no documentation
 	Name string `json:"name,omitempty"`
+
+	// CreateDate - <nil>
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 }
 
 func (softlayer_network_subnet_registration_status *SoftLayer_Network_Subnet_Registration_Status) String() string {

@@ -5,12 +5,6 @@ package types
 // SoftLayer_User_Customer_Prospect - <nil>
 type SoftLayer_User_Customer_Prospect struct {
 
-	// AssignedEmployeeCount - no documentation
-	AssignedEmployeeCount uint64 `json:"assignedEmployeeCount,omitempty"`
-
-	// QuoteCount - no documentation
-	QuoteCount uint64 `json:"quoteCount,omitempty"`
-
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account,omitempty"`
 
@@ -22,6 +16,12 @@ type SoftLayer_User_Customer_Prospect struct {
 
 	// Type - <nil>
 	Type *SoftLayer_User_Customer_Prospect_Type `json:"type,omitempty"`
+
+	// AssignedEmployeeCount - no documentation
+	AssignedEmployeeCount uint64 `json:"assignedEmployeeCount,omitempty"`
+
+	// QuoteCount - no documentation
+	QuoteCount uint64 `json:"quoteCount,omitempty"`
 }
 
 func (softlayer_user_customer_prospect *SoftLayer_User_Customer_Prospect) String() string {

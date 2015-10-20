@@ -16,9 +16,6 @@ type SoftLayer_Dns_Domain struct {
 	// Name - A domain's name including top-level domain, for example "example.com".
 	Name string `json:"name,omitempty"`
 
-	// UpdateDate - no documentation
-	UpdateDate *time.Time `json:"updateDate,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -29,9 +26,14 @@ type SoftLayer_Dns_Domain struct {
 	// edited via the
 	Serial int `json:"serial,omitempty"`
 
-	// ResourceRecords - The individual records contained within a domain record. These include but are not
-	// limited to A, MX, SPF and TXT records.
-	ResourceRecords []*SoftLayer_Dns_Domain_ResourceRecord `json:"resourceRecords,omitempty"`
+	// UpdateDate - no documentation
+	UpdateDate *time.Time `json:"updateDate,omitempty"`
+
+	// Account - no documentation
+	Account *SoftLayer_Account `json:"account,omitempty"`
+
+	// ManagedResourceFlag - A flag indicating that the dns domain record is a managed resource.
+	ManagedResourceFlag bool `json:"managedResourceFlag,omitempty"`
 
 	// Secondary - The secondary DNS record that defines this domain as being managed through zone
 	// transfers.
@@ -41,11 +43,9 @@ type SoftLayer_Dns_Domain struct {
 	// include but are not limited to A, MX, SPF and TXT records.
 	ResourceRecordCount uint64 `json:"resourceRecordCount,omitempty"`
 
-	// Account - no documentation
-	Account *SoftLayer_Account `json:"account,omitempty"`
-
-	// ManagedResourceFlag - A flag indicating that the dns domain record is a managed resource.
-	ManagedResourceFlag bool `json:"managedResourceFlag,omitempty"`
+	// ResourceRecords - The individual records contained within a domain record. These include but are not
+	// limited to A, MX, SPF and TXT records.
+	ResourceRecords []*SoftLayer_Dns_Domain_ResourceRecord `json:"resourceRecords,omitempty"`
 }
 
 func (softlayer_dns_domain *SoftLayer_Dns_Domain) String() string {

@@ -5,9 +5,6 @@ package types
 // SoftLayer_Auxiliary_Press_Release_About_Press_Release - <nil>
 type SoftLayer_Auxiliary_Press_Release_About_Press_Release struct {
 
-	// SortOrder - no documentation
-	SortOrder int `json:"sortOrder,omitempty"`
-
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
@@ -16,6 +13,9 @@ type SoftLayer_Auxiliary_Press_Release_About_Press_Release struct {
 
 	// PressReleaseId - no documentation
 	PressReleaseId int `json:"pressReleaseId,omitempty"`
+
+	// SortOrder - no documentation
+	SortOrder int `json:"sortOrder,omitempty"`
 
 	// AboutParagraphCount - no documentation
 	AboutParagraphCount uint64 `json:"aboutParagraphCount,omitempty"`

@@ -12,18 +12,56 @@ import (
 // service, routing type, weight, and whether or not the service is currently enabled.
 type SoftLayer_Network_LoadBalancer_Service struct {
 
-	// HealthCheckURL - The URL provided here (starting with /) is what the load balancer will request in
-	// order to perform a custom health check. You must specify either /location/of/file.html" or
-	// /location/of/file.php"
-	HealthCheckURL string `json:"healthCheckURL,omitempty"`
+	// DestinationPort - The port on the real server to direct the traffic. This can be different than the
+	// source port. If you wish to obfuscate your traffic, you can accept requests on port 80 on the load
+	// balancer, then redirect them to port 932 on your real server.
+	DestinationPort int `json:"destinationPort,omitempty"`
+
+	// HealthCheck - The health check type for this service. If one is supplied, the load balancer will
+	// occasionally ping your server to determine if it is still up. Servers that are down are removed from
+	// the queue and will not be used to handle requests until their status returns to "up". The value of
+	// the health check is determined directly by what option you have selected for the routing type. {| |-
+	// ! Type ! Valid Health Checks |- | | |- | TCP | |- | FTP | |- | DNS | |- | UDP | None |}
+	HealthCheck string `json:"healthCheck,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
+
+	// Notes - Holds whether this server is up or down. Does not affect load balancer configuration at all,
+	// just for the customer's informational purposes
+	Notes string `json:"notes,omitempty"`
+
+	// SourcePort - The port on the load balancer that this service maps to. This is the port for incoming
+	// traffic, it needs to be shared with other services to form a group.
+	SourcePort int `json:"sourcePort,omitempty"`
+
+	// Type - The connection type of this service. Valid values are and The value of this variable affects
+	// available values of healthCheck, listed in that variable's description
+	Type string `json:"type,omitempty"`
+
+	// Enabled - A flag (either true or false) that determines if this particular service should be enabled
+	// on the load balancer. Set to false to bring the server out of rotation without losing your
+	// configuration
+	Enabled bool `json:"enabled,omitempty"`
 
 	// Id - Unique ID for this object, used for the getObject method, and must be set if you are editing
 	// this object.
 	Id int `json:"id,omitempty"`
 
+	// PeakConnections - Peak historical connections since the creation of this service. Is reset any time
+	// you make a configuration change
+	PeakConnections int `json:"peakConnections,omitempty"`
+
 	// VipId - Unique ID for this object's parent. Probably not useful in the as this object will always be
 	// a child of a VirtualIpAddress anyway.
 	VipId int `json:"vipId,omitempty"`
+
+	// ConnectionLimit - no documentation
+	ConnectionLimit int `json:"connectionLimit,omitempty"`
+
+	// HealthResponse - The expected response from the custom health check. If the requested page contains
+	// this response, the check succeeds.
+	HealthResponse string `json:"healthResponse,omitempty"`
 
 	// Weight - Weight affects the choices the load balancer makes between your services. The weight of
 	// each service is expressed as a percentage of the on the virtual IP Address. All services draw from
@@ -33,58 +71,20 @@ type SoftLayer_Network_LoadBalancer_Service struct {
 	// decimals are accepted.
 	Weight int `json:"weight,omitempty"`
 
-	// Enabled - A flag (either true or false) that determines if this particular service should be enabled
-	// on the load balancer. Set to false to bring the server out of rotation without losing your
-	// configuration
-	Enabled bool `json:"enabled,omitempty"`
-
-	// HealthCheck - The health check type for this service. If one is supplied, the load balancer will
-	// occasionally ping your server to determine if it is still up. Servers that are down are removed from
-	// the queue and will not be used to handle requests until their status returns to "up". The value of
-	// the health check is determined directly by what option you have selected for the routing type. {| |-
-	// ! Type ! Valid Health Checks |- | | |- | TCP | |- | FTP | |- | DNS | |- | UDP | None |}
-	HealthCheck string `json:"healthCheck,omitempty"`
-
-	// ModifyDate - no documentation
-	ModifyDate *time.Time `json:"modifyDate,omitempty"`
-
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
-
-	// DestinationPort - The port on the real server to direct the traffic. This can be different than the
-	// source port. If you wish to obfuscate your traffic, you can accept requests on port 80 on the load
-	// balancer, then redirect them to port 932 on your real server.
-	DestinationPort int `json:"destinationPort,omitempty"`
-
-	// HealthResponse - The expected response from the custom health check. If the requested page contains
-	// this response, the check succeeds.
-	HealthResponse string `json:"healthResponse,omitempty"`
-
-	// PeakConnections - Peak historical connections since the creation of this service. Is reset any time
-	// you make a configuration change
-	PeakConnections int `json:"peakConnections,omitempty"`
-
-	// SourcePort - The port on the load balancer that this service maps to. This is the port for incoming
-	// traffic, it needs to be shared with other services to form a group.
-	SourcePort int `json:"sourcePort,omitempty"`
-
-	// ConnectionLimit - no documentation
-	ConnectionLimit int `json:"connectionLimit,omitempty"`
 
 	// DestinationIpAddress - The IP Address of the real server you wish to direct traffic to. Your account
 	// must own this
 	DestinationIpAddress string `json:"destinationIpAddress,omitempty"`
 
-	// Notes - Holds whether this server is up or down. Does not affect load balancer configuration at all,
-	// just for the customer's informational purposes
-	Notes string `json:"notes,omitempty"`
+	// HealthCheckURL - The URL provided here (starting with /) is what the load balancer will request in
+	// order to perform a custom health check. You must specify either /location/of/file.html" or
+	// /location/of/file.php"
+	HealthCheckURL string `json:"healthCheckURL,omitempty"`
 
-	// Type - The connection type of this service. Valid values are and The value of this variable affects
-	// available values of healthCheck, listed in that variable's description
-	Type string `json:"type,omitempty"`
+	// ModifyDate - no documentation
+	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// Vip - no documentation
 	Vip *SoftLayer_Network_LoadBalancer_VirtualIpAddress `json:"vip,omitempty"`

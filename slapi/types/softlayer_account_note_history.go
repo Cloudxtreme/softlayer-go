@@ -9,12 +9,6 @@ import (
 // SoftLayer_Account_Note_History - <nil>
 type SoftLayer_Account_Note_History struct {
 
-	// UserId - <nil>
-	UserId int `json:"userId,omitempty"`
-
-	// AccountNoteId - <nil>
-	AccountNoteId int `json:"accountNoteId,omitempty"`
-
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -26,6 +20,12 @@ type SoftLayer_Account_Note_History struct {
 
 	// Note - <nil>
 	Note string `json:"note,omitempty"`
+
+	// UserId - <nil>
+	UserId int `json:"userId,omitempty"`
+
+	// AccountNoteId - <nil>
+	AccountNoteId int `json:"accountNoteId,omitempty"`
 
 	// AccountNote - <nil>
 	AccountNote *SoftLayer_Account_Note `json:"accountNote,omitempty"`

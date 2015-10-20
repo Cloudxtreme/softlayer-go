@@ -9,12 +9,6 @@ import (
 // SoftLayer_Scale_Network_Vlan - <nil>
 type SoftLayer_Scale_Network_Vlan struct {
 
-	// NetworkVlanId - no documentation
-	NetworkVlanId int `json:"networkVlanId,omitempty"`
-
-	// ScaleGroupId - The identifier of the group this network reference applies to.
-	ScaleGroupId int `json:"scaleGroupId,omitempty"`
-
 	// CreateDate - no documentation
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -24,6 +18,12 @@ type SoftLayer_Scale_Network_Vlan struct {
 
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
+
+	// NetworkVlanId - no documentation
+	NetworkVlanId int `json:"networkVlanId,omitempty"`
+
+	// ScaleGroupId - The identifier of the group this network reference applies to.
+	ScaleGroupId int `json:"scaleGroupId,omitempty"`
 
 	// NetworkVlan - no documentation
 	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`

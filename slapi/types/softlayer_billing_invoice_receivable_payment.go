@@ -12,23 +12,23 @@ import (
 // type contains general information relating to payments made against invoices.
 type SoftLayer_Billing_Invoice_Receivable_Payment struct {
 
-	// TypeCode - no documentation
-	TypeCode string `json:"typeCode,omitempty"`
-
 	// Amount - no documentation
 	Amount slapi.Float64 `json:"amount,omitempty"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
 
 	// InvoiceId - no documentation
 	InvoiceId int `json:"invoiceId,omitempty"`
 
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
+
+	// TypeCode - no documentation
+	TypeCode string `json:"typeCode,omitempty"`
+
+	// ExchangeRate - <nil>
+	ExchangeRate *SoftLayer_Billing_Currency_ExchangeRate `json:"exchangeRate,omitempty"`
+
 	// CreditCardLastFourDigits - <nil>
 	CreditCardLastFourDigits int `json:"creditCardLastFourDigits,omitempty"`
-
-	// Account - <nil>
-	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// CreditCardRequestId - <nil>
 	CreditCardRequestId string `json:"creditCardRequestId,omitempty"`
@@ -36,8 +36,8 @@ type SoftLayer_Billing_Invoice_Receivable_Payment struct {
 	// CreditCardTransaction - <nil>
 	CreditCardTransaction *SoftLayer_Billing_Payment_Card_Transaction `json:"creditCardTransaction,omitempty"`
 
-	// ExchangeRate - <nil>
-	ExchangeRate *SoftLayer_Billing_Currency_ExchangeRate `json:"exchangeRate,omitempty"`
+	// Account - <nil>
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// Invoice - <nil>
 	Invoice *SoftLayer_Billing_Invoice `json:"invoice,omitempty"`

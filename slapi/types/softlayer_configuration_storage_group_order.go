@@ -12,26 +12,26 @@ import (
 // be created for each array.
 type SoftLayer_Configuration_Storage_Group_Order struct {
 
+	// ArrayNumber - <nil>
+	ArrayNumber int `json:"arrayNumber,omitempty"`
+
+	// HotSpareDrives - <nil>
+	HotSpareDrives []int `json:"hotSpareDrives,omitempty"`
+
+	// ArrayTypeId - <nil>
+	ArrayTypeId int `json:"arrayTypeId,omitempty"`
+
 	// BillingOrderItemId - <nil>
 	BillingOrderItemId int `json:"billingOrderItemId,omitempty"`
 
 	// HardDrives - <nil>
 	HardDrives []int `json:"hardDrives,omitempty"`
 
-	// HotSpareDrives - <nil>
-	HotSpareDrives []int `json:"hotSpareDrives,omitempty"`
-
 	// PartitionData - <nil>
 	PartitionData string `json:"partitionData,omitempty"`
 
-	// ArrayNumber - <nil>
-	ArrayNumber int `json:"arrayNumber,omitempty"`
-
 	// ArraySize - <nil>
 	ArraySize slapi.Float64 `json:"arraySize,omitempty"`
-
-	// ArrayTypeId - <nil>
-	ArrayTypeId int `json:"arrayTypeId,omitempty"`
 
 	// ArrayType - no documentation
 	ArrayType *SoftLayer_Configuration_Storage_Group_Array_Type `json:"arrayType,omitempty"`

@@ -9,6 +9,9 @@ import (
 // SoftLayer_Ticket_Chat - <nil>
 type SoftLayer_Ticket_Chat struct {
 
+	// CustomerId - <nil>
+	CustomerId int `json:"customerId,omitempty"`
+
 	// EndDate - <nil>
 	EndDate *time.Time `json:"endDate,omitempty"`
 
@@ -18,17 +21,14 @@ type SoftLayer_Ticket_Chat struct {
 	// Transcript - <nil>
 	Transcript string `json:"transcript,omitempty"`
 
-	// CustomerId - <nil>
-	CustomerId int `json:"customerId,omitempty"`
-
-	// Agent - <nil>
-	Agent *SoftLayer_User_Employee `json:"agent,omitempty"`
-
 	// Customer - <nil>
 	Customer *SoftLayer_User_Customer `json:"customer,omitempty"`
 
 	// TicketUpdate - <nil>
 	TicketUpdate *SoftLayer_Ticket_Update_Chat `json:"ticketUpdate,omitempty"`
+
+	// Agent - <nil>
+	Agent *SoftLayer_User_Employee `json:"agent,omitempty"`
 }
 
 func (softlayer_ticket_chat *SoftLayer_Ticket_Chat) String() string {

@@ -8,13 +8,6 @@ package types
 // information, and network tunnel data may be retrieved.
 type SoftLayer_Network_Tunnel_Module_Context_Address_Translation struct {
 
-	// CustomerIpAddressId - The unique identifier for the ip address record that will receive the
-	// encrypted traffic.
-	CustomerIpAddressId int `json:"customerIpAddressId,omitempty"`
-
-	// InternalIpAddress - The ip address record that will deliver the encrypted traffic.
-	InternalIpAddress string `json:"internalIpAddress,omitempty"`
-
 	// Notes - A name or description given to an address translation to help identify the address
 	// translation.
 	Notes string `json:"notes,omitempty"`
@@ -22,8 +15,15 @@ type SoftLayer_Network_Tunnel_Module_Context_Address_Translation struct {
 	// CustomerIpAddress - The ip address record that will receive the encrypted traffic.
 	CustomerIpAddress string `json:"customerIpAddress,omitempty"`
 
+	// CustomerIpAddressId - The unique identifier for the ip address record that will receive the
+	// encrypted traffic.
+	CustomerIpAddressId int `json:"customerIpAddressId,omitempty"`
+
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
+
+	// InternalIpAddress - The ip address record that will deliver the encrypted traffic.
+	InternalIpAddress string `json:"internalIpAddress,omitempty"`
 
 	// InternalIpAddressId - The unique identifier for the ip address record that will deliver the
 	// encrypted traffic.

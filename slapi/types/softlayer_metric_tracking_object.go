@@ -13,6 +13,12 @@ import (
 // [[SoftLayer_Metric_Tracking_Object]] service to retrieve raw and graph data from a tracking object.
 type SoftLayer_Metric_Tracking_Object struct {
 
+	// Data - no documentation
+	Data []*SoftLayer_Metric_Tracking_Object_Data `json:"data,omitempty"`
+
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// Label - no documentation
 	Label string `json:"label,omitempty"`
 
@@ -21,12 +27,6 @@ type SoftLayer_Metric_Tracking_Object struct {
 
 	// StartDate - The date this tracker began tracking this particular resource.
 	StartDate *time.Time `json:"startDate,omitempty"`
-
-	// Data - no documentation
-	Data []*SoftLayer_Metric_Tracking_Object_Data `json:"data,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 
 	// Type - no documentation
 	Type *SoftLayer_Metric_Tracking_Object_Type `json:"type,omitempty"`

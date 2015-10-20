@@ -11,9 +11,6 @@ import (
 // SoftLayer_Container_Referral_Partner_Commission - <nil>
 type SoftLayer_Container_Referral_Partner_Commission struct {
 
-	// ReferralCompanyName - <nil>
-	ReferralCompanyName string `json:"referralCompanyName,omitempty"`
-
 	// ReferralPartnerAccountId - <nil>
 	ReferralPartnerAccountId int `json:"referralPartnerAccountId,omitempty"`
 
@@ -31,6 +28,9 @@ type SoftLayer_Container_Referral_Partner_Commission struct {
 
 	// ReferralAccountId - <nil>
 	ReferralAccountId int `json:"referralAccountId,omitempty"`
+
+	// ReferralCompanyName - <nil>
+	ReferralCompanyName string `json:"referralCompanyName,omitempty"`
 }
 
 func (softlayer_container_referral_partner_commission *SoftLayer_Container_Referral_Partner_Commission) String() string {

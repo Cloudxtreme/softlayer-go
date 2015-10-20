@@ -16,6 +16,9 @@ type SoftLayer_Dns_Domain_Registration struct {
 	// RegistrantVerificationStatusId - <nil>
 	RegistrantVerificationStatusId int `json:"registrantVerificationStatusId,omitempty"`
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// CreateDate - <nil>
 	CreateDate *time.Time `json:"createDate,omitempty"`
 
@@ -25,17 +28,17 @@ type SoftLayer_Dns_Domain_Registration struct {
 	// ExpireDate - no documentation
 	ExpireDate *time.Time `json:"expireDate,omitempty"`
 
+	// LockedFlag - no documentation
+	LockedFlag int `json:"lockedFlag,omitempty"`
+
 	// ModifyDate - <nil>
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
 	// ServiceProviderId - <nil>
 	ServiceProviderId int `json:"serviceProviderId,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
-	// LockedFlag - no documentation
-	LockedFlag int `json:"lockedFlag,omitempty"`
+	// Account - The SoftLayer customer account that the domain is registered to.
+	Account *SoftLayer_Account `json:"account,omitempty"`
 
 	// DomainRegistrationStatus - no documentation
 	DomainRegistrationStatus *SoftLayer_Dns_Domain_Registration_Status `json:"domainRegistrationStatus,omitempty"`
@@ -45,9 +48,6 @@ type SoftLayer_Dns_Domain_Registration struct {
 
 	// ServiceProvider - <nil>
 	ServiceProvider *SoftLayer_Service_Provider `json:"serviceProvider,omitempty"`
-
-	// Account - The SoftLayer customer account that the domain is registered to.
-	Account *SoftLayer_Account `json:"account,omitempty"`
 }
 
 func (softlayer_dns_domain_registration *SoftLayer_Dns_Domain_Registration) String() string {

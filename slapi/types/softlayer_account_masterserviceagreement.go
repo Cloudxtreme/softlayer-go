@@ -5,17 +5,17 @@ package types
 // SoftLayer_Account_MasterServiceAgreement - <nil>
 type SoftLayer_Account_MasterServiceAgreement struct {
 
-	// AccountId - <nil>
-	AccountId int `json:"accountId,omitempty"`
-
-	// Guid - <nil>
-	Guid string `json:"guid,omitempty"`
-
 	// Id - <nil>
 	Id int `json:"id,omitempty"`
 
 	// Name - <nil>
 	Name string `json:"name,omitempty"`
+
+	// AccountId - <nil>
+	AccountId int `json:"accountId,omitempty"`
+
+	// Guid - <nil>
+	Guid string `json:"guid,omitempty"`
 
 	// Account - <nil>
 	Account *SoftLayer_Account `json:"account,omitempty"`

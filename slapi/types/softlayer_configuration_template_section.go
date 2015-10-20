@@ -18,53 +18,38 @@ type SoftLayer_Configuration_Template_Section struct {
 	// ModifyDate - no documentation
 	ModifyDate *time.Time `json:"modifyDate,omitempty"`
 
-	// Name - no documentation
-	Name string `json:"name,omitempty"`
-
-	// TypeId - Internal identifier of the configuration section type
-	TypeId int `json:"typeId,omitempty"`
-
-	// CreateDate - no documentation
-	CreateDate *time.Time `json:"createDate,omitempty"`
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
 
 	// Description - no documentation
 	Description string `json:"description,omitempty"`
 
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
-
 	// ParentId - Internal identifier of the parent configuration section
 	ParentId int `json:"parentId,omitempty"`
-
-	// TemplateId - Internal identifier of a configuration template that this section belongs to
-	TemplateId string `json:"templateId,omitempty"`
 
 	// Sort - no documentation
 	Sort int `json:"sort,omitempty"`
 
-	// Definitions - <nil>
-	Definitions []*SoftLayer_Configuration_Template_Section_Definition `json:"definitions,omitempty"`
+	// CreateDate - no documentation
+	CreateDate *time.Time `json:"createDate,omitempty"`
 
-	// SubSections - <nil>
-	SubSections []*SoftLayer_Configuration_Template_Section `json:"subSections,omitempty"`
+	// TemplateId - Internal identifier of a configuration template that this section belongs to
+	TemplateId string `json:"templateId,omitempty"`
+
+	// TypeId - Internal identifier of the configuration section type
+	TypeId int `json:"typeId,omitempty"`
+
+	// Name - no documentation
+	Name string `json:"name,omitempty"`
 
 	// Template - <nil>
 	Template *SoftLayer_Configuration_Template `json:"template,omitempty"`
 
-	// LinkedTemplate - <nil>
-	LinkedTemplate *SoftLayer_Configuration_Template `json:"linkedTemplate,omitempty"`
-
-	// LinkedTemplateReference - <nil>
-	LinkedTemplateReference *SoftLayer_Configuration_Template_Section_Reference `json:"linkedTemplateReference,omitempty"`
-
-	// Profiles - <nil>
-	Profiles []*SoftLayer_Configuration_Template_Section_Profile `json:"profiles,omitempty"`
-
 	// DefinitionCount - no documentation
 	DefinitionCount uint64 `json:"definitionCount,omitempty"`
 
-	// SubSectionCount - no documentation
-	SubSectionCount uint64 `json:"subSectionCount,omitempty"`
+	// Definitions - <nil>
+	Definitions []*SoftLayer_Configuration_Template_Section_Definition `json:"definitions,omitempty"`
 
 	// SectionType - <nil>
 	SectionType *SoftLayer_Configuration_Template_Section_Type `json:"sectionType,omitempty"`
@@ -74,6 +59,21 @@ type SoftLayer_Configuration_Template_Section struct {
 
 	// DisallowedDeletionFlag - <nil>
 	DisallowedDeletionFlag bool `json:"disallowedDeletionFlag,omitempty"`
+
+	// LinkedTemplate - <nil>
+	LinkedTemplate *SoftLayer_Configuration_Template `json:"linkedTemplate,omitempty"`
+
+	// LinkedTemplateReference - <nil>
+	LinkedTemplateReference *SoftLayer_Configuration_Template_Section_Reference `json:"linkedTemplateReference,omitempty"`
+
+	// SubSections - <nil>
+	SubSections []*SoftLayer_Configuration_Template_Section `json:"subSections,omitempty"`
+
+	// SubSectionCount - no documentation
+	SubSectionCount uint64 `json:"subSectionCount,omitempty"`
+
+	// Profiles - <nil>
+	Profiles []*SoftLayer_Configuration_Template_Section_Profile `json:"profiles,omitempty"`
 
 	// ProfileCount - no documentation
 	ProfileCount uint64 `json:"profileCount,omitempty"`

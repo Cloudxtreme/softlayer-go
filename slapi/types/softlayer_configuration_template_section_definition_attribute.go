@@ -9,11 +9,11 @@ type SoftLayer_Configuration_Template_Section_Definition_Attribute struct {
 	// Value - no documentation
 	Value string `json:"value,omitempty"`
 
-	// ConfigurationDefinition - <nil>
-	ConfigurationDefinition *SoftLayer_Configuration_Template_Section_Definition `json:"configurationDefinition,omitempty"`
-
 	// AttributeType - <nil>
 	AttributeType *SoftLayer_Configuration_Template_Section_Definition_Attribute_Type `json:"attributeType,omitempty"`
+
+	// ConfigurationDefinition - <nil>
+	ConfigurationDefinition *SoftLayer_Configuration_Template_Section_Definition `json:"configurationDefinition,omitempty"`
 }
 
 func (softlayer_configuration_template_section_definition_attribute *SoftLayer_Configuration_Template_Section_Definition_Attribute) String() string {

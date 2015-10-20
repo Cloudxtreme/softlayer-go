@@ -7,15 +7,15 @@ package types
 // relating to a single SoftLayer Operating System Partition Template.
 type SoftLayer_Hardware_Component_Partition_OperatingSystem struct {
 
+	// Id - no documentation
+	Id int `json:"id,omitempty"`
+
 	// Notes - Information about the kinds of partition templates assigned to this operating system.
 	Notes string `json:"notes,omitempty"`
 
 	// Description - A partition template operating system's description. Typically the title of the
 	// Operating System.
 	Description string `json:"description,omitempty"`
-
-	// Id - no documentation
-	Id int `json:"id,omitempty"`
 
 	// PartitionTemplateCount - A count of information regarding an operating system's
 	// [[SoftLayer_Hardware_Component_Partition_Template|Partition Templates]].

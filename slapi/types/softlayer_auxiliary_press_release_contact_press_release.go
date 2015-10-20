@@ -17,9 +17,6 @@ type SoftLayer_Auxiliary_Press_Release_Contact_Press_Release struct {
 	// Id - no documentation
 	Id int `json:"id,omitempty"`
 
-	// PressReleases - <nil>
-	PressReleases []*SoftLayer_Auxiliary_Press_Release `json:"pressReleases,omitempty"`
-
 	// ContactCount - no documentation
 	ContactCount uint64 `json:"contactCount,omitempty"`
 
@@ -28,6 +25,9 @@ type SoftLayer_Auxiliary_Press_Release_Contact_Press_Release struct {
 
 	// Contacts - <nil>
 	Contacts []*SoftLayer_Auxiliary_Press_Release_Contact `json:"contacts,omitempty"`
+
+	// PressReleases - <nil>
+	PressReleases []*SoftLayer_Auxiliary_Press_Release `json:"pressReleases,omitempty"`
 }
 
 func (softlayer_auxiliary_press_release_contact_press_release *SoftLayer_Auxiliary_Press_Release_Contact_Press_Release) String() string {

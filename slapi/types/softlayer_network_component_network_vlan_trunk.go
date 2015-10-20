@@ -13,11 +13,11 @@ type SoftLayer_Network_Component_Network_Vlan_Trunk struct {
 	// NetworkVlanId - The identifier of the network that is a trunk on the network component.
 	NetworkVlanId int `json:"networkVlanId,omitempty"`
 
-	// NetworkVlan - The that is being trunked to the network component.
-	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`
-
 	// NetworkComponent - The network component that the is being trunked to.
 	NetworkComponent *SoftLayer_Network_Component `json:"networkComponent,omitempty"`
+
+	// NetworkVlan - The that is being trunked to the network component.
+	NetworkVlan *SoftLayer_Network_Vlan `json:"networkVlan,omitempty"`
 }
 
 func (softlayer_network_component_network_vlan_trunk *SoftLayer_Network_Component_Network_Vlan_Trunk) String() string {

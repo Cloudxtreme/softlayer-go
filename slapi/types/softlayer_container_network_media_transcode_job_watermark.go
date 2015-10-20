@@ -5,6 +5,9 @@ package types
 // SoftLayer_Container_Network_Media_Transcode_Job_Watermark - <nil>
 type SoftLayer_Container_Network_Media_Transcode_Job_Watermark struct {
 
+	// EndTime - no documentation
+	EndTime int `json:"endTime,omitempty"`
+
 	// FileName - Filename of image to use as watermark in transcoding job
 	FileName string `json:"fileName,omitempty"`
 
@@ -19,9 +22,6 @@ type SoftLayer_Container_Network_Media_Transcode_Job_Watermark struct {
 
 	// TransparencyPercentage - no documentation
 	TransparencyPercentage int `json:"transparencyPercentage,omitempty"`
-
-	// EndTime - no documentation
-	EndTime int `json:"endTime,omitempty"`
 }
 
 func (softlayer_container_network_media_transcode_job_watermark *SoftLayer_Container_Network_Media_Transcode_Job_Watermark) String() string {

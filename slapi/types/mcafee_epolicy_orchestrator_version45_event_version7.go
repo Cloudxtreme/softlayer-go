@@ -12,17 +12,20 @@ import (
 // detected and the action that is taken.
 type McAfee_Epolicy_Orchestrator_Version45_Event_Version7 struct {
 
-	// DetectedUtc - no documentation
-	DetectedUtc *time.Time `json:"detectedUtc,omitempty"`
+	// SourceIpv4 - The IP address of the source that generated an event.
+	SourceIpv4 string `json:"sourceIpv4,omitempty"`
 
 	// TargetFilename - The name of the file that was the target of the event.
 	TargetFilename string `json:"targetFilename,omitempty"`
 
-	// ThreatSeverityLabel - no documentation
-	ThreatSeverityLabel string `json:"threatSeverityLabel,omitempty"`
+	// ThreatName - no documentation
+	ThreatName string `json:"threatName,omitempty"`
 
-	// SourceIpv4 - The IP address of the source that generated an event.
-	SourceIpv4 string `json:"sourceIpv4,omitempty"`
+	// ThreatType - no documentation
+	ThreatType string `json:"threatType,omitempty"`
+
+	// DetectedUtc - no documentation
+	DetectedUtc *time.Time `json:"detectedUtc,omitempty"`
 
 	// SourceProcessName - no documentation
 	SourceProcessName string `json:"sourceProcessName,omitempty"`
@@ -30,11 +33,8 @@ type McAfee_Epolicy_Orchestrator_Version45_Event_Version7 struct {
 	// ThreatActionTaken - no documentation
 	ThreatActionTaken string `json:"threatActionTaken,omitempty"`
 
-	// ThreatType - no documentation
-	ThreatType string `json:"threatType,omitempty"`
-
-	// ThreatName - no documentation
-	ThreatName string `json:"threatName,omitempty"`
+	// ThreatSeverityLabel - no documentation
+	ThreatSeverityLabel string `json:"threatSeverityLabel,omitempty"`
 
 	// AgentDetails - no documentation
 	AgentDetails *McAfee_Epolicy_Orchestrator_Version45_Agent_Details `json:"agentDetails,omitempty"`
