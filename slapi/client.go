@@ -6,7 +6,10 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"net/http"
+	"net/http/httputil"
+	"strings"
 )
 
 // SoftLayerAPIError is an error returned when there's an error returned from the SoftLayer API
@@ -22,9 +25,11 @@ func (err SoftLayerAPIError) Error() string {
 
 // Client is the SoftLayer API Client
 type Client struct {
-	Endpoint string
-	Username string
-	APIKey   string
+	Endpoint   string
+	Username   string
+	APIKey     string
+	HTTPClient *http.Client
+	Debug      bool
 }
 
 // Call performs the API call. The result parameter will have the API response marshalled into it
@@ -33,8 +38,10 @@ func (client *Client) Call(req Request, result interface{}) error {
 		return errors.New("service and method is required to make an API call")
 	}
 
-	// TODO: the http client should be re-used
-	httpClient := &http.Client{}
+	if client.HTTPClient == nil {
+		client.HTTPClient = http.DefaultClient
+	}
+	httpClient := client.HTTPClient
 
 	method := "GET"
 	if req.Method == "deleteObject" {
@@ -47,7 +54,19 @@ func (client *Client) Call(req Request, result interface{}) error {
 		method = "POST"
 	}
 
-	httpReq, err := http.NewRequest(method, client.Endpoint+req.Service+"/"+req.Method, nil)
+	urlParts := []string{client.Endpoint, req.Service}
+	if req.ID != nil {
+		bytes, err := json.Marshal(req.ID)
+		if err != nil {
+			return err
+		}
+
+		urlParts = append(urlParts, string(bytes))
+	}
+
+	urlParts = append(urlParts, req.Method)
+
+	httpReq, err := http.NewRequest(method, strings.Join(urlParts, "/"), nil)
 	if err != nil {
 		return err
 	}
@@ -60,15 +79,11 @@ func (client *Client) Call(req Request, result interface{}) error {
 	body := make(map[string]interface{})
 
 	if req.Mask != "" {
-		values.Set("objectMask", string(req.Mask))
+		values.Set("objectMask", req.Mask)
 	}
 
 	if req.Limit != 0 {
-		values.Set("limit", string(req.Limit))
-	}
-
-	if req.Offset != 0 {
-		values.Set("offset", string(req.Offset))
+		values.Set("resultLimit", fmt.Sprintf("%d,%d", req.Offset, req.Limit))
 	}
 
 	if req.Filter != nil {
@@ -89,9 +104,17 @@ func (client *Client) Call(req Request, result interface{}) error {
 			return err
 		}
 		httpReq.Body = ioutil.NopCloser(bytes.NewReader(bodyBytes))
+		method = "POST"
 	}
 
 	httpReq.URL.RawQuery = values.Encode()
+
+	if client.Debug == true {
+		dump, err := httputil.DumpRequest(httpReq, true)
+		if err != nil {
+			log.Println(string(dump))
+		}
+	}
 
 	// Make the API Request
 	res, err := httpClient.Do(httpReq)
@@ -105,16 +128,18 @@ func (client *Client) Call(req Request, result interface{}) error {
 		return err
 	}
 
-	// Return error on incorrect status
-	if res.StatusCode != 200 {
-		slError := SoftLayerAPIError{}
-		err = json.Unmarshal(respBody, &slError)
-		if err != nil {
-			return SoftLayerAPIError{
-				String: res.Status,
-				Code:   res.Status,
-			}
+	// See if this response is an error
+	// note(kmcdonald): We have to do this since there are some errors which return with 200 status codes. This, I feel, is a bug in the REST API.
+	slError := SoftLayerAPIError{}
+	err = json.Unmarshal(respBody, &slError)
+	if err != nil && res.StatusCode < 200 && res.StatusCode >= 300 {
+		// We could not parse an error, but there is a non-2xx status code
+		return SoftLayerAPIError{
+			Code:   res.Status,
+			String: res.Status,
 		}
+	} else if slError.Code != "" && slError.String != "" {
+		// We could parse the error and we were able to parse the error code and error string.
 		return slError
 	}
 

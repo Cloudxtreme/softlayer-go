@@ -1,6 +1,13 @@
 # softlayer-go
 
-Golang bindings for SoftLayer's API. This project is a work in progress. Interfaces can (and will) break.
+Golang bindings for SoftLayer's API. This project is a work in progress. Interfaces might break.
+
+##Getting
+To get this library, simply `go get` it:
+
+```
+go get github.com/sudorandom/softlayer-go
+```
 
 ##Building
 ###Generating Sources
@@ -9,11 +16,3 @@ This client is generated dynamically from API metadata. That way, the type infor
 ```
 go generate ./...
 ```
-
-##TODOs
-
-* Also generate service calls
-* Evaluate options for handling filters
-* Evaluate options for handling masks
-* Examples
-* Tests
